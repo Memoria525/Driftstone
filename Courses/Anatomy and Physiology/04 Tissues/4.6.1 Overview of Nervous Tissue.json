@@ -1,0 +1,284 @@
+{
+  "cards": {
+    "01.04.06.01.001sa": [
+      "What type of tissue is the most specialized for communication in the body?",
+      "Nervous tissue",
+      "Think about which tissue type detects stimuli, processes information, and transmits signals.",
+      "**Why nervous tissue stands out:**\n- It is built specifically for rapid communication\n- It detects stimuli from both internal and external environments\n- It processes and integrates information, then transmits signals to effectors\n- No other tissue type combines sensation, integration, and signal transmission in this way",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.002sa": [
+      "What three things does nervous tissue do with stimuli it detects?",
+      "Detects (receives) stimuli, processes and integrates the information, and transmits signals to effectors",
+      "Think of a sequence: input, processing, output.",
+      "**The three functional roles of nervous tissue:**\n1. **Detection** - receives stimuli from internal and external environments\n2. **Processing/Integration** - interprets and organizes the incoming information\n3. **Transmission** - sends signals to effectors (muscles and glands) to produce a response\n\nThis sequence is the foundation of all nervous system activity, from simple reflexes to complex thought.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.003sa": [
+      "What are the two major divisions of the nervous system?",
+      "The central nervous system (CNS) and the peripheral nervous system (PNS)",
+      "One division is centrally located; the other extends outward to the rest of the body.",
+      "**Two divisions of the nervous system:**\n1. **CNS (Central Nervous System)** - the brain and spinal cord; serves as the main processing and integration center\n2. **PNS (Peripheral Nervous System)** - the nerves and ganglia that extend throughout the body; connects the CNS to tissues and organs\n\nTogether they form a rapid signaling network that reaches every tissue and organ in the body.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.004sa": [
+      "What two structures make up the central nervous system?",
+      "The brain and the spinal cord",
+      "These are the two structures enclosed and protected by bone.",
+      "**The CNS consists of:**\n1. **Brain** - the primary center for processing, integration, and higher functions\n2. **Spinal cord** - relays information between the brain and the rest of the body; also handles certain reflexes independently\n\nBoth are protected by bone (skull and vertebral column) and surrounded by meninges and cerebrospinal fluid.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.005sa": [
+      "What two components make up the peripheral nervous system?",
+      "Nerves and ganglia",
+      "Think about the structures that extend outward from the brain and spinal cord to reach the rest of the body.",
+      "**The PNS consists of:**\n1. **Nerves** - bundles of axons that carry signals between the CNS and the body's tissues and organs\n2. **Ganglia** - clusters of neuron cell bodies located outside the CNS\n\nThe PNS is the connection system that links the central processing centers to every part of the body.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.006sa": [
+      "What term refers to the brain and spinal cord collectively?",
+      "The central nervous system (CNS)",
+      "This division is named for its location within the body's central axis.",
+      "**The CNS:**\n- Composed of the brain and spinal cord\n- Serves as the main integration and command center of the nervous system\n- Protected by bone (skull and vertebral column), meninges, and cerebrospinal fluid\n- Distinguished from the PNS, which consists of the nerves and ganglia outside these structures",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.007sa": [
+      "What term refers to the nerves and ganglia that extend throughout the body?",
+      "The peripheral nervous system (PNS)",
+      "This division is named for its location outside the brain and spinal cord.",
+      "**The PNS:**\n- Composed of nerves and ganglia distributed throughout the body\n- Connects the CNS to all tissues and organs\n- Allows the CNS to receive sensory input and send motor commands to effectors\n- Some nerve regeneration is possible in the PNS, unlike the CNS",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.008sa": [
+      "What are the two basic cell types found in nervous tissue?",
+      "Neurons and neuroglia (glial cells)",
+      "One type transmits signals; the other supports and maintains the signaling cells.",
+      "**Two cell types of nervous tissue:**\n1. **Neurons** - electrically excitable cells that generate and transmit nerve impulses; the functional units of the nervous system\n2. **Neuroglia (glial cells)** - supporting cells that maintain the neuronal environment, provide insulation, and perform protective and housekeeping functions\n\nDespite the complexity of the nervous system, all of its tissue is built from just these two categories of cells.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.009sa": [
+      "What is the term for the electrically excitable cells in nervous tissue that generate and transmit signals?",
+      "Neurons",
+      "These are the functional units of the nervous system.",
+      "**Neurons:**\n- Electrically excitable cells capable of generating and transmitting nerve impulses (action potentials)\n- Receive input, integrate it, and send output signals\n- The functional units of the nervous system\n- A single neuron may form thousands of connections with other neurons\n- Largely postmitotic in the CNS, meaning they are not replaced when lost",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.010sa": [
+      "What is the term for the supporting cells in nervous tissue that maintain the environment around neurons?",
+      "Neuroglia (glial cells)",
+      "These are the non-signaling partners of neurons.",
+      "**Neuroglia:**\n- Also called glial cells\n- Maintain the environment around neurons\n- Provide insulation, structural support, and protective functions\n- Perform a wide range of housekeeping roles essential for neuron survival\n- Outnumber or roughly equal neurons in the nervous system\n- Do not generate or transmit nerve impulses themselves",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.011sa": [
+      "What are neuroglia commonly called?",
+      "Glial cells",
+      "This common name shares a root with a Greek word for glue.",
+      "**Neuroglia/Glial cells:**\n- The term \"glia\" comes from the Greek word for glue, reflecting an early (now outdated) belief that these cells simply held neurons together\n- Modern understanding shows they perform far more complex roles: environmental maintenance, insulation, protection, and metabolic support\n- They are the non-signaling cell type of nervous tissue",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.012sa": [
+      "Neurons are considered the functional units of what body system?",
+      "The nervous system",
+      "Think about which system relies on electrical signaling to detect, process, and transmit information.",
+      "**Neurons as functional units:**\n- They perform the core work of the nervous system: receiving input, integrating it, and transmitting signals\n- Each neuron can form thousands of connections with other neurons\n- This massive connectivity underlies all nervous system functions, from reflexes to higher thought\n- Without neurons, the nervous system could not carry out its signaling role",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.013sa": [
+      "What are the three basic functional steps a neuron performs?",
+      "Receiving input, integrating it, and transmitting signals (nerve impulses)",
+      "Think of a sequence: gather, process, send.",
+      "**The three functional steps of a neuron:**\n1. **Receive input** - collects signals from other neurons, sensory receptors, or the environment\n2. **Integrate** - processes and combines incoming signals to determine a response\n3. **Transmit** - sends the resulting nerve impulse (action potential) along its axon to the next target\n\nThis input-integration-output sequence is the basis of all neural communication.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.014sa": [
+      "What is the term for the electrical signals that neurons transmit?",
+      "Nerve impulses (action potentials)",
+      "These are the rapid electrical events that travel along a neuron's membrane.",
+      "**Nerve impulses / Action potentials:**\n- The electrical signals generated and transmitted by neurons\n- Allow rapid communication across the nervous system\n- Travel along the neuron's axon to reach target cells\n- The speed and precision of these signals is what makes nervous tissue the body's fastest communication system",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.015sa": [
+      "What is another name for a nerve impulse?",
+      "Action potential",
+      "This term describes a specific, rapid electrical event along a neuron's membrane.",
+      "**Action potential:**\n- The technical term for a nerve impulse\n- A brief, self-propagating electrical signal that travels along the neuron's membrane\n- \"Nerve impulse\" and \"action potential\" are used interchangeably in most contexts\n- These signals are the basis for all rapid communication in the nervous system",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.016sa": [
+      "What term describes cells that no longer undergo mitotic division?",
+      "Postmitotic",
+      "The prefix tells you these cells are past a certain phase of cell activity.",
+      "**Postmitotic cells:**\n- Cells that have permanently exited the cell cycle and no longer divide\n- Mature neurons in the CNS are a key example\n- This is why damage to CNS neurons is typically irreversible; lost neurons are generally not replaced\n- Contrasts with cells in many other tissues that retain the ability to divide and regenerate",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.017sa": [
+      "Are mature neurons in the CNS primarily mitotic or postmitotic?",
+      "Postmitotic",
+      "Consider why CNS damage is so difficult to recover from.",
+      "**CNS neurons are postmitotic:**\n- They have permanently exited the cell cycle\n- When damaged or destroyed, they are typically not replaced\n- This is a major reason why injuries to the brain and spinal cord often result in permanent functional loss\n- Contrasts with the PNS, where some regeneration is possible under the right conditions",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.018sa": [
+      "How does the regenerative capacity of nervous tissue in the CNS compare to the PNS?",
+      "The CNS has very limited regenerative capacity, while the PNS has some ability to regenerate under the right conditions.",
+      "Think about which division's neurons can sometimes regrow and which cannot.",
+      "**CNS vs. PNS regeneration:**\n- **CNS**: Very limited regeneration; mature neurons are postmitotic and typically not replaced when lost\n- **PNS**: Some regeneration is possible if:\n  1. The neuron's cell body survives\n  2. Schwann cells provide a guiding pathway for the regrowing axon\n\nThis difference has major clinical significance for injuries to the brain and spinal cord versus peripheral nerves.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.019sa": [
+      "In the PNS, what two conditions must be met for nerve regeneration to be possible?",
+      "The neuron's cell body must survive, and the surrounding Schwann cells must provide a guiding pathway.",
+      "One condition involves the neuron itself; the other involves a specific type of glial cell.",
+      "**Conditions for PNS nerve regeneration:**\n1. **Cell body survival** - the neuron must remain alive; if the cell body dies, the entire neuron is lost\n2. **Schwann cell guidance** - Schwann cells form a pathway that directs the regrowing axon back toward its target\n\nWithout both conditions, regeneration fails even in the PNS.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.020sa": [
+      "What type of glial cell provides the guiding pathway for nerve regeneration in the PNS?",
+      "Schwann cells",
+      "This cell type is found exclusively in the PNS.",
+      "**Schwann cells and regeneration:**\n- Schwann cells are PNS glial cells\n- After nerve damage, they form a tube-like pathway that guides the regrowing axon toward its original target\n- Without this guidance, regenerating axons may not reach the correct destination\n- This guiding role is one reason PNS nerves can sometimes recover after injury while CNS nerves generally cannot",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.021sa": [
+      "What are effectors in the context of nervous tissue function?",
+      "The muscles and glands that receive signals from the nervous system and produce responses.",
+      "These are the structures that carry out the commands sent by the nervous system.",
+      "**Effectors:**\n- The targets of nervous system output\n- Muscles and glands that produce a response when they receive signals from neurons\n- Complete the detect-process-respond sequence of nervous tissue function\n- Without effectors, the signals transmitted by the nervous system would have no way to produce physical actions or secretions",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.022sa": [
+      "Give two examples of effectors that respond to signals transmitted by nervous tissue.",
+      "Muscles and glands",
+      "Think about what structures in the body actually carry out responses to nervous system commands.",
+      "**Examples of effectors:**\n1. **Muscles** - contract in response to motor signals (skeletal, smooth, and cardiac)\n2. **Glands** - secrete substances (hormones, enzymes, sweat, etc.) in response to nervous stimulation\n\nEffectors are the final step in the nervous system's communication chain: detect stimuli, process information, transmit signal, and produce a response.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.023sa": [
+      "What is the term for clusters of neuron cell bodies located in the peripheral nervous system?",
+      "Ganglia",
+      "This term is used specifically for cell body clusters outside the brain and spinal cord.",
+      "**Ganglia:**\n- Clusters of neuron cell bodies found in the PNS\n- The term is reserved for cell body groupings outside the CNS\n- Along with nerves, ganglia are one of the two main structural components of the PNS\n- Equivalent clusters within the CNS are called nuclei, not ganglia",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.024sa": [
+      "A single neuron in the brain may form how many connections with other neurons?",
+      "Thousands",
+      "Think about why the nervous system is described as having staggering complexity.",
+      "**Neuronal connectivity:**\n- Each neuron may form thousands of connections (synapses) with other neurons\n- With roughly 86 billion neurons in the brain, this creates a network of extraordinary complexity\n- This massive number of connections is what allows the nervous system to perform everything from simple reflexes to abstract thought",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.025sa": [
+      "What structural feature of individual neurons allows nervous tissue to form a network of extraordinary complexity?",
+      "Each neuron can form thousands of connections (synapses) with other neurons.",
+      "Think about what multiplies the functional capacity of billions of neurons.",
+      "**Why neuronal networks are so complex:**\n- It is not just the number of neurons that matters, but the number of connections each one makes\n- A single neuron forming thousands of synapses means the total number of connections in the brain is in the trillions\n- This connectivity is the structural basis for all integration, learning, memory, and higher-order processing",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.026sa": [
+      "True or false: When neurons in the CNS are damaged or destroyed, they are typically replaced by new neurons.",
+      "False. Mature CNS neurons are postmitotic and are typically not replaced when lost.",
+      "Consider whether CNS neurons can re-enter the cell cycle.",
+      "**CNS neuron replacement:**\n- False: mature CNS neurons are largely postmitotic\n- Once damaged or destroyed, they are generally not replaced\n- This is why CNS injuries (brain and spinal cord) often lead to permanent deficits\n- Limited exceptions exist in certain brain regions (e.g., some neurogenesis in the hippocampus), but this is not sufficient for meaningful repair after injury",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.027sa": [
+      "What key distinction separates neurons from neuroglia in terms of electrical signaling?",
+      "Neurons are electrically excitable and generate/transmit nerve impulses (action potentials), while neuroglia do not.",
+      "Think about which cell type actually produces the electrical signals of the nervous system.",
+      "**Neurons vs. neuroglia in signaling:**\n- **Neurons**: electrically excitable; generate and transmit action potentials\n- **Neuroglia**: not electrically excitable in the same way; they do not generate or transmit nerve impulses\n- Neuroglia instead perform support, maintenance, insulation, and protective roles\n- Both cell types are essential, but only neurons carry out the signaling function of nervous tissue",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.01.028sa": [
+      "What are the main roles of neuroglia in nervous tissue?",
+      "Maintaining the environment around neurons, providing insulation, and performing protective and housekeeping functions.",
+      "Think about what neurons need from their surrounding support cells to survive and function.",
+      "**Roles of neuroglia:**\n- Maintain the chemical and physical environment around neurons\n- Provide electrical insulation (e.g., myelin)\n- Perform protective functions (immune defense, debris cleanup)\n- Carry out housekeeping tasks (nutrient supply, waste removal)\n- Neurons cannot survive or function without these support roles\n- Despite not generating nerve impulses, neuroglia are indispensable to nervous tissue function",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

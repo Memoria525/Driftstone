@@ -1,0 +1,304 @@
+{
+  "cards": {
+    "01.04.05.01.001sa": [
+      "What is the defining functional specialization of muscle tissue?",
+      "Contraction, which is the ability to shorten and generate force.",
+      "Think about what makes muscle tissue fundamentally different from all other tissue types.",
+      "## Muscle Tissue's Defining Feature\n\n- Contraction is the ability to **shorten** and **generate force**\n- This single capability underlies a wide range of body functions:\n  - Movement (walking, lifting)\n  - Breathing\n  - Pumping blood\n  - Moving food through the digestive tract\n- No other tissue type is specialized for force generation through shortening\n- All three muscle types (skeletal, cardiac, smooth) share this defining property",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.002sa": [
+      "What two proteins interact to produce muscle contraction?",
+      "Actin and myosin.",
+      "These are filament-forming proteins found inside the muscle cell.",
+      "## The Contractile Proteins\n\n- **Actin** and **myosin** are the two proteins responsible for contraction\n- The interaction between them is the molecular basis of **all** muscle contraction in the body\n- The mechanism:\n  1. The muscle cell is stimulated\n  2. Myosin heads bind to actin filaments\n  3. Myosin pulls actin filaments inward\n  4. The cell shortens\n- This same actin-myosin mechanism operates in skeletal, cardiac, and smooth muscle",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.003sa": [
+      "During muscle contraction, what do myosin heads bind to?",
+      "Actin filaments.",
+      "It is the other major contractile protein in the muscle cell.",
+      "## Myosin-Actin Binding\n\n- When a muscle cell is stimulated, **myosin heads** bind to **actin filaments**\n- This binding initiates the power stroke that pulls actin inward\n- The result is cell shortening (contraction)\n- This binding event is the key molecular step in force generation\n- It occurs in all three muscle types",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.004sa": [
+      "Describe what happens at the molecular level when a muscle cell is stimulated to contract.",
+      "Myosin heads bind to actin filaments and pull them inward, causing the cell to shorten.",
+      "Think about the two contractile proteins and what one does to the other.",
+      "## Molecular Sequence of Contraction\n\n1. The muscle cell receives a stimulus\n2. **Myosin heads** bind to **actin filaments**\n3. Myosin pulls the actin filaments **inward**\n4. The cell **shortens**, generating force\n\n- This actin-myosin interaction is the universal mechanism of muscle contraction\n- It applies to all three muscle types: skeletal, cardiac, and smooth\n- The differences between muscle types involve how they are stimulated and organized, not the fundamental contractile mechanism",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.005sa": [
+      "What is the molecular event that causes a muscle cell to shorten during contraction?",
+      "Myosin heads pull actin filaments inward.",
+      "Focus on what one contractile protein physically does to the other.",
+      "## The Power Stroke\n\n- The shortening event is myosin heads **pulling actin filaments inward**\n- This is sometimes called the **power stroke**\n- The inward sliding of actin filaments reduces the length of the cell\n- This mechanism is shared across all three muscle types\n- The force generated depends on how many myosin heads are actively pulling on actin at a given moment",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.006sa": [
+      "The actin-myosin interaction is the molecular basis of contraction in which muscle type(s)?",
+      "All three muscle types: skeletal, cardiac, and smooth.",
+      "Consider whether this mechanism is unique to one type or universal.",
+      "## A Universal Mechanism\n\n- Actin-myosin interaction drives contraction in **all** muscle types:\n  - Skeletal\n  - Cardiac\n  - Smooth\n- While the three types differ in structure, control, and fatigue characteristics, they all rely on the same fundamental contractile mechanism\n- The differences between muscle types are about **how** contraction is organized and regulated, not **what** produces it",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.007sa": [
+      "Why are skeletal and cardiac muscle cells referred to as muscle fibers, while smooth muscle cells are not?",
+      "Skeletal and cardiac muscle cells have a distinctly elongated shape (much longer than wide), which gives them a fiber-like appearance. Smooth muscle cells are not typically described this way.",
+      "Think about the physical shape of these cells and what the word 'fiber' implies.",
+      "## The Term 'Muscle Fiber'\n\n- The term **fiber** reflects cell shape: these cells are **much longer than they are wide**\n- Skeletal and cardiac muscle cells have a pronounced elongated morphology that earns them this name\n- The elongated shape is functionally important: it allows the force of contraction to be **applied over a distance**\n- Smooth muscle cells, while capable of contraction, are not typically called fibers\n- This is a naming convention you will encounter frequently in muscle tissue histology",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.008sa": [
+      "In which two types of muscle tissue are cells commonly referred to as muscle fibers?",
+      "Skeletal muscle and cardiac muscle.",
+      "Think about which muscle cell types have a distinctly elongated shape.",
+      "## Muscle Fibers\n\n- **Skeletal** and **cardiac** muscle cells are called muscle fibers\n- The name reflects their **elongated shape** (much longer than wide)\n- This shape allows force to be applied over a distance\n- Smooth muscle cells are not typically referred to as fibers",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.009sa": [
+      "Why is the elongated shape of muscle cells functionally important for contraction?",
+      "It allows the force of contraction to be applied over a distance.",
+      "Think about what a longer cell can achieve when it shortens compared to a shorter one.",
+      "## Shape and Function in Muscle Cells\n\n- Muscle cells are **much longer than they are wide**\n- This elongation means that when the cell shortens, the displacement occurs over a **greater distance**\n- More distance of shortening = more movement at the structure being acted upon\n- This is why skeletal and cardiac muscle cells are called **fibers**: their length is a key part of their function\n- Structure-function relationship: the shape of the cell directly supports its contractile role",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.010sa": [
+      "What are the three types of muscle tissue found in the body?",
+      "Skeletal, cardiac, and smooth muscle tissue.",
+      "Think about voluntary movement, the heart, and hollow organs.",
+      "## Three Muscle Types\n\n1. **Skeletal muscle** - attached to bones, voluntary control\n2. **Cardiac muscle** - found only in the heart wall, involuntary\n3. **Smooth muscle** - found in walls of hollow organs and blood vessels, involuntary\n\n- All three share the actin-myosin contraction mechanism\n- They differ in structure, location, control mechanism, and function",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.011sa": [
+      "What four criteria are used to distinguish the three types of muscle tissue from one another?",
+      "Structure, location, control mechanism, and function.",
+      "Think about what the cells look like, where they are, how they are activated, and what they do.",
+      "## Distinguishing the Muscle Types\n\nThe four criteria:\n1. **Structure** - cellular organization and appearance\n2. **Location** - where in the body the muscle is found\n3. **Control mechanism** - how contraction is stimulated\n4. **Function** - what role the muscle plays\n\n- These four criteria map directly to the key differences between skeletal, cardiac, and smooth muscle\n- For example, skeletal muscle is striated, attached to bones, voluntarily controlled, and responsible for movement",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.012sa": [
+      "Where is skeletal muscle attached, and what is its primary function?",
+      "Skeletal muscle is attached to bones, and its primary function is voluntary movement.",
+      "The name of this muscle type tells you where it is attached.",
+      "## Skeletal Muscle Basics\n\n- Attached to **bones**\n- Primary function: **voluntary movement**\n- Under **conscious (voluntary) control**\n- You contract skeletal muscle whenever you choose to move: walking, lifting, writing, speaking\n- It is the only muscle type you can consciously decide to contract",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.013sa": [
+      "Is skeletal muscle under voluntary or involuntary control?",
+      "Voluntary (conscious) control.",
+      "Think about whether you can decide to contract this muscle type.",
+      "## Skeletal Muscle Control\n\n- Skeletal muscle is the **only** muscle type under **voluntary (conscious) control**\n- You decide when to contract it\n- Cardiac and smooth muscle are both **involuntary**\n- Voluntary vs. involuntary control is one of the four key criteria used to distinguish muscle types",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.014sa": [
+      "Which type of muscle tissue is responsible for voluntary movement?",
+      "Skeletal muscle tissue.",
+      "Think about which muscle type you consciously control.",
+      "## Voluntary Movement\n\n- **Skeletal muscle** is the only type under voluntary control\n- It is attached to bones and produces movement when it contracts\n- Cardiac and smooth muscle both operate **involuntarily**\n- Any movement you consciously decide to make involves skeletal muscle",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.015sa": [
+      "Where in the body is cardiac muscle found?",
+      "Only in the wall of the heart.",
+      "The name of this muscle type tells you its location.",
+      "## Cardiac Muscle Location\n\n- Found **exclusively** in the wall of the **heart**\n- No other location in the body contains cardiac muscle\n- This specificity of location is a key identifying feature\n- Its function (rhythmic pumping of blood) is inseparable from its location",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.016sa": [
+      "Is cardiac muscle under voluntary or involuntary control?",
+      "Involuntary control.",
+      "Consider whether you consciously decide to make your heart beat.",
+      "## Cardiac Muscle Control\n\n- Cardiac muscle is **involuntary**: you do not consciously control it\n- It contracts **rhythmically** without conscious input\n- Both cardiac and smooth muscle are involuntary\n- Only **skeletal** muscle is under voluntary control",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.017sa": [
+      "What is the primary function of cardiac muscle?",
+      "To contract rhythmically and involuntarily to pump blood through the circulatory system.",
+      "Think about what the heart does and how it does it.",
+      "## Cardiac Muscle Function\n\n- Pumps **blood** through the **circulatory system**\n- Contracts **rhythmically** and **involuntarily**\n- The rhythmic nature is essential: the heart must beat continuously without conscious effort\n- Found only in the heart wall, perfectly matched to this single critical function",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.018sa": [
+      "Which type of muscle tissue is found only in the wall of the heart?",
+      "Cardiac muscle tissue.",
+      "Think about which muscle type has the most restricted location in the body.",
+      "## Identifying Cardiac Muscle by Location\n\n- **Cardiac muscle** is the only type found exclusively in the heart wall\n- This is a defining feature: no other muscle type is limited to a single organ\n- Skeletal muscle is found attached to bones throughout the body\n- Smooth muscle is found in the walls of many hollow organs and blood vessels",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.019sa": [
+      "Where in the body is smooth muscle found?",
+      "In the walls of hollow organs and blood vessels.",
+      "Think about the internal tubes and organs that need to move substances through them.",
+      "## Smooth Muscle Location\n\n- Found in the **walls of hollow organs** and **blood vessels**\n- Examples of hollow organs: digestive tract, ureters, bladder\n- Smooth muscle is widespread throughout the body's internal organ systems\n- Its location reflects its function: moving substances through tubes and regulating their diameter",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.020sa": [
+      "Is smooth muscle under voluntary or involuntary control?",
+      "Involuntary control.",
+      "Consider whether you consciously decide to move food through your digestive tract.",
+      "## Smooth Muscle Control\n\n- Smooth muscle is **involuntary**: you do not consciously control it\n- It operates automatically to move substances and regulate passageways\n- Both smooth and cardiac muscle are involuntary\n- Only **skeletal** muscle is under voluntary control",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.021sa": [
+      "Which type of muscle tissue is found in the walls of hollow organs and blood vessels?",
+      "Smooth muscle tissue.",
+      "Think about which muscle type lines the internal tubes of the body.",
+      "## Identifying Smooth Muscle by Location\n\n- **Smooth muscle** is found in the walls of:\n  - Hollow organs (digestive tract, ureters, bladder)\n  - Blood vessels\n- It contracts involuntarily to move substances and regulate tube diameter\n- This is in contrast to cardiac muscle (heart wall only) and skeletal muscle (attached to bones)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.022sa": [
+      "Name three examples of substances that smooth muscle moves through the body.",
+      "Food (through the digestive tract), urine (through the ureters), and blood (through the vessels).",
+      "Think about the hollow organs and vessels where smooth muscle is found and what flows through them.",
+      "## Substances Moved by Smooth Muscle\n\n1. **Food** through the digestive tract\n2. **Urine** through the ureters\n3. **Blood** through the blood vessels\n\n- In each case, smooth muscle in the organ or vessel wall contracts to propel the substance forward\n- This movement is **involuntary** and continuous\n- Smooth muscle also regulates the **diameter** of the tubes it lines",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.023sa": [
+      "In addition to moving substances, what other function does smooth muscle perform in blood vessels and passageways?",
+      "It regulates the diameter of tubes and passageways.",
+      "Think about what happens when smooth muscle in a vessel wall contracts or relaxes.",
+      "## Smooth Muscle and Diameter Regulation\n\n- Smooth muscle can **constrict** or **dilate** the tubes it lines\n- This regulates:\n  - Blood flow (by changing vessel diameter)\n  - Airflow (in bronchioles)\n  - Passage of materials through hollow organs\n- This is a distinct function from simply propelling substances forward\n- Both functions (movement and diameter regulation) are **involuntary**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.024sa": [
+      "What fundamental mechanism do all three muscle types share?",
+      "Actin-myosin contraction.",
+      "Think about the molecular basis that is common to all muscle contraction.",
+      "## The Shared Mechanism\n\n- All three muscle types (skeletal, cardiac, smooth) use **actin-myosin interaction** to contract\n- This is the **universal** molecular basis of muscle contraction\n- What differs between the types is:\n  1. Cellular structure\n  2. How contraction is stimulated\n  3. Voluntary vs. involuntary control\n  4. How quickly they fatigue\n- The mechanism of contraction itself is the same",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.025sa": [
+      "Name four properties in which the three muscle types differ significantly from one another.",
+      "Cellular structure, how they are stimulated to contract, whether they are under voluntary or involuntary control, and how quickly they fatigue.",
+      "Think beyond location. Consider internal organization, activation, control, and endurance.",
+      "## How the Muscle Types Differ\n\n1. **Cellular structure** - organization and appearance at the cellular level\n2. **Stimulation** - how contraction is triggered\n3. **Control** - voluntary vs. involuntary\n4. **Fatigue rate** - how quickly the muscle tires\n\n- These differences reflect the **distinct functional demands** placed on each type\n- Despite these differences, all three share the same actin-myosin contraction mechanism",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.026sa": [
+      "Which type of muscle tissue is under conscious control?",
+      "Skeletal muscle tissue.",
+      "Think about which muscle type you can voluntarily decide to contract.",
+      "## Conscious Control of Muscle\n\n- **Skeletal muscle** is the only type under conscious (voluntary) control\n- Cardiac muscle: involuntary, rhythmic\n- Smooth muscle: involuntary, automatic\n- Voluntary control means you decide when and whether to contract the muscle",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.027sa": [
+      "Which two types of muscle tissue are under involuntary control?",
+      "Cardiac muscle and smooth muscle.",
+      "Think about which muscle types operate without conscious input.",
+      "## Involuntary Muscle Types\n\n- **Cardiac** and **smooth** muscle are both involuntary\n- Cardiac: contracts rhythmically to pump blood\n- Smooth: contracts to move substances and regulate tube diameter\n- Only **skeletal muscle** is voluntary\n- Involuntary control ensures these critical functions continue without conscious effort",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.028sa": [
+      "A muscle cell contracts when myosin heads pull __________ filaments inward, causing the cell to __________.",
+      "Actin; shorten.",
+      "Think about the two contractile proteins and the result of their interaction.",
+      "## Fill-in-the-Blank Review\n\n- Myosin heads pull **actin** filaments inward\n- This causes the cell to **shorten**\n- Shortening = contraction = force generation\n- This sequence is the molecular basis of contraction in all three muscle types",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.029sa": [
+      "Skeletal muscle is attached to __________ and is responsible for __________ movement.",
+      "Bones; voluntary.",
+      "The muscle type's name gives away the first blank.",
+      "## Skeletal Muscle Summary\n\n- Attached to **bones**\n- Responsible for **voluntary** movement\n- The only muscle type under conscious control\n- Contracts when you decide to perform an action: walking, lifting, writing, speaking",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.01.030sa": [
+      "Smooth muscle contracts involuntarily to move substances and to regulate the __________ of tubes and passageways.",
+      "Diameter.",
+      "Think about what changes when smooth muscle in a vessel wall contracts.",
+      "## Smooth Muscle's Dual Role\n\n- **Moves substances** through hollow organs and vessels (food, urine, blood)\n- **Regulates diameter** of tubes and passageways\n- Both functions are involuntary\n- Diameter regulation controls flow rate and resistance in vessels and airways",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

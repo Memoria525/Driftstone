@@ -1,0 +1,394 @@
+{
+  "cards": {
+    "01.04.02.05.001sa": [
+      "What is glandular epithelium?",
+      "Epithelial cells specialized for secretion, the synthesis and release of products such as hormones, enzymes, mucus, sweat, or oil that serve specific physiological functions.",
+      "Think about what makes these epithelial cells functionally distinct from other epithelial cells.",
+      "## Glandular Epithelium\n\n- Glandular epithelium is a subtype of epithelial tissue defined by its secretory function\n- Secretory products include:\n  1. Hormones\n  2. Enzymes\n  3. Mucus\n  4. Sweat\n  5. Oil (sebum)\n- Each product serves a specific physiological role (e.g., enzymes for digestion, mucus for surface protection)\n- A **gland** is defined as one or more cells that produce and secrete a particular product",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.002sa": [
+      "What term describes epithelial cells specialized for the synthesis and release of a product such as hormones, enzymes, mucus, sweat, or oil?",
+      "Glandular epithelium",
+      "This is a classification of epithelial tissue based on function rather than shape or layering.",
+      "## Glandular Epithelium\n\n- While other epithelial classifications focus on structure (shape and layers), glandular epithelium is classified by **function**\n- The defining function is **secretion**: synthesis and release of a product\n- Glandular epithelial cells can exist as:\n  1. Individual secretory cells (e.g., goblet cells)\n  2. Organized multicellular glands\n- All glands originate from epithelial tissue during embryonic development",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.003sa": [
+      "Define secretion in the context of glandular epithelium.",
+      "The synthesis and release of a product that serves a specific physiological function.",
+      "This is a two-part process: making the product and then delivering it.",
+      "## Secretion\n\n- Secretion involves two steps:\n  1. **Synthesis** of the product within the cell\n  2. **Release** of the product from the cell\n- This distinguishes secretion from excretion (removal of waste)\n- Secretory products are purposefully manufactured to serve a function, such as:\n  - Digestion (enzymes)\n  - Thermoregulation (sweat)\n  - Surface protection (mucus)\n  - Systemic signaling (hormones)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.004sa": [
+      "What is a gland?",
+      "One or more cells that produce and secrete a particular product.",
+      "The definition is broader than you might expect in terms of how many cells are required.",
+      "## Glands\n\n- A gland can be:\n  - **Unicellular**: a single secretory cell (e.g., a goblet cell)\n  - **Multicellular**: an organized group of secretory cells forming a distinct structure\n- All glands share the function of producing and releasing a specific product\n- Glands are classified as epithelial tissue because they all develop from epithelial surfaces during embryonic development",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.005sa": [
+      "How do glands develop embryologically?",
+      "Epithelial cells grow inward (invaginate) from the epithelial surface into the underlying connective tissue to form the gland.",
+      "Think about the direction of growth: these cells move away from the surface they originated on.",
+      "## Embryological Development of Glands\n\n- During development:\n  1. Epithelial cells at a surface begin to proliferate\n  2. They grow **inward** (invaginate) into the underlying connective tissue\n  3. They differentiate into specialized secretory cells\n- This shared origin from epithelial surfaces is why all glands are classified as epithelial tissue\n- The fate of the connection to the surface determines the gland type:\n  - **Retained connection** = exocrine gland (duct present)\n  - **Lost connection** = endocrine gland (ductless)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.006sa": [
+      "What term describes the process by which epithelial cells grow inward from the surface into the underlying connective tissue during gland development?",
+      "Invagination",
+      "This term literally describes an inward folding or pouching movement.",
+      "## Invagination in Gland Development\n\n- **Invagination** = the inward growth or folding of a layer of cells\n- In gland formation:\n  1. Surface epithelial cells proliferate\n  2. They push inward into the connective tissue below\n  3. This inward growth forms the gland structure\n- The same term is used in other developmental contexts (e.g., gastrulation) to describe similar inward movements of cell layers",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.007sa": [
+      "Why are all glands, regardless of their final form, classified as epithelial tissue?",
+      "Because all glands develop embryologically from epithelial surfaces, sharing a common epithelial origin.",
+      "Think about where glands come from during development, not what they look like in their mature form.",
+      "## Epithelial Origin of Glands\n\n- Classification is based on **developmental origin**, not mature appearance\n- All glands trace back to epithelial cells that invaginated from a surface\n- This applies even to glands that:\n  - Lose their connection to the surface (endocrine glands)\n  - Look very different from typical epithelial sheets in their final form\n- This principle reflects a core concept in histology: tissue classification is based on origin and fundamental characteristics, not just current appearance",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.008sa": [
+      "What are the two major categories of glands, and how are they distinguished?",
+      "Exocrine glands (secrete products onto a surface through ducts) and endocrine glands (secrete hormones directly into the bloodstream without ducts).",
+      "The distinction is based on how and where the gland delivers its product.",
+      "## Two Major Categories of Glands\n\n| Feature | Exocrine | Endocrine |\n|---|---|---|\n| Duct | Present | Absent (ductless) |\n| Secretion target | Body surface or hollow organ lining | Bloodstream |\n| Product type | Enzymes, mucus, sweat, oil, bile, etc. | Hormones |\n| Delivery method | Through duct to surface | Into interstitial fluid, then blood |\n\n- Both types originate from epithelial invagination\n- The key difference: exocrine glands **retain** their duct connection to the surface; endocrine glands **lose** it during development",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.009sa": [
+      "Define exocrine gland.",
+      "A gland that secretes its products onto a surface (either the body surface or the lining of a hollow organ) through a duct.",
+      "Think about the prefix 'exo-' (outside) and how the product reaches its destination.",
+      "## Exocrine Glands\n\n- **Exo-** = outside/outward; **-crine** = to secrete\n- Key features:\n  1. Retain a **duct** connecting the gland to the epithelial surface\n  2. Secrete onto a **surface** (skin or organ lining)\n- Structural components:\n  - **Secretory unit**: produces the product\n  - **Duct**: delivers the product to the target surface\n- Examples: sweat glands, salivary glands, sebaceous glands, pancreas (exocrine portion), liver, mammary glands",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.010sa": [
+      "What term describes a gland that secretes its products onto a surface through a duct?",
+      "Exocrine gland",
+      "The prefix of this term means 'outside' or 'outward.'",
+      "## Exocrine Glands\n\n- The duct system is the defining structural feature\n- \"Onto a surface\" can mean:\n  - The external body surface (e.g., sweat glands secreting onto skin)\n  - The lining of a hollow organ (e.g., salivary glands secreting into the oral cavity)\n- The duct was retained from the original invagination during embryonic development\n- Exocrine glands are further classified by their **mode of secretion**: merocrine, apocrine, or holocrine",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.011sa": [
+      "Define endocrine gland.",
+      "A ductless gland that secretes hormones directly into the bloodstream.",
+      "Think about the prefix 'endo-' (within) and the absence of a structural delivery pathway.",
+      "## Endocrine Glands\n\n- **Endo-** = within; **-crine** = to secrete\n- Key features:\n  1. **Ductless**: lost their duct connection to the epithelial surface during development\n  2. Secrete **hormones** as their product\n  3. Hormones enter **interstitial fluid** first, then the **bloodstream**\n- Hormones travel through the blood to reach **target cells** throughout the body\n- This allows endocrine glands to have widespread, systemic effects unlike the localized delivery of exocrine glands",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.012sa": [
+      "What term describes a ductless gland that secretes hormones directly into the bloodstream?",
+      "Endocrine gland",
+      "The prefix of this term means 'within.'",
+      "## Endocrine Glands\n\n- The absence of a duct is the defining structural distinction from exocrine glands\n- The duct was **lost** during embryonic development (not simply absent from the start)\n- Hormones are the exclusive product type\n- Major endocrine glands include:\n  1. Pituitary gland\n  2. Thyroid gland\n  3. Parathyroid glands\n  4. Adrenal glands\n  5. Endocrine pancreas (islets of Langerhans)\n- Some organs not traditionally classified as glands also contain scattered hormone-producing cells",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.013sa": [
+      "What structural connection did endocrine glands lose during development that exocrine glands retained?",
+      "The duct connection to the epithelial surface.",
+      "Both gland types start from the same developmental process but diverge in one key structural feature.",
+      "## Duct Loss in Endocrine Development\n\n- During embryonic development:\n  1. Both gland types begin as invaginations from an epithelial surface\n  2. Exocrine glands **retain** the connection, which becomes the duct\n  3. Endocrine glands **lose** the connection, becoming ductless\n- This single developmental difference determines the entire delivery strategy:\n  - Duct present = local delivery to a surface\n  - Duct absent = systemic delivery via the bloodstream",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.014sa": [
+      "Name at least five examples of exocrine glands.",
+      "Any five of: sweat glands, salivary glands, mucous glands, the exocrine pancreas, the liver, mammary glands, sebaceous (oil) glands.",
+      "Think about glands that deliver products to the skin surface or into organ cavities.",
+      "## Examples of Exocrine Glands\n\n1. **Sweat glands** (secrete sweat for thermoregulation)\n2. **Salivary glands** (secrete saliva into the oral cavity)\n3. **Mucous glands** (secrete mucus for surface protection)\n4. **Exocrine pancreas** (secretes digestive enzymes into the small intestine)\n5. **Liver** (secretes bile)\n6. **Mammary glands** (secrete milk)\n7. **Sebaceous glands** (secrete sebum/oil onto skin and hair)\n\n- Each delivers its product through a duct to a body surface or hollow organ lining",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.015sa": [
+      "What are the two structural components of an exocrine gland, and what does each do?",
+      "The secretory unit (produces the product) and the duct (delivers the product to the target surface).",
+      "One component makes the product, the other transports it.",
+      "## Exocrine Gland Structure\n\n1. **Secretory unit**\n   - Contains the secretory cells\n   - Site of product synthesis and initial release\n2. **Duct**\n   - Tubular passageway connecting the secretory unit to the epithelial surface\n   - Transports the product to its destination\n\n- These two components can vary in shape and complexity across different exocrine glands, but the basic functional division (production vs. delivery) is consistent",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.016sa": [
+      "What are the three modes of exocrine secretion?",
+      "Merocrine (eccrine), apocrine, and holocrine.",
+      "These modes are distinguished by what happens to the cell during the release of its product.",
+      "## Three Modes of Exocrine Secretion\n\n1. **Merocrine (eccrine)**: product released by exocytosis; cell remains intact\n2. **Apocrine**: product released in membrane-bound fragments pinched from the apical surface\n3. **Holocrine**: product released by cell rupture and death; cell contents become the secretion\n\n- The modes represent a spectrum of cellular damage:\n  - Merocrine = no damage\n  - Apocrine = partial loss of cell material\n  - Holocrine = total cell destruction",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.017sa": [
+      "Define merocrine (eccrine) secretion.",
+      "A mode of exocrine secretion in which the product is released by exocytosis without damaging the cell.",
+      "Think about the most conservative release mechanism, one that leaves the cell completely intact.",
+      "## Merocrine (Eccrine) Secretion\n\n- Product is packaged in secretory vesicles and released by **exocytosis**\n- The cell membrane fuses with the vesicle membrane, releasing contents to the exterior\n- The cell **remains intact** and continues to secrete\n- This is the **most common** mode of exocrine secretion\n- Examples:\n  1. Most sweat glands\n  2. Salivary glands\n  3. Exocrine pancreas",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.018sa": [
+      "What mode of exocrine secretion releases the product by exocytosis without damaging the cell?",
+      "Merocrine (or eccrine) secretion",
+      "This is the most common mode of exocrine secretion.",
+      "## Merocrine Secretion\n\n- Key features that distinguish it from other modes:\n  - Uses **exocytosis** (vesicle fusion with plasma membrane)\n  - Cell sustains **no damage**\n  - Cell can continue secreting indefinitely\n- Contrast with:\n  - Apocrine: loses part of the apical cytoplasm\n  - Holocrine: entire cell is destroyed\n- The cell's structural integrity is fully preserved after each secretion event",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.019sa": [
+      "Is merocrine secretion the most common or least common mode of exocrine secretion?",
+      "Most common.",
+      "Think about which mode would be the most sustainable for long-term gland function.",
+      "## Merocrine Secretion Prevalence\n\n- Merocrine is the **most common** mode because:\n  - It preserves the cell completely\n  - No cellular repair or replacement is needed\n  - The cell can secrete continuously and repeatedly\n- Used by the majority of exocrine glands including sweat glands, salivary glands, and the pancreas\n- Apocrine and holocrine modes are limited to fewer gland types because they require partial or total cell replacement",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.020sa": [
+      "Name three glands that use merocrine secretion.",
+      "Most sweat glands, salivary glands, and the pancreas (exocrine portion).",
+      "Think about glands that secrete large volumes of fluid and need to do so continuously.",
+      "## Merocrine Gland Examples\n\n1. **Most sweat glands**: secrete sweat for thermoregulation\n2. **Salivary glands**: secrete saliva for lubrication and initial digestion\n3. **Exocrine pancreas**: secretes digestive enzymes into the small intestine\n\n- All three require sustained, high-volume secretion\n- Merocrine secretion supports this because the cells are not damaged during product release",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.021sa": [
+      "Define apocrine secretion.",
+      "A mode of exocrine secretion in which the product is released in membrane-bound fragments pinched off from the apical surface of the cell.",
+      "In this mode, the cell loses a portion of itself along with the product.",
+      "## Apocrine Secretion\n\n- The apical portion of the cell **buds off** as membrane-bound fragments containing the secretory product\n- The cell loses part of its cytoplasm but **survives** and regenerates\n- Intermediate between merocrine (no damage) and holocrine (total destruction)\n- The **mammary glands** are the primary true apocrine glands\n- Note: the \"apocrine\" sweat glands of the axilla and groin were named for this mechanism but are now thought to use a merocrine-like mechanism",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.022sa": [
+      "What mode of exocrine secretion releases the product in membrane-bound fragments pinched off from the apical surface of the cell?",
+      "Apocrine secretion",
+      "This mode involves partial loss of the cell's apical region.",
+      "## Apocrine Secretion\n\n- Distinguishing features:\n  - Product is released within **membrane-bound fragments**\n  - Fragments are pinched from the **apical surface**\n  - The cell is partially diminished but **not destroyed**\n- Contrast with:\n  - Merocrine: no cell material is lost (exocytosis only)\n  - Holocrine: the entire cell ruptures and dies\n- True apocrine secretion is relatively rare; mammary glands are the classic example",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.023sa": [
+      "What gland is considered a true apocrine gland?",
+      "The mammary gland.",
+      "This gland produces a nutrient-rich secretion for neonates.",
+      "## Mammary Glands and Apocrine Secretion\n\n- Mammary glands are the primary example of **true** apocrine secretion\n- Milk components are released in membrane-bound fragments from the apical surface of secretory cells\n- Historical note: the \"apocrine\" sweat glands of the axilla and groin were originally classified as apocrine but are now believed to use a merocrine-like mechanism\n- This makes true apocrine secretion relatively uncommon among exocrine glands",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.024sa": [
+      "Define holocrine secretion.",
+      "A mode of exocrine secretion in which the product is released by rupture and death of the entire cell, with the cell contents becoming the secretion itself.",
+      "This is the most destructive mode of secretion for the secreting cell.",
+      "## Holocrine Secretion\n\n- **Holo-** = whole/entire\n- The process:\n  1. The cell accumulates its secretory product (e.g., lipids)\n  2. The cell **dies** and **ruptures**\n  3. The entire cell contents are released as the secretion\n- The cell is completely destroyed in the process\n- Requires continuous **replacement** of secretory cells from a stem cell population\n- Sebaceous (oil) glands are the primary example",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.025sa": [
+      "What mode of exocrine secretion releases the product by rupture and death of the entire cell, with the cell contents becoming the secretion?",
+      "Holocrine secretion",
+      "The prefix of this term means 'whole' or 'entire.'",
+      "## Holocrine Secretion\n\n- The most extreme mode of exocrine secretion\n- The **entire cell** is sacrificed to release its product\n- Contrast with:\n  - Merocrine: cell fully intact after secretion\n  - Apocrine: cell partially diminished but survives\n- Because cells are destroyed, holocrine glands must maintain an active population of **stem cells** to replace lost secretory cells\n- Sebaceous glands are the classic example",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.026sa": [
+      "What is the primary example of a gland that uses holocrine secretion?",
+      "Sebaceous (oil) glands.",
+      "These glands produce a lipid-rich product for the skin and hair.",
+      "## Sebaceous Glands and Holocrine Secretion\n\n- Sebaceous glands secrete **sebum** (an oily substance)\n- The holocrine process in sebaceous glands:\n  1. Cells accumulate lipids\n  2. Cells die and disintegrate\n  3. The oily remains (sebum) are released\n- Sebum lubricates the skin and hair\n- New secretory cells are continuously generated to replace those destroyed during secretion",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.027sa": [
+      "Describe what happens to a sebaceous gland cell during holocrine secretion.",
+      "The cell accumulates lipids, dies, and disintegrates, and the oily remains become the secretion (sebum).",
+      "Think about the complete lifecycle of the cell from product accumulation to release.",
+      "## Sebaceous Cell Lifecycle\n\n1. **Accumulation**: the cell fills with lipids over time\n2. **Death**: the cell dies as it becomes engorged with its product\n3. **Disintegration**: the cell ruptures, releasing its contents\n4. **Secretion**: the oily cellular debris = sebum\n\n- The cell itself becomes the product\n- This is why holocrine glands require a constant supply of new cells from basal stem cells\n- No other common mode of secretion destroys the cell entirely",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.028sa": [
+      "What is sebum, and what is its function?",
+      "Sebum is the oily secretion produced by sebaceous glands through holocrine secretion. It lubricates the skin and hair.",
+      "This is a lipid-rich product released when sebaceous gland cells rupture.",
+      "## Sebum\n\n- **Composition**: lipid-rich oily substance made from the disintegrated remains of sebaceous gland cells\n- **Functions**:\n  1. Lubricates the skin surface\n  2. Lubricates hair\n  3. Helps maintain skin moisture\n- **Production method**: holocrine secretion (the cell dies and its contents become the product)\n- Overproduction of sebum is associated with conditions like acne",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.029sa": [
+      "Where do endocrine glands secrete their hormones before those hormones enter the bloodstream?",
+      "Into the interstitial fluid.",
+      "Hormones must pass through an intermediate fluid compartment before reaching blood vessels.",
+      "## Endocrine Secretion Pathway\n\n1. Endocrine cells synthesize hormones\n2. Hormones are released into the **interstitial fluid** (the fluid surrounding cells)\n3. Hormones diffuse from interstitial fluid into nearby **capillaries**\n4. The bloodstream carries hormones to **target cells** throughout the body\n\n- This is in contrast to exocrine glands, which deliver products through ducts to surfaces\n- The interstitial fluid serves as the intermediary between the secretory cell and the vascular system",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.030sa": [
+      "Name at least five major endocrine glands.",
+      "Any five of: pituitary gland, thyroid gland, parathyroid glands, adrenal glands, and the endocrine pancreas (islets of Langerhans).",
+      "Think about the glands responsible for regulating metabolism, growth, calcium balance, stress responses, and blood sugar.",
+      "## Major Endocrine Glands\n\n1. **Pituitary gland**: often called the \"master gland\"; regulates many other endocrine glands\n2. **Thyroid gland**: regulates metabolism\n3. **Parathyroid glands**: regulate calcium homeostasis\n4. **Adrenal glands**: regulate stress responses, electrolyte balance\n5. **Endocrine pancreas (islets of Langerhans)**: regulate blood glucose\n\n- Additionally, scattered hormone-producing cells exist in organs like the heart, kidneys, and digestive tract\n- These are not traditionally classified as \"glands\" but still perform endocrine functions",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.031sa": [
+      "What is the endocrine name for the hormone-secreting cell clusters within the pancreas?",
+      "Islets of Langerhans.",
+      "These clusters are named after the German anatomist who discovered them.",
+      "## Islets of Langerhans\n\n- Small clusters of endocrine cells scattered throughout the pancreas\n- Secrete hormones directly into the bloodstream (no duct)\n- Key hormones produced:\n  - **Insulin**: lowers blood glucose\n  - **Glucagon**: raises blood glucose\n- The islets represent the **endocrine** portion of the pancreas\n- They are surrounded by the much larger **exocrine** portion (acinar cells) that secretes digestive enzymes",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.032sa": [
+      "Why is the pancreas considered both an exocrine and an endocrine organ?",
+      "Because it contains exocrine acinar cells that secrete digestive enzymes through a duct into the small intestine and endocrine islets of Langerhans that secrete insulin and glucagon directly into the blood.",
+      "Think about two different cell populations within the same organ with two different delivery methods.",
+      "## The Pancreas as a Dual-Function Organ\n\n- **Exocrine component**:\n  - Cell type: acinar cells\n  - Product: digestive enzymes\n  - Delivery: through a duct into the small intestine\n- **Endocrine component**:\n  - Cell type: islets of Langerhans\n  - Products: insulin and glucagon\n  - Delivery: directly into the bloodstream\n- This makes the pancreas simultaneously a **digestive gland** and a **hormonal gland**\n- The pancreas is the classic example of an organ with both exocrine and endocrine functions",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.033sa": [
+      "What do the exocrine acinar cells of the pancreas secrete, and where do they deliver their product?",
+      "They secrete digestive enzymes and deliver them through a duct into the small intestine.",
+      "This is the pancreas acting in its role as a digestive organ.",
+      "## Exocrine Pancreas\n\n- **Acinar cells** = the exocrine secretory cells of the pancreas\n- Product: **digestive enzymes** (e.g., lipase, amylase, proteases)\n- Delivery route: through the **pancreatic duct** into the **small intestine** (specifically the duodenum)\n- This is a classic exocrine function: product made in a secretory unit, delivered via duct to a surface\n- The exocrine portion makes up the vast majority of the pancreas by volume",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.034sa": [
+      "What hormones do the endocrine islets of Langerhans secrete?",
+      "Insulin and glucagon.",
+      "Both hormones are involved in regulating the same metabolic variable but in opposite directions.",
+      "## Islet Hormones\n\n- **Insulin**:\n  - Lowers blood glucose levels\n  - Promotes glucose uptake by cells\n- **Glucagon**:\n  - Raises blood glucose levels\n  - Stimulates glycogen breakdown in the liver\n- These two hormones work as **antagonistic partners** to maintain blood glucose homeostasis\n- Both are secreted directly into the bloodstream (endocrine delivery), not through the pancreatic duct",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.035sa": [
+      "What specific cells within the pancreas secrete insulin and glucagon?",
+      "The islets of Langerhans (endocrine cells of the pancreas).",
+      "These are clusters of endocrine cells embedded within the larger exocrine tissue of the pancreas.",
+      "## Islets of Langerhans\n\n- The islets are the **endocrine** cell clusters of the pancreas\n- They secrete hormones directly into the blood (no duct)\n- Key hormones:\n  - **Insulin**: regulates blood glucose by promoting cellular uptake\n  - **Glucagon**: regulates blood glucose by stimulating glycogen breakdown\n- The islets are distinct from the **acinar cells**, which are the exocrine component secreting digestive enzymes through ducts\n- This dual presence of endocrine and exocrine cells makes the pancreas unique among glandular organs",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.036sa": [
+      "Name at least three body functions that depend on exocrine secretions.",
+      "Any three of: digestion, thermoregulation (cooling), surface lubrication, or mucus protection of body linings.",
+      "Think about what would fail if glands could no longer deliver products to surfaces.",
+      "## Exocrine-Dependent Functions\n\n1. **Digestion**: digestive enzymes from the pancreas, bile from the liver, saliva from salivary glands\n2. **Thermoregulation**: sweat from sweat glands enables evaporative cooling\n3. **Surface lubrication**: sebum from sebaceous glands lubricates skin and hair\n4. **Mucus protection**: mucous glands coat and protect the linings of the respiratory, digestive, and reproductive tracts\n\n- All of these require delivery of a product to a specific surface, which is the defining characteristic of exocrine secretion",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.037sa": [
+      "Name at least three body functions that depend on endocrine secretions.",
+      "Any three of: metabolism regulation, growth, reproduction, or stress responses.",
+      "Think about systemic, body-wide processes that require hormonal coordination.",
+      "## Endocrine-Dependent Functions\n\n1. **Metabolism regulation**: thyroid hormones control metabolic rate\n2. **Growth**: growth hormone from the pituitary gland\n3. **Reproduction**: sex hormones regulate reproductive development and function\n4. **Stress responses**: cortisol and epinephrine from the adrenal glands\n\n- These are **systemic** functions that require hormones to travel through the bloodstream to reach distant target cells\n- This systemic reach is what makes endocrine signaling essential for whole-body coordination",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.038sa": [
+      "Besides the major endocrine glands, name two organs that contain scattered hormone-producing cells.",
+      "Any two of: the heart, kidneys, or digestive tract.",
+      "These organs are not primarily classified as endocrine glands but still produce hormones.",
+      "## Scattered Endocrine Cells\n\n- Some organs contain isolated hormone-producing cells even though their primary function is not endocrine:\n  1. **Heart**: produces atrial natriuretic peptide (ANP), which regulates blood volume and pressure\n  2. **Kidneys**: produce erythropoietin (EPO), which stimulates red blood cell production\n  3. **Digestive tract**: contains numerous hormone-producing cells that regulate digestive processes\n- These scattered endocrine cells demonstrate that hormone production is not limited to dedicated endocrine glands",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.05.039sa": [
+      "What does the liver secrete in its role as an exocrine gland?",
+      "Bile.",
+      "This product is delivered through a duct and plays a role in digestion.",
+      "## The Liver as an Exocrine Gland\n\n- The liver secretes **bile**, which is delivered through the bile duct to the small intestine\n- Bile aids in the **emulsification** of fats, breaking large fat globules into smaller droplets for easier enzymatic digestion\n- This qualifies as exocrine secretion because:\n  1. A product (bile) is synthesized\n  2. It is delivered through a **duct**\n  3. It reaches a **surface** (the lining of the small intestine)\n- The liver also performs many other functions (metabolism, detoxification, protein synthesis), but its bile secretion is its exocrine role",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

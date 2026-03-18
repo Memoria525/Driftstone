@@ -1,0 +1,444 @@
+{
+  "cards": {
+    "01.04.03.02.001sa": [
+      "What are the three structural components shared by all connective tissues?",
+      "Cells, protein fibers, and ground substance.",
+      "Think about the cellular and non-cellular elements that make up every connective tissue.",
+      "## Three Structural Components\n\n1. **Cells**: both resident and wandering types\n2. **Protein fibers**: collagen, elastic, and reticular\n3. **Ground substance**: gel-like material filling space between cells and fibers\n\n- The specific **types and proportions** of these three components determine the identity and properties of each connective tissue type\n- Protein fibers + ground substance = the **extracellular matrix**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.002sa": [
+      "What determines the identity and properties of each connective tissue type?",
+      "The specific types and proportions of the three structural components: cells, protein fibers, and ground substance.",
+      "It is not any single component but rather the combination and ratio of all three.",
+      "## Connective Tissue Identity\n\n- Every connective tissue contains cells, protein fibers, and ground substance\n- What makes each type unique is:\n  1. **Which types** of cells, fibers, and ground substance molecules are present\n  2. **How much** of each component is present (proportions)\n- Examples:\n  - Bone: osteocytes, dense collagen fibers, calcified ground substance\n  - Blood: blood cells, no structural fibers, liquid plasma\n  - Adipose: adipocytes dominate, minimal fibers and ground substance",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.003sa": [
+      "What two components together make up the extracellular matrix?",
+      "Ground substance and protein fibers.",
+      "These are the two non-cellular components of connective tissue.",
+      "## Extracellular Matrix Composition\n\n- **Ground substance** + **protein fibers** = extracellular matrix (ECM)\n- The ECM is the **non-living** material that surrounds the cells\n- It gives each connective tissue its characteristic **mechanical properties**\n- Ground substance provides hydration and compression resistance\n- Protein fibers provide tensile strength, elasticity, and structural support\n- The cells are embedded within the ECM but are not part of it",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.004sa": [
+      "Is the extracellular matrix considered living or non-living material?",
+      "Non-living.",
+      "The matrix is produced by living cells, but the matrix material itself has a different status.",
+      "## ECM: Non-Living but Not Inert\n\n- The ECM is classified as **non-living** material\n- It is produced and maintained by the living cells of the tissue\n- However, non-living does not mean inactive:\n  - The ECM actively **influences cell behavior** through chemical signaling, mechanical forces, and physical organization\n  - Cells communicate with the ECM through receptor proteins called **integrins**\n- The ECM can affect cell shape, movement, growth, differentiation, and survival",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.005sa": [
+      "What are the two broad categories of connective tissue cells?",
+      "Resident cells and wandering cells.",
+      "One category is permanent, the other is transient.",
+      "## Connective Tissue Cell Categories\n\n1. **Resident cells**\n   - Permanent inhabitants of the tissue\n   - Maintain the tissue over time\n   - Examples: fibroblasts, adipocytes, chondrocytes, osteocytes, mast cells\n2. **Wandering cells**\n   - Temporary visitors\n   - Mostly immune cells\n   - Migrate through the tissue as needed\n   - Examples: macrophages, neutrophils, lymphocytes, plasma cells",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.006sa": [
+      "Define resident cells in the context of connective tissue.",
+      "Permanent inhabitants of the connective tissue that maintain the tissue.",
+      "These cells have a fixed home in the tissue rather than passing through temporarily.",
+      "## Resident Cells\n\n- **Permanent** members of the tissue\n- Their primary role is **tissue maintenance**\n- Examples:\n  1. **Fibroblasts**: produce fibers and ground substance\n  2. **Adipocytes**: store energy as triglycerides\n  3. **Chondrocytes**: maintain cartilage matrix\n  4. **Osteocytes**: maintain bone matrix\n  5. **Mast cells**: resident immune cells that release histamine\n- Each resident cell type is specialized for the connective tissue it inhabits",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.007sa": [
+      "Define wandering cells in the context of connective tissue.",
+      "Temporary visitors, mostly immune cells, that migrate through the connective tissue as needed.",
+      "These cells are not permanent residents; they move in and out based on demand.",
+      "## Wandering Cells\n\n- **Temporary** visitors to the tissue\n- Primarily **immune cells** performing defense functions\n- They migrate into the tissue in response to signals such as infection, injury, or inflammation\n- Examples:\n  1. **Macrophages**: phagocytize bacteria, dead cells, and debris\n  2. **Neutrophils**: first responders during acute infection\n  3. **Lymphocytes**: specific immune responses\n  4. **Plasma cells**: antibody production\n- Their presence fluctuates based on the body's current needs",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.008sa": [
+      "What is the most important resident cell in most connective tissues?",
+      "The fibroblast.",
+      "This cell is responsible for building and maintaining the extracellular matrix.",
+      "## The Fibroblast\n\n- The **primary** resident cell in most connective tissues\n- Produces both components of the ECM:\n  1. Protein fibers\n  2. Ground substance\n- Physical appearance: large, flat, star-shaped\n- Key roles:\n  - Building and maintaining the matrix under normal conditions\n  - **Tissue repair** after injury (the primary cell responsible for wound healing)\n- Other connective tissue types have their own specialized matrix-producing cells (chondrocytes, osteocytes), but the fibroblast is the most widespread",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.009sa": [
+      "Describe the physical appearance of a fibroblast.",
+      "Large, flat, and star-shaped.",
+      "Think about a cell with an irregular, spread-out morphology with extending processes.",
+      "## Fibroblast Morphology\n\n- **Large**: among the bigger cells in connective tissue\n- **Flat**: spread out rather than round or cuboidal\n- **Star-shaped**: irregular outline with extending processes\n- This shape reflects the fibroblast's role:\n  - Spread-out morphology increases contact area with the surrounding matrix\n  - Extending processes allow interaction with fibers and ground substance over a wide area\n- Fibroblasts are the most abundant resident cell in most connective tissues",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.010sa": [
+      "What does a fibroblast produce?",
+      "Both the protein fibers and the ground substance of the extracellular matrix.",
+      "This cell is responsible for both non-cellular components of connective tissue.",
+      "## Fibroblast Products\n\n- Fibroblasts produce the entire **extracellular matrix**:\n  1. **Protein fibers**: collagen, elastic, and reticular fibers\n  2. **Ground substance**: GAGs, proteoglycans, glycoproteins, and water-binding molecules\n- This dual production role makes the fibroblast the builder and maintainer of the connective tissue framework\n- During tissue repair, fibroblasts ramp up production of these components to rebuild damaged matrix",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.011sa": [
+      "What is the primary role of fibroblasts after injury?",
+      "Tissue repair. Fibroblasts are the primary cells responsible for rebuilding damaged connective tissue.",
+      "Think about what cell would need to rebuild the extracellular matrix after damage.",
+      "## Fibroblasts in Tissue Repair\n\n- After injury, fibroblasts:\n  1. Migrate to the wound site\n  2. Proliferate (increase in number)\n  3. Increase production of collagen and other matrix components\n  4. Lay down new matrix to replace damaged tissue\n- Fibroblasts are called the \"workhorses\" of tissue repair\n- Scar tissue is largely the product of fibroblast activity (primarily collagen deposition)\n- This repair role is in addition to their ongoing maintenance of healthy connective tissue",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.012sa": [
+      "What are adipocytes, and what do they store?",
+      "Adipocytes are fat cells. They store energy as triglycerides.",
+      "These are resident connective tissue cells specialized for energy storage.",
+      "## Adipocytes\n\n- **Adipocytes** = fat cells\n- Resident cells of connective tissue (specifically adipose tissue)\n- Store energy in the form of **triglycerides** (a type of lipid)\n- Each adipocyte stores a large lipid droplet that pushes the nucleus and cytoplasm to the periphery\n- Beyond energy storage, adipose tissue also:\n  - Provides thermal insulation\n  - Cushions and protects organs\n  - Functions as an endocrine organ (secretes adipokines)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.013sa": [
+      "What are chondrocytes, and what do they maintain?",
+      "Chondrocytes are cartilage cells that maintain the cartilage matrix.",
+      "The suffix '-cyte' tells you these cells are in maintenance mode for a specific connective tissue type.",
+      "## Chondrocytes\n\n- **Chondro-** = cartilage; **-cyte** = mature, maintaining cell\n- Resident cells of **cartilage**\n- Their role is to **maintain** the existing cartilage matrix\n- They reside in small spaces within the matrix called **lacunae**\n- Related cells in the naming convention:\n  - **Chondroblast** (-blast): actively building new cartilage matrix\n  - **Chondrocyte** (-cyte): maintaining existing cartilage matrix\n- Cartilage heals slowly in part because chondrocytes have limited capacity to proliferate",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.014sa": [
+      "What are osteocytes, and what do they maintain?",
+      "Osteocytes are bone cells that maintain the bone matrix.",
+      "The suffix '-cyte' tells you these cells are in maintenance mode for a specific connective tissue type.",
+      "## Osteocytes\n\n- **Osteo-** = bone; **-cyte** = mature, maintaining cell\n- Resident cells of **bone**\n- Their role is to **maintain** the existing bone matrix\n- Like chondrocytes, they reside in **lacunae** within the matrix\n- Related cells in the naming convention:\n  - **Osteoblast** (-blast): actively building new bone matrix\n  - **Osteocyte** (-cyte): maintaining existing bone matrix\n  - **Osteoclast** (-clast): breaking down bone matrix\n- Bone is more dynamic than cartilage: it is continuously remodeled through the coordinated activity of osteoblasts, osteocytes, and osteoclasts",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.015sa": [
+      "What are mast cells, and what do they release?",
+      "Mast cells are resident immune cells of connective tissue that release histamine and other inflammatory mediators.",
+      "These are the only resident connective tissue cells with a primarily immune function.",
+      "## Mast Cells\n\n- **Resident** immune cells of connective tissue\n- Release:\n  1. **Histamine**: causes vasodilation and increased vascular permeability\n  2. Other **inflammatory mediators** (e.g., heparin, cytokines, proteases)\n- These substances initiate and amplify the **inflammatory response**\n- Mast cells are unique among resident connective tissue cells because their primary role is **immune defense** rather than matrix production or maintenance\n- They are triggered by injury or allergic reactions",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.016sa": [
+      "What triggers mast cells to release their inflammatory mediators?",
+      "Injury or allergic reactions.",
+      "Think about conditions that require a rapid local inflammatory response.",
+      "## Mast Cell Activation\n\n- Two primary triggers:\n  1. **Injury**: tissue damage activates mast cells to initiate inflammation at the wound site\n  2. **Allergic reactions**: allergens bind to antibodies on the mast cell surface, triggering degranulation\n- Upon activation, mast cells release their granule contents (histamine, heparin, cytokines) into the surrounding connective tissue\n- This release causes:\n  - Vasodilation (increased blood flow to the area)\n  - Increased vascular permeability (allows immune cells to enter the tissue)\n  - Recruitment of additional immune cells to the site",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.017sa": [
+      "What does the suffix \"-blast\" indicate about a connective tissue cell's activity?",
+      "The cell is actively building new matrix.",
+      "Think about the most active, constructive phase of a connective tissue cell's life.",
+      "## The \"-blast\" Suffix\n\n- **-blast** = actively building/producing matrix\n- These cells are in their most **metabolically active** state\n- Examples:\n  1. **Fibroblast**: building connective tissue matrix (fibers + ground substance)\n  2. **Chondroblast**: building cartilage matrix\n  3. **Osteoblast**: building bone matrix\n- Once active matrix production slows and the cell transitions to maintenance, the suffix changes to **-cyte**\n- The suffix system: -blast (building) → -cyte (maintaining) → -clast (breaking down)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.018sa": [
+      "What does the suffix \"-cyte\" indicate about a connective tissue cell's activity?",
+      "The cell is maintaining existing matrix.",
+      "This suffix indicates a less active, steady-state phase compared to the building phase.",
+      "## The \"-cyte\" Suffix\n\n- **-cyte** = maintaining existing matrix\n- These cells have transitioned from active construction to a **maintenance** role\n- Examples:\n  1. **Fibrocyte**: maintaining connective tissue matrix\n  2. **Chondrocyte**: maintaining cartilage matrix\n  3. **Osteocyte**: maintaining bone matrix\n- The cell is still alive and functional, but its metabolic activity is lower than during the -blast phase\n- The suffix system: -blast (building) → -cyte (maintaining) → -clast (breaking down)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.019sa": [
+      "What does the suffix \"-clast\" indicate about a connective tissue cell's activity?",
+      "The cell is breaking down matrix.",
+      "This is the destructive counterpart to the building and maintaining phases.",
+      "## The \"-clast\" Suffix\n\n- **-clast** = breaking down/degrading matrix\n- The primary example is the **osteoclast**, which breaks down bone matrix\n- Osteoclasts are essential for:\n  1. **Bone remodeling**: removing old or damaged bone so osteoblasts can replace it\n  2. **Calcium release**: freeing calcium from bone matrix into the blood when needed\n- The suffix system: -blast (building) → -cyte (maintaining) → -clast (breaking down)\n- Matrix breakdown is not purely destructive; it is a necessary part of tissue remodeling and homeostasis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.020sa": [
+      "Give an example of a connective tissue cell for each suffix: -blast, -cyte, and -clast.",
+      "-blast: fibroblast (or chondroblast or osteoblast). -cyte: fibrocyte (or chondrocyte or osteocyte). -clast: osteoclast.",
+      "Think about bone cells, as bone has a named example for all three suffixes.",
+      "## Suffix Examples\n\n| Suffix | Meaning | Examples |\n|---|---|---|\n| -blast | Actively building matrix | Fibroblast, chondroblast, osteoblast |\n| -cyte | Maintaining existing matrix | Fibrocyte, chondrocyte, osteocyte |\n| -clast | Breaking down matrix | Osteoclast |\n\n- **Bone** is the clearest example of all three:\n  - Osteoblast builds new bone\n  - Osteocyte maintains existing bone\n  - Osteoclast breaks down bone\n- This coordinated cycle of building, maintaining, and breaking down is essential for bone remodeling",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.021sa": [
+      "What are macrophages, and what is their function in connective tissue?",
+      "Macrophages are phagocytic wandering cells that engulf bacteria, dead cells, and debris in connective tissue.",
+      "The name of this cell literally means 'big eater.'",
+      "## Macrophages\n\n- **Macro-** = large; **-phage** = eater\n- Classification: **wandering** cells of connective tissue\n- Primary function: **phagocytosis** (engulfing and digesting)\n- Targets:\n  1. Bacteria\n  2. Dead cells\n  3. Cellular debris\n- Macrophages are critical for both:\n  - **Immune defense**: eliminating pathogens\n  - **Tissue cleanup**: removing dead or damaged material, especially during wound healing",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.022sa": [
+      "What are neutrophils, and when are they most active?",
+      "Neutrophils are wandering immune cells that serve as first responders during acute infection.",
+      "These are the earliest immune cells to arrive at a site of infection.",
+      "## Neutrophils\n\n- Classification: **wandering** cells of connective tissue\n- Role: **first responders** during acute infection\n- They are among the first immune cells to migrate to a site of infection or injury\n- Neutrophils are a type of white blood cell (granulocyte)\n- They are most active during the **early, acute** phase of an immune response\n- They use phagocytosis and release of antimicrobial chemicals to combat pathogens\n- Their lifespan is short; they are replaced by other immune cells as the response progresses",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.023sa": [
+      "What are lymphocytes responsible for in connective tissue?",
+      "Specific immune responses.",
+      "These cells provide targeted, precise immune defense rather than a general response.",
+      "## Lymphocytes\n\n- Classification: **wandering** cells of connective tissue\n- Responsible for **specific (adaptive) immune responses**\n- This means they target particular pathogens or foreign substances rather than responding broadly\n- Types of lymphocytes include:\n  - **T cells**: directly attack infected or abnormal cells\n  - **B cells**: can differentiate into plasma cells that produce antibodies\n- Lymphocytes migrate through connective tissue as part of immune surveillance\n- They contrast with neutrophils and macrophages, which mount more **general (innate)** immune responses",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.024sa": [
+      "What are plasma cells, and what do they produce?",
+      "Plasma cells are antibody-producing immune cells found as wandering cells in connective tissue.",
+      "These cells are the final stage of a particular lymphocyte's differentiation pathway.",
+      "## Plasma Cells\n\n- Classification: **wandering** cells of connective tissue\n- Primary product: **antibodies** (immunoglobulins)\n- Antibodies are proteins that bind to specific antigens (foreign molecules) and mark them for destruction\n- Plasma cells are derived from **lymphocytes** (specifically B lymphocytes)\n- The differentiation pathway: B lymphocyte → activated B cell → **plasma cell**\n- Plasma cells represent the antibody-producing effector stage of the B cell immune response",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.025sa": [
+      "From what cell type are plasma cells derived?",
+      "Lymphocytes (specifically B lymphocytes).",
+      "Plasma cells are the end product of a specific immune cell's activation pathway.",
+      "## Plasma Cell Origin\n\n- Plasma cells derive from **B lymphocytes**\n- The pathway:\n  1. B lymphocyte encounters a specific antigen\n  2. B lymphocyte is activated\n  3. Activated B cell differentiates into a **plasma cell**\n  4. Plasma cell produces large quantities of **antibodies** specific to that antigen\n- This is part of the **adaptive (specific) immune response**\n- Plasma cells are found as wandering cells in connective tissue, where they secrete antibodies into the surrounding tissue and blood",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.026sa": [
+      "What are the three major types of protein fibers found in connective tissue?",
+      "Collagen fibers, elastic fibers, and reticular fibers.",
+      "Each fiber type has a distinct physical characteristic and functional role in the matrix.",
+      "## Three Protein Fiber Types\n\n1. **Collagen fibers**: thick, strong, resist tension; most abundant protein in the body\n2. **Elastic fibers**: thinner, branching, stretch and recoil; contain the protein elastin\n3. **Reticular fibers**: thin, delicate, branching, form a fine mesh; made of type III collagen\n\n- These fibers are embedded in the ground substance\n- Together with ground substance, they form the **extracellular matrix**\n- Different connective tissue types contain different proportions of these fibers",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.027sa": [
+      "Describe collagen fibers in terms of their physical characteristics and function.",
+      "Collagen fibers are thick, strong fibers that resist tension. Collagen is the most abundant protein in the human body.",
+      "These are the toughest and most plentiful fibers in connective tissue.",
+      "## Collagen Fibers\n\n- **Physical characteristics**:\n  - Thick\n  - Strong\n  - High tensile strength\n- **Function**: resist **tension** (pulling forces)\n- Collagen is the **most abundant protein** in the human body\n- Found in virtually all connective tissues\n- Especially prominent in:\n  - Tendons and ligaments (dense regular connective tissue)\n  - Bone (provides the organic framework)\n  - Dermis of the skin\n- Multiple types of collagen exist (e.g., type I, type II, type III), each with slightly different properties and distributions",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.028sa": [
+      "What is the most abundant protein in the human body?",
+      "Collagen.",
+      "This protein is a major structural component of connective tissue fibers.",
+      "## Collagen Abundance\n\n- Collagen is the **most abundant protein** in the human body\n- It accounts for approximately 25-35% of total body protein\n- Found throughout the body in:\n  - Skin\n  - Bone\n  - Tendons and ligaments\n  - Cartilage\n  - Blood vessel walls\n  - Organ stroma\n- Its abundance reflects the widespread distribution of connective tissue and the importance of tensile strength in maintaining structural integrity",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.029sa": [
+      "Describe elastic fibers in terms of their physical characteristics and function.",
+      "Elastic fibers are thinner, branching fibers containing the protein elastin. They can stretch and recoil, and are found in structures that must return to their original shape after being deformed.",
+      "These fibers are defined by their ability to deform and spring back.",
+      "## Elastic Fibers\n\n- **Physical characteristics**:\n  - Thinner than collagen fibers\n  - Branching\n- **Key protein**: **elastin**\n- **Function**: **stretch and recoil** (return to original shape after deformation)\n- Found in structures requiring elasticity:\n  1. Walls of arteries (expand with each heartbeat, then recoil)\n  2. Lungs (expand during inhalation, recoil during exhalation)\n  3. Skin (stretches and returns to shape)\n- Complement collagen fibers: collagen resists stretching, elastic fibers allow controlled stretching and recovery",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.030sa": [
+      "What protein gives elastic fibers their ability to stretch and recoil?",
+      "Elastin.",
+      "The name of this protein directly reflects its functional property.",
+      "## Elastin\n\n- **Elastin** is the protein responsible for the stretch-and-recoil property of elastic fibers\n- Elastin molecules are cross-linked into a network that can be stretched and will spring back to its resting shape\n- This is a passive mechanical property: no energy input is needed for recoil\n- Loss of elastin with aging contributes to:\n  - Wrinkling of skin\n  - Stiffening of blood vessel walls\n  - Reduced lung compliance",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.031sa": [
+      "Name three structures in the body where elastic fibers are found.",
+      "The walls of arteries, the lungs, and the skin.",
+      "Think about structures that must repeatedly deform and return to their original shape.",
+      "## Elastic Fiber Locations\n\n1. **Walls of arteries**: expand with blood pressure from each heartbeat, then recoil to maintain blood flow\n2. **Lungs**: expand during inhalation, passively recoil during exhalation\n3. **Skin**: stretches with movement and returns to its resting position\n\n- All three structures undergo **repeated cycles of deformation and recovery**\n- Elastic fibers allow this to happen without permanent damage\n- Aging and disease can degrade elastin, reducing the elastic properties of these structures",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.032sa": [
+      "Describe reticular fibers in terms of their physical characteristics and function.",
+      "Reticular fibers are thin, delicate, branching fibers made of type III collagen that form a fine mesh or network. They provide a supporting framework in the stroma of organs without adding bulk.",
+      "These are the finest and most delicate of the three fiber types.",
+      "## Reticular Fibers\n\n- **Physical characteristics**:\n  - Thin and delicate\n  - Branching\n  - Form a fine **mesh or network**\n- **Composition**: made of **type III collagen**\n- **Function**: provide a lightweight **supporting framework** (stroma) without adding bulk\n- Found in organs that need internal support while allowing cells to move freely through the framework\n- The mesh-like architecture is ideal for organs that filter or process cells (spleen, lymph nodes, liver)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.033sa": [
+      "What type of collagen makes up reticular fibers?",
+      "Type III collagen.",
+      "Reticular fibers are a collagen subtype, not a completely different protein.",
+      "## Reticular Fibers and Type III Collagen\n\n- Reticular fibers are made of **type III collagen**\n- This distinguishes them from the thick collagen fibers, which are primarily **type I collagen**\n- Type III collagen forms thinner, more delicate fibrils that branch and interconnect into a mesh\n- Despite being a form of collagen, reticular fibers have very different physical properties:\n  - Collagen fibers (type I): thick, strong, resist tension\n  - Reticular fibers (type III): thin, delicate, form a supportive network",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.034sa": [
+      "In what types of structures are reticular fibers typically found?",
+      "In the stroma of organs such as the spleen, lymph nodes, and liver, where they provide a supporting framework without adding bulk.",
+      "Think about organs that need internal structural support while allowing cells to pass through freely.",
+      "## Reticular Fiber Distribution\n\n- Found in the **stroma** (internal supporting framework) of organs\n- Particularly prominent in organs that filter or process cells:\n  1. **Spleen**: filters blood\n  2. **Lymph nodes**: filter lymph\n  3. **Liver**: processes blood from the digestive tract\n- The fine mesh of reticular fibers provides:\n  - Structural support for the organ\n  - A framework that cells can move through without obstruction\n- This is in contrast to collagen fibers, which provide heavy-duty tensile strength in structures like tendons",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.035sa": [
+      "What is ground substance?",
+      "The gel-like material that fills the space between the cells and fibers of connective tissue.",
+      "This is the non-fibrous component of the extracellular matrix.",
+      "## Ground Substance\n\n- A **gel-like** material that occupies the space between connective tissue cells and fibers\n- Together with protein fibers, it forms the **extracellular matrix**\n- Main components:\n  1. Water\n  2. Glycosaminoglycans (GAGs)\n  3. Proteoglycans\n  4. Glycoproteins\n- Functions:\n  - Provides **hydration** to the tissue\n  - Resists **compression**\n  - Facilitates **cell adhesion** to the matrix\n  - Serves as a medium through which nutrients and waste can diffuse",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.036sa": [
+      "Name the four main components of ground substance.",
+      "Water, glycosaminoglycans (GAGs), proteoglycans, and glycoproteins.",
+      "One is a simple molecule; the other three are complex macromolecules with sugar-related components.",
+      "## Ground Substance Components\n\n1. **Water**: provides hydration and a medium for diffusion\n2. **Glycosaminoglycans (GAGs)**: long polysaccharide chains that attract and hold water\n3. **Proteoglycans**: protein cores with attached GAG chains that form large water-trapping aggregates\n4. **Glycoproteins**: proteins with short sugar chains that serve as adhesion molecules (e.g., fibronectin, laminin)\n\n- GAGs and proteoglycans are primarily responsible for the gel-like consistency and compression resistance\n- Glycoproteins are primarily responsible for **cell-to-matrix adhesion**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.037sa": [
+      "What are glycosaminoglycans (GAGs), and what do they do?",
+      "GAGs are long polysaccharide chains that attract and hold water, providing hydration and resistance to compression.",
+      "These molecules are long sugar chains with a strong affinity for water.",
+      "## Glycosaminoglycans (GAGs)\n\n- **Structure**: long **polysaccharide** (sugar) chains\n- **Key property**: strongly attract and hold **water**\n- **Functions**:\n  1. Provide **hydration** to the tissue\n  2. Provide resistance to **compression** (the trapped water resists being squeezed out)\n- GAGs are a major reason ground substance has a gel-like consistency\n- They are often attached to protein cores to form **proteoglycans**\n- Examples of GAGs: hyaluronic acid, chondroitin sulfate, keratan sulfate",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.038sa": [
+      "What are proteoglycans, and how are they structured?",
+      "Proteoglycans are molecules consisting of a protein core with attached GAG chains. They form large, water-trapping aggregates in the ground substance.",
+      "Think of a structural combination of protein and sugar chains.",
+      "## Proteoglycans\n\n- **Structure**: a **protein core** with many **GAG chains** attached\n- The GAG chains extend outward from the protein core\n- Multiple proteoglycans can attach to a single hyaluronic acid backbone, forming enormous **aggregates**\n- **Function**:\n  1. Trap large amounts of **water** (due to the GAG chains)\n  2. Create a hydrated gel that resists **compression**\n- The water-trapping capacity of proteoglycan aggregates is critical for tissues that bear compressive loads (e.g., cartilage)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.039sa": [
+      "What are glycoproteins in the context of ground substance, and what role do they serve?",
+      "Glycoproteins are proteins with short sugar chains that serve as adhesion molecules, helping cells attach to the extracellular matrix.",
+      "These molecules act as connectors between cells and their surrounding matrix.",
+      "## Glycoproteins in Ground Substance\n\n- **Structure**: proteins with short **sugar chains** attached\n- Distinguished from proteoglycans:\n  - Proteoglycans: protein core + **long** GAG chains (primarily water trapping)\n  - Glycoproteins: protein + **short** sugar chains (primarily adhesion)\n- **Function**: serve as **adhesion molecules** that help cells attach to the matrix\n- The two most important glycoproteins in ground substance:\n  1. **Fibronectin**\n  2. **Laminin**\n- Cell-to-matrix adhesion is essential for cell communication, migration, and survival",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.040sa": [
+      "Name the two most important glycoproteins found in ground substance.",
+      "Fibronectin and laminin.",
+      "Both function as adhesion molecules connecting cells to the matrix.",
+      "## Fibronectin and Laminin\n\n- **Fibronectin**:\n  - Found throughout connective tissue ground substance\n  - Helps cells adhere to the extracellular matrix\n  - Plays a role in cell migration during wound healing and development\n- **Laminin**:\n  - A major component of the **basement membrane**\n  - Anchors epithelial cells to the underlying connective tissue\n- Both are **glycoproteins**: proteins with short sugar chains\n- Both function as **adhesion molecules**: they physically link cells to the matrix through interactions with cell-surface receptors (integrins)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.041sa": [
+      "Is the extracellular matrix an inert or active component of connective tissue?",
+      "Active. The ECM actively influences cell behavior through chemical signaling, mechanical forces, and physical organization.",
+      "Despite being classified as non-living, the matrix is far from passive.",
+      "## ECM as an Active Component\n\n- The ECM is **non-living** but **not inert**\n- It actively influences cells through three mechanisms:\n  1. **Chemical signaling**: growth factors and signaling molecules are stored in and released from the matrix\n  2. **Mechanical forces**: the stiffness and tension of the matrix affect cell behavior\n  3. **Physical organization**: the arrangement of fibers and molecules provides directional cues\n- Cells sense the matrix through receptor proteins called **integrins**\n- Matrix signals can affect cell shape, movement, growth, differentiation, and survival",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.042sa": [
+      "Name three ways the extracellular matrix influences cell behavior.",
+      "Chemical signaling, mechanical forces, and physical organization.",
+      "The matrix communicates with cells through multiple types of cues, not just one.",
+      "## ECM Influence on Cell Behavior\n\n1. **Chemical signaling**: the matrix stores and releases signaling molecules (growth factors, cytokines) that affect cell activity\n2. **Mechanical forces**: the stiffness, elasticity, and tension of the matrix are detected by cells and influence their behavior\n3. **Physical organization**: the spatial arrangement of fibers and molecules provides structural cues that guide cell orientation and movement\n\n- Cells detect all three types of information through **integrins** and other matrix receptors\n- This makes the ECM a dynamic communication platform, not just a passive structural filler",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.043sa": [
+      "What receptor proteins do cells use to attach to the extracellular matrix?",
+      "Integrins.",
+      "These transmembrane receptors physically bridge the cell's interior to the external matrix.",
+      "## Integrins\n\n- **Integrins** are transmembrane receptor proteins on the cell surface\n- They physically connect the cell to the extracellular matrix\n- Functions:\n  1. **Attachment**: anchor the cell to matrix components (fibronectin, laminin, collagen)\n  2. **Signal transduction**: transmit information from the matrix to the cell interior\n- The information received through integrins can affect:\n  - Cell shape\n  - Cell movement\n  - Cell growth\n  - Cell differentiation\n  - Cell survival\n- Integrins are the primary link between the ECM and intracellular signaling pathways",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.03.02.044sa": [
+      "Name at least four cell behaviors that can be affected by information received from the extracellular matrix through integrins.",
+      "Any four of: cell shape, movement, growth, differentiation, and survival.",
+      "Think about the major aspects of a cell's life that could be regulated by external signals.",
+      "## Integrin-Mediated Cell Behaviors\n\n- Information received from the ECM through integrins can affect:\n  1. **Shape**: cells conform to the physical structure of the matrix\n  2. **Movement**: matrix cues direct cell migration (important in wound healing and development)\n  3. **Growth**: matrix signals can stimulate or inhibit cell proliferation\n  4. **Differentiation**: matrix properties can influence which cell type a precursor becomes\n  5. **Survival**: loss of matrix attachment can trigger programmed cell death (anoikis)\n\n- This demonstrates that the ECM is not just structural support but an active **regulator of cell fate**",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

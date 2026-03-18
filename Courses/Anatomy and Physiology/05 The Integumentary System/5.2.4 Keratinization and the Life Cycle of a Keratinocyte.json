@@ -1,0 +1,204 @@
+{
+  "cards": {
+    "01.05.02.04.001sa": [
+      "What is the term for the process by which a living keratinocyte in the stratum basale is transformed into a dead, keratin-filled corneocyte in the stratum corneum?",
+      "Keratinization",
+      "Keratin buildup process",
+      "**Keratinization**\n- Also called **cornification**\n- A specialized form of programmed cell death (not classical apoptosis)\n- The keratinocyte progressively fills with keratin, loses its organelles, and becomes a corneocyte\n- Full journey spans all epidermal strata from basale to corneum\n- Takes approximately 25-45 days depending on body region, age, and health",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.002sa": [
+      "What is another name for keratinization?",
+      "Cornification",
+      "Related to the outermost stratum",
+      "**Cornification**\n- Named after the stratum corneum, where the process concludes\n- The end product is a corneocyte, a dead cell encased in a cornified cell envelope\n- Both terms (keratinization and cornification) are used interchangeably in histology",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.003sa": [
+      "How long does the full keratinization cycle typically take?",
+      "Approximately 25-45 days",
+      "Weeks, not months",
+      "**Keratinization Timeline**\n- Range reflects variability across individuals and body sites\n- Factors affecting duration:\n  1. **Body region** (thicker skin areas may differ from thinner ones)\n  2. **Age** (turnover generally slows with aging)\n  3. **Health status** (diseases like psoriasis dramatically accelerate the cycle)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.004sa": [
+      "What three factors cause the duration of the keratinization cycle to vary?",
+      "Body region, age, and health",
+      "Where, when, and wellness",
+      "**Factors Affecting Keratinization Duration**\n1. **Body region**: Different areas have different epidermal thickness and turnover demands\n2. **Age**: Epidermal renewal slows as a person ages\n3. **Health**: Pathological conditions (e.g., psoriasis) can drastically speed up or alter the cycle\n- Normal range is approximately 25-45 days",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.005sa": [
+      "In which epidermal stratum does a keratinocyte first begin producing keratin filaments?",
+      "Stratum basale",
+      "Deepest layer",
+      "**Stratum Basale and Keratin Production**\n- The stratum basale is the deepest epidermal layer, sitting on the basement membrane\n- Keratinocytes here are living cells with a full complement of organelles\n- Keratin filament synthesis begins here and continues as the cell moves superficially\n- This layer is also the site of active mitosis, producing new keratinocytes to replace those lost at the surface",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.006sa": [
+      "Describe the state of the keratinocyte while it resides in the stratum basale in terms of organelle status and keratin activity.",
+      "Living cell with full organelles; begins producing keratin filaments",
+      "Fully alive and starting its main job",
+      "**Keratinocyte in the Stratum Basale**\n- The cell is fully viable with intact nucleus, mitochondria, ribosomes, etc.\n- Keratin filament production has just begun\n- As the cell migrates upward through subsequent strata, it will:\n  1. Accumulate more keratin\n  2. Form desmosomal connections (stratum spinosum)\n  3. Develop keratohyalin granules (stratum granulosum)\n  4. Lose its organelles and die (stratum corneum)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.007sa": [
+      "In which epidermal stratum does the keratinocyte form extensive desmosomal connections and become larger and flatter?",
+      "Stratum spinosum",
+      "Named for its spiny appearance",
+      "**Stratum Spinosum**\n- The \"spiny layer\" gets its name from the desmosomal connections that appear as spines in histological sections\n- Two key events at this stage:\n  1. Continued keratin filament production\n  2. Extensive desmosome formation between neighboring cells\n- The cell is also changing shape, becoming larger and flatter as it prepares for further differentiation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.008sa": [
+      "What two keratin-related activities occur in the stratum spinosum during keratinization?",
+      "Continued keratin production and formation of extensive desmosomal connections",
+      "Making protein and linking up",
+      "**Stratum Spinosum Activities**\n- **Keratin production**: Filament synthesis that began in the basale continues and increases\n- **Desmosome formation**: Cell-to-cell junctions that anchor keratin filaments between neighboring cells\n- The desmosomes give this layer its characteristic \"spiny\" appearance under the microscope\n- The cell also increases in size and flattens during this stage",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.009sa": [
+      "What type of granules appear in the stratum granulosum that function to cross-link keratin filaments?",
+      "Keratohyalin granules",
+      "Named for keratin + a glassy substance",
+      "**Keratohyalin Granules**\n- Appear in the stratum granulosum (the \"granular layer\")\n- Contain proteins (notably profilaggrin) that cross-link keratin filaments into tight bundles\n- This cross-linking is critical for forming the tough, durable structure of the eventual corneocyte\n- The stratum granulosum is also where lamellar granules release lipids and where organelle degradation begins",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.010sa": [
+      "What type of granules in the stratum granulosum release lipids into the extracellular space?",
+      "Lamellar granules",
+      "Sheet-like secretory bodies",
+      "**Lamellar Granules**\n- Also called lamellar bodies or membrane-coating granules\n- Release lipids into the extracellular space between keratinocytes\n- These lipids form a waterproof barrier that is essential for preventing transepidermal water loss\n- Found alongside keratohyalin granules in the stratum granulosum, but serve a completely different function (barrier lipids vs. keratin cross-linking)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.011sa": [
+      "What is happening to the nucleus and organelles of a keratinocyte as it passes through the stratum granulosum?",
+      "They are being degraded (the cell is dying)",
+      "Breaking down from within",
+      "**Organelle Degradation in the Stratum Granulosum**\n- The nucleus and organelles are enzymatically broken down\n- This is part of the specialized programmed cell death called cornification/terminal differentiation\n- By the time the cell reaches the stratum corneum, no nucleus or organelles remain\n- What is left is a corneocyte: a flattened disc of cross-linked keratin enclosed in a cornified cell envelope",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.012sa": [
+      "What is a corneocyte?",
+      "A dead, flattened disc of cross-linked keratin enclosed in a cornified cell envelope",
+      "End product of keratinization",
+      "**Corneocyte**\n- The final form of a keratinocyte after completing keratinization\n- Key features:\n  - No nucleus or organelles\n  - Filled with tightly cross-linked keratin filaments\n  - Surrounded by a cornified cell envelope (a chemically resistant protein shell)\n- The cornified cell envelope replaces the normal plasma membrane\n- Corneocytes are eventually shed from the surface in a process called desquamation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.013sa": [
+      "What is the cornified cell envelope?",
+      "A chemically resistant protein shell that replaces the normal plasma membrane in a corneocyte",
+      "Tough outer casing of a dead skin cell",
+      "**Cornified Cell Envelope**\n- Replaces the standard phospholipid bilayer (plasma membrane) of the living keratinocyte\n- Composed of cross-linked proteins that are highly resistant to chemical and mechanical damage\n- Provides structural integrity to the corneocyte\n- Works together with extracellular lipids (released by lamellar granules) to form the skin's barrier",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.014sa": [
+      "What structure replaces the normal plasma membrane in a corneocyte?",
+      "The cornified cell envelope",
+      "Resistant protein shell",
+      "**Cornified Cell Envelope**\n- A rigid, chemically resistant protein shell\n- Replaces the typical phospholipid bilayer of living cells\n- Formed during the transition through the stratum granulosum as the cell undergoes terminal differentiation\n- This envelope, combined with the dense keratin interior, makes corneocytes extremely durable against physical and chemical insults",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.015sa": [
+      "Is keratinization considered classical apoptosis? If not, what is it classified as?",
+      "No; it is a specialized form of programmed cell death called cornification or terminal differentiation",
+      "Programmed but unique",
+      "**Cornification vs. Apoptosis**\n- Both are forms of programmed cell death, but they differ in key ways:\n  - **Apoptosis**: Cell shrinks, fragments into apoptotic bodies, is quickly phagocytosed; goal is removal\n  - **Cornification**: Cell fills with keratin, loses organelles, forms a cornified envelope; goal is to create a durable protective structure\n- Cornification is also called **terminal differentiation** because the cell reaches its final differentiated state\n- The dead corneocyte remains functional as part of the skin barrier before being shed",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.016sa": [
+      "What term besides 'cornification' describes the type of programmed cell death a keratinocyte undergoes?",
+      "Terminal differentiation",
+      "Final form, final function",
+      "**Terminal Differentiation**\n- Describes a cell reaching its final differentiated state, after which it can no longer divide or change\n- In keratinization, the keratinocyte's \"terminal\" state is the corneocyte\n- Distinguished from apoptosis because the dead cell remains structurally and functionally important\n- The corneocyte serves as a protective barrier element until it is shed via desquamation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.017sa": [
+      "For the epidermis to maintain a steady state, the rate of keratinocyte production in the stratum basale must match what process at the skin surface?",
+      "Desquamation (shedding of dead cells)",
+      "Surface cell loss",
+      "**Epidermal Homeostasis**\n- A balance must exist between:\n  - **Cell production** (mitosis in the stratum basale)\n  - **Cell loss** (desquamation at the stratum corneum surface)\n- If production exceeds loss, the epidermis thickens abnormally (e.g., psoriasis)\n- If loss exceeds production, the barrier becomes compromised\n- This steady state ensures consistent barrier protection without excessive buildup",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.018sa": [
+      "What is the term for the shedding of dead cells from the surface of the stratum corneum?",
+      "Desquamation",
+      "Scales falling away",
+      "**Desquamation**\n- The natural process of corneocyte shedding from the skin surface\n- Must be balanced with new keratinocyte production in the stratum basale to maintain epidermal homeostasis\n- Involves breakdown of the desmosomes (corneodesmosomes) that hold corneocytes together\n- Disruption of this balance can lead to conditions like psoriasis (overproduction) or impaired barrier function (excessive loss)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.019sa": [
+      "What skin disease results from accelerated keratinocyte production, and what are its visible characteristics?",
+      "Psoriasis; thickened, scaly epidermis",
+      "Overproduction leads to buildup",
+      "**Psoriasis**\n- Results from a disruption in epidermal homeostasis\n- Keratinocyte production in the stratum basale outpaces desquamation\n- The keratinization cycle is dramatically shortened\n- Visible signs:\n  - Thickened patches of epidermis\n  - Silvery or white scales on the surface\n- Demonstrates why the balance between cell production and cell shedding is critical for normal skin function",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.02.04.020sa": [
+      "In psoriasis, what aspect of epidermal homeostasis is disrupted?",
+      "The balance between keratinocyte production and desquamation (production is accelerated)",
+      "Supply exceeds removal",
+      "**Psoriasis and Epidermal Homeostasis**\n- Normal epidermis maintains a steady state: production rate = desquamation rate\n- In psoriasis:\n  - Keratinocyte proliferation is dramatically accelerated\n  - Cells move through the strata faster than normal\n  - Surface shedding cannot keep pace with production\n- Result: thickened, scaly epidermal plaques\n- The normal keratinization cycle of 25-45 days may be reduced significantly in affected areas",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

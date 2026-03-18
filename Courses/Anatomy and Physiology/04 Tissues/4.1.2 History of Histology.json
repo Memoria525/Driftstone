@@ -1,0 +1,384 @@
+{
+  "cards": {
+    "01.04.01.02.001sa": [
+      "What is the branch of anatomy devoted to the study of tissues?",
+      "Histology",
+      "Think about the Greek roots histos and logos.",
+      "- Histology is the microscopic study of tissues\n- The term combines the Greek *histos* (web or tissue) and *logos* (study)\n- Histology provides the visual and structural evidence that underpins how we classify and name every tissue type in the body\n- It is distinct from gross anatomy, which examines structures visible to the naked eye",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.002sa": [
+      "The word 'histology' comes from the Greek words histos and logos. What do each of these words mean?",
+      "Histos means 'web' or 'tissue'; logos means 'study'",
+      "One refers to the material being examined, the other refers to the academic pursuit of examining it.",
+      "- Many anatomical and medical terms derive from Greek or Latin roots\n- Knowing these roots can help decode unfamiliar terminology:\n  1. *Histos* = web or tissue\n  2. *Logos* = study or discourse\n- Other examples of *logos* in science: biology (study of life), cytology (study of cells), pathology (study of disease)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.003sa": [
+      "What did the development of histology as a discipline depend on being able to do to thin slices of tissue?",
+      "Prepare and stain them so their structure could be examined under magnification",
+      "Think about what you need to do to tissue before you can look at it under a microscope.",
+      "- Raw tissue is generally too thick and lacks sufficient contrast for meaningful microscopic observation\n- Two key developments made histology possible:\n  1. Techniques for cutting tissue into very thin slices (sectioning)\n  2. Chemical stains that selectively color different structures, creating visual contrast\n- Without both of these advances, the internal organization of tissues would remain invisible even under a microscope",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.004sa": [
+      "Who is often called the father of histology?",
+      "Marie François Xavier Bichat",
+      "This French anatomist worked in the late 1700s and early 1800s.",
+      "- Bichat (1771-1802) was a French anatomist who made foundational contributions to tissue biology\n- He identified 21 distinct tissue types in the human body\n- Remarkably, he accomplished this without using a microscope, relying instead on naked-eye observation, dissection, and simple chemical tests\n- His work shifted the focus of anatomy from whole organs down to the tissue level",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.005sa": [
+      "During what years did Bichat live?",
+      "1771-1802",
+      "He lived during the late 18th and very early 19th century, and died remarkably young.",
+      "- Bichat died at only 30 years old, yet his contributions to anatomy were enormous\n- He was active during a period of rapid advancement in French medicine and science\n- Despite his short life, his classification of tissues and his insight that organs are composed of distinct tissue layers fundamentally changed how anatomists understood the body",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.006sa": [
+      "How many distinct types of tissue did Bichat identify and classify in the human body?",
+      "21",
+      "It is a specific number above 20.",
+      "- Bichat arrived at this number through naked-eye observation, dissection, and simple chemical tests\n- His classification system was later refined as microscopy improved, eventually converging on the four primary tissue types recognized today (epithelial, connective, muscle, nervous)\n- The fact that he identified so many distinct tissue types without a microscope speaks to his extraordinary observational skill",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.007sa": [
+      "What methods did Bichat use to identify and classify tissues, and what technology did he distrust?",
+      "He used naked-eye observation, dissection, and simple chemical tests. He distrusted the microscope.",
+      "Think about what tools were available to an anatomist in the late 1700s, and which emerging tool he chose not to use.",
+      "- Bichat's methods were macroscopic and hands-on:\n  1. Naked-eye observation of tissue appearance and texture\n  2. Careful dissection to separate tissue layers\n  3. Simple chemical tests to observe how tissues reacted to different substances\n- He distrusted the microscope because of the optical distortions produced by early lenses\n- Despite this limitation, his tissue classifications proved remarkably accurate and laid the foundation for modern histology",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.008sa": [
+      "Why did Bichat distrust the microscope?",
+      "He distrusted it because of its optical distortions at the time.",
+      "Consider the quality of lenses and optics available in the late 1700s.",
+      "- Early microscopes suffered from significant optical aberrations, including chromatic and spherical distortion\n- These distortions could introduce artifacts that did not exist in the actual tissue\n- Bichat felt that direct observation and physical testing of tissue properties were more reliable than images produced through imperfect lenses\n- Improvements in lens quality and microscope design in the 1800s eventually resolved many of these issues, making the microscope indispensable to histology",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.009sa": [
+      "What was Bichat's key insight about the composition of organs?",
+      "Organs are not homogeneous masses but are built from distinct layers of tissue with different properties.",
+      "Think about whether an organ is made of one uniform material or multiple distinct components.",
+      "- Before Bichat, organs were largely treated as uniform structures\n- His insight revealed that each organ is composed of multiple tissue types layered together, each with its own characteristics\n- This meant that disease could target a specific tissue type within an organ rather than the organ as a whole\n- This concept remains central to modern pathology, where diagnoses are made at the tissue level within organs",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.010sa": [
+      "Bichat's work shifted anatomical thinking from what level down to what level?",
+      "From the organ level down to the tissue level",
+      "Think about the hierarchy of structural organization in the body and which two adjacent levels are involved.",
+      "- Before Bichat, anatomy focused primarily on organs as the fundamental units of study\n- Bichat demonstrated that understanding the body required going one level deeper, to the tissues that compose each organ\n- This shift opened the door to understanding that:\n  1. Different tissues within the same organ can behave differently\n  2. Diseases can be tissue-specific rather than organ-wide\n  3. The properties of an organ emerge from the arrangement and interaction of its component tissues",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.011sa": [
+      "Bichat's insight laid the groundwork for understanding that diseases could affect specific __________ rather than entire __________ indiscriminately.",
+      "tissue types; organs",
+      "Think about what Bichat showed organs are made of, and what the previous assumption was about where disease strikes.",
+      "- This concept is foundational to modern pathology\n- For example, liver cirrhosis primarily affects the connective tissue framework of the liver, while hepatitis targets the epithelial hepatocytes\n- Recognizing that disease operates at the tissue level allows for more precise diagnosis and more targeted treatment\n- This principle extends to cancer classification, where tumors are named and treated based on which tissue type they originate from",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.012sa": [
+      "What is a microtome?",
+      "A device that cuts tissue into extremely thin slices (sections) for microscopic examination",
+      "Think about what you need to do to a piece of tissue before mounting it on a glass slide.",
+      "- The microtome was one of the key technological developments that made modern histology possible\n- It produces sections typically 5 to 10 micrometers thick\n- Before the microtome, tissue samples were too thick for light to pass through cleanly\n- Modern rotary microtomes use precision mechanical advancement to produce serial sections of uniform thickness\n- These thin sections are then mounted on glass slides for staining and examination",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.013sa": [
+      "What is the typical thickness of tissue sections produced by a microtome?",
+      "5 to 10 micrometers",
+      "The unit of measurement is in the micrometer range, and the range spans a small single-digit interval.",
+      "- For reference, a micrometer is one thousandth of a millimeter\n- Most human cells range from about 10 to 100 micrometers in diameter\n- Sections in the 5-10 micrometer range are thin enough for light to pass through, allowing structures to be visualized clearly under a light microscope\n- Thinner sections (under 1 micrometer) are used for electron microscopy, which requires even greater transparency to electron beams",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.014sa": [
+      "Why were tissue samples unreliable for microscopic observation before the microtome?",
+      "The samples were too thick for light to pass through cleanly, making observation of internal structure unreliable.",
+      "Think about what happens when you try to shine light through something that is too thick.",
+      "- Light microscopy depends on light passing through the specimen to create a visible image\n- Thick tissue blocks absorb and scatter light, producing blurry, overlapping images where individual structures cannot be distinguished\n- The microtome solved this by producing uniformly thin sections that allow clean light transmission\n- This made it possible to visualize individual cells, fibers, and matrix components within tissues",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.015sa": [
+      "How do modern rotary microtomes differ from early versions in how they produce tissue sections?",
+      "Early versions were hand-operated with adjustable blades, while modern rotary microtomes use precision mechanical advancement to produce serial sections of uniform thickness.",
+      "Think about the difference between manual and mechanically controlled cutting.",
+      "- Early microtomes required the operator to manually adjust the blade and advance the tissue block, making consistent section thickness difficult\n- Modern rotary microtomes automate the advancement of the tissue block in precise, uniform increments\n- This produces serial sections of consistent thickness, which is critical for:\n  1. Reliable comparison between different areas of the same specimen\n  2. Accurate three-dimensional reconstruction of tissue architecture\n  3. Reproducible staining results",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.016sa": [
+      "What is the critical first step in tissue preparation before sectioning and staining?",
+      "Chemical fixation",
+      "Think about what must be done to tissue immediately after removal to prevent it from degrading.",
+      "- Fixation must occur immediately after tissue removal to preserve cellular and structural detail\n- Without fixation, cellular enzymes (autolysis) and microbial activity (decomposition) would rapidly destroy tissue architecture\n- The most common fixative is formalin (a formaldehyde solution)\n- Fixation works by cross-linking proteins, locking structures in place\n- The order of tissue preparation is: fixation, then embedding, then sectioning (microtome), then staining",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.017sa": [
+      "What is the most commonly used fixative in histology?",
+      "Formalin",
+      "It is a solution of a well-known aldehyde compound.",
+      "- Formalin is a solution of formaldehyde in water\n- It preserves tissue by cross-linking proteins, which stabilizes cellular structures and prevents degradation\n- Formalin is favored because it:\n  1. Is inexpensive and widely available\n  2. Penetrates tissue effectively\n  3. Preserves a wide range of tissue components adequately for light microscopy\n- Other fixatives (glutaraldehyde, Bouin's solution) are used for specialized applications",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.018sa": [
+      "Formalin is a solution of what chemical compound?",
+      "Formaldehyde",
+      "It is an aldehyde with a very short carbon chain.",
+      "- Formaldehyde (CH2O) is the simplest aldehyde\n- In solution (formalin), it penetrates tissue and reacts with amino groups on proteins, forming cross-links (methylene bridges) between adjacent protein molecules\n- These cross-links lock proteins in their native positions, preserving the spatial relationships between cellular components\n- A typical formalin solution used in histology is 10% neutral buffered formalin",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.019sa": [
+      "Name three things that chemical fixation does to preserve tissue.",
+      "Halts decomposition, prevents cellular autolysis, and preserves structural detail by cross-linking proteins in place",
+      "Think about the three threats to a tissue sample after removal and what fixation does to counteract each one.",
+      "- Each of these three actions addresses a specific threat to tissue integrity:\n  1. **Halts decomposition** - stops microbial activity that would break down tissue\n  2. **Prevents cellular autolysis** - stops the cell's own enzymes (lysosomes, proteases) from digesting cellular contents\n  3. **Preserves structural detail** - cross-links proteins so that the spatial arrangement of structures is locked in place\n- All three must be accomplished rapidly after tissue removal for the specimen to be useful for histological analysis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.020sa": [
+      "How do fixatives preserve structural detail at the molecular level?",
+      "By cross-linking proteins in place",
+      "Think about what fixatives do to the protein molecules within the tissue to prevent them from moving or degrading.",
+      "- Fixatives like formaldehyde react with amino groups on proteins, forming covalent bonds (cross-links) between adjacent protein molecules\n- These cross-links effectively freeze the three-dimensional arrangement of proteins within and between cells\n- This prevents:\n  1. Enzymatic degradation of proteins\n  2. Movement or diffusion of molecules away from their original positions\n  3. Collapse of cellular architecture\n- The result is a tissue sample whose internal structure closely reflects its living state",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.021sa": [
+      "What would happen to a tissue sample if it were not chemically fixed after removal?",
+      "Cellular enzymes would rapidly break down the tissue's architecture, making histological analysis impossible.",
+      "Think about what the cell's own enzymes do once the tissue is no longer alive and maintained by the body.",
+      "- Without fixation, two destructive processes begin immediately:\n  1. **Autolysis** - the cell's own digestive enzymes (particularly from lysosomes) begin breaking down cellular components from the inside\n  2. **Decomposition** - bacteria and other microorganisms begin degrading the tissue from the outside\n- Together, these processes rapidly destroy the structural detail that histologists need to observe\n- Even a delay of hours can compromise tissue quality, which is why surgical specimens are placed in fixative as soon as possible after removal",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.022sa": [
+      "What fixative is preferred for electron microscopy due to its superior structural preservation?",
+      "Glutaraldehyde",
+      "It is a different aldehyde from formaldehyde, with a longer carbon chain.",
+      "- Glutaraldehyde is a dialdehyde (two aldehyde groups), which allows it to form more extensive cross-links than formaldehyde\n- This produces superior preservation of ultrastructural detail, which is critical for electron microscopy where magnification is much higher than light microscopy\n- The tradeoff is that glutaraldehyde:\n  1. Penetrates tissue more slowly than formalin\n  2. Can damage some antigens, making it less suitable for immunohistochemistry\n- It is typically used for research specimens where ultrastructural detail is the priority",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.023sa": [
+      "What fixative is known for providing excellent nuclear detail?",
+      "Bouin's solution",
+      "It is a named fixative solution rather than a single chemical compound.",
+      "- Bouin's solution is a fixative composed of picric acid, formaldehyde, and acetic acid\n- The acetic acid component causes slight swelling of nuclear chromatin, which enhances nuclear staining and makes nuclear detail exceptionally clear\n- It is particularly useful for:\n  1. Biopsies of reproductive tissues (testis, uterus)\n  2. Specimens where clear distinction of nuclear features is critical for diagnosis\n- Its main disadvantage is that picric acid is a strong yellow dye that can be difficult to wash out completely",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.024sa": [
+      "What is the most widely used stain in histology?",
+      "Hematoxylin and eosin (H&E)",
+      "This two-component stain produces the characteristic pink-and-purple images seen in virtually every pathology lab.",
+      "- H&E staining is the standard in clinical laboratories and pathology departments worldwide\n- It uses two dyes that stain different tissue components contrasting colors:\n  1. Hematoxylin stains acidic structures (nuclei) blue-purple\n  2. Eosin stains basic structures (cytoplasm, ECM) pink\n- The resulting contrast allows pathologists to evaluate tissue architecture, cell morphology, and signs of disease\n- Most histological descriptions and diagnoses begin with H&E-stained sections",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.025sa": [
+      "Hematoxylin is a basic (positively charged) dye. What types of structures does it bind to, and what color does it produce?",
+      "It binds to acidic (negatively charged) structures such as nuclei, ribosomes, and rough endoplasmic reticulum, staining them deep blue-purple.",
+      "Basic dyes are attracted to structures with the opposite charge. Think about which cellular components are rich in nucleic acids.",
+      "- The principle is electrostatic attraction: a positively charged (basic) dye binds to negatively charged (acidic) structures\n- Structures rich in nucleic acids (DNA and RNA) carry strong negative charges due to phosphate groups\n- This is why hematoxylin stains:\n  1. **Nuclei** - packed with DNA\n  2. **Ribosomes** - composed of rRNA\n  3. **Rough ER** - studded with ribosomes\n- Structures that attract basic dyes are called **basophilic** (base-loving)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.026sa": [
+      "Eosin is an acidic (negatively charged) dye. What types of structures does it bind to, and what color does it produce?",
+      "It binds to basic (positively charged) structures such as the cytoplasm, extracellular matrix, and most proteins, staining them pink.",
+      "Acidic dyes are attracted to structures with the opposite charge. Think about which cellular components are protein-rich.",
+      "- The same electrostatic principle applies in reverse: a negatively charged (acidic) dye binds to positively charged (basic) structures\n- Most cytoplasmic proteins and extracellular matrix proteins carry a net positive charge at the pH used in H&E staining\n- Eosin therefore stains:\n  1. **Cytoplasm** - rich in proteins\n  2. **Extracellular matrix** - collagen, elastic fibers, ground substance proteins\n  3. **Most intracellular proteins**\n- Structures that attract acidic dyes are called **eosinophilic** or **acidophilic**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.027sa": [
+      "In an H&E-stained tissue section, what color would you expect nuclei to appear? What color would the cytoplasm appear?",
+      "Nuclei appear blue-purple; cytoplasm appears pink.",
+      "Match each dye to what it stains: hematoxylin for one, eosin for the other.",
+      "- This color contrast is the visual foundation of tissue biology and pathology:\n  1. **Blue-purple nuclei** = hematoxylin binding to acidic nuclear DNA\n  2. **Pink cytoplasm** = eosin binding to basic cytoplasmic proteins\n- Recognizing this pattern allows you to immediately identify:\n  - Cell density (how many nuclei are present)\n  - Nuclear-to-cytoplasmic ratio (important in cancer diagnosis)\n  - Tissue architecture (how cells and matrix are arranged)\n- Deviations from normal staining patterns can indicate disease",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.028sa": [
+      "What does IHC stand for?",
+      "Immunohistochemistry",
+      "It combines immune system molecules with histological tissue analysis and chemical detection.",
+      "- IHC is a technique that goes beyond general staining to identify specific proteins within tissue sections\n- The name breaks down as:\n  1. **Immuno** - uses antibodies (immune system molecules) as detection tools\n  2. **Histo** - applied to tissue sections\n  3. **Chemistry** - involves chemical reactions for visualization\n- IHC allows pathologists to determine what specific proteins a cell is expressing, adding molecular precision to traditional microscopic analysis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.029sa": [
+      "What does immunohistochemistry use to tag specific proteins within tissues?",
+      "Antibodies",
+      "These are molecules normally produced by the immune system to recognize specific targets.",
+      "- Antibodies are proteins produced by B cells/plasma cells that bind to specific molecular targets (antigens) with high specificity\n- In IHC, this natural specificity is harnessed as a detection tool:\n  1. An antibody is selected that recognizes the protein of interest\n  2. The antibody is applied to a tissue section and binds to its target wherever it is present\n  3. A visualization system (enzyme or fluorescent molecule) is then used to make the antibody-antigen binding visible\n- This allows pathologists to identify exactly which cells express a given protein and where those cells are located within the tissue",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.030sa": [
+      "In IHC, what is the role of the primary antibody?",
+      "It binds specifically to the target protein (antigen) of interest within the tissue.",
+      "Think about which antibody makes first contact with the tissue and what it is designed to recognize.",
+      "- The primary antibody is the specificity-determining component of the IHC system\n- It is chosen because it recognizes and binds to one specific protein (antigen)\n- The primary antibody itself is not directly visible, which is why a secondary detection system is needed\n- The specificity of the primary antibody determines what the IHC stain will detect:\n  - An anti-estrogen receptor antibody will detect estrogen receptors\n  - An anti-cytokeratin antibody will detect epithelial cells\n  - An anti-CD3 antibody will detect T lymphocytes",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.031sa": [
+      "In IHC, the primary antibody is detected using a __________ antibody linked to a visualization system.",
+      "secondary",
+      "Think about the sequence: the first antibody binds the target, then a second molecule detects the first.",
+      "- The two-antibody system works in sequence:\n  1. The **primary antibody** binds to the target protein in the tissue\n  2. The **secondary antibody** binds to the primary antibody and carries the visualization label\n- This indirect approach offers advantages:\n  - Signal amplification (multiple secondary antibodies can bind to one primary)\n  - Flexibility (the same labeled secondary can be paired with different primaries)\n  - Cost efficiency (only the secondary needs to carry the expensive label)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.032sa": [
+      "Name two types of visualization systems that can be linked to the secondary antibody in IHC.",
+      "An enzyme (such as horseradish peroxidase) that produces a colored reaction product, or a fluorescent molecule that emits light when excited by a specific wavelength",
+      "One produces a permanent color change at the binding site; the other requires special lighting to be seen.",
+      "- **Enzyme-based systems:**\n  - An enzyme attached to the secondary antibody catalyzes a chemical reaction that deposits a colored, insoluble product at the site of antibody binding\n  - The most common enzyme is horseradish peroxidase (HRP)\n  - Produces a permanent stain viewable under a standard light microscope\n- **Fluorescence-based systems:**\n  - A fluorescent molecule (fluorophore) attached to the secondary antibody emits light at a specific wavelength when excited\n  - Requires a fluorescence microscope to visualize\n  - Allows multiple targets to be labeled simultaneously using different colored fluorophores",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.033sa": [
+      "What enzyme is most commonly used in enzyme-based IHC visualization?",
+      "Horseradish peroxidase (HRP)",
+      "It is a plant-derived enzyme named for the vegetable it comes from.",
+      "- Horseradish peroxidase catalyzes the oxidation of a chromogenic substrate (commonly DAB, or diaminobenzidine), producing a brown, insoluble precipitate at the site of antibody binding\n- HRP is preferred because it:\n  1. Has high catalytic activity (strong signal)\n  2. Is stable and relatively inexpensive\n  3. Produces a permanent stain that can be viewed under a standard light microscope\n- Another enzyme sometimes used is alkaline phosphatase (AP), which produces different colored products depending on the substrate used",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.034sa": [
+      "In a completed IHC-stained tissue section, what is visibly marked and what remains unstained or shows only background staining?",
+      "Only the cells or structures expressing the target protein are visibly marked; everything else remains unstained or shows only background staining.",
+      "Think about what makes IHC different from H&E, which stains everything.",
+      "- This selectivity is the key advantage of IHC over general stains like H&E:\n  - H&E stains all nuclei and all cytoplasm, giving a general view of tissue architecture\n  - IHC highlights only the specific protein of interest, answering targeted diagnostic questions\n- The result is a tissue section where positive cells stand out clearly against an unstained or lightly counterstained background\n- This allows pathologists to determine not just that a protein is present, but exactly which cells express it and where they are located within the tissue architecture",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.035sa": [
+      "Give three clinical applications of immunohistochemistry in pathology.",
+      "Determining whether a breast cancer expresses estrogen receptors (guiding hormone therapy decisions), identifying the specific lineage of an undifferentiated tumor, and detecting infectious organisms within tissue",
+      "Think about how knowing which specific protein a cell expresses could help a pathologist make treatment or diagnostic decisions.",
+      "- Each application demonstrates IHC's ability to answer a specific clinical question:\n  1. **Estrogen receptor status in breast cancer** - ER-positive tumors respond to hormone therapy (e.g., tamoxifen); ER-negative tumors do not. IHC directly guides this treatment decision.\n  2. **Tumor lineage identification** - Poorly differentiated tumors can be difficult to classify by H&E alone. IHC panels using markers like cytokeratins (epithelial), vimentin (mesenchymal), or S-100 (neural crest) can determine the tissue of origin.\n  3. **Infectious organism detection** - Antibodies against specific pathogens (e.g., *Helicobacter pylori*, CMV, HPV) can confirm infection within tissue when morphology alone is inconclusive.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.036sa": [
+      "What two emerging technologies are beginning to transform how tissue samples are interpreted in modern histology?",
+      "Digital pathology and AI-assisted image analysis",
+      "One involves converting glass slides into digital images; the other involves computational tools trained to recognize patterns.",
+      "- **Digital pathology** involves scanning glass slides into high-resolution digital images that can be:\n  1. Viewed remotely (enabling telepathology and second opinions)\n  2. Stored and retrieved electronically\n  3. Analyzed quantitatively rather than subjectively\n- **AI-assisted image analysis** uses machine learning algorithms trained on large datasets of tissue images to:\n  1. Identify patterns that may be difficult for the human eye to detect\n  2. Standardize and speed up diagnostic workflows\n  3. Assist in tumor grading, cell counting, and biomarker quantification\n- Together, these technologies are moving histology from a purely visual, subjective discipline toward a more quantitative and reproducible one",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.037sa": [
+      "Why is histology considered the evidence base for tissue classification in anatomy and physiology?",
+      "Because tissue classification labels are grounded in what can be seen under the microscope.",
+      "Think about where the names and categories for tissue types actually come from.",
+      "- Every tissue classification used in anatomy (e.g., 'simple columnar epithelium,' 'dense irregular connective tissue') is ultimately based on microscopic observation\n- Histology provides the visual evidence that defines:\n  1. Cell shape and arrangement\n  2. Number of cell layers\n  3. Type and amount of extracellular matrix\n  4. Presence of specialized features (cilia, striations, lacunae)\n- Without histological evidence, tissue classification would be based on speculation rather than observation\n- This is why learning to read histological images is a core component of anatomy and physiology education",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.02.038sa": [
+      "What core skill does histology provide to students of anatomy and physiology?",
+      "The ability to recognize tissue types histologically (under the microscope)",
+      "Think about what students are expected to be able to do when they look at a tissue section under a microscope.",
+      "- Histological tissue identification is a foundational skill because:\n  1. It connects abstract tissue classifications to real, observable structures\n  2. It trains students to identify tissues based on objective features (cell shape, layering, matrix composition, specialized structures)\n  3. It provides the basis for understanding how tissue structure relates to tissue function\n- In clinical practice, this skill evolves into histopathology, where pathologists use the same observational framework to diagnose disease at the tissue level\n- The progression is: learn normal tissue appearance first, then learn to recognize how disease alters that appearance",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

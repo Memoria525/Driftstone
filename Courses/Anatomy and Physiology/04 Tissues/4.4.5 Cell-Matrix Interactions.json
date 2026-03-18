@@ -1,0 +1,314 @@
+{
+  "cards": {
+    "01.04.04.05.001sa": [
+      "What is the most important family of receptor proteins that cells use to actively engage with the extracellular matrix?",
+      "Integrins",
+      "These are transmembrane proteins composed of alpha and beta subunits.",
+      "## Integrins\n- Integrins are the primary receptor family through which cells interact with the ECM\n- They are transmembrane proteins that form heterodimers (one alpha + one beta subunit)\n- Their extracellular domain binds ECM molecules like collagen, fibronectin, and laminin\n- Their intracellular domain connects to the actin cytoskeleton through adaptor proteins\n- This dual connection allows integrins to serve as a physical bridge between the ECM and the cell's internal machinery\n- Integrin signaling is bidirectional, influencing both cell behavior and matrix grip strength",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.002sa": [
+      "What type of protein are integrins (transmembrane, peripheral, or cytoplasmic)?",
+      "Transmembrane",
+      "They span the entire membrane, with domains exposed on both the extracellular and intracellular sides.",
+      "## Integrin Structure\n- Integrins are transmembrane proteins, meaning they pass entirely through the plasma membrane\n- The extracellular domain (ectodomain) binds ECM molecules\n- The intracellular domain (cytoplasmic tail) connects to the cytoskeleton\n- This transmembrane position is what allows them to function as a bridge between the external matrix environment and the internal cell machinery\n- Peripheral proteins, by contrast, sit on the membrane surface and do not span the bilayer\n- Cytoplasmic proteins are entirely within the cell and have no direct extracellular contact",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.003sa": [
+      "Integrins are composed of two subunits. Name them.",
+      "An alpha subunit and a beta subunit",
+      "They are named using the first two letters of the Greek alphabet.",
+      "## Integrin Subunit Composition\n- Each integrin is a heterodimer, meaning it is made of two different subunits\n- The alpha and beta subunits associate non-covalently to form the functional receptor\n- Different combinations of alpha and beta subunits produce different integrin variants with different ECM binding specificities\n- The extracellular portions of both subunits contribute to the ECM-binding site\n- The intracellular tail (especially the beta subunit) connects to the actin cytoskeleton via adaptor proteins like talin, vinculin, and paxillin",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.004sa": [
+      "In the context of integrins, what is a heterodimer?",
+      "A protein complex formed by two different subunits (an alpha subunit and a beta subunit) associating together to create the functional integrin receptor.",
+      "Think about what 'hetero' and 'dimer' mean individually.",
+      "## Heterodimer\n- \"Hetero\" = different; \"dimer\" = two parts\n- A heterodimer is a complex of two non-identical subunits\n- In integrins, the alpha and beta subunits are structurally distinct proteins that pair together\n- This contrasts with a homodimer, which would be two identical subunits\n- The specific combination of alpha and beta subunit determines which ECM molecules that integrin variant recognizes and binds",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.005sa": [
+      "What term describes a protein complex composed of two different subunits, such as the alpha and beta subunits of an integrin?",
+      "Heterodimer",
+      "The prefix indicates the subunits are not identical, and the root indicates there are two of them.",
+      "## Heterodimer\n- \"Hetero\" = different; \"dimer\" = two parts\n- A heterodimer is a functional complex made of two non-identical protein subunits\n- Integrins are a key example: each consists of one alpha and one beta subunit\n- The opposite term is homodimer, where both subunits are identical\n- Many important biological receptors function as heterodimers because combining different subunits allows for diverse binding specificities from a limited set of components",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.006sa": [
+      "The extracellular domain of an integrin binds to specific ECM molecules. Name three examples of ECM molecules that integrins bind.",
+      "Collagen, fibronectin, and laminin",
+      "Two of these are glycoproteins that serve as adhesion molecules in the ECM. The third is the most abundant protein in the human body.",
+      "## Integrin ECM Ligands\n- **Collagen**: the most abundant protein in the body; provides tensile strength to the ECM\n- **Fibronectin**: the most abundant ECM glycoprotein; critical for cell adhesion, migration, and wound healing\n- **Laminin**: the most abundant glycoprotein in the basement membrane; essential for anchoring epithelial cells and guiding cell differentiation\n- Each integrin variant (determined by its specific alpha-beta subunit combination) has a preferred set of ECM ligands\n- This specificity allows different cell types to interact with different components of their surrounding matrix",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.007sa": [
+      "The intracellular domain of an integrin connects to what structural component of the cell?",
+      "The cytoskeleton (specifically the actin microfilament network)",
+      "This is the internal framework of protein filaments that provides structural support and enables cell movement.",
+      "## Integrin-Cytoskeleton Connection\n- The intracellular (cytoplasmic) domain of integrins links to the actin microfilament network\n- This connection is not direct; it is mediated by adaptor proteins including talin, vinculin, and paxillin\n- This linkage is what makes integrins a physical bridge: ECM on the outside, cytoskeleton on the inside\n- Through this connection, mechanical forces from the ECM can be transmitted to the cell's internal structure and vice versa\n- This is the basis of mechanotransduction at integrin-based adhesion sites",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.008sa": [
+      "Within the cytoskeleton, integrins connect specifically to which type of filament?",
+      "Actin microfilaments",
+      "These are the thinnest of the three cytoskeletal filament types.",
+      "## Integrin-Actin Connection\n- Integrins connect to actin microfilaments, not intermediate filaments or microtubules\n- The connection is indirect, through adaptor proteins (talin, vinculin, paxillin) at focal adhesion sites\n- Actin microfilaments are the cytoskeletal elements most involved in cell shape changes, surface movements, and migration\n- This makes functional sense: integrins regulate cell adhesion and migration, both of which depend on actin dynamics\n- Note the contrast with desmosomes and hemidesmosomes, which connect to intermediate filaments rather than actin",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.009sa": [
+      "The intracellular domain of integrins links to the actin network through adaptor proteins. Name three of these adaptor proteins.",
+      "Talin, vinculin, and paxillin",
+      "These are found at focal adhesion sites where integrins cluster.",
+      "## Integrin Adaptor Proteins\n- **Talin**: binds directly to the cytoplasmic tail of the beta integrin subunit and to actin filaments; a key activator of integrins\n- **Vinculin**: reinforces the talin-actin connection and strengthens focal adhesions under mechanical load\n- **Paxillin**: a scaffolding protein that recruits signaling molecules to the focal adhesion complex\n- These adaptor proteins collectively create the structural and signaling hub known as the focal adhesion\n- Without them, integrins would have no way to transmit information or force between the ECM and the cytoskeleton",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.010sa": [
+      "In the context of transmembrane proteins, what are the extracellular domain and the intracellular domain?",
+      "The extracellular domain (ectodomain) is the portion of the protein that projects outside the cell and interacts with the external environment. The intracellular domain (cytoplasmic domain/cytoplasmic tail) is the portion that extends into the cytoplasm.",
+      "Think about which side of the membrane each portion faces.",
+      "## Transmembrane Protein Domains\n- Transmembrane proteins span the entire plasma membrane and have regions exposed on both sides\n- **Extracellular domain (ectodomain)**: faces the outside of the cell; in integrins, this is where ECM binding occurs\n- **Intracellular domain (cytoplasmic domain or cytoplasmic tail)**: faces the cytoplasm; in integrins, this is where adaptor proteins and signaling molecules connect\n- A third region, the transmembrane domain, passes through the hydrophobic core of the lipid bilayer and anchors the protein in the membrane\n- The functional division of these domains is what allows transmembrane proteins to relay information across the membrane",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.011sa": [
+      "What term describes the portion of a transmembrane protein that projects outside the cell and interacts with the external environment?",
+      "The extracellular domain (also called the ectodomain)",
+      "This is the portion that would contact the ECM or other extracellular molecules.",
+      "## Extracellular Domain\n- Also called the ectodomain\n- This is the region of a transmembrane protein exposed on the outer surface of the cell\n- In integrins, the ectodomain contains the binding site for ECM molecules like collagen, fibronectin, and laminin\n- In inside-out signaling, intracellular signals can change the conformation of the ectodomain, altering its binding affinity\n- The ectodomain is the first point of contact between a cell-surface receptor and its external ligand",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.012sa": [
+      "What term describes the portion of a transmembrane protein that extends into the cytoplasm?",
+      "The intracellular domain (also called the cytoplasmic domain or cytoplasmic tail)",
+      "This portion faces the interior of the cell.",
+      "## Intracellular Domain\n- Also called the cytoplasmic domain or cytoplasmic tail\n- This is the region of a transmembrane protein exposed on the inner surface of the cell, facing the cytoplasm\n- In integrins, the cytoplasmic tail connects to adaptor proteins (talin, vinculin, paxillin) that link to the actin cytoskeleton\n- This domain is where intracellular signaling cascades are initiated during outside-in signaling\n- It is also the domain that receives intracellular signals during inside-out signaling, which then alter the extracellular domain's conformation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.013sa": [
+      "Integrins function as a physical bridge between what two systems?",
+      "The extracellular matrix (external environment) and the cytoskeleton (internal machinery of the cell)",
+      "One system is outside the cell, the other inside.",
+      "## Integrins as a Bridge\n- The extracellular domain binds ECM components (collagen, fibronectin, laminin)\n- The intracellular domain connects to the actin cytoskeleton via adaptor proteins\n- This dual connection allows:\n  1. Transmission of mechanical forces from the ECM to the cell interior\n  2. Transmission of cell-generated forces outward to the ECM\n  3. Bidirectional signaling (outside-in and inside-out)\n- This bridging function is the basis for mechanotransduction, cell migration, and adhesion-dependent survival signaling",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.014sa": [
+      "Integrin signaling is bidirectional. What does \"outside-in\" signaling refer to?",
+      "Outside-in signaling occurs when ECM binding to the integrin's extracellular domain activates intracellular signaling cascades that influence gene expression, cell survival, proliferation, and differentiation.",
+      "This direction starts with an event at the extracellular domain and ends with effects inside the cell.",
+      "## Outside-In Signaling\n- Triggered when an ECM molecule binds the integrin's extracellular domain\n- The binding event causes conformational changes that propagate through the transmembrane domain to the cytoplasmic tail\n- This activates intracellular signaling cascades affecting:\n  1. Gene expression\n  2. Cell survival\n  3. Proliferation\n  4. Differentiation\n- This is how cells \"read\" their matrix environment and adjust their behavior accordingly\n- Loss of outside-in survival signals (as when a cell detaches from the matrix) can trigger anoikis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.015sa": [
+      "Integrin signaling is bidirectional. What does \"inside-out\" signaling refer to?",
+      "Inside-out signaling occurs when intracellular signals change the conformation and binding affinity of the integrin's extracellular domain, regulating how strongly the cell grips its matrix.",
+      "This direction starts inside the cell and changes something about how the receptor behaves externally.",
+      "## Inside-Out Signaling\n- Triggered by intracellular signaling events (e.g., from growth factor receptors or other pathways)\n- These signals alter the conformation of the integrin's cytoplasmic tail, which propagates outward through the transmembrane domain\n- The result is a change in the shape and binding affinity of the extracellular domain\n- This allows the cell to actively regulate how tightly it grips the ECM\n- Functionally important for:\n  - Strengthening adhesion when the cell needs to anchor firmly\n  - Loosening adhesion when the cell needs to migrate\n  - Platelet activation (integrins on platelets shift to a high-affinity state during clotting)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.016sa": [
+      "In integrin signaling, what four cellular processes are influenced by outside-in signaling?",
+      "Gene expression, cell survival, proliferation, and differentiation",
+      "These are broad categories of cell behavior, not specific molecular events.",
+      "## Outside-In Signaling Outcomes\n1. **Gene expression**: ECM contact can activate or suppress specific genes\n2. **Cell survival**: attachment to the matrix provides survival signals; loss of attachment can trigger anoikis\n3. **Proliferation**: many cell types will not divide unless they are attached to a matrix via integrins (anchorage dependence)\n4. **Differentiation**: the composition and stiffness of the ECM, sensed through integrins, can direct stem cells toward different fates (e.g., soft matrix promotes neural differentiation, stiff matrix promotes bone differentiation)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.017sa": [
+      "In inside-out integrin signaling, what property of the integrin's extracellular domain is changed by intracellular signals?",
+      "Its conformation and binding affinity (how strongly it binds ECM molecules)",
+      "Think about what would need to change for the cell to grip the matrix more or less tightly.",
+      "## Inside-Out Conformational Change\n- Intracellular signals cause the cytoplasmic tail of the integrin to change shape\n- This conformational change propagates through the transmembrane domain to the extracellular domain\n- The ectodomain shifts between a low-affinity (bent/inactive) state and a high-affinity (extended/active) state\n- In the high-affinity state, the integrin binds its ECM ligand much more tightly\n- This mechanism allows the cell to dynamically regulate adhesion strength without changing the number of integrins on its surface",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.018sa": [
+      "Name four biological processes regulated by integrin-mediated signaling.",
+      "Cell adhesion, cell migration, cell proliferation, and cell differentiation",
+      "Think about what a cell needs to do in relation to its surrounding matrix.",
+      "## Integrin-Regulated Processes\n1. **Cell adhesion**: how firmly cells attach to the matrix\n2. **Cell migration**: cells extend and retract integrin-based contacts to crawl through the ECM\n3. **Cell proliferation**: many cells require matrix attachment before they will divide; loss of this signal triggers anoikis\n4. **Cell differentiation**: ECM composition and stiffness, sensed through integrins, influence cell fate decisions\n- These four processes are central to development, wound healing, immune cell trafficking, and tissue maintenance\n- Dysregulation of any of them is implicated in diseases including cancer metastasis and fibrosis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.019sa": [
+      "Many cell types require matrix attachment via integrins before they will divide. What form of programmed cell death results when this attachment signal is lost?",
+      "Anoikis",
+      "This term comes from a Greek word meaning 'homelessness.'",
+      "## Anoikis\n- Anoikis is a specific form of apoptosis (programmed cell death) triggered by loss of cell-matrix attachment\n- It serves as a safety mechanism: cells that detach from their proper location are destroyed rather than allowed to survive and potentially grow in the wrong tissue\n- Normal cells are anchorage-dependent, meaning they require integrin-mediated attachment to the ECM to receive survival signals\n- Cancer cells frequently develop resistance to anoikis, which is one of the key adaptations that allows them to detach from a primary tumor, travel through the bloodstream, and establish metastases in distant tissues",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.020sa": [
+      "What is anoikis?",
+      "A form of programmed cell death (apoptosis) that occurs when a cell loses integrin-mediated attachment to the extracellular matrix.",
+      "This term relates to what happens when a cell becomes 'homeless' from its matrix.",
+      "## Anoikis\n- Derived from the Greek word for \"homelessness\"\n- A specialized form of apoptosis triggered specifically by detachment from the ECM\n- Normal cells depend on integrin-mediated attachment for survival signals (anchorage dependence)\n- When attachment is lost, the absence of outside-in survival signaling activates apoptotic pathways\n- Functions as a protective mechanism: prevents displaced cells from surviving and growing in inappropriate locations\n- Cancer cells that acquire anoikis resistance gain a critical advantage for metastasis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.021sa": [
+      "How does the composition and stiffness of the ECM, sensed through integrins, influence stem cell differentiation?",
+      "Stem cells on soft matrices tend to differentiate into neural cells, while stem cells on stiff matrices tend to differentiate into bone cells. The mechanical environment, sensed through integrins, directly influences cell fate.",
+      "Consider how the physical resistance of the matrix might direct a stem cell toward becoming a cell type found in a mechanically similar tissue.",
+      "## ECM Stiffness and Cell Fate\n- Stem cells sense matrix stiffness through integrins and focal adhesions (mechanotransduction)\n- Soft matrices (similar to brain tissue stiffness) promote neural differentiation\n- Stiff matrices (similar to bone tissue stiffness) promote osteogenic (bone cell) differentiation\n- Intermediate stiffness matrices can promote muscle differentiation\n- This demonstrates that mechanical signals are as powerful as chemical growth factors in directing cell fate\n- The clinical implication: designing scaffolds for tissue engineering requires matching the mechanical properties of the target tissue, not just providing the right chemical signals",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.022sa": [
+      "In the context of cell-matrix interactions, what are focal adhesions?",
+      "Focal adhesions are specialized structures that form at sites of integrin-mediated cell-matrix attachment, consisting of clustered integrins linked to intracellular adaptor proteins and signaling molecules. They serve as mechanical and signaling hubs where the cell physically connects to the ECM and transduces mechanical forces into biochemical signals.",
+      "These structures form where integrins cluster together at the cell-matrix interface.",
+      "## Focal Adhesions\n- Form where multiple integrins cluster together at sites of strong cell-matrix contact\n- Structural components:\n  1. Clustered integrins (transmembrane receptors)\n  2. Adaptor proteins (talin, vinculin, paxillin)\n  3. Signaling molecules (kinases and other enzymes)\n  4. Actin microfilaments from the cytoskeleton\n- Dual function:\n  1. **Mechanical**: physically anchor the cell to the ECM and transmit forces\n  2. **Signaling**: convert mechanical information into biochemical signals (mechanotransduction)\n- Focal adhesions are dynamic structures that assemble and disassemble as cells move, adhere, and respond to their environment",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.023sa": [
+      "In the context of cell-matrix interactions, what structural components make up a focal adhesion?",
+      "Clustered integrins, intracellular adaptor proteins (such as talin, vinculin, and paxillin), and signaling molecules, all linked to the actin cytoskeleton.",
+      "Think about the chain of components from the ECM-facing receptors to the internal cytoskeletal network.",
+      "## Focal Adhesion Components\n- **Clustered integrins**: the transmembrane receptors that bind ECM molecules on the outside\n- **Adaptor proteins**: talin, vinculin, and paxillin bridge the integrins to the cytoskeleton\n  - Talin binds the integrin cytoplasmic tail directly\n  - Vinculin reinforces the connection under mechanical stress\n  - Paxillin recruits signaling molecules\n- **Signaling molecules**: kinases and other enzymes that initiate intracellular signaling cascades\n- **Actin microfilaments**: the cytoskeletal element to which the entire complex is anchored\n- This assembly creates an integrated structure capable of both physical force transmission and biochemical signal transduction",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.024sa": [
+      "Focal adhesions serve a dual role at sites of cell-matrix attachment. What are these two roles?",
+      "They serve as a mechanical anchor (physically connecting the cell to the ECM and transmitting forces) and as a signaling hub (transducing mechanical forces into biochemical signals).",
+      "One role is structural, the other is communicative.",
+      "## Focal Adhesion Dual Function\n1. **Mechanical role**:\n   - Physically anchors the cell to the ECM\n   - Transmits forces bidirectionally between the matrix and the cytoskeleton\n   - Allows cells to exert traction on the matrix (important for migration)\n2. **Signaling role**:\n   - Converts mechanical stimuli (stretch, compression, stiffness) into biochemical signals\n   - This process is called mechanotransduction\n   - Signaling molecules recruited to focal adhesions activate pathways that influence gene expression, survival, proliferation, and differentiation\n- These two roles are not independent; mechanical force on the focal adhesion directly influences which signaling pathways are activated",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.025sa": [
+      "What is mechanotransduction?",
+      "The process by which cells convert mechanical forces (such as stretch, compression, or matrix stiffness) into biochemical signals.",
+      "The term combines 'mechano' (mechanical force) with 'transduction' (signal conversion).",
+      "## Mechanotransduction\n- Cells are not passive recipients of mechanical force; they actively sense and respond to it\n- Integrins and focal adhesions are the primary mechanosensors at the cell-matrix interface\n- Mechanical inputs include:\n  - Matrix stiffness\n  - Stretch or tension\n  - Compression\n  - Shear stress (e.g., blood flow over endothelial cells)\n- These mechanical inputs are converted into biochemical signals that alter gene expression, cell shape, proliferation, and differentiation\n- Mechanotransduction is now recognized as equally important to chemical signaling in regulating cell behavior\n- Clinically relevant in bone remodeling (Wolff's law), cardiovascular physiology, and tissue engineering scaffold design",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.026sa": [
+      "What two structures do cells use to sense the mechanical properties of their matrix during mechanotransduction?",
+      "Integrins and focal adhesions",
+      "One is a transmembrane receptor; the other is the larger complex that forms where these receptors cluster.",
+      "## Mechanosensing Structures\n- **Integrins**: the transmembrane receptors that directly contact the ECM and detect its composition and resistance\n- **Focal adhesions**: the larger multi-protein complexes that form where integrins cluster, containing the adaptor proteins and signaling molecules needed to convert mechanical input into biochemical output\n- Together, they form a mechanosensory system:\n  1. Integrins bind the matrix and transmit force across the membrane\n  2. Focal adhesion proteins experience conformational changes under force, exposing signaling domains\n  3. Signaling cascades are activated, altering cell behavior\n- This is how cells \"feel\" whether their matrix is soft or stiff, stretched or relaxed",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.027sa": [
+      "In studies of stem cell differentiation, what cell type do stem cells tend to become when cultured on soft matrices?",
+      "Neural cells",
+      "Think about which tissue in the body is among the softest.",
+      "## Soft Matrix and Neural Differentiation\n- Stem cells cultured on soft substrates (stiffness similar to brain tissue, roughly 0.1-1 kPa) tend to differentiate toward neural lineages\n- This occurs even without the addition of specific chemical differentiation factors\n- The mechanical signal is transduced through integrins and focal adhesions\n- This finding demonstrated that physical/mechanical cues can be as powerful as chemical cues in directing cell fate\n- Practical implication: tissue engineering approaches for neural repair must consider substrate stiffness, not just biochemical signals",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.028sa": [
+      "In studies of stem cell differentiation, what cell type do stem cells tend to become when cultured on stiff matrices?",
+      "Bone cells (osteogenic lineage)",
+      "Think about which tissue in the body is among the stiffest.",
+      "## Stiff Matrix and Bone Differentiation\n- Stem cells cultured on stiff substrates (stiffness similar to pre-calcified bone, roughly 25-40 kPa) tend to differentiate toward osteogenic (bone-forming) lineages\n- Intermediate stiffness (similar to muscle tissue, roughly 8-17 kPa) tends to promote myogenic (muscle) differentiation\n- The stiffness is sensed through integrin-mediated mechanotransduction at focal adhesions\n- Key takeaway: the mechanical environment directly instructs cell fate, independent of chemical signals\n- This has major implications for scaffold design in regenerative medicine and for understanding how pathological changes in tissue stiffness (e.g., fibrosis) can alter cell behavior",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.029sa": [
+      "True or false: Mechanical signals from the ECM, sensed through integrins, can influence cell behavior as powerfully as chemical growth factors.",
+      "True",
+      "Consider the stem cell differentiation experiments involving matrix stiffness.",
+      "## Mechanical vs. Chemical Signaling\n- Research has demonstrated that mechanical cues (matrix stiffness, stretch, compression) can direct cell behavior with the same potency as chemical growth factors\n- Key evidence: stem cells differentiate into different lineages based on substrate stiffness alone, even without added chemical factors\n- Mechanical signals are transduced through integrins and focal adhesions via mechanotransduction\n- This has shifted the understanding of tissue biology: cells do not just respond to soluble chemical signals, they also continuously read and respond to the physical properties of their environment\n- Both mechanical and chemical signals are integrated by the cell to determine its ultimate behavior",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.030sa": [
+      "What is the specific role of integrins in cell migration?",
+      "Cells extend and retract integrin-based contacts to crawl through the ECM. Integrins at the leading edge form new attachments to the matrix while integrins at the trailing edge release, allowing directed movement.",
+      "Think about how a cell would need to alternately grip and release the matrix to move through it.",
+      "## Integrins in Cell Migration\n- Cell migration through the ECM requires coordinated cycles of attachment and detachment\n- At the leading edge: new integrin contacts form, gripping the matrix ahead of the cell\n- At the cell body: actin-myosin contraction generates traction force through focal adhesions\n- At the trailing edge: integrin contacts are released, allowing the rear of the cell to follow\n- Inside-out signaling regulates integrin affinity at different parts of the cell to coordinate this process\n- Integrin-mediated migration is critical during:\n  - Embryonic development\n  - Wound healing (fibroblast and epithelial cell migration)\n  - Immune cell trafficking\n  - Cancer metastasis (tumor cell invasion through the ECM)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.05.031sa": [
+      "In the context of integrin-mediated signaling, what does \"cell adhesion\" refer to?",
+      "How firmly cells attach to the extracellular matrix through integrin-ECM binding.",
+      "This is the most basic mechanical function of integrins at the cell-matrix interface.",
+      "## Cell Adhesion via Integrins\n- Cell adhesion refers to the physical attachment of a cell to the ECM through integrin receptors\n- Adhesion strength is regulated by:\n  - The number of integrins engaged\n  - The affinity state of each integrin (controlled by inside-out signaling)\n  - The formation of focal adhesions (clustered integrins with adaptor proteins)\n- Adhesion is not just structural; it is a signaling event\n  - Attachment triggers outside-in survival and proliferation signals\n  - Loss of attachment can trigger anoikis\n- Adhesion strength must be dynamically regulated: too little and cells detach; too much and cells cannot migrate or remodel their tissue",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

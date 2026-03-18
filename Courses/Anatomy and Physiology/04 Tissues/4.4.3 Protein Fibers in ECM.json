@@ -1,0 +1,394 @@
+{
+  "cards": {
+    "01.04.04.03.001sa": [
+      "What three types of protein fibers are found in the extracellular matrix of connective tissue?",
+      "Collagen, elastic, and reticular fibers",
+      "Think about the three main mechanical properties tissues need: strength, stretch, and support.",
+      "## ECM Protein Fibers\n\nThe three fiber types each serve a distinct mechanical role:\n\n1. **Collagen fibers** - resist tensile (pulling) forces\n2. **Elastic fibers** - allow stretch and recoil\n3. **Reticular fibers** - form delicate supportive meshworks\n\n- All three are embedded in the ground substance\n- All three are produced by resident tissue cells (primarily fibroblasts in connective tissue proper)\n- The relative proportion and arrangement of these fibers determines the mechanical behavior of each tissue",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.002sa": [
+      "What cell type is primarily responsible for producing the protein fibers of the ECM in connective tissue proper?",
+      "Fibroblasts",
+      "This is the most common and most active cell type in connective tissue proper.",
+      "## Fibroblasts and Fiber Production\n\n- Fibroblasts are the principal cells of connective tissue proper\n- They synthesize and secrete the precursors for all three fiber types (collagen, elastic, reticular)\n- They also produce the ground substance components\n- Other tissue types have their own fiber-producing cells (e.g., chondrocytes in cartilage, osteoblasts in bone), but fibroblasts are the primary producers in connective tissue proper",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.003sa": [
+      "Where are the protein fibers of the ECM physically located in relation to ground substance?",
+      "They are embedded in the ground substance",
+      "Think about where ground substance exists and how fibers relate to it spatially.",
+      "## Fiber-Ground Substance Relationship\n\n- Ground substance fills the space between cells and fibers\n- Protein fibers are embedded within this hydrated matrix\n- Together, the fibers and ground substance form the extracellular matrix (ECM)\n- The ground substance provides the medium through which nutrients and waste diffuse, while the fibers provide structural integrity",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.004sa": [
+      "What is the most abundant protein in the human body?",
+      "Collagen",
+      "This protein is found in virtually every tissue, from skin to bone to tendons to the cornea.",
+      "## Collagen Abundance\n\n- Collagen accounts for roughly 25-30% of total body protein\n- It is found in virtually every tissue type\n- Its primary function is to resist tensile (pulling) forces\n- At least 28 types of collagen have been identified, with types I through IV being the most important for tissue biology",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.005sa": [
+      "Approximately what percentage of total body protein does collagen account for?",
+      "25-30%",
+      "It is the single most abundant protein in the body, making up roughly a quarter or more of all protein.",
+      "## Collagen as a Proportion of Body Protein\n\n- 25-30% of all protein in the body is collagen\n- This reflects its widespread distribution across nearly all tissues\n- Key collagen-rich structures include:\n  - Skin\n  - Bone\n  - Tendons and ligaments\n  - Cornea\n  - Cartilage\n  - Blood vessel walls\n  - Basement membranes",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.006sa": [
+      "What type of mechanical force does collagen primarily resist?",
+      "Tensile (pulling) forces",
+      "Think about what happens when you pull on a tendon or stretch skin.",
+      "## Collagen and Tensile Strength\n\n- Collagen resists tensile forces, meaning forces that pull or stretch a tissue\n- This is why collagen predominates in structures subject to pulling loads:\n  - Tendons (muscle pulling on bone)\n  - Ligaments (bone-to-bone stabilization)\n  - Skin (resisting deformation)\n- The triple helix structure of collagen and its extensive cross-linking give it exceptional tensile strength",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.007sa": [
+      "How many polypeptide chains make up a single collagen molecule?",
+      "Three",
+      "The structural name of the collagen molecule hints at this number.",
+      "## Collagen Molecular Structure\n\n- Three polypeptide chains (called alpha chains) wind around each other\n- They form a triple helix\n- The amino acid sequence follows a repeating Gly-X-Y pattern\n- Glycine occupies every third position because its small size fits in the crowded interior of the helix\n- X and Y are frequently proline and hydroxyproline",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.008sa": [
+      "What are the individual polypeptide chains of a collagen molecule called?",
+      "Alpha chains",
+      "These chains share a name with a common designation for protein subunits.",
+      "## Alpha Chains of Collagen\n\n- Each collagen molecule contains three alpha chains\n- The three chains wind together into a triple helix\n- Different types of collagen are distinguished partly by which alpha chain variants they contain\n- The amino acid sequence of each alpha chain follows the repeating Gly-X-Y motif",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.009sa": [
+      "What structural shape do the three polypeptide chains of collagen form when wound together?",
+      "A triple helix",
+      "It is a higher-order version of a common protein secondary structure.",
+      "## Collagen Triple Helix\n\n- Three alpha chains wind around each other to form the triple helix\n- This structure gives collagen its exceptional tensile strength\n- The Gly-X-Y repeating pattern is essential for proper helix formation\n- Hydroxyproline residues stabilize the helix through hydrogen bonds\n- Disruption of the triple helix (e.g., from failed hydroxylation) produces weak, defective collagen",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.010sa": [
+      "In the repeating Gly-X-Y amino acid pattern of collagen, which amino acid occupies every third position?",
+      "Glycine",
+      "The smallest amino acid fills this role because of spatial constraints.",
+      "## Glycine in the Collagen Helix\n\n- Glycine (Gly) occupies every third position in the collagen sequence\n- It is the smallest amino acid, which allows it to fit in the crowded interior of the triple helix\n- Without glycine at every third position, the three chains cannot pack tightly enough to form a stable helix\n- The X and Y positions are frequently occupied by proline and hydroxyproline",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.011sa": [
+      "Why is glycine able to occupy the interior position of the collagen triple helix?",
+      "Because it is the smallest amino acid, allowing it to fit in the crowded interior of the helix",
+      "Consider what physical property of this amino acid would matter in a tightly packed space.",
+      "## Glycine's Role in Collagen\n\n- The interior of the triple helix is extremely crowded where the three chains converge\n- Only glycine, with its single hydrogen atom as a side chain, is small enough to fit\n- Glycine's presence at every third position is non-negotiable for helix stability\n- Mutations that substitute glycine with a larger amino acid disrupt the triple helix and cause collagen disorders (e.g., osteogenesis imperfecta)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.012sa": [
+      "In the Gly-X-Y repeating pattern of collagen, what two amino acids most frequently occupy the X and Y positions?",
+      "Proline and hydroxyproline",
+      "One of these is a standard amino acid; the other is a post-translationally modified version of it.",
+      "## Proline and Hydroxyproline in Collagen\n\n- Proline frequently occupies the X position\n- Hydroxyproline frequently occupies the Y position\n- Both contribute to helix stability:\n  - Proline's rigid ring structure limits rotation of the polypeptide backbone, reinforcing the helix\n  - Hydroxyproline forms hydrogen bonds that further stabilize the triple helix\n- Hydroxyproline is produced by the post-translational modification of proline by prolyl hydroxylase, a vitamin C-dependent enzyme",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.013sa": [
+      "How do proline and hydroxyproline contribute to the stability of the collagen triple helix?",
+      "Proline stabilizes the helix through its rigid ring structure, and hydroxyproline stabilizes it through hydrogen bonds",
+      "One stabilizes mechanically through its shape; the other stabilizes chemically through bonding.",
+      "## Stabilization of the Collagen Helix\n\n- **Proline**: contains a rigid pyrrolidine ring that restricts backbone rotation, locking the chain into a conformation favorable for the triple helix\n- **Hydroxyproline**: forms interchain hydrogen bonds that hold the three alpha chains together\n- Both are essential for a stable, functional collagen molecule\n- Failure to produce hydroxyproline (due to vitamin C deficiency) results in an unstable helix and the clinical features of scurvy",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.014sa": [
+      "What vitamin is essential for collagen synthesis?",
+      "Vitamin C (ascorbic acid)",
+      "Deficiency of this vitamin causes scurvy.",
+      "## Vitamin C and Collagen\n\n- Vitamin C is a required cofactor for two hydroxylase enzymes:\n  1. Prolyl hydroxylase (converts proline to hydroxyproline)\n  2. Lysyl hydroxylase (converts lysine to hydroxylysine)\n- Without vitamin C, these hydroxylation reactions fail\n- The result is an unstable collagen triple helix and weak, defective collagen fibers\n- This is the molecular basis of scurvy",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.015sa": [
+      "What two enzymes require vitamin C to function during collagen synthesis?",
+      "Prolyl hydroxylase and lysyl hydroxylase",
+      "Each enzyme is named for the amino acid it modifies.",
+      "## Hydroxylase Enzymes in Collagen Synthesis\n\n- **Prolyl hydroxylase**: converts proline to hydroxyproline\n- **Lysyl hydroxylase**: converts lysine to hydroxylysine\n- Both require vitamin C (ascorbic acid) as a cofactor\n- Hydroxyproline stabilizes the collagen triple helix through hydrogen bonds\n- Hydroxylysine participates in cross-linking between collagen molecules\n- Failure of either reaction weakens the resulting collagen",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.016sa": [
+      "What specific biochemical reactions do prolyl hydroxylase and lysyl hydroxylase perform during collagen synthesis?",
+      "They convert proline to hydroxyproline and lysine to hydroxylysine, respectively",
+      "Both enzymes perform the same type of chemical modification: adding a hydroxyl (-OH) group.",
+      "## Hydroxylation in Collagen Synthesis\n\n- These are post-translational modifications that occur after the polypeptide chains are synthesized\n- Prolyl hydroxylase: proline → hydroxyproline\n- Lysyl hydroxylase: lysine → hydroxylysine\n- Both reactions require vitamin C as a cofactor\n- Hydroxyproline is critical for triple helix stability\n- Hydroxylysine is important for cross-linking between collagen molecules and for glycosylation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.017sa": [
+      "What happens to the collagen triple helix when hydroxylation of proline and lysine fails?",
+      "The triple helix becomes unstable, and the resulting collagen fibers are weak and defective",
+      "Without the hydrogen bonds that hydroxyproline provides, the three chains cannot hold together properly.",
+      "## Consequences of Failed Hydroxylation\n\n- The triple helix depends on hydrogen bonds formed by hydroxyproline\n- Without hydroxylation:\n  1. The helix is unstable and partially unwinds\n  2. Collagen fibers assembled from defective molecules are weak\n  3. Tissues that depend on collagen for structural integrity fail\n- This produces the clinical syndrome of scurvy\n- The hydroxylation failure occurs because vitamin C is unavailable as a cofactor for the hydroxylase enzymes",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.018sa": [
+      "What disease results from a deficiency of vitamin C, and what is its molecular basis?",
+      "Scurvy, caused by the inability to properly hydroxylate proline and lysine during collagen synthesis, resulting in unstable, defective collagen",
+      "This disease was historically common among sailors on long voyages without access to fresh fruits.",
+      "## Scurvy\n\n- **Cause**: vitamin C deficiency\n- **Molecular basis**: failure of prolyl hydroxylase and lysyl hydroxylase → no hydroxyproline or hydroxylysine → unstable collagen triple helix → weak collagen fibers\n- **Clinical signs**:\n  1. Bleeding gums\n  2. Poor wound healing\n  3. Weakened blood vessels\n  4. Loose teeth\n- All symptoms trace back to defective collagen in tissues that rely on it for structural support",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.019sa": [
+      "Name four clinical signs of scurvy.",
+      "Bleeding gums, poor wound healing, weakened blood vessels, and loose teeth",
+      "All four signs reflect failure of structural support in tissues that depend heavily on collagen.",
+      "## Clinical Signs of Scurvy\n\n1. **Bleeding gums** - gingival connective tissue loses structural integrity\n2. **Poor wound healing** - new collagen cannot be properly deposited during tissue repair\n3. **Weakened blood vessels** - vessel walls lose collagen-based support, leading to easy bruising and hemorrhage\n4. **Loose teeth** - the periodontal ligament (which anchors teeth to bone) is collagen-rich and degrades\n\n- All signs are direct consequences of defective collagen synthesis due to vitamin C deficiency",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.020sa": [
+      "How many types of collagen have been identified in the human body?",
+      "At least 28",
+      "The number is higher than most students expect, well above 20.",
+      "## Collagen Type Diversity\n\n- At least 28 types of collagen have been identified\n- The four most important for tissue biology are:\n  1. **Type I** - most abundant; skin, bone, tendons, ligaments, cornea\n  2. **Type II** - cartilage\n  3. **Type III** - reticular fibers; organ stroma, blood vessel walls, fetal skin\n  4. **Type IV** - non-fibrillar; basement membrane\n- Different types are distinguished by their alpha chain composition and the structures they form",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.021sa": [
+      "Which type of collagen is the most abundant, and where is it found?",
+      "Type I collagen, found in skin, bone, tendons, ligaments, and the cornea",
+      "This is the collagen type most associated with tensile strength in load-bearing structures.",
+      "## Type I Collagen\n\n- The most abundant collagen type in the body\n- Primary role: providing tensile strength\n- Found in:\n  - Skin\n  - Bone\n  - Tendons\n  - Ligaments\n  - Cornea\n- Forms thick, strong fibers visible under light microscopy\n- Predominates in tissues that must resist pulling or stretching forces",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.022sa": [
+      "Which type of collagen is the primary collagen of cartilage?",
+      "Type II collagen",
+      "This collagen type forms fine fibrils rather than thick fibers and works with proteoglycans.",
+      "## Type II Collagen\n\n- The main collagen found in cartilage\n- Forms fine fibrils (thinner than type I fibers)\n- Works together with proteoglycans to resist compressive forces\n- The fibrils create a meshwork that traps proteoglycan aggregates, which attract water and resist compression\n- Also found in the vitreous humor of the eye",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.023sa": [
+      "How does type II collagen interact with proteoglycans in cartilage to resist compression?",
+      "Type II collagen forms fine fibrils that interact with proteoglycans, creating a structure that resists compressive forces",
+      "Think about how a fibril network could trap large molecules that attract water.",
+      "## Type II Collagen and Compression Resistance\n\n- Type II collagen fibrils form a meshwork in cartilage matrix\n- Proteoglycan aggregates are trapped within this meshwork\n- Proteoglycans (especially aggrecan) have heavily sulfated GAG chains that attract water via osmotic pressure\n- The trapped water resists compression\n- The collagen fibril network prevents the proteoglycans from being squeezed out under load\n- This collagen-proteoglycan interaction is essential for cartilage's ability to bear weight",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.024sa": [
+      "Which type of collagen forms reticular fibers, and where is it found?",
+      "Type III collagen, found in the stroma of organs, the walls of blood vessels, and fetal skin",
+      "This collagen type forms thin, branching fibers rather than thick bundles.",
+      "## Type III Collagen and Reticular Fibers\n\n- Type III collagen is the structural basis of reticular fibers\n- Reticular fibers are thin, branching, and coated with glycoproteins\n- They form supportive meshworks (reticula) in:\n  - Organ stroma (spleen, lymph nodes, liver, bone marrow)\n  - Blood vessel walls\n  - Fetal skin\n- They support organs that have large numbers of free cells moving through them",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.025sa": [
+      "Which type of collagen is non-fibrillar and forms the mesh-like sheet of the basement membrane?",
+      "Type IV collagen",
+      "This collagen type does not form fibers or fibrils but instead assembles into a flat network.",
+      "## Type IV Collagen\n\n- A non-fibrillar collagen\n- Does not form fibers or fibrils like types I, II, and III\n- Instead assembles into a mesh-like sheet structure\n- This sheet is a key structural component of the basement membrane\n- The basement membrane underlies epithelial tissues and surrounds muscle cells, Schwann cells, and adipocytes\n- Type IV collagen provides the structural scaffold to which other basement membrane molecules attach",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.026sa": [
+      "What property do elastic fibers provide to the extracellular matrix?",
+      "The ability to stretch and recoil (elasticity)",
+      "Think about what tissues like the lungs and large arteries need to do repeatedly.",
+      "## Elastic Fibers and Elasticity\n\n- Elastic fibers allow tissues to stretch and then return to their original shape\n- They can extend to 150% of their resting length and recoil\n- Essential in tissues that undergo repeated cycles of expansion and contraction:\n  - Walls of large arteries (expand with each heartbeat)\n  - Lungs (expand and recoil with each breath)\n  - Skin (stretches and returns)\n- Composed of two components: an elastin core and a fibrillin sheath",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.027sa": [
+      "To what percentage of their resting length can elastic fibers stretch before recoiling?",
+      "150%",
+      "The number is greater than 100% but not as high as 200%.",
+      "## Elastic Fiber Stretch Capacity\n\n- Elastic fibers can stretch to 150% of their resting length\n- After stretching, they return to their original dimensions\n- This reversible deformation is called elastic recoil\n- The elastin protein core provides this recoil property\n- This capacity is critical in tissues subject to repeated mechanical cycling (arteries, lungs, skin)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.028sa": [
+      "What are the two structural components of an elastic fiber?",
+      "An inner core of elastin and an outer sheath of fibrillin",
+      "One provides the recoil; the other provides the scaffold.",
+      "## Elastic Fiber Architecture\n\n1. **Elastin (inner core)**\n   - Highly hydrophobic protein\n   - Extensively cross-linked\n   - Provides the actual elastic recoil\n2. **Fibrillin (outer sheath)**\n   - A glycoprotein\n   - Forms a microfibrillar scaffold around the elastin core\n   - Organizes the elastic fiber and directs its assembly during development\n\n- Both components are required for functional elastic fibers\n- Defects in fibrillin cause Marfan syndrome",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.029sa": [
+      "What is elastin, and what property does it provide within an elastic fiber?",
+      "Elastin is a highly hydrophobic, cross-linked protein that forms the inner core of elastic fibers and provides elastic recoil",
+      "This protein's extensive cross-linking allows it to deform and snap back.",
+      "## Elastin\n\n- Forms the inner core of elastic fibers\n- Key properties:\n  - Highly hydrophobic\n  - Extensively cross-linked (via desmosine and isodesmosine cross-links)\n  - Extremely durable and long-lived\n- Provides the actual elastic recoil of the fiber\n- The cross-links allow the protein to stretch and return to its original conformation\n- Elastin is one of the most stable proteins in the body, with very slow turnover",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.030sa": [
+      "What is fibrillin, and what role does it play in elastic fiber structure?",
+      "Fibrillin is a glycoprotein that forms a microfibrillar scaffold around the elastin core, organizing the elastic fiber and directing its assembly during development",
+      "This molecule provides the structural framework on which the elastic component is deposited.",
+      "## Fibrillin\n\n- A glycoprotein that forms microfibrils\n- Surrounds the elastin core as an outer sheath\n- Functions:\n  1. Organizes the elastic fiber structure\n  2. Directs elastic fiber assembly during development\n  3. Provides a scaffold for elastin deposition\n- Clinically significant: mutations in fibrillin-1 cause Marfan syndrome\n- Without functional fibrillin, elastic fibers form abnormally, weakening connective tissues throughout the body",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.031sa": [
+      "What genetic disorder results from mutations in the fibrillin-1 gene?",
+      "Marfan syndrome",
+      "This connective tissue disorder is associated with tall stature, long limbs, and risk of aortic dissection.",
+      "## Marfan Syndrome\n\n- **Cause**: mutations in the fibrillin-1 gene\n- **Mechanism**: defective fibrillin → abnormal elastic fiber formation → weakened connective tissue\n- **Affected systems and consequences**:\n  1. **Cardiovascular**: weakened aortic wall → risk of aortic dissection\n  2. **Ocular**: weakened suspensory ligaments → lens dislocation (ectopia lentis)\n  3. **Skeletal**: abnormally long limbs, joint hypermobility\n- Inherited as an autosomal dominant disorder\n- The cardiovascular complications (especially aortic dissection) are the most life-threatening feature",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.032sa": [
+      "Name three organ systems affected by Marfan syndrome and a specific clinical consequence in each.",
+      "Cardiovascular (aortic dissection), ocular (lens dislocation), and skeletal (abnormally long limbs and joint hypermobility)",
+      "Think about where elastic fibers are structurally important: blood vessels, the eye, and the skeleton.",
+      "## Marfan Syndrome: Systemic Effects\n\n1. **Cardiovascular system**\n   - The aortic wall is rich in elastic fibers\n   - Defective elastic fibers weaken the wall → risk of aortic dissection (tearing of the aortic wall)\n   - Most dangerous complication of Marfan syndrome\n2. **Eyes**\n   - The suspensory ligaments (zonules) of the lens contain fibrillin\n   - Weakened zonules → lens dislocation (ectopia lentis)\n3. **Skeletal system**\n   - Abnormally long limbs and digits (arachnodactyly)\n   - Joint hypermobility due to weakened connective tissue\n   - Often tall stature with a disproportionately long arm span",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.033sa": [
+      "What type of collagen makes up reticular fibers, and what are they coated with?",
+      "Type III collagen coated with glycoproteins",
+      "The collagen type is the same one found in blood vessel walls and fetal skin.",
+      "## Reticular Fiber Composition\n\n- Structural core: type III collagen\n- Coating: glycoproteins\n- The glycoprotein coating distinguishes reticular fibers from other collagen fibers histologically\n- Reticular fibers are thinner and more delicate than type I collagen fibers\n- They branch extensively, forming networks rather than parallel bundles\n- Can be visualized with silver stains (argyrophilic)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.034sa": [
+      "What structural pattern do reticular fibers form, and what is this pattern called?",
+      "They form a fine mesh or network called a reticulum",
+      "The name of the fiber type itself hints at the pattern it forms.",
+      "## Reticular Fiber Networks\n\n- Reticular fibers branch and interconnect to form a fine meshwork\n- This meshwork is called a reticulum (from Latin for \"little net\")\n- The reticular meshwork provides a supportive framework for cells\n- Especially important in organs where large numbers of free cells move through the tissue:\n  - Spleen\n  - Lymph nodes\n  - Bone marrow\n  - Liver\n- The mesh supports the cells without creating a rigid barrier to cell movement",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.035sa": [
+      "Name four organs where reticular fibers provide structural support.",
+      "Spleen, lymph nodes, bone marrow, and liver",
+      "These organs all have something in common: large populations of free cells moving through their tissue.",
+      "## Reticular Fiber Distribution\n\n- Reticular fibers are concentrated in organs with many free (mobile) cells:\n  1. **Spleen** - filters blood; immune cells constantly passing through\n  2. **Lymph nodes** - filter lymph; lymphocytes proliferate and migrate\n  3. **Bone marrow** - site of blood cell production; cells constantly entering circulation\n  4. **Liver** - blood flows through sinusoids lined by hepatocytes and Kupffer cells\n- The reticular meshwork supports the organ architecture while allowing free cell movement",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.036sa": [
+      "What type of protein fiber predominates in tendons, and how are the fibers arranged?",
+      "Collagen fibers, arranged in parallel",
+      "Tendons must resist pulling in one specific direction.",
+      "## Tendon Fiber Architecture\n\n- Tendons are composed almost entirely of parallel collagen fibers (type I)\n- The parallel arrangement provides maximum tensile strength in one direction\n- This makes tendons extremely strong along their long axis\n- Tendons transmit the pulling force of muscle contraction to bone\n- The parallel arrangement is a key example of how fiber organization determines tissue mechanical properties",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.037sa": [
+      "What types of protein fibers are found in the dermis, and how does their arrangement differ from that of tendons?",
+      "Collagen and elastic fibers arranged in a dense, irregular meshwork (providing strength and resilience in all directions, unlike the parallel arrangement of tendons)",
+      "The dermis must resist forces from multiple directions, not just one.",
+      "## Dermis Fiber Architecture\n\n- Contains both collagen fibers and elastic fibers\n- Arrangement: dense, irregular meshwork (fibers run in many directions)\n- This provides:\n  - Strength in all directions (unlike tendons, which are strong in only one direction)\n  - Resilience (ability to return to shape after deformation)\n- The combination of collagen (tensile strength) and elastic fibers (stretch and recoil) allows skin to resist diverse mechanical forces",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.038sa": [
+      "What type of protein fiber predominates in the walls of large arteries, and how are they arranged?",
+      "Elastic fibers, arranged in concentric sheets",
+      "These vessels must expand and recoil with each heartbeat.",
+      "## Large Artery Fiber Architecture\n\n- Walls of large arteries are rich in elastic fibers\n- The elastic fibers are arranged in concentric sheets (elastic lamellae)\n- This arrangement allows the vessel wall to:\n  1. Expand when blood is ejected from the heart (systole)\n  2. Recoil between heartbeats (diastole), propelling blood forward\n- This property is critical for maintaining continuous blood flow\n- Large arteries near the heart (e.g., aorta) are sometimes called \"elastic arteries\" because of this feature",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.03.039sa": [
+      "What determines the mechanical properties of a given connective tissue in terms of its fiber composition?",
+      "The relative proportions and arrangement of the three fiber types (collagen, elastic, and reticular)",
+      "It is not just which fibers are present but how much of each and how they are organized.",
+      "## Fiber Composition and Tissue Mechanics\n\n- The mechanical behavior of any connective tissue is determined by:\n  1. **Which fiber types are present**\n  2. **Their relative proportions**\n  3. **Their spatial arrangement**\n- Examples:\n  - Tendons: almost all parallel collagen → strong in one direction\n  - Dermis: irregular collagen + elastic fibers → strong and resilient in all directions\n  - Large arteries: concentric elastic sheets → stretch and recoil\n  - Organ stroma: reticular meshwork → delicate support for free cells\n- This principle explains why tissues with the same basic components can have very different mechanical properties",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

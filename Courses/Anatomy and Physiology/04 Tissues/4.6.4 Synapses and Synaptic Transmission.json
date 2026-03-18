@@ -1,0 +1,334 @@
+{
+  "cards": {
+    "01.04.06.04.001sa": [
+      "What is a synapse?",
+      "The junction where a signal is transmitted from one neuron to another cell",
+      "Neural meeting point",
+      "## Synapse\n- A synapse is the fundamental site of communication in the nervous system\n- The \"other cell\" at a synapse can be:\n  1. Another neuron\n  2. A muscle cell\n  3. A gland cell\n- All nervous system processing, from reflexes to complex thought, depends on synaptic transmission between cells",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.002sa": [
+      "What term describes the junction where a signal is transmitted from one neuron to another neuron, muscle cell, or gland cell?",
+      "Synapse",
+      "Gap-crossing signal",
+      "## Synapse\n- The synapse is where all neural communication occurs\n- Three possible targets of synaptic signaling:\n  1. Another neuron\n  2. A muscle cell\n  3. A gland cell\n- Synaptic transmission underlies how the nervous system processes information and controls body functions",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.003sa": [
+      "What is the most common type of synapse in the body?",
+      "Chemical synapse",
+      "Messenger molecule involved",
+      "## Chemical vs. Electrical Synapses\n- Most synapses are chemical synapses, meaning the signal crosses the gap via a released chemical messenger (neurotransmitter)\n- The alternative, electrical synapses, are less common and found only in specialized locations\n- Chemical synapses allow for signal modulation, which is critical for nervous system flexibility",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.004sa": [
+      "In a chemical synapse, what type of chemical messenger carries the signal across the synaptic cleft?",
+      "Neurotransmitter",
+      "Chemical courier",
+      "## Neurotransmitters\n- Neurotransmitters are the chemical messengers released at chemical synapses\n- They are stored in synaptic vesicles within the axon terminal\n- After release, they diffuse across the synaptic cleft and bind receptors on the postsynaptic cell\n- The specific neurotransmitter and receptor combination determines the effect on the receiving cell",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.005sa": [
+      "List the 4 steps of chemical synaptic transmission in order.",
+      "1. Action potential arrives at axon terminal; 2. Voltage-gated calcium channels open, calcium flows in; 3. Synaptic vesicles fuse with presynaptic membrane and release neurotransmitter into cleft; 4. Neurotransmitter binds postsynaptic receptors",
+      "Arrival, ion entry, release, binding",
+      "## Chemical Synaptic Transmission Sequence\n1. **Action potential arrives** at the axon terminal (synaptic knob) of the presynaptic neuron\n2. **Calcium entry** through voltage-gated calcium channels that open in response to the electrical signal\n3. **Vesicle fusion and neurotransmitter release** as calcium influx causes synaptic vesicles to fuse with the presynaptic membrane, emptying their contents into the synaptic cleft\n4. **Receptor binding** as neurotransmitter diffuses across the cleft and binds specific receptors on the postsynaptic membrane, producing a response\n- Note that the signal converts from electrical to chemical and back to electrical (or other response) across the synapse",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.006sa": [
+      "What ion must flow into the axon terminal to trigger neurotransmitter release at a chemical synapse?",
+      "Calcium",
+      "Bone-building mineral",
+      "## Calcium and Neurotransmitter Release\n- When the action potential reaches the axon terminal, it opens voltage-gated calcium channels\n- The influx of calcium ions is the direct trigger for synaptic vesicle fusion with the presynaptic membrane\n- Without calcium entry, neurotransmitter is not released, even if the action potential arrives normally\n- This is why calcium channel function is critical for normal synaptic transmission",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.007sa": [
+      "What type of ion channel opens at the axon terminal in response to an arriving action potential, allowing calcium to enter?",
+      "Voltage-gated calcium channels",
+      "Electrically sensitive gates",
+      "## Voltage-Gated Calcium Channels\n- These channels respond to the change in membrane voltage caused by the arriving action potential\n- Their opening allows calcium to flow down its concentration gradient into the terminal\n- The calcium influx is the essential link between the electrical signal (action potential) and the chemical signal (neurotransmitter release)\n- Blocking these channels prevents synaptic transmission",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.008sa": [
+      "What are synaptic vesicles?",
+      "Membrane-bound sacs in the axon terminal that contain neurotransmitter molecules",
+      "Tiny storage containers",
+      "## Synaptic Vesicles\n- Synaptic vesicles are small, membrane-bound sacs located in the axon terminal (synaptic knob)\n- They store neurotransmitter molecules until release is triggered\n- When calcium enters the terminal, vesicles fuse with the presynaptic membrane and empty their contents into the synaptic cleft\n- This fusion-and-release process is called exocytosis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.009sa": [
+      "What is the synaptic cleft?",
+      "The narrow gap between the presynaptic and postsynaptic cells at a synapse",
+      "Space between cells",
+      "## Synaptic Cleft\n- The synaptic cleft is the physical gap that separates the presynaptic neuron from the postsynaptic cell\n- Neurotransmitter must diffuse across this gap to reach postsynaptic receptors\n- The cleft is extremely narrow, allowing rapid diffusion\n- It is the reason chemical synapses require a chemical messenger rather than direct electrical transfer",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.010sa": [
+      "What is the axon terminal also called?",
+      "Synaptic knob",
+      "Bulb-shaped ending",
+      "## Axon Terminal / Synaptic Knob\n- The axon terminal (synaptic knob) is the enlarged ending of the presynaptic neuron's axon\n- It contains:\n  - Synaptic vesicles filled with neurotransmitter\n  - Voltage-gated calcium channels\n  - Mitochondria (to supply energy for neurotransmitter synthesis and recycling)\n- It is the site where the electrical signal is converted into a chemical signal",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.011sa": [
+      "Name the neurotransmitter used at neuromuscular junctions and in many CNS and autonomic pathways.",
+      "Acetylcholine",
+      "First one discovered",
+      "## Acetylcholine (ACh)\n- Acetylcholine is one of the most widely used neurotransmitters in the body\n- Key locations:\n  - Neuromuscular junctions (skeletal muscle activation)\n  - Many CNS pathways\n  - Autonomic nervous system pathways\n- Its effect depends on the receptor type:\n  - Nicotinic receptors: excitatory (e.g., skeletal muscle)\n  - Muscarinic receptors: can be inhibitory (e.g., slowing the heart)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.012sa": [
+      "Which neurotransmitters are associated with the sympathetic nervous system and CNS arousal pathways?",
+      "Norepinephrine and epinephrine",
+      "Fight-or-flight chemicals",
+      "## Norepinephrine and Epinephrine\n- Both are catecholamines derived from the amino acid tyrosine\n- Norepinephrine is the primary neurotransmitter of the sympathetic nervous system\n- Epinephrine (adrenaline) functions as both a neurotransmitter and a hormone\n- Together they drive the fight-or-flight response: increased heart rate, blood pressure, alertness, and energy mobilization",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.013sa": [
+      "What neurotransmitter is involved in motor control, reward, and motivation?",
+      "Dopamine",
+      "Reward circuit chemical",
+      "## Dopamine\n- Dopamine is a catecholamine neurotransmitter with several major roles:\n  1. Motor control (substantia nigra pathway)\n  2. Reward and pleasure signaling\n  3. Motivation and goal-directed behavior\n- Dopamine dysfunction is central to Parkinson's disease (motor control loss) and is implicated in addiction and schizophrenia",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.014sa": [
+      "What neurotransmitter is involved in mood regulation, sleep, and digestion?",
+      "Serotonin",
+      "Mood and gut messenger",
+      "## Serotonin\n- Serotonin plays roles in:\n  1. Mood regulation\n  2. Sleep-wake cycles\n  3. Digestive function\n- Most of the body's serotonin is actually found in the gut, not the brain\n- Serotonin is the target of SSRIs (selective serotonin reuptake inhibitors), a major class of antidepressant medications",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.015sa": [
+      "What is the most abundant excitatory neurotransmitter in the CNS?",
+      "Glutamate",
+      "Amino acid exciter",
+      "## Glutamate\n- Glutamate is the primary excitatory neurotransmitter in the central nervous system\n- It is involved in most fast excitatory synaptic transmission in the brain\n- Excessive glutamate release can cause excitotoxicity, where neurons are damaged or killed by overstimulation\n- Glutamate is an amino acid, making it one of several amino acid neurotransmitters",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.016sa": [
+      "What is the most abundant inhibitory neurotransmitter in the CNS?",
+      "GABA (gamma-aminobutyric acid)",
+      "Chief neural brake",
+      "## GABA\n- GABA (gamma-aminobutyric acid) is the most abundant inhibitory neurotransmitter in the CNS\n- It reduces neuronal excitability and counterbalances the excitatory effects of glutamate\n- Many sedative, anti-anxiety, and anti-seizure drugs work by enhancing GABA's inhibitory effects\n- The balance between glutamate (excitation) and GABA (inhibition) is essential for normal brain function",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.017sa": [
+      "What neurotransmitter does the abbreviation GABA stand for?",
+      "Gamma-aminobutyric acid",
+      "Greek letter starts it",
+      "## GABA\n- Full name: gamma-aminobutyric acid\n- It is the most abundant inhibitory neurotransmitter in the CNS\n- GABA works by reducing the likelihood that the postsynaptic neuron will fire an action potential\n- Drugs that enhance GABA activity (benzodiazepines, barbiturates) produce sedation and reduce anxiety",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.018sa": [
+      "Does the effect of a neurotransmitter on a postsynaptic cell depend on the neurotransmitter itself or on the receptor it binds?",
+      "The receptor it binds",
+      "Lock matters, not key",
+      "## Receptor Determines Effect\n- The same neurotransmitter can produce completely different effects at different synapses\n- What matters is the type of receptor on the postsynaptic cell, not the identity of the neurotransmitter\n- This principle explains how one chemical can be excitatory in one location and inhibitory in another\n- Example: acetylcholine excites skeletal muscle (nicotinic receptors) but slows the heart (muscarinic receptors)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.019sa": [
+      "Acetylcholine excites skeletal muscle at the neuromuscular junction by binding to what type of receptor?",
+      "Nicotinic receptors",
+      "Tobacco-plant namesake",
+      "## Nicotinic Receptors\n- Nicotinic receptors are one of the two major acetylcholine receptor types\n- Found at the neuromuscular junction on skeletal muscle\n- Binding of acetylcholine to nicotinic receptors produces an excitatory response (muscle contraction)\n- Named after nicotine, which can also activate these receptors\n- Contrast with muscarinic receptors, which mediate inhibitory effects in the heart",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.020sa": [
+      "Acetylcholine slows the heart rate by binding to what type of receptor on cardiac cells?",
+      "Muscarinic receptors",
+      "Mushroom-derived name",
+      "## Muscarinic Receptors\n- Muscarinic receptors are the second major type of acetylcholine receptor\n- Found on cardiac muscle and smooth muscle, among other locations\n- At the heart, activation produces an inhibitory effect: decreased heart rate\n- Named after muscarine, a compound found in certain mushrooms\n- This demonstrates the key principle that the receptor, not the neurotransmitter, determines the effect",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.021sa": [
+      "What are electrical synapses?",
+      "Gap junctions that allow ions and electrical signals to pass directly between cells without a chemical intermediary",
+      "Direct cell-to-cell conduits",
+      "## Electrical Synapses\n- Electrical synapses are gap junctions connecting adjacent cells\n- They transmit signals directly via ion flow, with no neurotransmitter involved\n- Advantages: very fast transmission\n- Disadvantages: lack the modulability (ability to be strengthened, weakened, or modified) of chemical synapses\n- Found where rapid, synchronized activity is needed (cardiac muscle, some CNS regions)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.022sa": [
+      "What is one advantage and one disadvantage of electrical synapses compared to chemical synapses?",
+      "Advantage: faster transmission; Disadvantage: lack modulability",
+      "Speed vs. flexibility",
+      "## Electrical vs. Chemical Synapse Trade-off\n- **Speed**: Electrical synapses transmit almost instantaneously because ions pass directly through gap junctions\n- **Modulability**: Chemical synapses can be strengthened, weakened, modified, or blocked, which is essential for learning, memory, and fine-tuned control\n- Electrical synapses sacrifice this flexibility for speed\n- This is why chemical synapses predominate in the nervous system despite being slower",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.023sa": [
+      "In what structure within cardiac muscle are electrical synapses (gap junctions) found?",
+      "Intercalated discs",
+      "Cardiac cell junctions",
+      "## Intercalated Discs and Electrical Synapses\n- Intercalated discs are specialized junctions between cardiac muscle cells\n- They contain gap junctions (electrical synapses) that allow rapid, direct ion flow between cells\n- This ensures synchronized contraction of the heart muscle\n- The heart needs to contract as a coordinated unit, making the speed of electrical synapses essential here",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.024sa": [
+      "Name the three mechanisms by which neurotransmission is terminated.",
+      "Enzymatic degradation, reuptake, and diffusion",
+      "Break it, reclaim it, or lose it",
+      "## Termination of Neurotransmission\nNeurotransmitter must be cleared from the synaptic cleft to prevent continuous stimulation. Three mechanisms accomplish this:\n1. **Enzymatic degradation**: Enzymes in the cleft break down the neurotransmitter (e.g., acetylcholinesterase breaks down acetylcholine)\n2. **Reuptake**: The presynaptic neuron reabsorbs the neurotransmitter via transporter proteins for recycling\n3. **Diffusion**: The neurotransmitter drifts away from the synapse and is no longer at effective concentration",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.025sa": [
+      "What enzyme breaks down acetylcholine in the synaptic cleft?",
+      "Acetylcholinesterase",
+      "Named for what it destroys",
+      "## Acetylcholinesterase\n- Acetylcholinesterase is the enzyme responsible for rapidly breaking down acetylcholine in the synaptic cleft\n- This is an example of enzymatic degradation as a neurotransmission termination mechanism\n- Inhibitors of this enzyme (e.g., nerve agents, some pesticides, and drugs used to treat myasthenia gravis and Alzheimer's disease) prolong acetylcholine's effects by preventing its breakdown",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.026sa": [
+      "What is reuptake in the context of neurotransmission?",
+      "The process by which the presynaptic neuron reabsorbs neurotransmitter from the synaptic cleft via transporter proteins for recycling",
+      "Recycling at the source",
+      "## Reuptake\n- Reuptake is one of the three mechanisms for terminating neurotransmission\n- The presynaptic neuron uses specific transporter proteins to pull the neurotransmitter back out of the cleft\n- The recovered neurotransmitter is repackaged into synaptic vesicles for reuse\n- This is a major pharmacological target: SSRIs (selective serotonin reuptake inhibitors) block serotonin reuptake, increasing serotonin levels in the cleft",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.027sa": [
+      "What class of antidepressant medication works by blocking serotonin reuptake?",
+      "SSRIs (selective serotonin reuptake inhibitors)",
+      "Selective blocker of recycling",
+      "## SSRIs\n- SSRIs stand for selective serotonin reuptake inhibitors\n- They block the serotonin transporter on the presynaptic neuron\n- This prevents serotonin from being reabsorbed, keeping it in the synaptic cleft longer\n- The prolonged serotonin activity at postsynaptic receptors is thought to improve mood regulation\n- SSRIs are among the most widely prescribed antidepressants",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.028sa": [
+      "Why is the synapse considered the key site of integration and regulation in the nervous system?",
+      "Because it is where signals can be strengthened, weakened, modified, or blocked",
+      "Neural decision point",
+      "## Synaptic Integration\n- The synapse is not just a relay station; it is where the nervous system makes \"decisions\"\n- Signals at synapses can be:\n  - Strengthened (facilitation)\n  - Weakened (depression)\n  - Modified\n  - Blocked entirely\n- This modifiability is the basis of learning, memory, and all complex nervous system processing\n- Chemical synapses are particularly suited for this because of the many steps in transmission that can be regulated",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.029sa": [
+      "Synaptic dysfunction is implicated in what broad category of medical conditions?",
+      "Neurological and psychiatric disorders",
+      "Brain and mind diseases",
+      "## Synaptic Dysfunction and Disease\n- Virtually every neurological and psychiatric disorder involves some form of synaptic dysfunction\n- Examples include:\n  - **Parkinson's disease**: loss of dopamine-producing neurons\n  - **Depression**: disrupted serotonin and/or norepinephrine signaling\n  - **Schizophrenia**: dysregulated dopamine and glutamate transmission\n- This is why so many drugs for these conditions target synaptic components (receptors, transporters, enzymes)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.030sa": [
+      "In chemical synaptic transmission, what structure does the neurotransmitter bind to on the postsynaptic cell?",
+      "Specific receptors on the postsynaptic membrane",
+      "Molecular target sites",
+      "## Postsynaptic Receptors\n- After crossing the synaptic cleft, neurotransmitter molecules bind to specific receptor proteins embedded in the postsynaptic membrane\n- The receptor type determines the cell's response (excitatory or inhibitory)\n- Different receptor types for the same neurotransmitter can produce opposite effects\n- Receptor specificity is what gives the nervous system its precision and versatility",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.031sa": [
+      "What term describes the neuron that sends a signal across a synapse?",
+      "Presynaptic neuron",
+      "Sender side",
+      "## Presynaptic vs. Postsynaptic\n- **Presynaptic neuron**: the neuron sending the signal; its axon terminal contains the synaptic vesicles and releases neurotransmitter\n- **Postsynaptic cell**: the cell receiving the signal; its membrane contains the receptors\n- These terms are relative to a specific synapse; a single neuron can be presynaptic at one synapse and postsynaptic at another",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.032sa": [
+      "Where in the body are electrical synapses found? Name two locations.",
+      "Cardiac muscle (intercalated discs) and some regions of the CNS",
+      "Heart and brain locations",
+      "## Electrical Synapse Locations\n- Electrical synapses are found where rapid, synchronized activity is critical:\n  1. **Cardiac muscle**: gap junctions in intercalated discs allow the heart to contract as a coordinated unit\n  2. **Certain CNS regions**: where fast synchronization between neurons is needed\n- These locations share a common requirement: speed and coordination matter more than fine-tuned modulation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.04.033sa": [
+      "What process describes the fusion of synaptic vesicles with the presynaptic membrane to release neurotransmitter into the synaptic cleft?",
+      "Exocytosis",
+      "Outward cellular secretion",
+      "## Exocytosis at the Synapse\n- When calcium enters the axon terminal, it triggers synaptic vesicles to move to and fuse with the presynaptic membrane\n- The vesicle contents (neurotransmitter molecules) are then released into the synaptic cleft\n- This is a specific instance of exocytosis, the general cellular process of secreting material by vesicle fusion with the plasma membrane\n- The speed of this process is essential for rapid neural communication",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

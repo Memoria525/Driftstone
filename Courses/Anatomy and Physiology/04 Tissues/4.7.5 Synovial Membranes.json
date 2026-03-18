@@ -1,0 +1,304 @@
+{
+  "cards": {
+    "01.04.07.05.001sa": [
+      "What three types of structures are lined by synovial membranes?",
+      "Cavities of synovial joints, tendon sheaths, and bursae",
+      "Areas that need friction reduction",
+      "## Synovial Membrane Locations\n\n- **Synovial joint cavities**: freely movable joints like the knee, shoulder, hip, and elbow\n- **Tendon sheaths**: surround certain tendons to reduce friction during movement\n- **Bursae**: fluid-filled sacs that cushion areas of friction between tissues\n\nAll three locations share a common theme: they are sites where structures move against each other and need friction reduction.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.002sa": [
+      "What type of joint is associated with synovial membranes?",
+      "Freely movable (synovial) joints",
+      "Think range of motion",
+      "## Synovial Joints\n\n- Synovial joints are the most mobile joint type in the body\n- Examples: knee, shoulder, hip, elbow\n- The synovial membrane lines the inner surface of the joint capsule\n- It does **not** cover the articular cartilage surfaces themselves",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.003sa": [
+      "What are bursae?",
+      "Sacs lined by synovial membrane that cushion areas of friction",
+      "Friction-reducing cushions",
+      "## Bursae\n\n- Found where tendons, muscles, or skin rub against bone\n- Lined by synovial membrane and filled with synovial fluid\n- Reduce friction and absorb mechanical stress\n- Inflammation of a bursa is called **bursitis**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.004sa": [
+      "How do synovial membranes differ from the other three tissue membrane types in terms of tissue composition?",
+      "Synovial membranes lack an epithelial layer and are composed entirely of connective tissue",
+      "Missing a layer",
+      "## The Synovial Exception\n\n- The general rule: tissue membranes = epithelial layer + connective tissue layer\n- **Mucous, serous, and cutaneous** membranes all follow this pattern\n- Synovial membranes break the rule: connective tissue only, no epithelium\n- Instead of epithelium, the inner surface is lined by specialized **synoviocytes**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.005sa": [
+      "Which tissue membrane type is the exception to the rule that membranes consist of epithelium supported by connective tissue?",
+      "Synovial membranes",
+      "Found in joints",
+      "## Membrane Composition Rule and Exception\n\n- **Rule**: tissue membranes have an epithelial layer on a connective tissue layer\n- **Mucous membranes**: epithelium + lamina propria\n- **Serous membranes**: mesothelium + connective tissue\n- **Cutaneous membrane**: epidermis (epithelium) + dermis (connective tissue)\n- **Synovial membranes**: connective tissue only, no epithelial component",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.006sa": [
+      "What are the specialized cells that line the inner surface of the synovial membrane called?",
+      "Synoviocytes",
+      "Named for their location",
+      "## Synoviocytes\n\n- Two types: **type A** and **type B**\n- Type A: macrophage-like, remove debris\n- Type B: fibroblast-like, secrete synovial fluid components\n- These cells take the place of the epithelial lining found in other membrane types",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.007sa": [
+      "What specialized cells line the inner surface of the synovial membrane and come in macrophage-like and fibroblast-like varieties?",
+      "Synoviocytes (type A and type B)",
+      "Two types, one name",
+      "## Synoviocyte Types\n\n1. **Type A synoviocytes**: macrophage-like\n   - Phagocytic function\n   - Remove debris and waste from the joint cavity\n2. **Type B synoviocytes**: fibroblast-like\n   - Secretory function\n   - Produce the key components of synovial fluid\n   - Primarily responsible for hyaluronic acid secretion",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.008sa": [
+      "What is the function of type A synoviocytes in the synovial membrane?",
+      "They are macrophage-like cells that remove debris from the joint cavity",
+      "Cleanup crew",
+      "## Type A Synoviocytes\n\n- Derived from monocyte/macrophage lineage\n- Phagocytic: engulf and digest cellular debris, microorganisms, and waste\n- Help maintain a clean joint environment\n- Contrast with **type B**, which are secretory rather than phagocytic",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.009sa": [
+      "What is the function of type B synoviocytes in the synovial membrane?",
+      "They are fibroblast-like cells that secrete the key components of synovial fluid",
+      "Fluid producers",
+      "## Type B Synoviocytes\n\n- Fibroblast-like in origin and behavior\n- Primary secretory product: **hyaluronic acid**\n- Hyaluronic acid is responsible for the viscosity and lubricating properties of synovial fluid\n- Work alongside plasma filtration from capillaries to produce the full complement of synovial fluid",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.010sa": [
+      "Which type of synoviocyte (A or B) is macrophage-like and which is fibroblast-like?",
+      "Type A is macrophage-like; type B is fibroblast-like",
+      "A for attack, B for build",
+      "## Synoviocyte Comparison\n\n| Feature | Type A | Type B |\n|---|---|---|\n| Resembles | Macrophage | Fibroblast |\n| Function | Phagocytosis/debris removal | Secretion of synovial fluid components |\n| Key role | Immune/cleanup | Lubrication/nutrition |",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.011sa": [
+      "Describe the physical characteristics of synovial fluid.",
+      "Viscous, clear or pale yellow fluid",
+      "Think egg white",
+      "## Synovial Fluid Appearance\n\n- **Viscous**: thick, gel-like consistency due to hyaluronic acid\n- **Color**: clear to pale yellow in healthy joints\n- Changes in color, clarity, or viscosity can indicate pathology:\n  - Cloudy or turbid: infection or inflammation\n  - Bloody: trauma\n  - Reduced viscosity: inflammatory conditions that degrade hyaluronic acid",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.012sa": [
+      "What two processes contribute to the production of synovial fluid?",
+      "Filtration of blood plasma from capillaries in the synovial membrane and secretion of hyaluronic acid by type B synoviocytes",
+      "Filter plus secrete",
+      "## Synovial Fluid Production\n\n1. **Plasma filtration**: blood plasma filters across capillary walls in the synovial membrane into the joint cavity, providing water, electrolytes, and small proteins\n2. **Hyaluronic acid secretion**: type B synoviocytes actively secrete hyaluronic acid into the filtrate\n\nThe combination of filtered plasma + hyaluronic acid = synovial fluid with its unique viscous, lubricating properties.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.013sa": [
+      "What molecule gives synovial fluid its characteristic viscosity and lubricating properties?",
+      "Hyaluronic acid",
+      "A glycosaminoglycan",
+      "## Hyaluronic Acid in Synovial Fluid\n\n- A large glycosaminoglycan (GAG) molecule\n- Secreted by **type B synoviocytes**\n- Binds water extensively, creating a thick, viscous solution\n- Responsible for the lubricating quality that reduces joint friction\n- Clinically relevant: hyaluronic acid injections (viscosupplementation) are used to treat osteoarthritis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.014sa": [
+      "In the context of synovial joints, what molecule is secreted by type B synoviocytes and is responsible for fluid viscosity?",
+      "Hyaluronic acid",
+      "A GAG in the joint",
+      "## Hyaluronic Acid Source\n\n- Produced specifically by **type B (fibroblast-like) synoviocytes**\n- Not produced by type A synoviocytes (those handle debris removal)\n- Hyaluronic acid is also a major component of the extracellular matrix in many other tissues\n- In the joint, its role is primarily to create viscosity for lubrication and shock absorption",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.015sa": [
+      "What are the two critical functions of synovial fluid?",
+      "Lubrication and nutrition",
+      "Smooth movement plus feeding",
+      "## Two Functions of Synovial Fluid\n\n1. **Lubrication**\n   - Reduces friction between articular cartilage surfaces to near zero\n   - Allows smooth, painless joint movement\n2. **Nutrition**\n   - Delivers nutrients and oxygen to articular cartilage\n   - Articular cartilage is **avascular** and depends entirely on diffusion from synovial fluid\n   - Joint movement is required to circulate the fluid and promote diffusion",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.016sa": [
+      "Why is articular cartilage dependent on synovial fluid for its metabolic needs?",
+      "Because articular cartilage is avascular and relies entirely on diffusion from synovial fluid for nutrients and oxygen",
+      "No blood vessels",
+      "## Cartilage Nutrition\n\n- Articular cartilage has **no blood supply** (avascular)\n- Cannot receive nutrients or oxygen directly from the bloodstream\n- Synovial fluid acts as the delivery medium via diffusion\n- This makes synovial fluid essential for cartilage survival and health",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.017sa": [
+      "Why can prolonged joint immobilization be harmful to articular cartilage?",
+      "Because joint movement is needed to circulate synovial fluid and promote diffusion of nutrients into the avascular cartilage",
+      "Stillness starves",
+      "## Movement and Cartilage Health\n\n- Synovial fluid delivers nutrients to cartilage by **diffusion**\n- Diffusion is enhanced by the mechanical action of joint movement\n- Movement compresses and releases the cartilage, pumping fluid in and out\n- Without movement:\n  - Synovial fluid stagnates\n  - Nutrient delivery to cartilage decreases\n  - Cartilage can degrade over time\n- This is why rehabilitation emphasizes early, gentle joint movement after injury",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.018sa": [
+      "How effectively does synovial fluid reduce friction between articular cartilage surfaces?",
+      "It reduces friction to near zero",
+      "Almost frictionless",
+      "## Synovial Lubrication Efficiency\n\n- Synovial fluid is one of the most effective lubricants known\n- Reduces the coefficient of friction between cartilage surfaces to **near zero**\n- This is more effective than most engineered lubricants\n- The combination of hyaluronic acid viscosity and the smooth articular cartilage surface creates this efficiency\n- Loss of this lubrication (from cartilage damage or fluid changes) leads to pain and joint degeneration",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.019sa": [
+      "What is the term for inflammation of the synovial membrane?",
+      "Synovitis",
+      "Membrane name plus -itis",
+      "## Synovitis\n\n- Inflammation specifically of the **synovial membrane**\n- Can be caused by:\n  - Autoimmune attack (rheumatoid arthritis)\n  - Infection (septic arthritis)\n  - Trauma\n  - Crystal deposition (gout)\n- Results in membrane thickening, excess fluid production, pain, and swelling",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.020sa": [
+      "What condition is defined as inflammation of the synovial membrane and is a central feature of rheumatoid arthritis?",
+      "Synovitis",
+      "Joint lining inflamed",
+      "## Synovitis in Rheumatoid Arthritis\n\n- In RA, the **immune system attacks the synovial membrane**\n- This autoimmune synovitis leads to:\n  1. Thickening of the synovial membrane\n  2. Excess synovial fluid production (joint effusion)\n  3. Erosion of articular cartilage\n  4. Erosion of underlying bone\n- Progressive and destructive if untreated",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.021sa": [
+      "In rheumatoid arthritis, what happens to the synovial membrane when the immune system attacks it?",
+      "It thickens, produces excess fluid, and eventually erodes the articular cartilage and underlying bone",
+      "Thicken, flood, destroy",
+      "## Rheumatoid Arthritis Progression\n\n1. **Immune attack** targets the synovial membrane\n2. **Membrane thickens** (synovial hyperplasia/pannus formation)\n3. **Excess fluid** accumulates in the joint cavity (effusion)\n4. **Cartilage erosion** from inflammatory enzymes and pannus invasion\n5. **Bone erosion** as destruction extends deeper\n\nThis sequence demonstrates how dysfunction of a single membrane type can lead to progressive joint destruction.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.022sa": [
+      "What autoimmune disease features the immune system attacking the synovial membrane, leading to progressive joint destruction?",
+      "Rheumatoid arthritis",
+      "Systemic joint autoimmunity",
+      "## Rheumatoid Arthritis\n\n- An **autoimmune** disease (the body attacks its own tissues)\n- Specifically targets **synovial membranes**\n- Typically affects joints symmetrically (both hands, both knees, etc.)\n- Distinguished from **osteoarthritis**, which is mechanical wear-and-tear rather than autoimmune\n- Synovitis is the defining tissue-level feature",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.023sa": [
+      "What is the only tissue membrane type composed entirely of connective tissue with no epithelial component?",
+      "Synovial membrane",
+      "Lines joint cavities",
+      "## Synovial Membrane Composition\n\n- All other tissue membranes follow the epithelium + connective tissue pattern:\n  - Mucous: epithelium + lamina propria\n  - Serous: mesothelium + connective tissue\n  - Cutaneous: epidermis + dermis\n- Synovial membranes: **connective tissue only**\n- The inner lining consists of synoviocytes, which are connective tissue cells, not epithelial cells",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.024sa": [
+      "What component of synovial fluid is derived from filtration of blood plasma through capillaries in the synovial membrane?",
+      "The water, electrolyte, and small protein base of the fluid (the plasma filtrate)",
+      "What blood vessels leak",
+      "## Plasma Filtration in Synovial Fluid\n\n- Capillaries in the synovial membrane are fenestrated (have small pores)\n- Plasma filtrate provides:\n  - Water\n  - Dissolved electrolytes\n  - Small proteins (including glucose and other nutrients)\n- This filtrate alone would be thin and watery\n- **Hyaluronic acid** from type B synoviocytes is then added to create the viscous final product",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.025sa": [
+      "What is the nutritive function of synovial fluid specifically directed toward?",
+      "Articular cartilage",
+      "Avascular joint surface",
+      "## Synovial Fluid and Cartilage Nutrition\n\n- Articular cartilage caps the bone ends within synovial joints\n- It is **avascular, aneural, and alymphatic**\n- Entirely dependent on synovial fluid for:\n  - Oxygen delivery\n  - Nutrient delivery (glucose, amino acids)\n  - Waste removal\n- This dependency makes cartilage uniquely vulnerable to disruptions in synovial fluid production or circulation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.026sa": [
+      "In the context of tissue membranes, what structures are synovial membrane-lined sacs that cushion areas of friction called?",
+      "Bursae",
+      "Latin for purse",
+      "## Bursae\n\n- Small, fluid-filled sacs lined by synovial membrane\n- Located at sites of **friction** between:\n  - Tendons and bone\n  - Muscles and bone\n  - Skin and bone\n- Contain a small amount of synovial fluid\n- Reduce friction and absorb shock during movement\n- Common locations: shoulder, elbow, knee, hip",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.027sa": [
+      "Name the four tissue membrane types.",
+      "Mucous, serous, cutaneous, and synovial",
+      "Wet, slippery, skin, joint",
+      "## Four Tissue Membrane Types\n\n1. **Mucous membranes**: line body cavities open to the exterior (respiratory, digestive, urinary, reproductive tracts)\n2. **Serous membranes**: line closed body cavities (pleural, pericardial, peritoneal)\n3. **Cutaneous membrane**: the skin\n4. **Synovial membranes**: line joint cavities, tendon sheaths, and bursae\n\nOf these four, only synovial membranes lack an epithelial layer.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.028sa": [
+      "Of the four tissue membrane types, which three contain an epithelial layer?",
+      "Mucous, serous, and cutaneous membranes",
+      "All except the joint one",
+      "## Epithelial Membranes vs. Synovial\n\n- **Mucous**: epithelium varies by location (stratified squamous, pseudostratified columnar, etc.)\n- **Serous**: simple squamous epithelium (mesothelium)\n- **Cutaneous**: keratinized stratified squamous epithelium\n- **Synovial**: no epithelium at all, connective tissue only\n\nThe first three are sometimes grouped together as **epithelial membranes** to distinguish them from the synovial exception.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.029sa": [
+      "What is the term for the synovial membrane-lined sheaths that surround certain tendons?",
+      "Tendon sheaths",
+      "Tube around a cord",
+      "## Tendon Sheaths\n\n- Tubular structures that wrap around tendons where they pass through tight spaces\n- Lined by **synovial membrane** and filled with synovial fluid\n- Reduce friction as the tendon slides back and forth during movement\n- Common locations: wrist and hand tendons, ankle tendons\n- Inflammation of a tendon sheath is called **tenosynovitis**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.05.030sa": [
+      "How does the lubrication function of synovial fluid support painless joint movement?",
+      "It reduces friction between articular cartilage surfaces to near zero, allowing smooth movement",
+      "Near-zero resistance",
+      "## Lubrication and Joint Function\n\n- Articular cartilage surfaces are already very smooth\n- Synovial fluid creates a thin lubricating film between them\n- The combination reduces friction to **near zero**\n- Without adequate lubrication:\n  - Cartilage surfaces grind against each other\n  - Cartilage wears down (degeneration)\n  - Pain, stiffness, and loss of function result\n- This is the mechanical basis of osteoarthritis progression",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

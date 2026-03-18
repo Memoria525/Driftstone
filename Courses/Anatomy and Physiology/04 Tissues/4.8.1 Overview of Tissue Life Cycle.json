@@ -1,0 +1,304 @@
+{
+  "cards": {
+    "01.04.08.01.001sa": [
+      "True or false: Tissues are static structures that remain unchanged after initial development.",
+      "False. Tissues are in a constant state of flux, growing, maintaining, repairing, and declining throughout life.",
+      "Think dynamically",
+      "## Tissue Dynamism\n\n- Tissues are **never** static\n- They continuously:\n  1. Grow during development\n  2. Maintain themselves through ongoing cell replacement\n  3. Repair damage after injury\n  4. Gradually decline with age\n- This constant turnover is fundamental to tissue homeostasis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.002sa": [
+      "Name the four ongoing processes that keep tissues in a constant state of flux throughout life.",
+      "Growth during development, maintenance through cell replacement, repair after injury, and gradual decline with aging.",
+      "Birth to death trajectory",
+      "## The Four Tissue Processes\n\n1. **Growth** during development\n2. **Maintenance** through ongoing cell replacement\n3. **Repair** after injury\n4. **Decline** with aging\n\n- These processes overlap and occur simultaneously\n- The balance between them shifts across the lifespan\n- In youth, growth and repair dominate; in old age, decline outpaces renewal",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.003sa": [
+      "What four cellular processes play out at the tissue level to determine whether a tissue is growing, stable, shrinking, healing, or aging?",
+      "Mitosis, growth, differentiation, and apoptosis.",
+      "Cell lifecycle events",
+      "## Cellular Processes at the Tissue Level\n\n1. **Mitosis** - cell division, adds new cells\n2. **Growth** - increase in cell size\n3. **Differentiation** - cells become specialized\n4. **Apoptosis** - programmed cell death, removes old/damaged cells\n\n- The balance among these four processes determines the net state of the tissue\n- If mitosis outpaces apoptosis, the tissue grows\n- If apoptosis outpaces mitosis, the tissue shrinks\n- A stable tissue has these processes in equilibrium",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.004sa": [
+      "The dynamic nature of tissues directly reflects the dynamic nature of what?",
+      "The cells they are composed of.",
+      "Zoom in one level",
+      "## Cells Drive Tissue Behavior\n\n- Tissue-level changes are the aggregate result of what individual cells are doing\n- Cellular events (mitosis, differentiation, apoptosis) scale up to produce tissue-level outcomes\n- A tissue that is healing is one in which its cells are actively dividing and differentiating\n- A tissue that is aging reflects accumulated cellular damage and declining cellular function",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.005sa": [
+      "What single cellular property most fundamentally determines a tissue's capacity to grow, repair, and renew itself?",
+      "The mitotic activity of its cells.",
+      "Division capability",
+      "## Mitotic Activity as the Key Determinant\n\n- Tissues with high mitotic rates can replace damaged or lost cells quickly\n- Tissues with low or absent mitotic activity cannot effectively regenerate\n- This is why skin heals readily but heart muscle does not\n- Mitotic capacity is the rate-limiting factor in tissue repair and renewal",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.006sa": [
+      "What type of tissue is given as an example of one that can repair itself quickly due to rapidly dividing cells?",
+      "Epithelial tissue.",
+      "Covers and lines surfaces",
+      "## Epithelial Tissue and Rapid Repair\n\n- Epithelial cells divide frequently, giving this tissue a high turnover rate\n- The gut lining replaces itself roughly every 3-5 days\n- Skin epithelium continuously produces new cells from its basal layer\n- This high mitotic rate is an adaptation to the constant wear and abrasion these surfaces endure",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.007sa": [
+      "Name two tissue types given as examples of tissues with very limited repair capacity because their cells rarely or never divide.",
+      "Cardiac muscle tissue and nervous tissue in the CNS.",
+      "Heart and brain",
+      "## Limited Repair Tissues\n\n- **Cardiac muscle**: Cardiac myocytes are largely post-mitotic after birth\n  - Damage from a heart attack results in scar tissue, not new muscle\n- **CNS nervous tissue**: Most mature neurons do not divide\n  - Spinal cord injuries and brain damage are often permanent\n- Both tissues rely on their original cell populations for a lifetime\n- This is why heart attacks and strokes cause lasting functional deficits",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.008sa": [
+      "Why does epithelial tissue repair itself more readily than cardiac muscle tissue?",
+      "Epithelial cells divide rapidly and frequently, while cardiac muscle cells rarely or never divide.",
+      "Compare mitotic rates",
+      "## Repair Capacity Comparison\n\n- **Epithelial tissue**:\n  - High mitotic rate\n  - Continuous cell replacement\n  - Quick wound closure\n- **Cardiac muscle**:\n  - Cells are essentially post-mitotic\n  - Cannot regenerate lost muscle fibers\n  - Damaged areas replaced by scar tissue (fibrosis)\n- The difference comes down entirely to the mitotic activity of the component cells",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.009sa": [
+      "A tissue whose cells rarely or never divide would have what kind of repair capacity?",
+      "Very limited repair capacity.",
+      "Low division, low ___",
+      "## Low Mitotic Activity = Poor Repair\n\n- Without the ability to produce new cells, a tissue cannot replace what is lost\n- Damage in these tissues is typically repaired by **fibrosis** (scar tissue formation) rather than **regeneration**\n- Examples: cardiac muscle, CNS neurons\n- This principle is central to understanding why certain injuries are permanent",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.010sa": [
+      "What is the programmed cell death process that, along with mitosis, growth, and differentiation, determines the state of a tissue?",
+      "Apoptosis.",
+      "Orderly cellular suicide",
+      "## Apoptosis at the Tissue Level\n\n- Apoptosis is genetically programmed, orderly cell death\n- It removes old, damaged, or unnecessary cells\n- Works in balance with mitosis to maintain tissue homeostasis\n- Excessive apoptosis leads to tissue shrinkage (atrophy)\n- Insufficient apoptosis can contribute to abnormal growths",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.011sa": [
+      "If mitosis in a tissue outpaces apoptosis, what is the net result for that tissue?",
+      "The tissue grows (increases in size or cell number).",
+      "More made than lost",
+      "## Mitosis-Apoptosis Balance\n\n- **Mitosis > apoptosis** = tissue growth\n- **Mitosis = apoptosis** = tissue stability/maintenance\n- **Mitosis < apoptosis** = tissue shrinkage\n- This balance is the fundamental equation governing tissue size and health\n- Disruptions to this balance underlie conditions from atrophy to cancer",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.012sa": [
+      "List the five possible states a tissue may be in, as determined by the balance of cellular processes occurring within it.",
+      "Growing, stable, shrinking, healing, or aging.",
+      "Five tissue conditions",
+      "## Five Tissue States\n\n1. **Growing** - mitosis and growth outpace apoptosis\n2. **Stable** - cell production and cell loss are balanced\n3. **Shrinking** - apoptosis or cell loss exceeds replacement\n4. **Healing** - active repair after injury\n5. **Aging** - gradual functional decline over time\n\n- A given tissue can shift between these states depending on the body's circumstances\n- Multiple tissues in the body may be in different states simultaneously",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.013sa": [
+      "Why do some injuries heal completely while others leave permanent damage?",
+      "Because tissues with high mitotic activity can regenerate lost cells, while tissues whose cells rarely or never divide cannot, leaving permanent deficits.",
+      "Depends on cell division",
+      "## Complete vs. Permanent Injury\n\n- **Complete healing** occurs when the damaged tissue can replace lost cells through mitosis\n  - Example: a skin cut heals with minimal scarring\n- **Permanent damage** occurs when the tissue's cells cannot divide to replace what was lost\n  - Example: heart attack destroys cardiac muscle that is replaced by non-functional scar tissue\n- The tissue's inherent mitotic capacity is the deciding factor",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.014sa": [
+      "In the context of tissue dynamics, what does the term 'maintenance' refer to?",
+      "The ongoing replacement of cells to keep the tissue functional and stable over time.",
+      "Routine cell turnover",
+      "## Tissue Maintenance\n\n- Maintenance is the steady-state turnover of cells in a tissue\n- Old or worn cells are removed by apoptosis and replaced by new cells via mitosis\n- This process keeps tissues functional without net growth or shrinkage\n- Tissues exposed to heavy wear (skin, gut lining) have especially high maintenance turnover rates",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.015sa": [
+      "What response initiates the tissue repair process after injury?",
+      "The inflammatory response.",
+      "Redness, heat, swelling",
+      "## Inflammation and Repair\n\n- Inflammation is the body's immediate response to tissue injury\n- It is the **first step** in the repair process\n- Key events include:\n  1. Increased blood flow to the area\n  2. Delivery of immune cells to clear debris and pathogens\n  3. Release of chemical signals that activate repair mechanisms\n- Without inflammation, tissue repair cannot proceed normally",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.016sa": [
+      "What process initiates tissue repair after injury: apoptosis, the inflammatory response, or differentiation?",
+      "The inflammatory response.",
+      "Body's alarm system",
+      "## Why Inflammation Comes First\n\n- Inflammation clears the damaged area of debris, dead cells, and pathogens\n- It recruits immune cells and growth factors necessary for repair\n- Apoptosis removes individual cells in an orderly way but does not initiate repair\n- Differentiation produces specialized cells but occurs later in the repair timeline\n- Inflammation sets the stage for everything that follows in healing",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.017sa": [
+      "Why does the body gradually lose function over a lifetime?",
+      "Because of changes that accumulate in tissues with aging, including declining cellular function, reduced mitotic activity, and accumulated damage.",
+      "Cumulative tissue decline",
+      "## Aging and Tissue Decline\n\n- Aging tissues show:\n  1. Reduced mitotic activity and slower cell replacement\n  2. Accumulated cellular damage (DNA mutations, protein damage)\n  3. Declining function of existing cells\n  4. Changes in the extracellular matrix (e.g., loss of collagen elasticity)\n- These changes are gradual and cumulative\n- The result is progressive loss of tissue and organ function over time",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.018sa": [
+      "What term describes the cell division process that is the fundamental basis for tissue growth and repair?",
+      "Mitosis.",
+      "Nuclear division producing identical daughters",
+      "## Mitosis in Tissue Context\n\n- Mitosis produces two genetically identical daughter cells\n- It is the mechanism by which tissues:\n  - Grow during development\n  - Replace worn-out cells during maintenance\n  - Regenerate lost cells during repair\n- The rate of mitosis varies dramatically between tissue types\n- This variation explains differences in healing capacity across tissues",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.019sa": [
+      "The process by which cells become specialized for specific functions is called ___________. This process is one of the four cellular events that determine tissue state.",
+      "Differentiation.",
+      "From general to specialized",
+      "## Differentiation at the Tissue Level\n\n- Differentiation transforms unspecialized cells into specialized, functional cell types\n- At the tissue level, it ensures that newly produced cells acquire the correct identity\n- Without differentiation, mitosis would produce cells that cannot perform the tissue's function\n- The sequence is: stem/progenitor cell → mitosis → differentiation → functional tissue cell",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.020sa": [
+      "In a stable, homeostatic tissue, what is the relationship between the rate of new cell production and the rate of cell loss?",
+      "They are balanced (equal). New cell production matches cell loss.",
+      "Equilibrium state",
+      "## Tissue Homeostasis\n\n- A stable tissue is in dynamic equilibrium\n- Cells are constantly being produced and lost, but the rates are matched\n- This is not a static state; it requires continuous, active regulation\n- Disruption of this balance leads to:\n  - Growth or tumor formation (if production exceeds loss)\n  - Atrophy (if loss exceeds production)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.021sa": [
+      "A tissue composed of rapidly dividing cells would be expected to have what kind of repair capacity?",
+      "High (or rapid) repair capacity.",
+      "Fast division, fast ___",
+      "## High Mitotic Rate = Strong Repair\n\n- Rapidly dividing cells can quickly replace those lost to injury\n- This allows the tissue to regenerate rather than just form scar tissue\n- Epithelial tissue and blood-forming tissue are prime examples\n- These tissues can often restore both structure and function after damage",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.022sa": [
+      "What are the four major topics covered in the study of tissue growth, repair, and aging?",
+      "Types of tissue growth, mechanisms of tissue repair, the inflammatory response, and changes that accumulate with aging.",
+      "Growth, fix, inflame, age",
+      "## Four Pillars of Tissue Dynamics\n\n1. **Types of tissue growth** - how tissues increase in size (hypertrophy, hyperplasia)\n2. **Mechanisms of tissue repair** - how damaged tissue is restored\n3. **The inflammatory response** - the process that initiates and supports repair\n4. **Aging changes** - the cumulative decline in tissue structure and function over time\n\n- Together, these topics explain the full lifecycle of tissue from development through decline",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.023sa": [
+      "Nervous tissue in the CNS has very limited repair capacity. What property of its cells explains this?",
+      "CNS neurons rarely or never divide (they are largely post-mitotic).",
+      "They don't undergo mitosis",
+      "## CNS Neurons and Repair\n\n- Most mature CNS neurons have permanently exited the cell cycle\n- They cannot be replaced through mitosis if lost to injury or disease\n- This is why spinal cord injuries and stroke damage tend to be permanent\n- The CNS relies on its original population of neurons for life\n- Some limited neurogenesis has been identified in specific brain regions, but it is insufficient for meaningful repair after major injury",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.024sa": [
+      "Fill in the blank: The capacity of a tissue to renew itself depends fundamentally on the ___________ of its cells.",
+      "Mitotic activity.",
+      "How often cells divide",
+      "## Mitotic Activity as the Renewal Key\n\n- Mitotic activity = the rate and frequency at which a tissue's cells undergo cell division\n- High mitotic activity → rapid renewal and repair (e.g., epithelial tissue, bone marrow)\n- Low mitotic activity → slow or absent renewal (e.g., cardiac muscle, CNS neurons)\n- This single property is the most important predictor of a tissue's regenerative potential",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.025sa": [
+      "When cardiac muscle is damaged (as in a heart attack), why is the damage typically permanent?",
+      "Because cardiac muscle cells rarely or never divide, so lost muscle fibers cannot be replaced and are instead filled in with scar tissue.",
+      "Post-mitotic cells can't regenerate",
+      "## Cardiac Muscle and Permanent Damage\n\n- Cardiac myocytes are largely post-mitotic after birth\n- When destroyed (e.g., by ischemia during a heart attack), they cannot be replaced\n- The body fills the gap with **fibrotic scar tissue** (connective tissue)\n- Scar tissue provides structural integrity but **cannot contract**\n- This reduces the heart's pumping efficiency, potentially leading to heart failure\n- This is a direct clinical consequence of low mitotic activity in cardiac muscle",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.026sa": [
+      "Which has greater repair capacity: a tissue with high mitotic activity or a tissue with low mitotic activity?",
+      "A tissue with high mitotic activity.",
+      "More division, more restoration",
+      "## Mitotic Activity and Repair Capacity\n\n- **High mitotic activity** = cells divide frequently = lost cells can be replaced = strong repair\n- **Low mitotic activity** = cells divide rarely or not at all = lost cells cannot be replaced = weak repair\n- This relationship is direct and fundamental\n- It explains the clinical spectrum from easily healed skin wounds to permanent cardiac and neural damage",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.027sa": [
+      "Name three of the four cellular processes that, when occurring at the tissue level, determine whether a tissue is growing, stable, or shrinking.",
+      "Any three of: mitosis, growth, differentiation, apoptosis.",
+      "Cell lifecycle quartet",
+      "## Four Cellular Processes at Tissue Scale\n\n1. **Mitosis** - adds new cells\n2. **Growth** - increases cell size\n3. **Differentiation** - specializes cell function\n4. **Apoptosis** - removes cells in an orderly fashion\n\n- These four processes interact to produce the net tissue state\n- Their relative rates shift throughout life and in response to injury or disease",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.028sa": [
+      "What distinguishes tissue 'maintenance' from tissue 'repair'?",
+      "Maintenance is the routine, ongoing replacement of cells during normal function, while repair is the response to injury or damage.",
+      "Routine vs. emergency",
+      "## Maintenance vs. Repair\n\n- **Maintenance**:\n  - Continuous, baseline process\n  - Replaces cells lost to normal wear and aging\n  - Keeps the tissue functional under everyday conditions\n- **Repair**:\n  - Triggered by injury or damage\n  - Often involves the inflammatory response\n  - May restore original tissue (regeneration) or produce scar tissue (fibrosis)\n- Both depend on mitotic activity, but repair must also coordinate with immune and inflammatory processes",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.029sa": [
+      "Fill in the blank: Tissues composed of cells that rarely or never divide have very limited ___________ capacity.",
+      "Repair (or regenerative).",
+      "Can't fix what can't divide",
+      "## Limited Division = Limited Repair\n\n- Repair requires producing new cells to replace those that were lost\n- If a tissue's cells cannot divide, new cells cannot be produced\n- The damaged area is typically filled by scar tissue (fibrosis) instead of functional tissue\n- Key examples: cardiac muscle and CNS nervous tissue\n- This principle has major clinical implications for heart attacks, strokes, and spinal cord injuries",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.01.030sa": [
+      "In the context of tissues, what is the relationship between the inflammatory response and tissue repair?",
+      "The inflammatory response initiates and supports the tissue repair process; it is the first step that must occur before repair can proceed.",
+      "Inflammation comes first",
+      "## Inflammation as Repair Initiator\n\n- Inflammation is not just a symptom; it is a **necessary precursor** to repair\n- Sequence:\n  1. Tissue damage occurs\n  2. Inflammatory response is triggered\n  3. Inflammation clears debris, fights infection, and recruits repair cells\n  4. Repair processes (regeneration or fibrosis) follow\n- Suppressing inflammation can actually impair healing\n- However, excessive or chronic inflammation can also damage tissues further",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

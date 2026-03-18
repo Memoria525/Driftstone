@@ -1,0 +1,304 @@
+{
+  "cards": {
+    "01.05.03.01.001sa": [
+      "What layer of the skin lies immediately deep to the epidermis?",
+      "The dermis",
+      "Below the surface layer",
+      "## Skin Layer Order\n- The skin has two primary layers:\n  1. **Epidermis** - the superficial layer\n  2. **Dermis** - lies immediately deep to the epidermis\n- Below the dermis lies the **hypodermis** (subcutaneous layer), which is not considered a true layer of the skin\n- Understanding this order is fundamental to interpreting any skin-related anatomy",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.002sa": [
+      "What type of tissue composes the dermis?",
+      "Connective tissue",
+      "Not epithelial",
+      "## Dermis Tissue Type\n- The dermis is composed of **connective tissue**\n- This contrasts with the epidermis, which is composed of **epithelial tissue** (stratified squamous)\n- The connective tissue of the dermis includes:\n  - Collagen fibers\n  - Elastic fibers\n  - Ground substance\n  - Various cell types (fibroblasts, macrophages, mast cells)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.003sa": [
+      "List three general properties the dermis provides to the skin.",
+      "Structural strength, elasticity, toughness",
+      "Mechanical qualities",
+      "## Functional Properties of the Dermis\n- The dermis provides three key mechanical properties:\n  1. **Structural strength** - resists tearing and deformation\n  2. **Elasticity** - ability to stretch and recoil\n  3. **Toughness** - resistance to wear and damage\n- These properties arise primarily from the collagen and elastin fiber network within the dermis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.004sa": [
+      "What is the approximate thickness range of the dermis, and where on the body are the thinnest and thickest regions found?",
+      "~0.3 mm (eyelids) to ~4 mm (back)",
+      "Extremes of the body",
+      "## Dermal Thickness Variation\n- The dermis varies considerably in thickness across the body:\n  - **Thinnest:** ~0.3 mm over the eyelids\n  - **Thickest:** ~4 mm over the back\n- Thickness correlates with the mechanical demands placed on each region\n- For comparison, the epidermis is much thinner, typically 0.05-1.5 mm depending on location",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.005sa": [
+      "How does the vascularization of the dermis differ from that of the epidermis?",
+      "The dermis is richly vascularized; the epidermis is avascular",
+      "Blood vessels present or absent?",
+      "## Vascularization: Dermis vs. Epidermis\n- **Dermis:** richly vascularized with blood vessels and lymphatics\n- **Epidermis:** completely avascular (no blood vessels)\n- The epidermis relies on **diffusion** from dermal capillaries to receive nutrients and oxygen\n- This distinction is clinically important - superficial abrasions that stay within the epidermis do not bleed",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.006sa": [
+      "How does the innervation of the dermis differ from that of the epidermis?",
+      "The dermis is richly innervated; the epidermis is not",
+      "Nerve supply comparison",
+      "## Innervation: Dermis vs. Epidermis\n- **Dermis:** richly innervated with nerve fibers and sensory receptors\n- **Epidermis:** lacks significant innervation\n- Sensory receptors in the dermis detect touch, pressure, pain, and temperature\n- This is why deep cuts (reaching the dermis) are often more painful than superficial scrapes",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.007sa": [
+      "What term describes the epidermis with respect to its blood vessel supply?",
+      "Avascular",
+      "Lacking vessels",
+      "## Avascular Epidermis\n- **Avascular** means lacking blood vessels\n- The epidermis receives nutrients by **diffusion** from blood vessels in the dermis\n- This property has clinical implications:\n  - Superficial wounds that remain in the epidermis do not bleed\n  - Nutrient delivery to epidermal cells depends on a healthy dermis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.008sa": [
+      "Besides blood vessels, name three other structures found within the dermis that contribute to its vascular and neural functions.",
+      "Lymphatics, nerve fibers, sensory receptors",
+      "Drainage, signaling, and detection",
+      "## Dermis: Beyond Blood Vessels\n- In addition to blood vessels, the dermis contains:\n  1. **Lymphatic vessels** - drain interstitial fluid and support immune surveillance\n  2. **Nerve fibers** - transmit sensory and autonomic signals\n  3. **Sensory receptors** - detect stimuli such as touch, pressure, temperature, and pain\n- Together these structures make the dermis a highly active and responsive tissue layer",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.009sa": [
+      "List the accessory structures of the skin that are housed primarily within the dermis.",
+      "Hair follicles, sebaceous glands, sweat glands, arrector pili muscles",
+      "Skin's built-in structures",
+      "## Accessory Structures of the Dermis\n- The dermis houses most of the skin's **accessory structures**:\n  1. **Hair follicles** - produce hair shafts\n  2. **Sebaceous glands** - secrete sebum (oil)\n  3. **Sweat glands** - secrete sweat for thermoregulation\n  4. **Arrector pili muscles** - smooth muscle that causes hair to stand erect\n- Although these structures may extend into or originate from the epidermis, they are anchored and largely contained within the dermis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.010sa": [
+      "How many sublayers does the dermis have, and what are their names?",
+      "Two: the papillary layer and the reticular layer",
+      "Count and name them",
+      "## Dermal Sublayers\n- The dermis is divided into **two sublayers**:\n  1. **Papillary layer** - thin, superficial sublayer\n  2. **Reticular layer** - thick, deep sublayer\n- Each layer has distinct structural characteristics and functions covered in subsequent sections",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.011sa": [
+      "Which sublayer of the dermis is superficial, and which is deep?",
+      "The papillary layer is superficial; the reticular layer is deep",
+      "Surface vs. interior",
+      "## Dermal Layer Orientation\n- **Superficial (toward epidermis):** Papillary layer\n- **Deep (toward hypodermis):** Reticular layer\n- Mnemonic: **P** (Papillary) comes before **R** (Reticular) alphabetically, just as it does superficial to deep",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.012sa": [
+      "Which sublayer of the dermis is thicker: the papillary layer or the reticular layer?",
+      "The reticular layer",
+      "Thin vs. thick",
+      "## Relative Thickness of Dermal Layers\n- **Papillary layer:** thin, superficial\n- **Reticular layer:** thick, deep\n- The reticular layer makes up the bulk of the dermis\n- Its greater thickness corresponds to its role in providing the majority of the dermis's structural strength and housing most accessory structures",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.013sa": [
+      "What are the two primary structural proteins of the dermis?",
+      "Collagen and elastin",
+      "Strength and stretch",
+      "## Primary Structural Proteins of the Dermis\n- **Collagen** - the most abundant protein in the dermis; provides tensile strength\n- **Elastin** - present in smaller amounts; provides elasticity and recoil\n- Both are produced by **fibroblasts** and form an interwoven fiber network in the extracellular matrix\n- The balance between these proteins determines the mechanical behavior of skin under stress",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.014sa": [
+      "What mechanical property does collagen contribute to the dermis?",
+      "Tensile strength",
+      "Resists pulling forces",
+      "## Collagen and Tensile Strength\n- **Tensile strength** is the ability to resist being pulled apart or torn\n- Collagen fibers are arranged in bundles and are largely responsible for the skin's toughness\n- Collagen is the most abundant protein in the human body and in the dermis specifically\n- Decreased collagen (e.g., with aging or vitamin C deficiency) leads to weaker, more fragile skin",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.015sa": [
+      "What mechanical property does elastin contribute to the dermis?",
+      "Elasticity and recoil",
+      "Spring-like quality",
+      "## Elastin and Skin Recoil\n- **Elastin** allows the dermis to stretch and then **recoil** back to its original shape\n- This property is referred to as **elasticity**\n- Elastin fibers wrap around collagen bundles, working in combination with them\n- Loss of elastin (e.g., with aging or UV damage) results in skin that sags and does not return to shape - contributing to wrinkle formation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.016sa": [
+      "What term describes the ability of the dermis to return to its original shape after being deformed or stretched?",
+      "Elasticity (or recoil)",
+      "Snap-back property",
+      "## Elasticity Defined\n- **Elasticity** is the property that allows a tissue to return to its resting shape after deformation\n- In the dermis, this is provided primarily by **elastin fibers**\n- Clinically, reduced elasticity is seen in:\n  - Aging skin\n  - Chronic sun-damaged skin\n  - Conditions affecting connective tissue (e.g., Ehlers-Danlos syndrome)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.017sa": [
+      "What is the dominant cell type of the dermis?",
+      "Fibroblasts",
+      "Connective tissue producer",
+      "## Fibroblasts as the Dominant Dermal Cell\n- **Fibroblasts** are the primary cell type of the dermis\n- They are responsible for synthesizing and maintaining the extracellular matrix\n- Their dominance reflects the connective tissue nature of the dermis\n- Other cell types present (macrophages, mast cells, WBCs) are less numerous but serve critical immune functions",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.018sa": [
+      "List the three functions of fibroblasts in the dermis.",
+      "Produce and maintain collagen, elastic fibers, and ground substance",
+      "ECM maintenance trio",
+      "## Fibroblast Functions in the Dermis\n- Fibroblasts are responsible for producing and maintaining three key extracellular matrix components:\n  1. **Collagen** - provides tensile strength\n  2. **Elastic fibers** - provide elasticity and recoil\n  3. **Ground substance** - the gel-like matrix that fills the space between fibers and cells\n- Together these components form the structural scaffolding of the dermis\n- Fibroblasts are activated during wound healing to regenerate damaged matrix",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.019sa": [
+      "Name three immune-related cell types found in the dermis.",
+      "Macrophages, mast cells, and wandering white blood cells (WBCs)",
+      "Defenders of the skin",
+      "## Immune Cells of the Dermis\n- Three key immune cell types reside in the dermis:\n  1. **Macrophages** - phagocytize pathogens and debris; present antigens\n  2. **Mast cells** - release histamine and other mediators during allergic and inflammatory responses\n  3. **Wandering WBCs** - include various leukocytes that migrate into the dermis in response to infection or injury\n- These cells provide the dermis with a frontline immune defense capability",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.020sa": [
+      "What role do macrophages, mast cells, and wandering WBCs collectively play in the dermis?",
+      "Immune defense",
+      "Protection function",
+      "## Immune Defense in the Dermis\n- The dermis serves as an active **immune barrier**\n- Key immune roles by cell type:\n  - **Macrophages:** phagocytosis of pathogens and cellular debris; antigen presentation\n  - **Mast cells:** trigger inflammatory and allergic responses via histamine release\n  - **Wandering WBCs:** respond dynamically to infection or injury\n- This immune capacity is critical given that the dermis lies just beneath the skin's outermost physical barrier",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.021sa": [
+      "The blood vessels of the dermis provide nourishment to which two tissue layers of the skin?",
+      "The dermis and the epidermis",
+      "Two layers, one supply",
+      "## Dermal Blood Supply Serves Two Layers\n- Dermal blood vessels nourish both:\n  1. **The dermis itself** - supplying its cells and structures directly\n  2. **The epidermis** - which is avascular and depends on diffusion from dermal capillaries\n- This dependency means that damage to the dermis can compromise epidermal cell viability",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.022sa": [
+      "Which structural protein found in the dermis is primarily responsible for tensile strength?",
+      "Collagen",
+      "Most abundant skin protein",
+      "## Collagen and Tensile Strength\n- **Collagen** is the primary protein responsible for tensile strength in the dermis\n- It is the most abundant protein in the dermis and in the body overall\n- Collagen fibers are organized into bundles that resist stretching and tearing\n- Multiple types of collagen exist; Type I is most common in the dermis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.023sa": [
+      "Which structural protein found in the dermis is primarily responsible for elasticity and recoil?",
+      "Elastin",
+      "Snap-back fiber",
+      "## Elastin and Skin Elasticity\n- **Elastin** is the primary protein responsible for elasticity and recoil in the dermis\n- Elastin fibers can be stretched to several times their resting length and will return to their original shape\n- They are present in smaller quantities than collagen but are functionally critical\n- Elastin production decreases with age, contributing to skin laxity and wrinkling",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.024sa": [
+      "Fibroblasts in the dermis produce and maintain which three components of the extracellular matrix?",
+      "Collagen, elastic fibers, and ground substance",
+      "The matrix trio",
+      "## Extracellular Matrix Components Produced by Fibroblasts\n- Fibroblasts synthesize and maintain:\n  1. **Collagen** - fibrous protein for tensile strength\n  2. **Elastic fibers** - fibrous protein for elasticity\n  3. **Ground substance** - amorphous gel composed of water, proteoglycans, and glycoproteins that fills the space between fibers\n- Ground substance plays a role in nutrient diffusion, hydration, and resistance to compression",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.025sa": [
+      "Which layer of the skin is richly vascularized: the epidermis or the dermis?",
+      "The dermis",
+      "Where the blood flows",
+      "## Vascular Comparison\n- **Dermis:** richly vascularized\n- **Epidermis:** avascular\n- The dermis contains a dense network of capillaries, arterioles, and venules\n- These vessels regulate skin perfusion, contribute to thermoregulation, and supply the avascular epidermis by diffusion",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.026sa": [
+      "Which layer of the skin is richly innervated: the epidermis or the dermis?",
+      "The dermis",
+      "Where nerves reside",
+      "## Innervation Comparison\n- **Dermis:** richly innervated with nerve fibers and sensory receptors\n- **Epidermis:** lacks significant innervation\n- The dermis contains both **sensory nerve fibers** (afferent) and **autonomic nerve fibers** (efferent, controlling glands and arrector pili)\n- Sensory receptors within the dermis detect touch, pressure, pain, vibration, and temperature",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.027sa": [
+      "What is the function of the sensory receptors located within the dermis?",
+      "To detect stimuli such as touch, pressure, pain, and temperature",
+      "Responding to the environment",
+      "## Sensory Receptors in the Dermis\n- Sensory receptors in the dermis detect various stimuli from the external environment:\n  - **Mechanoreceptors:** touch, pressure, vibration\n  - **Nociceptors:** pain\n  - **Thermoreceptors:** temperature\n- Signals are transmitted via nerve fibers to the central nervous system\n- Different receptor types vary in depth within the dermis and sensitivity to stimulus type",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.028sa": [
+      "What is the name of the thin, superficial sublayer of the dermis?",
+      "The papillary layer",
+      "Fingerprint-related layer",
+      "## The Papillary Layer\n- The **papillary layer** is the thin, superficial sublayer of the dermis\n- It lies directly beneath the epidermis\n- Named for the **dermal papillae** - finger-like projections that interdigitate with the epidermis\n- These projections increase surface area for nutrient exchange and create the friction ridges seen as fingerprints",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.029sa": [
+      "What is the name of the thick, deep sublayer of the dermis?",
+      "The reticular layer",
+      "Dense and deep",
+      "## The Reticular Layer\n- The **reticular layer** is the thick, deep sublayer of the dermis\n- It makes up the bulk of the dermis\n- Contains densely interwoven collagen and elastic fibers arranged in a net-like pattern (hence 'reticular')\n- Houses most of the dermis's accessory structures: hair follicles, sebaceous glands, and sweat glands",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.01.030sa": [
+      "In addition to blood vessels, what body system does the dermis contribute to through its lymphatic vessels?",
+      "The lymphatic system",
+      "Fluid drainage network",
+      "## Dermis and the Lymphatic System\n- The dermis contains **lymphatic vessels** that contribute to the **lymphatic system**\n- Functions of dermal lymphatics:\n  - Drain excess interstitial fluid from the tissue\n  - Transport immune cells (e.g., dendritic cells) to lymph nodes\n  - Support immune surveillance of the skin\n- Blockage of lymphatic drainage in the skin can result in localized swelling (lymphedema)",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

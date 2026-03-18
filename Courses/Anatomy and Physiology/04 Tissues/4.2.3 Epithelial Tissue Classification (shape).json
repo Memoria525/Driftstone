@@ -1,0 +1,274 @@
+{
+  "cards": {
+    "01.04.02.03.001sa": [
+      "What does the shape of epithelial cells at the apical surface reflect?",
+      "The tissue's function",
+      "Think about why different epithelial tissues look different under the microscope.",
+      "## Epithelial Cell Shape and Function\n\n- The shape of cells at the **apical (free) surface** is the first criterion used to classify epithelial tissue\n- Cell shape is not random; it directly correlates with what the tissue is designed to do\n- For example:\n  - Flat cells → diffusion/low friction\n  - Tall cells → high-volume absorption and secretion\n- Shape is also one of the most immediately recognizable features when viewing epithelium under a microscope",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.002sa": [
+      "Describe the shape of squamous epithelial cells.",
+      "Flat and scale-like, much wider than they are tall, with a thin, disc-shaped profile when viewed from the side",
+      "Think about the Latin root of the word 'squamous.'",
+      "## Squamous Cell Shape\n\n- **Key features:**\n  1. Flat and scale-like\n  2. Much wider than tall\n  3. Thin, disc-shaped profile in cross-section\n- The word squamous comes from Latin *squama*, meaning \"scale\"\n- This thin profile is functionally significant: it minimizes the distance substances must cross during diffusion and creates a smooth, low-friction surface",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.003sa": [
+      "What is the Latin origin and meaning of the word 'squamous'?",
+      "From the Latin word squama, meaning 'scale'",
+      "Think about the flat, overlapping appearance of squamous cells.",
+      "## Etymology of Squamous\n\n- *Squama* is Latin for \"scale\"\n- The name describes the flat, scale-like appearance of these cells\n- Many anatomical terms are derived from Latin or Greek roots\n- Recognizing these roots can help you identify tissue types quickly:\n  - Squamous → scale → flat\n  - Cuboidal → cube → equal dimensions\n  - Columnar → column → tall",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.004sa": [
+      "What two functional demands are squamous epithelial cells ideally suited for?",
+      "Rapid diffusion and minimal friction",
+      "Think about what a very thin, flat cell would be good at allowing or preventing.",
+      "## Squamous Cell Functions\n\n- **Rapid diffusion:** The thin profile of squamous cells minimizes the distance molecules must travel to cross the tissue\n- **Minimal friction:** The flat, smooth surface reduces resistance when substances (blood, air, serous fluid) move across it\n- These two functions explain the locations where squamous epithelium is found:\n  - Lung alveoli (gas exchange via diffusion)\n  - Blood vessel linings (smooth flow with minimal friction)\n  - Serous membranes (friction-free surfaces between organs)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.005sa": [
+      "What is the approximate height-to-width ratio of cuboidal epithelial cells?",
+      "Roughly equal; they are approximately as wide as they are tall",
+      "The name of the cell shape gives away the ratio.",
+      "## Cuboidal Cell Dimensions\n\n- Cuboidal cells have a **cube-like or slightly rounded profile** in cross-section\n- Height ≈ Width\n- This distinguishes them from:\n  - Squamous cells (much wider than tall)\n  - Columnar cells (much taller than wide)\n- Their balanced proportions reflect a moderate functional workload, neither as passive as squamous nor as high-throughput as columnar",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.006sa": [
+      "Describe the typical shape and position of the nucleus in cuboidal epithelial cells.",
+      "The nucleus is typically round and centrally located within the cell",
+      "Consider how the equal dimensions of the cell influence where the nucleus sits.",
+      "## Cuboidal Cell Nucleus\n\n- **Shape:** Round\n- **Position:** Centrally located\n- Nuclear position often reflects overall cell geometry:\n  - Cuboidal cells (equal dimensions) → centered nucleus\n  - Columnar cells (tall) → nucleus near the basal end\n- Nucleus shape and position are useful identification features when examining tissue under a microscope",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.007sa": [
+      "What two general functions are cuboidal epithelial cells associated with?",
+      "Secretion and absorption",
+      "These are the same two functions associated with columnar cells, but at a different volume level.",
+      "## Cuboidal Cell Functions\n\n- **Secretion:** Production and release of substances (enzymes, hormones, mucus)\n- **Absorption:** Uptake of materials from a lumen or surface\n- These functions occur at a **moderate** level, in contrast to columnar cells which handle high-volume secretion and absorption\n- Cuboidal cells are commonly found in structures where steady but not maximal throughput is required, such as glands and kidney tubules",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.008sa": [
+      "Name two locations in the body where cuboidal epithelial cells are commonly found.",
+      "Glands and the lining of kidney tubules",
+      "Think about organs involved in moderate secretion and absorption.",
+      "## Common Locations of Cuboidal Epithelium\n\n- **Glands:** Many glands (thyroid, salivary, pancreas) use cuboidal epithelium for secretion\n- **Kidney tubules:** Cuboidal cells line the tubules where selective reabsorption and secretion occur\n- These locations share a common feature: they require steady secretion or absorption, but not the high-volume throughput demanded in the digestive tract (which uses columnar cells instead)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.009sa": [
+      "In epithelial classification by cell shape, which cell type is significantly taller than it is wide?",
+      "Columnar cells",
+      "Think about an architectural structure that is much taller than it is wide.",
+      "## Columnar Cell Shape\n\n- Columnar cells have an **elongated, column-like profile**\n- They are significantly taller than they are wide\n- This extra height provides room for:\n  - Abundant organelles (mitochondria, ER, Golgi apparatus)\n  - Greater cytoplasmic volume for processing absorbed materials\n- Compare the three basic shapes:\n  1. Squamous: wider than tall\n  2. Cuboidal: roughly equal\n  3. Columnar: taller than wide",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.010sa": [
+      "Describe the typical shape and position of the nucleus in columnar epithelial cells.",
+      "The nucleus is usually oval and located near the basal end of the cell",
+      "Consider how the tall, narrow geometry of the cell influences the nucleus.",
+      "## Columnar Cell Nucleus\n\n- **Shape:** Oval (elongated to fit the tall, narrow cell)\n- **Position:** Near the basal end\n- Contrast with cuboidal cells:\n  - Cuboidal: round nucleus, centrally located\n  - Columnar: oval nucleus, basally located\n- The basal positioning of the nucleus leaves the apical portion of the cell free for organelles and surface modifications involved in absorption and secretion",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.011sa": [
+      "What two high-volume functions are columnar epithelial cells primarily associated with?",
+      "Absorption and secretion",
+      "These are the same two functions associated with cuboidal cells, but at a greater capacity.",
+      "## Columnar Cell Functions\n\n- **Absorption:** Uptake of nutrients and other substances (especially in the digestive tract)\n- **Secretion:** Production and release of mucus, enzymes, and other products\n- The key distinction from cuboidal cells is **volume**:\n  - Cuboidal → moderate secretion and absorption\n  - Columnar → high-volume secretion and absorption\n- The tall profile of columnar cells accommodates the extra organelles and surface area needed for this heavy workload",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.012sa": [
+      "What is the predominant epithelial cell type lining the digestive tract?",
+      "Columnar epithelial cells",
+      "Think about which cell shape supports the high-volume absorption and secretion needed for nutrient processing.",
+      "## Columnar Cells in the Digestive Tract\n\n- The digestive tract demands **continuous, high-volume absorption and secretion**\n- Columnar cells meet this demand because their tall profile provides:\n  1. Room for abundant organelles (mitochondria, ER, Golgi)\n  2. Space for cytoplasmic processing of absorbed nutrients\n  3. An apical surface that often bears microvilli to increase absorptive area\n- Neither squamous nor cuboidal cells could support this level of throughput",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.013sa": [
+      "Why does the greater height of columnar cells benefit their function in the digestive tract?",
+      "It provides room for abundant organelles (mitochondria, endoplasmic reticulum, Golgi apparatus) needed to support the heavy, continuous workload of nutrient processing",
+      "Think about what a taller cell can physically contain more of.",
+      "## Height and Functional Capacity\n\n- Greater cell height = greater cytoplasmic volume\n- This extra volume houses:\n  - **Mitochondria** for energy production\n  - **Endoplasmic reticulum** for synthesis and processing\n  - **Golgi apparatus** for packaging and transport\n- The digestive tract processes nutrients continuously, requiring cells with the structural capacity to sustain that workload\n- The apical surfaces of these cells also often bear **microvilli**, further increasing the surface area available for absorption",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.014sa": [
+      "What apical surface modification do columnar cells in the digestive tract often bear, and what is its purpose?",
+      "Microvilli, which increase surface area for absorption",
+      "Think about a structural modification that increases the amount of membrane exposed to the lumen.",
+      "## Microvilli on Columnar Cells\n\n- **Microvilli** are tiny, finger-like projections on the apical surface of columnar cells\n- Their primary purpose is to **increase surface area** for absorption\n- This is critical in the digestive tract where maximum contact with nutrients is needed\n- Microvilli work in combination with the tall columnar cell body:\n  - Microvilli increase external surface area\n  - The tall cell body provides internal space for the organelles that process absorbed materials",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.015sa": [
+      "What is the alternative name for transitional epithelial cells?",
+      "Urothelium",
+      "The name reflects the organ system where this tissue is exclusively found.",
+      "## Transitional Epithelium / Urothelium\n\n- **Transitional epithelium** and **urothelium** are interchangeable terms\n- The prefix \"uro-\" refers to the urinary system\n- This tissue is unique because:\n  1. It is found exclusively in the urinary tract\n  2. Its cells can change shape (transition between forms)\n  3. It does not fit neatly into the standard squamous/cuboidal/columnar classification",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.016sa": [
+      "Where in the body is transitional epithelium found exclusively?",
+      "The urinary tract",
+      "The alternative name for this tissue type contains a clue about its location.",
+      "## Location of Transitional Epithelium\n\n- Found **exclusively** in the urinary tract\n- Specific structures include:\n  1. Urinary bladder\n  2. Ureters\n  3. Part of the urethra\n- Its unique ability to stretch and change shape makes it specifically adapted to organs that must expand and contract as they fill with and release urine",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.017sa": [
+      "Name three specific structures of the urinary tract lined by transitional epithelium.",
+      "The bladder, ureters, and part of the urethra",
+      "Think about the pathway urine travels from the kidneys to the outside of the body.",
+      "## Structures Lined by Transitional Epithelium\n\n1. **Bladder** - the primary storage organ for urine\n2. **Ureters** - tubes connecting each kidney to the bladder\n3. **Part of the urethra** - the tube that carries urine from the bladder to the exterior\n- All three structures must accommodate changes in urine volume\n- Transitional epithelium allows these structures to stretch without tearing their epithelial lining",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.018sa": [
+      "How does the shape of transitional epithelial cells change when the organ they line is empty versus distended?",
+      "When the organ is empty, the cells appear roughly cuboidal or columnar; when the organ is distended with urine, the cells flatten to a squamous-like shape",
+      "Think about what happens to cells physically when a hollow organ stretches.",
+      "## Shape Changes in Transitional Epithelium\n\n- **Empty organ:** Cells appear cuboidal or columnar, often with a dome-shaped apical surface\n- **Distended organ:** Cells flatten and stretch into a squamous-like shape\n- This transition is reversible and repeats with each fill-and-empty cycle\n- The ability to change shape is what gives this tissue its name: \"transitional\"",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.019sa": [
+      "What functional advantage does the shape-changing ability of transitional epithelium provide to the urinary tract?",
+      "It allows the urinary tract to accommodate large changes in volume without tearing the epithelial lining",
+      "Think about what would happen to a rigid epithelial lining when the bladder fills.",
+      "## Functional Advantage of Transitional Epithelium\n\n- The urinary bladder can expand dramatically as it fills with urine\n- A rigid or non-stretching epithelium would **tear or rupture** under this stress\n- Transitional epithelium solves this by:\n  1. Allowing cells to flatten as the organ stretches\n  2. Returning to their original shape when the organ empties\n  3. Maintaining an intact barrier throughout the cycle\n- This protects underlying tissues from exposure to urine",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.020sa": [
+      "Why does transitional epithelium not fit neatly into the squamous-cuboidal-columnar classification scheme?",
+      "Because its cells can change shape, transitioning between cuboidal/columnar and squamous-like forms depending on whether the organ is empty or distended",
+      "Consider what is unique about these cells compared to other epithelial types that maintain a fixed shape.",
+      "## Transitional Epithelium and Classification\n\n- The standard classification system assumes cells have a **fixed shape**:\n  - Squamous = always flat\n  - Cuboidal = always cube-like\n  - Columnar = always tall\n- Transitional cells break this rule because they can be cuboidal/columnar **or** squamous-like depending on the state of the organ\n- This is why transitional epithelium is treated as a **special category** outside the standard three-shape scheme",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.021sa": [
+      "What epithelial cell shape facilitates rapid diffusion and reduces friction?",
+      "Squamous",
+      "Think about which shape creates the thinnest barrier and smoothest surface.",
+      "## Squamous Shape and Function\n\n- Squamous cells are flat and thin\n- This minimal thickness:\n  - **Facilitates diffusion** by reducing the distance molecules must travel across the tissue\n  - **Reduces friction** by presenting a smooth surface\n- These properties make squamous epithelium ideal for locations like:\n  - Alveoli of the lungs (gas exchange)\n  - Inner lining of blood vessels (smooth blood flow)\n  - Serous membranes (frictionless movement between organs)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.022sa": [
+      "What functional role is served by the thin, flat shape of squamous epithelial cells?",
+      "It facilitates rapid diffusion and minimizes friction",
+      "Consider what physical properties a very thin barrier would have.",
+      "## Shape-Function Relationship in Squamous Cells\n\n- The thin, flat shape is directly tied to two functions:\n  1. **Diffusion:** Thinner barrier = shorter diffusion distance = faster exchange of gases and small molecules\n  2. **Low friction:** Flat, smooth surface = reduced resistance to flow\n- This is a core principle of epithelial biology: cell shape is a reliable predictor of tissue function",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.023sa": [
+      "Which epithelial cell shape maximizes the cellular machinery available for absorption, secretion, and transport?",
+      "Columnar",
+      "Think about which shape provides the greatest cytoplasmic volume.",
+      "## Columnar Shape and Functional Capacity\n\n- Columnar cells are the tallest of the three basic epithelial shapes\n- Greater height = greater cytoplasmic volume = more room for:\n  - Organelles (mitochondria, ER, Golgi)\n  - Vesicles for secretion and transport\n  - Enzymes for processing absorbed materials\n- This makes columnar cells the best-equipped shape for heavy, continuous absorption and secretion",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.024sa": [
+      "What functional advantage is provided by the tall profile of columnar epithelial cells?",
+      "It maximizes the cellular machinery (organelles and cytoplasmic volume) available for absorption, secretion, and transport",
+      "Think about what more internal space allows a cell to contain.",
+      "## Height as a Functional Advantage\n\n- The tall columnar profile provides:\n  1. **More cytoplasmic volume** for organelles and processing\n  2. **More apical surface area** that can be further increased by microvilli\n  3. **Greater capacity** for sustained, high-volume work\n- This is why columnar cells dominate in the digestive tract, where the workload of nutrient absorption and secretion is continuous and heavy",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.025sa": [
+      "Why is epithelial cell shape considered a reliable indicator of function?",
+      "Because each shape directly correlates with specific functional capabilities: flat squamous cells facilitate diffusion and reduce friction, cube-shaped cuboidal cells support moderate secretion and absorption, and tall columnar cells maximize capacity for high-volume absorption, secretion, and transport",
+      "Think about how the physical dimensions of a cell determine what it can and cannot do efficiently.",
+      "## Cell Shape as a Functional Indicator\n\n- Shape is not arbitrary in epithelial tissue; it reflects functional specialization:\n  - **Squamous (flat):** Minimizes diffusion distance, reduces friction\n  - **Cuboidal (equal dimensions):** Balanced capacity for moderate secretion and absorption\n  - **Columnar (tall):** Maximizes organelle space for high-volume processing\n- Recognizing cell shape is the **first step** in identifying an epithelial tissue type and predicting its function\n- This shape-function relationship is one of the most fundamental principles in histology",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.026sa": [
+      "In terms of functional demand, how do cuboidal epithelial cells differ from columnar epithelial cells in the degree of secretion and absorption they support?",
+      "Cuboidal cells support moderate secretion and absorption, while columnar cells support high-volume secretion and absorption",
+      "Both cell types perform the same two functions but at different capacities.",
+      "## Cuboidal vs. Columnar Functional Capacity\n\n- Both cuboidal and columnar cells perform **secretion and absorption**\n- The difference is one of **degree**:\n  - **Cuboidal:** Moderate workload, found in glands and kidney tubules\n  - **Columnar:** High-volume workload, found in the digestive tract\n- The structural basis for this difference is cell height:\n  - Taller cells = more cytoplasmic volume = more organelles = greater processing capacity\n- This is why the digestive tract (high demand) uses columnar cells, while kidney tubules and glands (moderate demand) use cuboidal cells",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.02.03.027sa": [
+      "What continuous workload in the digestive tract explains the need for columnar cells with abundant organelles and microvilli?",
+      "Nutrient processing (the continuous absorption and secretion involved in digesting and absorbing nutrients)",
+      "Think about what the digestive tract does all day long after every meal.",
+      "## Nutrient Processing Workload\n\n- The digestive tract is responsible for **continuous nutrient processing**:\n  1. Breaking down food into absorbable molecules\n  2. Absorbing those molecules across the epithelial lining\n  3. Secreting mucus, enzymes, and other substances to support digestion\n- This workload is both **heavy** and **continuous**, requiring:\n  - Abundant organelles (mitochondria for energy, ER and Golgi for synthesis and packaging)\n  - Microvilli to maximize the absorptive surface area\n  - The tall columnar cell shape to house all of this machinery",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

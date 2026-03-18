@@ -1,0 +1,334 @@
+{
+  "cards": {
+    "01.04.05.02.001sa": [
+      "Skeletal muscle tissue makes up about __________ percent of total body weight, making it the __________ abundant tissue type in the body by mass.",
+      "40%; most",
+      "Think about which tissue type you have the most of by sheer weight.",
+      "## Skeletal Muscle: Body Composition\n- Skeletal muscle accounts for roughly **40%** of total body weight\n- This makes it the single most abundant tissue type by mass\n- This percentage can vary based on age, sex, and fitness level, but skeletal muscle consistently dominates\n- The large mass reflects the tissue's central role in movement, posture, joint stabilization, and heat generation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.002sa": [
+      "List four functions of skeletal muscle tissue.",
+      "Voluntary movement, maintaining posture, stabilizing joints, and generating heat.",
+      "Think beyond just moving your limbs. What does muscle do even when you are sitting still?",
+      "## Functions of Skeletal Muscle\n1. **Voluntary movement** - all conscious body movements depend on skeletal muscle contraction\n2. **Posture maintenance** - continuous low-level contractions keep the body upright against gravity\n3. **Joint stabilization** - muscles and their tendons reinforce joints, preventing dislocation during movement\n4. **Heat generation** - muscle contraction is metabolically expensive and produces significant heat, contributing to thermoregulation\n- Skeletal muscle is the primary source of body heat at rest and especially during exercise (shivering is involuntary skeletal muscle contraction specifically for heat production)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.003sa": [
+      "How long can individual skeletal muscle fibers be?",
+      "Up to 30 centimeters long.",
+      "These are among the largest cells in the body. Think in terms of tens of centimeters.",
+      "## Skeletal Muscle Fiber Size\n- Individual fibers can reach up to **30 cm** in length\n- This makes them among the largest cells in the human body\n- Their extreme size is one reason they require multiple nuclei to manage protein synthesis across such a large cytoplasmic volume\n- Fiber length varies by muscle; longer muscles (like those in the thigh) tend to have longer fibers",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.004sa": [
+      "The nuclei of a skeletal muscle fiber are located near the __________, and each fiber contains __________ of nuclei.",
+      "Periphery of the cell (just beneath the plasma membrane/sarcolemma); hundreds",
+      "The nuclei are pushed to the edges of the cell, and there are far more than just a few.",
+      "## Nuclear Arrangement in Skeletal Muscle Fibers\n- Nuclei are located at the **periphery** of the fiber, just beneath the sarcolemma (plasma membrane)\n- Each fiber contains **hundreds** of nuclei\n- This peripheral positioning is distinctive and helps distinguish skeletal muscle from cardiac muscle in histological sections (cardiac muscle nuclei are centrally located)\n- The nuclei are pushed to the edges because the interior of the fiber is packed with contractile proteins (actin and myosin) organized into myofibrils",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.005sa": [
+      "What are myoblasts, and what is their role in skeletal muscle development?",
+      "Myoblasts are individual precursor cells that fuse together during development to form the large, multinucleated skeletal muscle fibers.",
+      "Think about how a cell that is hundreds of nuclei could come to exist. It was not always one cell.",
+      "## Myoblasts and Muscle Development\n- **Myoblasts** are embryonic muscle precursor cells\n- During development, many individual myoblasts **fuse together** to form a single skeletal muscle fiber\n- This fusion event is what produces the multinucleated character of skeletal muscle\n- Each myoblast contributes its nucleus to the resulting fiber\n- This is a one-time developmental event; mature skeletal muscle fibers do not divide\n- A related population of cells called **satellite cells** persists in adult muscle and retains some capacity for repair",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.006sa": [
+      "Why do skeletal muscle fibers need to be multinucleated?",
+      "Because the fibers are extremely large and require an enormous volume of protein synthesis to maintain the massive amounts of actin and myosin needed for contraction. A single nucleus could not support the transcriptional demands of such a large cell.",
+      "Consider the relationship between cell size, protein demand, and the capacity of a single nucleus.",
+      "## Why Multinucleation Is Necessary\n- Skeletal muscle fibers are among the largest cells in the body (up to 30 cm)\n- They are packed with contractile proteins (actin and myosin) that must be continuously synthesized and maintained\n- A single nucleus cannot produce enough mRNA to sustain protein synthesis across such a massive cytoplasmic volume\n- Having hundreds of nuclei distributed along the fiber ensures that every region of the cell has local access to gene transcription\n- This is a direct structure-function relationship: extreme cell size demands a multinucleated solution",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.007sa": [
+      "What term describes the striped appearance of skeletal muscle tissue when viewed under the microscope?",
+      "Striated.",
+      "The term comes from a Latin root meaning grooved or furrowed.",
+      "## Striated Appearance\n- **Striated** means striped\n- The striations are visible under light microscopy as alternating light and dark bands\n- This pattern results from the precise, repeating arrangement of contractile proteins within sarcomeres\n- Both skeletal and cardiac muscle are striated; smooth muscle is not\n- The presence or absence of striations is one of the key features used to classify muscle tissue types histologically",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.008sa": [
+      "What causes the striated appearance of skeletal muscle tissue?",
+      "The highly organized arrangement of actin and myosin filaments into repeating functional units called sarcomeres, which are aligned end-to-end and in register across the width of the fiber.",
+      "Think about what would happen visually if thousands of identical units were stacked in perfect alignment.",
+      "## Origin of Striations\n- Striations arise from the **regular, repeating arrangement of sarcomeres**\n- Within each sarcomere, actin (thin) and myosin (thick) filaments overlap in a predictable pattern\n- Sarcomeres are aligned:\n  1. **End-to-end** along the length of the fiber\n  2. **In register** across the fiber's width (sarcomeres in adjacent myofibrils line up)\n- This alignment produces visible bands:\n  - **Dark bands (A bands)** where thick filaments are present\n  - **Light bands (I bands)** where only thin filaments are present\n- If the sarcomeres were not aligned in register, the striped pattern would blur and disappear",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.009sa": [
+      "What is the name of the repeating functional unit of contraction in skeletal muscle, and how are these units arranged within a fiber?",
+      "The sarcomere. Sarcomeres are aligned end-to-end along the length of the fiber and in register across the fiber's width.",
+      "This unit is defined by its boundaries, and its arrangement in two dimensions creates the visible striped pattern.",
+      "## The Sarcomere\n- The **sarcomere** is the basic functional unit of muscle contraction\n- Each sarcomere is one segment of a myofibril, bounded on each end by a Z-disc\n- Arrangement within the fiber:\n  1. **End-to-end** along the length, forming long chains (myofibrils)\n  2. **In register** across the width, meaning adjacent myofibrils have their sarcomeres aligned at the same positions\n- This dual alignment is what produces the visible striations\n- During contraction, each sarcomere shortens individually, and the cumulative shortening of thousands of sarcomeres produces whole-muscle contraction",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.010sa": [
+      "What are the structures that border each sarcomere?",
+      "Z-discs (also called Z-lines).",
+      "These boundary markers appear as thin dark lines at the edges of each repeating unit.",
+      "## Z-Discs\n- **Z-discs** (Z-lines) are the structural boundaries of each sarcomere\n- They appear as thin, dark lines running perpendicular to the long axis of the fiber\n- Thin filaments (actin) are anchored to Z-discs and extend inward toward the center of the sarcomere\n- During contraction, the Z-discs are pulled closer together as the sarcomere shortens\n- The \"Z\" comes from the German word *Zwischenscheibe*, meaning \"between disc\"",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.011sa": [
+      "In a sarcomere, which protein makes up the thick filaments and which protein makes up the thin filaments?",
+      "Myosin makes up the thick filaments; actin makes up the thin filaments.",
+      "One protein name sounds \"thick\" and heavy, the other sounds light and quick.",
+      "## Sarcomere Filament Proteins\n- **Thick filaments** = myosin\n- **Thin filaments** = actin\n- These two proteins interact to produce contraction via the sliding filament mechanism\n- Myosin heads bind to actin and pull the thin filaments inward, shortening the sarcomere\n- The overlapping arrangement of these filaments creates the banding pattern visible under microscopy\n- Additional regulatory proteins (like troponin and tropomyosin) are associated with the thin filaments and control when contraction can occur",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.012sa": [
+      "What region of the sarcomere contains only thick filaments?",
+      "The H zone.",
+      "This is the central-most region of the sarcomere, where thin filaments have not yet reached.",
+      "## The H Zone\n- The **H zone** is the narrow region at the very center of the sarcomere\n- It contains **only thick filaments** (myosin); thin filaments do not extend this far\n- During contraction, as thin filaments slide inward, the H zone **narrows and may disappear** entirely at full contraction\n- The H zone sits within the broader A band\n- \"H\" comes from the German *helle*, meaning \"bright\" or \"clear,\" because this region appears lighter under the microscope",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.013sa": [
+      "What region of the sarcomere contains only thin filaments?",
+      "The I band.",
+      "This region spans the area on either side of the Z-disc.",
+      "## The I Band\n- The **I band** is the region containing **only thin filaments** (actin)\n- It spans the area on either side of the Z-disc, extending from one sarcomere into the next\n- The I band appears **light** under the microscope because thin filaments are less dense\n- During contraction, as thin filaments slide inward over thick filaments, the I band **shortens**\n- \"I\" stands for **isotropic**, referring to how this region interacts with polarized light",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.014sa": [
+      "What region of the sarcomere marks the full length where thick filaments are present?",
+      "The A band.",
+      "This is the widest and darkest band in the sarcomere.",
+      "## The A Band\n- The **A band** spans the entire length of the thick filaments (myosin)\n- It includes regions of overlap with thin filaments as well as the H zone in the center\n- The A band appears **dark** under the microscope due to the density of thick filaments\n- Key point: the **A band does not change length** during contraction (the thick filaments themselves do not shorten)\n- \"A\" stands for **anisotropic**, referring to how this region interacts with polarized light",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.015sa": [
+      "Describe what each of the following sarcomere regions represents: the A band, the I band, and the H zone.",
+      "The A band marks the full length where thick filaments (myosin) are present. The I band marks the region where only thin filaments (actin) are present. The H zone marks the central region where only thick filaments are present.",
+      "Two of these regions are defined by the presence of only one filament type. The third encompasses the entire span of one filament type, including overlap zones.",
+      "## Sarcomere Bands and Zones Summary\n| Region | Contents | Appearance | During Contraction |\n|--------|----------|------------|--------------------|\n| **A band** | Full length of thick filaments (includes overlap with thin) | Dark | Does not change length |\n| **I band** | Only thin filaments | Light | Shortens |\n| **H zone** | Only thick filaments (center of A band) | Lighter stripe within A band | Narrows or disappears |\n\n- The A band is the only region that stays the same length during contraction because thick filaments do not shorten\n- Both the I band and H zone shrink as thin filaments slide inward",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.016sa": [
+      "During skeletal muscle contraction, what happens to the thin filaments relative to the thick filaments, and what is this mechanism called?",
+      "The thin filaments slide inward over the thick filaments, pulling the Z-discs closer together and shortening the sarcomere. This is called the sliding filament mechanism.",
+      "The filaments do not themselves shorten. They change position relative to each other.",
+      "## Sliding Filament Mechanism\n- During contraction, **thin filaments slide inward** over the thick filaments toward the center of the sarcomere\n- The thick filaments remain stationary; they do not shorten\n- As thin filaments slide inward:\n  1. Z-discs are pulled closer together\n  2. The sarcomere shortens\n  3. The I band narrows\n  4. The H zone narrows or disappears\n  5. The A band stays the same length\n- The force for sliding is generated by **myosin heads** (cross-bridges) that bind to actin and perform a power stroke\n- This mechanism was proposed independently by **Hugh Huxley** and **Andrew Huxley** in the 1950s",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.017sa": [
+      "What happens to the Z-discs during sarcomere shortening?",
+      "The Z-discs are pulled closer together.",
+      "Think about what anchors the thin filaments and what would happen to those anchors as the filaments slide inward.",
+      "## Z-Disc Movement During Contraction\n- Thin filaments are anchored to Z-discs\n- As myosin pulls the thin filaments inward, the **Z-discs are drawn toward each other**\n- This is the measurable shortening of the sarcomere\n- The distance between Z-discs (sarcomere length) decreases from a resting length of about 2.0-2.5 micrometers\n- The cumulative shortening of many sarcomeres in series produces the visible shortening of the whole muscle fiber",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.018sa": [
+      "What neurotransmitter is released by a motor neuron at the neuromuscular junction to initiate skeletal muscle contraction?",
+      "Acetylcholine (ACh).",
+      "This is the same neurotransmitter used widely in the parasympathetic nervous system.",
+      "## Acetylcholine at the Neuromuscular Junction\n- **Acetylcholine (ACh)** is the neurotransmitter that triggers skeletal muscle contraction\n- Released from the synaptic terminal of a motor neuron into the synaptic cleft\n- Binds to receptors on the sarcolemma (muscle fiber membrane)\n- This binding triggers an action potential that propagates along the sarcolemma\n- The action potential travels into T-tubules and ultimately causes calcium release from the sarcoplasmic reticulum\n- ACh is rapidly broken down by the enzyme **acetylcholinesterase** to prevent continuous stimulation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.019sa": [
+      "What is the name of the specialized junction between a motor neuron and a skeletal muscle fiber?",
+      "The neuromuscular junction.",
+      "The name directly combines the two structures involved in this synapse.",
+      "## The Neuromuscular Junction\n- The **neuromuscular junction (NMJ)** is the synapse between a motor neuron and a skeletal muscle fiber\n- Components:\n  1. **Synaptic terminal** of the motor neuron (contains vesicles of acetylcholine)\n  2. **Synaptic cleft** (the gap between neuron and muscle fiber)\n  3. **Motor end plate** (the specialized region of the sarcolemma with ACh receptors)\n- Each skeletal muscle fiber typically has **one** neuromuscular junction\n- Clinical relevance: diseases like **myasthenia gravis** involve autoimmune destruction of ACh receptors at the NMJ, leading to muscle weakness",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.020sa": [
+      "What is the term for the plasma membrane of a skeletal muscle fiber?",
+      "Sarcolemma.",
+      "Muscle-specific terminology often uses the prefix \"sarco-\" meaning flesh.",
+      "## The Sarcolemma\n- **Sarcolemma** = the plasma membrane of a skeletal muscle fiber\n- \"Sarco-\" = flesh/muscle; \"-lemma\" = sheath or covering\n- The sarcolemma has the same basic structure as any plasma membrane (phospholipid bilayer with embedded proteins)\n- It contains specialized receptor proteins at the neuromuscular junction (motor end plate)\n- It conducts action potentials along the surface of the fiber\n- T-tubules are deep infoldings of the sarcolemma that carry the electrical signal into the fiber's interior",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.021sa": [
+      "What structure does the term \"sarcolemma\" refer to in skeletal muscle?",
+      "The plasma membrane of a skeletal muscle fiber.",
+      "Break the word apart: \"sarco-\" relates to muscle, and \"-lemma\" relates to a covering.",
+      "## Sarcolemma\n- The **sarcolemma** is the plasma membrane of a muscle fiber\n- It performs all standard plasma membrane functions (selective permeability, receptor signaling) plus muscle-specific roles:\n  1. Propagates action potentials along the fiber surface\n  2. Houses ACh receptors at the motor end plate\n  3. Gives rise to T-tubules that carry signals deep into the cell\n- Damage to the sarcolemma can compromise the fiber's ability to contract and may trigger degeneration",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.022sa": [
+      "What is the function of T-tubules in skeletal muscle contraction?",
+      "T-tubules carry the action potential (electrical signal) from the sarcolemma into the interior of the muscle fiber, ensuring that the signal reaches the sarcoplasmic reticulum deep within the cell.",
+      "These structures solve the problem of getting a surface signal to the interior of a very large cell.",
+      "## T-Tubules\n- **T-tubules** (transverse tubules) are deep infoldings of the sarcolemma\n- They form a network of narrow tubes that penetrate into the interior of the fiber\n- Function: **transmit the action potential from the surface to the interior of the cell**\n- This ensures that all sarcomeres, even those deep inside the fiber, receive the signal to contract nearly simultaneously\n- Without T-tubules, only the outermost myofibrils would contract promptly; the interior would lag behind\n- T-tubules are closely associated with the sarcoplasmic reticulum at structures called **triads**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.023sa": [
+      "What intracellular structure in skeletal muscle fibers stores and releases calcium ions during contraction?",
+      "The sarcoplasmic reticulum.",
+      "This is the muscle-specific version of a well-known organelle found in all cells.",
+      "## The Sarcoplasmic Reticulum\n- The **sarcoplasmic reticulum (SR)** is a specialized form of the smooth endoplasmic reticulum in muscle cells\n- Function: **stores and releases calcium ions (Ca2+)**\n- At rest, the SR actively pumps Ca2+ out of the cytoplasm and sequesters it\n- When an action potential arrives via the T-tubules, the SR releases Ca2+ into the cytoplasm\n- The released calcium enables actin-myosin interaction and contraction\n- When stimulation stops, the SR pumps calcium back in, and the muscle relaxes",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.024sa": [
+      "In the sequence of skeletal muscle contraction, what ion is released from the sarcoplasmic reticulum to enable the actin-myosin interaction?",
+      "Calcium ions (Ca2+).",
+      "This ion acts as the final intracellular trigger that permits the contractile proteins to interact.",
+      "## Calcium's Role in Contraction\n- **Calcium ions (Ca2+)** are the critical intracellular signal for contraction\n- Sequence of events:\n  1. Action potential travels along sarcolemma and into T-tubules\n  2. Signal triggers Ca2+ release from the sarcoplasmic reticulum\n  3. Ca2+ binds to **troponin** on the thin filament\n  4. This shifts **tropomyosin** away from the myosin-binding sites on actin\n  5. Myosin heads can now bind actin and perform the power stroke\n- Without calcium, tropomyosin blocks the binding sites and contraction cannot occur\n- Relaxation occurs when calcium is pumped back into the SR",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.025sa": [
+      "Why is skeletal muscle described as voluntary?",
+      "Because it is under conscious control. Contraction is initiated by a deliberate signal originating in the motor cortex of the brain.",
+      "Think about which part of the nervous system you consciously control.",
+      "## Voluntary Control of Skeletal Muscle\n- Skeletal muscle is termed **voluntary** because its contraction can be consciously initiated and controlled\n- The signal originates in the **motor cortex** of the brain\n- The pathway: motor cortex > spinal cord > peripheral motor nerve > neuromuscular junction > muscle fiber\n- Important exception: skeletal muscle also participates in **involuntary reflexes** (e.g., withdrawal reflex), where contraction is triggered by spinal cord circuits without conscious input\n- \"Voluntary\" refers to the capacity for conscious control, not that every contraction is consciously willed",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.026sa": [
+      "Trace the path of a voluntary motor signal from the brain to a skeletal muscle.",
+      "Motor cortex > spinal cord > peripheral nerves > neuromuscular junction > skeletal muscle fiber.",
+      "Start at the highest level of the CNS and work your way outward to the muscle.",
+      "## Motor Signal Pathway\n1. **Motor cortex** of the brain generates the voluntary command\n2. Signal descends through the **spinal cord** via upper motor neurons\n3. At the appropriate spinal level, the signal is relayed to a **lower motor neuron**\n4. The lower motor neuron exits the spinal cord and travels through a **peripheral nerve**\n5. At the **neuromuscular junction**, acetylcholine is released\n6. The muscle fiber receives the signal and contracts\n- This entire pathway can be disrupted at any level, producing different clinical presentations depending on where the damage occurs",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.027sa": [
+      "Give an example of a situation in which skeletal muscle contracts involuntarily, and explain how this occurs without conscious input.",
+      "The withdrawal reflex: when you touch something hot, skeletal muscle contracts to pull your hand away. This occurs through spinal cord reflex circuits that bypass the brain, so the contraction happens automatically without conscious decision.",
+      "Think about a protective response that happens before you even realize what happened.",
+      "## Involuntary Skeletal Muscle Contraction\n- The **withdrawal reflex** is a classic example\n- When a pain stimulus is detected (e.g., touching a hot surface), sensory neurons carry the signal to the spinal cord\n- In the spinal cord, the signal is relayed directly to motor neurons without ascending to the brain first\n- The motor neurons trigger skeletal muscle contraction to withdraw the limb\n- The conscious brain becomes aware of the event slightly *after* the reflex has already occurred\n- This demonstrates that \"voluntary\" muscle can act through involuntary pathways when speed is critical for protection",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.028sa": [
+      "Can skeletal muscle fibers undergo cell division in adulthood?",
+      "No. Skeletal muscle fibers do not divide in adulthood.",
+      "Consider that these cells are highly specialized, multinucleated, and packed with contractile machinery.",
+      "## Post-Mitotic Nature of Skeletal Muscle\n- Mature skeletal muscle fibers are **post-mitotic**, meaning they do not undergo cell division\n- Their extreme specialization (multinucleation, dense contractile protein packing) is incompatible with mitosis\n- Growth occurs through **hypertrophy** (enlargement of existing fibers), not hyperplasia (production of new fibers)\n- Limited repair is possible through **satellite cells**, which are a separate population of stem cells\n- This inability to divide is why severe muscle injuries (with significant fiber loss) often result in scar tissue formation rather than full regeneration",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.029sa": [
+      "What is hypertrophy in the context of skeletal muscle?",
+      "Hypertrophy is the enlargement of existing muscle fibers. It is the primary mechanism by which skeletal muscle grows in adulthood.",
+      "This term describes getting bigger without making more cells.",
+      "## Skeletal Muscle Hypertrophy\n- **Hypertrophy** = increase in cell size (not cell number)\n- In skeletal muscle, this means existing fibers grow larger by adding more myofibrils and contractile proteins\n- This is the primary mechanism of adult muscle growth (e.g., in response to resistance training)\n- Contrast with **hyperplasia** (increase in cell number), which does not significantly occur in skeletal muscle\n- Hypertrophy is driven by increased protein synthesis within existing fibers, supported by the fiber's many nuclei\n- Satellite cells may contribute additional nuclei to growing fibers to support the increased transcriptional demand",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.030sa": [
+      "What are satellite cells, and where are they located?",
+      "Satellite cells are a population of stem cells involved in skeletal muscle repair. They are located between the muscle fiber's plasma membrane (sarcolemma) and its surrounding basement membrane.",
+      "These cells are named for their position relative to the muscle fiber itself.",
+      "## Satellite Cells\n- **Satellite cells** are resident stem cells of skeletal muscle\n- Location: between the **sarcolemma** (plasma membrane of the muscle fiber) and the **basement membrane** (extracellular layer surrounding the fiber)\n- In healthy adult muscle, satellite cells are **quiescent** (dormant)\n- When muscle is injured, they become activated and can:\n  1. Proliferate (increase in number)\n  2. Differentiate into myoblasts\n  3. Fuse with damaged fibers or with each other to form new fibers\n- Their name reflects their position: they \"orbit\" the muscle fiber, sitting just outside it",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.031sa": [
+      "What role do satellite cells play in skeletal muscle repair?",
+      "When activated by injury, satellite cells proliferate, differentiate, and fuse to repair damaged muscle fibers.",
+      "Think about what a stem cell population would need to do to patch a damaged, non-dividing cell.",
+      "## Satellite Cell Function in Repair\n- Satellite cells provide **limited regenerative capacity** to skeletal muscle\n- Repair sequence:\n  1. Muscle injury activates quiescent satellite cells\n  2. Satellite cells **proliferate** (divide to increase their numbers)\n  3. They **differentiate** into myoblasts\n  4. Myoblasts **fuse** with damaged fibers to restore lost nuclei and cytoplasm, or fuse with each other to form new fibers\n- This process recapitulates the developmental process by which muscle fibers originally formed\n- Repair capacity is limited; large-scale muscle loss typically results in fibrosis (scar tissue) rather than full regeneration\n- Some activated satellite cells return to quiescence to replenish the stem cell pool for future injuries",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.032sa": [
+      "What term describes the process by which skeletal muscle grows through enlargement of existing fibers rather than production of new ones?",
+      "Hypertrophy.",
+      "The prefix \"hyper-\" means excessive or above normal, and the root refers to nourishment or growth.",
+      "## Hypertrophy vs. Hyperplasia\n- **Hypertrophy** = growth by increasing the size of existing cells\n- **Hyperplasia** = growth by increasing the number of cells\n- In skeletal muscle, adult growth is almost exclusively through hypertrophy\n- This distinction is important because skeletal muscle fibers cannot divide\n- Hypertrophy involves:\n  - Increased synthesis of contractile proteins (actin and myosin)\n  - Addition of new myofibrils within existing fibers\n  - Possible incorporation of new nuclei from satellite cells to support the larger fiber",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.05.02.033sa": [
+      "What cellular process do satellite cells undergo when activated after muscle injury?",
+      "They proliferate (divide to increase in number), differentiate into myoblasts, and fuse with damaged fibers or with each other to repair the muscle.",
+      "Think of a three-step sequence: expand the population, commit to a cell fate, then join forces.",
+      "## Satellite Cell Activation Sequence\n1. **Proliferation** - satellite cells exit quiescence and divide to increase their numbers\n2. **Differentiation** - the expanded population commits to becoming myoblasts (muscle precursor cells)\n3. **Fusion** - myoblasts fuse with damaged fibers to restore structure, or fuse together to form new fibers\n- This sequence mirrors the original developmental process of muscle fiber formation from embryonic myoblasts\n- Not all activated satellite cells differentiate; some **self-renew** and return to quiescence, maintaining the stem cell pool\n- The balance between differentiation and self-renewal is critical for long-term muscle maintenance and repair capacity",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

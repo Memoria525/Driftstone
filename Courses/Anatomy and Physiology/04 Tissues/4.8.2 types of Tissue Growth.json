@@ -1,0 +1,344 @@
+{
+  "cards": {
+    "01.04.08.02.001sa": [
+      "What is hypertrophy?",
+      "An increase in tissue size due to enlargement of individual cells, not an increase in cell number.",
+      "Cells grow, don't multiply",
+      "## Hypertrophy\n\n- The key distinction is that cell **number** stays the same but each cell **grows larger**\n- Classic example: skeletal muscle fibers enlarge during resistance training by adding more actin and myosin filaments\n- This is the only growth option for tissues whose cells cannot divide in adulthood (cardiac muscle, skeletal muscle)\n- Can be **physiological** (exercise-induced) or **pathological** (chronic hypertension causing heart wall thickening)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.002sa": [
+      "What term describes an increase in tissue size caused by enlargement of individual cells rather than an increase in cell number?",
+      "Hypertrophy",
+      "Not more cells, bigger cells",
+      "## Hypertrophy\n\n- The key distinction is that cell **number** stays the same but each cell **grows larger**\n- Classic example: skeletal muscle fibers enlarge during resistance training by adding more actin and myosin filaments\n- This is the only growth option for tissues whose cells cannot divide in adulthood (cardiac muscle, skeletal muscle)\n- Can be **physiological** (exercise-induced) or **pathological** (chronic hypertension causing heart wall thickening)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.003sa": [
+      "What is hyperplasia?",
+      "An increase in tissue size due to an increase in the number of cells through mitosis.",
+      "More cells, not bigger cells",
+      "## Hyperplasia\n\n- Cells divide by **mitosis** to increase the cell population\n- Can only occur in tissues whose cells **retain the ability to divide**\n- Common in epithelial tissue and some connective tissues\n- Examples:\n  1. Thickening of the endometrium during the menstrual cycle (estrogen-driven)\n  2. Benign prostatic hyperplasia (BPH) with aging\n  3. Increased red blood cell production at high altitude\n- Can be physiological (controlled, reversible) or pathological (risk of cancer if genetic errors accumulate)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.004sa": [
+      "What term describes an increase in tissue size caused by an increase in cell number through mitotic division?",
+      "Hyperplasia",
+      "Division, not enlargement",
+      "## Hyperplasia\n\n- Cells divide by **mitosis** to increase the cell population\n- Can only occur in tissues whose cells **retain the ability to divide**\n- Common in epithelial tissue and some connective tissues\n- Examples:\n  1. Thickening of the endometrium during the menstrual cycle (estrogen-driven)\n  2. Benign prostatic hyperplasia (BPH) with aging\n  3. Increased red blood cell production at high altitude\n- Can be physiological (controlled, reversible) or pathological (risk of cancer if genetic errors accumulate)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.005sa": [
+      "What is atrophy?",
+      "A decrease in tissue size resulting from decreased cell size, decreased cell number (via apoptosis), or both.",
+      "Wasting or shrinkage",
+      "## Atrophy\n\n- Can result from:\n  1. Decrease in **cell size**\n  2. Decrease in **cell number** (through apoptosis)\n  3. Both simultaneously\n- Occurs when demands on a tissue decrease or nutritional supply is reduced\n- Types include:\n  - **Disuse atrophy**: prolonged immobilization\n  - **Hormonal atrophy**: loss of hormonal stimulation (e.g., uterus after menopause)\n  - **Denervation atrophy**: loss of nerve supply\n  - **Cachexia**: wasting from starvation or chronic disease",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.006sa": [
+      "What term describes a decrease in tissue size due to reduced cell size, reduced cell number, or both?",
+      "Atrophy",
+      "Opposite of growth",
+      "## Atrophy\n\n- Can result from:\n  1. Decrease in **cell size**\n  2. Decrease in **cell number** (through apoptosis)\n  3. Both simultaneously\n- Occurs when demands on a tissue decrease or nutritional supply is reduced\n- Types include:\n  - **Disuse atrophy**: prolonged immobilization\n  - **Hormonal atrophy**: loss of hormonal stimulation (e.g., uterus after menopause)\n  - **Denervation atrophy**: loss of nerve supply\n  - **Cachexia**: wasting from starvation or chronic disease",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.007sa": [
+      "In hypertrophy, does the number of cells increase, or does each individual cell grow larger?",
+      "Each individual cell grows larger; the number of cells stays the same.",
+      "Size, not quantity",
+      "## Hypertrophy: Cell Size vs. Cell Number\n\n- This is the defining feature that separates hypertrophy from hyperplasia\n- In hypertrophy, cells increase their **internal content** (e.g., more contractile proteins in muscle)\n- In hyperplasia, the cell **population** increases through mitosis\n- Some tissues can undergo both simultaneously (e.g., the pregnant uterus)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.008sa": [
+      "When skeletal muscle enlarges from resistance training, what specific structural change occurs within each muscle fiber?",
+      "Each fiber increases in diameter by adding more actin and myosin filaments.",
+      "Contractile protein addition",
+      "## Skeletal Muscle Hypertrophy\n\n- The muscle gets bigger not by making more cells but by **enlarging existing fibers**\n- Additional **actin and myosin filaments** are synthesized and added to myofibrils\n- This is the classic example of hypertrophy\n- Skeletal muscle cells rarely undergo mitosis in adulthood, so hypertrophy is essentially their only growth mechanism",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.009sa": [
+      "Why is hypertrophy the primary growth mechanism in cardiac and skeletal muscle?",
+      "Because their cells are unable (cardiac) or rarely able (skeletal) to undergo mitosis once mature.",
+      "Post-mitotic tissues",
+      "## Why Muscle Relies on Hypertrophy\n\n- **Cardiac muscle** cells are essentially unable to divide after maturation\n- **Skeletal muscle** cells rarely divide in adulthood\n- Since hyperplasia requires mitosis, these tissues can only grow by increasing **individual cell size**\n- This has major clinical implications: damage to cardiac muscle cannot be repaired by generating new cardiomyocytes, so lost cells are replaced by scar tissue (fibrosis)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.010sa": [
+      "What is the difference between physiological and pathological hypertrophy?",
+      "Physiological hypertrophy is a normal response to increased demand (e.g., exercise), while pathological hypertrophy is a harmful response (e.g., heart wall thickening from chronic high blood pressure).",
+      "Helpful vs. harmful enlargement",
+      "## Physiological vs. Pathological Hypertrophy\n\n- **Physiological**: adaptive, beneficial\n  - Example: skeletal muscle growth from exercise\n- **Pathological**: maladaptive, ultimately harmful\n  - Example: left ventricular hypertrophy from chronic hypertension\n  - The thickened heart wall becomes stiff and impairs cardiac function over time\n- The same basic mechanism (cell enlargement) can be beneficial or harmful depending on the stimulus and context",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.011sa": [
+      "A patient with chronic high blood pressure develops thickening of the heart wall that impairs cardiac function. Is this an example of physiological or pathological hypertrophy?",
+      "Pathological hypertrophy",
+      "Harmful, not helpful",
+      "## Pathological Cardiac Hypertrophy\n\n- Chronic hypertension forces the heart to pump against increased resistance\n- The myocardium responds by increasing cell size (hypertrophy)\n- Initially compensatory, but over time the thickened wall becomes **stiff** and **less efficient**\n- This impairs filling (diastolic dysfunction) and can lead to heart failure\n- Contrast with physiological hypertrophy in athletes, which is reversible and does not impair function",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.012sa": [
+      "Why can hyperplasia only occur in tissues whose cells retain the ability to divide?",
+      "Because hyperplasia requires cells to undergo mitosis to increase cell number.",
+      "Division is the mechanism",
+      "## Hyperplasia and Mitotic Capacity\n\n- Hyperplasia = growth by increasing **cell number**\n- Increasing cell number requires **mitosis**\n- Tissues with post-mitotic cells (cardiac muscle, neurons) cannot undergo hyperplasia\n- Tissues with high mitotic capacity (epithelia, some connective tissues) readily undergo hyperplasia\n- This is why cardiac muscle can only hypertrophy, while the uterine lining can undergo hyperplasia each menstrual cycle",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.013sa": [
+      "Name three examples of hyperplasia in the body.",
+      "Thickening of the endometrium during the menstrual cycle, benign prostatic hyperplasia (BPH), and increased red blood cell production at high altitude.",
+      "Uterine lining, prostate, altitude",
+      "## Examples of Hyperplasia\n\n1. **Endometrial thickening**: estrogen stimulates proliferation of endometrial cells each menstrual cycle\n2. **Benign prostatic hyperplasia (BPH)**: prostate gland enlarges with aging due to increased cell number\n3. **Erythropoiesis at high altitude**: low oxygen triggers increased red blood cell production\n- All three demonstrate the body increasing cell populations in response to specific stimuli\n- Each can be either physiological or, if unregulated, potentially pathological",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.014sa": [
+      "What hormone stimulates hyperplasia of the endometrium during the menstrual cycle?",
+      "Estrogen",
+      "Primary female sex hormone",
+      "## Estrogen and Endometrial Hyperplasia\n\n- During the **proliferative phase** of the menstrual cycle, rising estrogen levels stimulate mitotic division of endometrial cells\n- This thickens the uterine lining in preparation for potential implantation\n- This is **physiological hyperplasia**: controlled, reversible, and stimulus-dependent\n- **Pathological** hyperplasia of the endometrium can occur with excessive or unopposed estrogen stimulation, increasing cancer risk",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.015sa": [
+      "What is the difference between physiological and pathological hyperplasia?",
+      "Physiological hyperplasia is a controlled, reversible response to a specific stimulus, while pathological hyperplasia is uncontrolled and can increase cancer risk if proliferating cells accumulate genetic errors.",
+      "Controlled vs. uncontrolled proliferation",
+      "## Physiological vs. Pathological Hyperplasia\n\n- **Physiological**:\n  - Controlled and reversible\n  - Responds to a specific stimulus\n  - Stops when the stimulus is removed\n  - Example: endometrial thickening each menstrual cycle\n- **Pathological**:\n  - Excessive or unregulated cell proliferation\n  - May persist even without the original stimulus\n  - Increased risk of **genetic errors** accumulating in rapidly dividing cells\n  - Can progress toward dysplasia and eventually neoplasia (cancer)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.016sa": [
+      "Which tissue types most commonly undergo hyperplasia?",
+      "Epithelial tissue and some connective tissues.",
+      "Lining and supporting tissues",
+      "## Tissues Prone to Hyperplasia\n\n- **Epithelial tissues** have high mitotic rates and frequently undergo hyperplasia\n  - Examples: skin epidermis, endometrium, glandular epithelia\n- **Some connective tissues** also retain mitotic capacity\n  - Examples: fibroblasts, bone marrow cells\n- Tissues with **post-mitotic cells** (cardiac muscle, most neurons) cannot undergo hyperplasia\n- The capacity for hyperplasia correlates directly with the tissue's **mitotic potential**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.017sa": [
+      "How does the pregnant uterus demonstrate both hypertrophy and hyperplasia occurring together?",
+      "The smooth muscle cells of the uterus both enlarge (hypertrophy) and increase in number (hyperplasia) to accommodate the growing fetus.",
+      "Two growth mechanisms, one organ",
+      "## Uterine Growth in Pregnancy\n\n- The uterus undergoes a dramatic size increase during pregnancy\n- **Hypertrophy**: existing smooth muscle cells enlarge\n- **Hyperplasia**: smooth muscle cells also divide to increase their number\n- This is possible because smooth muscle retains the ability to divide, unlike cardiac or skeletal muscle\n- Both mechanisms working together produce the massive uterine growth needed to accommodate the fetus",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.018sa": [
+      "Why can the smooth muscle of the uterus undergo both hypertrophy and hyperplasia, while cardiac muscle can only undergo hypertrophy?",
+      "Smooth muscle cells retain the ability to divide (allowing hyperplasia), while cardiac muscle cells are unable to undergo mitosis once mature.",
+      "Mitotic capacity differs",
+      "## Smooth Muscle vs. Cardiac Muscle Growth\n\n- **Smooth muscle**:\n  - Retains mitotic capability in adulthood\n  - Can grow by both cell enlargement (hypertrophy) and cell division (hyperplasia)\n  - Example: pregnant uterus uses both mechanisms\n- **Cardiac muscle**:\n  - Cells are essentially **post-mitotic** after maturation\n  - Can only grow by increasing individual cell size (hypertrophy)\n  - This limitation is why cardiac damage leads to scar formation rather than regeneration",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.019sa": [
+      "What are the three mechanisms by which atrophy can reduce tissue size?",
+      "Decreased cell size, decreased cell number (through apoptosis), or both.",
+      "Shrink, die, or both",
+      "## Mechanisms of Atrophy\n\n1. **Decreased cell size**: cells shrink by reducing their organelle content and protein synthesis\n2. **Decreased cell number**: cells undergo **apoptosis** (programmed cell death) and are not replaced\n3. **Both simultaneously**: tissue loses cells and remaining cells become smaller\n- The specific mechanism depends on the tissue type and the cause of atrophy\n- All three result in a measurable reduction in tissue mass and function",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.020sa": [
+      "What type of programmed cell death contributes to atrophy by reducing cell number?",
+      "Apoptosis",
+      "Orderly cellular self-destruction",
+      "## Apoptosis in Atrophy\n\n- Apoptosis is **programmed cell death**, a controlled, orderly process\n- During atrophy, cells that are no longer needed or supported undergo apoptosis\n- This reduces the total **cell population** in the tissue\n- Unlike necrosis (pathological cell death), apoptosis does not trigger inflammation\n- The combination of apoptosis (fewer cells) and cell shrinkage (smaller cells) can produce significant tissue wasting",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.021sa": [
+      "What is disuse atrophy?",
+      "The shrinkage of skeletal muscles during prolonged immobilization due to reduced functional demand.",
+      "Immobility-induced wasting",
+      "## Disuse Atrophy\n\n- Occurs when muscles are not used for extended periods\n- Common causes: casting a broken limb, prolonged bed rest, sedentary lifestyle\n- The muscle fibers **shrink** because there is no stimulus to maintain their size\n- Generally **reversible** with rehabilitation and resumed activity\n- Demonstrates the principle that tissues adapt their size to match functional demand",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.022sa": [
+      "What is denervation atrophy?",
+      "Atrophy that occurs when the nerve supply to a muscle is damaged, removing the trophic signals the nerve provides.",
+      "Nerve loss causes wasting",
+      "## Denervation Atrophy\n\n- Motor neurons provide **trophic (growth-maintaining) signals** to muscle fibers\n- When the nerve supply is damaged (injury, disease), these signals are lost\n- The muscle fibers atrophy rapidly without neural stimulation\n- More severe and harder to reverse than disuse atrophy\n- Examples: spinal cord injury, peripheral nerve damage, conditions like ALS",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.023sa": [
+      "What term describes atrophy that results from loss of nerve supply to a tissue?",
+      "Denervation atrophy",
+      "Neural disconnection wasting",
+      "## Denervation Atrophy\n\n- Nerves provide **trophic signals** that maintain muscle mass\n- Loss of innervation removes these signals, leading to rapid muscle wasting\n- Contrast with **disuse atrophy**, which results from reduced activity but intact innervation\n- Denervation atrophy is generally more severe and less reversible\n- Clinically important in spinal cord injuries, nerve compressions, and neurodegenerative diseases",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.024sa": [
+      "What are trophic signals in the context of nerve-muscle relationships?",
+      "Growth-maintaining signals provided by nerves that help sustain the size and health of the muscle tissue they innervate.",
+      "Neural maintenance messages",
+      "## Trophic Signals\n\n- **Trophic** = relating to nourishment or maintenance of growth\n- Motor neurons release factors that help maintain muscle fiber size and metabolic activity\n- These signals go beyond simply triggering contraction\n- When trophic signals are lost (denervation), the muscle wastes even if it could theoretically still contract\n- This is why denervation atrophy is more severe than simple disuse atrophy",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.025sa": [
+      "What is cachexia?",
+      "The wasting of tissues that occurs in starvation or chronic disease.",
+      "Disease- or starvation-driven wasting",
+      "## Cachexia\n\n- A severe form of atrophy involving widespread tissue wasting\n- Associated with:\n  - Chronic diseases (cancer, heart failure, COPD, AIDS)\n  - Prolonged starvation or malnutrition\n- Involves loss of both **skeletal muscle** and **adipose tissue**\n- Driven by inflammatory cytokines and metabolic changes, not simply reduced caloric intake\n- Difficult to reverse with nutrition alone, distinguishing it from simple starvation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.026sa": [
+      "What term describes the severe tissue wasting associated with starvation or chronic disease such as cancer?",
+      "Cachexia",
+      "Systemic wasting syndrome",
+      "## Cachexia\n\n- Pronounced tissue wasting that goes beyond simple weight loss\n- Driven by **inflammatory cytokines** and altered metabolism\n- Common in advanced cancer, heart failure, COPD\n- Involves loss of skeletal muscle mass that is not fully reversible with nutritional support\n- Distinct from disuse atrophy or denervation atrophy in that it is **systemic** rather than localized",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.027sa": [
+      "Give an example of atrophy caused by loss of hormonal stimulation.",
+      "Atrophy of the uterus after menopause, when estrogen levels decline.",
+      "Post-menopausal organ shrinkage",
+      "## Hormonal Atrophy\n\n- Many tissues depend on hormonal signals to maintain their size and function\n- When hormonal stimulation is withdrawn, these tissues atrophy\n- **Uterine atrophy after menopause**: declining estrogen removes the stimulus that maintains endometrial and myometrial mass\n- Other examples: thyroid atrophy after loss of TSH stimulation, adrenal atrophy from prolonged corticosteroid therapy (suppresses ACTH)\n- Demonstrates that tissue size is actively maintained by ongoing hormonal signals",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.028sa": [
+      "What two general conditions cause atrophy to occur?",
+      "Decreased demands on a tissue or reduced nutritional supply.",
+      "Less work or less fuel",
+      "## Causes of Atrophy\n\n- **Decreased demand**:\n  - Disuse (immobilization, inactivity)\n  - Denervation (loss of nerve signals)\n  - Loss of hormonal stimulation\n- **Reduced nutritional supply**:\n  - Ischemia (reduced blood flow)\n  - Starvation or malnutrition\n  - Chronic disease (cachexia)\n- In both cases, the tissue adapts to reduced requirements by shrinking\n- Atrophy is often a **reversible** adaptation, though severity and duration affect recoverability",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.029sa": [
+      "What is dysplasia, and how does it relate to hyperplasia in the context of cancer development?",
+      "Dysplasia is disordered growth with abnormal cell morphology. It can arise from pathological hyperplasia and represents a step in the progression toward neoplasia (cancer).",
+      "Disordered growth, pre-cancer",
+      "## Dysplasia and the Path to Cancer\n\n- **Dysplasia** = disordered cell growth with abnormal morphology\n- Recognized progression:\n  1. Normal tissue\n  2. **Hyperplasia** (increased cell number)\n  3. **Dysplasia** (abnormal cell appearance and organization)\n  4. **Neoplasia** (uncontrolled growth / tumor formation)\n- Not all hyperplasia leads to dysplasia, and not all dysplasia leads to cancer\n- But pathological hyperplasia with accumulating **genetic errors** increases the risk of this progression",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.030sa": [
+      "What is neoplasia?",
+      "Uncontrolled cell growth resulting in tumor formation.",
+      "New, unregulated growth",
+      "## Neoplasia\n\n- **Neo** = new, **plasia** = growth\n- Represents the final stage in the hyperplasia-dysplasia-neoplasia progression\n- Characterized by cells that proliferate **without normal regulatory controls**\n- Can be **benign** (localized, non-invasive) or **malignant** (invasive, capable of metastasis)\n- Distinguishing neoplasia from hyperplasia and dysplasia is critical for clinical diagnosis and treatment decisions",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.031sa": [
+      "Place the following in the correct order of the recognized cancer development pathway: neoplasia, hyperplasia, dysplasia.",
+      "Hyperplasia, dysplasia, neoplasia.",
+      "Proliferation, disorder, tumor",
+      "## The Hyperplasia-Dysplasia-Neoplasia Pathway\n\n1. **Hyperplasia**: increased cell number, cells still appear normal\n2. **Dysplasia**: cells show abnormal morphology and disordered organization\n3. **Neoplasia**: uncontrolled growth, tumor formation\n- Each step involves increasing loss of normal growth regulation\n- Pathological hyperplasia increases risk by creating more opportunities for **genetic errors** during rapid cell division\n- This sequence is well-documented in cancers of the cervix, colon, and endometrium",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.032sa": [
+      "Why does pathological hyperplasia increase the risk of cancer?",
+      "Rapidly proliferating cells are more likely to accumulate genetic errors, which can lead to dysplasia and eventually neoplasia.",
+      "More divisions, more mutation chances",
+      "## Hyperplasia and Cancer Risk\n\n- Each round of **mitosis** carries a small risk of DNA replication errors\n- Pathological hyperplasia involves **excessive, poorly regulated** cell division\n- More divisions = more opportunities for mutations to accumulate\n- If mutations affect **tumor suppressor genes** or **proto-oncogenes**, cells may lose growth regulation\n- This is why pathological hyperplasia is monitored clinically as a potential **precancerous condition**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.033sa": [
+      "What is benign prostatic hyperplasia (BPH)?",
+      "An enlargement of the prostate gland with aging due to an increase in cell number.",
+      "Aging prostate growth",
+      "## Benign Prostatic Hyperplasia\n\n- One of the most common examples of hyperplasia in clinical medicine\n- The prostate gland increases in size due to increased **cell number** (not just cell size)\n- Occurs commonly in aging males\n- \"Benign\" indicates it is not cancerous, though it can cause significant urinary symptoms\n- Demonstrates that hyperplasia can occur as a pathological process without necessarily progressing to cancer",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.02.034sa": [
+      "What process accounts for the increased production of red blood cells when a person moves to a high altitude?",
+      "Hyperplasia (specifically, increased erythropoiesis in the bone marrow).",
+      "More cells for more oxygen",
+      "## High-Altitude Erythropoiesis\n\n- At high altitude, lower oxygen levels trigger increased **erythropoietin (EPO)** release from the kidneys\n- EPO stimulates bone marrow to produce more red blood cells\n- This is **physiological hyperplasia**: a controlled, reversible response to a specific stimulus\n- The increased red blood cell count improves the blood's **oxygen-carrying capacity**\n- Production returns to normal if the person returns to lower altitude",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

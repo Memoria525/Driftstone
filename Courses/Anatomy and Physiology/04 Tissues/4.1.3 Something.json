@@ -1,0 +1,274 @@
+{
+  "cards": {
+    "01.04.01.03.001sa": [
+      "What are the four primary tissue types in the human body?",
+      "Epithelial, connective, muscle, and nervous",
+      "Think about the four broad functional categories that every tissue in the body falls into.",
+      "## The Four Primary Tissue Types\n\nEvery tissue in the human body belongs to one of these four categories:\n\n1. **Epithelial** - covers surfaces, lines cavities, forms glands\n2. **Connective** - supports, protects, and binds other tissues\n3. **Muscle** - specialized for contraction\n4. **Nervous** - specialized for communication\n\n- This classification has held since the 1800s because it reflects genuine biological distinctions at every level of analysis\n- In the living body, these four types are always found in combination within organs",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.002sa": [
+      "What is the alternative name for epithelial tissue?",
+      "Epithelium",
+      "It drops the word 'tissue' and uses a Latin-derived term.",
+      "## Epithelium\n\n- **Epithelium** is the standard anatomical term for epithelial tissue\n- The plural form is **epithelia**\n- Epithelial tissue covers body surfaces, lines internal cavities and passageways, and forms glands\n- It is always found at the interface between the body and the outside world or between different internal compartments",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.003sa": [
+      "Epithelial tissue covers body surfaces, lines __________ and __________, and forms __________.",
+      "Internal cavities, passageways, and glands",
+      "Think about where boundaries exist inside the body and what epithelial cells can organize into when they secrete products.",
+      "## Three Roles of Epithelial Tissue\n\n1. **Covers body surfaces** - e.g., the outer layer of skin\n2. **Lines internal cavities and passageways** - e.g., the lining of the mouth, the inner surface of blood vessels, the digestive tract\n3. **Forms glands** - e.g., the secretory cells of the pancreas\n\n- The unifying theme is that epithelial tissue is the tissue of boundaries, always positioned at interfaces where controlled exchange or protection is needed",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.004sa": [
+      "Where is epithelial tissue always found relative to the body and its internal compartments?",
+      "At the interface between the body and the outside world or between different internal compartments",
+      "Epithelial tissue is described as the tissue of boundaries.",
+      "## Epithelial Tissue Location\n\n- Epithelial tissue is always found at **interfaces**\n- These interfaces include:\n  - The boundary between the body and the external environment (e.g., skin surface)\n  - The boundary between different internal compartments (e.g., lining of blood vessels, lining of the digestive tract)\n- This positioning reflects its core function: controlling what crosses from one side to the other and providing protection at exposed surfaces",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.005sa": [
+      "Name four examples of epithelial tissue locations in the body.",
+      "The skin's outer layer, the lining of the mouth, the inner surface of blood vessels, and the secretory cells of the pancreas",
+      "Think about outer coverings, internal linings, and glandular structures.",
+      "## Examples of Epithelial Tissue Locations\n\n1. **Skin's outer layer** - protective barrier against the external environment\n2. **Lining of the mouth** - lines an internal passageway\n3. **Inner surface of blood vessels** - lines an internal cavity\n4. **Secretory cells of the pancreas** - glandular epithelium\n\n- These examples illustrate the three roles of epithelial tissue: covering surfaces, lining cavities/passageways, and forming glands",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.006sa": [
+      "Which of the four primary tissue types is the most abundant and structurally diverse?",
+      "Connective tissue",
+      "This tissue type includes not only bone and cartilage but also blood and fat.",
+      "## Connective Tissue: Most Abundant and Diverse\n\n- Connective tissue is the most abundant tissue type in the body\n- Its diversity is remarkable, encompassing:\n  - Structural tissues: bone, cartilage, tendons\n  - Fluid tissue: blood\n  - Energy storage tissue: fat (adipose)\n  - Packing material: loose connective tissue filling spaces between organs\n- What unites all of these is that connective tissue cells are always separated by large amounts of extracellular matrix",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.007sa": [
+      "What are three functions of connective tissue?",
+      "Support, protect, and bind other tissues together",
+      "Think about structural roles: holding things up, keeping things safe, and holding things together.",
+      "## Connective Tissue Functions\n\n1. **Support** - provides structural framework (e.g., bone supports the body, cartilage supports the airway)\n2. **Protect** - shields organs and structures (e.g., bone protects the brain, fat cushions the kidneys)\n3. **Bind** - connects tissues and organs to one another (e.g., tendons bind muscle to bone, ligaments bind bone to bone)\n\n- These functions all relate to the structural and mechanical roles that connective tissue plays throughout the body",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.008sa": [
+      "What characteristic unites all connective tissues despite their remarkable variety?",
+      "Connective tissue cells are always separated by large amounts of extracellular matrix",
+      "Focus on what surrounds the cells rather than the cells themselves.",
+      "## The Unifying Feature of Connective Tissue\n\n- Regardless of type, connective tissue cells are always separated by large amounts of **extracellular matrix (ECM)**\n- This sets connective tissue apart from epithelial tissue, which is almost entirely cells with minimal matrix\n- The ECM determines many of the tissue's properties:\n  - In bone, the ECM is hard and calcified\n  - In blood, the ECM is liquid (plasma)\n  - In tendons, the ECM is dense and fibrous\n- The nature of the ECM is what makes each connective tissue subtype structurally and functionally distinct",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.009sa": [
+      "What is the defining specialization of muscle tissue?",
+      "Contraction (the ability to shorten and generate force)",
+      "Think about what all three types of muscle have in common at the most basic functional level.",
+      "## Muscle Tissue Specialization\n\n- The defining feature of all muscle tissue is **contraction**: the ability to shorten and generate force\n- This single specialization is expressed in three distinct varieties:\n  1. **Skeletal muscle** - voluntary movement\n  2. **Cardiac muscle** - pumping of the heart\n  3. **Smooth muscle** - involuntary movements in hollow organs and blood vessels\n- Despite their differences in structure and control, all three types share this fundamental contractile ability",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.010sa": [
+      "What are the three varieties of muscle tissue?",
+      "Skeletal muscle, cardiac muscle, and smooth muscle",
+      "One is voluntary, one is found in a specific organ, and one lines hollow structures.",
+      "## Three Varieties of Muscle Tissue\n\n1. **Skeletal muscle** - attached to bones, responsible for voluntary movement\n2. **Cardiac muscle** - found only in the heart, responsible for pumping blood\n3. **Smooth muscle** - found in walls of hollow organs and blood vessels, responsible for involuntary movements\n\n- All three share the ability to contract but differ in:\n  - Location\n  - Whether they are under voluntary or involuntary control\n  - Microscopic appearance (striated vs. non-striated)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.011sa": [
+      "Which type of muscle tissue is attached to bones and responsible for voluntary movement?",
+      "Skeletal muscle",
+      "The name of this muscle type directly reflects what it attaches to.",
+      "## Skeletal Muscle\n\n- Skeletal muscle is attached to bones via tendons\n- It is the only type of muscle tissue under **voluntary** (conscious) control\n- Responsible for all deliberate body movements: walking, lifting, facial expressions\n- It is also called **striated muscle** because of its striped appearance under the microscope",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.012sa": [
+      "Which type of muscle tissue is found only in the heart?",
+      "Cardiac muscle",
+      "The name of this muscle type is derived from the organ it is exclusive to.",
+      "## Cardiac Muscle\n\n- Cardiac muscle is found **exclusively** in the heart\n- It is involuntary, meaning it contracts without conscious control\n- Like skeletal muscle, cardiac muscle is striated (has a striped appearance)\n- Cardiac muscle cells are connected by specialized junctions (intercalated discs) that allow the heart to contract as a coordinated unit",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.013sa": [
+      "Where is smooth muscle found, and what types of movement is it responsible for?",
+      "Smooth muscle is found in the walls of hollow organs and blood vessels and is responsible for involuntary movements such as digestion and blood pressure regulation.",
+      "Think about the organs that move substances through the body without you consciously controlling them.",
+      "## Smooth Muscle\n\n- **Location**: walls of hollow organs (stomach, intestines, bladder, uterus) and blood vessels\n- **Control**: involuntary\n- **Functions include**:\n  - Propelling food through the digestive tract (peristalsis)\n  - Regulating blood vessel diameter and blood pressure\n  - Controlling airway diameter in the lungs\n  - Moving urine through the ureters\n- Called \"smooth\" because it lacks the striped appearance of skeletal and cardiac muscle under the microscope",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.014sa": [
+      "Name two examples of involuntary movements carried out by smooth muscle.",
+      "Digestion and blood pressure regulation",
+      "Think about processes happening inside hollow organs and blood vessels that you do not consciously control.",
+      "## Involuntary Smooth Muscle Actions\n\n- **Digestion**: smooth muscle in the walls of the stomach and intestines contracts rhythmically to churn and propel food (peristalsis)\n- **Blood pressure regulation**: smooth muscle in blood vessel walls contracts or relaxes to change vessel diameter, which directly affects blood pressure\n- Other examples include:\n  - Urine movement through ureters\n  - Constriction and dilation of airways\n  - Pupil size changes in the eye",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.015sa": [
+      "What is the defining specialization of nervous tissue?",
+      "Communication (detecting stimuli, processing information, and transmitting electrical and chemical signals)",
+      "Think about what the brain, spinal cord, and nerves all do at the most fundamental level.",
+      "## Nervous Tissue Specialization\n\n- The defining specialization of nervous tissue is **communication**\n- This involves three core activities:\n  1. **Detecting stimuli** - sensory input from inside and outside the body\n  2. **Processing information** - integration and interpretation (primarily in the brain and spinal cord)\n  3. **Transmitting signals** - both electrical and chemical, throughout the body\n- Nervous tissue enables everything from reflexes to conscious thought to organ regulation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.016sa": [
+      "Nervous tissue detects __________, processes __________, and transmits __________ and __________ signals throughout the body.",
+      "Stimuli, information, electrical, and chemical",
+      "Think about the sequence: what comes in, what happens to it, and what goes out, and in what two forms.",
+      "## Nervous Tissue Functions\n\n- **Detects stimuli** - the initial input (e.g., touch, temperature, light, sound, chemical changes)\n- **Processes information** - the brain and spinal cord interpret and integrate sensory data\n- **Transmits signals** in two forms:\n  1. **Electrical signals** - nerve impulses (action potentials) travel along neurons\n  2. **Chemical signals** - neurotransmitters carry signals across the gaps (synapses) between neurons\n- This detect-process-transmit sequence is the basis of all nervous system function",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.017sa": [
+      "Name the three areas of the body where nervous tissue is concentrated.",
+      "The brain, spinal cord, and peripheral nerves",
+      "Think about where the central and peripheral parts of the nervous system are located.",
+      "## Nervous Tissue Locations\n\n1. **Brain** - the primary center for processing and integration\n2. **Spinal cord** - connects the brain to the rest of the body and handles reflexes\n3. **Peripheral nerves** - extend from the brain and spinal cord to all parts of the body\n\n- The brain and spinal cord together make up the **central nervous system (CNS)**\n- The peripheral nerves make up the **peripheral nervous system (PNS)**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.018sa": [
+      "What are the two cell types that make up nervous tissue?",
+      "Neurons and neuroglia (glial cells)",
+      "One type generates and transmits signals; the other type supports and maintains the first.",
+      "## Two Cell Types of Nervous Tissue\n\n1. **Neurons**\n   - Generate and transmit electrical and chemical signals\n   - The functional signaling cells of nervous tissue\n2. **Neuroglia (glial cells)**\n   - Support, protect, and maintain neurons\n   - Far more numerous than neurons\n   - Include several subtypes with different roles (e.g., insulation, nutrient supply, immune defense)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.019sa": [
+      "What is the function of neurons?",
+      "To generate and transmit signals (electrical and chemical)",
+      "Think about the active signaling cells of the nervous system.",
+      "## Neuron Function\n\n- Neurons are the signaling cells of nervous tissue\n- Their primary function is to **generate and transmit** signals\n- These signals take two forms:\n  1. **Electrical** - nerve impulses (action potentials) that travel along the neuron\n  2. **Chemical** - neurotransmitters released at synapses to communicate with other cells\n- Neurons are responsible for everything from detecting a hot surface to coordinating a complex thought",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.020sa": [
+      "What is another name for neuroglia?",
+      "Glial cells",
+      "This term is a shortened, more common version of the full name.",
+      "## Neuroglia / Glial Cells\n\n- **Neuroglia** and **glial cells** are interchangeable terms\n- \"Glia\" comes from the Greek word for \"glue,\" reflecting the early (now outdated) belief that these cells simply held neurons together\n- In reality, glial cells perform critical functions:\n  - Supporting and protecting neurons\n  - Providing nutrients\n  - Forming insulating myelin sheaths\n  - Performing immune functions in the nervous system",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.021sa": [
+      "What is the function of neuroglia (glial cells)?",
+      "To support, protect, and maintain neurons",
+      "These cells do not transmit signals themselves but keep the signaling cells healthy and functional.",
+      "## Neuroglia Function\n\n- Neuroglia serve three broad functions for neurons:\n  1. **Support** - structural and metabolic support, including nutrient delivery\n  2. **Protect** - immune defense and insulation (myelination)\n  3. **Maintain** - regulate the chemical environment around neurons\n- Without glial cells, neurons cannot survive or function properly\n- Glial cells outnumber neurons significantly in the nervous system",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.022sa": [
+      "True or false: The four tissue types typically exist independently of each other in the body.",
+      "False. The four tissue types are always found in combination in the living body.",
+      "Think about whether any organ in the body is made of only one tissue type.",
+      "## Tissue Types Work Together\n\n- No organ is made of a single tissue type\n- The four tissue types are **always found in combination**\n- It is their specific arrangement and interaction within an organ that determines how that organ functions\n- Example: the stomach contains:\n  - Epithelial tissue lining its inner surface\n  - Connective tissue providing structural support\n  - Smooth muscle tissue churning its contents\n  - Nervous tissue regulating its activity",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.023sa": [
+      "What determines how an organ functions in terms of its tissue composition?",
+      "The specific arrangement and interaction of the four tissue types within that organ",
+      "It is not just which tissue types are present but how they are organized relative to each other.",
+      "## Tissue Arrangement Determines Organ Function\n\n- Every organ contains all four tissue types\n- What makes each organ unique is the **specific arrangement and interaction** of those tissues\n- Different proportions and spatial organization produce different functions:\n  - The heart has a large proportion of cardiac muscle arranged in layers\n  - The brain has a large proportion of nervous tissue organized into distinct regions\n  - The skin has stratified epithelium over connective tissue with scattered nerve endings and small muscles\n- Disruption of this arrangement (through disease or injury) impairs organ function",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.024sa": [
+      "Which tissue type is composed of almost entirely cells with minimal extracellular matrix?",
+      "Epithelial tissue",
+      "This tissue type forms tightly packed sheets and boundaries with very little material between its cells.",
+      "## Epithelial Tissue: Cell-Dense\n\n- Epithelial tissue is **almost entirely cells** with minimal extracellular matrix between them\n- This stands in sharp contrast to connective tissue, which is mostly matrix with relatively few cells\n- The tight packing of epithelial cells is what allows it to form effective barriers and boundaries\n- Cells are held tightly together by cell junctions (tight junctions, desmosomes, adherens junctions, etc.)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.025sa": [
+      "Which tissue type is composed of mostly extracellular matrix with relatively few cells?",
+      "Connective tissue",
+      "This is the same tissue type that is the most abundant and structurally diverse.",
+      "## Connective Tissue: Matrix-Dense\n\n- Connective tissue is **mostly extracellular matrix** with relatively few cells scattered within it\n- This is the opposite of epithelial tissue, which is almost entirely cells\n- The properties of the ECM determine the properties of each connective tissue subtype:\n  - Liquid matrix = blood\n  - Hard, calcified matrix = bone\n  - Flexible, firm matrix = cartilage\n  - Dense fibrous matrix = tendons and ligaments",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.026sa": [
+      "Compared to epithelial and connective tissue, how do muscle and nervous tissue relate to their extracellular material?",
+      "Muscle and nervous tissue fall between the two extremes, having neither minimal matrix like epithelial tissue nor predominantly matrix like connective tissue.",
+      "Think about a spectrum with epithelial tissue at one end and connective tissue at the other.",
+      "## Cell-to-Matrix Spectrum\n\n- The four tissue types can be placed on a spectrum based on the ratio of cells to extracellular material:\n  1. **Epithelial tissue** - almost entirely cells, minimal matrix\n  2. **Muscle and nervous tissue** - intermediate, falling between the two extremes\n  3. **Connective tissue** - mostly matrix, relatively few cells\n- This difference has major implications for:\n  - How each tissue type behaves mechanically\n  - How each tissue type heals after injury\n  - How each tissue type responds to disease",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.01.03.027sa": [
+      "What term describes the non-cellular material that separates connective tissue cells from one another?",
+      "Extracellular matrix (ECM)",
+      "This term literally means 'material outside the cells.'",
+      "## Extracellular Matrix (ECM)\n\n- The **extracellular matrix** is the non-cellular material that fills the space between connective tissue cells\n- It is composed of two main components:\n  1. **Ground substance** - gel-like material containing water, proteins, and polysaccharides\n  2. **Protein fibers** - collagen, elastic, and reticular fibers\n- The ECM is not just passive filler; it actively influences cell behavior, tissue strength, and tissue function\n- The composition of the ECM varies by connective tissue type and determines the tissue's physical properties",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

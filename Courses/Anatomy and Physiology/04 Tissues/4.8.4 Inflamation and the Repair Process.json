@@ -1,0 +1,324 @@
+{
+  "cards": {
+    "01.04.08.04.001sa": [
+      "In tissue repair, what protective process must occur before regeneration or fibrosis can begin?",
+      "Inflammation",
+      "Response, not disease",
+      "## Inflammation as Prerequisite\n\n- Inflammation is the body's **immediate** response to tissue damage\n- It is protective, not pathological\n- Three critical functions:\n  1. Clears debris\n  2. Fights infection\n  3. Sets the stage for repair\n- Neither regeneration nor fibrosis can proceed until inflammation has completed its preparatory work",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.002sa": [
+      "What are the four classic signs of inflammation and their Latin names?",
+      "Redness (rubor), heat (calor), swelling (tumor), pain (dolor)",
+      "Celsus described them",
+      "## Cardinal Signs of Inflammation\n\n- First described by the Roman physician **Celsus**:\n  1. **Rubor** - redness (from vasodilation)\n  2. **Calor** - heat (from increased blood flow)\n  3. **Tumor** - swelling (from fluid leakage)\n  4. **Dolor** - pain (from pressure and chemical irritation)\n- A fifth sign, **functio laesa** (loss of function), was added later by **Virchow**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.003sa": [
+      "Which Roman physician first described the four classic signs of inflammation?",
+      "Celsus",
+      "Roman, not Greek",
+      "## Celsus\n\n- Described the four cardinal signs nearly two thousand years ago\n- Rubor, calor, tumor, dolor\n- A fifth sign (functio laesa) was added centuries later by **Virchow**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.004sa": [
+      "What fifth sign of inflammation was added after the original four, and who added it?",
+      "Loss of function (functio laesa), added by Virchow",
+      "Father of modern pathology",
+      "## Functio Laesa\n\n- **Functio laesa** = loss of function\n- Added by **Rudolf Virchow**\n- Results from the combined effects of swelling, pain, and tissue damage\n- The original four signs were described by **Celsus**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.005sa": [
+      "What does the Latin term 'functio laesa' mean in the context of inflammation?",
+      "Loss of function",
+      "Virchow's fifth sign",
+      "## Functio Laesa\n\n- Loss of function\n- Added by Virchow as the fifth cardinal sign\n- Results from the combined effects of swelling, pain, and tissue damage\n- Example: an inflamed joint becomes stiff and difficult to move",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.006sa": [
+      "What resident immune cells are especially important in initiating the inflammatory response by releasing chemical mediators?",
+      "Mast cells",
+      "Resident, not circulating",
+      "## Mast Cells\n\n- Found in connective tissues, especially near blood vessels\n- Release chemical mediators upon tissue damage:\n  - Histamine\n  - Prostaglandins\n  - Cytokines\n  - Complement proteins\n- These mediators trigger vasodilation, increased vascular permeability, and chemotaxis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.007sa": [
+      "Name four categories of chemical mediators released by damaged cells and mast cells during inflammation.",
+      "Histamine, prostaglandins, cytokines, complement proteins",
+      "Four types of signals",
+      "## Chemical Mediators\n\n1. **Histamine** - vasodilation and increased permeability\n2. **Prostaglandins** - vasodilation, pain, fever\n3. **Cytokines** - coordinate immune response, attract cells\n4. **Complement proteins** - assist pathogen destruction, amplify response\n\n- Together they trigger vasodilation, vascular permeability, and chemotaxis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.008sa": [
+      "What three vascular and cellular events do chemical mediators trigger during inflammation?",
+      "Vasodilation, increased vascular permeability, chemotaxis",
+      "Widen, leak, attract",
+      "## Three Key Inflammatory Events\n\n1. **Vasodilation** - vessels widen, producing redness and heat\n2. **Increased vascular permeability** - fluid leaks out, producing swelling\n3. **Chemotaxis** - white blood cells are attracted to the injury site\n\n- All three are triggered by chemical mediators from mast cells and damaged cells",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.009sa": [
+      "During inflammation, what vascular change produces redness and heat at the injury site?",
+      "Vasodilation",
+      "Vessels widen",
+      "## Vasodilation\n\n- Widening of blood vessels\n- Increases local blood flow\n- Produces **rubor** (redness) and **calor** (heat)\n- Triggered primarily by histamine from mast cells\n- Also facilitates delivery of immune cells and plasma proteins",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.010sa": [
+      "During inflammation, what vascular change allows plasma proteins and fluid to leak into tissue, producing swelling?",
+      "Increased vascular permeability",
+      "Vessel walls become leaky",
+      "## Increased Vascular Permeability\n\n- Blood vessel walls become more permeable\n- Plasma proteins and fluid leak into surrounding tissue\n- Produces **tumor** (swelling)\n- The leaked fluid contains clotting factors, antibodies, and complement proteins\n- Pressure from accumulated fluid also contributes to **dolor** (pain)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.011sa": [
+      "What term describes the chemical attraction of white blood cells to an injury site during inflammation?",
+      "Chemotaxis",
+      "Chemical gradient guides movement",
+      "## Chemotaxis\n\n- Directed migration of cells along a chemical gradient\n- Attracts white blood cells to the injury site\n- Arrival sequence:\n  1. **Neutrophils** first (within hours)\n  2. **Macrophages** later\n- Driven by cytokines, complement fragments, and bacterial products",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.012sa": [
+      "Which white blood cells are the first to arrive at an injury site during inflammation?",
+      "Neutrophils",
+      "Arrive within hours",
+      "## Neutrophils: First Responders\n\n- First white blood cells at the injury site\n- Arrive within **hours** of injury\n- Primary function: **phagocytosis** of bacteria, dead cells, and debris\n- Short-lived; eventually replaced by **macrophages**",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.013sa": [
+      "What do neutrophils do when they arrive at a site of tissue injury?",
+      "Phagocytize bacteria, dead cells, and debris",
+      "Engulf and digest",
+      "## Neutrophil Function\n\n- **Phagocytosis** is their primary activity\n- They engulf and digest:\n  - Bacteria\n  - Dead cells\n  - Cellular debris\n- They are short-lived and are replaced by macrophages, which continue cleanup and initiate repair signaling",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.014sa": [
+      "Which immune cells arrive after neutrophils at an injury site and transition the process from inflammation to repair?",
+      "Macrophages",
+      "Cleanup plus repair signals",
+      "## Macrophages: Bridge to Repair\n\n- Arrive **after** neutrophils\n- Two key roles:\n  1. Continue phagocytic cleanup\n  2. Release growth factors and cytokines that initiate repair\n- Their signaling stimulates:\n  - **Fibroblast proliferation** (collagen production)\n  - **Angiogenesis** (new blood vessel formation)\n- Pivotal cell in shifting from inflammation to the repair phase",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.015sa": [
+      "What term describes the formation of new blood vessels during tissue repair?",
+      "Angiogenesis",
+      "Vessel birth",
+      "## Angiogenesis\n\n- Formation of new blood vessels from pre-existing vessels\n- Stimulated by **growth factors released by macrophages**\n- Essential because new tissue requires oxygen and nutrient supply\n- The new capillaries give **granulation tissue** its red, granular appearance",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.016sa": [
+      "What is granulation tissue?",
+      "Temporary repair tissue composed of new capillaries, fibroblasts, and loose ECM",
+      "Red, granular, temporary",
+      "## Granulation Tissue\n\n- A **temporary tissue** formed during the repair phase\n- Three components:\n  1. **New capillaries** (from angiogenesis)\n  2. **Proliferating fibroblasts** (producing collagen)\n  3. **Loose ECM**\n- Fills the wound from the bottom up\n- Provides the vascular supply and structural base for either regeneration or fibrosis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.017sa": [
+      "Why does granulation tissue appear red and granular?",
+      "Because of its abundant new capillaries",
+      "Tiny vessel loops throughout",
+      "## Granulation Tissue Appearance\n\n- **Red** color from dense network of new capillaries\n- **Granular** texture from small bead-like capillary loop projections\n- Clinically, healthy red granulation tissue is a positive sign of normal wound repair",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.018sa": [
+      "During wound repair, what happens to granulation tissue if the damaged tissue is capable of regeneration?",
+      "It is replaced by the original tissue type as parenchymal cells proliferate",
+      "Original cells reclaim space",
+      "## Regeneration Outcome\n\n- Granulation tissue serves as a temporary scaffold\n- New **parenchymal cells** (epithelial, muscle, etc.) proliferate and replace it\n- Result: **restoration of normal tissue architecture**\n- This is the ideal outcome because function is fully restored\n- Tissues with high regenerative capacity are more likely to follow this path",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.019sa": [
+      "During wound repair, what happens to granulation tissue if the damaged tissue cannot regenerate?",
+      "It matures into scar tissue",
+      "Permanent collagen replaces it",
+      "## Fibrosis Outcome\n\n- Granulation tissue matures into **scar tissue**\n- Changes during maturation:\n  1. Collagen fibers become densely packed and cross-linked\n  2. Blood vessels regress\n  3. Result is a pale, tough, relatively avascular scar\n- Composed mainly of **type I collagen**\n- Restores structural integrity but not original function",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.020sa": [
+      "What type of collagen is the primary component of mature scar tissue?",
+      "Type I collagen",
+      "Body's most abundant type",
+      "## Type I Collagen in Scars\n\n- Dominant structural protein in mature scars\n- Also the most abundant collagen in the body overall (bone, tendons, ligaments, dermis)\n- In scar tissue, type I collagen fibers are:\n  - Densely packed\n  - Cross-linked\n  - Reorganized along lines of mechanical stress during remodeling",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.021sa": [
+      "Describe the appearance and composition of mature scar tissue.",
+      "Pale, tough, avascular tissue composed mainly of dense type I collagen",
+      "No blood supply, mostly collagen",
+      "## Mature Scar Tissue\n\n- **Pale** because blood vessels have regressed\n- **Tough** from densely packed, cross-linked collagen\n- **Avascular** (relatively) compared to surrounding tissue\n- Composed mainly of **type I collagen**\n- Reaches only about **80%** of original tissue tensile strength",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.022sa": [
+      "How long can scar remodeling continue after the initial injury?",
+      "Months to years",
+      "Far outlasts initial healing",
+      "## Scar Remodeling Timeline\n\n- Remodeling is a **prolonged process** lasting months to years\n- During this time:\n  - Collagen fibers are reorganized along lines of mechanical stress\n  - The scar gradually becomes stronger\n- Even after full maturation, the scar only reaches about **80%** of original tensile strength",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.023sa": [
+      "During scar remodeling, how are collagen fibers reorganized?",
+      "Along lines of mechanical stress",
+      "Stress dictates orientation",
+      "## Collagen Reorganization\n\n- Initially, scar collagen is deposited somewhat randomly\n- Over months to years, fibers are **realigned along lines of mechanical stress**\n- This reorganization increases tensile strength\n- Involves ongoing collagen breakdown and resynthesis by fibroblasts\n- Matrix metalloproteinases (MMPs) play a key role in this remodeling",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.024sa": [
+      "What percentage of original tensile strength does a fully mature scar typically reach?",
+      "About 80%",
+      "Never fully restored",
+      "## Scar Strength Limit\n\n- A mature scar reaches approximately **80%** of original tissue tensile strength\n- The deficit exists because:\n  - Collagen organization is less precise than in original tissue\n  - Original tissue architecture is not fully restored\n- This is why previously injured areas remain more susceptible to re-injury",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.025sa": [
+      "How does pathological acute inflammation differ from chronic inflammation?",
+      "Acute is too intense and causes rapid tissue destruction; chronic persists weeks to years causing ongoing damage and fibrosis",
+      "Intensity versus duration",
+      "## Pathological Inflammation\n\n### Excessive Acute\n- Too intense, causes rapid tissue destruction\n- Examples: severe allergic reactions, sepsis\n\n### Chronic\n- Persists **weeks to years**\n- Produces ongoing tissue damage, progressive fibrosis, and loss of function\n- Examples: rheumatoid arthritis, inflammatory bowel disease, chronic hepatitis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.026sa": [
+      "Name two conditions in which acute inflammation becomes excessively intense and destructive.",
+      "Severe allergic reactions and sepsis",
+      "Overreaction, systemic crisis",
+      "## Destructive Acute Inflammation\n\n- **Severe allergic reactions** (anaphylaxis)\n  - Massive mediator release\n  - Systemic vasodilation, airway constriction\n- **Sepsis**\n  - Systemic inflammatory response to infection\n  - Can lead to organ failure\n- In both, the inflammatory response itself becomes the primary source of damage",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.027sa": [
+      "Name three clinical conditions associated with chronic inflammation.",
+      "Rheumatoid arthritis, inflammatory bowel disease, chronic hepatitis",
+      "Joints, gut, liver",
+      "## Chronic Inflammatory Conditions\n\n1. **Rheumatoid arthritis** - chronic synovial inflammation destroying cartilage and bone\n2. **Inflammatory bowel disease** - chronic GI tract inflammation (Crohn's, ulcerative colitis)\n3. **Chronic hepatitis** - persistent liver inflammation leading to fibrosis and cirrhosis\n\n- All illustrate the cycle: sustained inflammation leads to tissue damage, fibrosis, and functional decline",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.028sa": [
+      "What three tissue-level consequences result from chronic inflammation?",
+      "Ongoing tissue damage, fibrosis, and loss of function",
+      "Damage, scarring, decline",
+      "## Consequences of Chronic Inflammation\n\n1. **Ongoing tissue damage** - inflammatory process continually destroys normal tissue\n2. **Fibrosis** - repeated damage-repair cycles produce excessive scar tissue\n3. **Loss of function** - functional tissue replaced by fibrotic tissue\n\n- This pattern is seen across many organ systems (liver cirrhosis, joint destruction, pulmonary fibrosis)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.029sa": [
+      "What two repair-promoting processes do macrophages stimulate through growth factor and cytokine release?",
+      "Fibroblast proliferation and angiogenesis",
+      "Build matrix, build vessels",
+      "## Macrophage Repair Signaling\n\n- Macrophages release growth factors and cytokines that stimulate:\n  1. **Fibroblast proliferation** - fibroblasts produce collagen and ECM\n  2. **Angiogenesis** - new blood vessel formation\n- These two processes are essential for forming **granulation tissue**\n- This signaling is what transitions the wound from inflammation to active repair",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.030sa": [
+      "List the five major steps of the inflammatory response sequence, from initial tissue injury through the transition to repair.",
+      "1) Tissue injury occurs, 2) Mast cells and damaged cells release chemical mediators, 3) Vasodilation, increased vascular permeability, and chemotaxis occur, 4) Neutrophils arrive and phagocytize debris, 5) Macrophages arrive, continue cleanup, and release growth factors to initiate repair",
+      "Injury, signals, vessels, neutrophils, macrophages",
+      "## Inflammatory Response Sequence\n\n1. **Tissue injury** (cut, burn, infection, etc.)\n2. **Chemical mediator release** by mast cells and damaged cells (histamine, prostaglandins, cytokines, complement proteins)\n3. **Vascular and cellular responses** triggered:\n   - Vasodilation (redness, heat)\n   - Increased vascular permeability (swelling)\n   - Chemotaxis (WBC recruitment)\n4. **Neutrophils arrive first** (within hours), phagocytize bacteria, dead cells, debris\n5. **Macrophages arrive later**, continue cleanup, and release growth factors/cytokines that stimulate fibroblast proliferation and angiogenesis\n\n- This final step marks the transition from inflammation to the repair phase",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.031sa": [
+      "List the five steps of the tissue repair process, from granulation tissue formation through scar maturation.",
+      "1) Granulation tissue forms (new capillaries, fibroblasts, loose ECM), 2) Granulation tissue fills wound from bottom up, 3) Either parenchymal cells replace it (regeneration) or it matures into scar tissue (fibrosis), 4) In fibrosis, collagen densifies, vessels regress, scar forms, 5) Scar remodels over months to years as collagen aligns along stress lines",
+      "Build, fill, diverge, densify, remodel",
+      "## Tissue Repair Sequence\n\n1. **Granulation tissue forms**\n   - New capillaries (angiogenesis)\n   - Proliferating fibroblasts (collagen production)\n   - Loose ECM\n2. **Granulation tissue fills the wound** from the bottom up\n3. **Repair pathway diverges:**\n   - **Regeneration:** parenchymal cells replace granulation tissue, restoring normal architecture\n   - **Fibrosis:** granulation tissue matures into scar tissue\n4. **Scar maturation** (fibrosis path):\n   - Collagen becomes densely packed and cross-linked\n   - Blood vessels regress\n   - Scar becomes pale, tough, avascular\n5. **Scar remodeling** (months to years):\n   - Collagen reorganized along lines of mechanical stress\n   - Scar reaches ~80% of original tensile strength",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.08.04.032sa": [
+      "List the three changes that occur as granulation tissue matures into scar tissue.",
+      "1) Collagen fibers become densely packed and cross-linked, 2) Blood vessels regress, 3) The tissue becomes a pale, tough, avascular scar",
+      "Collagen, vessels, appearance",
+      "## Granulation to Scar Maturation\n\n1. **Collagen densification** - fibers become tightly packed and cross-linked\n2. **Vascular regression** - the abundant capillaries of granulation tissue are reabsorbed\n3. **Final appearance** - pale, tough, relatively avascular scar composed mainly of type I collagen\n\n- These changes reflect the transition from a highly vascular, cellular repair tissue to a dense, relatively acellular structural patch",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

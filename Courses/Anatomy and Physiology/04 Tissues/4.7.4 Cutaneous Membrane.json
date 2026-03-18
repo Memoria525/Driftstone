@@ -1,0 +1,304 @@
+{
+  "cards": {
+    "01.04.07.04.001sa": [
+      "What is the cutaneous membrane?",
+      "The skin",
+      "Body's outer covering",
+      "## Cutaneous Membrane\n- The cutaneous membrane is another name for the skin\n- It is the body's largest organ by both surface area and weight\n- It covers the entire external surface of the body\n- Its primary role is to form a barrier between the body's internal environment and the outside world\n- Unlike mucous and serous membranes, it is a **dry** membrane exposed to air",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.002sa": [
+      "What is the body's largest organ by surface area and weight?",
+      "The skin (cutaneous membrane)",
+      "Covers your exterior",
+      "## The Skin as an Organ\n- The skin qualifies as an organ because it is composed of multiple tissue types working together\n- It consists of two principal layers: the epidermis (epithelial) and the dermis (connective)\n- By both surface area and weight, it surpasses all other organs in size",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.003sa": [
+      "What primary function does the cutaneous membrane serve for the body?",
+      "It forms the primary barrier between the body's internal environment and the outside world",
+      "Boundary role",
+      "## Barrier Function\n- The skin separates and protects the body's internal environment from the external environment\n- This includes protection against:\n  1. Physical abrasion\n  2. Water loss\n  3. Microbial invasion\n- This barrier function is made possible by the keratinized surface of the epidermis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.004sa": [
+      "How does the cutaneous membrane differ from mucous and serous membranes in terms of moisture and environmental exposure?",
+      "It is dry and exposed to air, unlike the moist mucous and serous membranes",
+      "Think internal vs. external",
+      "## Dry vs. Moist Membranes\n- Mucous membranes line body cavities open to the exterior and are kept moist by mucus secretions\n- Serous membranes line closed body cavities and are kept moist by serous fluid\n- The cutaneous membrane is the only tissue membrane designed to function in direct contact with the external environment\n- Its dry, keratinized surface is an adaptation for air exposure",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.005sa": [
+      "Which tissue membrane is the only one designed to function in direct contact with the external environment?",
+      "The cutaneous membrane (skin)",
+      "Exposed to air",
+      "## Unique Environmental Exposure\n- Mucous and serous membranes are internal, moist membranes\n- The cutaneous membrane alone faces the outside world directly\n- This requires special adaptations:\n  1. Keratinization for waterproofing\n  2. A tough, multi-layered epidermis for physical protection\n  3. A dry surface that resists microbial colonization",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.006sa": [
+      "What are the two layers of the cutaneous membrane?",
+      "The epidermis (superficial) and the dermis (deep)",
+      "One epithelial, one connective",
+      "## Two-Layer Structure\n- **Epidermis**: the superficial layer\n  - Composed of keratinized stratified squamous epithelium\n  - Avascular\n- **Dermis**: the deeper layer\n  - Composed of dense irregular connective tissue\n  - Richly supplied with blood vessels, nerve endings, and accessory structures",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.007sa": [
+      "What type of tissue makes up the epidermis of the cutaneous membrane?",
+      "Keratinized stratified squamous epithelium",
+      "Layered, flat, tough protein",
+      "## Epidermal Epithelium\n- **Stratified**: multiple cell layers provide durability against abrasion\n- **Squamous**: the surface cells are flat\n- **Keratinized**: the surface cells are filled with keratin, a tough structural protein\n- This combination produces a waterproof, abrasion-resistant barrier\n- This is the same general epithelial type but keratinized specifically because the surface is exposed to air",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.008sa": [
+      "What type of tissue makes up the dermis of the cutaneous membrane?",
+      "Dense irregular connective tissue",
+      "Strong fibers, many directions",
+      "## Dermal Connective Tissue\n- **Dense**: high proportion of collagen fibers relative to ground substance\n- **Irregular**: fibers are arranged in multiple directions rather than parallel bundles\n- This arrangement provides strength against forces from many directions, which suits the skin's need to resist stretching and tearing in all planes\n- The dermis also contains blood vessels, nerve endings, hair follicles, sweat glands, and sebaceous glands",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.009sa": [
+      "Name four structures found within the dermis of the skin.",
+      "Blood vessels, nerve endings, hair follicles, and sweat glands (also sebaceous glands)",
+      "Vessels, nerves, accessories",
+      "## Dermal Contents\n- The dermis is richly supplied with accessory structures:\n  1. **Blood vessels** providing nutrients and thermoregulation\n  2. **Nerve endings** for sensation\n  3. **Hair follicles**\n  4. **Sweat glands** (eccrine and apocrine)\n  5. **Sebaceous (oil) glands**\n- These structures are embedded within the dense irregular connective tissue of the dermis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.010sa": [
+      "Is the epidermis vascular or avascular? How does it receive nutrients?",
+      "The epidermis is avascular and receives nutrients by diffusion from the dermis",
+      "No blood vessels in this layer",
+      "## Epidermal Nutrition\n- The epidermis contains no blood vessels of its own\n- All nutrients must diffuse upward from the capillaries in the dermis\n- This means cells farther from the dermis receive less nourishment\n- This is why the outermost epidermal cells die and become filled with keratin: they are too far from the blood supply to remain alive",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.011sa": [
+      "What is the predominant cell type in the epidermis?",
+      "Keratinocytes",
+      "Named for the protein they produce",
+      "## Keratinocytes\n- Keratinocytes make up the vast majority of epidermal cells\n- They are arranged in multiple layers representing progressive stages of differentiation\n- At the base: actively dividing cells\n- At the surface: dead, flattened cells filled with keratin\n- The progression from living to dead cells is a continuous process as cells are pushed upward by new divisions below",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.012sa": [
+      "In the epidermis, where are the actively dividing keratinocytes located?",
+      "At the base of the epidermis (stratum basale)",
+      "Foundation layer",
+      "## Stratum Basale\n- The deepest layer of the epidermis\n- Contains the actively dividing (mitotic) keratinocytes\n- These cells are closest to the dermal blood supply, which supports their high metabolic demands\n- As new cells are produced, older cells are pushed toward the surface\n- This is the regenerative engine of the epidermis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.013sa": [
+      "What are the dead, flattened, keratin-filled cells at the surface of the epidermis part of?",
+      "The stratum corneum",
+      "Outermost \"horny\" layer",
+      "## Stratum Corneum\n- The most superficial layer of the epidermis\n- Composed of dead, flattened keratinocytes packed with keratin\n- These cells have lost their nuclei and organelles\n- They form interlocking sheets that create the skin's tough outer barrier\n- Cells are continuously shed from the surface and replaced from below",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.014sa": [
+      "What three protective functions does the outermost layer of dead epidermal cells (stratum corneum) perform?",
+      "Resists abrasion, prevents water loss, and blocks entry of microorganisms",
+      "Physical, hydration, microbial",
+      "## Triple Barrier Function\n1. **Resists abrasion**: the tough, keratinized cells withstand mechanical wear\n2. **Prevents water loss**: keratin and lipids between cells create a waterproof seal, preventing dehydration of deeper tissues\n3. **Blocks microorganisms**: the continuous sheet of dead cells is difficult for pathogens to penetrate\n- All three functions depend on the keratin protein and the tightly packed arrangement of dead cells",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.015sa": [
+      "What protein fills the dead surface cells of the epidermis and gives them their protective properties?",
+      "Keratin",
+      "Tough, structural, fibrous",
+      "## Keratin\n- A tough, fibrous structural protein\n- Produced by keratinocytes as they differentiate and move toward the surface\n- Fills the cells completely by the time they reach the stratum corneum\n- Responsible for the waterproof, abrasion-resistant properties of the skin surface\n- Also the main structural protein in hair and nails",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.016sa": [
+      "What three properties does the dermis provide to the skin?",
+      "Structural strength, elasticity, and vascular supply",
+      "Strong, stretchy, nourished",
+      "## Dermal Contributions\n1. **Structural strength**: from collagen fibers that resist tearing\n2. **Elasticity**: from elastic fibers that allow stretch and recoil\n3. **Vascular supply**: blood vessels deliver nutrients to both the dermis itself and the avascular epidermis above\n- The dermis is the mechanical and nutritional foundation of the skin",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.017sa": [
+      "What type of fiber in the dermis is responsible for resisting tearing?",
+      "Collagen fibers",
+      "Most abundant body protein",
+      "## Collagen in the Dermis\n- Collagen fibers provide high tensile strength\n- They resist pulling and tearing forces\n- Arranged in an irregular pattern (dense irregular connective tissue) so the skin can resist forces from multiple directions\n- Collagen is the most abundant protein in the human body and is a major structural component of many tissues",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.018sa": [
+      "What type of fiber in the dermis allows the skin to stretch and recoil?",
+      "Elastic fibers",
+      "Snap-back property",
+      "## Elastic Fibers in the Dermis\n- Composed primarily of the protein elastin\n- Allow the skin to stretch when pulled and return to its original shape when released\n- Work in concert with collagen fibers: collagen limits how far the skin can stretch, elastic fibers return it to resting shape\n- Loss of elastic fiber function with aging contributes to wrinkling and sagging of the skin",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.019sa": [
+      "How does the avascular epidermis receive its blood supply?",
+      "From blood vessels in the dermis, which supply nutrients to both the dermis and the epidermis above it",
+      "Dermal capillaries feed upward",
+      "## Vascular Supply to the Skin\n- Blood vessels are located in the dermis, not the epidermis\n- Nutrients diffuse upward from dermal capillaries into the epidermis\n- This arrangement means the dermis serves as the nutritional lifeline for the epidermis\n- Cells at the epidermal surface are too far from the blood supply to survive, which is why they die and become keratinized",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.020sa": [
+      "What is the hypodermis, and what is it also called?",
+      "The layer below the cutaneous membrane, also called the subcutaneous layer or superficial fascia",
+      "Sub-skin connective layer",
+      "## Hypodermis\n- Also known as:\n  1. Subcutaneous layer\n  2. Superficial fascia\n- Located directly below the dermis\n- Important: it is **not** technically part of the skin itself\n- It is a separate underlying layer that connects the skin to deeper body structures",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.021sa": [
+      "Is the hypodermis technically part of the skin (cutaneous membrane)?",
+      "No, it is an underlying layer beneath the skin",
+      "Below but separate",
+      "## Hypodermis and the Skin Boundary\n- The cutaneous membrane consists of only two layers: epidermis and dermis\n- The hypodermis lies beneath the dermis but is not considered part of the skin\n- It is composed of loose connective tissue and adipose tissue\n- It serves as the anchor and cushion between the skin and the structures beneath it (muscle, bone)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.022sa": [
+      "What two tissue types make up the hypodermis?",
+      "Loose connective tissue and adipose tissue",
+      "Flexible and fatty",
+      "## Hypodermis Composition\n- **Loose connective tissue**: provides a flexible connection between the skin and deeper structures\n- **Adipose tissue**: fat cells that contribute to insulation, shock absorption, and energy storage\n- This combination allows the skin to move somewhat freely over underlying muscles and bones",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.023sa": [
+      "List four functions of the hypodermis.",
+      "Anchors skin to deeper structures, provides insulation, absorbs shock, and serves as an energy reserve",
+      "Anchor, insulate, cushion, store",
+      "## Functions of the Hypodermis\n1. **Anchoring**: attaches the skin to underlying muscles, bones, and other structures\n2. **Insulation**: adipose tissue reduces heat loss from the body\n3. **Shock absorption**: cushions deeper structures from external mechanical forces\n4. **Energy reserve**: stored fat can be mobilized for metabolic fuel when needed",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.024sa": [
+      "Which layer of the cutaneous membrane is superficial: the epidermis or the dermis?",
+      "The epidermis",
+      "\"Epi-\" means upon or above",
+      "## Epidermal Position\n- The prefix \"epi-\" means upon or above\n- The epidermis sits on top of the dermis\n- It is the layer you can see and touch\n- It is the thinner of the two layers but is the primary protective barrier",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.025sa": [
+      "In the context of tissue membranes, what makes the cutaneous membrane a composite structure?",
+      "It is composed of both epithelial tissue (epidermis) and connective tissue (dermis)",
+      "Two tissue categories combined",
+      "## Composite Membrane Structure\n- Tissue membranes generally consist of an epithelial layer supported by a connective tissue layer\n- The cutaneous membrane follows this pattern:\n  - **Epithelial component**: keratinized stratified squamous epithelium (epidermis)\n  - **Connective tissue component**: dense irregular connective tissue (dermis)\n- This two-tissue composition is what defines it as a tissue membrane\n- The same composite principle applies to mucous and serous membranes, though synovial membranes are the exception (connective tissue only)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.026sa": [
+      "What happens to keratinocytes as they move from the base of the epidermis toward the surface?",
+      "They progressively differentiate, filling with keratin, losing their organelles, and dying to form the tough protective surface layer",
+      "Living to dead gradient",
+      "## Keratinocyte Life Cycle\n- At the stratum basale: cells are alive, metabolically active, and dividing\n- As cells are pushed upward by new divisions:\n  1. They flatten in shape\n  2. They accumulate more and more keratin\n  3. They gradually lose their nuclei and organelles\n  4. They die\n- At the stratum corneum: cells are dead, flat, and fully keratinized\n- This progression is continuous and takes roughly 2 to 4 weeks from division to shedding",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.027sa": [
+      "What structure lies between the epidermis and the dermis and helps anchor them together?",
+      "The basement membrane",
+      "Thin extracellular boundary",
+      "## Basement Membrane\n- A thin extracellular structure at the junction of epithelium and connective tissue\n- In the skin, it lies between the epidermis and dermis\n- Functions:\n  1. Anchors the epidermis to the dermis\n  2. Acts as a selective filter for nutrient diffusion\n  3. Provides a scaffold to guide cell migration during repair\n- Damage to the basement membrane can impair the skin's structural integrity",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.028sa": [
+      "Why does the epidermis have a high regenerative capacity despite being avascular?",
+      "Because the actively dividing keratinocytes at the base (stratum basale) are close enough to the dermal blood supply to sustain continuous cell division",
+      "Proximity to dermal vessels",
+      "## Epidermal Regeneration\n- The stratum basale sits directly on the basement membrane, adjacent to dermal capillaries\n- This proximity ensures adequate nutrient delivery by diffusion to support mitosis\n- New cells continuously push older cells toward the surface\n- This makes the epidermis a **labile tissue** with high turnover\n- Superficial wounds that do not penetrate the dermis can heal entirely by regeneration without scarring",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.029sa": [
+      "Which layer of the skin contains the blood vessels that provide thermoregulation?",
+      "The dermis",
+      "Deeper, vascularized layer",
+      "## Dermal Vasculature and Thermoregulation\n- Blood vessels in the dermis can dilate or constrict to regulate heat loss:\n  - **Vasodilation**: increases blood flow near the surface, releasing heat\n  - **Vasoconstriction**: decreases surface blood flow, conserving heat\n- The epidermis has no blood vessels and plays no direct role in vascular thermoregulation\n- Sweat glands in the dermis also contribute to cooling through evaporation",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.07.04.030sa": [
+      "What term refers to the subcutaneous layer that is not technically part of the skin but lies directly beneath it?",
+      "Hypodermis (subcutaneous layer or superficial fascia)",
+      "Below the dermis",
+      "## Naming the Hypodermis\n- Three interchangeable terms:\n  1. **Hypodermis** (hypo- = below, dermis = skin)\n  2. **Subcutaneous layer** (sub- = below, cutaneous = skin)\n  3. **Superficial fascia** (fascia = band or sheet of connective tissue; \"superficial\" distinguishes it from deep fascia around muscles)\n- All three names describe the same layer of loose connective tissue and adipose tissue beneath the dermis",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

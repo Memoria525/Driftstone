@@ -1,0 +1,304 @@
+{
+  "cards": {
+    "01.05.03.03.001sa": [
+      "Approximately what percentage of total dermal thickness does the reticular layer account for?",
+      "~80%",
+      "Vast majority of the dermis",
+      "## Reticular Layer Thickness\n- The reticular layer is the thick, deep sublayer of the dermis\n- It makes up roughly 80% of the dermis's total thickness\n- The remaining ~20% is the superficial papillary layer\n- This bulk is what gives the dermis most of its structural substance",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.002sa": [
+      "Which sublayer of the dermis accounts for approximately 80% of its total thickness?",
+      "The reticular layer",
+      "The deeper of the two",
+      "## Reticular Layer Thickness\n- The dermis has two sublayers: the superficial papillary layer and the deep reticular layer\n- The reticular layer is the dominant sublayer by volume, accounting for ~80% of total dermal thickness\n- Its thickness is due to the abundance of thick collagen fiber bundles and interwoven elastic fibers",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.003sa": [
+      "Is the reticular layer the superficial or deep sublayer of the dermis?",
+      "Deep",
+      "Below the papillary layer",
+      "## Reticular Layer Position\n- The dermis is divided into two sublayers:\n  1. **Papillary layer**: superficial, directly beneath the epidermis\n  2. **Reticular layer**: deep, accounting for ~80% of dermal thickness\n- The reticular layer's deep boundary gradually transitions into the hypodermis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.004sa": [
+      "What type of connective tissue composes the reticular layer of the dermis?",
+      "Dense irregular connective tissue",
+      "Fiber direction is the key word",
+      "## Reticular Layer Composition\n- Dense irregular connective tissue features thick collagen fiber bundles running in multiple directions\n- \"Irregular\" refers to the multidirectional arrangement of fibers (as opposed to dense regular, where fibers run parallel)\n- This tissue type provides strength against forces from all directions",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.005sa": [
+      "Which sublayer of the dermis is composed of dense irregular connective tissue?",
+      "The reticular layer",
+      "The thicker sublayer",
+      "## Reticular Layer Composition\n- The reticular layer is the deep sublayer of the dermis, composed of dense irregular connective tissue\n- The multidirectional collagen fiber bundles give the reticular layer strength in all directions\n- By contrast, the papillary layer is composed of areolar connective tissue",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.006sa": [
+      "What two types of protein fibers are found in the reticular layer of the dermis?",
+      "Collagen fibers and elastic fibers",
+      "Strength and recoil",
+      "## Reticular Layer Fibers\n- **Collagen fiber bundles**: thick, arranged in multiple directions, provide tensile strength\n- **Elastic fibers**: interwoven with the collagen bundles, provide stretch and recoil\n- Together, these fibers give the reticular layer both toughness and flexibility",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.007sa": [
+      "How are collagen fiber bundles arranged in the reticular layer?",
+      "In multiple directions (multidirectional)",
+      "Not parallel",
+      "## Collagen Arrangement\n- Collagen fiber bundles run in multiple directions through the reticular layer\n- This multidirectional arrangement provides strength against pulling forces from any direction\n- This is the defining characteristic of dense irregular connective tissue",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.008sa": [
+      "How are elastic fibers arranged relative to the collagen bundles in the reticular layer?",
+      "Interwoven with the collagen bundles",
+      "Think threads in fabric",
+      "## Fiber Arrangement\n- Elastic fibers are not in separate zones; they are interwoven among the collagen fiber bundles\n- Collagen provides tensile strength; elastic fibers provide stretch and recoil\n- This interwoven arrangement allows both fiber types to work together throughout the entire layer",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.009sa": [
+      "Why does the multidirectional arrangement of collagen in the reticular layer provide a structural advantage?",
+      "It provides strength in all directions",
+      "Forces don't come from one angle",
+      "## Multidirectional Collagen\n- Forces on the skin can come from any direction: stretching, pulling, compression\n- Because collagen bundles run in multiple directions, some bundles always resist any given force regardless of its direction\n- This is the basis of the reticular layer's role as the primary source of dermal toughness and structural integrity",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.010sa": [
+      "Which sublayer of the dermis is primarily responsible for the skin's overall toughness and structural integrity?",
+      "The reticular layer",
+      "The thicker, deeper sublayer",
+      "## Structural Role of the Reticular Layer\n- The reticular layer accounts for ~80% of dermal thickness\n- Its dense irregular connective tissue, with thick multidirectional collagen bundles and interwoven elastic fibers, provides:\n  - Tensile strength in all directions\n  - Overall toughness\n  - Structural integrity\n- The papillary layer is thin and composed of looser areolar tissue",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.011sa": [
+      "What property of the dermis is the reticular layer primarily responsible for?",
+      "Overall toughness and structural integrity",
+      "Think durability, not sensation",
+      "## Structural Role of the Reticular Layer\n- The reticular layer is the primary structural component of the dermis\n- Its thick, multidirectional collagen fiber bundles resist tearing and deformation\n- Interwoven elastic fibers allow stretch and recoil without permanent deformation\n- This combination produces the skin's characteristic toughness",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.012sa": [
+      "In the reticular layer, are the collagen fiber bundles described as thin or thick?",
+      "Thick",
+      "Robust construction",
+      "## Collagen in the Reticular Layer\n- The reticular layer contains thick collagen fiber bundles\n- These thick bundles, arranged multidirectionally, are what give the reticular layer its strength\n- This contrasts with the thinner, looser fibers found in the papillary layer's areolar connective tissue",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.013sa": [
+      "What does the term 'irregular' in dense irregular connective tissue refer to regarding fiber arrangement?",
+      "Fibers run in multiple directions rather than parallel",
+      "It describes orientation",
+      "## Dense Irregular vs. Dense Regular\n- **Dense irregular**: collagen fibers run in multiple directions, providing multidirectional strength\n- **Dense regular**: collagen fibers run parallel, providing strength along one axis (e.g., tendons, ligaments)\n- The reticular layer uses the irregular arrangement because skin must resist forces from all directions",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.014sa": [
+      "List five types of structures found in the spaces between fiber bundles of the reticular layer.",
+      "Adipose tissue, hair follicles, sweat glands, sebaceous glands, blood vessels",
+      "Fat, two glands, and two others",
+      "## Structures Within the Reticular Layer\n- The reticular layer is not solid fiber; spaces exist between collagen bundles\n- These spaces house:\n  1. Adipose tissue\n  2. Hair follicles\n  3. Sweat glands\n  4. Sebaceous glands\n  5. Blood vessels\n- These structures are embedded within the reticular layer rather than sitting on top of or below it",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.015sa": [
+      "Where within the dermis are hair follicles, sweat glands, and sebaceous glands primarily housed?",
+      "In the spaces between fiber bundles of the reticular layer",
+      "Between the fibers of the deep sublayer",
+      "## Dermal Accessory Structures\n- Hair follicles, sweat glands, and sebaceous glands are located in spaces between the collagen fiber bundles of the reticular layer\n- They share this space with adipose tissue and blood vessels\n- The reticular layer's thickness provides room for these structures to be embedded within the dermis",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.016sa": [
+      "Is the deep boundary of the reticular layer a sharp or gradual transition?",
+      "Gradual (not sharp)",
+      "No clear dividing line",
+      "## Reticular Layer Boundary\n- The deep boundary of the reticular layer is not a sharp, well-defined line\n- Instead, it gradually transitions into the hypodermis (subcutaneous layer)\n- This contrasts with the epidermis-dermis boundary, which is more clearly defined at the basement membrane",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.017sa": [
+      "What does the reticular layer gradually transition into at its deep boundary?",
+      "The hypodermis (subcutaneous layer)",
+      "The layer just below the dermis",
+      "## Reticular Layer Deep Boundary\n- The reticular layer is the deepest sublayer of the dermis\n- At its deep margin, it gradually blends into the hypodermis\n- There is no sharp dividing line between the two layers\n- The hypodermis lies beneath the dermis and is primarily composed of adipose tissue",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.018sa": [
+      "Which layer of the integument does the reticular layer gradually transition into at its deep boundary?",
+      "The hypodermis",
+      "Below the dermis",
+      "## Deep Boundary of the Reticular Layer\n- The reticular layer sits at the bottom of the dermis\n- Its deep boundary is not sharp; it gradually transitions into the hypodermis\n- The hypodermis (also called the subcutaneous layer) is the deepest layer of the integument",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.019sa": [
+      "What type of sensory receptor is found in the reticular layer of the dermis?",
+      "Lamellar (Pacinian) corpuscles",
+      "Named for their layered structure",
+      "## Sensory Receptors in the Reticular Layer\n- Lamellar corpuscles (also called Pacinian corpuscles) are located in the reticular layer\n- They detect deep pressure and vibration\n- Their location in the deep dermis is consistent with their role in sensing deep mechanical stimuli\n- The papillary layer, by contrast, houses tactile (Meissner's) corpuscles for light touch",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.020sa": [
+      "By what other name are lamellar corpuscles known?",
+      "Pacinian corpuscles",
+      "Named after an Italian anatomist",
+      "## Lamellar / Pacinian Corpuscles\n- These receptors have two commonly used names:\n  - **Lamellar corpuscles** (descriptive name, referring to their layered structure)\n  - **Pacinian corpuscles** (eponymous name, after Filippo Pacini)\n- Found in the reticular layer of the dermis\n- Detect deep pressure and vibration",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.021sa": [
+      "What is another name for Pacinian corpuscles?",
+      "Lamellar corpuscles",
+      "Refers to their layered appearance",
+      "## Pacinian / Lamellar Corpuscles\n- These receptors have two commonly used names:\n  - **Pacinian corpuscles** (eponymous name)\n  - **Lamellar corpuscles** (descriptive name, from their concentric layered structure)\n- Located in the reticular layer of the dermis\n- Detect deep pressure and vibration",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.022sa": [
+      "What two types of stimuli do lamellar (Pacinian) corpuscles detect?",
+      "Deep pressure and vibration",
+      "Not surface-level sensations",
+      "## Lamellar Corpuscle Function\n- Lamellar (Pacinian) corpuscles are mechanoreceptors that detect:\n  1. Deep pressure\n  2. Vibration\n- Their location in the reticular layer (deep dermis) is consistent with detecting stimuli that penetrate beyond the skin surface\n- This contrasts with receptors in the papillary layer, which detect lighter, more superficial touch",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.023sa": [
+      "Which sensory receptor in the dermis is responsible for detecting deep pressure and vibration?",
+      "Lamellar (Pacinian) corpuscles",
+      "Found in the deep sublayer",
+      "## Deep Pressure and Vibration Detection\n- Lamellar (Pacinian) corpuscles are the dermal receptors responsible for deep pressure and vibration\n- They are located in the reticular layer of the dermis\n- Their deep position matches their function of detecting stimuli that require significant force to reach them",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.024sa": [
+      "In which sublayer of the dermis are lamellar (Pacinian) corpuscles located?",
+      "The reticular layer",
+      "The deep sublayer",
+      "## Location of Lamellar Corpuscles\n- Lamellar (Pacinian) corpuscles are located in the reticular layer (deep dermis)\n- This deep location is consistent with their role in detecting deep pressure and vibration\n- By contrast, tactile (Meissner's) corpuscles are found in the papillary layer and detect light touch",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.025sa": [
+      "Besides glands and follicles, what type of connective tissue is found in the spaces between fiber bundles of the reticular layer?",
+      "Adipose tissue",
+      "Energy storage tissue",
+      "## Adipose Tissue in the Reticular Layer\n- Adipose tissue occupies some of the spaces between collagen fiber bundles in the reticular layer\n- It shares this space with hair follicles, sweat glands, sebaceous glands, and blood vessels\n- This is distinct from the larger adipose deposits found in the hypodermis below",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.026sa": [
+      "Besides adipose tissue, glands, and follicles, what vascular structures occupy the spaces between fiber bundles of the reticular layer?",
+      "Blood vessels",
+      "Circulatory supply",
+      "## Blood Vessels in the Reticular Layer\n- Blood vessels are among the structures housed in the spaces between collagen fiber bundles\n- They share this space with adipose tissue, hair follicles, sweat glands, and sebaceous glands\n- These vessels contribute to the dermal blood supply that nourishes the skin",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.027sa": [
+      "True or false: The reticular layer of the dermis is thinner than the papillary layer.",
+      "False; the reticular layer accounts for ~80% of dermal thickness",
+      "Consider which sublayer dominates",
+      "## Relative Thickness of Dermal Sublayers\n- The reticular layer is far thicker than the papillary layer\n- It accounts for approximately 80% of total dermal thickness\n- The papillary layer makes up the remaining ~20%",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.028sa": [
+      "What structural feature of the reticular layer allows it to resist forces applied from any direction?",
+      "Multidirectional collagen fiber bundles",
+      "Orientation of the main protein fiber",
+      "## Multidirectional Strength\n- The collagen fiber bundles in the reticular layer run in multiple directions\n- This means that no matter what direction a force is applied, some collagen bundles are oriented to resist it\n- This is the defining feature of dense irregular connective tissue and the basis of the reticular layer's toughness",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.029sa": [
+      "How does the reticular layer's fiber composition differ from what you would expect in dense regular connective tissue?",
+      "Fibers run in multiple directions instead of parallel",
+      "Regular means orderly alignment",
+      "## Dense Irregular vs. Dense Regular\n- **Dense regular connective tissue**: collagen fibers are aligned parallel to each other, providing strength along a single axis (e.g., tendons)\n- **Dense irregular connective tissue** (reticular layer): collagen fibers run in multiple directions, providing strength in all directions\n- The skin needs multidirectional strength because it is subjected to forces from many angles",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.05.03.03.030sa": [
+      "What two types of glands are found within the spaces of the reticular layer?",
+      "Sweat glands and sebaceous glands",
+      "One for perspiration, one for oil",
+      "## Glands in the Reticular Layer\n- Two types of glands occupy spaces between collagen fiber bundles in the reticular layer:\n  1. **Sweat glands**: involved in thermoregulation and excretion\n  2. **Sebaceous glands**: produce sebum (oil)\n- These glands are embedded alongside adipose tissue, hair follicles, and blood vessels",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

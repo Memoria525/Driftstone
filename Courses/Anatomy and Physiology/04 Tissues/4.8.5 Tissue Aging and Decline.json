@@ -1,0 +1,384 @@
+{
+"cards": {
+"01.04.08.05.001sa": [
+"What two broad categories of factors drive tissue aging?",
+"Intrinsic factors and extrinsic factors",
+"Nature and nurture",
+"## Factors Driving Tissue Aging\n- Intrinsic factors: programmed genetic changes and accumulation of molecular damage over time\n- Extrinsic factors: environmental exposures, lifestyle, and disease\n- Aging changes are gradual, cumulative, and universal across all tissue types\n- The interplay between these two categories determines the rate and severity of tissue decline in any individual",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.002sa": [
+"What are the two intrinsic factors that contribute to tissue aging?",
+"Programmed genetic changes and accumulation of molecular damage over time",
+"Code and wear",
+"## Intrinsic Aging Factors\n- Programmed genetic changes: built-in shifts in gene expression that occur over the lifespan\n- Molecular damage accumulation: the gradual buildup of errors and damage at the DNA, protein, and organelle level\n- These are distinguished from extrinsic factors (environmental exposures, lifestyle, disease) because they occur independently of outside influence",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.003sa": [
+"Name three extrinsic factors that contribute to tissue aging.",
+"Environmental exposures, lifestyle, and disease",
+"Outside influences",
+"## Extrinsic Aging Factors\n- Environmental exposures: UV radiation, pollution, toxins\n- Lifestyle: diet, exercise habits, smoking, alcohol use\n- Disease: chronic illness and repeated injury accelerate tissue decline\n- These are contrasted with intrinsic factors (programmed genetic changes and molecular damage accumulation)",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.004sa": [
+"What happens to the rate of cell division in epithelial tissue with aging?",
+"Cell division slows",
+"Mitosis wanes",
+"## Epithelial Aging\n- Slowed cell division leads to thinner, less robust epithelial layers\n- The basement membrane thickens and loses permeability\n- In the skin specifically, the epidermis thins, the dermal-epidermal junction flattens, and collagen and elastic fibers in the dermis are lost\n- The combined effect is slower wound healing, increased fragility, wrinkles, and sagging",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.005sa": [
+"What two changes occur in the basement membrane of epithelial tissue with aging?",
+"It thickens and loses permeability",
+"Barrier changes, two directions",
+"## Basement Membrane Aging\n- Thickening of the basement membrane reduces the efficiency of diffusion across it\n- Loss of permeability impairs nutrient and waste exchange between the epithelium and underlying connective tissue\n- This is significant because epithelial tissue is avascular and depends entirely on diffusion through the basement membrane for its metabolic needs",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.006sa": [
+"What happens to the dermal-epidermal junction in aging skin, and what consequence does this have?",
+"It flattens, reducing the surface area for nutrient exchange",
+"Ridges smooth out",
+"## Dermal-Epidermal Junction Aging\n- In young skin, the junction has rete ridges (epidermal projections) and dermal papillae that interlock, creating a large surface area\n- With aging, this junction flattens\n- Reduced surface area means less efficient nutrient exchange between the vascular dermis and the avascular epidermis\n- This contributes to the overall thinning and fragility of aged skin",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.007sa": [
+"What three visible skin changes result from the loss of collagen and elastic fibers in the dermis with aging?",
+"Wrinkles, sagging, and increased fragility",
+"Look in the mirror",
+"## Dermal Fiber Loss\n- Collagen loss: reduces tensile strength and structural support\n- Elastic fiber loss: reduces the ability of skin to snap back after stretching\n- The combined result is:\n  1. Wrinkles (loss of structural support)\n  2. Sagging (loss of elasticity)\n  3. Increased fragility (thinner, weaker tissue more prone to tearing and bruising)",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.008sa": [
+"Why does wound healing slow in aging epithelial tissue?",
+"Both epithelial regeneration and underlying connective tissue repair mechanisms become less efficient",
+"Two repair systems decline",
+"## Wound Healing and Aging\n- Epithelial regeneration slows because the rate of cell division decreases\n- Connective tissue repair is also impaired due to reduced fibroblast activity, decreased collagen synthesis, and slower angiogenesis\n- Both layers must cooperate for effective wound closure, so decline in either system delays the overall process",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.009sa": [
+"What are advanced glycation end-products (AGEs), and how do they affect connective tissue?",
+"Molecules formed when sugars bind to and alter collagen, accelerating cross-linking and reducing flexibility",
+"Sweet molecules, stiff result",
+"## Advanced Glycation End-Products (AGEs)\n- Formed by non-enzymatic reactions between sugars and proteins (especially collagen)\n- AGEs accelerate the formation of cross-links between collagen fibers\n- Cross-linked collagen is stiffer and less flexible\n- This process occurs gradually in everyone but is accelerated in conditions with elevated blood sugar (e.g., diabetes)\n- AGEs affect connective tissues throughout the body, contributing to stiffness in tendons, ligaments, blood vessels, and skin",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.010sa": [
+"What process causes collagen fibers to become stiffer with aging?",
+"Accumulation of cross-links between collagen fibers",
+"Bonds between fibers build up",
+"## Collagen Cross-Linking\n- Cross-links form between adjacent collagen molecules over time\n- This is a normal process but accelerates with age and with exposure to AGEs\n- Cross-linked collagen resists stretching and deformation\n- The result is stiffer, less resilient connective tissue throughout the body",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.011sa": [
+"What two degenerative changes can occur in elastic fibers with aging?",
+"They may fragment or calcify",
+"Break apart or harden",
+"## Elastic Fiber Aging\n- Elastic fibers lose their ability to recoil\n- Fragmentation: fibers break into smaller pieces, losing continuity\n- Calcification: mineral deposits form within the fibers, making them rigid\n- Both changes reduce the tissue's ability to stretch and return to its original shape\n- This affects skin, blood vessels, lungs, and other elastic-fiber-rich tissues",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.012sa": [
+"What changes occur in ground substance with aging?",
+"It decreases in volume and water content",
+"Drier and less of it",
+"## Ground Substance Aging\n- Ground substance is the gel-like material that fills the space between cells and fibers in connective tissue\n- With aging, its volume decreases and it loses water content\n- This reduces the tissue's ability to:\n  - Resist compression\n  - Provide cushioning\n  - Facilitate diffusion of nutrients and waste\n- These changes contribute to joint stiffness, reduced shock absorption, and impaired tissue nutrition",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.013sa": [
+"What happens to articular cartilage with aging?",
+"It thins and becomes more prone to damage",
+"Joint surfaces wear down",
+"## Articular Cartilage Aging\n- Articular cartilage covers the ends of bones at synovial joints\n- With aging, it thins due to decreased chondrocyte activity and reduced proteoglycan content\n- Thinner cartilage provides less cushioning and is more susceptible to mechanical damage\n- This is a key factor in the development of osteoarthritis",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.014sa": [
+"Why do intervertebral discs lose height with aging, and what does this contribute to?",
+"They lose water content and height, contributing to loss of stature",
+"Spinal cushions dry out",
+"## Intervertebral Disc Aging\n- The nucleus pulposus of intervertebral discs is rich in proteoglycans that attract and hold water\n- With aging, proteoglycan content decreases, so the discs lose water and compress\n- Reduced disc height across multiple vertebral levels results in measurable loss of overall stature\n- Dehydrated discs are also less effective as shock absorbers and more prone to herniation",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.015sa": [
+"What happens to tendons and ligaments with aging?",
+"They become stiffer and more prone to injury",
+"Less give, more snap",
+"## Tendon and Ligament Aging\n- Collagen cross-linking increases stiffness\n- Elastic fiber degradation reduces flexibility\n- Ground substance water loss decreases resilience\n- The combined effect is connective tissue that is less able to absorb sudden forces, making tears and ruptures more likely",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.016sa": [
+"What condition results when bone resorption by osteoclasts outpaces bone formation by osteoblasts with aging?",
+"Osteopenia and osteoporosis",
+"Bone density drops",
+"## Bone Mass and Aging\n- Bone is constantly remodeled by osteoclasts (resorption) and osteoblasts (formation)\n- In youth, these processes are balanced or favor formation\n- With aging, resorption outpaces formation, leading to net bone loss\n- Osteopenia: moderate reduction in bone density\n- Osteoporosis: severe reduction in bone density with increased fracture risk\n- Hormonal changes (especially declining estrogen) accelerate this imbalance",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.017sa": [
+"What is sarcopenia?",
+"The progressive loss of skeletal muscle mass and performance with aging",
+"Age-related muscle wasting",
+"## Sarcopenia\n- Involves multiple concurrent changes:\n  1. Progressive loss of skeletal muscle fibers\n  2. Decrease in fiber size (atrophy)\n  3. Shift from fast-twitch to slow-twitch fibers\n  4. Replacement of lost muscle with adipose and fibrous tissue\n- Results in reduced strength, power, and functional capacity\n- Can be partially offset by resistance exercise and adequate protein intake",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.018sa": [
+"What term describes the progressive loss of skeletal muscle mass and performance with aging?",
+"Sarcopenia",
+"Greek: flesh + poverty",
+"## Sarcopenia\n- Not simply loss of muscle size, but a complex process involving:\n  - Fiber loss (especially fast-twitch/Type II fibers)\n  - Fiber atrophy\n  - Fiber type shifting (fast-twitch to slow-twitch)\n  - Infiltration of adipose and fibrous tissue into muscle\n- Contributes to falls, frailty, and loss of independence in older adults",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.019sa": [
+"List the four components of sarcopenia.",
+"Progressive loss of muscle fibers, decrease in fiber size, shift from fast-twitch to slow-twitch fibers, and replacement of muscle with adipose and fibrous tissue",
+"Loss, shrinkage, shift, replacement",
+"## Four Components of Sarcopenia\n1. Progressive loss of skeletal muscle fibers: total number of fibers decreases\n2. Decrease in fiber size (atrophy): remaining fibers become smaller\n3. Fiber type shift: fast-twitch (Type II) fibers are preferentially lost, shifting the ratio toward slow-twitch (Type I)\n4. Tissue replacement: lost muscle is replaced by adipose (fat) and fibrous (scar) tissue\n- The shift from fast-twitch to slow-twitch fibers specifically reduces power and speed, while the infiltration of non-contractile tissue further decreases force production",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.020sa": [
+"What is lipofuscin?",
+"A wear-and-tear pigment consisting of undigested residues in lysosomes",
+"Lysosomal leftovers",
+"## Lipofuscin\n- A yellowish-brown pigment granule\n- Composed of oxidized lipids, proteins, and other materials that lysosomes cannot fully degrade\n- Accumulates in long-lived, postmitotic cells (especially cardiac muscle cells and neurons)\n- Its presence increases with age and is used as a marker of cellular aging\n- While it does not directly cause cell dysfunction, heavy accumulation may impair cellular function by occupying space within the cell",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.021sa": [
+"What term describes the wear-and-tear pigment that accumulates in cardiac muscle and neurons with aging?",
+"Lipofuscin",
+"Pigmented lysosomal residue",
+"## Lipofuscin\n- Found primarily in cells that do not divide (postmitotic cells) because they cannot dilute the pigment through cell division\n- Consists of undigested residues trapped in lysosomes\n- Cardiac muscle and neurons are the classic sites of accumulation\n- Its buildup is a hallmark of aging at the cellular level",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.022sa": [
+"What two changes in aging cardiac muscle make the heart stiffer and less compliant?",
+"Lipofuscin accumulation and increased fibrosis",
+"Pigment and scar tissue",
+"## Cardiac Muscle Aging\n- Lipofuscin accumulation: fills cardiac muscle cells with indigestible residues\n- Increased fibrosis: collagen deposition between cardiac muscle fibers stiffens the myocardium\n- A stiffer heart has reduced diastolic filling (cannot relax and fill as easily)\n- This reduces cardiac output and exercise tolerance in aging individuals",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.023sa": [
+"What is arteriosclerosis?",
+"Stiffening of the arterial walls due to collagen accumulation, elastic fiber degradation, and calcification",
+"Hardened arteries",
+"## Arteriosclerosis\n- Affects the smooth muscle layer of arterial walls\n- Three contributing processes:\n  1. Collagen accumulation: increases wall rigidity\n  2. Elastic fiber degradation: reduces the ability of arteries to expand and recoil with each heartbeat\n  3. Calcification: mineral deposits further harden the walls\n- Results in increased systolic blood pressure and increased workload on the heart\n- Distinct from atherosclerosis, which involves lipid plaque buildup within arterial walls",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.024sa": [
+"What term describes the stiffening of arterial walls due to collagen accumulation, elastic fiber degradation, and calcification?",
+"Arteriosclerosis",
+"Vessel walls harden",
+"## Arteriosclerosis\n- A general term for arterial wall stiffening\n- Involves changes in the smooth muscle and connective tissue layers of arteries\n- Not the same as atherosclerosis (plaque formation), though the two often coexist\n- Contributes to isolated systolic hypertension, a common finding in elderly individuals",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.025sa": [
+"List three changes that occur in aging nervous tissue at the cellular level.",
+"Gradual loss of neurons, reduced synaptic density, and decreased neurotransmitter levels",
+"Fewer cells, connections, signals",
+"## Nervous Tissue Aging\n- Neuron loss: occurs particularly in specific brain regions, not uniformly\n- Reduced synaptic density: fewer connections between remaining neurons\n- Decreased neurotransmitter levels: less chemical signaling capacity\n- Additional changes include lipofuscin accumulation and myelin deterioration\n- These changes collectively contribute to declines in memory, processing speed, reflexes, and sensory acuity",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.026sa": [
+"What happens to myelin in aging nervous tissue, and what is the functional consequence?",
+"Myelin deteriorates, slowing nerve conduction",
+"Insulation breaks down",
+"## Myelin and Aging\n- Myelin is the lipid-rich sheath that insulates axons and enables rapid saltatory conduction\n- With aging, myelin sheaths thin, develop irregularities, and may partially break down\n- Slower nerve conduction results in:\n  - Delayed reflexes\n  - Reduced processing speed\n  - Impaired sensory acuity\n- Myelin deterioration compounds the effects of neuron loss and reduced synaptic density",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.027sa": [
+"What are telomeres?",
+"Protective caps on chromosomes that shorten with each cell division",
+"Chromosome end caps",
+"## Telomeres\n- Repetitive DNA sequences (TTAGGG in humans) at the ends of chromosomes\n- They protect coding DNA from degradation during replication\n- Shorten with each cell division because DNA polymerase cannot fully replicate the very end of a linear chromosome\n- When telomeres become critically short, the cell enters cell cycle arrest or senescence\n- The enzyme telomerase can rebuild telomeres but is largely inactive in most adult somatic cells",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.028sa": [
+"What happens to a cell when its telomeres become critically short?",
+"The cell enters cell cycle arrest or senescence",
+"Division stops",
+"## Telomere Shortening and Senescence\n- Critically short telomeres trigger DNA damage response pathways\n- The cell is forced into either:\n  - Cell cycle arrest: the cell stops dividing permanently\n  - Senescence: the cell remains alive but non-dividing and may secrete inflammatory mediators (SASP)\n- This mechanism limits the replicative lifespan of somatic cells\n- It serves as a tumor suppression mechanism but also contributes to tissue aging",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.029sa": [
+"What are senescent cells?",
+"Cells that have stopped dividing and secrete inflammatory mediators that contribute to tissue dysfunction",
+"Retired but noisy cells",
+"## Senescent Cells\n- Cells that have permanently exited the cell cycle\n- They remain metabolically active but do not divide\n- They secrete a characteristic mix of inflammatory cytokines, growth factors, and proteases known as the SASP\n- Accumulation of senescent cells is a hallmark of aging tissues\n- Senolytic drugs are an emerging class of therapies designed to selectively clear senescent cells",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.030sa": [
+"What is the senescence-associated secretory phenotype (SASP)?",
+"The secretion of inflammatory mediators by senescent cells that contributes to tissue dysfunction",
+"Senescent cell output",
+"## SASP\n- Senescent cells do not simply sit quietly; they actively secrete:\n  - Inflammatory cytokines\n  - Growth factors\n  - Matrix metalloproteinases (proteases)\n- This secretory profile:\n  - Promotes chronic, low-grade inflammation in aging tissues\n  - Can drive neighboring cells toward senescence\n  - Disrupts normal tissue architecture and function\n- SASP is a major research target because it links cellular senescence to systemic aging effects",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.031sa": [
+"What term describes the phenomenon in which senescent cells secrete inflammatory mediators that contribute to tissue dysfunction?",
+"Senescence-associated secretory phenotype (SASP)",
+"Inflammatory output of non-dividing cells",
+"## SASP\n- The defining behavioral feature of senescent cells\n- Includes cytokines, chemokines, growth factors, and proteases\n- Creates a pro-inflammatory microenvironment that damages surrounding healthy tissue\n- Can induce senescence in neighboring cells, creating a spreading effect\n- A key therapeutic target in the field of aging research",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.032sa": [
+"What happens to mitochondrial DNA with aging, and what are the two consequences?",
+"Mitochondrial DNA progressively accumulates damage, leading to reduced energy production and increased production of reactive oxygen species",
+"Powerhouse genome degrades",
+"## Mitochondrial DNA and Aging\n- Mitochondrial DNA (mtDNA) is more vulnerable to damage than nuclear DNA because it:\n  - Lacks protective histones\n  - Has limited repair mechanisms\n  - Is located near the electron transport chain (a major source of reactive oxygen species)\n- Accumulated damage leads to:\n  1. Reduced energy production: dysfunctional mitochondria produce less ATP\n  2. Increased ROS production: damaged mitochondria leak more free radicals, which cause further damage\n- This creates a vicious cycle of mitochondrial decline",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.033sa": [
+"What two protein quality control systems decline in efficiency with aging?",
+"The proteasome and autophagy pathways",
+"Cellular cleanup crews",
+"## Protein Quality Control and Aging\n- Proteasome: a molecular complex that tags and degrades misfolded or damaged proteins\n- Autophagy: a process in which the cell encloses damaged proteins and organelles in vesicles and delivers them to lysosomes for degradation\n- When these systems decline:\n  - Damaged proteins accumulate\n  - Dysfunctional organelles persist\n  - Cellular efficiency drops\n- The buildup of cellular debris contributes to lipofuscin accumulation and overall tissue dysfunction",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.034sa": [
+"List the four cellular-level mechanisms associated with aging in all tissue types.",
+"Telomere shortening, accumulation of senescent cells, mitochondrial DNA damage, and declining protein quality control systems",
+"Caps, zombies, power, cleanup",
+"## Four Cellular Mechanisms of Aging\n1. Telomere shortening: limits replicative lifespan, triggers senescence\n2. Senescent cell accumulation: non-dividing cells secrete SASP, promoting inflammation and tissue dysfunction\n3. Mitochondrial DNA damage: reduces ATP production, increases reactive oxygen species\n4. Declining protein quality control: proteasome and autophagy pathways become less efficient, allowing damaged proteins and organelles to accumulate\n- These four mechanisms interact and reinforce each other, creating compounding decline across all tissue types",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.035sa": [
+"What are senolytic drugs?",
+"Emerging therapies that clear senescent cells",
+"Targeting retired cells",
+"## Senolytic Drugs\n- A class of drugs designed to selectively induce apoptosis in senescent cells\n- The goal is to reduce the burden of SASP-producing cells in aging tissues\n- By clearing senescent cells, these drugs may:\n  - Reduce chronic inflammation\n  - Improve tissue function\n  - Slow or partially reverse aspects of tissue-level aging\n- Still largely in experimental and early clinical trial stages",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.036sa": [
+"Name three lifestyle or therapeutic factors that can counteract tissue aging.",
+"Exercise, adequate nutrition, and senolytic drugs",
+"Move, eat well, and new medicine",
+"## Counteracting Tissue Aging\n- Exercise: preserves muscle mass (combats sarcopenia) and maintains cardiovascular function\n- Adequate nutrition: supports extracellular matrix maintenance and immune function\n- Senolytic drugs: an emerging therapy that clears senescent cells to reduce SASP-driven inflammation\n- Tissue aging is not purely inevitable; these interventions can slow or partially reverse decline\n- The degree of benefit depends on consistency, timing, and individual variation",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.037sa": [
+"In the context of connective tissue aging, what three changes occur in arterial cartilage, intervertebral discs, and bone mass respectively?",
+"Articular cartilage thins, intervertebral discs lose water content and height, and bone mass decreases",
+"Three connective tissues, three declines",
+"## Connective Tissue Aging: Specific Structures\n- Articular cartilage: thins and becomes more prone to damage, contributing to osteoarthritis\n- Intervertebral discs: lose water content and height, contributing to loss of stature and reduced shock absorption\n- Bone: resorption outpaces formation, leading to osteopenia and osteoporosis\n- All three share the same underlying causes: collagen cross-linking, elastic fiber degradation, and ground substance loss",
+true,
+false,
+false,
+0
+],
+"01.04.08.05.038sa": [
+"What four functional declines in the nervous system are commonly observed with aging?",
+"Declines in memory, processing speed, reflexes, and sensory acuity",
+"Think, speed, react, sense",
+"## Functional Nervous System Decline\n- Memory: neuron loss and reduced synaptic density impair information storage and retrieval\n- Processing speed: myelin deterioration slows signal transmission\n- Reflexes: fewer neurons and slower conduction delay motor responses\n- Sensory acuity: receptor cell loss and reduced neurotransmitter levels diminish perception\n- These are the functional consequences of the structural changes (neuron loss, synaptic pruning, demyelination, neurotransmitter decline) that occur in aging nervous tissue",
+true,
+false,
+false,
+0
+]
+}
+}

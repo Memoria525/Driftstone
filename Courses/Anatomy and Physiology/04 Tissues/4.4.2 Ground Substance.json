@@ -1,0 +1,354 @@
+{
+  "cards": {
+    "01.04.04.02.001sa": [
+      "What three classes of molecules make up the ground substance of the extracellular matrix?",
+      "Glycosaminoglycans (GAGs), proteoglycans, and glycoproteins",
+      "All three are dissolved in water to form a hydrated, viscous material",
+      "**Ground substance components:**\n- **Glycosaminoglycans (GAGs):** long, negatively charged polysaccharide chains that attract water\n- **Proteoglycans:** core proteins with GAG chains attached, trap massive amounts of water\n- **Glycoproteins:** proteins with short sugar chains that primarily serve as adhesion molecules\n\nThese three classes work together to create the gel-like environment that fills the space between cells and fibers in the ECM.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.002sa": [
+      "What is the structural composition of a glycosaminoglycan (GAG) chain?",
+      "A long, unbranched polysaccharide chain made of repeating disaccharide units",
+      "Think about the monomer unit and how the chain is organized spatially",
+      "**Key structural features of GAGs:**\n- Long polymer chains\n- Unbranched (no side chains)\n- Built from repeating disaccharide units\n- Each disaccharide = one amino sugar + one uronic acid\n- Most carry a strong negative charge from sulfate and carboxyl groups\n\nThe unbranched nature and repeating structure distinguish GAGs from other polysaccharides in the body.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.003sa": [
+      "Each repeating disaccharide unit in a GAG chain consists of which two types of sugar?",
+      "An amino sugar (such as N-acetylglucosamine or N-acetylgalactosamine) and a uronic acid (such as glucuronic acid or iduronic acid)",
+      "One sugar type has a nitrogen-containing group, the other is an oxidized sugar acid",
+      "**The two sugar components:**\n1. **Amino sugar:** a sugar with an amino group (commonly N-acetylglucosamine or N-acetylgalactosamine)\n2. **Uronic acid:** an oxidized form of a sugar (commonly glucuronic acid or iduronic acid)\n\nThis alternating pattern of amino sugar and uronic acid repeats along the entire length of the GAG chain.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.004sa": [
+      "What chemical groups on GAG sugar residues are responsible for their strong negative charge?",
+      "Sulfate groups and carboxyl groups",
+      "There are two types of groups, one associated with sulfation and one with acid chemistry",
+      "**Sources of negative charge on GAGs:**\n- **Sulfate groups (SO₃⁻):** added to GAG chains during post-translational modification\n- **Carboxyl groups (COO⁻):** present on the uronic acid residues\n\nThis strong negative charge is the most functionally important property of GAGs because it drives the entire water-trapping mechanism that gives ground substance its gel-like character.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.005sa": [
+      "Why does the negative charge of GAGs lead to water accumulation in the ECM?",
+      "The negative charges attract cations (especially sodium ions), which increase local solute concentration, and water then follows by osmosis toward the higher solute concentration",
+      "Think about this as a three-step chain reaction involving ions and a basic principle of water movement",
+      "**The water-trapping mechanism in three steps:**\n1. Negative charges on GAGs attract cations (especially Na⁺)\n2. Accumulated cations increase the local solute concentration\n3. Water moves into the area by osmosis (toward higher solute concentration)\n\n**Key point:** GAGs do not attract water directly through their charge. They attract it indirectly by first concentrating ions, which then draw water in osmotically. This is why GAGs can trap a volume of water far greater than their own size.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.006sa": [
+      "What specific cation is most prominently attracted by the negative charges on GAGs?",
+      "Sodium ions (Na⁺)",
+      "It is the most abundant extracellular cation in the body",
+      "**Why sodium?**\n- Na⁺ is the dominant cation in extracellular fluid\n- Its positive charge is attracted to the negatively charged sulfate and carboxyl groups on GAGs\n- As Na⁺ accumulates near the GAG chains, local solute concentration rises, pulling water in by osmosis\n\nThis is the same ion whose extracellular concentration is maintained by the Na⁺/K⁺-ATPase pump at the cellular level.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.007sa": [
+      "What functional property does the water-trapping ability of GAGs give to the ground substance?",
+      "Resistance to compression and cushioning",
+      "Think about what happens when you try to squeeze a water-saturated gel",
+      "**How water trapping creates mechanical properties:**\n- Water is essentially incompressible\n- When GAGs trap large volumes of water, the resulting swollen gel resists being squeezed or compressed\n- This creates a cushioning effect that protects cells and tissues from compressive forces\n\nThis is especially important in cartilage, where the aggrecan-hyaluronic acid aggregates trap enormous amounts of water to withstand the compressive loads of weight-bearing joints.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.008sa": [
+      "Name the five major glycosaminoglycans (GAGs) found in the human body.",
+      "Hyaluronic acid (hyaluronan), chondroitin sulfate, keratan sulfate, dermatan sulfate, and heparan sulfate",
+      "One is unique because it is not sulfated; the other four all have 'sulfate' in their names",
+      "**The five major GAGs:**\n1. **Hyaluronic acid (hyaluronan):** the only non-sulfated GAG; not attached to a protein core\n2. **Chondroitin sulfate:** abundant in cartilage and bone\n3. **Keratan sulfate:** found in cartilage, cornea, and bone\n4. **Dermatan sulfate:** found in skin, blood vessels, and heart valves\n5. **Heparan sulfate:** found in basement membranes and cell surfaces\n\nAll five share the core property of attracting and holding water despite their different distributions.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.009sa": [
+      "What property do all five major glycosaminoglycans (GAGs) share despite their distinct distributions and functions?",
+      "They all attract and hold water",
+      "It relates to their shared negative charge and what that charge does to the surrounding environment",
+      "**The universal GAG property:**\n- All GAGs carry negative charges\n- All attract cations, which increase local solute concentration\n- All draw water in by osmosis as a result\n\nThis shared water-attracting property is what makes GAGs collectively responsible for the hydrated, gel-like nature of ground substance throughout the body, regardless of which specific GAG predominates in a given tissue.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.010sa": [
+      "List three features that make hyaluronic acid unique among GAGs.",
+      "It is enormous (up to millions of daltons), it is not sulfated, and it is not attached to a protein core (it exists as a free polysaccharide chain)",
+      "Think about its size, its charge source, and how it relates to proteins compared to other GAGs",
+      "**What makes hyaluronic acid unique:**\n1. **Size:** up to millions of daltons, far larger than other GAGs\n2. **No sulfation:** its negative charge comes only from carboxyl groups, not sulfate groups\n3. **Free chain:** it is not covalently attached to a core protein (unlike the GAGs that form proteoglycans)\n\nDespite these differences, hyaluronic acid still attracts water through the same cation/osmosis mechanism as other GAGs. It also serves as the backbone of large proteoglycan aggregates like aggrecan in cartilage.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.011sa": [
+      "Name four locations in the body where hyaluronic acid is abundant.",
+      "Loose connective tissue, synovial fluid of joints, vitreous humor of the eye, and the ECM of cartilage",
+      "Think about places that need hydration, lubrication, or cushioning",
+      "**Hyaluronic acid locations and roles:**\n1. **Loose connective tissue:** contributes to hydration and cushioning\n2. **Synovial fluid:** provides viscosity and lubrication for joint movement\n3. **Vitreous humor of the eye:** helps maintain the gel-like consistency of the eyeball interior\n4. **Cartilage ECM:** serves as the backbone of aggrecan aggregates that resist compression",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.012sa": [
+      "What role does hyaluronic acid play in synovial fluid?",
+      "It provides viscosity and lubrication",
+      "Think about what joints need in order to move smoothly",
+      "**Hyaluronic acid in synovial fluid:**\n- Its enormous molecular size and water-trapping ability give synovial fluid its thick, viscous consistency\n- This viscosity allows the fluid to lubricate articular cartilage surfaces during joint movement\n- Reduced hyaluronic acid concentration or molecular weight in synovial fluid is associated with osteoarthritis, where joint lubrication deteriorates",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.013sa": [
+      "What role does hyaluronic acid play in cartilage ECM?",
+      "It serves as the backbone of large proteoglycan aggregates (aggrecan aggregates)",
+      "Think about its structural role in organizing other molecules rather than acting alone",
+      "**Hyaluronic acid in cartilage:**\n- Acts as the central backbone to which many aggrecan molecules attach via link proteins\n- This forms massive aggrecan aggregates\n- These aggregates trap enormous amounts of water, giving cartilage its ability to resist compressive loads\n- Without hyaluronic acid as the organizing backbone, the individual aggrecan molecules could not assemble into these large, functional complexes",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.014sa": [
+      "What is a proteoglycan?",
+      "A molecule consisting of a core protein with one or more GAG chains covalently attached",
+      "It is a hybrid molecule with both protein and polysaccharide components",
+      "**Proteoglycan structure:**\n- Central core protein\n- One or more GAG chains covalently bonded to the core protein\n- GAG chains extend outward from the protein core\n\n**Functional significance:**\n- The attached GAG chains carry negative charges that trap water\n- This makes proteoglycans the primary determinant of the gel-like consistency and compressive resistance of ground substance\n- Proteoglycans can also assemble into massive aggregates (e.g., aggrecan aggregates in cartilage)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.015sa": [
+      "Why are proteoglycans so effective at trapping water?",
+      "Because their attached GAG chains carry negative charges that attract cations and draw water in by osmosis",
+      "The answer traces back to the fundamental property of the GAG chains they carry",
+      "**Proteoglycan water-trapping mechanism:**\n1. Each proteoglycan has multiple GAG chains attached\n2. Each GAG chain carries many negative charges (sulfate and carboxyl groups)\n3. These charges attract cations (especially Na⁺)\n4. Accumulated cations raise local solute concentration\n5. Water follows by osmosis\n\nBecause a single proteoglycan can carry many GAG chains, and each chain carries many negative charges, the cumulative water-trapping effect is enormous.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.016sa": [
+      "What is the aggrecan aggregate, and where is it found?",
+      "A massive proteoglycan aggregate found in cartilage, composed of many aggrecan molecules linked to a single hyaluronic acid backbone through link proteins",
+      "It is named after the tissue where it is most critical for resisting mechanical forces",
+      "**Aggrecan aggregate overview:**\n- Found in cartilage\n- One of the largest molecular complexes in the human body\n- Structure: many individual aggrecan molecules attached to a central hyaluronic acid chain via link proteins\n- Function: traps water equal to 50 times its own weight, giving cartilage its ability to resist compressive loads\n- A single aggregate can occupy a volume roughly the size of a bacterium",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.017sa": [
+      "Describe the structure of an aggrecan aggregate, including the role of hyaluronic acid, aggrecan molecules, and link proteins.",
+      "A single hyaluronic acid chain serves as the central backbone; many aggrecan molecules (each a core protein with hundreds of chondroitin sulfate and keratan sulfate GAG chains) attach to this backbone; link proteins secure the connection between each aggrecan molecule and the hyaluronic acid chain",
+      "Think of a central chain with many branching units attached to it, each held in place by a fastening molecule",
+      "**Aggrecan aggregate architecture:**\n1. **Hyaluronic acid backbone:** a single, long chain that serves as the central organizing structure\n2. **Aggrecan molecules:** each is a core protein with hundreds of GAG chains (chondroitin sulfate and keratan sulfate) extending outward\n3. **Link proteins:** small proteins that stabilize the attachment of each aggrecan molecule to the hyaluronic acid backbone\n\n**Scale:**\n- A single aggregate can be the size of a bacterium\n- Can trap water equal to 50 times its own weight\n- This enormous water-trapping capacity is what allows cartilage to bear compressive loads in weight-bearing joints",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.018sa": [
+      "Which two types of GAG chains are attached to each aggrecan core protein?",
+      "Chondroitin sulfate and keratan sulfate",
+      "Both are sulfated GAGs, and one shares its name root with cartilage",
+      "**GAG chains on aggrecan:**\n- **Chondroitin sulfate:** the more abundant of the two; \"chondro-\" refers to cartilage\n- **Keratan sulfate:** also present in significant numbers\n- Each aggrecan core protein carries hundreds of these GAG chains\n- The combined negative charges from all these chains are what give the aggrecan aggregate its massive water-trapping capacity",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.019sa": [
+      "How much water can a single aggrecan aggregate trap relative to its own weight?",
+      "50 times its own weight",
+      "It is a large multiple, in the tens",
+      "**Aggrecan water trapping:**\n- 50x its own weight in water\n- This is possible because of the hundreds of negatively charged GAG chains on each aggrecan molecule, multiplied across the many aggrecan molecules in a single aggregate\n- This extraordinary water retention is what makes cartilage effective at resisting compressive loads in joints\n- A single aggrecan aggregate occupies a volume roughly the size of a bacterium",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.020sa": [
+      "How do glycoproteins differ from proteoglycans in terms of their sugar-to-protein ratio?",
+      "Glycoproteins are mostly protein with relatively small sugar modifications (short, branched oligosaccharide chains), while proteoglycans are mostly sugar by mass",
+      "Think about which component dominates in each molecule",
+      "**Glycoproteins vs. proteoglycans:**\n\n| Feature | Glycoprotein | Proteoglycan |\n|---|---|---|\n| Dominant component | Protein | Sugar (GAG chains) |\n| Sugar type | Short, branched oligosaccharides | Long, unbranched GAG chains |\n| Primary function | Cell adhesion | Water trapping / compression resistance |\n\nBoth are hybrid protein-sugar molecules, but they sit at opposite ends of the sugar-to-protein spectrum.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.021sa": [
+      "What are the two most functionally important glycoproteins in the ECM?",
+      "Fibronectin and laminin",
+      "One is most abundant in the ECM overall, the other is most abundant in the basement membrane",
+      "**The two key ECM glycoproteins:**\n1. **Fibronectin:** most abundant ECM glycoprotein overall; critical for adhesion, migration, and wound healing\n2. **Laminin:** most abundant glycoprotein specifically in the basement membrane; essential for anchoring epithelial cells\n\nBoth function as adhesion molecules that connect cells to the matrix by binding integrins on the cell surface and ECM components simultaneously.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.022sa": [
+      "What shared function do fibronectin and laminin perform in the ECM?",
+      "They both function as adhesion molecules that connect cells to the matrix by binding simultaneously to cell-surface receptors (integrins) and to other ECM components",
+      "Think about what cells need in order to physically attach to the matrix around them",
+      "**Fibronectin and laminin as adhesion molecules:**\n- Both are glycoproteins with multiple binding domains\n- One set of domains binds to integrins on the cell surface\n- Another set of domains binds to ECM components (collagen, proteoglycans)\n- This dual binding creates a physical bridge between the cell and its surrounding matrix\n- Without these molecules, cells could not anchor themselves to the ECM or receive mechanical signals from it",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.023sa": [
+      "What type of cell-surface receptor do both fibronectin and laminin bind to?",
+      "Integrins",
+      "These receptors are transmembrane proteins that mediate cell-matrix interactions",
+      "**Integrins as the link between cells and ECM:**\n- Integrins are transmembrane receptor proteins on the cell surface\n- They bind ECM glycoproteins (fibronectin, laminin) on the extracellular side\n- They connect to the cytoskeleton on the intracellular side\n- This allows cells to sense and respond to the mechanical and chemical properties of the matrix\n- Integrins are covered in greater detail in section 4.4.5 (Cell-Matrix Interactions)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.024sa": [
+      "What does it mean that fibronectin is a dimeric molecule?",
+      "It is composed of two subunits (two polypeptide chains) joined together to form a single functional molecule",
+      "The prefix 'di-' tells you the number of subunits",
+      "**Dimeric structure of fibronectin:**\n- \"Dimer\" = two subunits joined together\n- Fibronectin consists of two polypeptide chains linked together\n- The resulting molecule has multiple binding domains for different targets: collagen, fibrin, heparan sulfate, and integrins\n- This multi-domain structure allows fibronectin to serve as a bridge between cells and multiple ECM components simultaneously",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.025sa": [
+      "Name four ECM components or molecules that fibronectin has binding sites for.",
+      "Collagen, fibrin, heparan sulfate, and integrins",
+      "One is a protein fiber, one is a clotting protein, one is a GAG, and one is a cell-surface receptor",
+      "**Fibronectin binding partners:**\n1. **Collagen:** the major structural fiber of the ECM\n2. **Fibrin:** a protein involved in blood clotting; fibronectin binds it during wound healing to help form the provisional matrix\n3. **Heparan sulfate:** a GAG found in basement membranes and on cell surfaces\n4. **Integrins:** cell-surface receptors that anchor cells to the ECM\n\nThis diversity of binding partners is what makes fibronectin such an effective adhesion and bridging molecule.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.026sa": [
+      "What three cellular processes is fibronectin critical for?",
+      "Cell adhesion, cell migration, and wound healing",
+      "Two relate to how cells interact physically with the matrix; one relates to tissue repair",
+      "**Fibronectin's three critical roles:**\n1. **Cell adhesion:** anchors cells to the ECM through integrin binding\n2. **Cell migration:** provides a substrate and directional cues for moving cells\n3. **Wound healing:** forms part of the provisional matrix that guides cell migration into damaged areas\n\nFibronectin is also important during embryonic development, where it guides the migration of cells to their correct locations.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.027sa": [
+      "What is the provisional matrix, and when does it form?",
+      "A temporary ECM scaffold that forms during embryonic development and during the repair of damaged tissue, containing fibronectin, and that guides cell migration into the area",
+      "Think about a temporary structure that cells use as a guide during building or rebuilding",
+      "**The provisional matrix:**\n- A temporary ECM structure, not permanent tissue\n- Contains fibronectin (and fibrin, among other components)\n- Forms in two contexts:\n  1. **Embryonic development:** guides migrating cells to their correct destinations\n  2. **Wound repair:** provides a scaffold for cells to migrate into the damaged area\n- Once repair or development is complete, the provisional matrix is remodeled and replaced by the permanent ECM of the tissue",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.028sa": [
+      "What does it mean that laminin is a trimeric molecule?",
+      "It is composed of three subunits (three polypeptide chains) joined together to form a single functional molecule",
+      "The prefix 'tri-' tells you the number of subunits",
+      "**Trimeric structure of laminin:**\n- \"Trimer\" = three subunits joined together\n- Laminin consists of three polypeptide chains\n- These three chains assemble into a cross-shaped structure\n- The cross shape provides multiple binding domains for integrins, type IV collagen, and other basement membrane components\n- Compare with fibronectin, which is dimeric (two subunits)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.029sa": [
+      "Where in the ECM is laminin most abundant?",
+      "In the basement membrane",
+      "It is a specialized ECM structure that underlies epithelial tissues",
+      "**Laminin and the basement membrane:**\n- Laminin is the most abundant glycoprotein in the basement membrane\n- It is essential for basement membrane assembly\n- It anchors epithelial cells to the basement membrane through integrin binding\n- It also binds type IV collagen and other basement membrane components to maintain structural integrity\n- Compare with fibronectin, which is the most abundant ECM glycoprotein overall but is not concentrated in the basement membrane specifically",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.030sa": [
+      "Name three ECM components that laminin binds to.",
+      "Integrins, type IV collagen, and other basement membrane components",
+      "One is a cell-surface receptor, one is a specific collagen type found in sheets rather than fibers, and one is a broad category",
+      "**Laminin binding partners:**\n1. **Integrins:** cell-surface receptors on the overlying epithelial cells\n2. **Type IV collagen:** the non-fibrillar collagen that forms the mesh-like sheet of the basement membrane\n3. **Other basement membrane components:** including nidogen/entactin and perlecan\n\nBy binding all of these simultaneously, laminin serves as a central organizing molecule that holds the basement membrane together and connects it to the cells above.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.031sa": [
+      "List three functions of laminin related to the basement membrane and cell behavior.",
+      "Basement membrane assembly, anchoring epithelial cells to the basement membrane, and guiding cell migration, differentiation, and survival",
+      "One is structural, one is about attachment, and one involves influencing cell behavior",
+      "**Laminin's three functional roles:**\n1. **Basement membrane assembly:** laminin is required for the basement membrane to form properly; without it, the structure does not assemble\n2. **Cell anchoring:** physically attaches epithelial cells to the basement membrane through integrin binding\n3. **Cell behavior regulation:** guides cell migration, influences differentiation (what cell types develop), and promotes cell survival\n\nLaminin is therefore both a structural molecule and a signaling molecule, actively influencing the cells it contacts.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.032sa": [
+      "What term describes long, unbranched polysaccharide chains made of repeating disaccharide units that carry a strong negative charge and attract water into the ECM?",
+      "Glycosaminoglycans (GAGs)",
+      "The name combines 'glyco-' (sugar), 'amino' (nitrogen-containing), and 'glycan' (polysaccharide chain)",
+      "**GAGs at a glance:**\n- Long, unbranched polysaccharide chains\n- Built from repeating disaccharide units (amino sugar + uronic acid)\n- Carry strong negative charges from sulfate and carboxyl groups\n- Attract cations, which raise solute concentration, which draws water in by osmosis\n- Five major types: hyaluronic acid, chondroitin sulfate, keratan sulfate, dermatan sulfate, heparan sulfate\n- Can exist free (hyaluronic acid) or attached to core proteins as part of proteoglycans",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.033sa": [
+      "What term describes molecules consisting of a core protein with one or more GAG chains covalently attached?",
+      "Proteoglycans",
+      "The name combines a word for protein with a word for sugar polymer",
+      "**Proteoglycans at a glance:**\n- Core protein + covalently attached GAG chains\n- Mostly sugar by mass (contrast with glycoproteins, which are mostly protein)\n- The GAG chains carry negative charges that trap water\n- Primary determinant of the gel-like consistency and compressive resistance of ground substance\n- Can form massive aggregates (e.g., aggrecan in cartilage)",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.034sa": [
+      "What term describes the most abundant ECM glycoprotein, critical for cell adhesion, migration, and wound healing?",
+      "Fibronectin",
+      "The name combines a word for fiber with a word for connection",
+      "**Fibronectin summary:**\n- Most abundant glycoprotein in the ECM overall\n- Dimeric molecule (two subunits)\n- Binding sites for collagen, fibrin, heparan sulfate, and integrins\n- Critical for cell adhesion, cell migration, and wound healing\n- Forms part of the provisional matrix during development and tissue repair\n- Functions as a bridge connecting cells to the surrounding matrix",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.04.02.035sa": [
+      "What term describes the most abundant glycoprotein in the basement membrane, essential for anchoring epithelial cells?",
+      "Laminin",
+      "Its name relates to 'lamina,' reflecting its location in a sheet-like structure",
+      "**Laminin summary:**\n- Most abundant glycoprotein in the basement membrane\n- Trimeric molecule (three subunits) with a cross-shaped structure\n- Binds integrins, type IV collagen, and other basement membrane components\n- Essential for basement membrane assembly, cell anchoring, and regulating cell migration, differentiation, and survival\n- Compare with fibronectin: fibronectin is the most abundant ECM glycoprotein overall, while laminin is the most abundant specifically in the basement membrane",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "cards": {
+    "01.04.06.03.001sa": [
+      "What are neuroglia?",
+      "Neuroglia (also called glial cells or glia) are the non-neuronal cells of nervous tissue. They do not generate or transmit electrical signals but perform all other functions nervous tissue requires, including structural support, insulation, nutrient supply, waste removal, immune defense, and regulation of the chemical environment around neurons.",
+      "They are the 'other' cells of nervous tissue, not neurons.",
+      "**Neuroglia at a glance:**\n- Also called glial cells or glia\n- Non-neuronal cells of nervous tissue\n- Do not generate or conduct electrical impulses\n- Functions include:\n  1. Structural support\n  2. Insulation (myelination)\n  3. Nutrient supply\n  4. Waste removal\n  5. Immune defense\n  6. Regulating the chemical environment around neurons\n- Six types total: four in the CNS, two in the PNS",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.002sa": [
+      "List the six types of neuroglia found in the nervous system.",
+      "CNS: astrocytes, oligodendrocytes, microglia, ependymal cells. PNS: Schwann cells, satellite cells.",
+      "Four are in the CNS and two are in the PNS.",
+      "**The six neuroglia by location:**\n\n*CNS (4 types):*\n1. Astrocytes - most abundant; support, blood-brain barrier, chemical regulation\n2. Oligodendrocytes - myelinate CNS axons\n3. Microglia - immune defense\n4. Ependymal cells - line ventricles, produce CSF\n\n*PNS (2 types):*\n1. Schwann cells - myelinate PNS axons, aid in nerve regeneration\n2. Satellite cells - surround neuronal cell bodies in ganglia",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.003sa": [
+      "What functions do glial cells perform in nervous tissue?",
+      "Structural support, insulation (myelination), nutrient supply, waste removal, immune defense, and regulation of the chemical environment around neurons.",
+      "Think about everything nervous tissue needs besides generating and transmitting signals.",
+      "**Glial cell functions:**\n1. Structural support - physically holding neurons in place\n2. Insulation - myelination of axons to speed signal conduction\n3. Nutrient supply - metabolic support to neurons\n4. Waste removal - clearing debris and dead cells\n5. Immune defense - surveillance and phagocytosis (microglia)\n6. Chemical regulation - maintaining proper ion and neurotransmitter concentrations\n\nEach of the six glial cell types specializes in one or more of these roles.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.004sa": [
+      "Do glial cells generate or transmit electrical signals?",
+      "No. Glial cells do not generate or transmit electrical signals. That function belongs exclusively to neurons.",
+      "Consider what distinguishes neurons from all other cells in nervous tissue.",
+      "**Key distinction:**\n- Neurons = electrically excitable cells that generate and transmit signals\n- Glia = non-neuronal cells that perform every other function nervous tissue needs\n\nThis is the fundamental dividing line between the two cell populations in nervous tissue. Despite not being electrically active, glial cells are essential for nervous system function.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.005sa": [
+      "How many types of glial cells are found in the CNS, and how many in the PNS?",
+      "Four types in the CNS and two types in the PNS.",
+      "Six total, unevenly split between the two divisions.",
+      "**CNS glial cells (4):**\n1. Astrocytes\n2. Oligodendrocytes\n3. Microglia\n4. Ependymal cells\n\n**PNS glial cells (2):**\n1. Schwann cells\n2. Satellite cells\n\nNote that there are functional parallels between the two divisions. Oligodendrocytes (CNS) and Schwann cells (PNS) both myelinate axons, though they do so differently.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.006sa": [
+      "Which type of glial cell is the most abundant in the CNS?",
+      "Astrocytes.",
+      "Their name describes their star-like shape.",
+      "**Astrocyte basics:**\n- Most abundant glial cell in the CNS\n- Large, star-shaped cells with numerous branching processes\n- Processes contact both neurons and capillaries\n- This dual contact allows them to mediate between the blood supply and neurons\n- Perform a wide range of functions including blood-brain barrier formation, chemical regulation, metabolic support, developmental guidance, and synapse remodeling",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.007sa": [
+      "Describe the shape and structural features of astrocytes.",
+      "Astrocytes are large, star-shaped cells with numerous branching processes.",
+      "Their name comes from the Greek word for star.",
+      "**Astrocyte structure:**\n- Large cell body\n- Star-shaped (astro = star, cyte = cell)\n- Numerous branching processes extending outward\n- Processes contact both neurons and capillaries\n- This structure places them in a unique position to serve as intermediaries between the nervous system and the blood supply",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.008sa": [
+      "What two structures do astrocyte processes contact, and why is that positioning significant?",
+      "Astrocyte processes contact both neurons and capillaries. This positioning allows astrocytes to mediate between the nervous system and the blood supply.",
+      "Think about what two things astrocytes need to bridge between.",
+      "**Astrocyte positioning:**\n- One set of processes contacts neurons\n- Another set contacts capillaries (blood vessels)\n- This dual contact enables astrocytes to:\n  1. Regulate what passes from blood into brain tissue (blood-brain barrier)\n  2. Deliver nutrients from blood to neurons\n  3. Remove waste products from neurons toward the blood\n  4. Monitor and adjust the chemical environment on both sides",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.009sa": [
+      "How do astrocytes contribute to the blood-brain barrier?",
+      "Astrocytes wrap their processes around capillaries and promote the formation of exceptionally tight junctions that restrict what can enter the brain from the blood.",
+      "Consider what astrocyte processes do when they contact capillaries.",
+      "**Astrocytes and the blood-brain barrier:**\n- Astrocyte processes (called end-feet) wrap around CNS capillaries\n- They promote the formation of tight junctions between endothelial cells of the capillary walls\n- These tight junctions are exceptionally restrictive compared to capillaries elsewhere in the body\n- The result is selective filtering of what can pass from the blood into brain tissue\n- This protects the CNS from toxins, pathogens, and fluctuations in blood chemistry",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.010sa": [
+      "What ion do astrocytes absorb from the extracellular environment around neurons to help regulate the chemical environment?",
+      "Potassium (K+).",
+      "This ion builds up in the extracellular space during neuronal signaling activity.",
+      "**Astrocytes and chemical regulation:**\n- Astrocytes absorb excess potassium (K+) from the extracellular space\n- They also absorb excess neurotransmitters\n- Both of these actions help maintain the proper chemical environment for neuronal signaling\n- If extracellular potassium builds up too high, it can depolarize neurons and disrupt normal signaling\n- This is one of several regulatory functions astrocytes perform",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.011sa": [
+      "Name three functions that astrocytes perform in the CNS.",
+      "Any three of: forming the blood-brain barrier, regulating the chemical environment (absorbing excess neurotransmitters and potassium), providing metabolic support to neurons, guiding migration of developing neurons during embryonic development, participating in synapse formation and remodeling.",
+      "Think about their roles in protection, regulation, development, and maintenance.",
+      "**Full list of astrocyte functions:**\n1. Blood-brain barrier formation (wrapping processes around capillaries, promoting tight junctions)\n2. Chemical regulation (absorbing excess neurotransmitters and K+)\n3. Metabolic support to neurons\n4. Guiding neuronal migration during embryonic development\n5. Synapse formation and remodeling\n\nAstrocytes are the most functionally versatile of all the glial cells.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.012sa": [
+      "What are oligodendrocytes?",
+      "Oligodendrocytes are the myelinating glial cells of the CNS. Each one extends flat, paddle-like processes that wrap around segments of multiple nearby axons, forming the myelin sheath that insulates CNS axons and accelerates signal conduction.",
+      "These are the CNS cells responsible for insulating axons.",
+      "**Oligodendrocyte basics:**\n- Myelinating cells of the CNS\n- Extend flat, paddle-like processes\n- Each process wraps around a segment of an axon to form myelin\n- A single oligodendrocyte can myelinate segments of up to 50 axons simultaneously\n- Myelin insulates the axon and speeds up signal conduction\n- Name breakdown: oligo (few) + dendro (branches) + cyte (cell), referring to their relatively few, short processes compared to astrocytes",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.013sa": [
+      "Break down the etymology of the word \"oligodendrocyte.\"",
+      "Oligo- means few, dendro- means branches, -cyte means cell. The name refers to the relatively few, short processes oligodendrocytes extend compared to astrocytes.",
+      "Three Greek roots: one about quantity, one about shape, one about what it is.",
+      "**Etymology:**\n- Oligo = few\n- Dendro = branches (or tree-like processes)\n- Cyte = cell\n- Literally: \"cell with few branches\"\n\n**In context:**\n- Oligodendrocytes have relatively few, short processes compared to the highly branched astrocytes\n- Despite having fewer processes, each one can still myelinate segments of up to 50 different axons",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.014sa": [
+      "How do the processes of oligodendrocytes differ from those of astrocytes in terms of number and length?",
+      "Oligodendrocytes have relatively few, short processes compared to astrocytes, which have numerous, long branching processes.",
+      "The name of one of these cells directly tells you about the quantity of its branches.",
+      "**Process comparison:**\n- Astrocytes: numerous, long branching processes (star-shaped appearance)\n- Oligodendrocytes: relatively few, short processes (hence oligo = few, dendro = branches)\n\nDespite this difference, oligodendrocyte processes are functionally powerful. Each flat, paddle-like process wraps around an axon segment to form myelin, and a single oligodendrocyte can myelinate up to 50 axon segments.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.015sa": [
+      "How does an oligodendrocyte form myelin in the CNS?",
+      "Each oligodendrocyte extends flat, paddle-like processes that wrap around portions of multiple nearby axons, forming the myelin sheath.",
+      "Think about the shape of the processes and what they do when they reach an axon.",
+      "**Myelination by oligodendrocytes:**\n1. The oligodendrocyte extends multiple flat, paddle-like processes outward\n2. Each process reaches a nearby axon\n3. The process wraps around a segment of that axon, forming a layer of myelin\n4. A single oligodendrocyte can do this for segments of up to 50 different axons simultaneously\n\n**Compare to PNS:** Schwann cells myelinate differently. Each Schwann cell wraps around only one segment of one axon.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.016sa": [
+      "How many axons can a single oligodendrocyte myelinate simultaneously?",
+      "Up to 50 axons.",
+      "It is a surprisingly large number for a cell with 'few branches.'",
+      "**Oligodendrocyte myelination capacity:**\n- A single oligodendrocyte can myelinate segments of up to 50 different axons\n- Each flat, paddle-like process wraps around one segment (internode) of one axon\n- This is a major difference from Schwann cells in the PNS, where each Schwann cell wraps around only a single segment of a single axon",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.017sa": [
+      "What is the function of the myelin sheath formed by oligodendrocytes?",
+      "The myelin sheath insulates CNS axons and accelerates electrical signal conduction.",
+      "Think about what wrapping an axon in layers of membrane would do to its electrical properties.",
+      "**Myelin sheath function:**\n- Insulates the axon, preventing ion leakage across the membrane\n- Accelerates signal conduction (saltatory conduction)\n- Signals jump between gaps in the myelin (nodes of Ranvier) rather than traveling continuously along the axon\n- This dramatically increases the speed of nerve impulse transmission\n- In the CNS, myelin is formed by oligodendrocytes; in the PNS, by Schwann cells",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.018sa": [
+      "What are microglia?",
+      "Microglia are small, mobile glial cells that serve as the resident immune cells of the CNS. They constantly survey the brain and spinal cord for signs of damage, infection, or debris.",
+      "These are the CNS glial cells with a defensive role.",
+      "**Microglia basics:**\n- Resident immune cells of the CNS\n- Small and mobile\n- Constantly survey brain and spinal cord tissue\n- Looking for signs of damage, infection, or debris\n- When a threat is detected, they transform into active phagocytic cells\n- In their activated state, they engulf and destroy pathogens, dead cells, and cellular waste\n- They are the CNS equivalent of macrophages in other tissues",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.019sa": [
+      "What do microglia do when they detect damage, infection, or debris in the CNS?",
+      "They transform into active phagocytic cells that engulf and destroy pathogens, dead cells, and cellular waste.",
+      "Think about how immune cells in other tissues respond to threats.",
+      "**Microglial activation:**\n1. In their resting state, microglia constantly survey CNS tissue\n2. When they detect damage, infection, or debris, they become activated\n3. Activated microglia transform into phagocytic cells\n4. They engulf and destroy:\n   - Pathogens\n   - Dead cells\n   - Cellular waste/debris\n\nThis transformation from surveillance mode to active defense is a key part of the CNS immune response.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.020sa": [
+      "What type of glial cell are the resident immune cells of the CNS?",
+      "Microglia.",
+      "Their name suggests they are small.",
+      "**Microglia as CNS immune cells:**\n- Only glial cell type with an immune/defensive function\n- Small, mobile cells that patrol CNS tissue\n- Can transform into phagocytes when threats are detected\n- Engulf and destroy pathogens, dead cells, and debris\n- Unlike most other CNS cells, microglia are derived from mesoderm (specifically from monocyte precursors), not from neuroectoderm",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.021sa": [
+      "Where are ependymal cells located?",
+      "Ependymal cells line the ventricles of the brain and the central canal of the spinal cord.",
+      "Think about the fluid-filled cavities within the CNS.",
+      "**Ependymal cell location:**\n- Line the ventricles of the brain (four ventricles)\n- Line the central canal of the spinal cord\n- These are the internal cavities of the CNS that contain cerebrospinal fluid (CSF)\n- Ependymal cells form an epithelial lining of these spaces\n- They are part of the blood-CSF barrier",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.022sa": [
+      "What type of epithelium do ependymal cells form, and what surface feature do they often have?",
+      "Ependymal cells form a cuboidal to columnar epithelium and are often ciliated.",
+      "Think about the cell shapes associated with secretory and transport functions, and what surface structures help move fluid.",
+      "**Ependymal cell characteristics:**\n- Cell shape ranges from cuboidal to columnar\n- Often ciliated on their apical (lumen-facing) surface\n- The cilia beat to help circulate CSF through the ventricular system\n- They are technically a form of epithelium, even though they are classified as glial cells of the nervous system\n- They also contribute to the blood-CSF barrier",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.023sa": [
+      "What fluid do ependymal cells produce and circulate?",
+      "Cerebrospinal fluid (CSF).",
+      "This fluid fills the ventricles and surrounds the brain and spinal cord.",
+      "**Ependymal cells and CSF:**\n- Ependymal cells produce cerebrospinal fluid\n- CSF fills the ventricles of the brain and the central canal of the spinal cord\n- CSF also circulates in the subarachnoid space surrounding the brain and spinal cord\n- Functions of CSF include cushioning the CNS, removing waste, and maintaining chemical stability\n- Ependymal cilia help move the CSF through the ventricular system",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.024sa": [
+      "How do ependymal cells help move cerebrospinal fluid through the ventricular system?",
+      "Their cilia beat to help propel CSF through the ventricles and central canal.",
+      "Think about the surface feature of ependymal cells and what it does when it moves.",
+      "**CSF circulation by ependymal cells:**\n- Ependymal cells are often ciliated on their apical surface\n- The cilia beat in coordinated waves\n- This beating creates a current that helps move CSF through the ventricular system\n- Without this movement, CSF could stagnate, impairing waste removal and chemical regulation in the CNS",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.025sa": [
+      "Name the two types of neuroglia found in the PNS.",
+      "Schwann cells and satellite cells.",
+      "One myelinates, the other surrounds cell bodies.",
+      "**PNS neuroglia:**\n1. **Schwann cells:**\n   - Myelinate PNS axons (one Schwann cell per axon segment)\n   - Play a critical role in peripheral nerve regeneration after injury\n2. **Satellite cells:**\n   - Surround neuronal cell bodies in peripheral ganglia\n   - Provide structural support and regulate the chemical environment\n   - Not to be confused with satellite cells of skeletal muscle",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.026sa": [
+      "Describe the role of Schwann cells in the PNS.",
+      "Schwann cells are the myelinating glial cells of the PNS. Each Schwann cell wraps around a single segment of a single axon, forming one internode of the myelin sheath. They also play a critical role in peripheral nerve regeneration by forming a regeneration tube that guides regrowing axons back to their targets after injury.",
+      "Think about insulation and what happens after nerve damage in the PNS.",
+      "**Schwann cell roles:**\n1. **Myelination:**\n   - Each Schwann cell wraps around one segment of one axon\n   - This forms one internode of the myelin sheath\n   - Contrast with oligodendrocytes, which myelinate segments of up to 50 axons\n2. **Nerve regeneration:**\n   - After peripheral axon damage, Schwann cells form a regeneration tube\n   - This tube guides the regrowing axon back to its target\n   - This is why PNS injuries have better recovery outcomes than CNS injuries",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.027sa": [
+      "In terms of how many axon segments each cell myelinates, how do Schwann cells and oligodendrocytes differ?",
+      "Each Schwann cell wraps around a single segment of a single axon, while a single oligodendrocyte can myelinate segments of up to 50 different axons simultaneously.",
+      "One is a one-to-one relationship; the other is one-to-many.",
+      "**Myelination comparison:**\n\n| Feature | Schwann Cell (PNS) | Oligodendrocyte (CNS) |\n|---|---|---|\n| Axons per cell | 1 segment of 1 axon | Segments of up to 50 axons |\n| Location | PNS | CNS |\n| Regeneration role | Yes, forms regeneration tube | No |\n\nDespite these differences, both cell types produce myelin that insulates axons and accelerates signal conduction.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.028sa": [
+      "After a peripheral axon is damaged, how do Schwann cells actively contribute to nerve regeneration?",
+      "Schwann cells form a regeneration tube that guides the regrowing axon back to its target.",
+      "Think about what a damaged axon would need to find its way back to where it was going.",
+      "**Schwann cells and regeneration:**\n1. A peripheral axon is damaged\n2. Schwann cells at the injury site form a regeneration tube\n3. The tube provides a physical guide for the regrowing axon\n4. The axon follows this path back toward its original target\n\n**Why this matters:**\n- This regeneration capacity is unique to the PNS\n- The CNS lacks an equivalent mechanism (oligodendrocytes do not form regeneration tubes)\n- This is a major reason peripheral nerve injuries recover better than CNS injuries",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.029sa": [
+      "What is a regeneration tube, and why does it matter for peripheral nerve recovery?",
+      "A regeneration tube is a structure formed by Schwann cells after peripheral axon damage that guides the regrowing axon back to its target. It matters because it provides the physical pathway that makes peripheral nerve regeneration possible.",
+      "Think about what structure would help a regrowing axon find its way.",
+      "**Regeneration tube:**\n- Formed by Schwann cells after a peripheral axon is damaged\n- Acts as a physical guide or track for the regrowing axon\n- Directs the axon back toward its original target (muscle, gland, sensory receptor, etc.)\n- Without this guide, the axon would have no reliable way to reconnect\n- This mechanism does not exist in the CNS, which is why CNS nerve damage is generally permanent",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.030sa": [
+      "Why do peripheral nerve injuries generally have a better prognosis for recovery than CNS injuries?",
+      "Because Schwann cells in the PNS form a regeneration tube that guides regrowing axons back to their targets. The CNS lacks this mechanism.",
+      "Think about what the PNS has that the CNS does not when it comes to supporting regrowth after injury.",
+      "**PNS vs. CNS recovery:**\n- **PNS:** Schwann cells form regeneration tubes after injury, providing a physical guide for axon regrowth. This gives damaged peripheral nerves a realistic path to recovery.\n- **CNS:** Oligodendrocytes do not form regeneration tubes. The CNS also has other inhibitory factors that prevent axon regrowth.\n- Result: peripheral nerve injuries can heal; CNS injuries (brain and spinal cord) are generally permanent\n\nThis difference has major clinical significance for injuries such as spinal cord damage.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.031sa": [
+      "Where are satellite cells of the PNS located, and what structures do they surround?",
+      "Satellite cells are located in peripheral ganglia, where they surround neuronal cell bodies.",
+      "Think about clusters of neuron cell bodies outside the CNS.",
+      "**PNS satellite cell location:**\n- Found in peripheral ganglia (clusters of neuronal cell bodies located outside the CNS)\n- They physically surround individual neuronal cell bodies\n- They form a protective layer around the cell body\n- Not to be confused with the satellite cells of skeletal muscle, which are involved in muscle repair and regeneration",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.032sa": [
+      "What functions do PNS satellite cells perform?",
+      "Satellite cells provide structural support, regulate the chemical environment around neuronal cell bodies, and form a protective barrier around the cell body.",
+      "Think about support, regulation, and protection.",
+      "**PNS satellite cell functions:**\n1. Structural support for neuronal cell bodies in ganglia\n2. Regulation of the chemical environment surrounding the cell body\n3. Formation of a protective barrier around the cell body\n\nThese functions parallel some of what astrocytes do in the CNS, particularly chemical regulation and structural support, but satellite cells operate specifically around cell bodies in peripheral ganglia.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.033sa": [
+      "How should PNS satellite cells be distinguished from the satellite cells found in skeletal muscle?",
+      "PNS satellite cells surround neuronal cell bodies in peripheral ganglia and provide support and protection. Skeletal muscle satellite cells are stem cells involved in muscle repair and regeneration. They share a name but have completely different locations, structures, and functions.",
+      "Same name, different tissue, different job.",
+      "**Two different satellite cells:**\n\n| Feature | PNS Satellite Cells | Skeletal Muscle Satellite Cells |\n|---|---|---|\n| Location | Peripheral ganglia | Between muscle fiber sarcolemma and basement membrane |\n| Associated with | Neuronal cell bodies | Muscle fibers |\n| Function | Support, chemical regulation, protection | Muscle repair and regeneration (stem cells) |\n| Tissue type | Nervous tissue | Muscle tissue |\n\nThe shared name is a potential source of confusion but the two cell types are unrelated in function and location.",
+      true,
+      false,
+      false,
+      0
+    ],
+    "01.04.06.03.034sa": [
+      "In the CNS, __________ are responsible for myelination, while in the PNS, __________ perform that role.",
+      "Oligodendrocytes; Schwann cells.",
+      "One cell can handle up to 50 axons; the other handles just one segment of one axon.",
+      "**Myelinating cells by location:**\n- **CNS:** Oligodendrocytes\n  - Each one myelinates segments of up to 50 axons\n  - Extends flat, paddle-like processes\n  - Does not participate in nerve regeneration\n- **PNS:** Schwann cells\n  - Each one myelinates a single segment of a single axon\n  - Also plays a role in nerve regeneration by forming regeneration tubes\n\nBoth produce myelin that insulates axons and accelerates signal conduction, but they differ in how many axons they serve and whether they support regeneration.",
+      true,
+      false,
+      false,
+      0
+    ]
+  }
+}
