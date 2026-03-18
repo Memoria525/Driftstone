@@ -87,14 +87,8 @@ export default function TopicPicker({ onStart }) {
   const [selected, setSelected] = useState(() => allSectionIds(courses));
 
   // Which courses/chapters are expanded
-  const [openCourses, setOpenCourses] = useState(() => new Set(courses.map((c) => c.id)));
-  const [openChapters, setOpenChapters] = useState(() => {
-    const ids = new Set();
-    for (const course of courses) {
-      for (const chapter of course.chapters) ids.add(chapter.id);
-    }
-    return ids;
-  });
+  const [openCourses, setOpenCourses] = useState(() => new Set());
+  const [openChapters, setOpenChapters] = useState(() => new Set());
 
   function toggleSet(setter, id) {
     setter((prev) => {
