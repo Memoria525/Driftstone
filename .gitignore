@@ -25,3 +25,6 @@ dist-ssr
 
 # Claude Code
 .claude/settings.local.json
+
+# Firebase service account key — NEVER commit this
+serviceAccountKey.json

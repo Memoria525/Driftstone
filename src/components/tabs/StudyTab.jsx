@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import TopicPicker from '../topic-picker/TopicPicker.jsx';
 import CardViewer from '../card-viewer/CardViewer.jsx';
 import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
@@ -9,9 +9,11 @@ export default function StudyTab() {
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState([]);
+  const coursesRef = useRef(null);
 
-  function handleStart(selectedSectionIds) {
-    const pool = shuffle(getCardsBySectionIds(selectedSectionIds));
+  function handleStart(selectedSectionIds, courses) {
+    coursesRef.current = courses;
+    const pool = shuffle(getCardsBySectionIds(courses, selectedSectionIds));
     if (pool.length === 0) return;
     setCards(pool);
     setCurrentIndex(0);

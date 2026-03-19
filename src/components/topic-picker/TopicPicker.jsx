@@ -74,21 +74,38 @@ function Checkbox({ state, onChange, label }) {
 // ── main component ────────────────────────────────────────────────────────────
 
 export default function TopicPicker({ onStart }) {
-  const courses = useMemo(() => loadCourses(), []);
+  const [courses, setCourses] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
   const headingRef = useRef(null);
   const announce = useAnnounce();
 
-  useEffect(() => {
-    headingRef.current?.focus();
-    announce('Select topics to study');
-  }, [announce]);
-
-  // Everything selected by default
-  const [selected, setSelected] = useState(() => allSectionIds(courses));
-
-  // Which courses/chapters are expanded
+  const [selected, setSelected] = useState(() => new Set());
   const [openCourses, setOpenCourses] = useState(() => new Set());
   const [openChapters, setOpenChapters] = useState(() => new Set());
+
+  useEffect(() => {
+    let cancelled = false;
+    loadCourses()
+      .then((data) => {
+        if (cancelled) return;
+        setCourses(data);
+        setSelected(allSectionIds(data));
+        setLoading(false);
+        announce('Select topics to study');
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        setError('Failed to load courses. Please try again.');
+        setLoading(false);
+        console.error(err);
+      });
+    return () => { cancelled = true; };
+  }, [announce]);
+
+  useEffect(() => {
+    if (!loading) headingRef.current?.focus();
+  }, [loading]);
 
   function toggleSet(setter, id) {
     setter((prev) => {
@@ -112,6 +129,22 @@ export default function TopicPicker({ onStart }) {
 
   const totalSelected = selected.size;
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <p className="text-sm text-[--color-text-secondary]" role="status">Loading courses…</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center h-full px-4">
+        <p className="text-sm text-red-600" role="alert">{error}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col h-full">
       {/* Scrollable tree */}
@@ -121,7 +154,7 @@ export default function TopicPicker({ onStart }) {
         </h2>
         {courses.length === 0 && (
           <p className="text-sm text-[--color-text-muted] text-center py-8">
-            No courses found. Add course data to the Courses folder.
+            No courses found.
           </p>
         )}
         {courses.map((course) => {
@@ -219,7 +252,7 @@ export default function TopicPicker({ onStart }) {
       {/* Sticky footer */}
       <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface]">
         <button
-          onClick={() => onStart(selected)}
+          onClick={() => onStart(selected, courses)}
           disabled={totalSelected === 0}
           className={[
             'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',
