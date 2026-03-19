@@ -1,14 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import useAuth from '../../hooks/useAuth.js';
 import useCardState from '../../hooks/useCardState.js';
 import { loadCourses } from '../../data/courseLoader.js';
 import useAnnounce from '../../hooks/useAnnounce.js';
-
-const CATEGORIES = [
-  { id: 'overdue', label: 'Overdue', color: 'text-red-600', bg: 'bg-red-50' },
-  { id: 'dueToday', label: 'Due today', color: 'text-amber-600', bg: 'bg-amber-50' },
-  { id: 'upcoming', label: 'Next 7 days', color: 'text-emerald-600', bg: 'bg-emerald-50' },
-];
+import { computeRetrievability } from '../../utils/fsrs.js';
 
 function ChevronIcon({ open }) {
   return (
@@ -35,51 +30,37 @@ function toggleSet(setter, id) {
   });
 }
 
-function computeCounts(stateMap, totalCards) {
-  const now = new Date();
-  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const endOfToday = new Date(startOfToday.getTime() + 24 * 60 * 60 * 1000);
-  const weekFromNow = new Date(endOfToday.getTime() + 7 * 24 * 60 * 60 * 1000);
-
-  const counts = { overdue: 0, dueToday: 0, upcoming: 0, studied: 0 };
-
-  for (const s of stateMap.values()) {
-    counts.studied++;
-    const due = s.due;
-    if (due < startOfToday) counts.overdue++;
-    else if (due < endOfToday) counts.dueToday++;
-    else if (due < weekFromNow) counts.upcoming++;
-  }
-
-  counts.newCards = totalCards - counts.studied;
-  return counts;
-}
-
-function countCardsForIds(cardIds, stateMap) {
-  const now = new Date();
-  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const endOfToday = new Date(startOfToday.getTime() + 24 * 60 * 60 * 1000);
-
-  let overdue = 0;
-  let dueToday = 0;
-
+function computeReadiness(cardIds, stateMap, now) {
+  if (cardIds.length === 0) return 0;
+  let sum = 0;
   for (const id of cardIds) {
     const s = stateMap.get(id);
-    if (!s) continue;
-    const due = s.due;
-    if (due < startOfToday) overdue++;
-    else if (due < endOfToday) dueToday++;
+    sum += s ? computeRetrievability(s, now) : 0;
   }
-
-  return { overdue, dueToday };
+  return sum / cardIds.length;
 }
 
-function DueBadges({ overdue, dueToday }) {
-  if (overdue === 0 && dueToday === 0) return null;
+function ReadinessBar({ readiness, label }) {
+  const pct = Math.round(readiness * 100);
   return (
-    <span className="flex gap-2 text-xs font-semibold">
-      {overdue > 0 && <span className="text-red-600">{overdue} overdue</span>}
-      {dueToday > 0 && <span className="text-amber-600">{dueToday} due</span>}
+    <div
+      className="h-1.5 bg-[--color-surface-sunken] rounded-full overflow-hidden mt-1"
+      role="img"
+      aria-label={`${label} readiness: ${pct} percent`}
+    >
+      <div
+        className="h-full bg-[--color-brand] rounded-full transition-all"
+        style={{ width: `${pct}%` }}
+      />
+    </div>
+  );
+}
+
+function ReadinessPct({ readiness }) {
+  const pct = Math.round(readiness * 100);
+  return (
+    <span className="text-xs font-semibold text-[--color-brand]">
+      {pct}%
     </span>
   );
 }
@@ -112,24 +93,26 @@ export default function ProgressTab() {
     headingRef.current?.focus();
   }, [loading]);
 
-  let totalCards = 0;
-  for (const c of courses) {
-    for (const ch of c.chapters) {
-      for (const sec of ch.sections) {
-        totalCards += sec.cards.length;
-      }
-    }
-  }
+  const now = useMemo(() => new Date(), [loading]);
 
-  const counts = loading ? null : computeCounts(stateMap, totalCards);
-  const overdue = counts?.overdue ?? 0;
-  const dueToday = counts?.dueToday ?? 0;
+  const allCardIds = useMemo(() =>
+    courses.flatMap(course =>
+      course.chapters.flatMap(ch =>
+        ch.sections.flatMap(sec => sec.cards.map(c => c.id))
+      )
+    ), [courses]);
+
+  const totalCards = allCardIds.length;
+  const overallReadiness = useMemo(() =>
+    loading ? 0 : computeReadiness(allCardIds, stateMap, now),
+    [loading, allCardIds, stateMap, now]
+  );
 
   useEffect(() => {
-    if (!counts) return;
-    const dueNow = overdue + dueToday;
-    announce(`${dueNow} card${dueNow === 1 ? '' : 's'} due for review.`);
-  }, [counts, overdue, dueToday, announce]);
+    if (loading) return;
+    const pct = Math.round(overallReadiness * 100);
+    announce(`Overall exam readiness: ${pct} percent.`);
+  }, [loading, overallReadiness, announce]);
 
   if (loading) {
     return (
@@ -139,26 +122,26 @@ export default function ProgressTab() {
     );
   }
 
+  const studied = stateMap.size;
+  const newCards = totalCards - studied;
+
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-y-auto px-4 py-6 space-y-6">
-        {/* Summary */}
+        {/* Overall readiness */}
         <div className="text-center">
           <h2 ref={headingRef} tabIndex={-1} className="text-lg font-semibold text-[--color-text] outline-none">
-            Review progress
+            Exam readiness
           </h2>
-          <p className="text-sm text-[--color-text-muted] mt-1">
-            {counts.studied} studied · {counts.newCards} new
+          <p className="text-4xl font-bold text-[--color-brand] mt-2">
+            {Math.round(overallReadiness * 100)}%
           </p>
-        </div>
-
-        <div className="space-y-2">
-          {CATEGORIES.map(cat => (
-            <div key={cat.id} className={`flex items-center justify-between rounded-[--radius-md] px-4 ${cat.bg}`} style={{ minHeight: 'var(--spacing-touch)' }}>
-              <span className={`text-sm font-medium ${cat.color}`}>{cat.label}</span>
-              <span className={`text-sm font-semibold ${cat.color}`}>{counts[cat.id]}</span>
-            </div>
-          ))}
+          <p className="text-sm text-[--color-text-muted] mt-1">
+            {studied} studied · {newCards} new · {totalCards} total
+          </p>
+          <div className="max-w-xs mx-auto mt-3">
+            <ReadinessBar readiness={overallReadiness} label="Overall" />
+          </div>
         </div>
 
         {/* Per-topic breakdown */}
@@ -168,7 +151,7 @@ export default function ProgressTab() {
             const courseCardIds = course.chapters.flatMap(ch =>
               ch.sections.flatMap(sec => sec.cards.map(c => c.id))
             );
-            const courseDue = countCardsForIds(courseCardIds, stateMap);
+            const courseReadiness = computeReadiness(courseCardIds, stateMap, now);
             const cOpen = openCourses.has(course.id);
 
             return (
@@ -176,14 +159,17 @@ export default function ProgressTab() {
                 <button
                   onClick={() => toggleSet(setOpenCourses, course.id)}
                   aria-expanded={cOpen}
-                  className="w-full flex items-center justify-between gap-2 px-4 bg-[--color-surface-raised] text-left font-semibold text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                  className="w-full flex flex-col gap-1 px-4 py-2 bg-[--color-surface-raised] text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
                   style={{ minHeight: 'var(--spacing-touch)' }}
                 >
-                  <span className="flex items-center gap-2">
-                    <ChevronIcon open={cOpen} />
-                    {course.name}
+                  <span className="flex items-center justify-between gap-2 w-full">
+                    <span className="flex items-center gap-2 font-semibold text-sm">
+                      <ChevronIcon open={cOpen} />
+                      {course.name}
+                    </span>
+                    <ReadinessPct readiness={courseReadiness} />
                   </span>
-                  <DueBadges {...courseDue} />
+                  <ReadinessBar readiness={courseReadiness} label={course.name} />
                 </button>
 
                 {cOpen && (
@@ -192,7 +178,7 @@ export default function ProgressTab() {
                       const chapterCardIds = chapter.sections.flatMap(sec =>
                         sec.cards.map(c => c.id)
                       );
-                      const chapterDue = countCardsForIds(chapterCardIds, stateMap);
+                      const chapterReadiness = computeReadiness(chapterCardIds, stateMap, now);
                       const chOpen = openChapters.has(chapter.id);
 
                       return (
@@ -207,14 +193,14 @@ export default function ProgressTab() {
                               <ChevronIcon open={chOpen} />
                               {chapter.name}
                             </span>
-                            <DueBadges {...chapterDue} />
+                            <ReadinessPct readiness={chapterReadiness} />
                           </button>
 
                           {chOpen && (
                             <div className="bg-[--color-surface-sunken] divide-y divide-[--color-border]">
                               {chapter.sections.map(section => {
                                 const sectionCardIds = section.cards.map(c => c.id);
-                                const sectionDue = countCardsForIds(sectionCardIds, stateMap);
+                                const sectionReadiness = computeReadiness(sectionCardIds, stateMap, now);
 
                                 return (
                                   <div
@@ -225,7 +211,7 @@ export default function ProgressTab() {
                                     <span className="text-sm text-[--color-text] py-3">
                                       {section.name}
                                     </span>
-                                    <DueBadges {...sectionDue} />
+                                    <ReadinessPct readiness={sectionReadiness} />
                                   </div>
                                 );
                               })}
