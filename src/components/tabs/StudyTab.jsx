@@ -2,9 +2,14 @@ import { useState, useRef } from 'react';
 import TopicPicker from '../topic-picker/TopicPicker.jsx';
 import CardViewer from '../card-viewer/CardViewer.jsx';
 import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
-import { getCardsBySectionIds, shuffle } from '../../data/courseLoader.js';
+import { getCardsBySectionIds } from '../../data/courseLoader.js';
+import useAuth from '../../hooks/useAuth.js';
+import useCardState from '../../hooks/useCardState.js';
+import { scheduleCard, sortByPriority, createEmptyCardState, GRADE_TO_RATING } from '../../utils/fsrs.js';
 
 export default function StudyTab() {
+  const { user } = useAuth();
+  const { stateMap, saveCardState } = useCardState(user);
   const [screen, setScreen] = useState('picker'); // 'picker' | 'study' | 'summary'
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,7 +18,10 @@ export default function StudyTab() {
 
   function handleStart(selectedSectionIds, courses) {
     coursesRef.current = courses;
-    const pool = shuffle(getCardsBySectionIds(courses, selectedSectionIds));
+    const pool = sortByPriority(
+      getCardsBySectionIds(courses, selectedSectionIds),
+      stateMap
+    );
     if (pool.length === 0) return;
     setCards(pool);
     setCurrentIndex(0);
@@ -22,8 +30,15 @@ export default function StudyTab() {
   }
 
   function handleGrade(grade) {
-    const newResults = [...results, { cardId: cards[currentIndex].id, grade }];
+    const card = cards[currentIndex];
+    const newResults = [...results, { cardId: card.id, grade }];
     setResults(newResults);
+
+    // Compute and persist FSRS state
+    const rating = GRADE_TO_RATING[grade];
+    const currentState = stateMap.get(card.id) || createEmptyCardState(card.id);
+    const newState = scheduleCard(currentState, rating);
+    saveCardState(card.id, newState);
 
     if (currentIndex + 1 < cards.length) {
       setCurrentIndex(currentIndex + 1);
