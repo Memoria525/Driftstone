@@ -10,7 +10,32 @@ const CATEGORIES = [
   { id: 'upcoming', label: 'Next 7 days', color: 'text-emerald-600', bg: 'bg-emerald-50' },
 ];
 
-function countCards(stateMap, totalCards) {
+function ChevronIcon({ open }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`w-4 h-4 shrink-0 transition-transform ${open ? 'rotate-90' : ''}`}
+    >
+      <polyline points="9 18 15 12 9 6" />
+    </svg>
+  );
+}
+
+function toggleSet(setter, id) {
+  setter(prev => {
+    const next = new Set(prev);
+    next.has(id) ? next.delete(id) : next.add(id);
+    return next;
+  });
+}
+
+function computeCounts(stateMap, totalCards) {
   const now = new Date();
   const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const endOfToday = new Date(startOfToday.getTime() + 24 * 60 * 60 * 1000);
@@ -21,40 +46,60 @@ function countCards(stateMap, totalCards) {
   for (const s of stateMap.values()) {
     counts.studied++;
     const due = s.due;
-    if (due < startOfToday) {
-      counts.overdue++;
-    } else if (due < endOfToday) {
-      counts.dueToday++;
-    } else if (due < weekFromNow) {
-      counts.upcoming++;
-    }
+    if (due < startOfToday) counts.overdue++;
+    else if (due < endOfToday) counts.dueToday++;
+    else if (due < weekFromNow) counts.upcoming++;
   }
 
   counts.newCards = totalCards - counts.studied;
   return counts;
 }
 
+function countCardsForIds(cardIds, stateMap) {
+  const now = new Date();
+  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const endOfToday = new Date(startOfToday.getTime() + 24 * 60 * 60 * 1000);
+
+  let overdue = 0;
+  let dueToday = 0;
+
+  for (const id of cardIds) {
+    const s = stateMap.get(id);
+    if (!s) continue;
+    const due = s.due;
+    if (due < startOfToday) overdue++;
+    else if (due < endOfToday) dueToday++;
+  }
+
+  return { overdue, dueToday };
+}
+
+function DueBadges({ overdue, dueToday }) {
+  if (overdue === 0 && dueToday === 0) return null;
+  return (
+    <span className="flex gap-2 text-xs font-semibold">
+      {overdue > 0 && <span className="text-red-600">{overdue} overdue</span>}
+      {dueToday > 0 && <span className="text-amber-600">{dueToday} due</span>}
+    </span>
+  );
+}
+
 export default function ProgressTab() {
   const { user } = useAuth();
   const { stateMap, loading: stateLoading } = useCardState(user);
-  const [totalCards, setTotalCards] = useState(0);
+  const [courses, setCourses] = useState([]);
   const [coursesLoading, setCoursesLoading] = useState(true);
   const announce = useAnnounce();
   const headingRef = useRef(null);
 
+  const [openCourses, setOpenCourses] = useState(() => new Set());
+  const [openChapters, setOpenChapters] = useState(() => new Set());
+
   useEffect(() => {
     let cancelled = false;
-    loadCourses().then(courses => {
+    loadCourses().then(data => {
       if (cancelled) return;
-      let count = 0;
-      for (const c of courses) {
-        for (const ch of c.chapters) {
-          for (const sec of ch.sections) {
-            count += sec.cards.length;
-          }
-        }
-      }
-      setTotalCards(count);
+      setCourses(data);
       setCoursesLoading(false);
     });
     return () => { cancelled = true; };
@@ -67,7 +112,16 @@ export default function ProgressTab() {
     headingRef.current?.focus();
   }, [loading]);
 
-  const counts = loading ? null : countCards(stateMap, totalCards);
+  let totalCards = 0;
+  for (const c of courses) {
+    for (const ch of c.chapters) {
+      for (const sec of ch.sections) {
+        totalCards += sec.cards.length;
+      }
+    }
+  }
+
+  const counts = loading ? null : computeCounts(stateMap, totalCards);
   const overdue = counts?.overdue ?? 0;
   const dueToday = counts?.dueToday ?? 0;
 
@@ -88,6 +142,7 @@ export default function ProgressTab() {
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-y-auto px-4 py-6 space-y-6">
+        {/* Summary */}
         <div className="text-center">
           <h2 ref={headingRef} tabIndex={-1} className="text-lg font-semibold text-[--color-text] outline-none">
             Review progress
@@ -104,6 +159,86 @@ export default function ProgressTab() {
               <span className={`text-sm font-semibold ${cat.color}`}>{counts[cat.id]}</span>
             </div>
           ))}
+        </div>
+
+        {/* Per-topic breakdown */}
+        <div className="space-y-2">
+          <h3 className="text-sm font-semibold text-[--color-text]">By topic</h3>
+          {courses.map(course => {
+            const courseCardIds = course.chapters.flatMap(ch =>
+              ch.sections.flatMap(sec => sec.cards.map(c => c.id))
+            );
+            const courseDue = countCardsForIds(courseCardIds, stateMap);
+            const cOpen = openCourses.has(course.id);
+
+            return (
+              <div key={course.id} className="rounded-[--radius-md] border border-[--color-border] overflow-hidden">
+                <button
+                  onClick={() => toggleSet(setOpenCourses, course.id)}
+                  aria-expanded={cOpen}
+                  className="w-full flex items-center justify-between gap-2 px-4 bg-[--color-surface-raised] text-left font-semibold text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                  style={{ minHeight: 'var(--spacing-touch)' }}
+                >
+                  <span className="flex items-center gap-2">
+                    <ChevronIcon open={cOpen} />
+                    {course.name}
+                  </span>
+                  <DueBadges {...courseDue} />
+                </button>
+
+                {cOpen && (
+                  <div className="divide-y divide-[--color-border]">
+                    {course.chapters.map(chapter => {
+                      const chapterCardIds = chapter.sections.flatMap(sec =>
+                        sec.cards.map(c => c.id)
+                      );
+                      const chapterDue = countCardsForIds(chapterCardIds, stateMap);
+                      const chOpen = openChapters.has(chapter.id);
+
+                      return (
+                        <div key={chapter.id}>
+                          <button
+                            onClick={() => toggleSet(setOpenChapters, chapter.id)}
+                            aria-expanded={chOpen}
+                            className="w-full flex items-center justify-between gap-2 pl-8 pr-4 bg-[--color-surface] text-left text-sm font-medium text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                            style={{ minHeight: 'var(--spacing-touch)' }}
+                          >
+                            <span className="flex items-center gap-2">
+                              <ChevronIcon open={chOpen} />
+                              {chapter.name}
+                            </span>
+                            <DueBadges {...chapterDue} />
+                          </button>
+
+                          {chOpen && (
+                            <div className="bg-[--color-surface-sunken] divide-y divide-[--color-border]">
+                              {chapter.sections.map(section => {
+                                const sectionCardIds = section.cards.map(c => c.id);
+                                const sectionDue = countCardsForIds(sectionCardIds, stateMap);
+
+                                return (
+                                  <div
+                                    key={section.id}
+                                    className="flex items-center justify-between pl-14 pr-4"
+                                    style={{ minHeight: 'var(--spacing-touch)' }}
+                                  >
+                                    <span className="text-sm text-[--color-text] py-3">
+                                      {section.name}
+                                    </span>
+                                    <DueBadges {...sectionDue} />
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
