@@ -10,7 +10,9 @@ const AdminTab = lazy(() => import('./components/tabs/AdminTab.jsx'));
 
 export default function App() {
   const { user, loading } = useAuth();
-  const isAdmin = useAdmin(user);
+  const isAdminClaim = useAdmin(user);
+  const [adminHidden, setAdminHidden] = useState(false);
+  const isAdmin = isAdminClaim && !adminHidden;
   const [activeTab, setActiveTab] = useState('study');
   const [hideNav, setHideNav] = useState(false);
 
@@ -32,7 +34,7 @@ export default function App() {
       {activeTab === 'progress' && <ProgressTab />}
       {activeTab === 'admin' && (
         <Suspense fallback={<p className="p-4 text-sm text-[--color-text-muted]">Loading…</p>}>
-          <AdminTab onStudying={setHideNav} />
+          <AdminTab onStudying={setHideNav} onHideAdmin={() => { setAdminHidden(true); setActiveTab('study'); }} />
         </Suspense>
       )}
     </AppShell>

@@ -108,7 +108,7 @@ function SearchResult({ result, query, isExpanded, onToggle }) {
   );
 }
 
-export default function AdminTab({ onStudying }) {
+export default function AdminTab({ onStudying, onHideAdmin }) {
   const { user } = useAuth();
   const { stateMap, saveCardState } = useCardState(user);
   const { saveDeck } = useSavedDecks(user);
@@ -319,6 +319,20 @@ export default function AdminTab({ onStudying }) {
           </li>
         )}
       </ul>
+
+      {/* Hide admin footer */}
+      <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface]">
+        <button
+          onClick={onHideAdmin}
+          className={[
+            'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+            'border border-[--color-border] text-[--color-text-muted] hover:text-[--color-text] hover:bg-[--color-surface-sunken]',
+          ].join(' ')}
+        >
+          Hide admin
+        </button>
+      </div>
     </div>
   );
 }
