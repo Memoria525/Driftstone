@@ -1,6 +1,8 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { loadCourses } from '../../data/courseLoader.js';
 import useAnnounce from '../../hooks/useAnnounce.js';
+import useAuth from '../../hooks/useAuth.js';
+import useSavedDecks from '../../hooks/useSavedDecks.js';
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
@@ -73,7 +75,9 @@ function Checkbox({ state, onChange, label }) {
 
 // ── main component ────────────────────────────────────────────────────────────
 
-export default function TopicPicker({ onStart }) {
+export default function TopicPicker({ onStart, onStartDeck }) {
+  const { user } = useAuth();
+  const { decks, deleteDeck } = useSavedDecks(user);
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -247,6 +251,52 @@ export default function TopicPicker({ onStart }) {
             </div>
           );
         })}
+
+        {/* Saved Decks */}
+        {decks.length > 0 && (
+          <div className="mt-4">
+            <h3 className="text-sm font-semibold text-[--color-text] mb-2">Saved Decks</h3>
+            <div className="space-y-2">
+              {decks.map((deck) => (
+                <div
+                  key={deck.id}
+                  className="flex items-center gap-2 rounded-[--radius-md] border border-[--color-border] overflow-hidden bg-[--color-surface-raised]"
+                >
+                  <button
+                    onClick={() => onStartDeck(deck.cardIds, courses)}
+                    className={[
+                      'flex-1 text-left px-4 py-3 min-h-touch',
+                      'text-sm font-medium text-[--color-text]',
+                      'hover:bg-[--color-surface-sunken] transition-colors',
+                      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] focus-visible:ring-inset',
+                    ].join(' ')}
+                  >
+                    <span className="block">{deck.name}</span>
+                    <span className="text-xs text-[--color-text-muted]">
+                      {deck.cardIds.length} card{deck.cardIds.length === 1 ? '' : 's'}
+                    </span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      if (confirm(`Delete "${deck.name}"?`)) deleteDeck(deck.id);
+                    }}
+                    aria-label={`Delete ${deck.name}`}
+                    className={[
+                      'min-h-touch min-w-touch flex items-center justify-center shrink-0',
+                      'text-[--color-text-muted] hover:text-red-500 transition-colors',
+                      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded',
+                    ].join(' ')}
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-4 h-4">
+                      <polyline points="3 6 5 6 21 6" />
+                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                    </svg>
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Sticky footer */}

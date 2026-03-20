@@ -4,6 +4,7 @@ import { searchCards, highlightMatches } from '../../utils/search.js';
 import useAnnounce from '../../hooks/useAnnounce.js';
 import useAuth from '../../hooks/useAuth.js';
 import useCardState from '../../hooks/useCardState.js';
+import useSavedDecks from '../../hooks/useSavedDecks.js';
 import CardViewer from '../card-viewer/CardViewer.jsx';
 import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
 import { scheduleCard, sortByPriority, createEmptyCardState, GRADE_TO_RATING } from '../../utils/fsrs.js';
@@ -110,6 +111,7 @@ function SearchResult({ result, query, isExpanded, onToggle }) {
 export default function AdminTab() {
   const { user } = useAuth();
   const { stateMap, saveCardState } = useCardState(user);
+  const { saveDeck } = useSavedDecks(user);
   const [allCards, setAllCards] = useState([]);
   const [query, setQuery] = useState('');
   const [expandedId, setExpandedId] = useState(null);
@@ -117,6 +119,7 @@ export default function AdminTab() {
   const [studyCards, setStudyCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [studyResults, setStudyResults] = useState([]);
+  const [savingDeck, setSavingDeck] = useState(false);
   const inputRef = useRef(null);
   const announce = useAnnounce();
 
@@ -174,6 +177,16 @@ export default function AdminTab() {
 
   function handleBackToSearch() {
     setScreen('search');
+  }
+
+  async function handleSaveDeck() {
+    const name = prompt('Deck name:');
+    if (!name || !name.trim()) return;
+    setSavingDeck(true);
+    const cardIds = results.map((r) => r.card.id);
+    await saveDeck(name.trim(), cardIds);
+    setSavingDeck(false);
+    announce(`Deck "${name.trim()}" saved with ${cardIds.length} cards`);
   }
 
   // Study screen
@@ -253,16 +266,30 @@ export default function AdminTab() {
             {results.length} result{results.length === 1 ? '' : 's'}
           </p>
           {results.length > 0 && (
-            <button
-              onClick={handleCreateDeck}
-              className={[
-                'text-xs font-semibold px-3 min-h-touch flex items-center rounded-[--radius-md]',
-                'text-white bg-[--color-brand] hover:bg-[--color-brand-dark] transition-colors',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
-              ].join(' ')}
-            >
-              Study {results.length} card{results.length === 1 ? '' : 's'}
-            </button>
+            <div className="flex gap-2">
+              <button
+                onClick={handleSaveDeck}
+                disabled={savingDeck}
+                className={[
+                  'text-xs font-semibold px-3 min-h-touch flex items-center rounded-[--radius-md]',
+                  'border border-[--color-brand] text-[--color-brand] hover:bg-[--color-brand]/10 transition-colors',
+                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+                  savingDeck ? 'opacity-50 cursor-not-allowed' : '',
+                ].join(' ')}
+              >
+                {savingDeck ? 'Saving…' : 'Save deck'}
+              </button>
+              <button
+                onClick={handleCreateDeck}
+                className={[
+                  'text-xs font-semibold px-3 min-h-touch flex items-center rounded-[--radius-md]',
+                  'text-white bg-[--color-brand] hover:bg-[--color-brand-dark] transition-colors',
+                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+                ].join(' ')}
+              >
+                Study {results.length} card{results.length === 1 ? '' : 's'}
+              </button>
+            </div>
           )}
         </div>
       )}

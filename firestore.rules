@@ -7,5 +7,8 @@ service cloud.firestore {
     match /users/{userId}/cardState/{cardId} {
       allow read, write: if request.auth != null && request.auth.uid == userId;
     }
+    match /users/{userId}/savedDecks/{deckId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
   }
 }

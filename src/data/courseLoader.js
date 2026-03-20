@@ -91,6 +91,23 @@ export function getCardsBySectionIds(courses, sectionIds) {
   return cards;
 }
 
+export function getCardsByIds(courses, cardIds) {
+  const idSet = new Set(cardIds);
+  const cards = [];
+  for (const course of courses) {
+    for (const chapter of course.chapters) {
+      for (const section of chapter.sections) {
+        for (const card of section.cards) {
+          if (idSet.has(card.id)) {
+            cards.push(card);
+          }
+        }
+      }
+    }
+  }
+  return cards;
+}
+
 export function shuffle(array) {
   const a = [...array];
   for (let i = a.length - 1; i > 0; i--) {

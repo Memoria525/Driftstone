@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import TopicPicker from '../topic-picker/TopicPicker.jsx';
 import CardViewer from '../card-viewer/CardViewer.jsx';
 import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
-import { getCardsBySectionIds } from '../../data/courseLoader.js';
+import { getCardsBySectionIds, getCardsByIds } from '../../data/courseLoader.js';
 import useAuth from '../../hooks/useAuth.js';
 import useCardState from '../../hooks/useCardState.js';
 import { scheduleCard, sortByPriority, createEmptyCardState, GRADE_TO_RATING } from '../../utils/fsrs.js';
@@ -47,6 +47,17 @@ export default function StudyTab() {
     }
   }
 
+  function handleStartDeck(cardIds, courses) {
+    coursesRef.current = courses;
+    const allCards = getCardsByIds(courses, cardIds);
+    const pool = sortByPriority(allCards, stateMap);
+    if (pool.length === 0) return;
+    setCards(pool);
+    setCurrentIndex(0);
+    setResults([]);
+    setScreen('study');
+  }
+
   function handleRestart() {
     setScreen('picker');
   }
@@ -73,5 +84,5 @@ export default function StudyTab() {
     );
   }
 
-  return <TopicPicker key={screen} onStart={handleStart} />;
+  return <TopicPicker key={screen} onStart={handleStart} onStartDeck={handleStartDeck} />;
 }
