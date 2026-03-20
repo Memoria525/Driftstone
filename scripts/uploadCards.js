@@ -72,7 +72,7 @@ async function upload() {
     const cards = fileContent.cards || {};
 
     for (const [cardId, cardArray] of Object.entries(cards)) {
-      const [question, answer, hint, explanation, isShortAnswer] = cardArray;
+      const [question, answer, hint, explanation, isShortAnswer, , , points] = cardArray;
 
       const docRef = db.collection('cards').doc(cardId);
       batch.set(docRef, {
@@ -81,6 +81,7 @@ async function upload() {
         hint: hint || '',
         explanation: explanation || '',
         isShortAnswer: isShortAnswer ?? true,
+        points: points ?? 0,
         course,
         chapter,
         section,
