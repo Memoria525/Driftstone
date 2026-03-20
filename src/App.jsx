@@ -12,6 +12,7 @@ export default function App() {
   const { user, loading } = useAuth();
   const isAdmin = useAdmin(user);
   const [activeTab, setActiveTab] = useState('study');
+  const [hideNav, setHideNav] = useState(false);
 
   if (loading) {
     return (
@@ -26,12 +27,12 @@ export default function App() {
   }
 
   return (
-    <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} isAdmin={isAdmin}>
-      {activeTab === 'study' && <StudyTab />}
+    <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} isAdmin={isAdmin} hideNav={hideNav}>
+      {activeTab === 'study' && <StudyTab onStudying={setHideNav} />}
       {activeTab === 'progress' && <ProgressTab />}
       {activeTab === 'admin' && (
         <Suspense fallback={<p className="p-4 text-sm text-[--color-text-muted]">Loading…</p>}>
-          <AdminTab />
+          <AdminTab onStudying={setHideNav} />
         </Suspense>
       )}
     </AppShell>

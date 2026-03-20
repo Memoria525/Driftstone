@@ -108,7 +108,7 @@ function SearchResult({ result, query, isExpanded, onToggle }) {
   );
 }
 
-export default function AdminTab() {
+export default function AdminTab({ onStudying }) {
   const { user } = useAuth();
   const { stateMap, saveCardState } = useCardState(user);
   const { saveDeck } = useSavedDecks(user);
@@ -116,6 +116,10 @@ export default function AdminTab() {
   const [query, setQuery] = useState('');
   const [expandedId, setExpandedId] = useState(null);
   const [screen, setScreen] = useState('search'); // 'search' | 'study' | 'summary'
+
+  useEffect(() => {
+    onStudying?.(screen === 'study');
+  }, [screen, onStudying]);
   const [studyCards, setStudyCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [studyResults, setStudyResults] = useState([]);

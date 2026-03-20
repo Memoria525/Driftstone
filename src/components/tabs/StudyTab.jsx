@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import TopicPicker from '../topic-picker/TopicPicker.jsx';
 import CardViewer from '../card-viewer/CardViewer.jsx';
 import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
@@ -7,10 +7,14 @@ import useAuth from '../../hooks/useAuth.js';
 import useCardState from '../../hooks/useCardState.js';
 import { scheduleCard, sortByPriority, createEmptyCardState, GRADE_TO_RATING } from '../../utils/fsrs.js';
 
-export default function StudyTab() {
+export default function StudyTab({ onStudying }) {
   const { user } = useAuth();
   const { stateMap, saveCardState } = useCardState(user);
   const [screen, setScreen] = useState('picker'); // 'picker' | 'study' | 'summary'
+
+  useEffect(() => {
+    onStudying?.(screen === 'study');
+  }, [screen, onStudying]);
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState([]);
