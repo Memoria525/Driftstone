@@ -2,6 +2,7 @@ import { useState, useMemo, useRef, useEffect } from 'react';
 import { loadCourses } from '../../data/courseLoader.js';
 import useAnnounce from '../../hooks/useAnnounce.js';
 import useAuth from '../../hooks/useAuth.js';
+import useAdmin from '../../hooks/useAdmin.js';
 import useSavedDecks from '../../hooks/useSavedDecks.js';
 
 // ── helpers ──────────────────────────────────────────────────────────────────
@@ -77,6 +78,7 @@ function Checkbox({ state, onChange, label }) {
 
 export default function TopicPicker({ onStart, onStartDeck }) {
   const { user } = useAuth();
+  const isAdmin = useAdmin(user);
   const { decks, deleteDeck } = useSavedDecks(user);
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -252,8 +254,8 @@ export default function TopicPicker({ onStart, onStartDeck }) {
           );
         })}
 
-        {/* Saved Decks — styled like a course */}
-        {decks.length > 0 && (
+        {/* Saved Decks — admin only */}
+        {isAdmin && decks.length > 0 && (
           <div className="rounded-[--radius-md] border border-[--color-border] overflow-hidden">
             {/* "Course" header */}
             <div className="flex items-center gap-3 px-4 bg-[--color-surface-raised]" style={{ minHeight: 'var(--spacing-touch)' }}>
