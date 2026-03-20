@@ -3,10 +3,6 @@ service cloud.firestore {
   match /databases/{database}/documents {
     match /cards/{cardId} {
       allow read: if request.auth != null;
-      allow write: if request.auth != null && request.auth.token.admin == true;
-    }
-    match /cardReviews/{cardId} {
-      allow read, write: if request.auth != null && request.auth.token.admin == true;
     }
     match /users/{userId}/cardState/{cardId} {
       allow read, write: if request.auth != null && request.auth.uid == userId;

@@ -15,7 +15,7 @@
 import { initializeApp, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 import { readFileSync, readdirSync, statSync } from 'fs';
-import { join, basename } from 'path';
+import { join, basename, dirname } from 'path';
 
 // Initialize Firebase Admin
 const serviceAccount = JSON.parse(
@@ -72,7 +72,7 @@ async function upload() {
     const cards = fileContent.cards || {};
 
     for (const [cardId, cardArray] of Object.entries(cards)) {
-      const [question, answer, hint, explanation, isShortAnswer, , , points] = cardArray;
+      const [question, answer, hint, explanation, isShortAnswer, isPrivate, hasBeenReviewed, points] = cardArray;
 
       const docRef = db.collection('cards').doc(cardId);
       batch.set(docRef, {
@@ -81,6 +81,8 @@ async function upload() {
         hint: hint || '',
         explanation: explanation || '',
         isShortAnswer: isShortAnswer ?? true,
+        isPrivate: isPrivate ?? false,
+        hasBeenReviewed: hasBeenReviewed ?? false,
         points: points ?? 0,
         course,
         chapter,

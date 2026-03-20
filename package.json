@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "set-admin": "node scripts/setAdminClaim.js"
+    "preview": "vite preview"
   },
   "dependencies": {
     "firebase": "^12.11.0",

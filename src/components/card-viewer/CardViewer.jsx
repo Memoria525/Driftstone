@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
 import useAnnounce from '../../hooks/useAnnounce.js';
-import AdminCardMenu from '../admin/AdminCardMenu.jsx';
 
 const GRADES = [
   { id: 'nailed', label: 'Nailed it', color: 'bg-emerald-500 hover:bg-emerald-600' },
@@ -9,7 +8,7 @@ const GRADES = [
   { id: 'missed', label: 'Missed it', color: 'bg-red-500 hover:bg-red-600' },
 ];
 
-export default function CardViewer({ card, index, total, onGrade, onDone, isAdmin, userId }) {
+export default function CardViewer({ card, index, total, onGrade, onDone }) {
   const [userAnswer, setUserAnswer] = useState('');
   const [showHint, setShowHint] = useState(false);
   const [revealed, setRevealed] = useState(false);
@@ -37,15 +36,12 @@ export default function CardViewer({ card, index, total, onGrade, onDone, isAdmi
       <div className="px-4 pt-3 pb-1">
         <div className="flex items-center justify-between text-xs text-[--color-text-muted] mb-2">
           <span>Card {index + 1} of {total}</span>
-          <div className="flex items-center gap-1">
-            {isAdmin && <AdminCardMenu card={card} userId={userId} />}
-            <button
-              onClick={onDone}
-              className="text-xs font-medium text-[--color-text-muted] hover:text-[--color-text] min-h-touch flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
-            >
-              Done
-            </button>
-          </div>
+          <button
+            onClick={onDone}
+            className="text-xs font-medium text-[--color-text-muted] hover:text-[--color-text] min-h-touch flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+          >
+            Done
+          </button>
         </div>
         <div
           role="progressbar"
