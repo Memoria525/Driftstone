@@ -2,7 +2,7 @@ import Header from './Header.jsx';
 import BottomNav from './BottomNav.jsx';
 import SkipLink from './SkipLink.jsx';
 
-export default function AppShell({ activeTab, onTabChange, user, children }) {
+export default function AppShell({ activeTab, onTabChange, user, isAdmin, children }) {
   return (
     <div className="flex flex-col h-dvh max-w-lg mx-auto bg-[--color-surface]">
       <SkipLink />
@@ -14,7 +14,7 @@ export default function AppShell({ activeTab, onTabChange, user, children }) {
       >
         {children}
       </main>
-      <BottomNav activeTab={activeTab} onTabChange={onTabChange} />
+      <BottomNav activeTab={activeTab} onTabChange={onTabChange} isAdmin={isAdmin} />
     </div>
   );
 }
