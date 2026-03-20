@@ -2,6 +2,11 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { loadCourses } from '../../data/courseLoader.js';
 import { searchCards, highlightMatches } from '../../utils/search.js';
 import useAnnounce from '../../hooks/useAnnounce.js';
+import useAuth from '../../hooks/useAuth.js';
+import useCardState from '../../hooks/useCardState.js';
+import CardViewer from '../card-viewer/CardViewer.jsx';
+import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
+import { scheduleCard, sortByPriority, createEmptyCardState, GRADE_TO_RATING } from '../../utils/fsrs.js';
 
 function getAllCards(courses) {
   const cards = [];
@@ -103,9 +108,15 @@ function SearchResult({ result, query, isExpanded, onToggle }) {
 }
 
 export default function AdminTab() {
+  const { user } = useAuth();
+  const { stateMap, saveCardState } = useCardState(user);
   const [allCards, setAllCards] = useState([]);
   const [query, setQuery] = useState('');
   const [expandedId, setExpandedId] = useState(null);
+  const [screen, setScreen] = useState('search'); // 'search' | 'study' | 'summary'
+  const [studyCards, setStudyCards] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [studyResults, setStudyResults] = useState([]);
   const inputRef = useRef(null);
   const announce = useAnnounce();
 
@@ -126,6 +137,70 @@ export default function AdminTab() {
     return () => clearTimeout(timer);
   }, [results.length, query, announce]);
 
+  function handleClear() {
+    setQuery('');
+    setExpandedId(null);
+    inputRef.current?.focus();
+  }
+
+  function handleCreateDeck() {
+    const cards = sortByPriority(
+      results.map((r) => r.card),
+      stateMap
+    );
+    if (cards.length === 0) return;
+    setStudyCards(cards);
+    setCurrentIndex(0);
+    setStudyResults([]);
+    setScreen('study');
+  }
+
+  function handleGrade(grade) {
+    const card = studyCards[currentIndex];
+    const newResults = [...studyResults, { cardId: card.id, grade }];
+    setStudyResults(newResults);
+
+    const rating = GRADE_TO_RATING[grade];
+    const currentState = stateMap.get(card.id) || createEmptyCardState(card.id);
+    const newState = scheduleCard(currentState, rating);
+    saveCardState(card.id, newState);
+
+    if (currentIndex + 1 < studyCards.length) {
+      setCurrentIndex(currentIndex + 1);
+    } else {
+      setScreen('summary');
+    }
+  }
+
+  function handleBackToSearch() {
+    setScreen('search');
+  }
+
+  // Study screen
+  if (screen === 'study' && studyCards.length > 0) {
+    return (
+      <CardViewer
+        card={studyCards[currentIndex]}
+        index={currentIndex}
+        total={studyCards.length}
+        onGrade={handleGrade}
+        onDone={() => setScreen('summary')}
+      />
+    );
+  }
+
+  // Summary screen
+  if (screen === 'summary') {
+    return (
+      <SummaryScreen
+        results={studyResults}
+        total={studyCards.length}
+        onRestart={handleBackToSearch}
+      />
+    );
+  }
+
+  // Search screen
   return (
     <div className="flex flex-col h-full">
       {/* Search input */}
@@ -133,30 +208,63 @@ export default function AdminTab() {
         <label htmlFor="admin-search" className="text-sm font-semibold text-[--color-text] mb-2 block">
           Search Cards
         </label>
-        <input
-          id="admin-search"
-          ref={inputRef}
-          type="search"
-          value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
-            setExpandedId(null);
-          }}
-          placeholder="Search questions, answers, hints, explanations…"
-          autoComplete="off"
-          className={[
-            'w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm',
-            'bg-[--color-surface] text-[--color-text] placeholder:text-[--color-text-muted]',
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
-          ].join(' ')}
-        />
+        <div className="relative">
+          <input
+            id="admin-search"
+            ref={inputRef}
+            type="search"
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setExpandedId(null);
+            }}
+            placeholder="Search questions, answers, hints, explanations…"
+            autoComplete="off"
+            className={[
+              'w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 pr-10 text-sm',
+              'bg-[--color-surface] text-[--color-text] placeholder:text-[--color-text-muted]',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+            ].join(' ')}
+          />
+          {query && (
+            <button
+              onClick={handleClear}
+              aria-label="Clear search"
+              className={[
+                'absolute right-1 top-1/2 -translate-y-1/2',
+                'min-h-touch min-w-touch flex items-center justify-center',
+                'text-[--color-text-muted] hover:text-[--color-text]',
+                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded',
+              ].join(' ')}
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-4 h-4">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          )}
+        </div>
       </div>
 
-      {/* Results count */}
+      {/* Results count and Create deck button */}
       {query.trim() && (
-        <p className="px-4 py-1 text-xs text-[--color-text-muted]" aria-live="polite">
-          {results.length} result{results.length === 1 ? '' : 's'}
-        </p>
+        <div className="px-4 py-1 flex items-center justify-between">
+          <p className="text-xs text-[--color-text-muted]" aria-live="polite">
+            {results.length} result{results.length === 1 ? '' : 's'}
+          </p>
+          {results.length > 0 && (
+            <button
+              onClick={handleCreateDeck}
+              className={[
+                'text-xs font-semibold px-3 min-h-touch flex items-center rounded-[--radius-md]',
+                'text-white bg-[--color-brand] hover:bg-[--color-brand-dark] transition-colors',
+                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+              ].join(' ')}
+            >
+              Study {results.length} card{results.length === 1 ? '' : 's'}
+            </button>
+          )}
+        </div>
       )}
 
       {/* Results list */}
@@ -175,7 +283,7 @@ export default function AdminTab() {
 
         {query.trim() && results.length === 0 && (
           <li className="px-4 py-8 text-center text-sm text-[--color-text-muted]">
-            No cards match "{query}"
+            No cards match &ldquo;{query}&rdquo;
           </li>
         )}
       </ul>
