@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
+import { doc, setDoc } from 'firebase/firestore';
+import { db } from '../../firebase.js';
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
 import useAnnounce from '../../hooks/useAnnounce.js';
 
@@ -8,10 +10,11 @@ const GRADES = [
   { id: 'missed', label: 'Missed it', color: 'bg-red-500 hover:bg-red-600' },
 ];
 
-export default function CardViewer({ card, index, total, onGrade, onDone }) {
+export default function CardViewer({ card, index, total, onGrade, onDone, isAdmin }) {
   const [userAnswer, setUserAnswer] = useState('');
   const [showHint, setShowHint] = useState(false);
   const [revealed, setRevealed] = useState(false);
+  const [needsWork, setNeedsWork] = useState(false);
   const inputRef = useRef(null);
   const announce = useAnnounce();
 
@@ -20,6 +23,7 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
     setUserAnswer('');
     setShowHint(false);
     setRevealed(false);
+    setNeedsWork(false);
     inputRef.current?.focus();
     announce(`Card ${index + 1} of ${total}. ${card.question}`);
   }, [card.id, index, total, card.question, announce]);
@@ -143,11 +147,27 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
       {revealed && (
         <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface]">
           <p className="text-xs text-[--color-text-muted] text-center mb-2">How did you do?</p>
+          {isAdmin && (
+            <label className="flex items-center justify-center gap-2 mb-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={needsWork}
+                onChange={(e) => setNeedsWork(e.target.checked)}
+                className="w-5 h-5 rounded accent-[--color-brand] focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+              />
+              <span className="text-xs font-medium text-[--color-text-muted]">Needs work?</span>
+            </label>
+          )}
           <div className="flex gap-2">
             {GRADES.map((grade) => (
               <button
                 key={grade.id}
-                onClick={() => onGrade(grade.id)}
+                onClick={() => {
+                  if (needsWork) {
+                    setDoc(doc(db, 'flaggedCards', card.id), { flagged: true });
+                  }
+                  onGrade(grade.id);
+                }}
                 className={[
                   'flex-1 min-h-touch rounded-[--radius-md] font-semibold text-sm text-white transition-colors',
                   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',

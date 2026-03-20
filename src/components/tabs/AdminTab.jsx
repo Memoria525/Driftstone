@@ -202,6 +202,7 @@ export default function AdminTab({ onStudying }) {
         total={studyCards.length}
         onGrade={handleGrade}
         onDone={() => setScreen('summary')}
+        isAdmin
       />
     );
   }
