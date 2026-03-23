@@ -85,7 +85,9 @@ export function getCardsBySectionIds(courses, sectionIds) {
     for (const chapter of course.chapters) {
       for (const section of chapter.sections) {
         if (sectionIds.has(section.id)) {
-          cards.push(...section.cards);
+          for (const card of section.cards) {
+            cards.push({ ...card, courseName: course.name, chapterName: chapter.name, sectionName: section.name });
+          }
         }
       }
     }

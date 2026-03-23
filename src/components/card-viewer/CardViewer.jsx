@@ -32,9 +32,9 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
 
   return (
     <div className="flex flex-col h-full">
-      {/* Progress */}
+      {/* Header */}
       <div className="px-4 pt-3 pb-1">
-        <div className="flex items-center justify-between text-xs text-[--color-text-muted] mb-2">
+        <div className="flex items-center justify-between text-xs text-[--color-text-muted]">
           <span>Card {index + 1} of {total}</span>
           <button
             onClick={onDone}
@@ -43,19 +43,11 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
             Done
           </button>
         </div>
-        <div
-          role="progressbar"
-          aria-valuenow={index + 1}
-          aria-valuemin={1}
-          aria-valuemax={total}
-          aria-label={`Card ${index + 1} of ${total}`}
-          className="h-1.5 bg-[--color-surface-sunken] rounded-full overflow-hidden"
-        >
-          <div
-            className="h-full bg-[--color-brand] rounded-full transition-all"
-            style={{ width: `${((index + 1) / total) * 100}%` }}
-          />
-        </div>
+        {card.sectionName && (
+          <p className="text-xs text-[--color-text-muted] truncate">
+            {card.courseName} › {card.chapterName} › {card.sectionName}
+          </p>
+        )}
       </div>
 
       {/* Scrollable content */}
