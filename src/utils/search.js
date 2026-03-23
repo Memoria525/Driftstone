@@ -26,7 +26,7 @@ function tokenize(text) {
     .map(stem);
 }
 
-const SEARCHABLE_FIELDS = ['question', 'answer', 'hint', 'explanation'];
+export const SEARCHABLE_FIELDS = ['question', 'answer', 'hint', 'explanation'];
 
 /**
  * Search cards across question, answer, hint, and explanation.

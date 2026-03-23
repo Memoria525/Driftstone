@@ -24,7 +24,7 @@ const W = [
   0.6621,   // w18: same-day review grade offset
 ];
 
-export const GRADE_TO_RATING = { missed: 1, close: 2, nailed: 3 };
+export const GRADE_TO_RATING = { missed: 1, close: 2, nailed: 3, easy: 4 };
 
 const clamp = (x, lo, hi) => Math.min(hi, Math.max(lo, x));
 
@@ -45,6 +45,7 @@ export function createEmptyCardState(cardId) {
 
 export function computeRetrievability(cardState, now = new Date()) {
   if (!cardState.lastReview || cardState.state === 'new') return 0;
+  if (!cardState.stability || cardState.stability <= 0) return 0;
   const elapsedDays = (now - cardState.lastReview) / (1000 * 60 * 60 * 24);
   if (elapsedDays < 0) return 1;
   return Math.pow(1 + (FACTOR * elapsedDays) / cardState.stability, DECAY);
@@ -117,7 +118,7 @@ export function sortByPriority(cards, stateMap, now = new Date()) {
 // --- Internal formulas ---
 
 function initialStability(rating) {
-  return W[rating - 1]; // w0=Again, w1=Hard, w2=Good
+  return W[Math.min(rating, 4) - 1]; // w0=Again, w1=Hard, w2=Good, w3=Easy
 }
 
 function initialDifficulty(rating) {

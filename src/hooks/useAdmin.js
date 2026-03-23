@@ -10,6 +10,9 @@ export default function useAdmin(user) {
     }
     user.getIdTokenResult().then((result) => {
       setIsAdmin(!!result.claims.admin);
+    }).catch((err) => {
+      console.error('Failed to check admin claim:', err);
+      setIsAdmin(false);
     });
   }, [user]);
 

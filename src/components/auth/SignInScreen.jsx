@@ -62,7 +62,7 @@ export default function SignInScreen() {
         <button
           onClick={handleGoogle}
           disabled={loading}
-          className="w-full min-h-touch flex items-center justify-center gap-3 bg-white border border-[--color-border] rounded-lg px-4 py-3 text-[--color-text] font-medium hover:bg-gray-50 focus-visible:ring-2 focus-visible:ring-focus disabled:opacity-50"
+          className="w-full min-h-touch flex items-center justify-center gap-3 bg-white border border-[--color-border] rounded-lg px-4 py-3 text-[--color-text] font-medium hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
         >
           <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true">
             <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" />
@@ -87,7 +87,7 @@ export default function SignInScreen() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="min-h-touch border border-[--color-border] rounded-lg px-4 py-2 text-[--color-text] bg-white focus-visible:ring-2 focus-visible:ring-focus focus:outline-none"
+              className="min-h-touch border border-[--color-border] rounded-lg px-4 py-2 text-[--color-text] bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
               autoComplete="email"
             />
           </label>
@@ -100,7 +100,7 @@ export default function SignInScreen() {
               minLength={6}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="min-h-touch border border-[--color-border] rounded-lg px-4 py-2 text-[--color-text] bg-white focus-visible:ring-2 focus-visible:ring-focus focus:outline-none"
+              className="min-h-touch border border-[--color-border] rounded-lg px-4 py-2 text-[--color-text] bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
               autoComplete={isNewUser ? 'new-password' : 'current-password'}
             />
           </label>
@@ -108,7 +108,7 @@ export default function SignInScreen() {
           <button
             type="submit"
             disabled={loading}
-            className="min-h-touch bg-[--color-primary] text-white font-medium rounded-lg px-4 py-3 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-focus disabled:opacity-50"
+            className="min-h-touch bg-[--color-primary] text-white font-medium rounded-lg px-4 py-3 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
           >
             {isNewUser ? 'Create account' : 'Sign in'}
           </button>
@@ -119,7 +119,7 @@ export default function SignInScreen() {
             setIsNewUser(!isNewUser);
             setError('');
           }}
-          className="w-full min-h-touch mt-4 text-sm text-[--color-primary] hover:underline focus-visible:ring-2 focus-visible:ring-focus rounded-lg"
+          className="w-full min-h-touch mt-4 text-sm text-[--color-primary] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded-lg"
         >
           {isNewUser ? 'Already have an account? Sign in' : "Don't have an account? Create one"}
         </button>

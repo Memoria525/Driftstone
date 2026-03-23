@@ -20,6 +20,7 @@ export default function StudyTab({ onStudying }) {
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState([]);
+  const [pickerKey, setPickerKey] = useState(0);
   const coursesRef = useRef(null);
 
   function handleStart(selectedSectionIds, courses) {
@@ -65,6 +66,7 @@ export default function StudyTab({ onStudying }) {
   }
 
   function handleRestart() {
+    setPickerKey(k => k + 1);
     setScreen('picker');
   }
 
@@ -91,5 +93,5 @@ export default function StudyTab({ onStudying }) {
     );
   }
 
-  return <TopicPicker key={screen} onStart={handleStart} onStartDeck={handleStartDeck} />;
+  return <TopicPicker key={pickerKey} onStart={handleStart} onStartDeck={handleStartDeck} />;
 }

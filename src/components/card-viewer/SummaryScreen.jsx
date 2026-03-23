@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import useAnnounce from '../../hooks/useAnnounce.js';
 
 const GRADE_INFO = {
+  easy: { label: 'Easy', color: 'text-blue-600', bg: 'bg-blue-50' },
   nailed: { label: 'Nailed it', color: 'text-emerald-600', bg: 'bg-emerald-50' },
   close: { label: 'Close', color: 'text-amber-600', bg: 'bg-amber-50' },
   missed: { label: 'Missed it', color: 'text-red-600', bg: 'bg-red-50' },
@@ -11,7 +12,7 @@ export default function SummaryScreen({ results, total, onRestart }) {
   const announce = useAnnounce();
   const headingRef = useRef(null);
 
-  const counts = { nailed: 0, close: 0, missed: 0 };
+  const counts = { easy: 0, nailed: 0, close: 0, missed: 0 };
   for (const r of results) {
     counts[r.grade]++;
   }
@@ -57,7 +58,7 @@ export default function SummaryScreen({ results, total, onRestart }) {
             'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white',
           ].join(' ')}
         >
-          Back to topics
+          Start over
         </button>
       </div>
     </div>

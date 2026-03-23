@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { loadCourses } from '../../data/courseLoader.js';
-import { searchCards, highlightMatches } from '../../utils/search.js';
+import { searchCards, highlightMatches, SEARCHABLE_FIELDS } from '../../utils/search.js';
 import useAnnounce from '../../hooks/useAnnounce.js';
 import useAuth from '../../hooks/useAuth.js';
 import useCardState from '../../hooks/useCardState.js';
@@ -87,7 +87,7 @@ function SearchResult({ result, query, isExpanded, onToggle }) {
 
       {isExpanded && (
         <div className="px-4 py-3 bg-[--color-surface-sunken] border-b border-[--color-border] space-y-3">
-          {['question', 'answer', 'hint', 'explanation'].map((field) => {
+          {SEARCHABLE_FIELDS.map((field) => {
             const text = card[field];
             if (!text) return null;
             return (

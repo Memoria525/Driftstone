@@ -35,7 +35,7 @@ function computeReadiness(cardIds, stateMap, now) {
   let sum = 0;
   for (const id of cardIds) {
     const s = stateMap.get(id);
-    sum += s ? computeRetrievability(s, now) : 0;
+    if (s) sum += computeRetrievability(s, now);
   }
   return sum / cardIds.length;
 }

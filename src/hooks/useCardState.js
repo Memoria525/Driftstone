@@ -44,25 +44,39 @@ export default function useCardState(user) {
   const saveCardState = useCallback(async (cardId, cardState) => {
     if (!user) return;
 
+    // Snapshot previous value for rollback
+    const prev = stateMap.get(cardId);
+
     // Optimistic local update
-    setStateMap(prev => {
-      const next = new Map(prev);
+    setStateMap(m => {
+      const next = new Map(m);
       next.set(cardId, cardState);
       return next;
     });
 
     // Persist to Firestore
-    const ref = doc(db, 'users', user.uid, 'cardState', cardId);
-    await setDoc(ref, {
-      difficulty: cardState.difficulty,
-      stability: cardState.stability,
-      due: Timestamp.fromDate(cardState.due),
-      lastReview: cardState.lastReview ? Timestamp.fromDate(cardState.lastReview) : null,
-      state: cardState.state,
-      reps: cardState.reps,
-      lapses: cardState.lapses,
-    });
-  }, [user]);
+    try {
+      const ref = doc(db, 'users', user.uid, 'cardState', cardId);
+      await setDoc(ref, {
+        difficulty: cardState.difficulty,
+        stability: cardState.stability,
+        due: Timestamp.fromDate(cardState.due),
+        lastReview: cardState.lastReview ? Timestamp.fromDate(cardState.lastReview) : null,
+        state: cardState.state,
+        reps: cardState.reps,
+        lapses: cardState.lapses,
+      });
+    } catch (err) {
+      console.error('Failed to save card state:', err);
+      // Roll back optimistic update
+      setStateMap(m => {
+        const next = new Map(m);
+        if (prev) next.set(cardId, prev);
+        else next.delete(cardId);
+        return next;
+      });
+    }
+  }, [user, stateMap]);
 
   return { stateMap, loading, saveCardState };
 }

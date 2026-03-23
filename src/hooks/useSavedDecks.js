@@ -35,18 +35,25 @@ export default function useSavedDecks(user) {
       cardIds,
       createdAt: Timestamp.now(),
     };
-    const ref = doc(db, 'users', user.uid, 'savedDecks', id);
-    await setDoc(ref, deck);
-
-    const local = { id, ...deck, createdAt: new Date() };
-    setDecks((prev) => [local, ...prev]);
-    return id;
+    try {
+      const ref = doc(db, 'users', user.uid, 'savedDecks', id);
+      await setDoc(ref, deck);
+      const local = { id, ...deck, createdAt: new Date() };
+      setDecks((prev) => [local, ...prev]);
+      return id;
+    } catch (err) {
+      console.error('Failed to save deck:', err);
+    }
   }, [user]);
 
   const deleteDeck = useCallback(async (deckId) => {
     if (!user) return;
-    await deleteDoc(doc(db, 'users', user.uid, 'savedDecks', deckId));
-    setDecks((prev) => prev.filter((d) => d.id !== deckId));
+    try {
+      await deleteDoc(doc(db, 'users', user.uid, 'savedDecks', deckId));
+      setDecks((prev) => prev.filter((d) => d.id !== deckId));
+    } catch (err) {
+      console.error('Failed to delete deck:', err);
+    }
   }, [user]);
 
   return { decks, loading, saveDeck, deleteDeck };

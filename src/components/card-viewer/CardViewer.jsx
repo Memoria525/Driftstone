@@ -5,6 +5,7 @@ import renderMarkdown from '../../utils/renderMarkdown.jsx';
 import useAnnounce from '../../hooks/useAnnounce.js';
 
 const GRADES = [
+  { id: 'easy', label: 'Easy', color: 'bg-blue-500 hover:bg-blue-600' },
   { id: 'nailed', label: 'Nailed it', color: 'bg-emerald-500 hover:bg-emerald-600' },
   { id: 'close', label: 'Close', color: 'bg-amber-500 hover:bg-amber-600' },
   { id: 'missed', label: 'Missed it', color: 'bg-red-500 hover:bg-red-600' },
@@ -162,9 +163,13 @@ export default function CardViewer({ card, index, total, onGrade, onDone, isAdmi
             {GRADES.map((grade) => (
               <button
                 key={grade.id}
-                onClick={() => {
+                onClick={async () => {
                   if (needsWork) {
-                    setDoc(doc(db, 'flaggedCards', card.id), { flagged: true });
+                    try {
+                      await setDoc(doc(db, 'flaggedCards', card.id), { flagged: true });
+                    } catch (err) {
+                      console.error('Failed to flag card:', err);
+                    }
                   }
                   onGrade(grade.id);
                 }}

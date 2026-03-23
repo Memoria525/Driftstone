@@ -31,6 +31,8 @@ export async function loadCourses() {
     const data = doc.data();
     const { course: courseName, chapter: chapterName, section: sectionName } = data;
 
+    if (!courseName || !chapterName || !sectionName) return;
+
     if (!courseMap[courseName]) {
       courseMap[courseName] = { chapters: {} };
     }
@@ -92,20 +94,17 @@ export function getCardsBySectionIds(courses, sectionIds) {
 }
 
 export function getCardsByIds(courses, cardIds) {
-  const idSet = new Set(cardIds);
-  const cards = [];
+  const cardMap = new Map();
   for (const course of courses) {
     for (const chapter of course.chapters) {
       for (const section of chapter.sections) {
         for (const card of section.cards) {
-          if (idSet.has(card.id)) {
-            cards.push(card);
-          }
+          cardMap.set(card.id, card);
         }
       }
     }
   }
-  return cards;
+  return cardIds.map((id) => cardMap.get(id)).filter(Boolean);
 }
 
 export function shuffle(array) {
