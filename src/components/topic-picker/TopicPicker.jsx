@@ -272,14 +272,22 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
                               const secCardIds = section.cards.map((c) => c.id);
                               const secStrength = stateMap ? sectionStrength(secCardIds, stateMap, now) : null;
                               return (
-                                <label
+                                <div
                                   key={section.id}
                                   className="flex items-center gap-3 pl-12 pr-4 cursor-pointer hover:bg-[--color-surface-raised] transition-colors"
                                   style={{ minHeight: 'var(--spacing-touch)' }}
+                                  onClick={() =>
+                                    setSelected((prev) => {
+                                      const next = new Set(prev);
+                                      sSelected ? next.delete(section.id) : next.add(section.id);
+                                      return next;
+                                    })
+                                  }
                                 >
                                   <input
                                     type="checkbox"
                                     checked={sSelected}
+                                    aria-label={section.name}
                                     onChange={() =>
                                       setSelected((prev) => {
                                         const next = new Set(prev);
@@ -289,11 +297,11 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
                                     }
                                     className="w-5 h-5 shrink-0 rounded accent-[--color-brand] focus-visible:ring-2 focus-visible:ring-[--color-focus]"
                                   />
-                                  <span className="flex-1 text-sm text-[--color-text] py-3">
+                                  <span className="flex-1 text-sm text-[--color-text] py-3" aria-hidden="true">
                                     {section.name}
                                   </span>
                                   <StrengthDot strength={secStrength} />
-                                </label>
+                                </div>
                               );
                             })}
                           </div>
