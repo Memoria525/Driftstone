@@ -21,8 +21,9 @@ function selectionState(ids, selected) {
   return 'some';
 }
 
-// Compute average retrievability for a set of card IDs
+// Strength = avg retrievability × coverage (% of cards seen)
 function sectionStrength(cardIds, stateMap, now) {
+  if (cardIds.length === 0) return null;
   let seen = 0;
   let sum = 0;
   for (const id of cardIds) {
@@ -33,7 +34,9 @@ function sectionStrength(cardIds, stateMap, now) {
     }
   }
   if (seen === 0) return null; // no data
-  return sum / seen;
+  const avgRetrievability = sum / seen;
+  const coverage = seen / cardIds.length;
+  return avgRetrievability * coverage;
 }
 
 function strengthColor(strength) {
@@ -210,9 +213,6 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
           const cIds = courseSectionIds(course);
           const cState = selectionState(cIds, selected);
           const cOpen = openCourses.has(course.id);
-          const cCardIds = course.chapters.flatMap((ch) => ch.sections.flatMap((s) => s.cards.map((c) => c.id)));
-          const cStrength = stateMap ? sectionStrength(cCardIds, stateMap, now) : null;
-
           return (
             <div key={course.id} className="rounded-[--radius-md] border border-[--color-border] overflow-hidden">
               {/* Course row */}
@@ -227,10 +227,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
                   aria-expanded={cOpen}
                   className="flex-1 flex items-center justify-between gap-2 py-3 text-left font-semibold text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
                 >
-                  <span className="flex items-center gap-2">
-                    {course.name}
-                    <StrengthDot strength={cStrength} />
-                  </span>
+                  {course.name}
                   <ChevronIcon open={cOpen} />
                 </button>
               </div>
@@ -242,9 +239,6 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
                     const chIds = chapterSectionIds(chapter);
                     const chState = selectionState(chIds, selected);
                     const chOpen = openChapters.has(chapter.id);
-                    const chCardIds = chapter.sections.flatMap((s) => s.cards.map((c) => c.id));
-                    const chStrength = stateMap ? sectionStrength(chCardIds, stateMap, now) : null;
-
                     return (
                       <div key={chapter.id}>
                         {/* Chapter row */}
@@ -259,10 +253,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
                             aria-expanded={chOpen}
                             className="flex-1 flex items-center justify-between gap-2 py-3 text-left text-sm font-medium text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
                           >
-                            <span className="flex items-center gap-2">
-                              {chapter.name}
-                              <StrengthDot strength={chStrength} />
-                            </span>
+                            {chapter.name}
                             <ChevronIcon open={chOpen} />
                           </button>
                         </div>
