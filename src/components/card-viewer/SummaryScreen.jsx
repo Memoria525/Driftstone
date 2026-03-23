@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import useAnnounce from '../../hooks/useAnnounce.js';
 
 const GRADE_INFO = {
   good: { label: 'Got it 👍', color: 'text-emerald-600', bg: 'bg-emerald-50' },
@@ -7,7 +6,6 @@ const GRADE_INFO = {
 };
 
 export default function SummaryScreen({ results, total, onRestart }) {
-  const announce = useAnnounce();
   const headingRef = useRef(null);
 
   const counts = { good: 0, again: 0 };
@@ -17,14 +15,13 @@ export default function SummaryScreen({ results, total, onRestart }) {
 
   useEffect(() => {
     headingRef.current?.focus();
-    announce(`Session complete. ${results.length} of ${total} cards reviewed.`);
-  }, [announce, results.length, total]);
+  }, [results.length, total]);
 
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-y-auto px-4 py-6 space-y-6">
         <div className="text-center">
-          <h2 ref={headingRef} tabIndex={-1} className="text-lg font-semibold text-[--color-text] outline-none">Session complete</h2>
+          <h2 ref={headingRef} tabIndex={-1} className="text-lg font-semibold text-[--color-text] outline-none" aria-label={`Session complete. ${results.length} of ${total} cards reviewed.`}>Session complete</h2>
           <p className="text-sm text-[--color-text-muted] mt-1">
             {results.length} of {total} cards reviewed
           </p>
