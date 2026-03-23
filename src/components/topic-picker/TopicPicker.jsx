@@ -126,7 +126,6 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
         if (cancelled) return;
         setCourses(data);
         setLoading(false);
-        requestAnimationFrame(() => headingRef.current?.focus());
       })
       .catch((err) => {
         if (cancelled) return;
@@ -136,6 +135,13 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
       });
     return () => { cancelled = true; };
   }, []);
+
+  // Focus heading after loading completes and DOM is committed
+  useEffect(() => {
+    if (!loading && courses.length > 0) {
+      headingRef.current?.focus();
+    }
+  }, [loading, courses.length]);
 
   function toggleSet(setter, id) {
     setter((prev) => {
