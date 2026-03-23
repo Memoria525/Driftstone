@@ -67,7 +67,7 @@ export default function TopicPicker({ onStart }) {
   const [error, setError] = useState('');
   const headingRef = useRef(null);
   const [selected, setSelected] = useState(() => new Set());
-  const [timeLimit, setTimeLimit] = useState(null);
+  const [showTimePicker, setShowTimePicker] = useState(false);
   const [openCourses, setOpenCourses] = useState(() => new Set());
   const [openChapters, setOpenChapters] = useState(() => new Set());
 
@@ -233,43 +233,49 @@ export default function TopicPicker({ onStart }) {
 
       {/* Sticky footer */}
       <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface] space-y-3">
-        <div role="group" aria-label="Session duration" className="flex gap-2">
-          {[5, 10, 15, null].map((val) => {
-            const isActive = timeLimit === val;
-            return (
-              <button
-                key={val ?? 'unlimited'}
-                onClick={() => setTimeLimit(val)}
-                aria-pressed={isActive}
-                className={[
-                  'flex-1 min-h-touch rounded-[--radius-md] text-sm font-medium transition-colors',
-                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
-                  isActive
-                    ? 'bg-[--color-brand] text-white'
-                    : 'bg-[--color-surface-sunken] text-[--color-text-muted]',
-                ].join(' ')}
-              >
-                {val ? `${val} min` : 'No limit'}
-              </button>
-            );
-          })}
-        </div>
-        <button
-          onClick={() => onStart(selected, courses, timeLimit)}
-          disabled={totalSelected === 0}
-          className={[
-            'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
-            totalSelected > 0
-              ? 'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white'
-              : 'bg-[--color-surface-sunken] text-[--color-text-muted] cursor-not-allowed',
-          ].join(' ')}
-          aria-disabled={totalSelected === 0}
-        >
-          {totalSelected === 0
-            ? 'Select topics to study'
-            : `Study ${totalSelected} section${totalSelected === 1 ? '' : 's'}`}
-        </button>
+        {!showTimePicker ? (
+          <button
+            onClick={() => setShowTimePicker(true)}
+            disabled={totalSelected === 0}
+            className={[
+              'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+              totalSelected > 0
+                ? 'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white'
+                : 'bg-[--color-surface-sunken] text-[--color-text-muted] cursor-not-allowed',
+            ].join(' ')}
+            aria-disabled={totalSelected === 0}
+          >
+            {totalSelected === 0
+              ? 'Select topics to study'
+              : `Study ${totalSelected} section${totalSelected === 1 ? '' : 's'}`}
+          </button>
+        ) : (
+          <>
+            <p className="text-sm font-medium text-[--color-text] text-center">How long?</p>
+            <div role="group" aria-label="Session duration" className="flex gap-2">
+              {[5, 10, 15, null].map((val) => (
+                <button
+                  key={val ?? 'unlimited'}
+                  onClick={() => onStart(selected, courses, val)}
+                  className={[
+                    'flex-1 min-h-touch rounded-[--radius-md] text-sm font-medium transition-colors',
+                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+                    'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white',
+                  ].join(' ')}
+                >
+                  {val ? `${val} min` : 'No limit'}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => setShowTimePicker(false)}
+              className="w-full text-sm text-[--color-text-muted] min-h-touch focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+            >
+              Cancel
+            </button>
+          </>
+        )}
       </div>
     </div>
   );
