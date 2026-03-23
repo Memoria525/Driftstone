@@ -15,9 +15,10 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState([]);
   const [pickerKey, setPickerKey] = useState(0);
+  const [endTime, setEndTime] = useState(null);
   const coursesRef = useRef(null);
 
-  function handleStart(selectedSectionIds, courses) {
+  function handleStart(selectedSectionIds, courses, timeLimit) {
     coursesRef.current = courses;
     const pool = sortByPriority(
       getCardsBySectionIds(courses, selectedSectionIds),
@@ -27,6 +28,7 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
     setCards(pool);
     setCurrentIndex(0);
     setResults([]);
+    setEndTime(timeLimit ? Date.now() + timeLimit * 60 * 1000 : null);
     setScreen('study');
   }
 
@@ -41,7 +43,7 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
     const newState = scheduleCard(currentState, rating);
     saveCardState(card.id, newState);
 
-    if (currentIndex + 1 < cards.length) {
+    if (currentIndex + 1 < cards.length && !(endTime && Date.now() >= endTime)) {
       setCurrentIndex(currentIndex + 1);
     } else {
       setScreen('summary');
@@ -50,6 +52,7 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
 
   function handleRestart() {
     setPickerKey(k => k + 1);
+    setEndTime(null);
     setScreen('picker');
   }
 
@@ -62,6 +65,7 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
         total={cards.length}
         onGrade={handleGrade}
         onDone={() => setScreen('summary')}
+        endTime={endTime}
       />
     );
   }

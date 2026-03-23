@@ -6,10 +6,20 @@ const GRADES = [
   { id: 'again', label: '👎', ariaLabel: 'Missed it', color: 'bg-red-500 hover:bg-red-600' },
 ];
 
-export default function CardViewer({ card, index, total, onGrade, onDone }) {
+function formatTime(ms) {
+  const totalSec = Math.max(0, Math.ceil(ms / 1000));
+  const m = Math.floor(totalSec / 60);
+  const s = totalSec % 60;
+  return `${m}:${s.toString().padStart(2, '0')}`;
+}
+
+export default function CardViewer({ card, index, total, onGrade, onDone, endTime }) {
   const [userAnswer, setUserAnswer] = useState('');
   const [showHint, setShowHint] = useState(false);
   const [revealed, setRevealed] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(() =>
+    endTime ? Math.max(0, endTime - Date.now()) : null
+  );
   const questionRef = useRef(null);
   const answerRef = useRef(null);
 
@@ -17,6 +27,15 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
   useEffect(() => {
     questionRef.current?.focus();
   }, []);
+
+  // Countdown display tick
+  useEffect(() => {
+    if (!endTime) return;
+    const id = setInterval(() => {
+      setTimeLeft(Math.max(0, endTime - Date.now()));
+    }, 1000);
+    return () => clearInterval(id);
+  }, [endTime]);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -30,7 +49,11 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
       {/* Header */}
       <div className="px-4 pt-3 pb-1">
         <div className="flex items-center justify-between text-xs text-[--color-text-muted]">
-          <span>Card {index + 1} of {total}</span>
+          <span>
+            {timeLeft !== null
+              ? <span className={timeLeft < 60000 ? 'text-red-500' : undefined}>{timeLeft > 0 ? formatTime(timeLeft) : "Time\u2019s up"}</span>
+              : `Card ${index + 1} of ${total}`}
+          </span>
           <button
             onClick={onDone}
             className="text-xs font-medium text-[--color-text-muted] hover:text-[--color-text] min-h-touch flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
@@ -49,7 +72,7 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
       <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
         {/* Question */}
         <div>
-          <p ref={questionRef} tabIndex={-1} className="text-sm font-medium text-[--color-text] outline-none" aria-label={`Card ${index + 1} of ${total}. ${card.question}`}>{card.question}</p>
+          <p ref={questionRef} tabIndex={-1} className="text-sm font-medium text-[--color-text] outline-none" aria-label={`${timeLeft !== null ? `${formatTime(timeLeft)} remaining.` : `Card ${index + 1} of ${total}.`} ${card.question}`}>{card.question}</p>
         </div>
 
         {/* Hint */}

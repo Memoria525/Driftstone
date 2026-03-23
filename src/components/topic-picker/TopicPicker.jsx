@@ -67,6 +67,7 @@ export default function TopicPicker({ onStart }) {
   const [error, setError] = useState('');
   const headingRef = useRef(null);
   const [selected, setSelected] = useState(() => new Set());
+  const [timeLimit, setTimeLimit] = useState(null);
   const [openCourses, setOpenCourses] = useState(() => new Set());
   const [openChapters, setOpenChapters] = useState(() => new Set());
 
@@ -231,9 +232,30 @@ export default function TopicPicker({ onStart }) {
       </div>
 
       {/* Sticky footer */}
-      <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface]">
+      <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface] space-y-3">
+        <div role="group" aria-label="Session duration" className="flex gap-2">
+          {[5, 10, 15, null].map((val) => {
+            const isActive = timeLimit === val;
+            return (
+              <button
+                key={val ?? 'unlimited'}
+                onClick={() => setTimeLimit(val)}
+                aria-pressed={isActive}
+                className={[
+                  'flex-1 min-h-touch rounded-[--radius-md] text-sm font-medium transition-colors',
+                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+                  isActive
+                    ? 'bg-[--color-brand] text-white'
+                    : 'bg-[--color-surface-sunken] text-[--color-text-muted]',
+                ].join(' ')}
+              >
+                {val ? `${val} min` : 'No limit'}
+              </button>
+            );
+          })}
+        </div>
         <button
-          onClick={() => onStart(selected, courses)}
+          onClick={() => onStart(selected, courses, timeLimit)}
           disabled={totalSelected === 0}
           className={[
             'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',
