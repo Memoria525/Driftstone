@@ -68,6 +68,7 @@ export default function TopicPicker({ onStart }) {
   const headingRef = useRef(null);
   const [selected, setSelected] = useState(() => new Set());
   const [showTimePicker, setShowTimePicker] = useState(false);
+  const timeHeadingRef = useRef(null);
   const [openCourses, setOpenCourses] = useState(() => new Set());
   const [openChapters, setOpenChapters] = useState(() => new Set());
 
@@ -235,7 +236,10 @@ export default function TopicPicker({ onStart }) {
       <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface] space-y-3">
         {!showTimePicker ? (
           <button
-            onClick={() => setShowTimePicker(true)}
+            onClick={() => {
+              setShowTimePicker(true);
+              requestAnimationFrame(() => timeHeadingRef.current?.focus());
+            }}
             disabled={totalSelected === 0}
             className={[
               'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',
@@ -252,9 +256,9 @@ export default function TopicPicker({ onStart }) {
           </button>
         ) : (
           <>
-            <p className="text-sm font-medium text-[--color-text] text-center">How long?</p>
+            <p ref={timeHeadingRef} tabIndex={-1} className="text-sm font-medium text-[--color-text] text-center outline-none">How long?</p>
             <div role="group" aria-label="Session duration" className="flex gap-2">
-              {[5, 10, 15, null].map((val) => (
+              {[3, 5, 10, null].map((val) => (
                 <button
                   key={val ?? 'unlimited'}
                   onClick={() => onStart(selected, courses, val)}
