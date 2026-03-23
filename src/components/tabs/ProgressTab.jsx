@@ -86,7 +86,7 @@ export default function ProgressTab({ stateMap, stateLoading }) {
 
   useEffect(() => {
     if (loading) return;
-    headingRef.current?.focus();
+    requestAnimationFrame(() => headingRef.current?.focus());
   }, [loading]);
 
   const now = useMemo(() => new Date(), [loading]);

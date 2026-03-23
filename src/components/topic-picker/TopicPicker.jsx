@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { loadCourses } from '../../data/courseLoader.js';
-import useAnnounce from '../../hooks/useAnnounce.js';
+
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
@@ -78,8 +78,6 @@ export default function TopicPicker({ onStart }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const headingRef = useRef(null);
-  const announce = useAnnounce();
-
   const [selected, setSelected] = useState(() => new Set());
   const [openCourses, setOpenCourses] = useState(() => new Set());
   const [openChapters, setOpenChapters] = useState(() => new Set());
@@ -91,7 +89,7 @@ export default function TopicPicker({ onStart }) {
         if (cancelled) return;
         setCourses(data);
         setLoading(false);
-        announce('Select topics to study');
+        requestAnimationFrame(() => headingRef.current?.focus());
       })
       .catch((err) => {
         if (cancelled) return;
@@ -100,11 +98,7 @@ export default function TopicPicker({ onStart }) {
         console.error(err);
       });
     return () => { cancelled = true; };
-  }, [announce]);
-
-  useEffect(() => {
-    if (!loading) headingRef.current?.focus();
-  }, [loading]);
+  }, []);
 
   function toggleSet(setter, id) {
     setter((prev) => {
