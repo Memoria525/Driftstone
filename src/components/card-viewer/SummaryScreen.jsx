@@ -51,22 +51,26 @@ export default function SummaryScreen({ results, total, onRestart, onKeepGoing, 
 
       {/* Footer */}
       <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface] space-y-2">
-        <button
-          onClick={onKeepGoing}
-          className={[
-            'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
-            'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white',
-          ].join(' ')}
-        >
-          Keep Going
-        </button>
+        {(timedOut || deckComplete) && (
+          <button
+            onClick={onKeepGoing}
+            className={[
+              'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+              'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white',
+            ].join(' ')}
+          >
+            Keep Going
+          </button>
+        )}
         <button
           onClick={onRestart}
           className={[
             'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
-            'text-[--color-text-muted] hover:text-[--color-text]',
+            timedOut || deckComplete
+              ? 'text-[--color-text-muted] hover:text-[--color-text]'
+              : 'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white',
           ].join(' ')}
         >
           Done
