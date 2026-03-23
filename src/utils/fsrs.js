@@ -92,6 +92,8 @@ export function scheduleCard(cardState, rating, now = new Date()) {
   return next;
 }
 
+const DUE_RATIO = 0.25; // 25% due review, 75% new cards
+
 export function sortByPriority(cards, stateMap, now = new Date()) {
   const due = [];
   const unseen = [];
@@ -112,7 +114,32 @@ export function sortByPriority(cards, stateMap, now = new Date()) {
     return (sa.due - now) - (sb.due - now);
   });
 
-  return [...due, ...unseen];
+  // Shuffle unseen so they aren't always in course order
+  for (let i = unseen.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [unseen[i], unseen[j]] = [unseen[j], unseen[i]];
+  }
+
+  // Interleave: ~25% due, ~75% unseen
+  // If either pool is empty, just return the other
+  if (due.length === 0) return unseen;
+  if (unseen.length === 0) return due;
+
+  const result = [];
+  let d = 0;
+  let u = 0;
+
+  while (d < due.length || u < unseen.length) {
+    // Pick due card if: we have due cards left AND (ratio says so OR unseen is exhausted)
+    const dueShare = d / (d + u || 1);
+    if (d < due.length && (dueShare < DUE_RATIO || u >= unseen.length)) {
+      result.push(due[d++]);
+    } else {
+      result.push(unseen[u++]);
+    }
+  }
+
+  return result;
 }
 
 // --- Internal formulas ---
