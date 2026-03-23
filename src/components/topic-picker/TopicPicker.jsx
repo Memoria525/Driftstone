@@ -132,7 +132,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
     <div className="flex flex-col h-full">
       {/* Scrollable tree */}
       <div className="flex-1 overflow-y-auto px-4 py-3 space-y-2">
-        {dueCount > 0 && onReviewDue && (
+        {dueCount > 0 && onReviewDue ? (
           <button
             onClick={onReviewDue}
             className={[
@@ -146,6 +146,13 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
             <span>{dueCount} card{dueCount === 1 ? '' : 's'} due for review</span>
             <span className="font-semibold">Review now</span>
           </button>
+        ) : (
+          <div
+            className="w-full flex items-center justify-center rounded-[--radius-md] px-4 text-sm bg-emerald-50 border border-emerald-200 text-emerald-700"
+            style={{ minHeight: 'var(--spacing-touch)' }}
+          >
+            All caught up!
+          </div>
         )}
         <h2 ref={headingRef} tabIndex={-1} className="text-sm font-semibold text-[--color-text] outline-none">
           Select topics
