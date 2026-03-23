@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
-import useAnnounce from '../../hooks/useAnnounce.js';
 
 const GRADES = [
   { id: 'easy', label: 'Easy', color: 'bg-blue-500 hover:bg-blue-600' },
@@ -13,22 +12,22 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
   const [userAnswer, setUserAnswer] = useState('');
   const [showHint, setShowHint] = useState(false);
   const [revealed, setRevealed] = useState(false);
-  const inputRef = useRef(null);
-  const announce = useAnnounce();
+  const questionRef = useRef(null);
+  const answerRef = useRef(null);
 
-  // Reset state and announce when card changes
+  // Reset state and focus question when card changes
   useEffect(() => {
     setUserAnswer('');
     setShowHint(false);
     setRevealed(false);
-    inputRef.current?.focus();
-    announce(`Card ${index + 1} of ${total}. ${card.question}`);
-  }, [card.id, index, total, card.question, announce]);
+    questionRef.current?.focus();
+  }, [card.id]);
 
   function handleSubmit(e) {
     e.preventDefault();
     setRevealed(true);
-    announce('Answer revealed. Grade your response.');
+    // Focus answer after React renders the revealed section
+    requestAnimationFrame(() => answerRef.current?.focus());
   }
 
   return (
@@ -63,7 +62,7 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
       <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
         {/* Question */}
         <div>
-          <p className="text-sm font-medium text-[--color-text]">{card.question}</p>
+          <p ref={questionRef} tabIndex={-1} className="text-sm font-medium text-[--color-text] outline-none" aria-label={`Card ${index + 1} of ${total}. ${card.question}`}>{card.question}</p>
         </div>
 
         {/* Hint */}
@@ -86,7 +85,6 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
         {!revealed && (
           <form onSubmit={handleSubmit}>
             <textarea
-              ref={inputRef}
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
               aria-label="Your answer"
@@ -126,7 +124,7 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
             {/* Correct answer */}
             <div className="rounded-[--radius-md] bg-emerald-50 border border-emerald-200 p-3">
               <p className="text-xs font-medium text-emerald-700 mb-1">Correct answer</p>
-              <p className="text-sm text-[--color-text]">{card.answer}</p>
+              <p ref={answerRef} tabIndex={-1} className="text-sm text-[--color-text] outline-none" aria-label={`Correct answer. ${card.answer}`}>{card.answer}</p>
             </div>
 
             {/* Explanation */}
