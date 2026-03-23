@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { loadCourses } from '../../data/courseLoader.js';
-import useAnnounce from '../../hooks/useAnnounce.js';
 import { computeRetrievability } from '../../utils/fsrs.js';
 
 function ChevronIcon({ open }) {
@@ -66,7 +65,6 @@ function ReadinessPct({ readiness }) {
 export default function ProgressTab({ stateMap, stateLoading }) {
   const [courses, setCourses] = useState([]);
   const [coursesLoading, setCoursesLoading] = useState(true);
-  const announce = useAnnounce();
   const headingRef = useRef(null);
 
   const [openCourses, setOpenCourses] = useState(() => new Set());
@@ -104,11 +102,6 @@ export default function ProgressTab({ stateMap, stateLoading }) {
     [loading, allCardIds, stateMap, now]
   );
 
-  useEffect(() => {
-    if (loading) return;
-    const pct = Math.round(overallReadiness * 100);
-    announce(`Overall exam readiness: ${pct} percent.`);
-  }, [loading, overallReadiness, announce]);
 
   if (loading) {
     return (
@@ -126,7 +119,7 @@ export default function ProgressTab({ stateMap, stateLoading }) {
       <div className="flex-1 overflow-y-auto px-4 py-6 space-y-6">
         {/* Overall readiness */}
         <div className="text-center">
-          <h2 ref={headingRef} tabIndex={-1} className="text-lg font-semibold text-[--color-text] outline-none">
+          <h2 ref={headingRef} tabIndex={-1} className="text-lg font-semibold text-[--color-text] outline-none" aria-label={`Exam readiness: ${Math.round(overallReadiness * 100)} percent. ${studied} studied, ${newCards} new, ${totalCards} total.`}>
             Exam readiness
           </h2>
           <p className="text-4xl font-bold text-[--color-brand] mt-2">
