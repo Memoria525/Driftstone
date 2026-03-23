@@ -1,6 +1,7 @@
 import { useState, lazy, Suspense } from 'react';
 import useAuth from './hooks/useAuth.js';
 import useAdmin from './hooks/useAdmin.js';
+import useCardState from './hooks/useCardState.js';
 import SignInScreen from './components/auth/SignInScreen.jsx';
 import AppShell from './components/layout/AppShell.jsx';
 import StudyTab from './components/tabs/StudyTab.jsx';
@@ -11,6 +12,7 @@ const AdminTab = lazy(() => import('./components/tabs/AdminTab.jsx'));
 export default function App() {
   const { user, loading } = useAuth();
   const isAdminClaim = useAdmin(user);
+  const { stateMap, loading: stateLoading, saveCardState } = useCardState(user);
   const [adminHidden, setAdminHidden] = useState(false);
   const isAdmin = isAdminClaim && !adminHidden;
   const [activeTab, setActiveTab] = useState('study');
@@ -30,11 +32,11 @@ export default function App() {
 
   return (
     <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} isAdmin={isAdmin} hideNav={hideNav}>
-      {activeTab === 'study' && <StudyTab onStudying={setHideNav} />}
-      {activeTab === 'progress' && <ProgressTab />}
+      {activeTab === 'study' && <StudyTab onStudying={setHideNav} stateMap={stateMap} saveCardState={saveCardState} />}
+      {activeTab === 'progress' && <ProgressTab stateMap={stateMap} stateLoading={stateLoading} />}
       {activeTab === 'admin' && (
         <Suspense fallback={<p className="p-4 text-sm text-[--color-text-muted]">Loading…</p>}>
-          <AdminTab onStudying={setHideNav} onHideAdmin={() => { setAdminHidden(true); setActiveTab('study'); }} />
+          <AdminTab onStudying={setHideNav} onHideAdmin={() => { setAdminHidden(true); setActiveTab('study'); }} stateMap={stateMap} saveCardState={saveCardState} />
         </Suspense>
       )}
     </AppShell>

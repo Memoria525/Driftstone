@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
-import useAuth from '../../hooks/useAuth.js';
-import useCardState from '../../hooks/useCardState.js';
 import { loadCourses } from '../../data/courseLoader.js';
 import useAnnounce from '../../hooks/useAnnounce.js';
 import { computeRetrievability } from '../../utils/fsrs.js';
@@ -65,9 +63,7 @@ function ReadinessPct({ readiness }) {
   );
 }
 
-export default function ProgressTab() {
-  const { user } = useAuth();
-  const { stateMap, loading: stateLoading } = useCardState(user);
+export default function ProgressTab({ stateMap, stateLoading }) {
   const [courses, setCourses] = useState([]);
   const [coursesLoading, setCoursesLoading] = useState(true);
   const announce = useAnnounce();

@@ -5,13 +5,11 @@ import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
 import { getCardsBySectionIds, getCardsByIds } from '../../data/courseLoader.js';
 import useAuth from '../../hooks/useAuth.js';
 import useAdmin from '../../hooks/useAdmin.js';
-import useCardState from '../../hooks/useCardState.js';
 import { scheduleCard, sortByPriority, createEmptyCardState, GRADE_TO_RATING } from '../../utils/fsrs.js';
 
-export default function StudyTab({ onStudying }) {
+export default function StudyTab({ onStudying, stateMap, saveCardState }) {
   const { user } = useAuth();
   const isAdmin = useAdmin(user);
-  const { stateMap, saveCardState } = useCardState(user);
   const [screen, setScreen] = useState('picker'); // 'picker' | 'study' | 'summary'
 
   useEffect(() => {

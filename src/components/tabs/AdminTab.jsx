@@ -3,7 +3,6 @@ import { loadCourses } from '../../data/courseLoader.js';
 import { searchCards, highlightMatches, SEARCHABLE_FIELDS } from '../../utils/search.js';
 import useAnnounce from '../../hooks/useAnnounce.js';
 import useAuth from '../../hooks/useAuth.js';
-import useCardState from '../../hooks/useCardState.js';
 import useSavedDecks from '../../hooks/useSavedDecks.js';
 import CardViewer from '../card-viewer/CardViewer.jsx';
 import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
@@ -108,9 +107,8 @@ function SearchResult({ result, query, isExpanded, onToggle }) {
   );
 }
 
-export default function AdminTab({ onStudying, onHideAdmin }) {
+export default function AdminTab({ onStudying, onHideAdmin, stateMap, saveCardState }) {
   const { user } = useAuth();
-  const { stateMap, saveCardState } = useCardState(user);
   const { saveDeck } = useSavedDecks(user);
   const [allCards, setAllCards] = useState([]);
   const [query, setQuery] = useState('');
