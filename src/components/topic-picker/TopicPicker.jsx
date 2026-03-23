@@ -90,7 +90,6 @@ export default function TopicPicker({ onStart }) {
       .then((data) => {
         if (cancelled) return;
         setCourses(data);
-        setSelected(allSectionIds(data));
         setLoading(false);
         announce('Select topics to study');
       })
