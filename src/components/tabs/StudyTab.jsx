@@ -17,9 +17,11 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
   const [pickerKey, setPickerKey] = useState(0);
   const [endTime, setEndTime] = useState(null);
   const coursesRef = useRef(null);
+  const selectedSectionIdsRef = useRef(null);
 
   function handleStart(selectedSectionIds, courses, timeLimit) {
     coursesRef.current = courses;
+    selectedSectionIdsRef.current = selectedSectionIds;
     const pool = sortByPriority(
       getCardsBySectionIds(courses, selectedSectionIds),
       stateMap
@@ -50,6 +52,24 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
     }
   }
 
+  function handleKeepGoing() {
+    // Continue studying same cards from where they left off, no time limit
+    setEndTime(null);
+    if (currentIndex + 1 < cards.length) {
+      setCurrentIndex(currentIndex + 1);
+    } else {
+      // Re-sort the full pool for a fresh pass
+      const pool = sortByPriority(
+        getCardsBySectionIds(coursesRef.current, selectedSectionIdsRef.current),
+        stateMap
+      );
+      if (pool.length === 0) return;
+      setCards(pool);
+      setCurrentIndex(0);
+    }
+    setScreen('study');
+  }
+
   function handleRestart() {
     setPickerKey(k => k + 1);
     setEndTime(null);
@@ -76,6 +96,7 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
         results={results}
         total={cards.length}
         onRestart={handleRestart}
+        onKeepGoing={handleKeepGoing}
       />
     );
   }

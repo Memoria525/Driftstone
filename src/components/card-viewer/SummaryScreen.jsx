@@ -5,7 +5,7 @@ const GRADE_INFO = {
   again: { label: 'Missed it 👎', color: 'text-red-600', bg: 'bg-red-50' },
 };
 
-export default function SummaryScreen({ results, total, onRestart }) {
+export default function SummaryScreen({ results, total, onRestart, onKeepGoing }) {
   const headingRef = useRef(null);
 
   const counts = { good: 0, again: 0 };
@@ -44,13 +44,23 @@ export default function SummaryScreen({ results, total, onRestart }) {
       </div>
 
       {/* Footer */}
-      <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface]">
+      <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface] space-y-2">
+        <button
+          onClick={onKeepGoing}
+          className={[
+            'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+            'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white',
+          ].join(' ')}
+        >
+          Keep Going
+        </button>
         <button
           onClick={onRestart}
           className={[
             'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
-            'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white',
+            'text-[--color-text-muted] hover:text-[--color-text]',
           ].join(' ')}
         >
           Done
