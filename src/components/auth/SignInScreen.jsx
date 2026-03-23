@@ -3,15 +3,18 @@ import {
   signInWithPopup,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
 } from 'firebase/auth';
 import { auth, googleProvider } from '../../firebase.js';
 
 export default function SignInScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [isNewUser, setIsNewUser] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [resetSent, setResetSent] = useState(false);
 
   async function handleGoogle() {
     setError('');
@@ -27,6 +30,10 @@ export default function SignInScreen() {
   async function handleEmail(e) {
     e.preventDefault();
     setError('');
+    if (isNewUser && password !== confirmPassword) {
+      setError('Passwords do not match.');
+      return;
+    }
     setLoading(true);
     try {
       if (isNewUser) {
@@ -34,6 +41,23 @@ export default function SignInScreen() {
       } else {
         await signInWithEmailAndPassword(auth, email, password);
       }
+    } catch (err) {
+      setError(friendlyError(err.code));
+    }
+    setLoading(false);
+  }
+
+  async function handleForgotPassword() {
+    setError('');
+    setResetSent(false);
+    if (!email.trim()) {
+      setError('Enter your email address first.');
+      return;
+    }
+    setLoading(true);
+    try {
+      await sendPasswordResetEmail(auth, email);
+      setResetSent(true);
     } catch (err) {
       setError(friendlyError(err.code));
     }
@@ -105,6 +129,38 @@ export default function SignInScreen() {
             />
           </label>
 
+          {isNewUser && (
+            <label className="flex flex-col gap-1">
+              <span className="text-sm font-medium text-[--color-text]">Confirm password</span>
+              <input
+                type="password"
+                required
+                minLength={6}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                className="min-h-touch border border-[--color-border] rounded-lg px-4 py-2 text-[--color-text] bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                autoComplete="new-password"
+              />
+            </label>
+          )}
+
+          {!isNewUser && (
+            <button
+              type="button"
+              onClick={handleForgotPassword}
+              disabled={loading}
+              className="self-end text-sm text-[--color-primary] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded disabled:opacity-50"
+            >
+              Forgot password?
+            </button>
+          )}
+
+          {resetSent && (
+            <p className="text-sm text-emerald-600" role="status">
+              Password reset email sent. Check your inbox.
+            </p>
+          )}
+
           <button
             type="submit"
             disabled={loading}
@@ -118,6 +174,8 @@ export default function SignInScreen() {
           onClick={() => {
             setIsNewUser(!isNewUser);
             setError('');
+            setConfirmPassword('');
+            setResetSent(false);
           }}
           className="w-full min-h-touch mt-4 text-sm text-[--color-primary] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded-lg"
         >
