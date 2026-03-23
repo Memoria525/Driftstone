@@ -1,5 +1,6 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import { loadCourses } from '../../data/courseLoader.js';
+import { computeRetrievability } from '../../utils/fsrs.js';
 
 
 // ── helpers ──────────────────────────────────────────────────────────────────
@@ -20,6 +21,35 @@ function selectionState(ids, selected) {
   return 'some';
 }
 
+// Compute average retrievability for a set of card IDs
+function sectionStrength(cardIds, stateMap, now) {
+  let seen = 0;
+  let sum = 0;
+  for (const id of cardIds) {
+    const s = stateMap.get(id);
+    if (s && s.state !== 'new') {
+      seen++;
+      sum += computeRetrievability(s, now);
+    }
+  }
+  if (seen === 0) return null; // no data
+  return sum / seen;
+}
+
+function strengthColor(strength) {
+  if (strength === null) return 'bg-gray-300';
+  if (strength < 0.5) return 'bg-red-400';
+  if (strength < 0.8) return 'bg-amber-400';
+  return 'bg-emerald-400';
+}
+
+function strengthLabel(strength) {
+  if (strength === null) return 'not started';
+  if (strength < 0.5) return 'needs work';
+  if (strength < 0.8) return 'developing';
+  return 'strong';
+}
+
 // ── sub-components ────────────────────────────────────────────────────────────
 
 function ChevronIcon({ open }) {
@@ -36,6 +66,16 @@ function ChevronIcon({ open }) {
     >
       <polyline points="9 18 15 12 9 6" />
     </svg>
+  );
+}
+
+function StrengthDot({ strength }) {
+  return (
+    <span
+      className={`w-2.5 h-2.5 rounded-full shrink-0 ${strengthColor(strength)}`}
+      aria-label={strengthLabel(strength)}
+      role="img"
+    />
   );
 }
 
@@ -61,7 +101,7 @@ function Checkbox({ state, onChange, label }) {
 
 // ── main component ────────────────────────────────────────────────────────────
 
-export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
+export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateMap }) {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -72,6 +112,9 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
   const timeHeadingRef = useRef(null);
   const [openCourses, setOpenCourses] = useState(() => new Set());
   const [openChapters, setOpenChapters] = useState(() => new Set());
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- recalc when stateMap changes
+  const now = useMemo(() => new Date(), [stateMap]);
 
   useEffect(() => {
     let cancelled = false;
@@ -167,6 +210,8 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
           const cIds = courseSectionIds(course);
           const cState = selectionState(cIds, selected);
           const cOpen = openCourses.has(course.id);
+          const cCardIds = course.chapters.flatMap((ch) => ch.sections.flatMap((s) => s.cards.map((c) => c.id)));
+          const cStrength = stateMap ? sectionStrength(cCardIds, stateMap, now) : null;
 
           return (
             <div key={course.id} className="rounded-[--radius-md] border border-[--color-border] overflow-hidden">
@@ -182,7 +227,10 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
                   aria-expanded={cOpen}
                   className="flex-1 flex items-center justify-between gap-2 py-3 text-left font-semibold text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
                 >
-                  {course.name}
+                  <span className="flex items-center gap-2">
+                    {course.name}
+                    <StrengthDot strength={cStrength} />
+                  </span>
                   <ChevronIcon open={cOpen} />
                 </button>
               </div>
@@ -194,6 +242,8 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
                     const chIds = chapterSectionIds(chapter);
                     const chState = selectionState(chIds, selected);
                     const chOpen = openChapters.has(chapter.id);
+                    const chCardIds = chapter.sections.flatMap((s) => s.cards.map((c) => c.id));
+                    const chStrength = stateMap ? sectionStrength(chCardIds, stateMap, now) : null;
 
                     return (
                       <div key={chapter.id}>
@@ -209,7 +259,10 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
                             aria-expanded={chOpen}
                             className="flex-1 flex items-center justify-between gap-2 py-3 text-left text-sm font-medium text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
                           >
-                            {chapter.name}
+                            <span className="flex items-center gap-2">
+                              {chapter.name}
+                              <StrengthDot strength={chStrength} />
+                            </span>
                             <ChevronIcon open={chOpen} />
                           </button>
                         </div>
@@ -219,6 +272,8 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
                           <div className="bg-[--color-surface-sunken] divide-y divide-[--color-border]">
                             {chapter.sections.map((section) => {
                               const sSelected = selected.has(section.id);
+                              const secCardIds = section.cards.map((c) => c.id);
+                              const secStrength = stateMap ? sectionStrength(secCardIds, stateMap, now) : null;
                               return (
                                 <label
                                   key={section.id}
@@ -237,9 +292,10 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
                                     }
                                     className="w-5 h-5 shrink-0 rounded accent-[--color-brand] focus-visible:ring-2 focus-visible:ring-[--color-focus]"
                                   />
-                                  <span className="text-sm text-[--color-text] py-3">
+                                  <span className="flex-1 text-sm text-[--color-text] py-3">
                                     {section.name}
                                   </span>
+                                  <StrengthDot strength={secStrength} />
                                 </label>
                               );
                             })}

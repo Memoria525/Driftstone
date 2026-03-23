@@ -8,7 +8,7 @@ import ProgressTab from './components/tabs/ProgressTab.jsx';
 
 export default function App() {
   const { user, loading } = useAuth();
-  const { stateMap, loading: stateLoading, saveCardState } = useCardState(user);
+  const { stateMap, saveCardState } = useCardState(user);
   const [activeTab, setActiveTab] = useState('study');
   const [hideNav, setHideNav] = useState(false);
 
@@ -36,7 +36,7 @@ export default function App() {
   return (
     <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} hideNav={hideNav} dueCount={dueCount}>
       {activeTab === 'study' && <StudyTab onStudying={setHideNav} stateMap={stateMap} saveCardState={saveCardState} dueCount={dueCount} />}
-      {activeTab === 'progress' && <ProgressTab stateMap={stateMap} stateLoading={stateLoading} />}
+      {activeTab === 'progress' && <ProgressTab />}
     </AppShell>
   );
 }

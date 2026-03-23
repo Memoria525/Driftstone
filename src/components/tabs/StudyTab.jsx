@@ -130,5 +130,5 @@ export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount
     );
   }
 
-  return <TopicPicker key={pickerKey} onStart={handleStart} dueCount={dueCount} onReviewDue={handleReviewDue} />;
+  return <TopicPicker key={pickerKey} onStart={handleStart} dueCount={dueCount} onReviewDue={handleReviewDue} stateMap={stateMap} />;
 }
