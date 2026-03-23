@@ -56,6 +56,7 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
   if (screen === 'study' && cards.length > 0) {
     return (
       <CardViewer
+        key={cards[currentIndex].id}
         card={cards[currentIndex]}
         index={currentIndex}
         total={cards.length}

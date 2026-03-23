@@ -13,13 +13,10 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
   const questionRef = useRef(null);
   const answerRef = useRef(null);
 
-  // Reset state and focus question when card changes
+  // Focus question on mount (component remounts per card via key={card.id})
   useEffect(() => {
-    setUserAnswer('');
-    setShowHint(false);
-    setRevealed(false);
     questionRef.current?.focus();
-  }, [card.id]);
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();

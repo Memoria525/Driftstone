@@ -15,7 +15,7 @@
 import { initializeApp, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 import { readFileSync, readdirSync, statSync } from 'fs';
-import { join, basename, dirname } from 'path';
+import { join, basename } from 'path';
 
 // Initialize Firebase Admin
 const serviceAccount = JSON.parse(

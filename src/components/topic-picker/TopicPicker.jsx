@@ -4,18 +4,6 @@ import { loadCourses } from '../../data/courseLoader.js';
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
-function allSectionIds(courses) {
-  const ids = new Set();
-  for (const course of courses) {
-    for (const chapter of course.chapters) {
-      for (const section of chapter.sections) {
-        ids.add(section.id);
-      }
-    }
-  }
-  return ids;
-}
-
 function chapterSectionIds(chapter) {
   return chapter.sections.map((s) => s.id);
 }

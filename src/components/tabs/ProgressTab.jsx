@@ -87,7 +87,8 @@ export default function ProgressTab({ stateMap, stateLoading }) {
     requestAnimationFrame(() => headingRef.current?.focus());
   }, [loading]);
 
-  const now = useMemo(() => new Date(), [loading]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- recalc timestamp when data arrives
+  const now = useMemo(() => new Date(), [courses, stateMap]);
 
   const allCardIds = useMemo(() =>
     courses.flatMap(course =>

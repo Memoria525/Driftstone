@@ -5,7 +5,7 @@ export default function useAdmin(user) {
 
   useEffect(() => {
     if (!user) {
-      setIsAdmin(false);
+      setIsAdmin(false); // eslint-disable-line react-hooks/set-state-in-effect -- sync reset for null user
       return;
     }
     user.getIdTokenResult().then((result) => {

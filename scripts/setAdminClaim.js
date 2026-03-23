@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* global process */
 // Sets or revokes the admin custom claim for a user by email.
 // Usage: node scripts/setAdminClaim.js <email> [revoke]
 
