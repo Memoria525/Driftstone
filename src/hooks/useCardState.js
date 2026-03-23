@@ -44,9 +44,6 @@ export default function useCardState(user) {
   const saveCardState = useCallback(async (cardId, cardState) => {
     if (!user) return;
 
-    // Snapshot previous value for rollback
-    const prev = stateMap.get(cardId);
-
     // Optimistic local update
     setStateMap(m => {
       const next = new Map(m);
@@ -68,15 +65,8 @@ export default function useCardState(user) {
       });
     } catch (err) {
       console.error('Failed to save card state:', err);
-      // Roll back optimistic update
-      setStateMap(m => {
-        const next = new Map(m);
-        if (prev) next.set(cardId, prev);
-        else next.delete(cardId);
-        return next;
-      });
     }
-  }, [user, stateMap]);
+  }, [user]);
 
   return { stateMap, loading, saveCardState };
 }

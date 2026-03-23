@@ -2,14 +2,10 @@ import { useState, useRef, useEffect } from 'react';
 import TopicPicker from '../topic-picker/TopicPicker.jsx';
 import CardViewer from '../card-viewer/CardViewer.jsx';
 import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
-import { getCardsBySectionIds, getCardsByIds } from '../../data/courseLoader.js';
-import useAuth from '../../hooks/useAuth.js';
-import useAdmin from '../../hooks/useAdmin.js';
+import { getCardsBySectionIds } from '../../data/courseLoader.js';
 import { scheduleCard, sortByPriority, createEmptyCardState, GRADE_TO_RATING } from '../../utils/fsrs.js';
 
 export default function StudyTab({ onStudying, stateMap, saveCardState }) {
-  const { user } = useAuth();
-  const isAdmin = useAdmin(user);
   const [screen, setScreen] = useState('picker'); // 'picker' | 'study' | 'summary'
 
   useEffect(() => {
@@ -52,17 +48,6 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
     }
   }
 
-  function handleStartDeck(cardIds, courses) {
-    coursesRef.current = courses;
-    const allCards = getCardsByIds(courses, cardIds);
-    const pool = sortByPriority(allCards, stateMap);
-    if (pool.length === 0) return;
-    setCards(pool);
-    setCurrentIndex(0);
-    setResults([]);
-    setScreen('study');
-  }
-
   function handleRestart() {
     setPickerKey(k => k + 1);
     setScreen('picker');
@@ -76,7 +61,6 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
         total={cards.length}
         onGrade={handleGrade}
         onDone={() => setScreen('summary')}
-        isAdmin={isAdmin}
       />
     );
   }
@@ -91,5 +75,5 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
     );
   }
 
-  return <TopicPicker key={pickerKey} onStart={handleStart} onStartDeck={handleStartDeck} />;
+  return <TopicPicker key={pickerKey} onStart={handleStart} />;
 }

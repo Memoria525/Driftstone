@@ -1,9 +1,6 @@
-import { useState, useMemo, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { loadCourses } from '../../data/courseLoader.js';
 import useAnnounce from '../../hooks/useAnnounce.js';
-import useAuth from '../../hooks/useAuth.js';
-import useAdmin from '../../hooks/useAdmin.js';
-import useSavedDecks from '../../hooks/useSavedDecks.js';
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
@@ -76,10 +73,7 @@ function Checkbox({ state, onChange, label }) {
 
 // ── main component ────────────────────────────────────────────────────────────
 
-export default function TopicPicker({ onStart, onStartDeck }) {
-  const { user } = useAuth();
-  const isAdmin = useAdmin(user);
-  const { decks, deleteDeck } = useSavedDecks(user);
+export default function TopicPicker({ onStart }) {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -253,63 +247,6 @@ export default function TopicPicker({ onStart, onStartDeck }) {
             </div>
           );
         })}
-
-        {/* Saved Decks — admin only */}
-        {isAdmin && decks.length > 0 && (
-          <div className="rounded-[--radius-md] border border-[--color-border] overflow-hidden">
-            {/* "Course" header */}
-            <div className="flex items-center gap-3 px-4 bg-[--color-surface-raised]" style={{ minHeight: 'var(--spacing-touch)' }}>
-              <button
-                onClick={() => toggleSet(setOpenCourses, '__saved_decks__')}
-                aria-expanded={openCourses.has('__saved_decks__')}
-                className="flex-1 flex items-center justify-between gap-2 py-3 text-left font-semibold text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
-              >
-                Saved Decks
-                <ChevronIcon open={openCourses.has('__saved_decks__')} />
-              </button>
-            </div>
-
-            {/* Deck list (like chapters) */}
-            {openCourses.has('__saved_decks__') && (
-              <div className="divide-y divide-[--color-border]">
-                {decks.map((deck) => (
-                  <div key={deck.id} className="flex items-center gap-2 pl-8 pr-4 bg-[--color-surface]" style={{ minHeight: 'var(--spacing-touch)' }}>
-                    <button
-                      onClick={() => onStartDeck(deck.cardIds, courses)}
-                      className={[
-                        'flex-1 text-left py-3 min-h-touch',
-                        'text-sm font-medium text-[--color-text]',
-                        'hover:text-[--color-brand] transition-colors',
-                        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded',
-                      ].join(' ')}
-                    >
-                      <span className="block">{deck.name}</span>
-                      <span className="text-xs text-[--color-text-muted]">
-                        {deck.cardIds.length} card{deck.cardIds.length === 1 ? '' : 's'}
-                      </span>
-                    </button>
-                    <button
-                      onClick={() => {
-                        if (confirm(`Delete "${deck.name}"?`)) deleteDeck(deck.id);
-                      }}
-                      aria-label={`Delete ${deck.name}`}
-                      className={[
-                        'min-h-touch min-w-touch flex items-center justify-center shrink-0',
-                        'text-[--color-text-muted] hover:text-red-500 transition-colors',
-                        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded',
-                      ].join(' ')}
-                    >
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-4 h-4">
-                        <polyline points="3 6 5 6 21 6" />
-                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                      </svg>
-                    </button>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
       </div>
 
       {/* Sticky footer */}
