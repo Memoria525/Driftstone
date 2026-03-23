@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import TopicPicker from '../topic-picker/TopicPicker.jsx';
 import CardViewer from '../card-viewer/CardViewer.jsx';
 import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
-import { getCardsBySectionIds, getCardsByIds, loadCourses } from '../../data/courseLoader.js';
+import { getCardsBySectionIds, getCardsByIds, loadCourses, shuffle } from '../../data/courseLoader.js';
 import { scheduleCard, sortByPriority, createEmptyCardState, GRADE_TO_RATING } from '../../utils/fsrs.js';
 
 export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount }) {
@@ -20,13 +20,11 @@ export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount
   const coursesRef = useRef(null);
   const selectedSectionIdsRef = useRef(null);
 
-  function handleStart(selectedSectionIds, courses, timeLimit) {
+  function handleStart(selectedSectionIds, courses, timeLimit, mode = 'review') {
     coursesRef.current = courses;
     selectedSectionIdsRef.current = selectedSectionIds;
-    const pool = sortByPriority(
-      getCardsBySectionIds(courses, selectedSectionIds),
-      stateMap
-    );
+    const allCards = getCardsBySectionIds(courses, selectedSectionIds);
+    const pool = mode === 'full' ? shuffle(allCards) : sortByPriority(allCards, stateMap);
     if (pool.length === 0) return;
     setCards(pool);
     setCurrentIndex(0);

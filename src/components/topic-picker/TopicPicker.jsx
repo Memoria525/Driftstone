@@ -68,6 +68,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
   const headingRef = useRef(null);
   const [selected, setSelected] = useState(() => new Set());
   const [showTimePicker, setShowTimePicker] = useState(false);
+  const [studyMode, setStudyMode] = useState('review'); // 'review' | 'full'
   const timeHeadingRef = useRef(null);
   const [openCourses, setOpenCourses] = useState(() => new Set());
   const [openChapters, setOpenChapters] = useState(() => new Set());
@@ -283,7 +284,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
               {[3, 5, 10, null].map((val) => (
                 <button
                   key={val ?? 'unlimited'}
-                  onClick={() => onStart(selected, courses, val)}
+                  onClick={() => onStart(selected, courses, val, studyMode)}
                   className={[
                     'flex-1 min-h-touch rounded-[--radius-md] text-sm font-medium transition-colors',
                     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
@@ -294,8 +295,29 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
                 </button>
               ))}
             </div>
+            <div role="group" aria-label="Study mode" className="flex gap-2">
+              {[
+                { id: 'review', label: 'Smart review' },
+                { id: 'full', label: 'Full deck' },
+              ].map((mode) => (
+                <button
+                  key={mode.id}
+                  onClick={() => setStudyMode(mode.id)}
+                  aria-pressed={studyMode === mode.id}
+                  className={[
+                    'flex-1 min-h-touch rounded-[--radius-md] text-sm font-medium transition-colors',
+                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+                    studyMode === mode.id
+                      ? 'bg-[--color-surface-sunken] text-[--color-text] border-2 border-[--color-brand]'
+                      : 'bg-[--color-surface-sunken] text-[--color-text-muted] border border-[--color-border]',
+                  ].join(' ')}
+                >
+                  {mode.label}
+                </button>
+              ))}
+            </div>
             <button
-              onClick={() => setShowTimePicker(false)}
+              onClick={() => { setShowTimePicker(false); setStudyMode('review'); }}
               className="w-full text-sm text-[--color-text-muted] min-h-touch focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
             >
               Cancel
