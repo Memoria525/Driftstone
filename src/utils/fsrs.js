@@ -24,7 +24,7 @@ const W = [
   0.6621,   // w18: same-day review grade offset
 ];
 
-export const GRADE_TO_RATING = { missed: 1, close: 2, nailed: 3, easy: 4 };
+export const GRADE_TO_RATING = { good: 3, again: 1 };
 
 const clamp = (x, lo, hi) => Math.min(hi, Math.max(lo, x));
 

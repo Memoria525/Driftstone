@@ -2,10 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
 
 const GRADES = [
-  { id: 'easy', label: 'Easy', color: 'bg-blue-500 hover:bg-blue-600' },
-  { id: 'nailed', label: 'Nailed it', color: 'bg-emerald-500 hover:bg-emerald-600' },
-  { id: 'close', label: 'Close', color: 'bg-amber-500 hover:bg-amber-600' },
-  { id: 'missed', label: 'Missed it', color: 'bg-red-500 hover:bg-red-600' },
+  { id: 'good', label: '👍', ariaLabel: 'Got it', color: 'bg-emerald-500 hover:bg-emerald-600' },
+  { id: 'again', label: '👎', ariaLabel: 'Missed it', color: 'bg-red-500 hover:bg-red-600' },
 ];
 
 export default function CardViewer({ card, index, total, onGrade, onDone }) {
@@ -139,8 +137,9 @@ export default function CardViewer({ card, index, total, onGrade, onDone }) {
               <button
                 key={grade.id}
                 onClick={() => onGrade(grade.id)}
+                aria-label={grade.ariaLabel}
                 className={[
-                  'flex-1 min-h-touch rounded-[--radius-md] font-semibold text-sm text-white transition-colors',
+                  'flex-1 min-h-touch rounded-[--radius-md] text-2xl transition-colors',
                   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
                   grade.color,
                 ].join(' ')}
