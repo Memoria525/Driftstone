@@ -58,7 +58,7 @@ export default function SummaryScreen({ results, total, onRestart }) {
             'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white',
           ].join(' ')}
         >
-          Start over
+          Back to topics
         </button>
       </div>
     </div>
