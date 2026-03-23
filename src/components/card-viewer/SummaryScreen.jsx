@@ -5,13 +5,19 @@ const GRADE_INFO = {
   again: { label: 'Missed it 👎', color: 'text-red-600', bg: 'bg-red-50' },
 };
 
-export default function SummaryScreen({ results, total, onRestart, onKeepGoing }) {
+export default function SummaryScreen({ results, total, onRestart, onKeepGoing, timedOut }) {
   const headingRef = useRef(null);
 
   const counts = { good: 0, again: 0 };
   for (const r of results) {
     counts[r.grade]++;
   }
+
+  const deckComplete = results.length >= total;
+  const heading = timedOut ? "Time's up!" : deckComplete ? 'Deck complete!' : 'Session complete';
+  const subtitle = deckComplete
+    ? `All ${results.length} cards reviewed`
+    : `${results.length} of ${total} cards reviewed`;
 
   useEffect(() => {
     headingRef.current?.focus();
@@ -21,9 +27,9 @@ export default function SummaryScreen({ results, total, onRestart, onKeepGoing }
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-y-auto px-4 py-6 space-y-6">
         <div className="text-center">
-          <h2 ref={headingRef} tabIndex={-1} className="text-lg font-semibold text-[--color-text] outline-none" aria-label={`Session complete. ${results.length} of ${total} cards reviewed.`}>Session complete</h2>
+          <h2 ref={headingRef} tabIndex={-1} className="text-lg font-semibold text-[--color-text] outline-none" aria-label={`${heading} ${subtitle}.`}>{heading}</h2>
           <p className="text-sm text-[--color-text-muted] mt-1">
-            {results.length} of {total} cards reviewed
+            {subtitle}
           </p>
         </div>
 
