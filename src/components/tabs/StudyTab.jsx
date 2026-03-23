@@ -2,10 +2,10 @@ import { useState, useRef, useEffect } from 'react';
 import TopicPicker from '../topic-picker/TopicPicker.jsx';
 import CardViewer from '../card-viewer/CardViewer.jsx';
 import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
-import { getCardsBySectionIds } from '../../data/courseLoader.js';
+import { getCardsBySectionIds, getCardsByIds, loadCourses } from '../../data/courseLoader.js';
 import { scheduleCard, sortByPriority, createEmptyCardState, GRADE_TO_RATING } from '../../utils/fsrs.js';
 
-export default function StudyTab({ onStudying, stateMap, saveCardState }) {
+export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount }) {
   const [screen, setScreen] = useState('picker'); // 'picker' | 'study' | 'summary'
 
   useEffect(() => {
@@ -54,6 +54,32 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
       setTimedOut(!!timeExpired);
       setScreen('summary');
     }
+  }
+
+  async function handleReviewDue() {
+    const now = new Date();
+    const dueIds = [];
+    for (const [cardId, s] of stateMap) {
+      if (s.state !== 'new' && s.due <= now) dueIds.push(cardId);
+    }
+    if (dueIds.length === 0) return;
+
+    const courses = await loadCourses();
+    const dueCards = getCardsByIds(courses, dueIds);
+    // Sort most overdue first
+    dueCards.sort((a, b) => {
+      const sa = stateMap.get(a.id);
+      const sb = stateMap.get(b.id);
+      return (sa.due - now) - (sb.due - now);
+    });
+
+    if (dueCards.length === 0) return;
+    setCards(dueCards);
+    setCurrentIndex(0);
+    setResults([]);
+    setTimedOut(false);
+    setEndTime(null);
+    setScreen('study');
   }
 
   function handleKeepGoing() {
@@ -106,5 +132,5 @@ export default function StudyTab({ onStudying, stateMap, saveCardState }) {
     );
   }
 
-  return <TopicPicker key={pickerKey} onStart={handleStart} />;
+  return <TopicPicker key={pickerKey} onStart={handleStart} dueCount={dueCount} onReviewDue={handleReviewDue} />;
 }

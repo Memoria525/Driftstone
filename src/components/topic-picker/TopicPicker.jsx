@@ -61,7 +61,7 @@ function Checkbox({ state, onChange, label }) {
 
 // ── main component ────────────────────────────────────────────────────────────
 
-export default function TopicPicker({ onStart }) {
+export default function TopicPicker({ onStart, dueCount = 0, onReviewDue }) {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -132,6 +132,21 @@ export default function TopicPicker({ onStart }) {
     <div className="flex flex-col h-full">
       {/* Scrollable tree */}
       <div className="flex-1 overflow-y-auto px-4 py-3 space-y-2">
+        {dueCount > 0 && onReviewDue && (
+          <button
+            onClick={onReviewDue}
+            className={[
+              'w-full flex items-center justify-between rounded-[--radius-md] px-4 text-sm',
+              'bg-amber-50 border border-amber-200 text-amber-800',
+              'hover:bg-amber-100 transition-colors',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+            ].join(' ')}
+            style={{ minHeight: 'var(--spacing-touch)' }}
+          >
+            <span>{dueCount} card{dueCount === 1 ? '' : 's'} due for review</span>
+            <span className="font-semibold">Review now</span>
+          </button>
+        )}
         <h2 ref={headingRef} tabIndex={-1} className="text-sm font-semibold text-[--color-text] outline-none">
           Select topics
         </h2>

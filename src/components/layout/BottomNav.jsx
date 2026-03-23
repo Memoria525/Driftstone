@@ -20,7 +20,7 @@ const tabs = [
   },
 ];
 
-export default function BottomNav({ activeTab, onTabChange }) {
+export default function BottomNav({ activeTab, onTabChange, dueCount = 0 }) {
   return (
     <nav
       aria-label="Main navigation"
@@ -28,13 +28,15 @@ export default function BottomNav({ activeTab, onTabChange }) {
     >
       {tabs.map((tab) => {
         const isActive = tab.id === activeTab;
+        const badge = tab.id === 'study' && dueCount > 0 ? dueCount : null;
         return (
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
             aria-current={isActive ? 'page' : undefined}
+            aria-label={badge ? `${tab.label}, ${badge} cards due` : undefined}
             className={[
-              'flex-1 flex flex-col items-center justify-center gap-1 min-h-touch py-2',
+              'flex-1 flex flex-col items-center justify-center gap-1 min-h-touch py-2 relative',
               'text-xs font-medium transition-colors',
               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] focus-visible:ring-inset',
               isActive
@@ -42,7 +44,17 @@ export default function BottomNav({ activeTab, onTabChange }) {
                 : 'text-[--color-text-muted] hover:text-[--color-text]',
             ].join(' ')}
           >
-            {tab.icon}
+            <span className="relative">
+              {tab.icon}
+              {badge && (
+                <span
+                  aria-hidden="true"
+                  className="absolute -top-1.5 -right-2.5 min-w-[18px] h-[18px] px-1 flex items-center justify-center rounded-full bg-red-500 text-white text-[10px] font-bold leading-none"
+                >
+                  {badge > 99 ? '99+' : badge}
+                </span>
+              )}
+            </span>
             {tab.label}
           </button>
         );

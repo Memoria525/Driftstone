@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import useAuth from './hooks/useAuth.js';
 import useCardState from './hooks/useCardState.js';
 import SignInScreen from './components/auth/SignInScreen.jsx';
@@ -11,6 +11,15 @@ export default function App() {
   const { stateMap, loading: stateLoading, saveCardState } = useCardState(user);
   const [activeTab, setActiveTab] = useState('study');
   const [hideNav, setHideNav] = useState(false);
+
+  const dueCount = useMemo(() => {
+    const now = new Date();
+    let count = 0;
+    for (const [, s] of stateMap) {
+      if (s.state !== 'new' && s.due <= now) count++;
+    }
+    return count;
+  }, [stateMap]);
 
   if (loading) {
     return (
@@ -25,8 +34,8 @@ export default function App() {
   }
 
   return (
-    <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} hideNav={hideNav}>
-      {activeTab === 'study' && <StudyTab onStudying={setHideNav} stateMap={stateMap} saveCardState={saveCardState} />}
+    <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} hideNav={hideNav} dueCount={dueCount}>
+      {activeTab === 'study' && <StudyTab onStudying={setHideNav} stateMap={stateMap} saveCardState={saveCardState} dueCount={dueCount} />}
       {activeTab === 'progress' && <ProgressTab stateMap={stateMap} stateLoading={stateLoading} />}
     </AppShell>
   );

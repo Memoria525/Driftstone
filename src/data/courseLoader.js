@@ -101,7 +101,7 @@ export function getCardsByIds(courses, cardIds) {
     for (const chapter of course.chapters) {
       for (const section of chapter.sections) {
         for (const card of section.cards) {
-          cardMap.set(card.id, card);
+          cardMap.set(card.id, { ...card, courseName: course.name, chapterName: chapter.name, sectionName: section.name });
         }
       }
     }
