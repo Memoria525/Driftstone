@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { loadCourses } from '../../data/courseLoader.js';
 import useCardNotes from '../../hooks/useCardNotes.js';
+import useErrorLog from '../../hooks/useErrorLog.js';
 
 const QUICK_TAGS = [
   'Bad hint',
@@ -112,12 +113,80 @@ function CardNote({ card, note, onSave, onDelete }) {
   );
 }
 
-export default function AdminTab({ user, isAdmin }) {
+function ErrorLog({ errors, clearAll }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border-b border-[--color-border]">
+      <button
+        onClick={() => setOpen(!open)}
+        className={[
+          'w-full flex items-center justify-between px-4 py-3 text-sm font-medium text-left',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+          errors.length > 0 ? 'text-red-600' : 'text-[--color-text]',
+        ].join(' ')}
+        aria-expanded={open}
+      >
+        <span>Write Errors {errors.length > 0 && `(${errors.length})`}</span>
+        <span className="text-xs text-[--color-text-muted]">{open ? '▲' : '▼'}</span>
+      </button>
+      {open && (
+        <div className="px-4 pb-3 space-y-2">
+          {errors.length === 0 ? (
+            <p className="text-xs text-[--color-text-muted]">No errors logged.</p>
+          ) : (
+            <>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs">
+                  <thead>
+                    <tr className="text-left text-[--color-text-muted] border-b border-[--color-border]">
+                      <th className="pb-1 pr-3 font-medium">Time</th>
+                      <th className="pb-1 pr-3 font-medium">User</th>
+                      <th className="pb-1 pr-3 font-medium">Card</th>
+                      <th className="pb-1 font-medium">Error</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {errors.map(err => (
+                      <tr key={err.id} className="border-b border-[--color-border] last:border-0">
+                        <td className="py-1.5 pr-3 text-[--color-text-muted] whitespace-nowrap">
+                          {err.timestamp.toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                        </td>
+                        <td className="py-1.5 pr-3 text-[--color-text] font-mono truncate max-w-[80px]">
+                          {err.userId?.slice(0, 8)}…
+                        </td>
+                        <td className="py-1.5 pr-3 text-[--color-text] font-mono truncate max-w-[80px]">
+                          {err.cardId?.slice(0, 8)}…
+                        </td>
+                        <td className="py-1.5 text-red-600 break-words">
+                          {err.errorMessage}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <button
+                onClick={clearAll}
+                className="min-h-touch px-4 rounded-[--radius-md] text-xs text-red-600 hover:text-red-700 border border-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+              >
+                Clear all errors
+              </button>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function AdminTab({ user, isAdmin, onHideAdmin }) {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('all'); // 'all' | 'noted' | 'unnoted'
   const { notesMap, loading: notesLoading, saveNote, deleteNote } = useCardNotes(user, isAdmin);
+  const { errors, loading: errorsLoading, clearAll } = useErrorLog(user, isAdmin);
   const headingRef = useRef(null);
 
   useEffect(() => {
@@ -133,12 +202,12 @@ export default function AdminTab({ user, isAdmin }) {
   }, []);
 
   useEffect(() => {
-    if (!loading && !notesLoading) {
+    if (!loading && !notesLoading && !errorsLoading) {
       headingRef.current?.focus();
     }
-  }, [loading, notesLoading]);
+  }, [loading, notesLoading, errorsLoading]);
 
-  if (loading || notesLoading) {
+  if (loading || notesLoading || errorsLoading) {
     return (
       <div className="flex items-center justify-center h-full">
         <p className="text-sm text-[--color-text-muted]" role="status">Loading cards...</p>
@@ -181,11 +250,22 @@ export default function AdminTab({ user, isAdmin }) {
 
   return (
     <div className="flex flex-col h-full">
+      {/* Error log */}
+      <ErrorLog errors={errors} clearAll={clearAll} />
+
       {/* Header */}
       <div className="px-4 py-3 space-y-2 border-b border-[--color-border] bg-[--color-surface]">
-        <h2 ref={headingRef} tabIndex={-1} className="text-sm font-semibold text-[--color-text] outline-none">
-          Card Review ({notesMap.size} noted)
-        </h2>
+        <div className="flex items-center justify-between">
+          <h2 ref={headingRef} tabIndex={-1} className="text-sm font-semibold text-[--color-text] outline-none">
+            Card Review ({notesMap.size} noted)
+          </h2>
+          <button
+            onClick={onHideAdmin}
+            className="text-xs text-[--color-text-muted] hover:text-[--color-text] px-2 py-1 rounded-[--radius-sm] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          >
+            Hide admin
+          </button>
+        </div>
         <input
           type="search"
           value={search}

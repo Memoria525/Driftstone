@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { collection, getDocs, doc, setDoc, Timestamp } from 'firebase/firestore';
 import { db } from '../firebase';
+import { logWriteError } from './useErrorLog.js';
 
 const EMPTY_MAP = new Map();
 
@@ -69,6 +70,7 @@ export default function useCardState(user) {
       });
     } catch (err) {
       console.error('Failed to save card state:', err);
+      logWriteError(user.uid, cardId, err.message);
     }
   }, [user]);
 

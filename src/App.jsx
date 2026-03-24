@@ -14,6 +14,12 @@ export default function App() {
   const isAdmin = useAdmin(user);
   const [activeTab, setActiveTab] = useState('study');
   const [hideNav, setHideNav] = useState(false);
+  const [hideAdmin, setHideAdmin] = useState(false);
+
+  function handleHideAdmin() {
+    setHideAdmin(true);
+    setActiveTab('study');
+  }
 
   const dueCount = useMemo(() => {
     const now = new Date();
@@ -37,10 +43,10 @@ export default function App() {
   }
 
   return (
-    <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} hideNav={hideNav} dueCount={dueCount} isAdmin={isAdmin}>
+    <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} hideNav={hideNav} dueCount={dueCount} isAdmin={isAdmin && !hideAdmin}>
       {activeTab === 'study' && <StudyTab onStudying={setHideNav} stateMap={stateMap} saveCardState={saveCardState} dueCount={dueCount} />}
       {activeTab === 'progress' && <ProgressTab />}
-      {activeTab === 'admin' && <AdminTab user={user} isAdmin={isAdmin} />}
+      {activeTab === 'admin' && <AdminTab user={user} isAdmin={isAdmin} onHideAdmin={handleHideAdmin} />}
     </AppShell>
   );
 }
