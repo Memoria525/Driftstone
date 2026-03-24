@@ -626,7 +626,7 @@ function ReviewedCardsContent({ courses, reviewedMap, onEditSave }) {
 
 // ── Main AdminTab ────────────────────────────────────────────────────────────
 
-export default function AdminTab({ user, isAdmin, onHideAdmin }) {
+export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [openSection, setOpenSection] = useState(null);
@@ -652,6 +652,10 @@ export default function AdminTab({ user, isAdmin, onHideAdmin }) {
       headingRef.current?.focus();
     }
   }, [loading, errorsLoading, reviewLoading]);
+
+  useEffect(() => {
+    onReviewing?.(reviewScreen === 'reviewing');
+  }, [reviewScreen, onReviewing]);
 
   function toggleSection(id) {
     setOpenSection(prev => prev === id ? null : id);

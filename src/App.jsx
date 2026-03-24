@@ -46,7 +46,7 @@ export default function App() {
     <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} hideNav={hideNav} dueCount={dueCount} isAdmin={isAdmin && !hideAdmin}>
       {activeTab === 'study' && <StudyTab onStudying={setHideNav} stateMap={stateMap} saveCardState={saveCardState} dueCount={dueCount} />}
       {activeTab === 'progress' && <ProgressTab />}
-      {activeTab === 'admin' && <AdminTab user={user} isAdmin={isAdmin} onHideAdmin={handleHideAdmin} />}
+      {activeTab === 'admin' && <AdminTab user={user} isAdmin={isAdmin} onHideAdmin={handleHideAdmin} onReviewing={setHideNav} />}
     </AppShell>
   );
 }
