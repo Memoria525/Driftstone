@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { doc, setDoc, Timestamp } from 'firebase/firestore';
+import { collection, getDocs, doc, setDoc } from 'firebase/firestore';
 import { db } from '../../firebase.js';
 import { loadAllCoursesAdmin, getCardsBySectionIds, shuffle, invalidateCache } from '../../data/courseLoader.js';
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
@@ -624,6 +624,67 @@ function ReviewedCardsContent({ courses, reviewedMap, onEditSave }) {
   );
 }
 
+// ── Course Settings ──────────────────────────────────────────────────────────
+
+function CourseSettings({ courses, onToggle }) {
+  // Dedupe course names
+  const courseNames = [...new Set(courses.map(c => c.name))];
+  const [privates, setPrivates] = useState(new Set());
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    getDocs(collection(db, 'courses')).then(snap => {
+      const set = new Set();
+      for (const d of snap.docs) {
+        if (d.data().isPrivate) set.add(d.data().name);
+      }
+      setPrivates(set);
+      setLoaded(true);
+    });
+  }, []);
+
+  async function toggle(name) {
+    const newPrivate = !privates.has(name);
+    setPrivates(prev => {
+      const next = new Set(prev);
+      newPrivate ? next.add(name) : next.delete(name);
+      return next;
+    });
+    try {
+      await setDoc(doc(db, 'courses', name), { name, isPrivate: newPrivate });
+      invalidateCache();
+      onToggle?.();
+    } catch (err) {
+      console.error('Failed to update course privacy:', err);
+    }
+  }
+
+  if (!loaded) return <p className="text-xs text-[--color-text-muted]">Loading...</p>;
+
+  return (
+    <div className="space-y-1">
+      <p className="text-xs text-[--color-text-muted] mb-2">Private courses are only visible to admins in the study tab.</p>
+      {courseNames.map(name => (
+        <div key={name} className="flex items-center justify-between py-2">
+          <span className="text-sm text-[--color-text]">{name}</span>
+          <button
+            onClick={() => toggle(name)}
+            className={[
+              'px-3 py-1 rounded-full text-xs font-medium transition-colors',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+              privates.has(name)
+                ? 'bg-amber-100 text-amber-700'
+                : 'bg-emerald-100 text-emerald-700',
+            ].join(' ')}
+          >
+            {privates.has(name) ? 'Private' : 'Public'}
+          </button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 // ── Main AdminTab ────────────────────────────────────────────────────────────
 
 export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
@@ -815,6 +876,15 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
           onToggle={() => toggleSection('reviewed')}
         >
           <ReviewedCardsContent courses={courses} reviewedMap={reviewedMap} onEditSave={handleEditSave} />
+        </AccordionSection>
+
+        <AccordionSection
+          title="Course Settings"
+          badge={0}
+          open={openSection === 'courses'}
+          onToggle={() => toggleSection('courses')}
+        >
+          <CourseSettings courses={courses} />
         </AccordionSection>
       </div>
     </div>

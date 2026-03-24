@@ -2,10 +2,10 @@ import { useState, useRef, useEffect } from 'react';
 import TopicPicker from '../topic-picker/TopicPicker.jsx';
 import CardViewer from '../card-viewer/CardViewer.jsx';
 import SummaryScreen from '../card-viewer/SummaryScreen.jsx';
-import { getCardsBySectionIds, getCardsByIds, loadCourses, shuffle } from '../../data/courseLoader.js';
+import { getCardsBySectionIds, getCardsByIds, loadCoursesForUser, shuffle } from '../../data/courseLoader.js';
 import { scheduleCard, sortByPriority, createEmptyCardState, GRADE_TO_RATING } from '../../utils/fsrs.js';
 
-export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount }) {
+export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount, isAdmin, hideAdmin }) {
   const [screen, setScreen] = useState('picker'); // 'picker' | 'study' | 'summary'
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount
     if (dueIds.length === 0) return;
 
     try {
-      const courses = await loadCourses();
+      const courses = await loadCoursesForUser(isAdmin, hideAdmin);
       const dueCards = getCardsByIds(courses, dueIds);
       // Sort most overdue first
       dueCards.sort((a, b) => {
@@ -138,5 +138,5 @@ export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount
     );
   }
 
-  return <TopicPicker key={pickerKey} onStart={handleStart} dueCount={dueCount} onReviewDue={handleReviewDue} stateMap={stateMap} />;
+  return <TopicPicker key={pickerKey} onStart={handleStart} dueCount={dueCount} onReviewDue={handleReviewDue} stateMap={stateMap} isAdmin={isAdmin} hideAdmin={hideAdmin} />;
 }

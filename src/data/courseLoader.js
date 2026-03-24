@@ -20,6 +20,19 @@ function sortKey(segment) {
 }
 
 let _cacheAll = null; // all cards including private
+let _privateCourses = null; // Set of private course names
+
+async function loadPrivateCourses() {
+  if (_privateCourses) return _privateCourses;
+  const snap = await getDocs(collection(db, 'courses'));
+  const set = new Set();
+  for (const doc of snap.docs) {
+    const data = doc.data();
+    if (data.isPrivate) set.add(data.name);
+  }
+  _privateCourses = set;
+  return _privateCourses;
+}
 
 async function loadAllCourses() {
   if (_cacheAll) return _cacheAll;
@@ -81,7 +94,7 @@ async function loadAllCourses() {
 }
 
 // Filter out private cards, removing empty sections/chapters/courses
-function filterPublished(courses) {
+function filterPublishedCards(courses) {
   return courses
     .map(course => ({
       ...course,
@@ -100,20 +113,40 @@ function filterPublished(courses) {
     .filter(c => c.chapters.length > 0);
 }
 
-/** Load published cards only (for study flow) */
-export async function loadCourses() {
-  const all = await loadAllCourses();
-  return filterPublished(all);
+// Filter out entire private courses
+function filterPrivateCourses(courses, privateCourseNames) {
+  return courses.filter(c => !privateCourseNames.has(c.name));
 }
 
-/** Load all cards including private (for admin review) */
+/**
+ * Load courses for a user.
+ * - Non-admin: published cards only, no private courses
+ * - Admin (not hiding): published cards + private courses visible
+ * - Admin (hiding): same as non-admin
+ */
+export async function loadCoursesForUser(isAdmin = false, hideAdmin = false) {
+  const all = await loadAllCourses();
+  const privateCourseNames = await loadPrivateCourses();
+  const published = filterPublishedCards(all);
+
+  if (isAdmin && !hideAdmin) {
+    // Admin sees published cards from all courses (including private courses)
+    return published;
+  }
+
+  // Non-admin or hiding: filter out private courses entirely
+  return filterPrivateCourses(published, privateCourseNames);
+}
+
+/** Load all cards including private (for admin card review tab) */
 export async function loadAllCoursesAdmin() {
   return loadAllCourses();
 }
 
-/** Invalidate cache (call after admin edits a card) */
+/** Invalidate cache (call after admin edits a card or course settings) */
 export function invalidateCache() {
   _cacheAll = null;
+  _privateCourses = null;
 }
 
 export function getCardsBySectionIds(courses, sectionIds) {
@@ -144,6 +177,21 @@ export function getCardsByIds(courses, cardIds) {
     }
   }
   return cardIds.map((id) => cardMap.get(id)).filter(Boolean);
+}
+
+/** Get all visible card IDs from a course tree */
+export function getAllCardIds(courses) {
+  const ids = new Set();
+  for (const course of courses) {
+    for (const chapter of course.chapters) {
+      for (const section of chapter.sections) {
+        for (const card of section.cards) {
+          ids.add(card.id);
+        }
+      }
+    }
+  }
+  return ids;
 }
 
 export function shuffle(array) {

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
-import { loadCourses } from '../../data/courseLoader.js';
+import { loadCoursesForUser } from '../../data/courseLoader.js';
 import { computeRetrievability } from '../../utils/fsrs.js';
 
 
@@ -104,7 +104,7 @@ function Checkbox({ state, onChange, label }) {
 
 // ── main component ────────────────────────────────────────────────────────────
 
-export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateMap }) {
+export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateMap, isAdmin = false, hideAdmin = false }) {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -121,7 +121,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
 
   useEffect(() => {
     let cancelled = false;
-    loadCourses()
+    loadCoursesForUser(isAdmin, hideAdmin)
       .then((data) => {
         if (cancelled) return;
         setCourses(data);
@@ -134,7 +134,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
         console.error(err);
       });
     return () => { cancelled = true; };
-  }, []);
+  }, [isAdmin, hideAdmin]);
 
   // Focus heading after loading completes and DOM is committed
   useEffect(() => {
