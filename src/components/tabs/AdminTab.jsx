@@ -509,8 +509,8 @@ function ReviewedCardsContent({ courses, reviewedMap, onEditSave }) {
     });
   }
 
-  function handleSave(cardId) {
-    onEditSave(cardId, editFields);
+  function handleSavePublish(cardId) {
+    onEditSave(cardId, editFields, { publish: true });
     setEditing(null);
   }
 
@@ -579,16 +579,16 @@ function ReviewedCardsContent({ courses, reviewedMap, onEditSave }) {
                     ))}
                     <div className="flex gap-2">
                       <button
-                        onClick={() => handleSave(card.id)}
-                        className="flex-1 min-h-touch rounded-[--radius-md] text-xs font-medium bg-[--color-brand] hover:bg-[--color-brand-dark] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-                      >
-                        Save
-                      </button>
-                      <button
                         onClick={() => setEditing(null)}
                         className="min-h-touch px-3 rounded-[--radius-md] text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
                       >
                         Cancel
+                      </button>
+                      <button
+                        onClick={() => handleSavePublish(card.id)}
+                        className="flex-1 min-h-touch rounded-[--radius-md] text-xs font-medium bg-[--color-brand] hover:bg-[--color-brand-dark] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                      >
+                        Save &amp; Publish
                       </button>
                     </div>
                   </div>
@@ -731,14 +731,21 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
 
   // ── Card editing (writes to Firestore cards collection) ──
 
-  async function handleEditSave(cardId, fields) {
+  async function handleEditSave(cardId, fields, { publish = false } = {}) {
     try {
-      await setDoc(doc(db, 'cards', cardId), {
+      const update = {
         question: fields.question,
         answer: fields.answer,
         hint: fields.hint,
         explanation: fields.explanation,
-      }, { merge: true });
+      };
+      if (publish) update.isPrivate = false;
+
+      await setDoc(doc(db, 'cards', cardId), update, { merge: true });
+
+      if (publish) {
+        await saveReview(cardId, 'accepted', []);
+      }
 
       // Update local cache
       invalidateCache();
@@ -753,7 +760,7 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
       }
     } catch (err) {
       console.error('Failed to edit card:', err);
-      showToast('Failed to save card edit');
+      showToast(publish ? 'Failed to save & publish' : 'Failed to save card edit');
     }
   }
 
