@@ -175,12 +175,8 @@ function stabilityAfterLapse(D, S, R) {
   return Math.min(newS, S); // never exceed pre-lapse stability
 }
 
-// Scale factor for review intervals. 1.0 = FSRS defaults, 0.5 = half intervals.
-// Compressed for fast-paced coursework (e.g. A&P exam prep).
-const INTERVAL_SCALE = 0.5;
-
 function nextInterval(stability) {
   const interval = (stability / FACTOR) *
     (Math.pow(DESIRED_RETENTION, 1 / DECAY) - 1);
-  return Math.max(1, Math.round(interval * INTERVAL_SCALE));
+  return Math.max(1, Math.round(interval));
 }

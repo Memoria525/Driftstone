@@ -1,5 +1,6 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import { loadCoursesForUser } from '../../data/courseLoader.js';
+import { computeRetrievability } from '../../utils/fsrs.js';
 
 
 // ── helpers ──────────────────────────────────────────────────────────────────
@@ -20,43 +21,35 @@ function selectionState(ids, selected) {
   return 'some';
 }
 
-// Strength = avg stability × coverage (% of cards seen)
-// Thresholds tuned for 0.5x interval compression.
-// Same-day reviews barely move stability (FSRS penalises R ≈ 1 reviews),
-// so thresholds must be low enough that a few successful multi-day reviews
-// can push a section from red → amber → green.
-function sectionStrength(cardIds, stateMap) {
+// Strength = avg retrievability × coverage (% of cards seen)
+function sectionStrength(cardIds, stateMap, now) {
   if (cardIds.length === 0) return null;
   let seen = 0;
-  let stabilitySum = 0;
+  let sum = 0;
   for (const id of cardIds) {
     const s = stateMap.get(id);
     if (s && s.state !== 'new') {
       seen++;
-      stabilitySum += s.stability;
+      sum += computeRetrievability(s, now);
     }
   }
   if (seen === 0) return null; // no data
-  const avgStability = stabilitySum / seen;
+  const avgRetrievability = sum / seen;
   const coverage = seen / cardIds.length;
-  return { avgStability, coverage };
+  return avgRetrievability * coverage;
 }
 
 function strengthColor(strength) {
   if (strength === null) return 'bg-gray-300';
-  const { avgStability, coverage } = strength;
-  const score = avgStability * coverage;
-  if (score < 0.5) return 'bg-red-400';
-  if (score < 2) return 'bg-amber-400';
+  if (strength < 0.5) return 'bg-red-400';
+  if (strength < 0.8) return 'bg-amber-400';
   return 'bg-emerald-400';
 }
 
 function strengthLabel(strength) {
   if (strength === null) return 'not started';
-  const { avgStability, coverage } = strength;
-  const score = avgStability * coverage;
-  if (score < 0.5) return 'needs work';
-  if (score < 2) return 'developing';
+  if (strength < 0.5) return 'needs work';
+  if (strength < 0.8) return 'developing';
   return 'strong';
 }
 
@@ -122,6 +115,9 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
   const timeHeadingRef = useRef(null);
   const [openCourses, setOpenCourses] = useState(() => new Set());
   const [openChapters, setOpenChapters] = useState(() => new Set());
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- recalc when stateMap changes
+  const now = useMemo(() => new Date(), [stateMap]);
 
   useEffect(() => {
     let cancelled = false;
@@ -274,7 +270,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
                             {chapter.sections.map((section) => {
                               const sSelected = selected.has(section.id);
                               const secCardIds = section.cards.map((c) => c.id);
-                              const secStrength = stateMap ? sectionStrength(secCardIds, stateMap) : null;
+                              const secStrength = stateMap ? sectionStrength(secCardIds, stateMap, now) : null;
                               return (
                                 <div
                                   key={section.id}
