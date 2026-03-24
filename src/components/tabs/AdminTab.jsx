@@ -654,7 +654,7 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
   }, [loading, errorsLoading, reviewLoading]);
 
   useEffect(() => {
-    onReviewing?.(reviewScreen === 'reviewing');
+    onReviewing?.(reviewScreen === 'reviewing' || reviewScreen === 'summary');
   }, [reviewScreen, onReviewing]);
 
   function toggleSection(id) {
