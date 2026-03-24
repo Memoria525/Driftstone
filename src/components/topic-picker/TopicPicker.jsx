@@ -21,7 +21,10 @@ function selectionState(ids, selected) {
 }
 
 // Strength = avg stability × coverage (% of cards seen)
-// Stability thresholds account for 0.5x interval compression
+// Thresholds tuned for 0.5x interval compression.
+// Same-day reviews barely move stability (FSRS penalises R ≈ 1 reviews),
+// so thresholds must be low enough that a few successful multi-day reviews
+// can push a section from red → amber → green.
 function sectionStrength(cardIds, stateMap) {
   if (cardIds.length === 0) return null;
   let seen = 0;
@@ -43,8 +46,8 @@ function strengthColor(strength) {
   if (strength === null) return 'bg-gray-300';
   const { avgStability, coverage } = strength;
   const score = avgStability * coverage;
-  if (score < 1) return 'bg-red-400';
-  if (score < 3) return 'bg-amber-400';
+  if (score < 0.5) return 'bg-red-400';
+  if (score < 2) return 'bg-amber-400';
   return 'bg-emerald-400';
 }
 
@@ -52,8 +55,8 @@ function strengthLabel(strength) {
   if (strength === null) return 'not started';
   const { avgStability, coverage } = strength;
   const score = avgStability * coverage;
-  if (score < 1) return 'needs work';
-  if (score < 3) return 'developing';
+  if (score < 0.5) return 'needs work';
+  if (score < 2) return 'developing';
   return 'strong';
 }
 
