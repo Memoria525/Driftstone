@@ -3,6 +3,7 @@ service cloud.firestore {
   match /databases/{database}/documents {
     match /cards/{cardId} {
       allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.admin == true;
     }
     match /errors/{errorId} {
       allow write: if request.auth != null
@@ -13,14 +14,14 @@ service cloud.firestore {
         && request.resource.data.timestamp is timestamp;
       allow read, delete: if request.auth != null && request.auth.token.admin == true;
     }
-    match /cardNotes/{cardId} {
+    match /reviewed_cards/{cardId} {
       allow read: if request.auth != null && request.auth.token.admin == true;
       allow write: if request.auth != null && request.auth.token.admin == true
-        && request.resource.data.keys().hasOnly(['tags', 'freeText', 'updatedAt'])
-        && request.resource.data.tags is list
-        && request.resource.data.freeText is string
-        && request.resource.data.updatedAt is timestamp;
-      allow delete: if request.auth != null && request.auth.token.admin == true;
+        && request.resource.data.keys().hasOnly(['cardId', 'status', 'issues', 'reviewedAt'])
+        && request.resource.data.cardId is string
+        && request.resource.data.status is string
+        && request.resource.data.issues is list
+        && request.resource.data.reviewedAt is timestamp;
     }
     match /users/{userId}/cardState/{cardId} {
       allow read: if request.auth != null && request.auth.uid == userId;

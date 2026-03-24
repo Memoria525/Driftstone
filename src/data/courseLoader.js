@@ -19,10 +19,10 @@ function sortKey(segment) {
     .join('.');
 }
 
-let _cache = null;
+let _cacheAll = null; // all cards including private
 
-export async function loadCourses() {
-  if (_cache) return _cache;
+async function loadAllCourses() {
+  if (_cacheAll) return _cacheAll;
 
   const snapshot = await getDocs(collection(db, 'cards'));
   const courseMap = {};
@@ -54,11 +54,12 @@ export async function loadCourses() {
       answer: data.answer,
       hint: data.hint || '',
       explanation: data.explanation || '',
+      isPrivate: data.isPrivate ?? false,
     });
   });
 
   // Convert to sorted arrays, filtering out empty sections/chapters/courses
-  _cache = Object.entries(courseMap)
+  _cacheAll = Object.entries(courseMap)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([courseName, courseData]) => ({
       id: courseName,
@@ -76,7 +77,43 @@ export async function loadCourses() {
     }))
     .filter((c) => c.chapters.length > 0);
 
-  return _cache;
+  return _cacheAll;
+}
+
+// Filter out private cards, removing empty sections/chapters/courses
+function filterPublished(courses) {
+  return courses
+    .map(course => ({
+      ...course,
+      chapters: course.chapters
+        .map(chapter => ({
+          ...chapter,
+          sections: chapter.sections
+            .map(section => ({
+              ...section,
+              cards: section.cards.filter(c => !c.isPrivate),
+            }))
+            .filter(s => s.cards.length > 0),
+        }))
+        .filter(ch => ch.sections.length > 0),
+    }))
+    .filter(c => c.chapters.length > 0);
+}
+
+/** Load published cards only (for study flow) */
+export async function loadCourses() {
+  const all = await loadAllCourses();
+  return filterPublished(all);
+}
+
+/** Load all cards including private (for admin review) */
+export async function loadAllCoursesAdmin() {
+  return loadAllCourses();
+}
+
+/** Invalidate cache (call after admin edits a card) */
+export function invalidateCache() {
+  _cacheAll = null;
 }
 
 export function getCardsBySectionIds(courses, sectionIds) {
