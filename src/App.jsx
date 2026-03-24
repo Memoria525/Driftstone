@@ -1,14 +1,17 @@
 import { useState, useMemo } from 'react';
 import useAuth from './hooks/useAuth.js';
 import useCardState from './hooks/useCardState.js';
+import useAdmin from './hooks/useAdmin.js';
 import SignInScreen from './components/auth/SignInScreen.jsx';
 import AppShell from './components/layout/AppShell.jsx';
 import StudyTab from './components/tabs/StudyTab.jsx';
 import ProgressTab from './components/tabs/ProgressTab.jsx';
+import AdminTab from './components/tabs/AdminTab.jsx';
 
 export default function App() {
   const { user, loading } = useAuth();
   const { stateMap, saveCardState } = useCardState(user);
+  const isAdmin = useAdmin(user);
   const [activeTab, setActiveTab] = useState('study');
   const [hideNav, setHideNav] = useState(false);
 
@@ -34,9 +37,10 @@ export default function App() {
   }
 
   return (
-    <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} hideNav={hideNav} dueCount={dueCount}>
+    <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} hideNav={hideNav} dueCount={dueCount} isAdmin={isAdmin}>
       {activeTab === 'study' && <StudyTab onStudying={setHideNav} stateMap={stateMap} saveCardState={saveCardState} dueCount={dueCount} />}
       {activeTab === 'progress' && <ProgressTab />}
+      {activeTab === 'admin' && <AdminTab user={user} isAdmin={isAdmin} />}
     </AppShell>
   );
 }

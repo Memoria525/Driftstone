@@ -2,7 +2,7 @@ import Header from './Header.jsx';
 import BottomNav from './BottomNav.jsx';
 import SkipLink from './SkipLink.jsx';
 
-export default function AppShell({ activeTab, onTabChange, user, hideNav, dueCount, children }) {
+export default function AppShell({ activeTab, onTabChange, user, hideNav, dueCount, isAdmin, children }) {
   return (
     <div className="flex flex-col h-dvh max-w-lg mx-auto bg-[--color-surface]">
       <SkipLink />
@@ -13,7 +13,7 @@ export default function AppShell({ activeTab, onTabChange, user, hideNav, dueCou
       >
         {children}
       </main>
-      {!hideNav && <BottomNav activeTab={activeTab} onTabChange={onTabChange} dueCount={dueCount} />}
+      {!hideNav && <BottomNav activeTab={activeTab} onTabChange={onTabChange} dueCount={dueCount} isAdmin={isAdmin} />}
     </div>
   );
 }

@@ -4,6 +4,15 @@ service cloud.firestore {
     match /cards/{cardId} {
       allow read: if request.auth != null;
     }
+    match /cardNotes/{cardId} {
+      allow read: if request.auth != null && request.auth.token.admin == true;
+      allow write: if request.auth != null && request.auth.token.admin == true
+        && request.resource.data.keys().hasOnly(['tags', 'freeText', 'updatedAt'])
+        && request.resource.data.tags is list
+        && request.resource.data.freeText is string
+        && request.resource.data.updatedAt is timestamp;
+      allow delete: if request.auth != null && request.auth.token.admin == true;
+    }
     match /users/{userId}/cardState/{cardId} {
       allow read: if request.auth != null && request.auth.uid == userId;
       allow write: if request.auth != null && request.auth.uid == userId
