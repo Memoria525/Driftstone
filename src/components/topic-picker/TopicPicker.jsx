@@ -1,6 +1,5 @@
-import { useState, useRef, useEffect, useMemo } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { loadCoursesForUser } from '../../data/courseLoader.js';
-import { computeRetrievability } from '../../utils/fsrs.js';
 
 
 // ── helpers ──────────────────────────────────────────────────────────────────
@@ -21,35 +20,40 @@ function selectionState(ids, selected) {
   return 'some';
 }
 
-// Strength = avg retrievability × coverage (% of cards seen)
-function sectionStrength(cardIds, stateMap, now) {
+// Strength = avg stability × coverage (% of cards seen)
+// Stability thresholds account for 0.5x interval compression
+function sectionStrength(cardIds, stateMap) {
   if (cardIds.length === 0) return null;
   let seen = 0;
-  let sum = 0;
+  let stabilitySum = 0;
   for (const id of cardIds) {
     const s = stateMap.get(id);
     if (s && s.state !== 'new') {
       seen++;
-      sum += computeRetrievability(s, now);
+      stabilitySum += s.stability;
     }
   }
   if (seen === 0) return null; // no data
-  const avgRetrievability = sum / seen;
+  const avgStability = stabilitySum / seen;
   const coverage = seen / cardIds.length;
-  return avgRetrievability * coverage;
+  return { avgStability, coverage };
 }
 
 function strengthColor(strength) {
   if (strength === null) return 'bg-gray-300';
-  if (strength < 0.5) return 'bg-red-400';
-  if (strength < 0.8) return 'bg-amber-400';
+  const { avgStability, coverage } = strength;
+  const score = avgStability * coverage;
+  if (score < 1) return 'bg-red-400';
+  if (score < 3) return 'bg-amber-400';
   return 'bg-emerald-400';
 }
 
 function strengthLabel(strength) {
   if (strength === null) return 'not started';
-  if (strength < 0.5) return 'needs work';
-  if (strength < 0.8) return 'developing';
+  const { avgStability, coverage } = strength;
+  const score = avgStability * coverage;
+  if (score < 1) return 'needs work';
+  if (score < 3) return 'developing';
   return 'strong';
 }
 
@@ -115,9 +119,6 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
   const timeHeadingRef = useRef(null);
   const [openCourses, setOpenCourses] = useState(() => new Set());
   const [openChapters, setOpenChapters] = useState(() => new Set());
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps -- recalc when stateMap changes
-  const now = useMemo(() => new Date(), [stateMap]);
 
   useEffect(() => {
     let cancelled = false;
@@ -270,7 +271,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
                             {chapter.sections.map((section) => {
                               const sSelected = selected.has(section.id);
                               const secCardIds = section.cards.map((c) => c.id);
-                              const secStrength = stateMap ? sectionStrength(secCardIds, stateMap, now) : null;
+                              const secStrength = stateMap ? sectionStrength(secCardIds, stateMap) : null;
                               return (
                                 <div
                                   key={section.id}
