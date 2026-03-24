@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { doc, setDoc, Timestamp } from 'firebase/firestore';
 import { db } from '../../firebase.js';
 import { loadAllCoursesAdmin, getCardsBySectionIds, shuffle, invalidateCache } from '../../data/courseLoader.js';
+import renderMarkdown from '../../utils/renderMarkdown.jsx';
 import useErrorLog from '../../hooks/useErrorLog.js';
 import useReviewedCards from '../../hooks/useReviewedCards.js';
 
@@ -395,7 +396,7 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
             {card.explanation && (
               <div>
                 <p className="text-xs font-medium text-[--color-text-muted] mb-1">Explanation</p>
-                <p className="text-sm text-[--color-text]">{card.explanation}</p>
+                <div className="space-y-1">{renderMarkdown(card.explanation)}</div>
               </div>
             )}
           </>
@@ -597,7 +598,7 @@ function ReviewedCardsContent({ courses, reviewedMap, onEditSave }) {
                       <p><strong className="text-[--color-text-muted]">Q:</strong> <span className="text-[--color-text]">{card.question}</span></p>
                       <p><strong className="text-[--color-text-muted]">A:</strong> <span className="text-[--color-text]">{card.answer}</span></p>
                       {card.hint && <p><strong className="text-[--color-text-muted]">Hint:</strong> <span className="text-[--color-text] italic">{card.hint}</span></p>}
-                      {card.explanation && <p><strong className="text-[--color-text-muted]">Exp:</strong> <span className="text-[--color-text]">{card.explanation}</span></p>}
+                      {card.explanation && <div><strong className="text-[--color-text-muted] text-xs">Exp:</strong> <div className="space-y-1 mt-0.5">{renderMarkdown(card.explanation)}</div></div>}
                     </div>
                     {card.review.issues?.length > 0 && (
                       <div className="flex flex-wrap gap-1">
