@@ -143,6 +143,13 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
     }
   }, [loading, courses.length]);
 
+  // Focus time picker heading when it opens
+  useEffect(() => {
+    if (showTimePicker) {
+      timeHeadingRef.current?.focus();
+    }
+  }, [showTimePicker]);
+
   function toggleSet(setter, id) {
     setter((prev) => {
       const next = new Set(prev);
@@ -321,10 +328,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
       <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface] space-y-3">
         {!showTimePicker ? (
           <button
-            onClick={() => {
-              setShowTimePicker(true);
-              requestAnimationFrame(() => timeHeadingRef.current?.focus());
-            }}
+            onClick={() => setShowTimePicker(true)}
             disabled={totalSelected === 0}
             className={[
               'w-full min-h-touch rounded-[--radius-md] font-semibold text-sm transition-colors',

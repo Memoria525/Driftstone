@@ -37,11 +37,16 @@ export default function CardViewer({ card, index, total, onGrade, onDone, endTim
     return () => clearInterval(id);
   }, [endTime]);
 
+  // Focus answer when revealed
+  useEffect(() => {
+    if (revealed) {
+      answerRef.current?.focus();
+    }
+  }, [revealed]);
+
   function handleSubmit(e) {
     e.preventDefault();
     setRevealed(true);
-    // Focus answer after React renders the revealed section
-    requestAnimationFrame(() => answerRef.current?.focus());
   }
 
   return (

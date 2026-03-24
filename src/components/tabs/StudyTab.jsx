@@ -84,7 +84,7 @@ export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount
     }
   }
 
-  function handleKeepGoing() {
+  async function handleKeepGoing() {
     // Continue studying same cards from where they left off, no time limit
     setEndTime(null);
     if (currentIndex + 1 < cards.length) {
@@ -102,7 +102,7 @@ export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount
       setScreen('study');
     } else {
       // Due review session — re-pull due cards
-      handleReviewDue();
+      await handleReviewDue();
     }
   }
 

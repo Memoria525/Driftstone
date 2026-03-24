@@ -17,10 +17,10 @@ src/
 ├── components/
 │   ├── auth/          # SignInScreen
 │   ├── layout/        # AppShell, Header, BottomNav, SkipLink
-│   ├── tabs/          # StudyTab, ProgressTab (placeholder)
+│   ├── tabs/          # StudyTab, ProgressTab (placeholder), AdminTab
 │   ├── card-viewer/   # CardViewer, SummaryScreen
 │   └── topic-picker/  # TopicPicker (topic selection + strength dots)
-├── hooks/             # useAuth, useCardState
+├── hooks/             # useAuth, useCardState, useAdmin, useErrorLog, useReviewedCards
 ├── data/              # courseLoader.js (Firestore → course tree)
 └── utils/             # fsrs.js (FSRS-5 scheduler), renderMarkdown.jsx
 ```
@@ -60,7 +60,7 @@ All code must meet WCAG 2.1 AA:
 - VoiceOver: focus question on mount, focus answer on reveal
 
 ### FSRS-5 Scheduling
-- Intervals compressed by 0.5x (`INTERVAL_SCALE`) for exam prep pacing
+- Stock FSRS-5 with binary grading (rating 1 = Again, rating 3 = Good)
 - 25% due / 75% unseen interleaving in Smart Review mode
 - Full Deck mode shuffles all cards, still grades through FSRS
 
@@ -69,7 +69,7 @@ All code must meet WCAG 2.1 AA:
 ```js
 // Firestore 'cards' collection → built into course tree by courseLoader.js
 // Course > Chapter > Section > cards[]
-card = { id, question, answer, hint, explanation, course, chapter, section }
+card = { id, question, answer, hint, explanation, course, chapter, section, isPrivate }
 
 // Firestore 'users/{uid}/cardState/{cardId}' — FSRS state per card
 cardState = { difficulty, stability, due, lastReview, state, reps, lapses }

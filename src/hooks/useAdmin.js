@@ -11,13 +11,11 @@ export default function useAdmin(user) {
       .then((result) => { if (!cancelled) setIsAdmin(!!result.claims.admin); })
       .catch(() => { if (!cancelled) setIsAdmin(false); });
 
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+      setIsAdmin(false);
+    };
   }, [user]);
-
-  // Reset synchronously when user logs out
-  if (!user && isAdmin) {
-    setIsAdmin(false);
-  }
 
   return isAdmin;
 }

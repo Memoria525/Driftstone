@@ -40,6 +40,7 @@ service cloud.firestore {
         && request.resource.data.difficulty is number
         && request.resource.data.stability is number
         && request.resource.data.due is timestamp
+        && (request.resource.data.lastReview is timestamp || request.resource.data.lastReview == null)
         && request.resource.data.state is string
         && request.resource.data.reps is int
         && request.resource.data.lapses is int;

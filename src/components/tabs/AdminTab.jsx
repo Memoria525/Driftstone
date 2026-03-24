@@ -626,7 +626,7 @@ function ReviewedCardsContent({ courses, reviewedMap, onEditSave }) {
 
 // ── Course Settings ──────────────────────────────────────────────────────────
 
-function CourseSettings({ courses, onToggle }) {
+function CourseSettings({ courses, onToggle, onError }) {
   // Dedupe course names
   const courseNames = [...new Set(courses.map(c => c.name))];
   const [privates, setPrivates] = useState(new Set());
@@ -656,6 +656,7 @@ function CourseSettings({ courses, onToggle }) {
       onToggle?.();
     } catch (err) {
       console.error('Failed to update course privacy:', err);
+      onError?.('Failed to update course privacy');
     }
   }
 
@@ -691,8 +692,14 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [openSection, setOpenSection] = useState(null);
+  const [toast, setToast] = useState(null);
   const { errors, loading: errorsLoading, clearAll } = useErrorLog(user, isAdmin);
   const { reviewedMap, loading: reviewLoading, saveReview } = useReviewedCards(user, isAdmin);
+
+  function showToast(msg) {
+    setToast(msg);
+    setTimeout(() => setToast(null), 3000);
+  }
 
   // Card review flow state
   const [reviewScreen, setReviewScreen] = useState('picker'); // 'picker' | 'reviewing' | 'summary'
@@ -746,6 +753,7 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
       }
     } catch (err) {
       console.error('Failed to edit card:', err);
+      showToast('Failed to save card edit');
     }
   }
 
@@ -769,6 +777,7 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
       await setDoc(doc(db, 'cards', card.id), { isPrivate: false }, { merge: true });
     } catch (err) {
       console.error('Failed to publish card:', err);
+      showToast('Failed to publish card');
     }
 
     // Log review
@@ -836,6 +845,12 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
 
   return (
     <div className="flex flex-col h-full">
+      {/* Toast */}
+      {toast && (
+        <div className="px-4 py-2 bg-red-500 text-white text-xs text-center" role="alert">
+          {toast}
+        </div>
+      )}
       {/* Fixed header */}
       <div className="px-4 py-3 border-b border-[--color-border] bg-[--color-surface] flex items-center justify-between">
         <h2 ref={headingRef} tabIndex={-1} className="text-sm font-semibold text-[--color-text] outline-none">
@@ -884,7 +899,7 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
           open={openSection === 'courses'}
           onToggle={() => toggleSection('courses')}
         >
-          <CourseSettings courses={courses} />
+          <CourseSettings courses={courses} onError={showToast} />
         </AccordionSection>
       </div>
     </div>
