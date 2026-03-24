@@ -168,7 +168,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
   if (loading) {
     return (
       <div className="flex items-center justify-center h-full">
-        <p className="text-sm text-[--color-text-secondary]" role="status">Loading courses…</p>
+        <p className="text-sm text-[--color-text-muted]" role="status">Loading courses…</p>
       </div>
     );
   }
@@ -288,6 +288,7 @@ export default function TopicPicker({ onStart, dueCount = 0, onReviewDue, stateM
                                     type="checkbox"
                                     checked={sSelected}
                                     aria-label={section.name}
+                                    onClick={(e) => e.stopPropagation()}
                                     onChange={() =>
                                       setSelected((prev) => {
                                         const next = new Set(prev);

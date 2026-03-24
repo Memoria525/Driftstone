@@ -62,22 +62,26 @@ export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount
     }
     if (dueIds.length === 0) return;
 
-    const courses = await loadCourses();
-    const dueCards = getCardsByIds(courses, dueIds);
-    // Sort most overdue first
-    dueCards.sort((a, b) => {
-      const sa = stateMap.get(a.id);
-      const sb = stateMap.get(b.id);
-      return (sa.due - now) - (sb.due - now);
-    });
+    try {
+      const courses = await loadCourses();
+      const dueCards = getCardsByIds(courses, dueIds);
+      // Sort most overdue first
+      dueCards.sort((a, b) => {
+        const sa = stateMap.get(a.id);
+        const sb = stateMap.get(b.id);
+        return (sa.due - now) - (sb.due - now);
+      });
 
-    if (dueCards.length === 0) return;
-    setCards(dueCards);
-    setCurrentIndex(0);
-    setResults([]);
-    setTimedOut(false);
-    setEndTime(null);
-    setScreen('study');
+      if (dueCards.length === 0) return;
+      setCards(dueCards);
+      setCurrentIndex(0);
+      setResults([]);
+      setTimedOut(false);
+      setEndTime(null);
+      setScreen('study');
+    } catch (err) {
+      console.error('Failed to load due cards:', err);
+    }
   }
 
   function handleKeepGoing() {
@@ -85,8 +89,9 @@ export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount
     setEndTime(null);
     if (currentIndex + 1 < cards.length) {
       setCurrentIndex(currentIndex + 1);
-    } else {
-      // Re-sort the full pool for a fresh pass
+      setScreen('study');
+    } else if (coursesRef.current && selectedSectionIdsRef.current) {
+      // Re-sort the full pool for a fresh pass (normal study flow)
       const pool = sortByPriority(
         getCardsBySectionIds(coursesRef.current, selectedSectionIdsRef.current),
         stateMap
@@ -94,8 +99,11 @@ export default function StudyTab({ onStudying, stateMap, saveCardState, dueCount
       if (pool.length === 0) return;
       setCards(pool);
       setCurrentIndex(0);
+      setScreen('study');
+    } else {
+      // Due review session — re-pull due cards
+      handleReviewDue();
     }
-    setScreen('study');
   }
 
   function handleRestart() {

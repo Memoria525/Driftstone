@@ -14,7 +14,7 @@ export default function Header({ user }) {
       {user && (
         <button
           onClick={handleSignOut}
-          className="min-h-touch min-w-touch flex items-center justify-center text-sm text-[--color-text-secondary] hover:text-[--color-text] focus-visible:ring-2 focus-visible:ring-focus rounded-lg px-2"
+          className="min-h-touch min-w-touch flex items-center justify-center text-sm text-[--color-text-muted] hover:text-[--color-text] focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded-lg px-2"
           aria-label="Sign out"
         >
           Sign out

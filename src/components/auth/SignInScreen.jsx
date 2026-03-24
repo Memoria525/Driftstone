@@ -70,7 +70,7 @@ export default function SignInScreen() {
         <h1 className="text-2xl font-bold text-center text-[--color-text] mb-2">
           Driftstone
         </h1>
-        <p className="text-center text-[--color-text-secondary] mb-8">
+        <p className="text-center text-[--color-text-muted] mb-8">
           Sign in to start studying
         </p>
 
@@ -99,7 +99,7 @@ export default function SignInScreen() {
 
         <div className="flex items-center gap-3 my-6">
           <hr className="flex-1 border-[--color-border]" />
-          <span className="text-sm text-[--color-text-secondary]">or</span>
+          <span className="text-sm text-[--color-text-muted]">or</span>
           <hr className="flex-1 border-[--color-border]" />
         </div>
 
@@ -149,7 +149,7 @@ export default function SignInScreen() {
               type="button"
               onClick={handleForgotPassword}
               disabled={loading}
-              className="self-end text-sm text-[--color-primary] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded disabled:opacity-50"
+              className="self-end text-sm text-[--color-brand] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded disabled:opacity-50"
             >
               Forgot password?
             </button>
@@ -164,7 +164,7 @@ export default function SignInScreen() {
           <button
             type="submit"
             disabled={loading}
-            className="min-h-touch bg-[--color-primary] text-white font-medium rounded-lg px-4 py-3 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
+            className="min-h-touch bg-[--color-brand] text-white font-medium rounded-lg px-4 py-3 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
           >
             {isNewUser ? 'Create account' : 'Sign in'}
           </button>
@@ -177,7 +177,7 @@ export default function SignInScreen() {
             setConfirmPassword('');
             setResetSent(false);
           }}
-          className="w-full min-h-touch mt-4 text-sm text-[--color-primary] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded-lg"
+          className="w-full min-h-touch mt-4 text-sm text-[--color-brand] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded-lg"
         >
           {isNewUser ? 'Already have an account? Sign in' : "Don't have an account? Create one"}
         </button>

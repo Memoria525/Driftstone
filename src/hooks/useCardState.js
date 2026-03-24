@@ -14,27 +14,31 @@ export default function useCardState(user) {
     let cancelled = false;
 
     async function load() {
-      const snap = await getDocs(
-        collection(db, 'users', user.uid, 'cardState')
-      );
-      if (cancelled) return;
+      try {
+        const snap = await getDocs(
+          collection(db, 'users', user.uid, 'cardState')
+        );
+        if (cancelled) return;
 
-      const map = new Map();
-      for (const d of snap.docs) {
-        const data = d.data();
-        map.set(d.id, {
-          cardId: d.id,
-          difficulty: data.difficulty,
-          stability: data.stability,
-          due: data.due?.toDate() ?? new Date(0),
-          lastReview: data.lastReview?.toDate() ?? null,
-          state: data.state,
-          reps: data.reps,
-          lapses: data.lapses,
-        });
+        const map = new Map();
+        for (const d of snap.docs) {
+          const data = d.data();
+          map.set(d.id, {
+            cardId: d.id,
+            difficulty: data.difficulty,
+            stability: data.stability,
+            due: data.due?.toDate() ?? new Date(0),
+            lastReview: data.lastReview?.toDate() ?? null,
+            state: data.state,
+            reps: data.reps,
+            lapses: data.lapses,
+          });
+        }
+        setStateMap(map);
+      } catch (err) {
+        console.error('Failed to load card state:', err);
       }
-      setStateMap(map);
-      setLoading(false);
+      if (!cancelled) setLoading(false);
     }
 
     load();

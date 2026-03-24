@@ -4,7 +4,7 @@ export default function ProgressTab() {
   const headingRef = useRef(null);
 
   useEffect(() => {
-    requestAnimationFrame(() => headingRef.current?.focus());
+    headingRef.current?.focus();
   }, []);
 
   return (

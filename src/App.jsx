@@ -24,7 +24,7 @@ export default function App() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-dvh bg-[--color-surface]">
-        <p className="text-[--color-text-secondary]" role="status">Loading…</p>
+        <p className="text-[--color-text-muted]" role="status">Loading…</p>
       </div>
     );
   }
