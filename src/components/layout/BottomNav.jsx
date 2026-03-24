@@ -44,13 +44,14 @@ export default function BottomNav({ activeTab, onTabChange, dueCount = 0 }) {
                 : 'text-[--color-text-muted] hover:text-[--color-text]',
             ].join(' ')}
           >
-            <span className="relative">
-              {tab.icon}
+            {tab.icon}
+            <span className="flex items-center gap-1">
+              {tab.label}
               {badge !== null && (
                 <span
                   aria-hidden="true"
                   className={[
-                    'absolute -top-1.5 -right-2.5 min-w-[18px] h-[18px] px-1 flex items-center justify-center rounded-full text-white text-[10px] font-bold leading-none',
+                    'min-w-[16px] h-[16px] px-0.5 flex items-center justify-center rounded-full text-white text-[9px] font-bold leading-none',
                     badge > 0 ? 'bg-red-500' : 'bg-emerald-500',
                   ].join(' ')}
                 >
@@ -58,7 +59,6 @@ export default function BottomNav({ activeTab, onTabChange, dueCount = 0 }) {
                 </span>
               )}
             </span>
-            {tab.label}
           </button>
         );
       })}
