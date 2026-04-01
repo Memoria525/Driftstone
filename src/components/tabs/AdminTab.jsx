@@ -702,7 +702,6 @@ function QuickCardAdder({ courses, onSave }) {
   const [addingCourse, setAddingCourse] = useState(false);
   const [addingChapter, setAddingChapter] = useState(false);
   const [addingSection, setAddingSection] = useState(false);
-  const [idOverride, setIdOverride] = useState('');
   const [saving, setSaving] = useState(false);
 
   const headingRef = useRef(null);
@@ -717,33 +716,95 @@ function QuickCardAdder({ courses, onSave }) {
   const selectedChapter = chaptersRaw.find(ch => ch.id === `${courseName}/${chapterName}`);
   const sectionsRaw = selectedChapter?.sections || [];
 
-  // Auto-generate next card ID when section is selected
-  const autoId = (() => {
-    const finalCourse = addingCourse ? newCourse : courseName;
-    const finalChapter = addingChapter ? newChapter : chapterName;
-    const finalSection = addingSection ? newSection : sectionName;
-
-    if (!finalCourse || !finalChapter || !finalSection) return '';
-
-    const section = sectionsRaw.find(s => s.id === `${finalCourse}/${finalChapter}/${finalSection}`);
-    if (section && section.cards.length > 0) {
-      const ids = section.cards.map(c => c.id);
-      let maxNum = 0;
-      let prefix = '';
-      for (const id of ids) {
-        const match = id.match(/^([\d.]+\.)(\d+)sa$/);
-        if (match) {
-          prefix = match[1];
-          const num = parseInt(match[2], 10);
-          if (num > maxNum) maxNum = num;
+  // Collect all card IDs across the entire tree for number extraction
+  const allCardIds = (() => {
+    const ids = [];
+    for (const c of courses) {
+      for (const ch of c.chapters) {
+        for (const s of ch.sections) {
+          for (const card of s.cards) ids.push(card.id);
         }
       }
-      if (prefix) return prefix + String(maxNum + 1).padStart(3, '0') + 'sa';
     }
-    return '';
+    return ids;
   })();
 
-  const idPrefix = idOverride || autoId;
+  // Extract the Nth segment (0-indexed) from card IDs matching a prefix
+  function maxSegment(ids, segmentIndex, prefixSegments) {
+    let max = 0;
+    for (const id of ids) {
+      const match = id.match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)sa$/);
+      if (!match) continue;
+      // Check that all prior segments match the prefix
+      let matches = true;
+      for (let i = 0; i < prefixSegments.length; i++) {
+        if (parseInt(match[i + 1], 10) !== prefixSegments[i]) { matches = false; break; }
+      }
+      if (matches) {
+        const num = parseInt(match[segmentIndex + 1], 10);
+        if (num > max) max = num;
+      }
+    }
+    return max;
+  }
+
+  // Auto-generate card ID from course/chapter/section selection
+  const autoId = (() => {
+    const hasCourse = addingCourse ? newCourse.trim() : courseName;
+    const hasChapter = addingChapter ? newChapter.trim() : chapterName;
+    const hasSection = addingSection ? newSection.trim() : sectionName;
+
+    if (!hasCourse || !hasChapter || !hasSection) return '';
+
+    // Course number
+    let courseNum;
+    if (addingCourse) {
+      courseNum = maxSegment(allCardIds, 0, []) + 1;
+    } else {
+      // Find from existing cards in this course
+      const courseCards = [];
+      for (const ch of (selectedCourse?.chapters || [])) {
+        for (const s of ch.sections) {
+          for (const card of s.cards) courseCards.push(card.id);
+        }
+      }
+      const existing = maxSegment(courseCards, 0, []);
+      courseNum = existing > 0 ? existing : maxSegment(allCardIds, 0, []) + 1;
+    }
+
+    // Chapter number
+    let chapterNum;
+    if (addingChapter) {
+      chapterNum = maxSegment(allCardIds, 1, [courseNum]) + 1;
+    } else {
+      const chapterCards = [];
+      for (const s of (selectedChapter?.sections || [])) {
+        for (const card of s.cards) chapterCards.push(card.id);
+      }
+      const existing = maxSegment(chapterCards, 1, [courseNum]);
+      chapterNum = existing > 0 ? existing : maxSegment(allCardIds, 1, [courseNum]) + 1;
+    }
+
+    // Section number
+    let sectionNum;
+    const sectionObj = sectionsRaw.find(s => s.id === `${hasCourse}/${hasChapter}/${hasSection}`);
+    const sectionCards = sectionObj ? sectionObj.cards.map(c => c.id) : [];
+    if (addingSection) {
+      sectionNum = maxSegment(allCardIds, 2, [courseNum, chapterNum]) + 1;
+    } else {
+      const existing = maxSegment(sectionCards, 2, [courseNum, chapterNum]);
+      sectionNum = existing > 0 ? existing : maxSegment(allCardIds, 2, [courseNum, chapterNum]) + 1;
+    }
+
+    // Card number — always next available in this section
+    const cardNum = maxSegment(sectionCards, 3, [courseNum, chapterNum, sectionNum]) + 1;
+
+    const pad2 = n => String(n).padStart(2, '0');
+    const pad3 = n => String(n).padStart(3, '0');
+    return `${pad2(courseNum)}.${pad2(chapterNum)}.${pad2(sectionNum)}.${pad3(cardNum)}sa`;
+  })();
+
+  const idPrefix = autoId;
 
   function handleBack() {
     setStep('fields');
@@ -781,7 +842,6 @@ function QuickCardAdder({ courses, onSave }) {
     setAddingCourse(false);
     setAddingChapter(false);
     setAddingSection(false);
-    setIdOverride('');
   }
 
   const canSave = (() => {
@@ -930,19 +990,13 @@ function QuickCardAdder({ courses, onSave }) {
           )}
         </div>
 
-        {/* Card ID */}
-        <div className="space-y-1">
-          <span className="text-xs font-medium text-[--color-text-muted]">Card ID</span>
-          <input
-            type="text"
-            value={idPrefix}
-            onChange={e => setIdOverride(e.target.value)}
-            placeholder="e.g. 01.04.01.003sa"
-            className="w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm font-mono bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-            aria-label="Card ID"
-          />
-          {autoId && !idOverride && <p className="text-[10px] text-[--color-text-muted]">Auto-generated from existing cards</p>}
-        </div>
+        {/* Card ID (auto-generated) */}
+        {autoId && (
+          <div className="space-y-1">
+            <span className="text-xs font-medium text-[--color-text-muted]">Card ID</span>
+            <p className="px-3 py-2 text-sm font-mono text-[--color-text] bg-[--color-surface-sunken] rounded-[--radius-md]">{autoId}</p>
+          </div>
+        )}
 
         {/* Action buttons */}
         <div className="flex gap-2">
