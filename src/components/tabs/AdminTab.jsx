@@ -729,23 +729,30 @@ function QuickCardAdder({ courses, onSave }) {
     return ids;
   })();
 
-  // Extract the Nth segment (0-indexed) from card IDs matching a prefix
-  function maxSegment(ids, segmentIndex, prefixSegments) {
-    let max = 0;
-    for (const id of ids) {
-      const match = id.match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)sa$/);
-      if (!match) continue;
-      // Check that all prior segments match the prefix
-      let matches = true;
-      for (let i = 0; i < prefixSegments.length; i++) {
-        if (parseInt(match[i + 1], 10) !== prefixSegments[i]) { matches = false; break; }
-      }
-      if (matches) {
-        const num = parseInt(match[segmentIndex + 1], 10);
-        if (num > max) max = num;
+  // Parse a card ID into its 4 numeric segments, or null if it doesn't match
+  function parseCardId(id) {
+    const match = id.match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)sa$/);
+    if (!match) return null;
+    return [parseInt(match[1], 10), parseInt(match[2], 10), parseInt(match[3], 10), parseInt(match[4], 10)];
+  }
+
+  // Get all card IDs for a given course/chapter/section from the tree
+  function getCardIdsForCourse(course) {
+    const ids = [];
+    for (const ch of course.chapters) {
+      for (const s of ch.sections) {
+        for (const card of s.cards) ids.push(card.id);
       }
     }
-    return max;
+    return ids;
+  }
+
+  function getCardIdsForChapter(chapter) {
+    const ids = [];
+    for (const s of chapter.sections) {
+      for (const card of s.cards) ids.push(card.id);
+    }
+    return ids;
   }
 
   // Auto-generate card ID from course/chapter/section selection
@@ -756,48 +763,99 @@ function QuickCardAdder({ courses, onSave }) {
 
     if (!hasCourse || !hasChapter || !hasSection) return '';
 
-    // Course number
+    // Course number: for existing course, read it from that course's cards.
+    // For new course, max course number across all cards + 1.
     let courseNum;
     if (addingCourse) {
-      courseNum = maxSegment(allCardIds, 0, []) + 1;
-    } else {
-      // Find from existing cards in this course
-      const courseCards = [];
-      for (const ch of (selectedCourse?.chapters || [])) {
-        for (const s of ch.sections) {
-          for (const card of s.cards) courseCards.push(card.id);
-        }
+      let max = 0;
+      for (const id of allCardIds) {
+        const parsed = parseCardId(id);
+        if (parsed && parsed[0] > max) max = parsed[0];
       }
-      const existing = maxSegment(courseCards, 0, []);
-      courseNum = existing > 0 ? existing : maxSegment(allCardIds, 0, []) + 1;
+      courseNum = max + 1;
+    } else {
+      // All cards in the selected course should share the same course number
+      const courseCards = selectedCourse ? getCardIdsForCourse(selectedCourse) : [];
+      courseNum = 0;
+      for (const id of courseCards) {
+        const parsed = parseCardId(id);
+        if (parsed) { courseNum = parsed[0]; break; }
+      }
+      if (courseNum === 0) {
+        // Fallback: no parseable IDs, treat like new
+        let max = 0;
+        for (const id of allCardIds) {
+          const parsed = parseCardId(id);
+          if (parsed && parsed[0] > max) max = parsed[0];
+        }
+        courseNum = max + 1;
+      }
     }
 
-    // Chapter number
+    // Chapter number: for existing chapter, read from its cards.
+    // For new chapter, max chapter number within this course + 1.
     let chapterNum;
     if (addingChapter) {
-      chapterNum = maxSegment(allCardIds, 1, [courseNum]) + 1;
-    } else {
-      const chapterCards = [];
-      for (const s of (selectedChapter?.sections || [])) {
-        for (const card of s.cards) chapterCards.push(card.id);
+      let max = 0;
+      for (const id of (selectedCourse ? getCardIdsForCourse(selectedCourse) : [])) {
+        const parsed = parseCardId(id);
+        if (parsed && parsed[0] === courseNum && parsed[1] > max) max = parsed[1];
       }
-      const existing = maxSegment(chapterCards, 1, [courseNum]);
-      chapterNum = existing > 0 ? existing : maxSegment(allCardIds, 1, [courseNum]) + 1;
+      chapterNum = max + 1;
+    } else {
+      const chapterCards = selectedChapter ? getCardIdsForChapter(selectedChapter) : [];
+      chapterNum = 0;
+      for (const id of chapterCards) {
+        const parsed = parseCardId(id);
+        if (parsed) { chapterNum = parsed[1]; break; }
+      }
+      if (chapterNum === 0) {
+        let max = 0;
+        for (const id of (selectedCourse ? getCardIdsForCourse(selectedCourse) : [])) {
+          const parsed = parseCardId(id);
+          if (parsed && parsed[0] === courseNum && parsed[1] > max) max = parsed[1];
+        }
+        chapterNum = max + 1;
+      }
     }
 
-    // Section number
+    // Section number: for existing section, read from its cards.
+    // For new section, max section number within this chapter + 1.
     let sectionNum;
     const sectionObj = sectionsRaw.find(s => s.id === `${hasCourse}/${hasChapter}/${hasSection}`);
     const sectionCards = sectionObj ? sectionObj.cards.map(c => c.id) : [];
     if (addingSection) {
-      sectionNum = maxSegment(allCardIds, 2, [courseNum, chapterNum]) + 1;
+      let max = 0;
+      for (const id of (selectedChapter ? getCardIdsForChapter(selectedChapter) : [])) {
+        const parsed = parseCardId(id);
+        if (parsed && parsed[0] === courseNum && parsed[1] === chapterNum && parsed[2] > max) max = parsed[2];
+      }
+      sectionNum = max + 1;
     } else {
-      const existing = maxSegment(sectionCards, 2, [courseNum, chapterNum]);
-      sectionNum = existing > 0 ? existing : maxSegment(allCardIds, 2, [courseNum, chapterNum]) + 1;
+      sectionNum = 0;
+      for (const id of sectionCards) {
+        const parsed = parseCardId(id);
+        if (parsed) { sectionNum = parsed[2]; break; }
+      }
+      if (sectionNum === 0) {
+        let max = 0;
+        for (const id of (selectedChapter ? getCardIdsForChapter(selectedChapter) : [])) {
+          const parsed = parseCardId(id);
+          if (parsed && parsed[0] === courseNum && parsed[1] === chapterNum && parsed[2] > max) max = parsed[2];
+        }
+        sectionNum = max + 1;
+      }
     }
 
-    // Card number — always next available in this section
-    const cardNum = maxSegment(sectionCards, 3, [courseNum, chapterNum, sectionNum]) + 1;
+    // Card number: max card number in this section + 1
+    let maxCard = 0;
+    for (const id of sectionCards) {
+      const parsed = parseCardId(id);
+      if (parsed && parsed[0] === courseNum && parsed[1] === chapterNum && parsed[2] === sectionNum && parsed[3] > maxCard) {
+        maxCard = parsed[3];
+      }
+    }
+    const cardNum = maxCard + 1;
 
     const pad2 = n => String(n).padStart(2, '0');
     const pad3 = n => String(n).padStart(3, '0');
