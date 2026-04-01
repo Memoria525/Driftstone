@@ -686,6 +686,318 @@ function CourseSettings({ courses, onToggle, onError }) {
   );
 }
 
+// ── Quick Card Adder ────────────────────────────────────────────────────────
+
+function QuickCardAdder({ courses, onSave }) {
+  const [step, setStep] = useState('fields'); // 'fields' | 'location'
+  const [fields, setFields] = useState({ question: '', answer: '', hint: '', explanation: '' });
+
+  // Location state
+  const [courseName, setCourseName] = useState('');
+  const [chapterName, setChapterName] = useState('');
+  const [sectionName, setSectionName] = useState('');
+  const [newCourse, setNewCourse] = useState('');
+  const [newChapter, setNewChapter] = useState('');
+  const [newSection, setNewSection] = useState('');
+  const [addingCourse, setAddingCourse] = useState(false);
+  const [addingChapter, setAddingChapter] = useState(false);
+  const [addingSection, setAddingSection] = useState(false);
+  const [idOverride, setIdOverride] = useState('');
+  const [saving, setSaving] = useState(false);
+
+  const headingRef = useRef(null);
+
+  useEffect(() => {
+    if (step === 'location') headingRef.current?.focus();
+  }, [step]);
+
+  // Derive available chapters and sections from courses tree
+  const selectedCourse = courses.find(c => c.name === courseName);
+  const chaptersRaw = selectedCourse?.chapters || [];
+  const selectedChapter = chaptersRaw.find(ch => ch.id === `${courseName}/${chapterName}`);
+  const sectionsRaw = selectedChapter?.sections || [];
+
+  // Auto-generate next card ID when section is selected
+  const autoId = (() => {
+    const finalCourse = addingCourse ? newCourse : courseName;
+    const finalChapter = addingChapter ? newChapter : chapterName;
+    const finalSection = addingSection ? newSection : sectionName;
+
+    if (!finalCourse || !finalChapter || !finalSection) return '';
+
+    const section = sectionsRaw.find(s => s.id === `${finalCourse}/${finalChapter}/${finalSection}`);
+    if (section && section.cards.length > 0) {
+      const ids = section.cards.map(c => c.id);
+      let maxNum = 0;
+      let prefix = '';
+      for (const id of ids) {
+        const match = id.match(/^([\d.]+\.)(\d+)sa$/);
+        if (match) {
+          prefix = match[1];
+          const num = parseInt(match[2], 10);
+          if (num > maxNum) maxNum = num;
+        }
+      }
+      if (prefix) return prefix + String(maxNum + 1).padStart(3, '0') + 'sa';
+    }
+    return '';
+  })();
+
+  const idPrefix = idOverride || autoId;
+
+  function handleBack() {
+    setStep('fields');
+  }
+
+  async function handleSave() {
+    const finalCourse = addingCourse ? newCourse.trim() : courseName;
+    const finalChapter = addingChapter ? newChapter.trim() : chapterName;
+    const finalSection = addingSection ? newSection.trim() : sectionName;
+
+    if (!finalCourse || !finalChapter || !finalSection || !idPrefix.trim()) return;
+
+    setSaving(true);
+    await onSave(idPrefix.trim(), {
+      question: fields.question,
+      answer: fields.answer,
+      hint: fields.hint,
+      explanation: fields.explanation,
+      course: finalCourse,
+      chapter: finalChapter,
+      section: finalSection,
+      isPrivate: true,
+    });
+    setSaving(false);
+
+    // Reset
+    setFields({ question: '', answer: '', hint: '', explanation: '' });
+    setStep('fields');
+    setCourseName('');
+    setChapterName('');
+    setSectionName('');
+    setNewCourse('');
+    setNewChapter('');
+    setNewSection('');
+    setAddingCourse(false);
+    setAddingChapter(false);
+    setAddingSection(false);
+    setIdOverride('');
+  }
+
+  const canSave = (() => {
+    const finalCourse = addingCourse ? newCourse.trim() : courseName;
+    const finalChapter = addingChapter ? newChapter.trim() : chapterName;
+    const finalSection = addingSection ? newSection.trim() : sectionName;
+    return finalCourse && finalChapter && finalSection && idPrefix.trim();
+  })();
+
+  if (step === 'location') {
+    return (
+      <div className="space-y-3">
+        <h3 ref={headingRef} tabIndex={-1} className="text-xs font-semibold text-[--color-text] outline-none">
+          Choose location
+        </h3>
+
+        {/* Course picker */}
+        <div className="space-y-1">
+          <span className="text-xs font-medium text-[--color-text-muted]">Course</span>
+          {addingCourse ? (
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={newCourse}
+                onChange={e => setNewCourse(e.target.value)}
+                placeholder="New course name"
+                className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                autoFocus
+              />
+              <button
+                onClick={() => { setAddingCourse(false); setNewCourse(''); }}
+                className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+                aria-label="Cancel new course"
+              >
+                Cancel
+              </button>
+            </div>
+          ) : (
+            <div className="flex gap-2">
+              <select
+                value={courseName}
+                onChange={e => { setCourseName(e.target.value); setChapterName(''); setSectionName(''); setAddingChapter(false); setAddingSection(false); }}
+                className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                aria-label="Select course"
+              >
+                <option value="">Select course…</option>
+                {courses.map(c => <option key={c.id} value={c.name}>{c.name}</option>)}
+              </select>
+              <button
+                onClick={() => { setAddingCourse(true); setCourseName(''); setChapterName(''); setSectionName(''); }}
+                className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+              >
+                Add new
+              </button>
+            </div>
+          )}
+        </div>
+
+        {/* Chapter picker */}
+        <div className="space-y-1">
+          <span className="text-xs font-medium text-[--color-text-muted]">Chapter</span>
+          {addingChapter ? (
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={newChapter}
+                onChange={e => setNewChapter(e.target.value)}
+                placeholder="New chapter name (e.g. 05 Integumentary)"
+                className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                autoFocus
+              />
+              <button
+                onClick={() => { setAddingChapter(false); setNewChapter(''); }}
+                className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+                aria-label="Cancel new chapter"
+              >
+                Cancel
+              </button>
+            </div>
+          ) : (
+            <div className="flex gap-2">
+              <select
+                value={chapterName}
+                onChange={e => { setChapterName(e.target.value); setSectionName(''); setAddingSection(false); }}
+                disabled={!courseName && !addingCourse}
+                className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
+                aria-label="Select chapter"
+              >
+                <option value="">Select chapter…</option>
+                {chaptersRaw.map(ch => (
+                  <option key={ch.id} value={ch.id.split('/')[1]}>{ch.name}</option>
+                ))}
+              </select>
+              <button
+                onClick={() => { setAddingChapter(true); setChapterName(''); setSectionName(''); }}
+                className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+              >
+                Add new
+              </button>
+            </div>
+          )}
+        </div>
+
+        {/* Section picker */}
+        <div className="space-y-1">
+          <span className="text-xs font-medium text-[--color-text-muted]">Section</span>
+          {addingSection ? (
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={newSection}
+                onChange={e => setNewSection(e.target.value)}
+                placeholder="New section name (e.g. 5.1 Layers of the Skin)"
+                className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                autoFocus
+              />
+              <button
+                onClick={() => { setAddingSection(false); setNewSection(''); }}
+                className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+                aria-label="Cancel new section"
+              >
+                Cancel
+              </button>
+            </div>
+          ) : (
+            <div className="flex gap-2">
+              <select
+                value={sectionName}
+                onChange={e => setSectionName(e.target.value)}
+                disabled={!chapterName && !addingChapter}
+                className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
+                aria-label="Select section"
+              >
+                <option value="">Select section…</option>
+                {sectionsRaw.map(s => (
+                  <option key={s.id} value={s.id.split('/')[2]}>{s.name}</option>
+                ))}
+              </select>
+              <button
+                onClick={() => { setAddingSection(true); setSectionName(''); }}
+                className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+              >
+                Add new
+              </button>
+            </div>
+          )}
+        </div>
+
+        {/* Card ID */}
+        <div className="space-y-1">
+          <span className="text-xs font-medium text-[--color-text-muted]">Card ID</span>
+          <input
+            type="text"
+            value={idPrefix}
+            onChange={e => setIdOverride(e.target.value)}
+            placeholder="e.g. 01.04.01.003sa"
+            className="w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm font-mono bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+            aria-label="Card ID"
+          />
+          {autoId && !idOverride && <p className="text-[10px] text-[--color-text-muted]">Auto-generated from existing cards</p>}
+        </div>
+
+        {/* Action buttons */}
+        <div className="flex gap-2">
+          <button
+            onClick={handleBack}
+            className="min-h-touch px-4 rounded-[--radius-md] text-sm text-[--color-text-muted] hover:text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          >
+            Back
+          </button>
+          <button
+            onClick={handleSave}
+            disabled={!canSave || saving}
+            className={[
+              'flex-1 min-h-touch rounded-[--radius-md] text-sm font-semibold transition-colors',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+              canSave && !saving
+                ? 'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white'
+                : 'bg-[--color-surface-sunken] text-[--color-text-muted] cursor-not-allowed',
+            ].join(' ')}
+          >
+            {saving ? 'Saving…' : 'Save card'}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Step: fields
+  return (
+    <div className="space-y-3">
+      {['question', 'answer', 'hint', 'explanation'].map(field => (
+        <label key={field} className="block">
+          <span className="text-xs font-medium text-[--color-text-muted] capitalize">{field}</span>
+          <textarea
+            value={fields[field]}
+            onChange={e => setFields(f => ({ ...f, [field]: e.target.value }))}
+            rows={field === 'explanation' ? 4 : field === 'hint' ? 1 : 2}
+            className="mt-1 w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          />
+        </label>
+      ))}
+      <button
+        onClick={() => setStep('location')}
+        className={[
+          'w-full min-h-touch rounded-[--radius-md] text-sm font-semibold transition-colors',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+          'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white',
+        ].join(' ')}
+      >
+        Next
+      </button>
+    </div>
+  );
+}
+
 // ── Main AdminTab ────────────────────────────────────────────────────────────
 
 export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
@@ -696,8 +1008,8 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
   const { errors, loading: errorsLoading, clearAll } = useErrorLog(user, isAdmin);
   const { reviewedMap, loading: reviewLoading, saveReview } = useReviewedCards(user, isAdmin);
 
-  function showToast(msg) {
-    setToast(msg);
+  function showToast(msg, type = 'error') {
+    setToast({ msg, type });
     setTimeout(() => setToast(null), 3000);
   }
 
@@ -761,6 +1073,21 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
     } catch (err) {
       console.error('Failed to edit card:', err);
       showToast(publish ? 'Failed to save & publish' : 'Failed to save card edit');
+    }
+  }
+
+  // ── Quick card add ──
+
+  async function handleQuickAdd(cardId, cardData) {
+    try {
+      await setDoc(doc(db, 'cards', cardId), cardData);
+      invalidateCache();
+      const data = await loadAllCoursesAdmin();
+      setCourses(data);
+      showToast('Card added', 'success');
+    } catch (err) {
+      console.error('Failed to add card:', err);
+      showToast('Failed to add card');
     }
   }
 
@@ -854,8 +1181,8 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
     <div className="flex flex-col h-full">
       {/* Toast */}
       {toast && (
-        <div className="px-4 py-2 bg-red-500 text-white text-xs text-center" role="alert">
-          {toast}
+        <div className={`px-4 py-2 text-white text-xs text-center ${toast.type === 'error' ? 'bg-red-500' : 'bg-emerald-500'}`} role="alert">
+          {toast.msg}
         </div>
       )}
       {/* Fixed header */}
@@ -898,6 +1225,15 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
           onToggle={() => toggleSection('reviewed')}
         >
           <ReviewedCardsContent courses={courses} reviewedMap={reviewedMap} onEditSave={handleEditSave} />
+        </AccordionSection>
+
+        <AccordionSection
+          title="Quick Card Adder"
+          badge={0}
+          open={openSection === 'adder'}
+          onToggle={() => toggleSection('adder')}
+        >
+          <QuickCardAdder courses={courses} onSave={handleQuickAdd} />
         </AccordionSection>
 
         <AccordionSection
