@@ -61,6 +61,7 @@ export default function CardViewer({ card, index, total, onGrade, onDone, endTim
           </span>
           <button
             onClick={onDone}
+            aria-label="End session"
             className="text-xs font-medium text-[--color-text-muted] hover:text-[--color-text] min-h-touch flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
           >
             Done
