@@ -8,9 +8,26 @@ service cloud.firestore {
     match /courses/{courseId} {
       allow read: if request.auth != null;
       allow write: if request.auth != null && request.auth.token.admin == true
-        && request.resource.data.keys().hasOnly(['name', 'isPrivate'])
+        && request.resource.data.keys().hasOnly(['name', 'number', 'isPrivate'])
         && request.resource.data.name is string
+        && request.resource.data.number is int
         && request.resource.data.isPrivate is bool;
+    }
+    match /chapters/{chapterId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.admin == true
+        && request.resource.data.keys().hasOnly(['name', 'number', 'courseId'])
+        && request.resource.data.name is string
+        && request.resource.data.number is int
+        && request.resource.data.courseId is string;
+    }
+    match /sections/{sectionId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.admin == true
+        && request.resource.data.keys().hasOnly(['name', 'number', 'chapterId'])
+        && request.resource.data.name is string
+        && request.resource.data.number is int
+        && request.resource.data.chapterId is string;
     }
     match /errors/{errorId} {
       allow write: if request.auth != null

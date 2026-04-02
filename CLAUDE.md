@@ -30,7 +30,7 @@ src/
 - React 19 + Vite
 - Tailwind CSS v4 (CSS-first config in index.css)
 - Firebase Auth (Google + email/password)
-- Firestore (cards collection, per-user cardState)
+- Firestore (courses/chapters/sections/cards collections, per-user cardState)
 - FSRS-5 spaced repetition with binary grading (good/again)
 - No routing library (tab-based navigation)
 
@@ -67,9 +67,14 @@ All code must meet WCAG 2.1 AA:
 ## Data Structure
 
 ```js
-// Firestore 'cards' collection → built into course tree by courseLoader.js
-// Course > Chapter > Section > cards[]
-card = { id, question, answer, hint, explanation, course, chapter, section, isPrivate }
+// Firestore hierarchy — separate collections, linked by doc IDs
+// courseLoader.js loads all four and builds Course > Chapter > Section > cards[]
+
+course   = { name, number, isPrivate }                   // courses/{autoId}
+chapter  = { name, number, courseId }                     // chapters/{autoId}
+section  = { name, number, chapterId }                   // sections/{autoId}
+card     = { question, answer, hint, explanation,         // cards/{autoId}
+             courseId, chapterId, sectionId, cardType, isPrivate }
 
 // Firestore 'users/{uid}/cardState/{cardId}' — FSRS state per card
 cardState = { difficulty, stability, due, lastReview, state, reps, lapses }

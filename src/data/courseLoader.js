@@ -1,94 +1,98 @@
 // Loads card data from Firestore and builds a course tree.
 // Course > Chapter > Section > cards[]
+//
+// New model: courses, chapters, sections are separate collections.
+// Cards reference them via courseId, chapterId, sectionId.
 
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase.js';
 
-// Strip leading numbering: "04 Tissues" → "Tissues", "4.2.1 Foo" → "Foo"
-function stripNumber(name) {
-  return name.replace(/^[\d.]+\s+/, '');
-}
-
-// Extract sort key: "4.2.1 Foo" → "004.002.001"
-function sortKey(segment) {
-  const match = segment.match(/^([\d.]+)/);
-  if (!match) return segment;
-  return match[1]
-    .split('.')
-    .map((n) => n.padStart(4, '0'))
-    .join('.');
-}
-
-let _cacheAll = null; // all cards including private
-let _privateCourses = null; // Set of private course names
-
-async function loadPrivateCourses() {
-  if (_privateCourses) return _privateCourses;
-  const snap = await getDocs(collection(db, 'courses'));
-  const set = new Set();
-  for (const doc of snap.docs) {
-    const data = doc.data();
-    if (data.isPrivate) set.add(data.name);
-  }
-  _privateCourses = set;
-  return _privateCourses;
-}
+let _cacheAll = null;
 
 async function loadAllCourses() {
   if (_cacheAll) return _cacheAll;
 
-  const snapshot = await getDocs(collection(db, 'cards'));
-  const courseMap = {};
+  // Load all four collections in parallel
+  const [courseSnap, chapterSnap, sectionSnap, cardSnap] = await Promise.all([
+    getDocs(collection(db, 'courses')),
+    getDocs(collection(db, 'chapters')),
+    getDocs(collection(db, 'sections')),
+    getDocs(collection(db, 'cards')),
+  ]);
 
-  snapshot.forEach((doc) => {
-    const data = doc.data();
-    const { course: courseName, chapter: chapterName, section: sectionName } = data;
+  // Build lookup maps
+  const coursesById = new Map();
+  for (const d of courseSnap.docs) {
+    coursesById.set(d.id, { ...d.data(), id: d.id, chapters: [] });
+  }
 
-    if (!courseName || !chapterName || !sectionName) return;
+  const chaptersById = new Map();
+  for (const d of chapterSnap.docs) {
+    chaptersById.set(d.id, { ...d.data(), id: d.id, sections: [] });
+  }
 
-    if (!courseMap[courseName]) {
-      courseMap[courseName] = { chapters: {} };
-    }
-    if (!courseMap[courseName].chapters[chapterName]) {
-      courseMap[courseName].chapters[chapterName] = { sections: {} };
-    }
-    if (!courseMap[courseName].chapters[chapterName].sections[sectionName]) {
-      courseMap[courseName].chapters[chapterName].sections[sectionName] = {
-        id: `${courseName}/${chapterName}/${sectionName}`,
-        name: stripNumber(sectionName),
-        sortKey: sortKey(sectionName),
-        cards: [],
-      };
-    }
+  const sectionsById = new Map();
+  for (const d of sectionSnap.docs) {
+    sectionsById.set(d.id, { ...d.data(), id: d.id, cards: [] });
+  }
 
-    courseMap[courseName].chapters[chapterName].sections[sectionName].cards.push({
-      id: doc.id,
+  // Place cards into sections
+  for (const d of cardSnap.docs) {
+    const data = d.data();
+    const section = sectionsById.get(data.sectionId);
+    if (!section) continue;
+    section.cards.push({
+      id: d.id,
       question: data.question,
       answer: data.answer,
       hint: data.hint || '',
       explanation: data.explanation || '',
       isPrivate: data.isPrivate ?? false,
+      cardType: data.cardType || 'sa',
     });
-  });
+  }
 
-  // Convert to sorted arrays, filtering out empty sections/chapters/courses
-  _cacheAll = Object.entries(courseMap)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([courseName, courseData]) => ({
-      id: courseName,
-      name: courseName,
-      chapters: Object.entries(courseData.chapters)
-        .sort(([a], [b]) => sortKey(a).localeCompare(sortKey(b)))
-        .map(([chapterName, chapterData]) => ({
-          id: `${courseName}/${chapterName}`,
-          name: stripNumber(chapterName),
-          sections: Object.values(chapterData.sections)
-            .filter((s) => s.cards.length > 0)
-            .sort((a, b) => a.sortKey.localeCompare(b.sortKey)),
+  // Place sections into chapters
+  for (const section of sectionsById.values()) {
+    const chapter = chaptersById.get(section.chapterId);
+    if (!chapter) continue;
+    chapter.sections.push(section);
+  }
+
+  // Place chapters into courses
+  for (const chapter of chaptersById.values()) {
+    const course = coursesById.get(chapter.courseId);
+    if (!course) continue;
+    course.chapters.push(chapter);
+  }
+
+  // Sort and filter empty, build final tree
+  _cacheAll = [...coursesById.values()]
+    .sort((a, b) => a.number - b.number)
+    .map(course => ({
+      id: course.id,
+      name: course.name,
+      number: course.number,
+      isPrivate: course.isPrivate ?? false,
+      chapters: course.chapters
+        .sort((a, b) => a.number - b.number)
+        .map(chapter => ({
+          id: chapter.id,
+          name: chapter.name,
+          number: chapter.number,
+          sections: chapter.sections
+            .sort((a, b) => a.number - b.number)
+            .map(section => ({
+              id: section.id,
+              name: section.name,
+              number: section.number,
+              cards: section.cards,
+            }))
+            .filter(s => s.cards.length > 0),
         }))
-        .filter((ch) => ch.sections.length > 0),
+        .filter(ch => ch.sections.length > 0),
     }))
-    .filter((c) => c.chapters.length > 0);
+    .filter(c => c.chapters.length > 0);
 
   return _cacheAll;
 }
@@ -114,8 +118,8 @@ function filterPublishedCards(courses) {
 }
 
 // Filter out entire private courses
-function filterPrivateCourses(courses, privateCourseNames) {
-  return courses.filter(c => !privateCourseNames.has(c.name));
+function filterPrivateCourses(courses) {
+  return courses.filter(c => !c.isPrivate);
 }
 
 /**
@@ -126,16 +130,13 @@ function filterPrivateCourses(courses, privateCourseNames) {
  */
 export async function loadCoursesForUser(isAdmin = false, hideAdmin = false) {
   const all = await loadAllCourses();
-  const privateCourseNames = await loadPrivateCourses();
   const published = filterPublishedCards(all);
 
   if (isAdmin && !hideAdmin) {
-    // Admin sees published cards from all courses (including private courses)
     return published;
   }
 
-  // Non-admin or hiding: filter out private courses entirely
-  return filterPrivateCourses(published, privateCourseNames);
+  return filterPrivateCourses(published);
 }
 
 /** Load all cards including private (for admin card review tab) */
@@ -146,7 +147,6 @@ export async function loadAllCoursesAdmin() {
 /** Invalidate cache (call after admin edits a card or course settings) */
 export function invalidateCache() {
   _cacheAll = null;
-  _privateCourses = null;
 }
 
 export function getCardsBySectionIds(courses, sectionIds) {

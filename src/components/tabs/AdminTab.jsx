@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { collection, getDocs, doc, setDoc } from 'firebase/firestore';
+import { collection, doc, setDoc, addDoc } from 'firebase/firestore';
 import { db } from '../../firebase.js';
 import { loadAllCoursesAdmin, getCardsBySectionIds, shuffle, invalidateCache } from '../../data/courseLoader.js';
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
@@ -627,31 +627,27 @@ function ReviewedCardsContent({ courses, reviewedMap, onEditSave }) {
 // ── Course Settings ──────────────────────────────────────────────────────────
 
 function CourseSettings({ courses, onToggle, onError }) {
-  // Dedupe course names
-  const courseNames = [...new Set(courses.map(c => c.name))];
-  const [privates, setPrivates] = useState(new Set());
-  const [loaded, setLoaded] = useState(false);
+  const [privates, setPrivates] = useState(() => {
+    const set = new Set();
+    for (const c of courses) {
+      if (c.isPrivate) set.add(c.id);
+    }
+    return set;
+  });
 
-  useEffect(() => {
-    getDocs(collection(db, 'courses')).then(snap => {
-      const set = new Set();
-      for (const d of snap.docs) {
-        if (d.data().isPrivate) set.add(d.data().name);
-      }
-      setPrivates(set);
-      setLoaded(true);
-    });
-  }, []);
-
-  async function toggle(name) {
-    const newPrivate = !privates.has(name);
+  async function toggle(course) {
+    const newPrivate = !privates.has(course.id);
     setPrivates(prev => {
       const next = new Set(prev);
-      newPrivate ? next.add(name) : next.delete(name);
+      newPrivate ? next.add(course.id) : next.delete(course.id);
       return next;
     });
     try {
-      await setDoc(doc(db, 'courses', name), { name, isPrivate: newPrivate });
+      await setDoc(doc(db, 'courses', course.id), {
+        name: course.name,
+        number: course.number,
+        isPrivate: newPrivate,
+      });
       invalidateCache();
       onToggle?.();
     } catch (err) {
@@ -660,25 +656,23 @@ function CourseSettings({ courses, onToggle, onError }) {
     }
   }
 
-  if (!loaded) return <p className="text-xs text-[--color-text-muted]">Loading...</p>;
-
   return (
     <div className="space-y-1">
       <p className="text-xs text-[--color-text-muted] mb-2">Private courses are only visible to admins in the study tab.</p>
-      {courseNames.map(name => (
-        <div key={name} className="flex items-center justify-between py-2">
-          <span className="text-sm text-[--color-text]">{name}</span>
+      {courses.map(course => (
+        <div key={course.id} className="flex items-center justify-between py-2">
+          <span className="text-sm text-[--color-text]">{course.name}</span>
           <button
-            onClick={() => toggle(name)}
+            onClick={() => toggle(course)}
             className={[
               'px-3 py-1 rounded-full text-xs font-medium transition-colors',
               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
-              privates.has(name)
+              privates.has(course.id)
                 ? 'bg-amber-100 text-amber-700'
                 : 'bg-emerald-100 text-emerald-700',
             ].join(' ')}
           >
-            {privates.has(name) ? 'Private' : 'Public'}
+            {privates.has(course.id) ? 'Private' : 'Public'}
           </button>
         </div>
       ))}
@@ -692,10 +686,10 @@ function QuickCardAdder({ courses, onSave }) {
   const [step, setStep] = useState('fields'); // 'fields' | 'location'
   const [fields, setFields] = useState({ question: '', answer: '', hint: '', explanation: '' });
 
-  // Location state
-  const [courseName, setCourseName] = useState('');
-  const [chapterName, setChapterName] = useState('');
-  const [sectionName, setSectionName] = useState('');
+  // Location state — stores Firestore doc IDs
+  const [courseId, setCourseId] = useState('');
+  const [chapterId, setChapterId] = useState('');
+  const [sectionId, setSectionId] = useState('');
   const [newCourse, setNewCourse] = useState('');
   const [newChapter, setNewChapter] = useState('');
   const [newSection, setNewSection] = useState('');
@@ -711,202 +705,91 @@ function QuickCardAdder({ courses, onSave }) {
   }, [step]);
 
   // Derive available chapters and sections from courses tree
-  const selectedCourse = courses.find(c => c.name === courseName);
+  const selectedCourse = courses.find(c => c.id === courseId);
   const chaptersRaw = selectedCourse?.chapters || [];
-  const selectedChapter = chaptersRaw.find(ch => ch.id === `${courseName}/${chapterName}`);
+  const selectedChapter = chaptersRaw.find(ch => ch.id === chapterId);
   const sectionsRaw = selectedChapter?.sections || [];
-
-  // Collect all card IDs across the entire tree for number extraction
-  const allCardIds = (() => {
-    const ids = [];
-    for (const c of courses) {
-      for (const ch of c.chapters) {
-        for (const s of ch.sections) {
-          for (const card of s.cards) ids.push(card.id);
-        }
-      }
-    }
-    return ids;
-  })();
-
-  // Parse a card ID into its 4 numeric segments, or null if it doesn't match
-  function parseCardId(id) {
-    const match = id.match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)sa$/);
-    if (!match) return null;
-    return [parseInt(match[1], 10), parseInt(match[2], 10), parseInt(match[3], 10), parseInt(match[4], 10)];
-  }
-
-  // Get all card IDs for a given course/chapter/section from the tree
-  function getCardIdsForCourse(course) {
-    const ids = [];
-    for (const ch of course.chapters) {
-      for (const s of ch.sections) {
-        for (const card of s.cards) ids.push(card.id);
-      }
-    }
-    return ids;
-  }
-
-  function getCardIdsForChapter(chapter) {
-    const ids = [];
-    for (const s of chapter.sections) {
-      for (const card of s.cards) ids.push(card.id);
-    }
-    return ids;
-  }
-
-  // Auto-generate card ID from course/chapter/section selection
-  const autoId = (() => {
-    const hasCourse = addingCourse ? newCourse.trim() : courseName;
-    const hasChapter = addingChapter ? newChapter.trim() : chapterName;
-    const hasSection = addingSection ? newSection.trim() : sectionName;
-
-    if (!hasCourse || !hasChapter || !hasSection) return '';
-
-    // Course number: for existing course, read it from that course's cards.
-    // For new course, max course number across all cards + 1.
-    let courseNum;
-    if (addingCourse) {
-      let max = 0;
-      for (const id of allCardIds) {
-        const parsed = parseCardId(id);
-        if (parsed && parsed[0] > max) max = parsed[0];
-      }
-      courseNum = max + 1;
-    } else {
-      // All cards in the selected course should share the same course number
-      const courseCards = selectedCourse ? getCardIdsForCourse(selectedCourse) : [];
-      courseNum = 0;
-      for (const id of courseCards) {
-        const parsed = parseCardId(id);
-        if (parsed) { courseNum = parsed[0]; break; }
-      }
-      if (courseNum === 0) {
-        // Fallback: no parseable IDs, treat like new
-        let max = 0;
-        for (const id of allCardIds) {
-          const parsed = parseCardId(id);
-          if (parsed && parsed[0] > max) max = parsed[0];
-        }
-        courseNum = max + 1;
-      }
-    }
-
-    // Chapter number: for existing chapter, read from its cards.
-    // For new chapter, max chapter number within this course + 1.
-    let chapterNum;
-    if (addingChapter) {
-      let max = 0;
-      for (const id of (selectedCourse ? getCardIdsForCourse(selectedCourse) : [])) {
-        const parsed = parseCardId(id);
-        if (parsed && parsed[0] === courseNum && parsed[1] > max) max = parsed[1];
-      }
-      chapterNum = max + 1;
-    } else {
-      const chapterCards = selectedChapter ? getCardIdsForChapter(selectedChapter) : [];
-      chapterNum = 0;
-      for (const id of chapterCards) {
-        const parsed = parseCardId(id);
-        if (parsed) { chapterNum = parsed[1]; break; }
-      }
-      if (chapterNum === 0) {
-        let max = 0;
-        for (const id of (selectedCourse ? getCardIdsForCourse(selectedCourse) : [])) {
-          const parsed = parseCardId(id);
-          if (parsed && parsed[0] === courseNum && parsed[1] > max) max = parsed[1];
-        }
-        chapterNum = max + 1;
-      }
-    }
-
-    // Section number: for existing section, read from its cards.
-    // For new section, max section number within this chapter + 1.
-    let sectionNum;
-    const sectionObj = sectionsRaw.find(s => s.id === `${hasCourse}/${hasChapter}/${hasSection}`);
-    const sectionCards = sectionObj ? sectionObj.cards.map(c => c.id) : [];
-    if (addingSection) {
-      let max = 0;
-      for (const id of (selectedChapter ? getCardIdsForChapter(selectedChapter) : [])) {
-        const parsed = parseCardId(id);
-        if (parsed && parsed[0] === courseNum && parsed[1] === chapterNum && parsed[2] > max) max = parsed[2];
-      }
-      sectionNum = max + 1;
-    } else {
-      sectionNum = 0;
-      for (const id of sectionCards) {
-        const parsed = parseCardId(id);
-        if (parsed) { sectionNum = parsed[2]; break; }
-      }
-      if (sectionNum === 0) {
-        let max = 0;
-        for (const id of (selectedChapter ? getCardIdsForChapter(selectedChapter) : [])) {
-          const parsed = parseCardId(id);
-          if (parsed && parsed[0] === courseNum && parsed[1] === chapterNum && parsed[2] > max) max = parsed[2];
-        }
-        sectionNum = max + 1;
-      }
-    }
-
-    // Card number: max card number in this section + 1
-    let maxCard = 0;
-    for (const id of sectionCards) {
-      const parsed = parseCardId(id);
-      if (parsed && parsed[0] === courseNum && parsed[1] === chapterNum && parsed[2] === sectionNum && parsed[3] > maxCard) {
-        maxCard = parsed[3];
-      }
-    }
-    const cardNum = maxCard + 1;
-
-    const pad2 = n => String(n).padStart(2, '0');
-    const pad3 = n => String(n).padStart(3, '0');
-    return `${pad2(courseNum)}.${pad2(chapterNum)}.${pad2(sectionNum)}.${pad3(cardNum)}sa`;
-  })();
-
-  const idPrefix = autoId;
 
   function handleBack() {
     setStep('fields');
   }
 
   async function handleSave() {
-    const finalCourse = addingCourse ? newCourse.trim() : courseName;
-    const finalChapter = addingChapter ? newChapter.trim() : chapterName;
-    const finalSection = addingSection ? newSection.trim() : sectionName;
-
-    if (!finalCourse || !finalChapter || !finalSection || !idPrefix.trim()) return;
+    let finalCourseId = courseId;
+    let finalChapterId = chapterId;
+    let finalSectionId = sectionId;
 
     setSaving(true);
-    await onSave(idPrefix.trim(), {
-      question: fields.question,
-      answer: fields.answer,
-      hint: fields.hint,
-      explanation: fields.explanation,
-      course: finalCourse,
-      chapter: finalChapter,
-      section: finalSection,
-      isPrivate: true,
-    });
-    setSaving(false);
+    try {
+      // Create new course if needed
+      if (addingCourse && newCourse.trim()) {
+        const maxNum = courses.reduce((max, c) => Math.max(max, c.number), 0);
+        const courseRef = await addDoc(collection(db, 'courses'), {
+          name: newCourse.trim(),
+          number: maxNum + 1,
+          isPrivate: true,
+        });
+        finalCourseId = courseRef.id;
+      }
 
-    // Reset
-    setFields({ question: '', answer: '', hint: '', explanation: '' });
-    setStep('fields');
-    setCourseName('');
-    setChapterName('');
-    setSectionName('');
-    setNewCourse('');
-    setNewChapter('');
-    setNewSection('');
-    setAddingCourse(false);
-    setAddingChapter(false);
-    setAddingSection(false);
+      // Create new chapter if needed
+      if (addingChapter && newChapter.trim() && finalCourseId) {
+        const maxNum = chaptersRaw.reduce((max, ch) => Math.max(max, ch.number), 0);
+        const chapterRef = await addDoc(collection(db, 'chapters'), {
+          name: newChapter.trim(),
+          number: maxNum + 1,
+          courseId: finalCourseId,
+        });
+        finalChapterId = chapterRef.id;
+      }
+
+      // Create new section if needed
+      if (addingSection && newSection.trim() && finalChapterId) {
+        const maxNum = sectionsRaw.reduce((max, s) => Math.max(max, s.number), 0);
+        const sectionRef = await addDoc(collection(db, 'sections'), {
+          name: newSection.trim(),
+          number: maxNum + 1,
+          chapterId: finalChapterId,
+        });
+        finalSectionId = sectionRef.id;
+      }
+
+      if (!finalCourseId || !finalChapterId || !finalSectionId) return;
+
+      await onSave({
+        question: fields.question,
+        answer: fields.answer,
+        hint: fields.hint,
+        explanation: fields.explanation,
+        courseId: finalCourseId,
+        chapterId: finalChapterId,
+        sectionId: finalSectionId,
+        cardType: 'sa',
+        isPrivate: true,
+      });
+
+      // Reset
+      setFields({ question: '', answer: '', hint: '', explanation: '' });
+      setStep('fields');
+      setCourseId('');
+      setChapterId('');
+      setSectionId('');
+      setNewCourse('');
+      setNewChapter('');
+      setNewSection('');
+      setAddingCourse(false);
+      setAddingChapter(false);
+      setAddingSection(false);
+    } finally {
+      setSaving(false);
+    }
   }
 
   const canSave = (() => {
-    const finalCourse = addingCourse ? newCourse.trim() : courseName;
-    const finalChapter = addingChapter ? newChapter.trim() : chapterName;
-    const finalSection = addingSection ? newSection.trim() : sectionName;
-    return finalCourse && finalChapter && finalSection && idPrefix.trim();
+    const hasCourse = addingCourse ? newCourse.trim() : courseId;
+    const hasChapter = addingChapter ? newChapter.trim() : chapterId;
+    const hasSection = addingSection ? newSection.trim() : sectionId;
+    return hasCourse && hasChapter && hasSection;
   })();
 
   if (step === 'location') {
@@ -940,16 +823,16 @@ function QuickCardAdder({ courses, onSave }) {
           ) : (
             <div className="flex gap-2">
               <select
-                value={courseName}
-                onChange={e => { setCourseName(e.target.value); setChapterName(''); setSectionName(''); setAddingChapter(false); setAddingSection(false); }}
+                value={courseId}
+                onChange={e => { setCourseId(e.target.value); setChapterId(''); setSectionId(''); setAddingChapter(false); setAddingSection(false); }}
                 className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
                 aria-label="Select course"
               >
                 <option value="">Select course…</option>
-                {courses.map(c => <option key={c.id} value={c.name}>{c.name}</option>)}
+                {courses.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
               </select>
               <button
-                onClick={() => { setAddingCourse(true); setCourseName(''); setChapterName(''); setSectionName(''); }}
+                onClick={() => { setAddingCourse(true); setCourseId(''); setChapterId(''); setSectionId(''); }}
                 className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
               >
                 Add new
@@ -967,7 +850,7 @@ function QuickCardAdder({ courses, onSave }) {
                 type="text"
                 value={newChapter}
                 onChange={e => setNewChapter(e.target.value)}
-                placeholder="New chapter name (e.g. 05 Integumentary)"
+                placeholder="New chapter name"
                 className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
                 autoFocus
               />
@@ -982,19 +865,19 @@ function QuickCardAdder({ courses, onSave }) {
           ) : (
             <div className="flex gap-2">
               <select
-                value={chapterName}
-                onChange={e => { setChapterName(e.target.value); setSectionName(''); setAddingSection(false); }}
-                disabled={!courseName && !addingCourse}
+                value={chapterId}
+                onChange={e => { setChapterId(e.target.value); setSectionId(''); setAddingSection(false); }}
+                disabled={!courseId && !addingCourse}
                 className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
                 aria-label="Select chapter"
               >
                 <option value="">Select chapter…</option>
                 {chaptersRaw.map(ch => (
-                  <option key={ch.id} value={ch.id.split('/')[1]}>{ch.name}</option>
+                  <option key={ch.id} value={ch.id}>{ch.name}</option>
                 ))}
               </select>
               <button
-                onClick={() => { setAddingChapter(true); setChapterName(''); setSectionName(''); }}
+                onClick={() => { setAddingChapter(true); setChapterId(''); setSectionId(''); }}
                 className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
               >
                 Add new
@@ -1012,7 +895,7 @@ function QuickCardAdder({ courses, onSave }) {
                 type="text"
                 value={newSection}
                 onChange={e => setNewSection(e.target.value)}
-                placeholder="New section name (e.g. 5.1 Layers of the Skin)"
+                placeholder="New section name"
                 className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
                 autoFocus
               />
@@ -1027,19 +910,19 @@ function QuickCardAdder({ courses, onSave }) {
           ) : (
             <div className="flex gap-2">
               <select
-                value={sectionName}
-                onChange={e => setSectionName(e.target.value)}
-                disabled={!chapterName && !addingChapter}
+                value={sectionId}
+                onChange={e => setSectionId(e.target.value)}
+                disabled={!chapterId && !addingChapter}
                 className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
                 aria-label="Select section"
               >
                 <option value="">Select section…</option>
                 {sectionsRaw.map(s => (
-                  <option key={s.id} value={s.id.split('/')[2]}>{s.name}</option>
+                  <option key={s.id} value={s.id}>{s.name}</option>
                 ))}
               </select>
               <button
-                onClick={() => { setAddingSection(true); setSectionName(''); }}
+                onClick={() => { setAddingSection(true); setSectionId(''); }}
                 className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
               >
                 Add new
@@ -1047,14 +930,6 @@ function QuickCardAdder({ courses, onSave }) {
             </div>
           )}
         </div>
-
-        {/* Card ID (auto-generated) */}
-        {autoId && (
-          <div className="space-y-1">
-            <span className="text-xs font-medium text-[--color-text-muted]">Card ID</span>
-            <p className="px-3 py-2 text-sm font-mono text-[--color-text] bg-[--color-surface-sunken] rounded-[--radius-md]">{autoId}</p>
-          </div>
-        )}
 
         {/* Action buttons */}
         <div className="flex gap-2">
@@ -1190,9 +1065,9 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
 
   // ── Quick card add ──
 
-  async function handleQuickAdd(cardId, cardData) {
+  async function handleQuickAdd(cardData) {
     try {
-      await setDoc(doc(db, 'cards', cardId), cardData);
+      await addDoc(collection(db, 'cards'), cardData);
       invalidateCache();
       const data = await loadAllCoursesAdmin();
       setCourses(data);
