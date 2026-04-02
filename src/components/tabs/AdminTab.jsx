@@ -1141,6 +1141,54 @@ function BatchUpload({ courses, onBatchSave }) {
   );
 }
 
+// ── Workflows ───────────────────────────────────────────────────────────────
+
+const WORKFLOWS = [
+  {
+    id: 'card-creation',
+    title: 'Card creation workflow',
+    steps: [
+      'Open a Claude chat and paste in a content design prompt (conversational or research-first)',
+      'Iterate on the content outline until you\'re happy with the material',
+      'Paste in the card generation style guide prompt',
+      'Review proposed question stems, request changes as needed',
+      'Approve the list — Claude outputs a JSON array of arrays',
+      'In Driftstone admin, open Batch Upload and paste the JSON',
+      'Preview the cards, pick the destination (course > chapter > section)',
+      'Upload, then review the cards in Card Review before publishing',
+    ],
+  },
+];
+
+function Workflows() {
+  const [openId, setOpenId] = useState(null);
+
+  return (
+    <div className="space-y-1">
+      {WORKFLOWS.map(wf => (
+        <div key={wf.id}>
+          <button
+            onClick={() => setOpenId(openId === wf.id ? null : wf.id)}
+            aria-expanded={openId === wf.id}
+            className="w-full flex items-center justify-between text-sm text-left text-[--color-text] py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+            style={{ minHeight: 'var(--spacing-touch)' }}
+          >
+            {wf.title}
+            <span className="text-xs text-[--color-text-muted]">{openId === wf.id ? '▲' : '▼'}</span>
+          </button>
+          {openId === wf.id && (
+            <ol className="list-decimal list-inside space-y-1.5 pb-3 text-xs text-[--color-text] pl-1">
+              {wf.steps.map((step, i) => (
+                <li key={i} className="leading-relaxed">{step}</li>
+              ))}
+            </ol>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 // ── Main AdminTab ────────────────────────────────────────────────────────────
 
 export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
@@ -1413,6 +1461,15 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
           onToggle={() => toggleSection('courses')}
         >
           <CourseSettings courses={courses} onError={showToast} />
+        </AccordionSection>
+
+        <AccordionSection
+          title="Workflows"
+          badge={0}
+          open={openSection === 'workflows'}
+          onToggle={() => toggleSection('workflows')}
+        >
+          <Workflows />
         </AccordionSection>
       </div>
     </div>
