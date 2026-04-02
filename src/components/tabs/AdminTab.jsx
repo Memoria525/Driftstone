@@ -1017,6 +1017,7 @@ function BatchUpload({ courses, onBatchSave }) {
   const [parsedCards, setParsedCards] = useState([]);
   const [parseError, setParseError] = useState('');
   const [uploading, setUploading] = useState(false);
+  const [publishNow, setPublishNow] = useState(false);
 
   const previewRef = useRef(null);
 
@@ -1048,7 +1049,7 @@ function BatchUpload({ courses, onBatchSave }) {
         chapterId,
         sectionId,
         cardType: 'sa',
-        isPrivate: true,
+        isPrivate: !publishNow,
       }));
       await onBatchSave(cardDocs);
       setRawText('');
@@ -1061,13 +1062,30 @@ function BatchUpload({ courses, onBatchSave }) {
 
   if (step === 'location') {
     return (
-      <LocationPicker
-        courses={courses}
-        onConfirm={handleLocationConfirm}
-        onBack={() => setStep('preview')}
-        confirmLabel={uploading ? 'Uploading…' : `Upload ${parsedCards.length} card${parsedCards.length === 1 ? '' : 's'}`}
-        saving={uploading}
-      />
+      <div className="space-y-3">
+        <div
+          className="flex items-center gap-3 cursor-pointer"
+          style={{ minHeight: 'var(--spacing-touch)' }}
+          onClick={() => setPublishNow(p => !p)}
+        >
+          <input
+            type="checkbox"
+            checked={publishNow}
+            onChange={() => setPublishNow(p => !p)}
+            onClick={e => e.stopPropagation()}
+            aria-label="Publish cards immediately (skip review)"
+            className="w-5 h-5 shrink-0 accent-[--color-brand] focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          />
+          <span className="text-xs text-[--color-text]">Publish immediately (skip review)</span>
+        </div>
+        <LocationPicker
+          courses={courses}
+          onConfirm={handleLocationConfirm}
+          onBack={() => setStep('preview')}
+          confirmLabel={uploading ? 'Uploading…' : `Upload ${parsedCards.length} card${parsedCards.length === 1 ? '' : 's'}`}
+          saving={uploading}
+        />
+      </div>
     );
   }
 
