@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { collection, doc, setDoc, addDoc } from 'firebase/firestore';
+import { collection, doc, setDoc, addDoc, writeBatch } from 'firebase/firestore';
 import { db } from '../../firebase.js';
 import { loadAllCoursesAdmin, getCardsBySectionIds, shuffle, invalidateCache } from '../../data/courseLoader.js';
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
@@ -680,13 +680,9 @@ function CourseSettings({ courses, onToggle, onError }) {
   );
 }
 
-// ── Quick Card Adder ────────────────────────────────────────────────────────
+// ── Location Picker (shared by QuickCardAdder and BatchUpload) ──────────────
 
-function QuickCardAdder({ courses, onSave }) {
-  const [step, setStep] = useState('fields'); // 'fields' | 'location'
-  const [fields, setFields] = useState({ question: '', answer: '', hint: '', explanation: '' });
-
-  // Location state — stores Firestore doc IDs
+function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
   const [courseId, setCourseId] = useState('');
   const [chapterId, setChapterId] = useState('');
   const [sectionId, setSectionId] = useState('');
@@ -696,268 +692,265 @@ function QuickCardAdder({ courses, onSave }) {
   const [addingCourse, setAddingCourse] = useState(false);
   const [addingChapter, setAddingChapter] = useState(false);
   const [addingSection, setAddingSection] = useState(false);
-  const [saving, setSaving] = useState(false);
 
   const headingRef = useRef(null);
+  useEffect(() => { headingRef.current?.focus(); }, []);
 
-  useEffect(() => {
-    if (step === 'location') headingRef.current?.focus();
-  }, [step]);
-
-  // Derive available chapters and sections from courses tree
   const selectedCourse = courses.find(c => c.id === courseId);
   const chaptersRaw = selectedCourse?.chapters || [];
   const selectedChapter = chaptersRaw.find(ch => ch.id === chapterId);
   const sectionsRaw = selectedChapter?.sections || [];
 
-  function handleBack() {
-    setStep('fields');
-  }
-
-  async function handleSave() {
-    let finalCourseId = courseId;
-    let finalChapterId = chapterId;
-    let finalSectionId = sectionId;
-
-    setSaving(true);
-    try {
-      // Create new course if needed
-      if (addingCourse && newCourse.trim()) {
-        const maxNum = courses.reduce((max, c) => Math.max(max, c.number), 0);
-        const courseRef = await addDoc(collection(db, 'courses'), {
-          name: newCourse.trim(),
-          number: maxNum + 1,
-          isPrivate: true,
-        });
-        finalCourseId = courseRef.id;
-      }
-
-      // Create new chapter if needed
-      if (addingChapter && newChapter.trim() && finalCourseId) {
-        const maxNum = chaptersRaw.reduce((max, ch) => Math.max(max, ch.number), 0);
-        const chapterRef = await addDoc(collection(db, 'chapters'), {
-          name: newChapter.trim(),
-          number: maxNum + 1,
-          courseId: finalCourseId,
-        });
-        finalChapterId = chapterRef.id;
-      }
-
-      // Create new section if needed
-      if (addingSection && newSection.trim() && finalChapterId) {
-        const maxNum = sectionsRaw.reduce((max, s) => Math.max(max, s.number), 0);
-        const sectionRef = await addDoc(collection(db, 'sections'), {
-          name: newSection.trim(),
-          number: maxNum + 1,
-          chapterId: finalChapterId,
-        });
-        finalSectionId = sectionRef.id;
-      }
-
-      if (!finalCourseId || !finalChapterId || !finalSectionId) return;
-
-      await onSave({
-        question: fields.question,
-        answer: fields.answer,
-        hint: fields.hint,
-        explanation: fields.explanation,
-        courseId: finalCourseId,
-        chapterId: finalChapterId,
-        sectionId: finalSectionId,
-        cardType: 'sa',
-        isPrivate: true,
-      });
-
-      // Reset
-      setFields({ question: '', answer: '', hint: '', explanation: '' });
-      setStep('fields');
-      setCourseId('');
-      setChapterId('');
-      setSectionId('');
-      setNewCourse('');
-      setNewChapter('');
-      setNewSection('');
-      setAddingCourse(false);
-      setAddingChapter(false);
-      setAddingSection(false);
-    } finally {
-      setSaving(false);
-    }
-  }
-
-  const canSave = (() => {
+  const canConfirm = (() => {
     const hasCourse = addingCourse ? newCourse.trim() : courseId;
     const hasChapter = addingChapter ? newChapter.trim() : chapterId;
     const hasSection = addingSection ? newSection.trim() : sectionId;
     return hasCourse && hasChapter && hasSection;
   })();
 
+  async function handleConfirm() {
+    let finalCourseId = courseId;
+    let finalChapterId = chapterId;
+    let finalSectionId = sectionId;
+
+    if (addingCourse && newCourse.trim()) {
+      const maxNum = courses.reduce((max, c) => Math.max(max, c.number), 0);
+      const ref = await addDoc(collection(db, 'courses'), {
+        name: newCourse.trim(),
+        number: maxNum + 1,
+        isPrivate: true,
+      });
+      finalCourseId = ref.id;
+    }
+
+    if (addingChapter && newChapter.trim() && finalCourseId) {
+      const maxNum = chaptersRaw.reduce((max, ch) => Math.max(max, ch.number), 0);
+      const ref = await addDoc(collection(db, 'chapters'), {
+        name: newChapter.trim(),
+        number: maxNum + 1,
+        courseId: finalCourseId,
+      });
+      finalChapterId = ref.id;
+    }
+
+    if (addingSection && newSection.trim() && finalChapterId) {
+      const maxNum = sectionsRaw.reduce((max, s) => Math.max(max, s.number), 0);
+      const ref = await addDoc(collection(db, 'sections'), {
+        name: newSection.trim(),
+        number: maxNum + 1,
+        chapterId: finalChapterId,
+      });
+      finalSectionId = ref.id;
+    }
+
+    if (!finalCourseId || !finalChapterId || !finalSectionId) return;
+    onConfirm({ courseId: finalCourseId, chapterId: finalChapterId, sectionId: finalSectionId });
+  }
+
+  return (
+    <div className="space-y-3">
+      <h3 ref={headingRef} tabIndex={-1} className="text-xs font-semibold text-[--color-text] outline-none">
+        Choose location
+      </h3>
+
+      {/* Course picker */}
+      <div className="space-y-1">
+        <span className="text-xs font-medium text-[--color-text-muted]">Course</span>
+        {addingCourse ? (
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={newCourse}
+              onChange={e => setNewCourse(e.target.value)}
+              placeholder="New course name"
+              className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+              autoFocus
+            />
+            <button
+              onClick={() => { setAddingCourse(false); setNewCourse(''); }}
+              className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+              aria-label="Cancel new course"
+            >
+              Cancel
+            </button>
+          </div>
+        ) : (
+          <div className="flex gap-2">
+            <select
+              value={courseId}
+              onChange={e => { setCourseId(e.target.value); setChapterId(''); setSectionId(''); setAddingChapter(false); setAddingSection(false); }}
+              className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+              aria-label="Select course"
+            >
+              <option value="">Select course…</option>
+              {courses.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+            </select>
+            <button
+              onClick={() => { setAddingCourse(true); setCourseId(''); setChapterId(''); setSectionId(''); }}
+              className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+            >
+              Add new
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Chapter picker */}
+      <div className="space-y-1">
+        <span className="text-xs font-medium text-[--color-text-muted]">Chapter</span>
+        {addingChapter ? (
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={newChapter}
+              onChange={e => setNewChapter(e.target.value)}
+              placeholder="New chapter name"
+              className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+              autoFocus
+            />
+            <button
+              onClick={() => { setAddingChapter(false); setNewChapter(''); }}
+              className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+              aria-label="Cancel new chapter"
+            >
+              Cancel
+            </button>
+          </div>
+        ) : (
+          <div className="flex gap-2">
+            <select
+              value={chapterId}
+              onChange={e => { setChapterId(e.target.value); setSectionId(''); setAddingSection(false); }}
+              disabled={!courseId && !addingCourse}
+              className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
+              aria-label="Select chapter"
+            >
+              <option value="">Select chapter…</option>
+              {chaptersRaw.map(ch => (
+                <option key={ch.id} value={ch.id}>{ch.name}</option>
+              ))}
+            </select>
+            <button
+              onClick={() => { setAddingChapter(true); setChapterId(''); setSectionId(''); }}
+              className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+            >
+              Add new
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Section picker */}
+      <div className="space-y-1">
+        <span className="text-xs font-medium text-[--color-text-muted]">Section</span>
+        {addingSection ? (
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={newSection}
+              onChange={e => setNewSection(e.target.value)}
+              placeholder="New section name"
+              className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+              autoFocus
+            />
+            <button
+              onClick={() => { setAddingSection(false); setNewSection(''); }}
+              className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+              aria-label="Cancel new section"
+            >
+              Cancel
+            </button>
+          </div>
+        ) : (
+          <div className="flex gap-2">
+            <select
+              value={sectionId}
+              onChange={e => setSectionId(e.target.value)}
+              disabled={!chapterId && !addingChapter}
+              className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
+              aria-label="Select section"
+            >
+              <option value="">Select section…</option>
+              {sectionsRaw.map(s => (
+                <option key={s.id} value={s.id}>{s.name}</option>
+              ))}
+            </select>
+            <button
+              onClick={() => { setAddingSection(true); setSectionId(''); }}
+              className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+            >
+              Add new
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Action buttons */}
+      <div className="flex gap-2">
+        <button
+          onClick={onBack}
+          className="min-h-touch px-4 rounded-[--radius-md] text-sm text-[--color-text-muted] hover:text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+        >
+          Back
+        </button>
+        <button
+          onClick={handleConfirm}
+          disabled={!canConfirm || saving}
+          className={[
+            'flex-1 min-h-touch rounded-[--radius-md] text-sm font-semibold transition-colors',
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+            canConfirm && !saving
+              ? 'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white'
+              : 'bg-[--color-surface-sunken] text-[--color-text-muted] cursor-not-allowed',
+          ].join(' ')}
+        >
+          {confirmLabel}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ── Quick Card Adder ────────────────────────────────────────────────────────
+
+function QuickCardAdder({ courses, onSave }) {
+  const [step, setStep] = useState('fields'); // 'fields' | 'location'
+  const [fields, setFields] = useState({ question: '', answer: '', hint: '', explanation: '' });
+  const [saving, setSaving] = useState(false);
+
+  async function handleLocationConfirm({ courseId, chapterId, sectionId }) {
+    setSaving(true);
+    try {
+      await onSave({
+        question: fields.question,
+        answer: fields.answer,
+        hint: fields.hint,
+        explanation: fields.explanation,
+        courseId,
+        chapterId,
+        sectionId,
+        cardType: 'sa',
+        isPrivate: true,
+      });
+      setFields({ question: '', answer: '', hint: '', explanation: '' });
+      setStep('fields');
+    } finally {
+      setSaving(false);
+    }
+  }
+
   if (step === 'location') {
     return (
-      <div className="space-y-3">
-        <h3 ref={headingRef} tabIndex={-1} className="text-xs font-semibold text-[--color-text] outline-none">
-          Choose location
-        </h3>
-
-        {/* Course picker */}
-        <div className="space-y-1">
-          <span className="text-xs font-medium text-[--color-text-muted]">Course</span>
-          {addingCourse ? (
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={newCourse}
-                onChange={e => setNewCourse(e.target.value)}
-                placeholder="New course name"
-                className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-                autoFocus
-              />
-              <button
-                onClick={() => { setAddingCourse(false); setNewCourse(''); }}
-                className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
-                aria-label="Cancel new course"
-              >
-                Cancel
-              </button>
-            </div>
-          ) : (
-            <div className="flex gap-2">
-              <select
-                value={courseId}
-                onChange={e => { setCourseId(e.target.value); setChapterId(''); setSectionId(''); setAddingChapter(false); setAddingSection(false); }}
-                className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-                aria-label="Select course"
-              >
-                <option value="">Select course…</option>
-                {courses.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
-              </select>
-              <button
-                onClick={() => { setAddingCourse(true); setCourseId(''); setChapterId(''); setSectionId(''); }}
-                className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-              >
-                Add new
-              </button>
-            </div>
-          )}
-        </div>
-
-        {/* Chapter picker */}
-        <div className="space-y-1">
-          <span className="text-xs font-medium text-[--color-text-muted]">Chapter</span>
-          {addingChapter ? (
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={newChapter}
-                onChange={e => setNewChapter(e.target.value)}
-                placeholder="New chapter name"
-                className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-                autoFocus
-              />
-              <button
-                onClick={() => { setAddingChapter(false); setNewChapter(''); }}
-                className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
-                aria-label="Cancel new chapter"
-              >
-                Cancel
-              </button>
-            </div>
-          ) : (
-            <div className="flex gap-2">
-              <select
-                value={chapterId}
-                onChange={e => { setChapterId(e.target.value); setSectionId(''); setAddingSection(false); }}
-                disabled={!courseId && !addingCourse}
-                className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
-                aria-label="Select chapter"
-              >
-                <option value="">Select chapter…</option>
-                {chaptersRaw.map(ch => (
-                  <option key={ch.id} value={ch.id}>{ch.name}</option>
-                ))}
-              </select>
-              <button
-                onClick={() => { setAddingChapter(true); setChapterId(''); setSectionId(''); }}
-                className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-              >
-                Add new
-              </button>
-            </div>
-          )}
-        </div>
-
-        {/* Section picker */}
-        <div className="space-y-1">
-          <span className="text-xs font-medium text-[--color-text-muted]">Section</span>
-          {addingSection ? (
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={newSection}
-                onChange={e => setNewSection(e.target.value)}
-                placeholder="New section name"
-                className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-                autoFocus
-              />
-              <button
-                onClick={() => { setAddingSection(false); setNewSection(''); }}
-                className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
-                aria-label="Cancel new section"
-              >
-                Cancel
-              </button>
-            </div>
-          ) : (
-            <div className="flex gap-2">
-              <select
-                value={sectionId}
-                onChange={e => setSectionId(e.target.value)}
-                disabled={!chapterId && !addingChapter}
-                className="flex-1 min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] disabled:opacity-50"
-                aria-label="Select section"
-              >
-                <option value="">Select section…</option>
-                {sectionsRaw.map(s => (
-                  <option key={s.id} value={s.id}>{s.name}</option>
-                ))}
-              </select>
-              <button
-                onClick={() => { setAddingSection(true); setSectionId(''); }}
-                className="min-h-touch px-3 rounded-[--radius-md] text-xs font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-              >
-                Add new
-              </button>
-            </div>
-          )}
-        </div>
-
-        {/* Action buttons */}
-        <div className="flex gap-2">
-          <button
-            onClick={handleBack}
-            className="min-h-touch px-4 rounded-[--radius-md] text-sm text-[--color-text-muted] hover:text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-          >
-            Back
-          </button>
-          <button
-            onClick={handleSave}
-            disabled={!canSave || saving}
-            className={[
-              'flex-1 min-h-touch rounded-[--radius-md] text-sm font-semibold transition-colors',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
-              canSave && !saving
-                ? 'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white'
-                : 'bg-[--color-surface-sunken] text-[--color-text-muted] cursor-not-allowed',
-            ].join(' ')}
-          >
-            {saving ? 'Saving…' : 'Save card'}
-          </button>
-        </div>
-      </div>
+      <LocationPicker
+        courses={courses}
+        onConfirm={handleLocationConfirm}
+        onBack={() => setStep('fields')}
+        confirmLabel={saving ? 'Saving…' : 'Save card'}
+        saving={saving}
+      />
     );
   }
 
-  // Step: fields
   return (
     <div className="space-y-3">
       {['question', 'answer', 'hint', 'explanation'].map(field => (
@@ -980,6 +973,169 @@ function QuickCardAdder({ courses, onSave }) {
         ].join(' ')}
       >
         Next
+      </button>
+    </div>
+  );
+}
+
+// ── Batch Upload ────────────────────────────────────────────────────────────
+
+function parseCardJson(raw) {
+  // Strip markdown code fences
+  let text = raw.trim();
+  if (text.startsWith('```')) {
+    text = text.replace(/^```(?:json)?\s*\n?/, '').replace(/\n?```\s*$/, '');
+  }
+  // Strip trailing commas before ] or }
+  text = text.replace(/,\s*([}\]])/g, '$1');
+
+  const parsed = JSON.parse(text);
+
+  if (!Array.isArray(parsed)) {
+    throw new Error('Expected a JSON array of cards');
+  }
+
+  return parsed.map((entry, i) => {
+    if (!Array.isArray(entry)) {
+      throw new Error(`Card ${i + 1} is not an array`);
+    }
+    if (entry.length < 2) {
+      throw new Error(`Card ${i + 1} needs at least question and answer`);
+    }
+    return {
+      question: String(entry[0] || ''),
+      answer: String(entry[1] || ''),
+      hint: String(entry[2] || ''),
+      explanation: String(entry[3] || ''),
+    };
+  });
+}
+
+function BatchUpload({ courses, onBatchSave }) {
+  const [step, setStep] = useState('paste'); // 'paste' | 'preview' | 'location'
+  const [rawText, setRawText] = useState('');
+  const [parsedCards, setParsedCards] = useState([]);
+  const [parseError, setParseError] = useState('');
+  const [uploading, setUploading] = useState(false);
+
+  const previewRef = useRef(null);
+
+  useEffect(() => {
+    if (step === 'preview') previewRef.current?.focus();
+  }, [step]);
+
+  function handleParse() {
+    setParseError('');
+    try {
+      const cards = parseCardJson(rawText);
+      if (cards.length === 0) {
+        setParseError('No cards found in the JSON');
+        return;
+      }
+      setParsedCards(cards);
+      setStep('preview');
+    } catch (err) {
+      setParseError(err.message);
+    }
+  }
+
+  async function handleLocationConfirm({ courseId, chapterId, sectionId }) {
+    setUploading(true);
+    try {
+      const cardDocs = parsedCards.map(card => ({
+        ...card,
+        courseId,
+        chapterId,
+        sectionId,
+        cardType: 'sa',
+        isPrivate: true,
+      }));
+      await onBatchSave(cardDocs);
+      setRawText('');
+      setParsedCards([]);
+      setStep('paste');
+    } finally {
+      setUploading(false);
+    }
+  }
+
+  if (step === 'location') {
+    return (
+      <LocationPicker
+        courses={courses}
+        onConfirm={handleLocationConfirm}
+        onBack={() => setStep('preview')}
+        confirmLabel={uploading ? 'Uploading…' : `Upload ${parsedCards.length} card${parsedCards.length === 1 ? '' : 's'}`}
+        saving={uploading}
+      />
+    );
+  }
+
+  if (step === 'preview') {
+    return (
+      <div className="space-y-3">
+        <p ref={previewRef} tabIndex={-1} className="text-xs font-semibold text-[--color-text] outline-none" aria-live="polite">
+          {parsedCards.length} card{parsedCards.length === 1 ? '' : 's'} ready
+        </p>
+        <div className="max-h-60 overflow-y-auto space-y-1">
+          {parsedCards.map((card, i) => (
+            <div key={i} className="px-3 py-2 rounded-[--radius-sm] bg-[--color-surface-sunken] text-xs text-[--color-text] truncate">
+              <span className="text-[--color-text-muted] mr-1">{i + 1}.</span>
+              {card.question}
+            </div>
+          ))}
+        </div>
+        <div className="flex gap-2">
+          <button
+            onClick={() => setStep('paste')}
+            className="min-h-touch px-4 rounded-[--radius-md] text-sm text-[--color-text-muted] hover:text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          >
+            Back
+          </button>
+          <button
+            onClick={() => setStep('location')}
+            className={[
+              'flex-1 min-h-touch rounded-[--radius-md] text-sm font-semibold transition-colors',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+              'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white',
+            ].join(' ')}
+          >
+            Choose destination
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Step: paste
+  return (
+    <div className="space-y-3">
+      <label className="block">
+        <span className="text-xs font-medium text-[--color-text-muted]">Card JSON</span>
+        <textarea
+          value={rawText}
+          onChange={e => { setRawText(e.target.value); setParseError(''); }}
+          rows={8}
+          placeholder='[["question", "answer", "hint", "explanation"], ...]'
+          aria-label="Paste card JSON"
+          className="mt-1 w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm font-mono bg-[--color-surface] text-[--color-text] resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+        />
+      </label>
+      {parseError && (
+        <p className="text-xs text-red-600" role="alert">{parseError}</p>
+      )}
+      <button
+        onClick={handleParse}
+        disabled={!rawText.trim()}
+        className={[
+          'w-full min-h-touch rounded-[--radius-md] text-sm font-semibold transition-colors',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+          rawText.trim()
+            ? 'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white'
+            : 'bg-[--color-surface-sunken] text-[--color-text-muted] cursor-not-allowed',
+        ].join(' ')}
+      >
+        Parse Cards
       </button>
     </div>
   );
@@ -1075,6 +1231,24 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
     } catch (err) {
       console.error('Failed to add card:', err);
       showToast('Failed to add card');
+    }
+  }
+
+  async function handleBatchAdd(cardsArray) {
+    try {
+      const batch = writeBatch(db);
+      for (const card of cardsArray) {
+        const ref = doc(collection(db, 'cards'));
+        batch.set(ref, card);
+      }
+      await batch.commit();
+      invalidateCache();
+      const data = await loadAllCoursesAdmin();
+      setCourses(data);
+      showToast(`${cardsArray.length} cards uploaded`, 'success');
+    } catch (err) {
+      console.error('Failed to batch upload:', err);
+      showToast('Failed to upload cards');
     }
   }
 
@@ -1221,6 +1395,15 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
           onToggle={() => toggleSection('adder')}
         >
           <QuickCardAdder courses={courses} onSave={handleQuickAdd} />
+        </AccordionSection>
+
+        <AccordionSection
+          title="Batch Upload"
+          badge={0}
+          open={openSection === 'batch'}
+          onToggle={() => toggleSection('batch')}
+        >
+          <BatchUpload courses={courses} onBatchSave={handleBatchAdd} />
         </AccordionSection>
 
         <AccordionSection
