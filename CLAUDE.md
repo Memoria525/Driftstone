@@ -73,7 +73,7 @@ All code must meet WCAG 2.1 AA:
 course   = { name, number, isPrivate }                   // courses/{autoId}
 chapter  = { name, number, courseId }                     // chapters/{autoId}
 section  = { name, number, chapterId }                   // sections/{autoId}
-card     = { question, answer, hint, explanation,         // cards/{autoId}
+card     = { question, answer, explanation,                // cards/{autoId}
              courseId, chapterId, sectionId, cardType, isPrivate }
 
 // Firestore 'users/{uid}/cardState/{cardId}' — FSRS state per card

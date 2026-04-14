@@ -45,7 +45,6 @@ async function loadAllCourses() {
       id: d.id,
       question: data.question,
       answer: data.answer,
-      hint: data.hint || '',
       explanation: data.explanation || '',
       isPrivate: data.isPrivate ?? false,
       cardType: data.cardType || 'sa',

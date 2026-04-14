@@ -10,7 +10,7 @@
  *   courses/{autoId}   — { name, number, isPrivate }
  *   chapters/{autoId}  — { name, number, courseId }
  *   sections/{autoId}  — { name, number, chapterId }
- *   cards/{autoId}     — { question, answer, hint, explanation, courseId, chapterId, sectionId, cardType, isPrivate }
+ *   cards/{autoId}     — { question, answer, explanation, courseId, chapterId, sectionId, cardType, isPrivate }
  *
  * Also clears reviewed_cards and all users' cardState (test data).
  *
@@ -234,7 +234,6 @@ async function main() {
     batch.set(ref, {
       question: card.question || '',
       answer: card.answer || '',
-      hint: card.hint || '',
       explanation: card.explanation || '',
       courseId,
       chapterId,

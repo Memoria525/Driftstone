@@ -15,7 +15,7 @@ function formatTime(ms) {
 
 export default function CardViewer({ card, index, total, onGrade, onDone, endTime }) {
   const [userAnswer, setUserAnswer] = useState('');
-  const [showHint, setShowHint] = useState(false);
+
   const [revealed, setRevealed] = useState(false);
   const [timeLeft, setTimeLeft] = useState(() =>
     endTime ? Math.max(0, endTime - Date.now()) : null
@@ -80,22 +80,6 @@ export default function CardViewer({ card, index, total, onGrade, onDone, endTim
         <div>
           <p ref={questionRef} tabIndex={-1} className="text-sm font-medium text-[--color-text] outline-none" aria-label={`${timeLeft !== null ? `${formatTime(timeLeft)} remaining.` : `Card ${index + 1} of ${total}.`} ${card.question}`}>{card.question}</p>
         </div>
-
-        {/* Hint */}
-        {!revealed && (
-          <div>
-            {showHint ? (
-              <p className="text-sm text-[--color-text-muted] italic">{card.hint}</p>
-            ) : (
-              <button
-                onClick={() => setShowHint(true)}
-                className="text-sm text-[--color-brand] font-medium min-h-touch flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
-              >
-                Show hint
-              </button>
-            )}
-          </div>
-        )}
 
         {/* Answer input */}
         {!revealed && (

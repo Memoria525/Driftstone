@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { collection, doc, setDoc, addDoc, writeBatch } from 'firebase/firestore';
+import { collection, doc, setDoc, addDoc, writeBatch, getDocs, query, where, updateDoc } from 'firebase/firestore';
 import { db } from '../../firebase.js';
 import { loadAllCoursesAdmin, getCardsBySectionIds, shuffle, invalidateCache } from '../../data/courseLoader.js';
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
@@ -7,7 +7,7 @@ import useErrorLog from '../../hooks/useErrorLog.js';
 import useReviewedCards from '../../hooks/useReviewedCards.js';
 
 const ISSUE_TAGS = [
-  'Bad hint',
+
   'Bad explanation',
   'Unclear question',
   'Wrong answer',
@@ -298,7 +298,6 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
   const [editFields, setEditFields] = useState({
     question: card.question,
     answer: card.answer,
-    hint: card.hint,
     explanation: card.explanation,
   });
   const questionRef = useRef(null);
@@ -345,15 +344,6 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
               />
             </label>
             <label className="block">
-              <span className="text-xs font-medium text-[--color-text-muted]">Hint</span>
-              <textarea
-                value={editFields.hint}
-                onChange={e => setEditFields(f => ({ ...f, hint: e.target.value }))}
-                rows={2}
-                className="mt-1 w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-              />
-            </label>
-            <label className="block">
               <span className="text-xs font-medium text-[--color-text-muted]">Explanation</span>
               <textarea
                 value={editFields.explanation}
@@ -370,7 +360,7 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
                 Save
               </button>
               <button
-                onClick={() => { setEditing(false); setEditFields({ question: card.question, answer: card.answer, hint: card.hint, explanation: card.explanation }); }}
+                onClick={() => { setEditing(false); setEditFields({ question: card.question, answer: card.answer, explanation: card.explanation }); }}
                 className="min-h-touch px-4 rounded-[--radius-md] text-sm text-[--color-text-muted] hover:text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
               >
                 Cancel
@@ -387,12 +377,6 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
               <p className="text-xs font-medium text-[--color-text-muted] mb-1">Answer</p>
               <p className="text-sm text-[--color-text]">{card.answer}</p>
             </div>
-            {card.hint && (
-              <div>
-                <p className="text-xs font-medium text-[--color-text-muted] mb-1">Hint</p>
-                <p className="text-sm text-[--color-text] italic">{card.hint}</p>
-              </div>
-            )}
             {card.explanation && (
               <div>
                 <p className="text-xs font-medium text-[--color-text-muted] mb-1">Explanation</p>
@@ -504,7 +488,6 @@ function ReviewedCardsContent({ courses, reviewedMap, onEditSave }) {
     setEditFields({
       question: card.question,
       answer: card.answer,
-      hint: card.hint,
       explanation: card.explanation,
     });
   }
@@ -566,7 +549,7 @@ function ReviewedCardsContent({ courses, reviewedMap, onEditSave }) {
                 </p>
                 {editing === card.id ? (
                   <div className="space-y-2">
-                    {['question', 'answer', 'hint', 'explanation'].map(field => (
+                    {['question', 'answer', 'explanation'].map(field => (
                       <label key={field} className="block">
                         <span className="text-[10px] font-medium text-[--color-text-muted] capitalize">{field}</span>
                         <textarea
@@ -597,7 +580,6 @@ function ReviewedCardsContent({ courses, reviewedMap, onEditSave }) {
                     <div className="space-y-1 text-xs">
                       <p><strong className="text-[--color-text-muted]">Q:</strong> <span className="text-[--color-text]">{card.question}</span></p>
                       <p><strong className="text-[--color-text-muted]">A:</strong> <span className="text-[--color-text]">{card.answer}</span></p>
-                      {card.hint && <p><strong className="text-[--color-text-muted]">Hint:</strong> <span className="text-[--color-text] italic">{card.hint}</span></p>}
                       {card.explanation && <div><strong className="text-[--color-text-muted] text-xs">Exp:</strong> <div className="space-y-1 mt-0.5">{renderMarkdown(card.explanation)}</div></div>}
                     </div>
                     {card.review.issues?.length > 0 && (
@@ -692,6 +674,9 @@ function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
   const [addingCourse, setAddingCourse] = useState(false);
   const [addingChapter, setAddingChapter] = useState(false);
   const [addingSection, setAddingSection] = useState(false);
+  const [coursePosition, setCoursePosition] = useState('');
+  const [chapterPosition, setChapterPosition] = useState('');
+  const [sectionPosition, setSectionPosition] = useState('');
 
   const headingRef = useRef(null);
   useEffect(() => { headingRef.current?.focus(); }, []);
@@ -708,6 +693,20 @@ function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
     return hasCourse && hasChapter && hasSection;
   })();
 
+  async function shiftItems(collectionName, parentField, parentId, atPosition) {
+    const q = parentField
+      ? query(collection(db, collectionName), where(parentField, '==', parentId))
+      : query(collection(db, collectionName));
+    const snap = await getDocs(q);
+    const updates = [];
+    snap.forEach(d => {
+      if (d.data().number >= atPosition) {
+        updates.push(updateDoc(doc(db, collectionName, d.id), { number: d.data().number + 1 }));
+      }
+    });
+    await Promise.all(updates);
+  }
+
   async function handleConfirm() {
     let finalCourseId = courseId;
     let finalChapterId = chapterId;
@@ -715,9 +714,11 @@ function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
 
     if (addingCourse && newCourse.trim()) {
       const maxNum = courses.reduce((max, c) => Math.max(max, c.number), 0);
+      const insertNum = coursePosition === '' ? maxNum + 1 : Number(coursePosition);
+      if (insertNum <= maxNum) await shiftItems('courses', null, null, insertNum);
       const ref = await addDoc(collection(db, 'courses'), {
         name: newCourse.trim(),
-        number: maxNum + 1,
+        number: insertNum,
         isPrivate: true,
       });
       finalCourseId = ref.id;
@@ -725,9 +726,11 @@ function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
 
     if (addingChapter && newChapter.trim() && finalCourseId) {
       const maxNum = chaptersRaw.reduce((max, ch) => Math.max(max, ch.number), 0);
+      const insertNum = chapterPosition === '' ? maxNum + 1 : Number(chapterPosition);
+      if (insertNum <= maxNum) await shiftItems('chapters', 'courseId', finalCourseId, insertNum);
       const ref = await addDoc(collection(db, 'chapters'), {
         name: newChapter.trim(),
-        number: maxNum + 1,
+        number: insertNum,
         courseId: finalCourseId,
       });
       finalChapterId = ref.id;
@@ -735,9 +738,11 @@ function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
 
     if (addingSection && newSection.trim() && finalChapterId) {
       const maxNum = sectionsRaw.reduce((max, s) => Math.max(max, s.number), 0);
+      const insertNum = sectionPosition === '' ? maxNum + 1 : Number(sectionPosition);
+      if (insertNum <= maxNum) await shiftItems('sections', 'chapterId', finalChapterId, insertNum);
       const ref = await addDoc(collection(db, 'sections'), {
         name: newSection.trim(),
-        number: maxNum + 1,
+        number: insertNum,
         chapterId: finalChapterId,
       });
       finalSectionId = ref.id;
@@ -757,22 +762,35 @@ function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
       <div className="space-y-1">
         <span className="text-xs font-medium text-[--color-text-muted]">Course</span>
         {addingCourse ? (
-          <div className="flex gap-2">
-            <input
-              type="text"
-              value={newCourse}
-              onChange={e => setNewCourse(e.target.value)}
-              placeholder="New course name"
-              className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-              autoFocus
-            />
-            <button
-              onClick={() => { setAddingCourse(false); setNewCourse(''); }}
-              className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
-              aria-label="Cancel new course"
+          <div className="space-y-2">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={newCourse}
+                onChange={e => setNewCourse(e.target.value)}
+                placeholder="New course name"
+                className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                autoFocus
+              />
+              <button
+                onClick={() => { setAddingCourse(false); setNewCourse(''); setCoursePosition(''); }}
+                className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+                aria-label="Cancel new course"
+              >
+                Cancel
+              </button>
+            </div>
+            <select
+              value={coursePosition}
+              onChange={e => setCoursePosition(e.target.value)}
+              className="w-full min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+              aria-label="Insert course at position"
             >
-              Cancel
-            </button>
+              <option value="">End of list</option>
+              {courses.map(c => (
+                <option key={c.id} value={c.number}>Before {c.number}. {c.name}</option>
+              ))}
+            </select>
           </div>
         ) : (
           <div className="flex gap-2">
@@ -799,22 +817,37 @@ function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
       <div className="space-y-1">
         <span className="text-xs font-medium text-[--color-text-muted]">Chapter</span>
         {addingChapter ? (
-          <div className="flex gap-2">
-            <input
-              type="text"
-              value={newChapter}
-              onChange={e => setNewChapter(e.target.value)}
-              placeholder="New chapter name"
-              className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-              autoFocus
-            />
-            <button
-              onClick={() => { setAddingChapter(false); setNewChapter(''); }}
-              className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
-              aria-label="Cancel new chapter"
-            >
-              Cancel
-            </button>
+          <div className="space-y-2">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={newChapter}
+                onChange={e => setNewChapter(e.target.value)}
+                placeholder="New chapter name"
+                className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                autoFocus
+              />
+              <button
+                onClick={() => { setAddingChapter(false); setNewChapter(''); setChapterPosition(''); }}
+                className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+                aria-label="Cancel new chapter"
+              >
+                Cancel
+              </button>
+            </div>
+            {chaptersRaw.length > 0 && (
+              <select
+                value={chapterPosition}
+                onChange={e => setChapterPosition(e.target.value)}
+                className="w-full min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                aria-label="Insert chapter at position"
+              >
+                <option value="">End of list</option>
+                {chaptersRaw.map(ch => (
+                  <option key={ch.id} value={ch.number}>Before {ch.number}. {ch.name}</option>
+                ))}
+              </select>
+            )}
           </div>
         ) : (
           <div className="flex gap-2">
@@ -844,22 +877,37 @@ function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
       <div className="space-y-1">
         <span className="text-xs font-medium text-[--color-text-muted]">Section</span>
         {addingSection ? (
-          <div className="flex gap-2">
-            <input
-              type="text"
-              value={newSection}
-              onChange={e => setNewSection(e.target.value)}
-              placeholder="New section name"
-              className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-              autoFocus
-            />
-            <button
-              onClick={() => { setAddingSection(false); setNewSection(''); }}
-              className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
-              aria-label="Cancel new section"
-            >
-              Cancel
-            </button>
+          <div className="space-y-2">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={newSection}
+                onChange={e => setNewSection(e.target.value)}
+                placeholder="New section name"
+                className="flex-1 rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                autoFocus
+              />
+              <button
+                onClick={() => { setAddingSection(false); setNewSection(''); setSectionPosition(''); }}
+                className="min-h-touch px-3 text-xs text-[--color-text-muted] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+                aria-label="Cancel new section"
+              >
+                Cancel
+              </button>
+            </div>
+            {sectionsRaw.length > 0 && (
+              <select
+                value={sectionPosition}
+                onChange={e => setSectionPosition(e.target.value)}
+                className="w-full min-h-touch rounded-[--radius-md] border border-[--color-border] px-3 text-sm bg-[--color-surface] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                aria-label="Insert section at position"
+              >
+                <option value="">End of list</option>
+                {sectionsRaw.map(s => (
+                  <option key={s.id} value={s.number}>Before {s.number}. {s.name}</option>
+                ))}
+              </select>
+            )}
           </div>
         ) : (
           <div className="flex gap-2">
@@ -915,7 +963,7 @@ function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
 
 function QuickCardAdder({ courses, onSave }) {
   const [step, setStep] = useState('fields'); // 'fields' | 'location'
-  const [fields, setFields] = useState({ question: '', answer: '', hint: '', explanation: '' });
+  const [fields, setFields] = useState({ question: '', answer: '', explanation: '' });
   const [saving, setSaving] = useState(false);
 
   async function handleLocationConfirm({ courseId, chapterId, sectionId }) {
@@ -924,7 +972,6 @@ function QuickCardAdder({ courses, onSave }) {
       await onSave({
         question: fields.question,
         answer: fields.answer,
-        hint: fields.hint,
         explanation: fields.explanation,
         courseId,
         chapterId,
@@ -932,7 +979,7 @@ function QuickCardAdder({ courses, onSave }) {
         cardType: 'sa',
         isPrivate: true,
       });
-      setFields({ question: '', answer: '', hint: '', explanation: '' });
+      setFields({ question: '', answer: '', explanation: '' });
       setStep('fields');
     } finally {
       setSaving(false);
@@ -953,13 +1000,13 @@ function QuickCardAdder({ courses, onSave }) {
 
   return (
     <div className="space-y-3">
-      {['question', 'answer', 'hint', 'explanation'].map(field => (
+      {['question', 'answer', 'explanation'].map(field => (
         <label key={field} className="block">
           <span className="text-xs font-medium text-[--color-text-muted] capitalize">{field}</span>
           <textarea
             value={fields[field]}
             onChange={e => setFields(f => ({ ...f, [field]: e.target.value }))}
-            rows={field === 'explanation' ? 4 : field === 'hint' ? 1 : 2}
+            rows={field === 'explanation' ? 4 : 2}
             className="mt-1 w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
           />
         </label>
@@ -1005,8 +1052,7 @@ function parseCardJson(raw) {
     return {
       question: String(entry[0] || ''),
       answer: String(entry[1] || ''),
-      hint: String(entry[2] || ''),
-      explanation: String(entry[3] || ''),
+      explanation: String(entry[2] || ''),
     };
   });
 }
@@ -1134,7 +1180,7 @@ function BatchUpload({ courses, onBatchSave }) {
           value={rawText}
           onChange={e => { setRawText(e.target.value); setParseError(''); }}
           rows={8}
-          placeholder='[["question", "answer", "hint", "explanation"], ...]'
+          placeholder='[["question", "answer", "explanation"], ...]'
           aria-label="Paste card JSON"
           className="mt-1 w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm font-mono bg-[--color-surface] text-[--color-text] resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
         />
@@ -1257,7 +1303,6 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
       const update = {
         question: fields.question,
         answer: fields.answer,
-        hint: fields.hint,
         explanation: fields.explanation,
       };
       if (publish) update.isPrivate = false;
