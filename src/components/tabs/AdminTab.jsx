@@ -298,7 +298,9 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
     question: card.question,
     answer: card.answer,
     explanation: card.explanation,
+    replaceArray: '',
   });
+  const [replaceError, setReplaceError] = useState('');
   const questionRef = useRef(null);
 
   useEffect(() => {
@@ -308,8 +310,28 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
   }, [card.id]);
 
   function handleEditSave() {
-    onEditSave(card.id, editFields);
+    let fields = editFields;
+    if (editFields.replaceArray.trim()) {
+      try {
+        const parsed = JSON.parse(editFields.replaceArray);
+        if (!Array.isArray(parsed) || parsed.length < 2) {
+          setReplaceError('Expected an array with at least [question, answer]');
+          return;
+        }
+        fields = {
+          question: String(parsed[0] || ''),
+          answer: String(parsed[1] || ''),
+          explanation: String(parsed[2] || ''),
+        };
+      } catch {
+        setReplaceError('Invalid JSON');
+        return;
+      }
+    }
+    const { replaceArray, ...saveFields } = fields;
+    onEditSave(card.id, saveFields);
     setEditing(false);
+    setReplaceError('');
   }
 
   return (
@@ -353,6 +375,17 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
                 className="mt-1 w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
               />
             </label>
+            <label className="block">
+              <span className="text-xs font-medium text-[--color-text-muted]">Replace with array</span>
+              <textarea
+                value={editFields.replaceArray}
+                onChange={e => { setEditFields(f => ({ ...f, replaceArray: e.target.value })); setReplaceError(''); }}
+                rows={3}
+                placeholder='["question", "answer", "explanation"]'
+                className="mt-1 w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] font-mono"
+              />
+              {replaceError && <p className="text-xs text-red-500 mt-1">{replaceError}</p>}
+            </label>
             <div className="flex gap-2">
               <button
                 onClick={handleEditSave}
@@ -361,7 +394,7 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
                 Save
               </button>
               <button
-                onClick={() => { setEditing(false); setEditFields({ question: card.question, answer: card.answer, explanation: card.explanation }); }}
+                onClick={() => { setEditing(false); setReplaceError(''); setEditFields({ question: card.question, answer: card.answer, explanation: card.explanation, replaceArray: '' }); }}
                 className="min-h-touch px-4 rounded-[--radius-md] text-sm text-[--color-text-muted] hover:text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
               >
                 Cancel
