@@ -7,12 +7,9 @@ import useErrorLog from '../../hooks/useErrorLog.js';
 import useReviewedCards from '../../hooks/useReviewedCards.js';
 
 const ISSUE_TAGS = [
-
-  'Bad explanation',
-  'Unclear question',
-  'Wrong answer',
-  'Duplicate card',
-  'Needs image',
+  'Question',
+  'Answer',
+  'Explanation',
 ];
 
 // ── Accordion wrapper ────────────────────────────────────────────────────────
