@@ -291,6 +291,8 @@ function IssuePicker({ onConfirm, onCancel }) {
 
 function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }) {
   const [showIssues, setShowIssues] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [copied, setCopied] = useState(false);
   const [editing, setEditing] = useState(false);
   const [editFields, setEditFields] = useState({
     question: card.question,
@@ -301,6 +303,8 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
 
   useEffect(() => {
     questionRef.current?.focus();
+    setCopied(false);
+    setShowMenu(false);
   }, [card.id]);
 
   function handleEditSave() {
@@ -401,12 +405,42 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
               Issues
             </button>
           </div>
-          <button
-            onClick={() => setEditing(true)}
-            className="w-full min-h-touch rounded-[--radius-md] text-sm font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
-          >
-            Edit
-          </button>
+          <div className="relative">
+            <button
+              onClick={() => setShowMenu(m => !m)}
+              aria-label="More actions"
+              aria-expanded={showMenu}
+              className="w-full min-h-touch rounded-[--radius-md] text-sm font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+            >
+              More ▾
+            </button>
+            {showMenu && (
+              <div className="absolute bottom-full left-0 right-0 mb-1 rounded-[--radius-md] border border-[--color-border] bg-[--color-surface-raised] shadow-lg overflow-hidden">
+                <button
+                  onClick={() => { setShowMenu(false); setEditing(true); }}
+                  className="w-full min-h-touch px-4 text-left text-sm text-[--color-text] hover:bg-[--color-surface-sunken] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[--color-focus]"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={async () => {
+                    const json = JSON.stringify([card.question, card.answer, card.explanation]);
+                    try {
+                      await navigator.clipboard.writeText(json);
+                      setCopied(true);
+                      setTimeout(() => setCopied(false), 1500);
+                    } catch (err) {
+                      console.error('Failed to copy:', err);
+                    }
+                    setShowMenu(false);
+                  }}
+                  className="w-full min-h-touch px-4 text-left text-sm text-[--color-text] hover:bg-[--color-surface-sunken] border-t border-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[--color-focus]"
+                >
+                  {copied ? 'Copied!' : 'Copy to clipboard'}
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       )}
 
