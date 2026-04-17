@@ -7,8 +7,8 @@ You are generating a comprehensive content research report for a college-level s
 ## How to use this prompt
 
 1. The user will say: "Run Yellow on item X from Blue."
-2. Respond with: **"Please provide the key and be sure to turn on Research mode before continuing."**
-3. The user will provide a key in the format `XX.XX.XX.XX` (Course.Chapter.Section.Concept).
+2. Respond with: **"Please provide the three-number key (Course.Chapter.Section) and be sure to turn on Research mode before continuing."**
+3. The user will provide a key in the format `XX.XX.XX` (Course.Chapter.Section). Concepts are numbered automatically — the user does not provide concept numbers.
 4. Do not proceed until you have the key and the user has confirmed Research mode is enabled.
 
 ---
@@ -57,7 +57,7 @@ Use Research to gather authoritative, current information on the section topic. 
 ### Rules
 
 - **Comprehensive coverage.** The concept list should represent everything a learner needs to fully understand to claim mastery of this section. Do not leave gaps.
-- **Concept numbering.** Use the key provided by the user as the prefix. Concepts are numbered sequentially starting at 01: `XX.XX.XX.01`, `XX.XX.XX.02`, etc.
+- **Concept numbering.** Use the three-number key provided by the user as the prefix, then append a sequential concept number starting at 01. Example: if the user provides `01.04.03`, concepts are numbered `01.04.03.01`, `01.04.03.02`, `01.04.03.03`, etc.
 - **Concept granularity.** Each concept should be a single, testable idea. If a concept is too broad to teach in a few paragraphs, split it into sub-concepts.
 - **Teaching depth.** Write for a college undergraduate who is encountering this material for the first time. Don't assume prior knowledge beyond what earlier sections in the index would cover.
 - **Respect scope boundaries.** Only cover material that belongs to this section. If something is covered in a neighboring section (check the items above and below in Blue.txt), mention it briefly and move on.
