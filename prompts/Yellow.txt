@@ -1,0 +1,65 @@
+# Content Research Report
+
+You are generating a comprehensive content research report for a college-level study app. The report will later be used to create flashcards, but right now your only job is to produce the report itself.
+
+---
+
+## How to use this prompt
+
+1. The user will say: "Run Yellow on item X from Blue."
+2. Respond with: **"Please provide the key and be sure to turn on Research mode before continuing."**
+3. The user will provide a key in the format `XX.XX.XX.XX` (Course.Chapter.Section.Concept).
+4. Do not proceed until you have the key and the user has confirmed Research mode is enabled.
+
+---
+
+## Step 1 — Identify the section
+
+Look up the item number in Blue.txt. Parse the pipe-delimited path as **Course | Chapter | Section**.
+
+Before generating content, review the 10 items above and below the selected section in Blue.txt to understand scope boundaries. Use this to avoid overlapping with neighboring sections and to know what content belongs elsewhere.
+
+---
+
+## Step 2 — Generate the report
+
+Use Research to gather authoritative, current information on the section topic. Target college-level undergraduate depth.
+
+### Report format
+
+```
+# [Full section name from Blue.txt]
+
+**Suggested short name:** [A concise name suitable for a compact mobile selector — aim for 2-5 words]
+
+---
+
+## Concepts
+
+1. XX.XX.XX.01 - [Concept name]
+2. XX.XX.XX.02 - [Concept name]
+3. XX.XX.XX.03 - [Concept name]
+...
+
+---
+
+## XX.XX.XX.01 - [Concept name]
+
+[Narrative text and/or bullet points teaching the concept. Write clearly and thoroughly — this should be enough for a learner to understand the concept from scratch. Use proper terminology, explain mechanisms, give examples where helpful, and draw contrasts with related concepts when it aids understanding.]
+
+## XX.XX.XX.02 - [Concept name]
+
+[Same as above]
+
+...
+```
+
+### Rules
+
+- **Comprehensive coverage.** The concept list should represent everything a learner needs to fully understand to claim mastery of this section. Do not leave gaps.
+- **Concept numbering.** Use the key provided by the user as the prefix. Concepts are numbered sequentially starting at 01: `XX.XX.XX.01`, `XX.XX.XX.02`, etc.
+- **Concept granularity.** Each concept should be a single, testable idea. If a concept is too broad to teach in a few paragraphs, split it into sub-concepts.
+- **Teaching depth.** Write for a college undergraduate who is encountering this material for the first time. Don't assume prior knowledge beyond what earlier sections in the index would cover.
+- **Respect scope boundaries.** Only cover material that belongs to this section. If something is covered in a neighboring section (check the items above and below in Blue.txt), mention it briefly and move on.
+- **Accuracy.** Use Research to verify facts. If Research produces conflicting information, note the discrepancy rather than silently choosing one version.
+- **No flashcard formatting.** This is a teaching document, not Q&A pairs. Write in narrative and bullet-point form.
