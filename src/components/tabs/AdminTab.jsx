@@ -5,6 +5,7 @@ import { loadAllCoursesAdmin, getCardsBySectionIds, shuffle, invalidateCache } f
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
 import useErrorLog from '../../hooks/useErrorLog.js';
 import useReviewedCards from '../../hooks/useReviewedCards.js';
+import useInspirations from '../../hooks/useInspirations.js';
 
 const ISSUE_TAGS = [
   'Question',
@@ -287,11 +288,66 @@ function IssuePicker({ onConfirm, onCancel }) {
   );
 }
 
+// ── Inspiration modal ────────────────────────────────────────────────────────
+
+function InspirationModal({ defaultText, onSave, onCancel }) {
+  const [text, setText] = useState(defaultText);
+  const textareaRef = useRef(null);
+
+  useEffect(() => {
+    const el = textareaRef.current;
+    if (el) {
+      el.focus();
+      el.setSelectionRange(el.value.length, el.value.length);
+    }
+  }, []);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40">
+      <div className="w-full max-w-lg bg-[--color-surface] rounded-t-2xl p-4 space-y-3">
+        <h3 tabIndex={-1} className="text-sm font-semibold text-[--color-text] outline-none">
+          Capture inspiration
+        </h3>
+        <textarea
+          ref={textareaRef}
+          value={text}
+          onChange={e => setText(e.target.value)}
+          rows={6}
+          aria-label="Inspiration notes"
+          className="w-full rounded-[--radius-md] border border-[--color-border] px-3 py-2 text-sm bg-[--color-surface] text-[--color-text] resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+        />
+        <div className="flex gap-2">
+          <button
+            onClick={() => onSave(text)}
+            disabled={text.trim() === defaultText.trim()}
+            className={[
+              'flex-1 min-h-touch rounded-[--radius-md] text-sm font-medium transition-colors',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+              text.trim() !== defaultText.trim()
+                ? 'bg-[--color-brand] hover:bg-[--color-brand-dark] text-white'
+                : 'bg-[--color-surface-sunken] text-[--color-text-muted] cursor-not-allowed',
+            ].join(' ')}
+          >
+            Save
+          </button>
+          <button
+            onClick={onCancel}
+            className="min-h-touch px-4 rounded-[--radius-md] text-sm text-[--color-text-muted] hover:text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── Card review viewer ───────────────────────────────────────────────────────
 
-function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }) {
+function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave, onInspiration }) {
   const [showIssues, setShowIssues] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [showInspiration, setShowInspiration] = useState(false);
   const [copied, setCopied] = useState(false);
   const [editing, setEditing] = useState(false);
   const [editFields, setEditFields] = useState({
@@ -305,8 +361,6 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
 
   useEffect(() => {
     questionRef.current?.focus();
-    setCopied(false);
-    setShowMenu(false);
   }, [card.id]);
 
   function handleEditSave() {
@@ -328,7 +382,7 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
         return;
       }
     }
-    const { replaceArray, ...saveFields } = fields;
+    const { replaceArray: _, ...saveFields } = fields;
     onEditSave(card.id, saveFields);
     setEditing(false);
     setReplaceError('');
@@ -471,6 +525,12 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
                 >
                   {copied ? 'Copied!' : 'Copy to clipboard'}
                 </button>
+                <button
+                  onClick={() => { setShowMenu(false); setShowInspiration(true); }}
+                  className="w-full min-h-touch px-4 text-left text-sm text-[--color-text] hover:bg-[--color-surface-sunken] border-t border-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[--color-focus]"
+                >
+                  Inspiration
+                </button>
               </div>
             )}
           </div>
@@ -481,6 +541,14 @@ function CardReviewViewer({ card, index, total, onAccept, onIssues, onEditSave }
         <IssuePicker
           onConfirm={(tags) => { setShowIssues(false); onIssues(tags); }}
           onCancel={() => setShowIssues(false)}
+        />
+      )}
+
+      {showInspiration && (
+        <InspirationModal
+          defaultText={`Course: ${card.courseName}\nChapter: ${card.chapterName}\nSection: ${card.sectionName}\nIdea: `}
+          onSave={(text) => { setShowInspiration(false); onInspiration(text); }}
+          onCancel={() => setShowInspiration(false)}
         />
       )}
     </div>
@@ -1023,6 +1091,51 @@ function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
   );
 }
 
+// ── Inspirations ─────────────────────────────────────────────────────────────
+
+function InspirationsContent({ inspirations, onSave, onDelete }) {
+  const [showAdd, setShowAdd] = useState(false);
+  const TBC_TEMPLATE = 'Course: TBC\nChapter: TBC\nSection: TBC\nIdea: ';
+
+  return (
+    <div className="space-y-3">
+      <button
+        onClick={() => setShowAdd(true)}
+        className="w-full min-h-touch rounded-[--radius-md] text-sm font-medium bg-[--color-brand] hover:bg-[--color-brand-dark] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+      >
+        Add inspiration
+      </button>
+
+      {inspirations.length === 0 && (
+        <p className="text-xs text-[--color-text-muted]">No inspirations saved.</p>
+      )}
+
+      <div className="max-h-80 overflow-y-auto space-y-2">
+        {inspirations.map(insp => (
+          <div key={insp.id} className="border border-[--color-border] rounded-[--radius-sm] p-3 space-y-2">
+            <p className="text-sm text-[--color-text] whitespace-pre-wrap">{insp.text}</p>
+            <button
+              onClick={() => onDelete(insp.id)}
+              aria-label="Dismiss inspiration"
+              className="min-h-touch px-3 rounded-[--radius-md] text-xs text-red-600 hover:text-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+            >
+              Dismiss
+            </button>
+          </div>
+        ))}
+      </div>
+
+      {showAdd && (
+        <InspirationModal
+          defaultText={TBC_TEMPLATE}
+          onSave={(text) => { setShowAdd(false); onSave(text); }}
+          onCancel={() => setShowAdd(false)}
+        />
+      )}
+    </div>
+  );
+}
+
 // ── Quick Card Adder ────────────────────────────────────────────────────────
 
 function QuickCardAdder({ courses, onSave }) {
@@ -1326,6 +1439,7 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
   const [toast, setToast] = useState(null);
   const { errors, loading: errorsLoading, clearAll } = useErrorLog(user, isAdmin);
   const { reviewedMap, loading: reviewLoading, saveReview } = useReviewedCards(user, isAdmin);
+  const { inspirations, loading: inspirationsLoading, saveInspiration, deleteInspiration } = useInspirations(user, isAdmin);
 
   function showToast(msg, type = 'error') {
     setToast({ msg, type });
@@ -1347,10 +1461,10 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
   }, []);
 
   useEffect(() => {
-    if (!loading && !errorsLoading && !reviewLoading) {
+    if (!loading && !errorsLoading && !reviewLoading && !inspirationsLoading) {
       headingRef.current?.focus();
     }
-  }, [loading, errorsLoading, reviewLoading]);
+  }, [loading, errorsLoading, reviewLoading, inspirationsLoading]);
 
   useEffect(() => {
     onReviewing?.(reviewScreen === 'reviewing' || reviewScreen === 'summary');
@@ -1472,13 +1586,18 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
     }
   }
 
+  async function handleInspiration(text) {
+    await saveInspiration(text);
+    showToast('Inspiration saved', 'success');
+  }
+
   function handleReviewDone() {
     invalidateCache();
     loadAllCoursesAdmin().then(data => setCourses(data));
     setReviewScreen('picker');
   }
 
-  if (loading || errorsLoading || reviewLoading) {
+  if (loading || errorsLoading || reviewLoading || inspirationsLoading) {
     return (
       <div className="flex items-center justify-center h-full">
         <p className="text-sm text-[--color-text-muted]" role="status">Loading...</p>
@@ -1505,6 +1624,7 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
           onAccept={handleAccept}
           onIssues={handleIssues}
           onEditSave={handleEditSave}
+          onInspiration={handleInspiration}
         />
       </div>
     );
@@ -1562,6 +1682,15 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
           onToggle={() => toggleSection('reviewed')}
         >
           <ReviewedCardsContent courses={courses} reviewedMap={reviewedMap} onEditSave={handleEditSave} />
+        </AccordionSection>
+
+        <AccordionSection
+          title="Inspirations"
+          badge={inspirations.length}
+          open={openSection === 'inspirations'}
+          onToggle={() => toggleSection('inspirations')}
+        >
+          <InspirationsContent inspirations={inspirations} onSave={saveInspiration} onDelete={deleteInspiration} />
         </AccordionSection>
 
         <AccordionSection
