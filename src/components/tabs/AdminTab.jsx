@@ -1093,8 +1093,9 @@ function LocationPicker({ courses, onConfirm, onBack, confirmLabel, saving }) {
 
 // ── Inspirations ─────────────────────────────────────────────────────────────
 
-function InspirationsContent({ inspirations, onSave, onDelete }) {
+function InspirationsContent({ inspirations, onSave, onCreate }) {
   const [showAdd, setShowAdd] = useState(false);
+  const [expandedId, setExpandedId] = useState(null);
   const TBC_TEMPLATE = 'Course: TBC\nChapter: TBC\nSection: TBC\nIdea: ';
 
   return (
@@ -1112,15 +1113,33 @@ function InspirationsContent({ inspirations, onSave, onDelete }) {
 
       <div className="max-h-80 overflow-y-auto space-y-2">
         {inspirations.map(insp => (
-          <div key={insp.id} className="border border-[--color-border] rounded-[--radius-sm] p-3 space-y-2">
-            <p className="text-sm text-[--color-text] whitespace-pre-wrap">{insp.text}</p>
+          <div key={insp.id} className="border border-[--color-border] rounded-[--radius-sm] overflow-hidden">
             <button
-              onClick={() => onDelete(insp.id)}
-              aria-label="Dismiss inspiration"
-              className="min-h-touch px-3 rounded-[--radius-md] text-xs text-red-600 hover:text-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+              onClick={() => setExpandedId(prev => prev === insp.id ? null : insp.id)}
+              aria-expanded={expandedId === insp.id}
+              className="w-full min-h-touch px-3 py-2 text-left text-sm text-[--color-text] hover:bg-[--color-surface-sunken] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[--color-focus]"
             >
-              Dismiss
+              <p className="truncate">{insp.text.split('\n').pop()}</p>
             </button>
+            {expandedId === insp.id && (
+              <div className="px-3 pb-3 space-y-2 border-t border-[--color-border]">
+                <p className="text-sm text-[--color-text] whitespace-pre-wrap pt-2">{insp.text}</p>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => onCreate(insp.id)}
+                    className="flex-1 min-h-touch rounded-[--radius-md] text-sm font-medium bg-[--color-brand] hover:bg-[--color-brand-dark] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                  >
+                    Create
+                  </button>
+                  <button
+                    onClick={() => setExpandedId(null)}
+                    className="flex-1 min-h-touch rounded-[--radius-md] text-sm font-medium bg-[--color-surface-sunken] text-[--color-text] hover:bg-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+                  >
+                    Done
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -1446,6 +1465,8 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
     setTimeout(() => setToast(null), 3000);
   }
 
+  const [pendingInspirationId, setPendingInspirationId] = useState(null);
+
   // Card review flow state
   const [reviewScreen, setReviewScreen] = useState('picker'); // 'picker' | 'reviewing' | 'summary'
   const [reviewCards, setReviewCards] = useState([]);
@@ -1517,6 +1538,10 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
       const data = await loadAllCoursesAdmin();
       setCourses(data);
       showToast('Card added', 'success');
+      if (pendingInspirationId) {
+        await deleteInspiration(pendingInspirationId);
+        setPendingInspirationId(null);
+      }
     } catch (err) {
       console.error('Failed to add card:', err);
       showToast('Failed to add card');
@@ -1690,7 +1715,11 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
           open={openSection === 'inspirations'}
           onToggle={() => toggleSection('inspirations')}
         >
-          <InspirationsContent inspirations={inspirations} onSave={saveInspiration} onDelete={deleteInspiration} />
+          <InspirationsContent
+            inspirations={inspirations}
+            onSave={saveInspiration}
+            onCreate={(id) => { setPendingInspirationId(id); setOpenSection('adder'); }}
+          />
         </AccordionSection>
 
         <AccordionSection
