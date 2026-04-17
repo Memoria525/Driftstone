@@ -1430,7 +1430,8 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
   // ── Card review flow ──
 
   function handleStartReview(selected, allCourses) {
-    const cards = getCardsBySectionIds(allCourses, selected);
+    const cards = getCardsBySectionIds(allCourses, selected)
+      .filter(c => !reviewedMap.has(c.id));
     const shuffled = shuffle(cards);
     if (shuffled.length === 0) return;
     setReviewCards(shuffled);
