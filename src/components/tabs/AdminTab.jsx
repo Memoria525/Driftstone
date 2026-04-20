@@ -1421,18 +1421,76 @@ function normalizeStructuralSmartQuotes(s) {
   return s;
 }
 
+function posToLineCol(s, pos) {
+  let line = 1, col = 1;
+  for (let i = 0; i < pos && i < s.length; i++) {
+    if (s[i] === '\n') { line++; col = 1; } else col++;
+  }
+  return { line, col };
+}
+
+function findFirstInvalidEscape(s) {
+  const VALID = new Set(['"', '\\', '/', 'b', 'f', 'n', 'r', 't', 'u']);
+  let inString = false;
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i];
+    if (inString) {
+      if (c === '\\') {
+        const next = s[i + 1];
+        if (!VALID.has(next)) return i;
+        if (next === 'u') {
+          const hex = s.slice(i + 2, i + 6);
+          if (!/^[0-9a-fA-F]{4}$/.test(hex)) return i;
+          i += 5;
+        } else {
+          i += 1;
+        }
+      } else if (c === '"') {
+        inString = false;
+      }
+    } else if (c === '"') {
+      inString = true;
+    }
+  }
+  return -1;
+}
+
+function jsonErrorDetail(source, err) {
+  const msg = String(err.message || err);
+  // Try to extract a position from the error (V8 style: "at position N")
+  const posMatch = msg.match(/position (\d+)/i);
+  let pos = posMatch ? parseInt(posMatch[1], 10) : -1;
+
+  // WebKit (Safari) doesn't include a position. For "Invalid escape character"
+  // we can locate the first offender ourselves.
+  if (pos < 0 && /invalid escape/i.test(msg)) {
+    pos = findFirstInvalidEscape(source);
+  }
+
+  if (pos < 0) return msg;
+
+  const { line, col } = posToLineCol(source, pos);
+  const lineStart = source.lastIndexOf('\n', pos - 1) + 1;
+  const lineEnd = source.indexOf('\n', pos);
+  const lineText = source.slice(lineStart, lineEnd < 0 ? source.length : lineEnd);
+  const snippet = lineText.length > 120
+    ? '…' + lineText.slice(Math.max(0, col - 40), col + 40) + '…'
+    : lineText;
+  return `${msg} (line ${line}, column ${col})\n${snippet}`;
+}
+
 function parseConceptJson(raw) {
   const stripped = stripCodeFence(raw.trim());
   if (!stripped) throw new Error('Paste the Yellow output JSON');
   let data;
   try {
     data = JSON.parse(stripped);
-  } catch {
+  } catch (err1) {
     // Retry with smart-quote normalization
     try {
       data = JSON.parse(normalizeStructuralSmartQuotes(stripped));
-    } catch (err2) {
-      throw new Error('Invalid JSON: ' + err2.message);
+    } catch {
+      throw new Error('Invalid JSON: ' + jsonErrorDetail(stripped, err1));
     }
   }
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
@@ -1506,7 +1564,7 @@ function ConceptUpload({ onUpload }) {
       />
 
       {parseError && (
-        <p className="text-xs text-red-600" role="alert">{parseError}</p>
+        <pre className="text-xs text-red-600 whitespace-pre-wrap font-mono" role="alert">{parseError}</pre>
       )}
 
       {parsed && (
