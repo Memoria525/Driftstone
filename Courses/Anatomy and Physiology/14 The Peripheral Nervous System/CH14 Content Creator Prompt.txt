@@ -1,0 +1,42 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 3 — Regulation and Integration
+Chapter 14 — The Peripheral Nervous System
+	1.	Overview of the peripheral nervous system
+	2.	Brief history of the study of peripheral nerves
+	3.	Functions of the PNS
+	4.	Structural organization of the PNS: nerves, ganglia, and receptors
+	5.	Nerve structure: endoneurium, perineurium, and epineurium
+	6.	Cranial nerves: classification, names, numbers, origins, and primary functions
+	7.	Spinal nerves: formation from dorsal and ventral roots, dorsal and ventral rami, and their distributions
+	8.	Nerve plexuses: cervical, brachial, lumbar, and sacral
+	9.	Intercostal (thoracic) nerves
+	10.	Sensory receptors: classification by structure, function, and stimulus type; receptor potentials, sensory transduction, and adaptation
+	11.	Sensory and motor pathways: from receptor to cortex and cortex to effector
+	12.	Upper and lower motor neurons
+	13.	Dermatomes and their clinical significance
+	14.	Peripheral nerve injury: classification and regeneration
+	15.	Effects of aging on the peripheral nervous system
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.

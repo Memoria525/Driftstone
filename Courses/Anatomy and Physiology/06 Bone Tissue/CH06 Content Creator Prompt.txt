@@ -1,0 +1,48 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 2 — Support and Movement
+Chapter 6 — Bone Tissue
+	1.	Overview of the skeletal system
+	2.	Brief history of osteology and skeletal science
+	3.	Functions of the skeletal system
+	4.	Classification of bones by shape (long, short, flat, irregular, sesamoid)
+	5.	General features of bone: periosteum, endosteum, and marrow cavities
+	6.	Gross anatomy of a long bone
+	7.	Gross anatomy of flat, short, and irregular bones
+	8.	Bone marrow: red and yellow marrow
+	9.	The extracellular matrix of bone: organic and inorganic components
+	10.	Cells of bone tissue: osteoprogenitor cells, osteoblasts, osteocytes, and osteoclasts
+	11.	Histological organization of bone tissue: compact (cortical) bone and spongy (cancellous/trabecular) bone
+	12.	Blood supply and innervation of bone
+	13.	Bone formation and growth: intramembranous ossification, endochondral ossification, and mechanisms of lengthening and widening
+	14.	Bone remodeling, Wolff's law, and mechanical stress
+	15.	Hormonal regulation of bone (PTH, calcitonin, growth hormone, sex hormones, vitamin D)
+	16.	Calcium and phosphate homeostasis
+	17.	Nutritional requirements for healthy bone
+	18.	Fracture classification
+	19.	Fracture repair: the healing process
+	20.	Effects of aging on bone tissue
+	21.	Bone disorders: osteoporosis, osteomalacia, rickets, Paget's disease, and osteogenesis imperfecta
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.

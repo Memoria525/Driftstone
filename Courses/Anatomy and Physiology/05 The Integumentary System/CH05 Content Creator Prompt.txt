@@ -1,0 +1,49 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 2 — Support and Movement
+Chapter 5 — The Integumentary System
+	1.	Overview of the integumentary system
+	2.	Brief history of dermatology and skin science
+	3.	Skin as an organ: general structure
+	4.	The epidermis: layers, cell types, and epidermal ridges
+	5.	Skin color and pigmentation
+	6.	The dermis: papillary and reticular layers
+	7.	Dermal fibers, vasculature, and innervation
+	8.	The hypodermis: structure and function
+	9.	Hair: structure, distribution, and function
+	10.	The hair growth cycle
+	11.	Nails: structure, growth, and function
+	12.	Sebaceous glands: structure, secretion, and function
+	13.	Sweat glands: eccrine and apocrine
+	14.	Ceruminous glands and mammary glands as integumentary glands
+	15.	Sensory receptors of the skin
+	16.	Thermoregulation
+	17.	Vitamin D synthesis
+	18.	Skin as an immune barrier
+	19.	Wound healing and tissue repair
+	20.	Burns: classification and systemic consequences
+	21.	Skin cancer: types and risk factors
+	22.	Effects of aging on the integumentary system
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.

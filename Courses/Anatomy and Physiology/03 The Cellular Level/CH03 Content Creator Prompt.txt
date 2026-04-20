@@ -1,0 +1,49 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 1 — Organization of the Body
+Chapter 3 — The Cellular Level of Organization
+	1.	Cell theory and the modern cell doctrine
+	2.	Brief history of cell biology
+	3.	Overview of cell diversity and the generalized cell
+	4.	The plasma membrane: structure and the fluid mosaic model
+	5.	Membrane transport: passive and active mechanisms
+	6.	The cytoplasm: cytosol and inclusions
+	7.	The cytoskeleton: microfilaments, intermediate filaments, microtubules
+	8.	The nucleus: structure and contents
+	9.	DNA packaging: chromatin and chromosomes
+	10.	Overview of organelles: structure and function
+	11.	Organelles: the endomembrane system and protein synthesis (ribosomes, rough ER, Golgi, vesicles)
+	12.	Organelles: secretion, digestion, and waste management (Golgi, vesicles, lysosomes)
+	13.	Organelles: energy metabolism and detoxification (mitochondria, smooth ER, peroxisomes)
+	14.	Organelles: lipid synthesis and membrane production (smooth ER, Golgi)
+	15.	Organelles: structural and motile (centrosomes, cilia, flagella)
+	16.	The cell cycle: interphase, regulation, checkpoints, and apoptosis
+	17.	Cell division: mitosis, cytokinesis, and meiosis overview
+	18.	Protein synthesis: transcription and translation
+	19.	Cell junctions (tight, gap, desmosomes)
+	20.	Cell signaling and signal transduction
+	21.	Stem cells and differentiation
+	22.	Cellular aging and senescence
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.

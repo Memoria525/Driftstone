@@ -1,0 +1,37 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 3 — Regulation and Integration
+Chapter 16 — Sensory Systems (Special Senses)
+	1.	Overview and history of sensory physiology
+	2.	Functions of the special senses
+	3.	General principles of sensory processing: sensation vs. perception
+	4.	Olfaction: anatomy of the olfactory epithelium, olfactory receptors, and the olfactory pathway
+	5.	Gustation: anatomy of taste buds, taste receptor cells, taste modalities, and the gustatory pathway
+	6.	The ear and hearing: external, middle, and inner ear anatomy; sound transmission, the organ of Corti, hair cell transduction, and the auditory pathway
+	7.	Equilibrium: vestibular apparatus, macular organs, semicircular canals, static and dynamic equilibrium, and the vestibular pathway
+	8.	The eye and vision: accessory structures, anatomy of the eyeball, the retina and phototransduction, the visual pathway, and visual processing
+	9.	Common disorders of the special senses: hearing loss, vertigo, cataracts, glaucoma, and macular degeneration
+	10.	Effects of aging on the special senses
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.

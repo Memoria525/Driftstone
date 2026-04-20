@@ -1,0 +1,38 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 5 — Continuity
+Chapter 27 — The Reproductive Systems
+	1.	Overview and history of the study of human reproduction
+	2.	Functions of the reproductive systems
+	3.	Sexual differentiation and development: chromosomal, gonadal, and phenotypic sex determination
+	4.	Anatomy of the female reproductive system: ovaries, uterine tubes, uterus, vagina, external genitalia, and mammary glands
+	5.	The female reproductive cycles: oogenesis, follicular development, the ovarian cycle, ovulation, and the uterine (menstrual) cycle
+	6.	Hormonal regulation of the female reproductive cycles: GnRH, LH, FSH, estrogen, progesterone, inhibin, and coordination of the ovarian and uterine cycles
+	7.	Anatomy of the male reproductive system: testes, epididymis, ductus deferens, ejaculatory duct, urethra, accessory glands, and the penis
+	8.	Spermatogenesis and hormonal regulation of male reproduction: stages, spermiogenesis, sustentacular cells, semen, GnRH, LH, FSH, testosterone, and inhibin
+	9.	The physiology of sexual response
+	10.	Common reproductive disorders
+	11.	Effects of aging on the reproductive systems: male and female
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.

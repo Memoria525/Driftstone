@@ -1,0 +1,11 @@
+Unit 5 — Continuity
+Chapter 29 — Heredity: Principles of Genetics and Inheritance
+	1.	Overview and history of the study of genetics
+	2.	The molecular basis of inheritance: DNA, genes, chromosomes, autosomes, sex chromosomes, and the karyotype
+	3.	Gene expression: from genotype to phenotype
+	4.	Mendelian genetics: alleles, laws of segregation and independent assortment, and Punnett squares
+	5.	Complex patterns of inheritance: incomplete dominance, codominance, multiple alleles, polygenic inheritance, sex-linked inheritance, and X-inactivation
+	6.	Epigenetics: gene regulation beyond DNA sequence
+	7.	Chromosomal abnormalities: nondisjunction, trisomy, monosomy, deletions, and translocations
+	8.	Common genetic disorders
+	9.	Genetic counseling and pedigree analysis

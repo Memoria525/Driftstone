@@ -1,0 +1,46 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 1 — Organization of the Body
+Chapter 4 — The Tissue Level of Organization
+	1.	Definition of tissues and the study of histology
+	2.	Brief history of histology
+	3.	Embryonic origin of tissues: the three germ layers
+	4.	Overview and classification of tissue types
+	5.	Epithelial tissue: characteristics and general functions
+	6.	Epithelial tissue: classification by cell shape and layering
+	7.	Epithelial tissue: functional specializations, and glands as epithelial derivatives
+	8.	Connective tissue: characteristics and general functions
+	9.	Connective tissue: cells and their roles
+	10.	Connective tissue: fibers (collagen, reticular, elastic)
+	11.	Connective tissue: ground substance and the extracellular matrix
+	12.	The extracellular matrix and cell-to-matrix interactions
+	13.	Connective tissue proper: loose and dense types
+	14.	Specialized connective tissues: cartilage, bone, blood, and adipose
+	15.	Muscle tissue: overview of the three types
+	16.	Nervous tissue: neurons and glial cells
+	17.	Tissue membranes: mucous, serous, cutaneous, synovial
+	18.	Tissue repair and regeneration
+	19.	Aging and tissues
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.

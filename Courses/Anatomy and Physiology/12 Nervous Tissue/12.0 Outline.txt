@@ -1,0 +1,17 @@
+Unit 3 — Regulation and Integration
+Chapter 12 — Nervous Tissue
+	1.	Overview of nervous tissue
+	2.	Brief history of neuroscience
+	3.	Divisions of the nervous system: central (CNS) and peripheral (PNS), somatic and autonomic
+	4.	Functions of the nervous system
+	5.	Structural and functional classification of neurons
+	6.	Anatomy of a neuron: cell body, dendrites, axons, and transport mechanisms
+	7.	The synapse: structure, synaptic cleft, and synaptic vesicles
+	8.	Neuroglia of the CNS and PNS
+	9.	Myelination: formation, function, nodes of Ranvier, and saltatory conduction
+	10.	Membrane potentials and electrical signaling: resting membrane potential, graded potentials, the action potential, refractory periods, and factors affecting propagation speed
+	11.	Synaptic transmission: electrical and chemical synapses, neurotransmitter classification, release, receptor binding, and removal
+	12.	Postsynaptic potentials and synaptic integration: EPSPs, IPSPs, spatial and temporal summation
+	13.	Neural circuits: diverging, converging, reverberating, and parallel after-discharge
+	14.	Neuronal plasticity, damage, and repair
+	15.	Effects of aging on nervous tissue

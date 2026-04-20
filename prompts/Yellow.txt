@@ -6,7 +6,7 @@ You are generating a comprehensive content research report for a college-level s
 
 ## How to use this prompt
 
-1. The user will say: "Run Yellow on item X from Blue."
+1. The user will say: "Run Yellow on item X"
 2. Respond with: **"Please provide the three-number key (Course.Chapter.Section) and be sure to turn on Research mode before continuing."**
 3. The user will provide a key in the format `XX.XX.XX` (Course.Chapter.Section). Concepts are numbered automatically — the user does not provide concept numbers.
 4. Do not proceed until you have the key and the user has confirmed Research mode is enabled.
@@ -27,31 +27,19 @@ Use Research to gather authoritative, current information on the section topic. 
 
 ### Report format
 
-```
-# [Full section name from Blue.txt]
+Output a single JSON object and nothing else. No prose before or after, no code fence, no explanation. The object is a flat map keyed by full concept ID.
 
-**Suggested short name:** [A concise name suitable for a compact mobile selector — aim for 2-5 words]
-
----
-
-## Concepts
-
-1. XX.XX.XX.01 - [Concept name]
-2. XX.XX.XX.02 - [Concept name]
-3. XX.XX.XX.03 - [Concept name]
-...
-
----
-
-## XX.XX.XX.01 - [Concept name]
-
-[Narrative text and/or bullet points teaching the concept. Write clearly and thoroughly — this should be enough for a learner to understand the concept from scratch. Use proper terminology, explain mechanisms, give examples where helpful, and draw contrasts with related concepts when it aids understanding.]
-
-## XX.XX.XX.02 - [Concept name]
-
-[Same as above]
-
-...
+```json
+{
+  "XX.XX.XX.01": {
+    "Concept": "[Concept name]",
+    "text": "[Narrative text and/or bullet points teaching the concept. Write clearly and thoroughly — this should be enough for a learner to understand the concept from scratch. Use proper terminology, explain mechanisms, give examples where helpful, and draw contrasts with related concepts when it aids understanding. Markdown formatting is encouraged (bold, italics, lists). Use \\n\\n for paragraph breaks within this string.]"
+  },
+  "XX.XX.XX.02": {
+    "Concept": "[Concept name]",
+    "text": "[Same as above]"
+  }
+}
 ```
 
 ### Rules
@@ -61,5 +49,9 @@ Use Research to gather authoritative, current information on the section topic. 
 - **Concept granularity.** Each concept should be a single, testable idea. If a concept is too broad to teach in a few paragraphs, split it into sub-concepts.
 - **Teaching depth.** Write for a college undergraduate who is encountering this material for the first time. Don't assume prior knowledge beyond what earlier sections in the index would cover.
 - **Respect scope boundaries.** Only cover material that belongs to this section. If something is covered in a neighboring section (check the items above and below in Blue.txt), mention it briefly and move on.
-- **Accuracy.** Use Research to verify facts. If Research produces conflicting information, note the discrepancy rather than silently choosing one version.
+- **Accuracy.** Use Research to verify facts. If Research produces genuinely conflicting information about the science itself (not about how textbooks present it), note the discrepancy briefly and teach the consensus view.
 - **No flashcard formatting.** This is a teaching document, not Q&A pairs. Write in narrative and bullet-point form.
+- **Strict JSON output.** The entire response must be a single valid JSON object. Do not wrap it in commentary, do not add a preamble, and do not emit trailing notes. Escape all special characters properly (`"` as `\"`, newlines as `\n`). Do not include the outer markdown code fence in the actual response — emit raw JSON.
+- **No meta-commentary.** Do not mention textbooks, authors, publishers, chapter titles, table numbers, or how sources present material. Do not write sentences like "OpenStax states...", "Tortora's Table 1.2...", "most textbooks agree...", "the conventional presentation...", or "this is a pedagogical simplification." Teach the subject matter directly, as if you are the authority. Use research to inform what you write, not to narrate.
+- **No source attribution.** Do not cite, quote, or reference any source by name anywhere in the report. The output should read like a clear, confident teaching document — not a literature review.
+- **Teach the biology, not the curriculum.** If something is "a convention" or "varies by textbook," just teach the most accurate or widely accepted version without flagging it as a convention. The learner does not need to know how the field is taught — they need to understand the subject.

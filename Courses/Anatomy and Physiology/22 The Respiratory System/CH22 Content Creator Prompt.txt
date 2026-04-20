@@ -1,0 +1,41 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 4 — Maintenance of the Body
+Chapter 22 — The Respiratory System
+	1.	Overview and history of respiratory science
+	2.	Functions of the respiratory system
+	3.	Organization of the respiratory system: upper and lower tracts, conducting and respiratory zones
+	4.	The upper respiratory tract: nose, nasal cavity, paranasal sinuses, pharynx, and larynx
+	5.	The lower respiratory tract: trachea, bronchial tree, lungs (lobes and fissures), pulmonary circulation, and bronchial vasculature
+	6.	The respiratory membrane: structure and gas exchange surface
+	7.	The pleurae: parietal, visceral, and the pleural cavity
+	8.	Pulmonary ventilation: mechanics of breathing, pressure relationships, Boyle's law, muscles of respiration, and lung volumes and capacities
+	9.	Gas exchange: partial pressures, Dalton's law, Henry's law, and diffusion across the respiratory membrane
+	10.	Gas transport in the blood: oxygen transport, the oxygen-hemoglobin dissociation curve, carbon dioxide transport, and the bicarbonate buffer system
+	11.	Regulation of breathing: neural control, chemical regulation, central and peripheral chemoreceptors
+	12.	Respiratory adjustments during exercise
+	13.	Common respiratory disorders: asthma, COPD, pneumonia, and pulmonary embolism
+	14.	Effects of aging on the respiratory system
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.

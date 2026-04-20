@@ -1401,6 +1401,134 @@ function BatchUpload({ courses, onBatchSave }) {
   );
 }
 
+// ── Concept Upload ───────────────────────────────────────────────────────────
+
+function parseConceptJson(raw) {
+  const trimmed = raw.trim();
+  if (!trimmed) throw new Error('Paste the Yellow output JSON');
+  let data;
+  try {
+    data = JSON.parse(trimmed);
+  } catch (err) {
+    throw new Error('Invalid JSON: ' + err.message);
+  }
+  if (!data || typeof data !== 'object' || Array.isArray(data)) {
+    throw new Error('Expected a JSON object keyed by concept ID');
+  }
+  const ids = Object.keys(data);
+  if (ids.length === 0) throw new Error('No concepts found in the JSON');
+  const idPattern = /^\d{2}\.\d{2}\.\d{2}\.\d{2}$/;
+  for (const id of ids) {
+    if (!idPattern.test(id)) {
+      throw new Error(`Invalid concept ID "${id}" — expected format XX.XX.XX.XX`);
+    }
+    const entry = data[id];
+    if (!entry || typeof entry !== 'object') {
+      throw new Error(`Concept ${id} is not an object`);
+    }
+    if (typeof entry.Concept !== 'string' || !entry.Concept.trim()) {
+      throw new Error(`Concept ${id} is missing a "Concept" name`);
+    }
+    if (typeof entry.text !== 'string' || !entry.text.trim()) {
+      throw new Error(`Concept ${id} is missing "text"`);
+    }
+  }
+  return data;
+}
+
+function ConceptUpload({ onUpload }) {
+  const [rawText, setRawText] = useState('');
+  const [parseError, setParseError] = useState('');
+  const [parsed, setParsed] = useState(null);
+  const [uploading, setUploading] = useState(false);
+
+  function handleParse() {
+    setParseError('');
+    try {
+      setParsed(parseConceptJson(rawText));
+    } catch (err) {
+      setParsed(null);
+      setParseError(err.message);
+    }
+  }
+
+  async function handleUpload() {
+    if (!parsed) return;
+    setUploading(true);
+    try {
+      await onUpload(parsed);
+      setRawText('');
+      setParsed(null);
+    } finally {
+      setUploading(false);
+    }
+  }
+
+  const ids = parsed ? Object.keys(parsed) : [];
+
+  return (
+    <div className="space-y-3">
+      <p className="text-xs text-[--color-text-muted]">
+        Paste the JSON output from Yellow. Each concept is keyed by its full ID (e.g., <code>01.01.04.03</code>) and gets written to the <code>concepts</code> collection.
+      </p>
+
+      <label htmlFor="concept-upload-textarea" className="sr-only">Concept JSON</label>
+      <textarea
+        id="concept-upload-textarea"
+        value={rawText}
+        onChange={e => { setRawText(e.target.value); setParsed(null); setParseError(''); }}
+        rows={10}
+        placeholder='{"01.01.04.01": {"Concept": "...", "text": "..."}}'
+        className="w-full p-2 text-xs font-mono rounded-[--radius-md] bg-[--color-surface-sunken] border border-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+      />
+
+      {parseError && (
+        <p className="text-xs text-red-600" role="alert">{parseError}</p>
+      )}
+
+      {parsed && (
+        <div className="text-xs text-[--color-text] bg-[--color-surface-sunken] rounded-[--radius-md] p-2 border border-[--color-border]">
+          <p className="font-medium mb-1">Parsed {ids.length} concept{ids.length === 1 ? '' : 's'}:</p>
+          <ul className="space-y-0.5 text-[--color-text-muted]">
+            {ids.map(id => (
+              <li key={id}><span className="font-mono">{id}</span> — {parsed[id].Concept}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <div className="flex gap-2">
+        {!parsed ? (
+          <button
+            onClick={handleParse}
+            disabled={!rawText.trim()}
+            className="min-h-touch px-4 rounded-[--radius-md] text-sm font-medium bg-[--color-brand] text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          >
+            Parse
+          </button>
+        ) : (
+          <>
+            <button
+              onClick={handleUpload}
+              disabled={uploading}
+              className="min-h-touch px-4 rounded-[--radius-md] text-sm font-medium bg-[--color-brand] text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+            >
+              {uploading ? 'Uploading…' : `Upload ${ids.length} concept${ids.length === 1 ? '' : 's'}`}
+            </button>
+            <button
+              onClick={() => { setParsed(null); setParseError(''); }}
+              disabled={uploading}
+              className="min-h-touch px-4 rounded-[--radius-md] text-sm border border-[--color-border] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+            >
+              Edit
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
 // ── Workflows ───────────────────────────────────────────────────────────────
 
 const WORKFLOWS = [
@@ -1563,6 +1691,25 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
     } catch (err) {
       console.error('Failed to batch upload:', err);
       showToast('Failed to upload cards');
+    }
+  }
+
+  async function handleConceptUpload(conceptsObj) {
+    try {
+      const batch = writeBatch(db);
+      const ids = Object.keys(conceptsObj);
+      for (const id of ids) {
+        const ref = doc(db, 'concepts', id);
+        batch.set(ref, {
+          name: conceptsObj[id].Concept,
+          text: conceptsObj[id].text,
+        });
+      }
+      await batch.commit();
+      showToast(`${ids.length} concepts uploaded`, 'success');
+    } catch (err) {
+      console.error('Failed to upload concepts:', err);
+      showToast('Failed to upload concepts');
     }
   }
 
@@ -1738,6 +1885,15 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
           onToggle={() => toggleSection('batch')}
         >
           <BatchUpload courses={courses} onBatchSave={handleBatchAdd} />
+        </AccordionSection>
+
+        <AccordionSection
+          title="Concept Upload"
+          badge={0}
+          open={openSection === 'concepts'}
+          onToggle={() => toggleSection('concepts')}
+        >
+          <ConceptUpload onUpload={handleConceptUpload} />
         </AccordionSection>
 
         <AccordionSection

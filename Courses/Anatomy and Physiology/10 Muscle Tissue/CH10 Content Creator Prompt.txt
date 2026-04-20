@@ -1,0 +1,42 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 2 — Support and Movement
+Chapter 10 — Muscle Tissue
+	1.	Overview of muscle tissue
+	2.	Brief history of myology
+	3.	Functions of muscle tissue
+	4.	Properties of muscle tissue: excitability, contractility, extensibility, and elasticity
+	5.	Types of muscle tissue: skeletal, cardiac, and smooth
+	6.	Skeletal muscle as an organ: connective tissue coverings, blood supply, and innervation
+	7.	The skeletal muscle fiber: sarcolemma, sarcoplasm, myofibrils, sarcomere structure, the sliding filament model, and muscle proteins (contractile, regulatory, and structural)
+	8.	The contraction cycle: neuromuscular junction, excitation-contraction coupling, the cross-bridge cycle, muscle relaxation, and types of contraction (isotonic and isometric)
+	9.	Neural control of muscle force: motor units, recruitment, muscle twitch, summation, and tetanus
+	10.	Muscle metabolism, fatigue, and skeletal muscle fiber types
+	11.	Cardiac muscle: structure and functional characteristics
+	12.	Smooth muscle: structure and functional characteristics
+	13.	Muscle development and regeneration: myoblast fusion, satellite cells, hypertrophy vs. hyperplasia, and comparative regenerative capacity across muscle types
+	14.	Effects of aging on muscle tissue
+	15.	Muscle disorders: atrophy, dystrophy, and myasthenia gravis
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.

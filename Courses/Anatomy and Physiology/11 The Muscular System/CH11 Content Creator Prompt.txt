@@ -1,0 +1,37 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 2 — Support and Movement
+Chapter 11 — The Muscular System
+	1.	Overview of the muscular system
+	2.	Brief history of the study of human musculature
+	3.	How skeletal muscles produce movement: origin, insertion, action, and open vs. closed kinetic chains
+	4.	Muscle naming conventions: location, shape, size, direction of fibers, number of origins, and action
+	5.	Lever systems and mechanical advantage in muscle action
+	6.	Functional roles of muscles: agonists, antagonists, synergists, and fixators
+	7.	Muscle architecture: parallel, convergent, pennate, and circular arrangements
+	8.	Survey of the major appendicular muscle groups
+	9.	Survey of the major axial muscle groups
+	10.	Effects of aging on the muscular system
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.

@@ -6,9 +6,9 @@ Every card has four fields: **question**, **answer**, **hint**, and **explanatio
 
 ## Your Process
 
-1. **Propose only question stems** — a numbered list covering the agreed content comprehensively. Do NOT write answers, hints, or explanations yet. Apply bidirectional testing throughout. Every question must stand alone.
+1. **Propose questions, answers, and hints** — a numbered list covering the agreed content comprehensively. Use the format Q01/A01/H01, Q02/A02/H02, etc. Do NOT write explanations yet. Apply bidirectional testing throughout. Every question must stand alone.
 2. I will review the list and request changes (add, remove, reword, split, merge).
-3. Once I approve the question list, generate the **full cards** (question, answer, hint, explanation) and output them as JSON matching the schema at the bottom of this guide.
+3. Once I approve the list, generate the **full cards** (question, answer, hint, explanation) and output them as JSON matching the schema at the bottom of this guide.
 
 ## Source Material Rules
 
@@ -143,11 +143,26 @@ Present a clinical scenario and ask the student to identify the relevant structu
 - Use proper anatomical/scientific terminology
 
 ### Hints
+
+Write hints like a witty crossword puzzle author — clever, compact, and satisfying to decode after you know the answer. I will judge hints more critically than questions or answers. A boring hint is worse than no hint.
+
+**Rules:**
 - Keep them to roughly 5 words — punchy and memorable
-- Should nudge the student toward the answer without giving it away
-- Good strategies: point to a root word, reference a related concept, use a mnemonic device
-- Hints can be fun, silly, or creative — crossword-style clues, pop culture references, wordplay, and mnemonics are all welcome
-- Never restate the question or contain the answer
+- Each hint MUST use one of the strategies below. Never use a generic description or restatement of the question.
+- Never contain the answer
+- Before finalizing a hint, check: if you cover the answer, does the hint help you *find* it? If you already know the answer, is the hint satisfying? If either answer is no, rewrite it.
+
+**Required strategies (vary across the set):**
+- **Mnemonic acronym** — first letters of list items (e.g., "SG-BS-SC — like a sandwich")
+- **Wordplay / pun** — (e.g., "A bone you'd loan")
+- **Etymology** — root word decoding (e.g., "Epi- = upon")
+- **Rhyme** — (e.g., "Sounds like a bone you'd loan")
+- **Crossword-style clue** — (e.g., "The gland works, but delivery fails")
+- **Analogy** — (e.g., "Like a drawbridge" for a gate-channel protein)
+- **Counting clue** — just the count, not the content (e.g., "There are 3")
+- **Sound-alike** — phonetic nudge (e.g., "Sounds like 'tie a bow'" for tibia)
+- **Contrast / elimination** — (e.g., "Not the outer one")
+- **Body cue** — physical reference (e.g., "Touch your wrist")
 
 ### Explanations
 - Start with a markdown ## heading

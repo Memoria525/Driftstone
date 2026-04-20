@@ -1,0 +1,138 @@
+# Characteristics of living organisms
+
+**Suggested short name:** Characteristics of life
+
+-----
+
+## Concepts
+
+1. 01.01.04.01 - What distinguishes living from nonliving
+1. 01.01.04.02 - Organization and maintenance of boundaries
+1. 01.01.04.03 - Metabolism as anabolism and catabolism
+1. 01.01.04.04 - Responsiveness to stimuli
+1. 01.01.04.05 - Movement at multiple scales
+1. 01.01.04.06 - Growth as increase in size
+1. 01.01.04.07 - Differentiation and the broader idea of development
+1. 01.01.04.08 - Reproduction at the cellular and organismal levels
+1. 01.01.04.09 - Digestion as preparation of raw materials
+1. 01.01.04.10 - Excretion of metabolic wastes
+1. 01.01.04.11 - Adaptation, heredity, and why they are sometimes listed
+1. 01.01.04.12 - How the characteristics interlock in the human body
+
+-----
+
+## 01.01.04.01 - What distinguishes living from nonliving
+
+A rock, a puddle, and a crystal all have structure, but none of them are alive. A human body is alive because it performs a specific cluster of activities that, taken together, define the living state. These activities are called the **characteristics of life** (or, in physiological language, the **necessary life functions**). No single trait is sufficient by itself  — fire consumes fuel and grows, salt crystals self-assemble, and a thermostat responds to change — but a living organism displays *all* of the characteristics simultaneously and continuously. 
+
+For the human body, the standard characteristics are **organization, metabolism, responsiveness, movement, growth, differentiation, and reproduction**.  Some treatments add **digestion and excretion** as separate items  because the human body dedicates entire organ systems to each, and a few extend the list with **adaptation and heredity**.  Two ideas unify the whole list: first, life is a dynamic *process*, not a static property — when the processes stop, the organism dies even though its matter remains; second, every characteristic ultimately serves either the survival of the individual or the continuation of the species.
+
+Remember that a few related topics are deliberately handled elsewhere. The ordered stack of chemical, cellular, tissue, organ, organ system, and organismal levels is a structural scheme, not a life function. The environmental conditions that the body requires from the outside world (such as oxygen, nutrients, and heat) describe what life *needs* rather than what life *does*. And the feedback loops that stabilize internal conditions are developed under the topic of homeostasis. This section concentrates strictly on the activities that define the living state.
+
+## 01.01.04.02 - Organization and maintenance of boundaries
+
+Living matter is conspicuously **ordered**. Every living thing maintains a level of internal complexity far greater than its nonliving surroundings,  and this order is actively produced and defended, not given for free.  The second law of thermodynamics predicts that disorder tends to increase; an organism is alive precisely because it continuously spends energy to resist that tendency. When the spending stops, disorder wins, and the organism decays.
+
+A key consequence is that living systems must **maintain boundaries** between what is “inside” and what is “outside.” Every cell is walled off from its environment by a **plasma membrane**  that selectively controls what enters and leaves.  The membrane keeps cytoplasmic potassium high and sodium low, concentrates specific proteins, and prevents the cell’s contents from simply diffusing away. At the whole-body scale, the **skin** separates the internal environment from the external one,  blocking pathogens, limiting water loss, and shielding deeper tissues from mechanical and chemical insult. Internal linings extend the same principle deeper: epithelial sheets partition the digestive tract, airways, urinary tract, and vessels so that each compartment can hold a different chemical environment. 
+
+**Organization is therefore both structural and active.** It is structural in that living tissue is highly ordered at every scale, and active in that the organism continuously uses energy to preserve that order. Loss of organization — membrane failure, breakdown of epithelial barriers, tissue disintegration — is a direct marker of disease or death.
+
+## 01.01.04.03 - Metabolism as anabolism and catabolism
+
+**Metabolism** is the sum of all chemical reactions that occur in the body.  It has two complementary branches whose balance determines whether tissue is being built up or broken down.
+
+**Catabolism** breaks larger molecules into smaller ones and **releases energy** stored in chemical bonds.   Digestion of a protein into amino acids, glycolysis of glucose into pyruvate, and beta-oxidation of fatty acids are all catabolic. Much of the liberated energy is captured in the high-energy phosphate bonds of **adenosine triphosphate (ATP)**, the universal energy currency of the cell.
+
+**Anabolism** does the opposite: it assembles smaller molecules into larger, more complex ones, and this construction **costs energy**,   which is paid by hydrolyzing ATP. Linking amino acids into proteins, chaining glucose units into glycogen, assembling fatty acids and glycerol into triglycerides, and depositing calcium phosphate into bone matrix are all anabolic.
+
+Catabolism and anabolism are tightly coupled. Catabolic reactions generate the ATP and the raw building blocks that anabolic reactions consume. A cell that cannot catabolize cannot power its construction projects; a cell that cannot anabolize cannot replace worn-out components. Metabolism is therefore not a single process but the continuous, regulated interplay of destruction and construction that keeps every cell functional.
+
+## 01.01.04.04 - Responsiveness to stimuli
+
+**Responsiveness** — also called **excitability** or **irritability** — is the ability to detect a change in the internal or external environment and react to it.  The change is the **stimulus**; the reaction is the **response**.
+
+In humans, responsiveness is most highly developed in **nervous tissue** and **muscle tissue**, which are specifically designed to generate and propagate electrical signals. A neuron detecting a noxious heat stimulus can depolarize, conduct an action potential, and trigger a withdrawal reflex within milliseconds.  Muscle fibers respond to motor neuron input by contracting. But responsiveness is not limited to these tissues. Pancreatic beta cells respond to a rise in blood glucose by secreting insulin; chemoreceptors in the aortic and carotid bodies respond to falling oxygen or rising carbon dioxide by driving faster, deeper breathing; photoreceptors in the retina respond to light; and essentially every cell in the body can alter its activity in response to hormones, mechanical stretch, pH change, or other signals.
+
+A crucial conceptual point is that **responsiveness is not the same as homeostasis**. Responsiveness is the general *capacity* to sense and react. Homeostasis is a particular *outcome* — the maintenance of a relatively stable internal state — that is achieved by stringing responsiveness into organized control loops. Every homeostatic mechanism relies on responsiveness, but responsiveness also underlies behaviors, reflexes, and adjustments that are not strictly homeostatic (for example, blinking at a flash of light).
+
+## 01.01.04.05 - Movement at multiple scales
+
+**Movement** in the physiological sense is broader than walking across a room. It covers every change in position produced by the body, and it happens at three nested scales. 
+
+The most familiar scale is **movement of the whole body**, or **locomotion** — running, lifting, gesturing, writing. These motions are produced by **skeletal muscle** pulling on bones that pivot at joints.
+
+A second scale is the **movement of substances and structures within the body**. Cardiac muscle propels blood through the vessels with every heartbeat. Smooth muscle in the walls of the gastrointestinal tract produces **peristalsis**, pushing food from mouth to anus;   smooth muscle in the ureters moves urine to the bladder; smooth muscle in arterioles adjusts vessel diameter to redirect blood flow. The diaphragm and intercostal muscles move air into and out of the lungs.  White blood cells crawl out of capillaries and migrate through connective tissue toward sites of infection.
+
+The smallest scale is **movement inside individual cells**. Vesicles shuttle along cytoskeletal tracks, chromosomes separate during mitosis, cilia beat on the apical surface of airway epithelium, and sperm flagella propel gametes toward the egg. All of these count as biological movement.
+
+**Muscle tissue is the only tissue type specialized to produce forceful movement**,  and its three varieties — skeletal (voluntary), cardiac (involuntary, in the heart), and smooth (involuntary, in hollow organs and vessels) — together cover all three scales.
+
+## 01.01.04.06 - Growth as increase in size
+
+**Growth** is an increase in the size of the body or of its parts.   Three distinct mechanisms can produce it, and in humans all three contribute.
+
+The first is an **increase in the number of cells**,  known as **hyperplasia**, produced by mitotic cell division. This is the dominant mechanism during childhood and adolescence, and it continues throughout life in tissues that renew themselves, such as the epidermis, gut lining, and bone marrow.
+
+The second is an **increase in the size of existing cells**,  known as **hypertrophy**. Skeletal muscle enlarges under resistance training mainly because each fiber accumulates more contractile protein, not because new fibers are added. Adipocytes expand dramatically as they store triglyceride.
+
+The third is an **increase in the amount of material that cells deposit around themselves**.  Osteoblasts lay down a mineralized matrix that makes bones longer, thicker, and heavier; chondrocytes deposit cartilage matrix; fibroblasts lay down collagen in skin and tendons. Much of the mass of adult connective tissue is **extracellular**, so its growth is a story of secretion as much as of cell division.
+
+Because growth requires the construction of new molecules, it is fundamentally an **anabolic** activity that depends on a steady supply of energy and raw materials, and on the controlled division and enlargement of cells.
+
+## 01.01.04.07 - Differentiation and the broader idea of development
+
+**Differentiation** is the process by which an **unspecialized cell acquires a specialized structure and function**.   A fertilized egg contains a single genome, yet its descendants become neurons with long axons, red blood cells packed with hemoglobin, cardiomyocytes with intercalated discs, hepatocytes with extensive smooth endoplasmic reticulum, and more than two hundred other distinct cell types. These cells differ not because they contain different genes but because they **express different subsets of the same genome**.
+
+Differentiation is distinct from growth. Growth is **quantitative** — more cells, larger cells, more matrix. Differentiation is **qualitative** — a change in what a cell *is* and what it can do. A tissue can grow without differentiating (a mature skeletal muscle hypertrophies without its fibers changing type) and a cell can differentiate without appreciable growth (a maturing neuron).
+
+**Development** is the umbrella term that combines growth and differentiation, along with the repair that maintains tissues after injury.  Development is not confined to the prenatal period: the body continues to differentiate new cells throughout life. Hematopoietic stem cells in red bone marrow generate specialized blood cells every day; spermatogenic cells in the testes produce sperm continuously from puberty onward; satellite cells in skeletal muscle activate to repair damaged fibers after exercise or injury.
+
+## 01.01.04.08 - Reproduction at the cellular and organismal levels
+
+**Reproduction** in physiology has two related but distinct meanings, and students should hold both in mind.
+
+**Cellular reproduction** is the production of new cells from existing ones through **mitotic cell division**.  It supplies the new cells required for growth, for routine tissue turnover, and for repair after injury. Epidermal keratinocytes are replaced roughly every forty days, the absorptive lining of the small intestine every three to five days, and circulating erythrocytes every hundred and twenty days. Without cellular reproduction, ordinary wear and tear would quickly destroy tissues.
+
+**Organismal reproduction** is the production of a **new individual**. In humans this requires **meiosis** in the gonads to generate haploid gametes (sperm and oocytes), fertilization to combine them, and a prolonged developmental period in the uterus. Organismal reproduction is the only characteristic of life that is not strictly necessary for the survival of the individual — a person who never reproduces can live a full life — but it is essential for the survival of the species, because every individual eventually dies. 
+
+The two meanings are mechanistically different (mitosis produces genetically identical diploid cells; meiosis produces genetically varied haploid gametes) but conceptually unified: both replace what would otherwise be lost.
+
+## 01.01.04.09 - Digestion as preparation of raw materials
+
+**Digestion** is the breakdown of ingested food into molecules small enough to cross the lining of the gastrointestinal tract and enter the blood or lymph.  It is listed as a separate characteristic of life in many treatments because the human body dedicates an entire coordinated set of organs to it, and because without it the organism cannot obtain the building blocks and fuel that metabolism requires.
+
+Digestion has two complementary components. **Mechanical digestion** physically reduces the size of food particles: teeth grind, the stomach churns, and segmentation contractions in the small intestine mix chyme with digestive secretions. **Chemical digestion** uses enzymes to hydrolyze macromolecules into their monomers — carbohydrates into monosaccharides, proteins into amino acids (and short peptides), and triglycerides into fatty acids and monoglycerides. Nucleic acids are reduced to nucleotides. 
+
+Conceptually, digestion is a specialized form of **catabolism** performed largely outside the body’s cells, in the lumen of the gastrointestinal tract.  Its products are then absorbed and distributed, where intracellular metabolism takes over. Digestion connects the organism to its food supply, and it is one of the most conspicuous points at which the outside world is brought across a boundary and made part of the living system.
+
+## 01.01.04.10 - Excretion of metabolic wastes
+
+**Excretion** is the removal of **metabolic waste products**   — the chemical byproducts that cells generate as they run their reactions. If these wastes accumulated, they would poison the tissues that produced them.
+
+The major human wastes and their routes of removal illustrate how broadly this function is distributed. Nitrogen released from amino-acid catabolism is packaged as **urea** (with smaller amounts of **uric acid** and **creatinine**) and eliminated in urine. **Carbon dioxide** generated by cellular respiration is carried in the blood to the lungs and exhaled. **Bilirubin** from the breakdown of hemoglobin is conjugated in the liver and eliminated in feces. Water, salts, and small amounts of urea also leave the body in sweat.
+
+It is useful to distinguish **excretion** from **defecation**. Excretion removes substances that the body’s own cells have produced. Defecation eliminates material that was ingested but never absorbed — undigested fiber, sloughed epithelial cells, and intestinal bacteria. Only the bilirubin component of feces is true metabolic waste; the rest is unabsorbed residue.
+
+## 01.01.04.11 - Adaptation, heredity, and why they are sometimes listed
+
+Lists of the characteristics of life sometimes include **adaptation**, **evolution**, or **heredity**. These additions are more common in general biology than in human anatomy and physiology, but a physiology student should understand why they appear and how they relate to the human body.
+
+**Heredity** is the transmission of genetic information from parent to offspring through DNA contained in gametes.  Most presentations fold heredity into reproduction: when organisms reproduce, they necessarily pass on their genes, and the offspring inherits a specific blend of parental traits. Heredity is what makes reproduction meaningful over generations rather than a mere copying of cells.
+
+**Adaptation** has two senses that are easy to confuse. In the **evolutionary** sense, adaptation refers to the gradual genetic change of populations across generations as variants that survive and reproduce become more common.   This is a property of populations, not of individuals, and it unfolds over timescales far longer than a single life. In the **physiological** sense, adaptation refers to the changes an individual organism undergoes to cope with altered conditions — a person’s red-blood-cell count rising at high altitude, skeletal muscle enlarging with training, pupils adjusting to dim light, or the immune system producing antibodies after exposure to a new pathogen. The physiological sense is directly relevant to the life of the individual human body, and it is closely tied to responsiveness and to development. 
+
+Because the human body is the focus of anatomy and physiology, these characteristics are usually mentioned briefly rather than treated as central. They matter most when considering how the species persists and how individuals cope with changing demands.
+
+## 01.01.04.12 - How the characteristics interlock in the human body
+
+The characteristics of life are not a random checklist. They are linked in a tight logical network, and understanding the links is as important as memorizing the items.
+
+**Metabolism sits at the center.** It supplies the energy and materials that every other characteristic depends on.  Growth, differentiation, reproduction, responsiveness, and movement all require ATP and the raw building blocks that metabolism generates, and the regulated balance of anabolism and catabolism dictates whether tissue is gained or lost. Digestion feeds metabolism from the outside, and excretion removes the wastes that metabolism generates.  Without metabolism, none of the other characteristics can occur.
+
+**Organization depends on continuous work.** Boundaries such as the plasma membrane and the skin are maintained only because metabolic energy is spent to preserve them. The moment metabolism stops, membranes fail, gradients collapse, and the body’s ordered state disintegrates.
+
+**Responsiveness and movement together allow regulation.** Detecting a change is useless without the ability to do something about it, and moving without detection would be blind. The pairing of sensors, signaling, and effectors (muscle contraction, glandular secretion, altered gene expression) is what lets the body adjust to a changing world.
+
+**Growth, differentiation, and reproduction extend the living state across time.** Cellular reproduction replaces cells that are lost; differentiation produces the right kind of cell in the right place; growth increases size during development and replaces mass after injury; organismal reproduction extends the line beyond the individual’s death.
+
+A human is alive, in the full physiological sense, only when all of these activities are occurring together.  Measuring any one of them — a heartbeat, a breath, a reflex, a rising level of a metabolite — gives clinicians a window onto the overall process, and the failure of any one characteristic threatens all the others.

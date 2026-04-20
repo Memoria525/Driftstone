@@ -1,0 +1,43 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 1 — Organization of the Body
+Chapter 1 — Introduction to Anatomy and Physiology
+	1.	Definitions, scope, and subdisciplines of anatomy and physiology
+	2.	The relationship between structure and function
+	3.	Levels of structural organization (chemical through organismal)
+	4.	Overview of the organ systems
+	5.	Characteristics of living organisms
+	6.	Requirements for life
+	7.	Homeostasis: definition and physiological significance
+	8.	Feedback and control mechanisms (negative feedback, positive feedback, feedforward)
+	9.	Anatomical position and surface anatomy conventions
+	10.	Directional terms
+	11.	Regional terms (axial and appendicular)
+	12.	Anatomical planes and sections
+	13.	Body cavities, their subdivisions, and abdominopelvic regions and quadrants
+	14.	Serous membranes and serous fluid
+	15.	Medical imaging modalities and their anatomical applications (X-ray, CT, MRI, PET, ultrasound)
+	16.	Brief history of anatomy and physiology as a science
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.

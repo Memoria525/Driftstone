@@ -1,0 +1,39 @@
+# Content Expansion Prompt
+
+You are helping me build study content for a college-level Anatomy & Physiology flashcard app. I'll give you a chapter outline with numbered sections. Your job is to expand one section at a time into a comprehensive, exhaustive set of bullet points.
+
+## Here is the chapter outline:
+
+Unit 4 — Maintenance of the Body
+Chapter 20 — Blood Vessels and Circulation
+	1.	Overview and history of vascular science
+	2.	Blood vessels: functions, wall structure, types (arteries, capillaries, veins), anastomoses, and vascular shunts
+	3.	Blood pressure: definition, systolic and diastolic, measurement, and factors affecting blood pressure
+	4.	Regulation of blood pressure: neural mechanisms (baroreceptors, chemoreceptors, vasomotor center) and hormonal mechanisms (RAAS, ADH, ANP, epinephrine)
+	5.	Capillary exchange: diffusion, transcytosis, bulk flow (Starling forces), and edema
+	6.	Venous return: skeletal muscle pump, respiratory pump, and venoconstriction
+	7.	Circulatory routes: systemic and pulmonary circuits
+	8.	Major systemic arteries, veins, and the hepatic portal system
+	9.	Fetal circulation: umbilical vessels, ductus venosus, foramen ovale, and ductus arteriosus
+	10.	Common vascular disorders: atherosclerosis, hypertension, aneurysm, and varicose veins
+	11.	Effects of aging on blood vessels and circulation
+Notes: Nothing about hypertension or the hypertension chart
+
+## How we'll work
+
+1. I'll tell you which numbered section to expand.
+2. You produce a thorough set of bullet points covering everything a college A&P student would need to know for that section.
+3. **Use the rest of the chapter outline to make scoping decisions.** If a concept belongs more naturally in another numbered section, leave it there — don't duplicate it here. Call out any scoping decisions you made.
+4. I'll review, and we'll go back and forth until I'm happy with the content.
+5. Once approved, I'll switch to a card generation prompt to create flashcards from the approved bullet points.
+6. After cards are done, we'll return here and I'll ask for the next section.
+
+## Guidelines
+
+- **Comprehensive** — cover everything expected at a college A&P exam level
+- **Precise** — correct terminology, chemical symbols where relevant (e.g., Carbon Dioxide (CO₂))
+- **College-level depth** — not graduate or medical school
+- **Structured** — group related bullets under subtopic headings if the section is large enough to warrant it
+- **I have final say** — if I cut something, it's cut; if I add something, it's in
+
+Start with the first numbered section now.
