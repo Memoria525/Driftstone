@@ -1412,16 +1412,26 @@ function stripCodeFence(s) {
 
 function lenientJsonToStrict(src) {
   // Convert a string that may have curly quotes (“ ”) used as JSON string
-  // delimiters into strict JSON. A quote (ASCII or curly) is treated as a
-  // structural delimiter only when it sits at a position the grammar allows:
+  // delimiters, and other common Claude typos, into strict JSON.
+  //
+  // Quote handling (ASCII or curly): a quote is treated as a structural
+  // delimiter only when it sits at a position the grammar allows:
   //   - opener: current char is a quote and we are outside a string
   //   - closer: current char is a quote inside a string AND the next
   //             non-whitespace char is one of , } ] : or end of input
-  // Any other quote inside a string is treated as content. Curly quotes in
-  // content are passed through (valid inside JSON strings); ASCII quotes in
-  // content are escaped as \" so the result parses.
+  // Any other quote inside a string is treated as content. Curly content
+  // quotes pass through (valid inside JSON strings); ASCII content quotes
+  // get escaped as \".
+  //
+  // Escape handling (inside strings): a backslash may be followed by a
+  // valid JSON escape char (" \ / b f n r t) or \uXXXX. Two repairs:
+  //   - Stray whitespace between \ and a valid escape letter is stripped
+  //     ("\  n" → "\n") — common Claude typo.
+  //   - Backslashes not followed by a valid escape sequence are treated
+  //     as literal backslashes and escaped as \\.
   const QUOTE = (c) => c === '"' || c === '\u201C' || c === '\u201D';
   const STRUCTURAL_AFTER = /[,}\]:]/;
+  const VALID_ESC = new Set(['"', '\\', '/', 'b', 'f', 'n', 'r', 't']);
   let out = '';
   let i = 0;
   let inString = false;
@@ -1440,8 +1450,29 @@ function lenientJsonToStrict(src) {
     }
     // Inside a string
     if (c === '\\') {
-      out += c;
-      if (i + 1 < src.length) { out += src[i + 1]; i += 2; } else i++;
+      // Figure out what the escape target is, skipping any stray whitespace.
+      let k = i + 1;
+      let target = src[k];
+      if (target !== undefined && /\s/.test(target)) {
+        while (k < src.length && /\s/.test(src[k])) k++;
+        // If the char after the whitespace isn't a valid escape, fall back
+        // to treating the original next char (the whitespace) as-is.
+        if (k >= src.length || !(VALID_ESC.has(src[k]) || src[k] === 'u')) {
+          k = i + 1;
+        }
+        target = src[k];
+      }
+      if (VALID_ESC.has(target)) {
+        out += '\\' + target;
+        i = k + 1;
+      } else if (target === 'u' && /^[0-9a-fA-F]{4}$/.test(src.slice(k + 1, k + 5))) {
+        out += '\\u' + src.slice(k + 1, k + 5);
+        i = k + 5;
+      } else {
+        // Not a valid escape — treat the backslash as a literal character.
+        out += '\\\\';
+        i += 1;
+      }
       continue;
     }
     if (QUOTE(c)) {
@@ -1453,9 +1484,8 @@ function lenientJsonToStrict(src) {
         inString = false;
         i++;
       } else {
-        // Content quote
         if (c === '"') out += '\\"';
-        else out += c; // curly quotes are fine as literal content in a JSON string
+        else out += c;
         i++;
       }
       continue;
