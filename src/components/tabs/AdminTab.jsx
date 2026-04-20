@@ -1410,15 +1410,60 @@ function stripCodeFence(s) {
   return match ? match[1] : s;
 }
 
-function normalizeStructuralSmartQuotes(s) {
-  // Replace curly double quotes that sit in JSON-structural positions with ASCII "
-  // Structural positions: adjacent to {, }, [, ], comma, colon, or surrounding whitespace.
-  // Content smart quotes (inside words) are left alone.
-  s = s.replace(/([{[,:\s])[\u201C\u201D]/g, '$1"');
-  s = s.replace(/[\u201C\u201D]([}\],:\s])/g, '"$1');
-  s = s.replace(/^[\u201C\u201D]/, '"');
-  s = s.replace(/[\u201C\u201D]$/, '"');
-  return s;
+function lenientJsonToStrict(src) {
+  // Convert a string that may have curly quotes (“ ”) used as JSON string
+  // delimiters into strict JSON. A quote (ASCII or curly) is treated as a
+  // structural delimiter only when it sits at a position the grammar allows:
+  //   - opener: current char is a quote and we are outside a string
+  //   - closer: current char is a quote inside a string AND the next
+  //             non-whitespace char is one of , } ] : or end of input
+  // Any other quote inside a string is treated as content. Curly quotes in
+  // content are passed through (valid inside JSON strings); ASCII quotes in
+  // content are escaped as \" so the result parses.
+  const QUOTE = (c) => c === '"' || c === '\u201C' || c === '\u201D';
+  const STRUCTURAL_AFTER = /[,}\]:]/;
+  let out = '';
+  let i = 0;
+  let inString = false;
+  while (i < src.length) {
+    const c = src[i];
+    if (!inString) {
+      if (QUOTE(c)) {
+        out += '"';
+        inString = true;
+        i++;
+      } else {
+        out += c;
+        i++;
+      }
+      continue;
+    }
+    // Inside a string
+    if (c === '\\') {
+      out += c;
+      if (i + 1 < src.length) { out += src[i + 1]; i += 2; } else i++;
+      continue;
+    }
+    if (QUOTE(c)) {
+      // Peek at the next non-whitespace char to decide if this is a closer
+      let j = i + 1;
+      while (j < src.length && /\s/.test(src[j])) j++;
+      if (j >= src.length || STRUCTURAL_AFTER.test(src[j])) {
+        out += '"';
+        inString = false;
+        i++;
+      } else {
+        // Content quote
+        if (c === '"') out += '\\"';
+        else out += c; // curly quotes are fine as literal content in a JSON string
+        i++;
+      }
+      continue;
+    }
+    out += c;
+    i++;
+  }
+  return out;
 }
 
 function posToLineCol(s, pos) {
@@ -1486,11 +1531,18 @@ function parseConceptJson(raw) {
   try {
     data = JSON.parse(stripped);
   } catch (err1) {
-    // Retry with smart-quote normalization
+    // Retry after converting curly quotes to strict JSON
+    const relaxed = lenientJsonToStrict(stripped);
     try {
-      data = JSON.parse(normalizeStructuralSmartQuotes(stripped));
-    } catch {
-      throw new Error('Invalid JSON: ' + jsonErrorDetail(stripped, err1));
+      data = JSON.parse(relaxed);
+    } catch (err2) {
+      // Report the error against whichever source is most informative.
+      // If the original had smart quotes, err2 is against the cleaned input.
+      const hadSmart = /[\u201C\u201D]/.test(stripped);
+      const detail = hadSmart
+        ? jsonErrorDetail(relaxed, err2)
+        : jsonErrorDetail(stripped, err1);
+      throw new Error('Invalid JSON: ' + detail);
     }
   }
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
