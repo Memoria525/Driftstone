@@ -1692,6 +1692,291 @@ function ConceptUpload({ onUpload }) {
   );
 }
 
+// ── Concept View/Edit ───────────────────────────────────────────────────────
+
+function compareConceptIds(a, b) {
+  const as = a.split('.').map(n => parseInt(n, 10));
+  const bs = b.split('.').map(n => parseInt(n, 10));
+  const len = Math.max(as.length, bs.length);
+  for (let i = 0; i < len; i++) {
+    const av = Number.isFinite(as[i]) ? as[i] : 0;
+    const bv = Number.isFinite(bs[i]) ? bs[i] : 0;
+    if (av !== bv) return av - bv;
+  }
+  return 0;
+}
+
+// Validate that a new concept text string will render correctly for users.
+// Returns null on success, or an error string on failure.
+function validateConceptText(text) {
+  if (typeof text !== 'string') return 'Text must be a string.';
+  const trimmed = text.trim();
+  if (!trimmed) return 'Text is empty.';
+  // JSON round-trip catches lone surrogates and other unserializable characters.
+  try {
+    const roundTripped = JSON.parse(JSON.stringify({ text }));
+    if (roundTripped.text !== text) return 'Text did not survive JSON round-trip.';
+  } catch (err) {
+    return `Text cannot be serialized as JSON: ${err.message}`;
+  }
+  // Balanced **bold** markers.
+  const boldCount = (text.match(/\*\*/g) || []).length;
+  if (boldCount % 2 !== 0) {
+    return 'Unbalanced **bold** markers — one is missing its pair.';
+  }
+  // Actually render through the markdown renderer.
+  try {
+    const out = renderMarkdown(text);
+    if (!out || (Array.isArray(out) && out.length === 0)) {
+      return 'Text did not render to any visible content.';
+    }
+  } catch (err) {
+    return `Markdown render error: ${err.message}`;
+  }
+  return null;
+}
+
+function ConceptViewEdit({ onToast }) {
+  const [concepts, setConcepts] = useState(null); // null = loading
+  const [loadError, setLoadError] = useState('');
+  const [screen, setScreen] = useState('list'); // 'list' | 'detail' | 'replace'
+  const [selectedId, setSelectedId] = useState(null);
+  const [draftText, setDraftText] = useState('');
+  const [draftError, setDraftError] = useState('');
+  const [saving, setSaving] = useState(false);
+
+  // Load concepts + backfill missing `accepted` flags.
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        const snap = await getDocs(collection(db, 'concepts'));
+        const list = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        const needBackfill = list.filter(c => c.accepted === undefined);
+        if (needBackfill.length > 0) {
+          const batch = writeBatch(db);
+          for (const c of needBackfill) {
+            batch.set(doc(db, 'concepts', c.id), {
+              name: c.name ?? '',
+              text: c.text ?? '',
+              accepted: false,
+            });
+          }
+          await batch.commit();
+          for (const c of list) {
+            if (c.accepted === undefined) c.accepted = false;
+          }
+        }
+        if (mounted) setConcepts(list);
+      } catch (err) {
+        console.error('Failed to load concepts:', err);
+        if (mounted) setLoadError(err.message || 'Failed to load concepts.');
+      }
+    })();
+    return () => { mounted = false; };
+  }, []);
+
+  if (loadError) {
+    return <p className="text-xs text-red-600" role="alert">{loadError}</p>;
+  }
+  if (concepts === null) {
+    return <p className="text-xs text-[--color-text-muted]">Loading concepts…</p>;
+  }
+  if (concepts.length === 0) {
+    return <p className="text-xs text-[--color-text-muted]">No concepts yet. Upload some under Concept Upload.</p>;
+  }
+
+  // Sort: unaccepted first (ID ascending), then accepted (ID ascending).
+  const sorted = [...concepts].sort((x, y) => {
+    if (x.accepted !== y.accepted) return x.accepted ? 1 : -1;
+    return compareConceptIds(x.id, y.id);
+  });
+
+  const current = selectedId ? concepts.find(c => c.id === selectedId) : null;
+
+  // ── List screen ──
+  if (screen === 'list') {
+    return (
+      <div className="space-y-1">
+        <p className="text-xs text-[--color-text-muted] mb-2">
+          {concepts.length} concept{concepts.length === 1 ? '' : 's'}. Tap to view or edit.
+        </p>
+        <ul className="space-y-1">
+          {sorted.map(c => (
+            <li key={c.id}>
+              <button
+                onClick={() => { setSelectedId(c.id); setScreen('detail'); }}
+                className={[
+                  'w-full text-left px-3 py-2 rounded-[--radius-sm] text-sm border border-[--color-border]',
+                  'min-h-touch',
+                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+                  c.accepted
+                    ? 'bg-[--color-surface-sunken] text-[--color-text-muted]'
+                    : 'bg-[--color-surface] text-[--color-text]',
+                ].join(' ')}
+              >
+                <span className="font-mono">{c.id}</span>
+                {' — '}
+                <span>{c.name}</span>
+                {c.accepted && <span className="ml-2" aria-label="accepted">✓</span>}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  // ── Detail screen ──
+  if (screen === 'detail' && current) {
+    async function handleReplace() {
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(current.text);
+          onToast?.('Current text copied to clipboard', 'success');
+        } else {
+          onToast?.('Clipboard unavailable — copy the text manually');
+        }
+      } catch {
+        onToast?.('Clipboard copy failed — copy the text manually');
+      }
+      setDraftText('');
+      setDraftError('');
+      setScreen('replace');
+    }
+
+    async function handleAccept() {
+      if (current.accepted || saving) return;
+      setSaving(true);
+      try {
+        await updateDoc(doc(db, 'concepts', current.id), { accepted: true });
+        setConcepts(prev => prev.map(c => c.id === current.id ? { ...c, accepted: true } : c));
+        onToast?.('Concept accepted', 'success');
+      } catch (err) {
+        console.error('Failed to accept concept:', err);
+        onToast?.('Failed to accept concept');
+      } finally {
+        setSaving(false);
+      }
+    }
+
+    return (
+      <div className="space-y-3">
+        <div className="flex items-center gap-2 flex-wrap text-xs text-[--color-text-muted]">
+          <button
+            onClick={() => { setScreen('list'); setSelectedId(null); }}
+            className="min-h-touch px-3 rounded-[--radius-sm] border border-[--color-border] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          >
+            ← Back
+          </button>
+          <span className="font-mono">{current.id}</span>
+          <span>—</span>
+          <span className="font-medium text-[--color-text]">{current.name}</span>
+        </div>
+
+        <div className="p-3 rounded-[--radius-md] bg-[--color-surface-sunken] border border-[--color-border] space-y-2">
+          {renderMarkdown(current.text)}
+        </div>
+
+        <div className="flex gap-2">
+          <button
+            onClick={handleReplace}
+            disabled={saving}
+            className="min-h-touch px-4 rounded-[--radius-md] text-sm border border-[--color-border] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          >
+            Replace
+          </button>
+          <button
+            onClick={handleAccept}
+            disabled={current.accepted || saving}
+            aria-label={current.accepted ? 'Already accepted' : 'Accept concept'}
+            className={[
+              'min-h-touch px-4 rounded-[--radius-md] text-sm font-medium',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]',
+              current.accepted
+                ? 'bg-[--color-surface-sunken] text-[--color-text-muted] cursor-not-allowed'
+                : 'bg-[--color-brand] text-white disabled:opacity-50',
+            ].join(' ')}
+          >
+            {current.accepted ? 'Accepted ✓' : (saving ? 'Saving…' : 'Accept')}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // ── Replace screen ──
+  if (screen === 'replace' && current) {
+    async function handleSave() {
+      const err = validateConceptText(draftText);
+      if (err) {
+        setDraftError(err);
+        return;
+      }
+      setSaving(true);
+      try {
+        await updateDoc(doc(db, 'concepts', current.id), { text: draftText });
+        setConcepts(prev => prev.map(c => c.id === current.id ? { ...c, text: draftText } : c));
+        setDraftText('');
+        setDraftError('');
+        setScreen('detail');
+        onToast?.('Concept text updated', 'success');
+      } catch (err2) {
+        console.error('Failed to save concept text:', err2);
+        setDraftError(err2.message || 'Failed to save.');
+      } finally {
+        setSaving(false);
+      }
+    }
+
+    return (
+      <div className="space-y-3">
+        <div className="flex items-center gap-2 flex-wrap text-xs text-[--color-text-muted]">
+          <span className="font-mono">{current.id}</span>
+          <span>—</span>
+          <span className="font-medium text-[--color-text]">{current.name}</span>
+        </div>
+        <p className="text-xs text-[--color-text-muted]">
+          The current text was copied to your clipboard. Paste and edit the new version below, then Save.
+        </p>
+
+        <label htmlFor="concept-edit-textarea" className="sr-only">New concept text</label>
+        <textarea
+          id="concept-edit-textarea"
+          value={draftText}
+          onChange={e => { setDraftText(e.target.value); setDraftError(''); }}
+          rows={14}
+          placeholder="Paste the edited text here…"
+          className="w-full p-2 text-xs font-mono rounded-[--radius-md] bg-[--color-surface-sunken] border border-[--color-border] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+        />
+
+        {draftError && (
+          <pre className="text-xs text-red-600 whitespace-pre-wrap font-mono" role="alert">{draftError}</pre>
+        )}
+
+        <div className="flex gap-2">
+          <button
+            onClick={handleSave}
+            disabled={saving || !draftText.trim()}
+            className="min-h-touch px-4 rounded-[--radius-md] text-sm font-medium bg-[--color-brand] text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          >
+            {saving ? 'Saving…' : 'Save'}
+          </button>
+          <button
+            onClick={() => { setScreen('detail'); setDraftText(''); setDraftError(''); }}
+            disabled={saving}
+            className="min-h-touch px-4 rounded-[--radius-md] text-sm border border-[--color-border] text-[--color-text] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return null;
+}
+
 // ── Workflows ───────────────────────────────────────────────────────────────
 
 const WORKFLOWS = [
@@ -1866,6 +2151,7 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
         batch.set(ref, {
           name: conceptsObj[id].Concept,
           text: conceptsObj[id].text,
+          accepted: false,
         });
       }
       await batch.commit();
@@ -2057,6 +2343,15 @@ export default function AdminTab({ user, isAdmin, onHideAdmin, onReviewing }) {
           onToggle={() => toggleSection('concepts')}
         >
           <ConceptUpload onUpload={handleConceptUpload} />
+        </AccordionSection>
+
+        <AccordionSection
+          title="Concept Editor"
+          badge={0}
+          open={openSection === 'conceptEdit'}
+          onToggle={() => toggleSection('conceptEdit')}
+        >
+          <ConceptViewEdit onToast={showToast} />
         </AccordionSection>
 
         <AccordionSection
