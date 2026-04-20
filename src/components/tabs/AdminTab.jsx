@@ -1403,14 +1403,37 @@ function BatchUpload({ courses, onBatchSave }) {
 
 // ── Concept Upload ───────────────────────────────────────────────────────────
 
+function stripCodeFence(s) {
+  // Remove leading/trailing ```json ... ``` or ``` ... ``` fences if present
+  const fence = /^\s*```(?:json)?\s*\n([\s\S]*?)\n```\s*$/;
+  const match = s.match(fence);
+  return match ? match[1] : s;
+}
+
+function normalizeStructuralSmartQuotes(s) {
+  // Replace curly double quotes that sit in JSON-structural positions with ASCII "
+  // Structural positions: adjacent to {, }, [, ], comma, colon, or surrounding whitespace.
+  // Content smart quotes (inside words) are left alone.
+  s = s.replace(/([{[,:\s])[\u201C\u201D]/g, '$1"');
+  s = s.replace(/[\u201C\u201D]([}\],:\s])/g, '"$1');
+  s = s.replace(/^[\u201C\u201D]/, '"');
+  s = s.replace(/[\u201C\u201D]$/, '"');
+  return s;
+}
+
 function parseConceptJson(raw) {
-  const trimmed = raw.trim();
-  if (!trimmed) throw new Error('Paste the Yellow output JSON');
+  const stripped = stripCodeFence(raw.trim());
+  if (!stripped) throw new Error('Paste the Yellow output JSON');
   let data;
   try {
-    data = JSON.parse(trimmed);
-  } catch (err) {
-    throw new Error('Invalid JSON: ' + err.message);
+    data = JSON.parse(stripped);
+  } catch {
+    // Retry with smart-quote normalization
+    try {
+      data = JSON.parse(normalizeStructuralSmartQuotes(stripped));
+    } catch (err2) {
+      throw new Error('Invalid JSON: ' + err2.message);
+    }
   }
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
     throw new Error('Expected a JSON object keyed by concept ID');

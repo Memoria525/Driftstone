@@ -27,7 +27,7 @@ Use Research to gather authoritative, current information on the section topic. 
 
 ### Report format
 
-Output a single JSON object and nothing else. No prose before or after, no code fence, no explanation. The object is a flat map keyed by full concept ID.
+Output a single JSON object wrapped in a ```json code fence and nothing else. No prose before or after, no explanation. The code fence is important — it prevents the chat UI from converting ASCII `"` characters into curly typographic quotes, which would break JSON parsing. The object is a flat map keyed by full concept ID.
 
 ```json
 {
@@ -51,7 +51,7 @@ Output a single JSON object and nothing else. No prose before or after, no code 
 - **Respect scope boundaries.** Only cover material that belongs to this section. If something is covered in a neighboring section (check the items above and below in Blue.txt), mention it briefly and move on.
 - **Accuracy.** Use Research to verify facts. If Research produces genuinely conflicting information about the science itself (not about how textbooks present it), note the discrepancy briefly and teach the consensus view.
 - **No flashcard formatting.** This is a teaching document, not Q&A pairs. Write in narrative and bullet-point form.
-- **Strict JSON output.** The entire response must be a single valid JSON object. Do not wrap it in commentary, do not add a preamble, and do not emit trailing notes. Escape all special characters properly (`"` as `\"`, newlines as `\n`). Do not include the outer markdown code fence in the actual response — emit raw JSON.
+- **Strict JSON output.** The entire response must be a single valid JSON object wrapped in a ```json code fence. Do not add any commentary, preamble, or trailing notes. Escape all special characters properly (`"` as `\"`, newlines as `\n`). Use ASCII double quotes (`"`) for all JSON structural characters — never use curly/smart quotes (`“` `”`) as delimiters. Inside string values, smart quotes are acceptable for typography (for example, to quote a term like “inside”).
 - **No meta-commentary.** Do not mention textbooks, authors, publishers, chapter titles, table numbers, or how sources present material. Do not write sentences like "OpenStax states...", "Tortora's Table 1.2...", "most textbooks agree...", "the conventional presentation...", or "this is a pedagogical simplification." Teach the subject matter directly, as if you are the authority. Use research to inform what you write, not to narrate.
 - **No source attribution.** Do not cite, quote, or reference any source by name anywhere in the report. The output should read like a clear, confident teaching document — not a literature review.
 - **Teach the biology, not the curriculum.** If something is "a convention" or "varies by textbook," just teach the most accurate or widely accepted version without flagging it as a convention. The learner does not need to know how the field is taught — they need to understand the subject.
