@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-02-06-c01",
+    "learning_objective": "Compare and contrast cortical nephrons and juxtamedullary nephrons",
+    "question": "Compare and contrast cortical nephrons and juxtamedullary nephrons",
+    "answer": "The organising idea is that most nephrons are cortical, lying mainly in the cortex with short loops, while a few are juxtamedullary, with long loops dipping deep into the medulla to concentrate the urine. Shallow many versus deep few. This idea of shallow versus deep nephrons frames the comparison.",
+    "explanation": "- The kidney has two kinds of nephron.\n- Cortical nephrons lie mainly in the cortex and have short loops.\n- Juxtamedullary nephrons dip deep into the medulla with long loops.\n- The long loops let the kidney concentrate the urine.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-P-02-06-c02",
+    "learning_objective": "Compare and contrast cortical nephrons and juxtamedullary nephrons",
+    "question": "Explain: The Cortical Nephrons",
+    "answer": "Begin with the cortical nephrons, the majority. They lie mainly in the cortex.",
+    "explanation": "- Cortical nephrons make up most of the nephrons.\n- They lie mainly in the cortex.\n- Their loops are short and dip only a little into the medulla.\n- They carry out most of the routine processing of the fluid.",
+    "is_private": true
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-04-01-c01",
+    "learning_objective": "List and describe the different types of bone cells, with respect to location and function",
+    "question": "List and describe the different types of bone cells, with respect to location and function",
+    "answer": "The organising idea is that bone is kept alive by a team of cells with complementary jobs, one making bone, one maintaining it, one removing it, and one held in reserve, so that bone can be continually rebuilt. Building and removing must be balanced. This idea of a coordinated building team frames the cells.",
+    "explanation": "- Bone is maintained by four types of specialised cell.\n- Osteogenic cells are reserve stem cells that become bone-builders.\n- Osteoblasts build new bone, and osteocytes maintain it.\n- Osteoclasts break bone down, balancing the building.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-04-01-c02",
+    "learning_objective": "List and describe the different types of bone cells, with respect to location and function",
+    "question": "Explain: The Building Cells",
+    "answer": "Begin with the cells that make bone, the osteogenic cells and osteoblasts. These produce new bone.",
+    "explanation": "- Osteogenic cells are unspecialised stem cells found in the periosteum and endosteum.\n- They divide and develop into osteoblasts when new bone is needed.\n- Osteoblasts are the bone-building cells that produce and deposit new bone matrix.\n- As osteoblasts surround themselves with the matrix they make, they become osteocytes.",
+    "is_private": false
+  }
+]

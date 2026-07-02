@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-08-01-c01",
+    "learning_objective": "Describe the anatomical classification of joints based on structure: fibrous (i.e., gomphosis, suture, and syndesmosis), cartilaginous (i.e., symphysis and synchondrosis), and synovial (i.e., planar/gliding, hinge, pivot, condylar, saddle and ball-and-socket), and provide examples of each type",
+    "question": "Describe the anatomical classification of joints based on structure: fibrous (i.e., gomphosis, suture, and syndesmosis), cartilaginous (i.e., symphysis and synchondrosis), and synovial (i.e., planar/gliding, hinge, pivot, condylar, saddle and ball-and-socket), and provide examples of each type",
+    "answer": "The organising idea is that joints are classified by the material binding the bones, fibrous tissue, cartilage, or a fluid-filled capsule, and this binding material largely determines how freely the joint moves. Tighter binding means less movement. This link between binding and mobility frames the classification.",
+    "explanation": "- Joints are classified structurally by what connects the bones.\n- Fibrous joints are held by dense connective tissue and move little.\n- Cartilaginous joints are held by cartilage and move slightly.\n- Synovial joints have a fluid-filled cavity and move freely.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-08-01-c02",
+    "learning_objective": "Describe the anatomical classification of joints based on structure: fibrous (i.e., gomphosis, suture, and syndesmosis), cartilaginous (i.e., symphysis and synchondrosis), and synovial (i.e., planar/gliding, hinge, pivot, condylar, saddle and ball-and-socket), and provide examples of each type",
+    "question": "Explain: Fibrous Joints",
+    "answer": "Begin with fibrous joints, held by connective tissue with little or no movement. Three subtypes exist.",
+    "explanation": "- Fibrous joints connect bones with dense connective tissue and generally permit little movement.\n- A suture is an immovable fibrous joint between the flat bones of the skull.\n- A gomphosis is the fibrous joint anchoring a tooth in its socket.\n- A syndesmosis is a fibrous joint connecting two bones by a ligament, as between the tibia and fibula.",
+    "is_private": false
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-11-04-c01",
+    "learning_objective": "Define a spinal nerve plexus",
+    "question": "Define a spinal nerve plexus",
+    "answer": "The organising idea is that a plexus is a network where the anterior rami of several spinal nerves mingle and regroup, so that each named nerve emerging from it carries fibres from several spinal levels. Mingling and regrouping of nerve fibres. This idea of a mixing network frames the definition.",
+    "explanation": "- A plexus is a network formed by the anterior rami of several spinal nerves.\n- In the plexus, the fibres mingle and regroup.\n- The named nerves that emerge carry fibres from several spinal levels.\n- Plexuses supply the limbs and some other regions.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-11-04-c02",
+    "learning_objective": "Define a spinal nerve plexus",
+    "question": "Explain: Defining a Plexus",
+    "answer": "Begin with the definition itself, stated precisely. It is a mixing network.",
+    "explanation": "- A spinal nerve plexus is a network formed by the interweaving of the anterior rami of adjacent spinal nerves.\n- Within the plexus, the fibres from different spinal nerves mix together.\n- The plexus then gives rise to named peripheral nerves.\n- Each named nerve typically carries fibres from more than one spinal level.",
+    "is_private": false
+  }
+]

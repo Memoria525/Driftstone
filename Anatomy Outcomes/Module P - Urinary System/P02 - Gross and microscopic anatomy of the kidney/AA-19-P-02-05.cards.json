@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-02-05-c01",
+    "learning_objective": "Identify and describe the structure of a typical nephron, including the renal corpuscle (i.e., glomerular [Bowman’s] capsule and glomerulus), renal tubule (i.e., proximal convoluted tubule, nephron loop [loop of Henle], distal convoluted tubule)",
+    "question": "Identify and describe the structure of a typical nephron, including the renal corpuscle (i.e., glomerular [Bowman’s] capsule and glomerulus), renal tubule (i.e., proximal convoluted tubule, nephron loop [loop of Henle], distal convoluted tubule)",
+    "answer": "The organising idea is that a nephron is a filter, the renal corpuscle, followed by a long processing tubule that adjusts the filtered fluid into urine. A filter and a processing line. This idea of a filter plus a tubule frames the topic.",
+    "explanation": "- A nephron is the microscopic urine-making unit of the kidney.\n- It begins with the renal corpuscle, which filters the blood.\n- It continues as the renal tubule, which processes the filtered fluid.\n- The tubule has several named parts in order.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-P-02-05-c02",
+    "learning_objective": "Identify and describe the structure of a typical nephron, including the renal corpuscle (i.e., glomerular [Bowman’s] capsule and glomerulus), renal tubule (i.e., proximal convoluted tubule, nephron loop [loop of Henle], distal convoluted tubule)",
+    "question": "Explain: The Renal Corpuscle",
+    "answer": "Begin with the renal corpuscle, the filter. It has two parts.",
+    "explanation": "- The renal corpuscle is the filtering part of the nephron.\n- It contains the glomerulus, a tuft of capillaries.\n- It contains the glomerular capsule, a cup that surrounds the glomerulus.\n- Fluid filtered from the glomerulus passes into the capsule and on into the tubule.",
+    "is_private": false
+  }
+]

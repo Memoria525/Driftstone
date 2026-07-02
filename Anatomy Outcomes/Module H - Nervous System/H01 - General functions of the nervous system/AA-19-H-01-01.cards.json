@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-01-01-c01",
+    "learning_objective": "Describe the general functions of the nervous system",
+    "question": "Describe the general functions of the nervous system",
+    "answer": "The organising idea is that the nervous system works as a three-step sequence, taking in information, processing it, and producing a response, so that sensation, integration, and motor output form one continuous loop. Every neural event is a step in this sense-decide-act cycle. This idea of a three-step loop frames the functions.",
+    "explanation": "- The nervous system performs three general functions in sequence.\n- It senses changes through sensory input.\n- It processes that information through integration.\n- It responds through motor output.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-01-01-c02",
+    "learning_objective": "Describe the general functions of the nervous system",
+    "question": "Explain: Sensory Input",
+    "answer": "Begin with the first function, gathering information. This is sensory input.",
+    "explanation": "- Sensory input is the detection of changes inside and outside the body.\n- Sensory receptors gather information about stimuli such as touch, temperature, and position.\n- This information is carried by sensory neurons toward the central nervous system.\n- Without sensory input the system would have no information on which to act.",
+    "is_private": false
+  }
+]

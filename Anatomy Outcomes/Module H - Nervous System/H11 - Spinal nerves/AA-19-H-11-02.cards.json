@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-11-02-c01",
+    "learning_objective": "List the number of spinal nerve pairs and their breakdown by region (i.e., cervical, thoracic, lumbar, sacral, coccygeal)",
+    "question": "List the number of spinal nerve pairs and their breakdown by region (i.e., cervical, thoracic, lumbar, sacral, coccygeal)",
+    "answer": "The organising idea is that there are thirty-one pairs of spinal nerves, grouped into five regions matching the regions of the spine, so that each nerve is named by its region and number. Thirty-one pairs in five regional groups. This idea of a regional count frames the topic.",
+    "explanation": "- There are thirty-one pairs of spinal nerves in total.\n- They are grouped by the region of the spine they emerge from.\n- The five regions are cervical, thoracic, lumbar, sacral, and coccygeal.\n- Each nerve is named by its region and its number within that region.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-11-02-c02",
+    "learning_objective": "List the number of spinal nerve pairs and their breakdown by region (i.e., cervical, thoracic, lumbar, sacral, coccygeal)",
+    "question": "Explain: The Cervical and Thoracic Nerves",
+    "answer": "Begin with the upper two regions, the cervical and thoracic. These have the most nerves after the thoracic.",
+    "explanation": "- There are eight pairs of cervical spinal nerves.\n- There are more cervical nerves than cervical vertebrae, because the first emerges above the first vertebra.\n- There are twelve pairs of thoracic spinal nerves.\n- The thoracic region has the largest number of spinal nerve pairs.",
+    "is_private": true
+  }
+]

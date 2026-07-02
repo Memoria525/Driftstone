@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-08-06-c01",
+    "learning_objective": "Describe the blood-brain barrier (BBB) and its significance",
+    "question": "Describe the blood-brain barrier (BBB) and its significance",
+    "answer": "The organising idea is that the blood-brain barrier is a tightly sealed border at the brain's capillaries that controls exactly what crosses from the blood into the brain, protecting the delicate neural environment. A guarded border for the brain's blood supply. This idea of a controlled border frames the topic.",
+    "explanation": "- The blood-brain barrier is a selective barrier at the brain's blood vessels.\n- It controls which substances pass from the blood into the brain.\n- It protects the brain's environment from harmful substances and fluctuations.\n- It is formed by specialised tight junctions and supporting cells.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-08-06-c02",
+    "learning_objective": "Describe the blood-brain barrier (BBB) and its significance",
+    "question": "Explain: The Structure of the Barrier",
+    "answer": "Begin with what forms the barrier, since its structure explains its selectivity. Tight junctions are the key.",
+    "explanation": "- The blood-brain barrier is formed by the cells lining the brain's capillaries.\n- These cells are joined by especially tight junctions that seal the gaps between them.\n- Astrocytes wrap around the vessels and support the barrier.\n- Together these features make the barrier far less permeable than ordinary capillaries.",
+    "is_private": false
+  }
+]

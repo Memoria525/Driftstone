@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-01-01-c01",
+    "learning_objective": "Identify the three main parts of a cell, and list the general functions of each",
+    "question": "Identify the three main parts of a cell, and list the general functions of each",
+    "answer": "The organising idea is that a living cell is not a bag of chemicals but a bounded workspace with a controlled interior and a central management, so that its chemistry happens in the right place at the right time. The boundary decides what enters and leaves, the interior does the work, and the management holds the instructions. Every specialised cell is a variation on this same arrangement.",
+    "explanation": "- A cell separates a controlled internal environment from the outside using a boundary.\n- Inside that boundary, the working machinery carries out the cell's activities.\n- A central control region stores the instructions and directs the cell's long-term behaviour.\n- Every cell type, however specialised, is a variation on this three-part arrangement.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-C-01-01-c02",
+    "learning_objective": "Identify the three main parts of a cell, and list the general functions of each",
+    "question": "Explain: Part One: The Plasma Membrane",
+    "answer": "Begin at the boundary, because nothing happens inside a cell until the membrane has decided what may cross it. The plasma membrane is the cell's selective perimeter, and its control over traffic is fundamental to every function.",
+    "explanation": "- The plasma membrane is the outer boundary that separates the cell's interior from its external environment.\n- Its general function is to control which substances enter and leave, a property called selective permeability.\n- It also receives signals from outside the cell, allowing the cell to respond to its surroundings.\n- It gives the cell its shape and provides the surface through which cells recognise and adhere to one another.",
+    "is_private": false
+  }
+]

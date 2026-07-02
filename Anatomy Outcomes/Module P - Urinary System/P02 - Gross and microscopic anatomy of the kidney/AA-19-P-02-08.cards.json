@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-02-08-c01",
+    "learning_objective": "Trace the flow of filtrate beginning at the renal corpuscle to the collecting duct",
+    "question": "Trace the flow of filtrate beginning at the renal corpuscle to the collecting duct",
+    "answer": "The organising idea is that the filtrate flows one way from the filter through the tubule, being processed at each stage, until it reaches the collecting duct as urine. A one-way processing journey. This idea of an ordered journey frames the topic.",
+    "explanation": "- The filtrate is formed at the renal corpuscle.\n- It flows through the parts of the tubule in order.\n- It is processed at each stage.\n- It reaches the collecting duct as urine.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-P-02-08-c02",
+    "learning_objective": "Trace the flow of filtrate beginning at the renal corpuscle to the collecting duct",
+    "question": "Explain: From the Corpuscle to the Proximal Tubule",
+    "answer": "Begin with the start of the journey, from the corpuscle. The filtrate enters the tubule.",
+    "explanation": "- Fluid is filtered from the glomerulus into the glomerular capsule.\n- This fluid is the filtrate.\n- It flows from the capsule into the proximal convoluted tubule.\n- Here much of the useful substances and water are reabsorbed.",
+    "is_private": false
+  }
+]

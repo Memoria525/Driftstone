@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-09-02-c01",
+    "learning_objective": "Describe the major functions of each cranial nerve and identify each cranial nerve as predominantly sensory, motor, or mixed (i.e., sensory and motor)",
+    "question": "Describe the major functions of each cranial nerve and identify each cranial nerve as predominantly sensory, motor, or mixed (i.e., sensory and motor)",
+    "answer": "The organising idea is that each cranial nerve carries a specific function and is predominantly sensory, motor, or mixed, so knowing both lets you predict the effect of injury to any one. Function plus type predicts the deficit. This idea of function-and-type frames the topic.",
+    "explanation": "- Each cranial nerve has a major function.\n- Each is predominantly sensory, motor, or mixed.\n- Sensory nerves carry information in, motor nerves carry commands out, and mixed nerves do both.\n- Knowing function and type predicts what a deficit produces.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-09-02-c02",
+    "learning_objective": "Describe the major functions of each cranial nerve and identify each cranial nerve as predominantly sensory, motor, or mixed (i.e., sensory and motor)",
+    "question": "Explain: The Sensory Cranial Nerves",
+    "answer": "Begin with the three purely sensory nerves, which carry the special senses. These are numbers one, two, and eight.",
+    "explanation": "- The olfactory nerve is sensory, carrying the sense of smell.\n- The optic nerve is sensory, carrying vision.\n- The vestibulocochlear nerve is sensory, carrying hearing and balance.\n- These three carry information inward from the special sense organs.",
+    "is_private": true
+  }
+]

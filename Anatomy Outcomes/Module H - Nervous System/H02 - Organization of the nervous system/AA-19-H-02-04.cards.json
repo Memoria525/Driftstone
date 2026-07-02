@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-02-04-c01",
+    "learning_objective": "Compare and contrast the somatic sensory and the visceral sensory divisions of the nervous system",
+    "question": "Compare and contrast the somatic sensory and the visceral sensory divisions of the nervous system",
+    "answer": "The organising idea is that the somatic sensory division carries well-localised information from the skin, muscles, and joints, while the visceral sensory division carries poorly localised information from the internal organs. Source determines the quality and precision of the sensation. This body-wall-versus-organs contrast frames the comparison.",
+    "explanation": "- Sensory input divides into somatic and visceral divisions.\n- The somatic sensory division carries information from the body wall and limbs.\n- The visceral sensory division carries information from the internal organs.\n- The two differ in the source, quality, and localisation of their sensations.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-02-04-c02",
+    "learning_objective": "Compare and contrast the somatic sensory and the visceral sensory divisions of the nervous system",
+    "question": "Explain: The Somatic Sensory Division",
+    "answer": "Begin with somatic sensation, which is precise and familiar. It comes from the body wall and limbs.",
+    "explanation": "- The somatic sensory division carries information from the skin, muscles, joints, and body wall.\n- It conveys touch, pressure, temperature, pain, and the position sense of proprioception.\n- Its sensations are generally sharp and well localised.\n- It informs you precisely where on the body a stimulus is occurring.",
+    "is_private": false
+  }
+]

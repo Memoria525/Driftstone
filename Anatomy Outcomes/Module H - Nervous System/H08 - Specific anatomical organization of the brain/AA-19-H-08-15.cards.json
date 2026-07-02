@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-08-15-c01",
+    "learning_objective": "Describe the structure, location and major functions of the hypothalamus, including its relationship to the autonomic nervous system and the endocrine system",
+    "question": "Describe the structure, location and major functions of the hypothalamus, including its relationship to the autonomic nervous system and the endocrine system",
+    "answer": "The organising idea is that the hypothalamus is the master regulator of the body's internal environment, controlling the autonomic nervous system and the endocrine system to keep conditions such as temperature and fluid balance stable. The master thermostat and controller. This idea of a master regulator frames the topic.",
+    "explanation": "- The hypothalamus regulates the body's internal environment.\n- It controls the autonomic nervous system.\n- It controls much of the endocrine system through the pituitary gland.\n- It keeps conditions such as temperature, appetite, and fluid balance stable.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-H-08-15-c02",
+    "learning_objective": "Describe the structure, location and major functions of the hypothalamus, including its relationship to the autonomic nervous system and the endocrine system",
+    "question": "Explain: The Structure and Location",
+    "answer": "Begin with what the hypothalamus is and where it lies. It is a small region below the thalamus.",
+    "explanation": "- The hypothalamus is a small region of the diencephalon below the thalamus.\n- It lies just above the pituitary gland, to which it connects by a stalk.\n- It is made of many small nuclei, each with particular functions.\n- Despite its small size, it has wide-ranging control over the body.",
+    "is_private": false
+  }
+]

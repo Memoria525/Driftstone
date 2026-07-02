@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-06-01-c01",
+    "learning_objective": "Describe the structure, location and function of the six types of neuroglial cells",
+    "question": "Describe the structure, location and function of the six types of neuroglial cells",
+    "answer": "The organising idea is that the six glial types form a support crew for neurons, with four types serving the central nervous system and two serving the peripheral, each with a specialised supporting job. A crew divided by location and task. This idea of a divided support crew frames the topic.",
+    "explanation": "- Neuroglia are supporting cells that serve the neurons.\n- Four types serve the central nervous system.\n- Two types serve the peripheral nervous system.\n- Each type has a specialised supporting function.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-06-01-c02",
+    "learning_objective": "Describe the structure, location and function of the six types of neuroglial cells",
+    "question": "Explain: The Central Glia: Astrocytes and Oligodendrocytes",
+    "answer": "Begin with two central glia, the supporter and the insulator. These are the astrocyte and oligodendrocyte.",
+    "explanation": "- Astrocytes are star-shaped central glia that support neurons, regulate their chemical environment, and help form the blood-brain barrier.\n- They are the most abundant glia in the central nervous system.\n- Oligodendrocytes are central glia that wrap axons in insulating myelin.\n- One oligodendrocyte can myelinate several axons within the central nervous system.",
+    "is_private": true
+  }
+]

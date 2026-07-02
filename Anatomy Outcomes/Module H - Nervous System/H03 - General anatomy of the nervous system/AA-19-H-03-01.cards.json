@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-03-01-c01",
+    "learning_objective": "Describe the composition and arrangement of the gray and white matter in the CNS",
+    "question": "Describe the composition and arrangement of the gray and white matter in the CNS",
+    "answer": "The organising idea is that gray matter is where neurons process information, while white matter is the myelinated cabling that connects processing regions, so the two are the workspaces and the wiring of the central nervous system. One computes; the other transmits. This processing-and-cabling contrast frames the topic.",
+    "explanation": "- Gray matter is where neurons process and integrate information.\n- White matter is the myelinated axons connecting regions.\n- Gray matter is the workspace and white matter is the wiring.\n- Their arrangement differs between the brain and the spinal cord.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-03-01-c02",
+    "learning_objective": "Describe the composition and arrangement of the gray and white matter in the CNS",
+    "question": "Explain: The Composition of Gray and White Matter",
+    "answer": "Begin with what each tissue is made of, since composition explains colour. Cell bodies versus myelinated axons.",
+    "explanation": "- Gray matter is composed mainly of neuron cell bodies, dendrites, and unmyelinated fibres.\n- Its lack of myelin gives it a grayish colour.\n- White matter is composed mainly of myelinated axons.\n- The fatty myelin sheaths give it a white colour.",
+    "is_private": false
+  }
+]

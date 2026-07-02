@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-07-03-c01",
+    "learning_objective": "Compare and contrast the processes of mitosis and meiosis, including discussing which cell types are involved, chromosome number, and genetic composition of daughter cells",
+    "question": "Compare and contrast the processes of mitosis and meiosis, including discussing which cell types are involved, chromosome number, and genetic composition of daughter cells",
+    "answer": "The organising idea is that mitosis exists to make faithful copies for growth and repair, while meiosis exists to make varied, halved cells for reproduction, and almost every difference between them follows from these opposite purposes. One preserves the genome exactly, the other reshuffles and halves it. Holding the two purposes in mind explains every contrast.",
+    "explanation": "- Mitosis produces genetically identical cells for growth and repair.\n- Meiosis produces genetically varied cells with half the chromosome number for reproduction.\n- The differences in cell type, chromosome number, and genetics all follow from these purposes.\n- The body needs both, one to maintain itself and one to reproduce.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-07-03-c02",
+    "learning_objective": "Compare and contrast the processes of mitosis and meiosis, including discussing which cell types are involved, chromosome number, and genetic composition of daughter cells",
+    "question": "Explain: Contrast One: The Cell Types Involved",
+    "answer": "Begin with which cells undergo each process, because this frames where in the body each occurs. The two processes happen in different cell populations.",
+    "explanation": "- Mitosis occurs in somatic cells, the ordinary body cells that make up tissues.\n- Meiosis occurs only in specialised reproductive cells that give rise to gametes.\n- Mitosis happens throughout the body and throughout life for growth and repair.\n- Meiosis is confined to the reproductive organs and produces eggs and sperm.",
+    "is_private": false
+  }
+]

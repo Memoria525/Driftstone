@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-02-02-c01",
+    "learning_objective": "Differentiate between the motor (efferent) and sensory (afferent) components of the nervous system",
+    "question": "Differentiate between the motor (efferent) and sensory (afferent) components of the nervous system",
+    "answer": "The organising idea is that the nervous system carries information in two one-way streams, a sensory stream flowing inward to the central nervous system and a motor stream flowing outward to the effectors. Direction defines the component. This idea of two opposite streams frames the topic.",
+    "explanation": "- Information flows in two directions through the nervous system.\n- The sensory, or afferent, component carries information inward to the central nervous system.\n- The motor, or efferent, component carries commands outward to effectors.\n- The two streams together complete the loop from sensation to response.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-02-02-c02",
+    "learning_objective": "Differentiate between the motor (efferent) and sensory (afferent) components of the nervous system",
+    "question": "Explain: The Sensory (Afferent) Component",
+    "answer": "Begin with the inward stream, which brings information to the central nervous system. This is the afferent component.",
+    "explanation": "- The sensory, or afferent, component carries information toward the central nervous system.\n- It detects stimuli through sensory receptors throughout the body.\n- Its neurons carry signals about touch, temperature, pain, and position inward.\n- The word afferent means carrying toward, describing this inward flow.",
+    "is_private": false
+  }
+]

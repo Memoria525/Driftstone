@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-07-02-c01",
+    "learning_objective": "Identify major bone markings (e.g., spines, processes, foramina) on individual bones",
+    "question": "Identify major bone markings (e.g., spines, processes, foramina) on individual bones",
+    "answer": "The organising idea is that specific bones carry named markings that serve as reliable landmarks for muscle attachment, palpation, and measurement, so that identifying them turns bones into a map of clinical reference points. The markings are where soft tissues attach and where you place your hands. This idea of landmarks guiding assessment frames the topic.",
+    "explanation": "- Individual bones carry specific named markings.\n- Many markings are palpable and serve as clinical landmarks.\n- Markings indicate where muscles attach or where structures pass.\n- Identifying them turns the skeleton into a map of reference points.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-07-02-c02",
+    "learning_objective": "Identify major bone markings (e.g., spines, processes, foramina) on individual bones",
+    "question": "Explain: Markings of the Upper Limb Bones",
+    "answer": "Begin with the upper limb, which carries many palpable landmarks. These guide shoulder, elbow, and wrist assessment.",
+    "explanation": "- The scapula carries the spine, the acromion, and the coracoid process, key attachment and landmark points.\n- The humerus carries the greater and lesser tubercles, the deltoid tuberosity, and the medial and lateral epicondyles.\n- The epicondyles of the humerus are palpable landmarks and common sites of tendon problems at the elbow.\n- The radius and ulna carry the olecranon at the elbow and the styloid processes at the wrist.",
+    "is_private": false
+  }
+]

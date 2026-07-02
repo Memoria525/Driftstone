@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-12-01-c01",
+    "learning_objective": "Describe the locations and functions of the first-, second- and third-order neurons in a sensory pathway",
+    "question": "Describe the locations and functions of the first-, second- and third-order neurons in a sensory pathway",
+    "answer": "The organising idea is that a sensory pathway is a relay of three neurons in series, the first bringing information from the body to the cord or brainstem, the second carrying it up to the thalamus, and the third carrying it to the cortex. Three legs of one relay. This idea of a three-neuron relay frames the topic.",
+    "explanation": "- A sensory pathway typically uses three neurons in series.\n- The first-order neuron brings information from the receptor to the central nervous system.\n- The second-order neuron carries it up to the thalamus.\n- The third-order neuron carries it from the thalamus to the cortex.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-12-01-c02",
+    "learning_objective": "Describe the locations and functions of the first-, second- and third-order neurons in a sensory pathway",
+    "question": "Explain: The First-Order Neuron",
+    "answer": "Begin with the first neuron, which brings sensation in. Its cell body sits in the ganglion.",
+    "explanation": "- The first-order neuron carries sensory information from the receptor to the central nervous system.\n- Its cell body lies in the posterior root ganglion or a cranial nerve ganglion.\n- Its axon enters the spinal cord or brainstem.\n- It delivers the sensory signal to the second-order neuron.",
+    "is_private": false
+  }
+]

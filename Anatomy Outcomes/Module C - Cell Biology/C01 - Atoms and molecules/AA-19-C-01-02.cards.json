@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-01-02-c01",
+    "learning_objective": "Explain the difference between cytoplasm and cytosol",
+    "question": "Explain the difference between cytoplasm and cytosol",
+    "answer": "The organising idea is that cytosol is a component of cytoplasm, not a synonym for it, so the two are related as a part to a whole. The cytoplasm is the entire interior working space excluding the nucleus, while the cytosol is only the fluid portion of that space. Getting this containment relationship right resolves nearly all confusion between the terms.",
+    "explanation": "- The cytoplasm is the whole interior of the cell between the plasma membrane and the nucleus.\n- The cytosol is only the fluid part of that interior, without the organelles.\n- Therefore the cytosol is one component of the cytoplasm, and the cytoplasm is the larger whole.\n- The relationship is one of part to whole, which is the key to using the terms correctly.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-01-02-c02",
+    "learning_objective": "Explain the difference between cytoplasm and cytosol",
+    "question": "Explain: Defining the Cytosol",
+    "answer": "Start with the smaller term, because once the cytosol is clear the cytoplasm defines itself. The cytosol is the fluid, and it is far from empty.",
+    "explanation": "- The cytosol is the semi-fluid, gel-like substance that fills the space inside the cell.\n- It is composed mostly of water, with dissolved ions, nutrients, proteins, and waste products.\n- Many metabolic reactions, such as the early steps of glucose breakdown, occur directly in the cytosol.\n- It is the medium through which substances and organelles move within the cell.",
+    "is_private": false
+  }
+]

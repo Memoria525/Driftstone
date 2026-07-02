@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-03-02-c01",
+    "learning_objective": "Describe the structure and function of organelles associated with human cells",
+    "question": "Describe the structure and function of organelles associated with human cells",
+    "answer": "The organising idea is that the organelles are not a random collection but a coordinated set, many of them forming a production line that manufactures, modifies, packages, and ships the cell's products. Energy organelles power the line, and recycling organelles clear its waste. Seeing the organelles as a working system rather than a list is the aim.",
+    "explanation": "- The organelles together form a coordinated system, not an unrelated collection.\n- Several form a manufacturing and export pathway for the cell's proteins.\n- Other organelles supply the energy that powers this activity.\n- Still others recycle waste and worn components, keeping the system running.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-03-02-c02",
+    "learning_objective": "Describe the structure and function of organelles associated with human cells",
+    "question": "Explain: The Energy and Control Organelles",
+    "answer": "Begin with the organelles that power the cell and, briefly, the one that controls it, since energy and instruction underpin everything else. Their structures suit their roles.",
+    "explanation": "- Mitochondria are double-membraned organelles whose inner membrane is highly folded, and they generate most of the cell's ATP through aerobic respiration.\n- The folding of the inner membrane increases its surface area, maximising the machinery available for energy production.\n- The nucleus, bounded by a double membrane, stores the DNA and directs protein synthesis, and it is covered in detail elsewhere.\n- Cells with high energy demands, such as muscle fibres, contain especially large numbers of mitochondria.",
+    "is_private": false
+  }
+]

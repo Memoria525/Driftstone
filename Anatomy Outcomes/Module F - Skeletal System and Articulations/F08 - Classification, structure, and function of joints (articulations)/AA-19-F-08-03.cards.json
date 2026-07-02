@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-08-03-c01",
+    "learning_objective": "Explain how the anatomical classifications of joints are related to the amount of movement(s) permitted at each joint",
+    "question": "Explain how the anatomical classifications of joints are related to the amount of movement(s) permitted at each joint",
+    "answer": "The organising idea is that joint structure sets a trade-off between stability and mobility, so that the tightly bound fibrous joints are stable but immovable, while the loosely bound synovial joints are mobile but less inherently stable. Structure buys one at the cost of the other. This trade-off frames the whole relationship.",
+    "explanation": "- A joint's structure determines how much it can move.\n- Tightly bound joints are stable but move little.\n- Loosely bound synovial joints move freely but are less inherently stable.\n- Structure sets a trade-off between stability and mobility.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-F-08-03-c02",
+    "learning_objective": "Explain how the anatomical classifications of joints are related to the amount of movement(s) permitted at each joint",
+    "question": "Explain: Why Structure Determines Movement",
+    "answer": "Begin with the principle, that the binding material sets the possible movement. The tissue between the bones is decisive.",
+    "explanation": "- The material connecting the bones sets how much they can move relative to one another.\n- Dense fibrous tissue holds bones tightly, permitting little movement.\n- Cartilage holds bones firmly but with some give, permitting slight movement.\n- A fluid-filled cavity with a capsule lets bones move freely, permitting wide movement.",
+    "is_private": false
+  }
+]

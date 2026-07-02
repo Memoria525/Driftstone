@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-02-09-c01",
+    "learning_objective": "Identify the location, structures and cells of the juxtaglomerular apparatus and discuss its significance",
+    "question": "Identify the location, structures and cells of the juxtaglomerular apparatus and discuss its significance",
+    "answer": "The organising idea is that the juxtaglomerular apparatus is where the nephron's distal tubule touches its own afferent arteriole, letting it sense the fluid and adjust filtering and blood pressure. A built-in sensor and controller. This idea of a self-regulating structure frames the topic.",
+    "explanation": "- The juxtaglomerular apparatus is where the distal tubule touches the afferent arteriole.\n- It contains cells that sense the fluid in the tubule.\n- It contains cells that release a substance to adjust blood pressure.\n- It lets the kidney sense and adjust its own filtering.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-P-02-09-c02",
+    "learning_objective": "Identify the location, structures and cells of the juxtaglomerular apparatus and discuss its significance",
+    "question": "Explain: The Location and Structures",
+    "answer": "Begin with the location and structures, since it is where two parts of the nephron meet. The tubule touches its arteriole.",
+    "explanation": "- The juxtaglomerular apparatus lies where the distal tubule of a nephron touches its own afferent arteriole.\n- It is near the glomerulus of the same nephron.\n- It brings the tubule fluid close to the arteriole supplying the glomerulus.\n- This lets the apparatus sense the fluid and adjust the arteriole.",
+    "is_private": false
+  }
+]

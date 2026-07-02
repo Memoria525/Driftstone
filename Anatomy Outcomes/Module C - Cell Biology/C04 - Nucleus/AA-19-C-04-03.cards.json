@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-04-03-c01",
+    "learning_objective": "Compare and contrast the structure of chromatin, chromatids, and chromosomes",
+    "question": "Compare and contrast the structure of chromatin, chromatids, and chromosomes",
+    "answer": "The organising idea is that chromatin, chromatids, and chromosomes are not three different substances but the same DNA presented in three structural states, depending on how tightly it is packed and whether it has been copied. Once you see them as stages of the one material, the contrast becomes about condensation and copying rather than identity. This single idea resolves most of the confusion.",
+    "explanation": "- All three terms refer to the same underlying material, DNA combined with protein.\n- They differ in how condensed the DNA is and whether it has been duplicated.\n- Chromatin is the extended, working form, and chromosomes are the condensed form.\n- A chromatid is one copy of a duplicated chromosome, joined to its twin.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-04-03-c02",
+    "learning_objective": "Compare and contrast the structure of chromatin, chromatids, and chromosomes",
+    "question": "Explain: Chromatin: The Extended Working Form",
+    "answer": "Begin with chromatin, because it is the everyday state of the genetic material in a functioning cell. It is diffuse and accessible.",
+    "explanation": "- Chromatin is the loosely coiled complex of DNA and histone proteins found in a non-dividing cell.\n- Its extended structure allows genes to be read and transcribed.\n- It appears as a diffuse, granular material spread through the nucleus.\n- It is the form in which the genetic material spends most of its time.",
+    "is_private": false
+  }
+]

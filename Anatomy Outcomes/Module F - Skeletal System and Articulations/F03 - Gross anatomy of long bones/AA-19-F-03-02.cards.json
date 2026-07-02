@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-03-02-c01",
+    "learning_objective": "Describe the bone components responsible for either lengthwise or circumferential (width) bone growth in long bones",
+    "question": "Describe the bone components responsible for either lengthwise or circumferential (width) bone growth in long bones",
+    "answer": "The organising idea is that lengthwise growth happens at the growth plate near each end of the bone, while width growth happens at the periosteum around the shaft, so the two directions have separate, specialised sites. One lengthens, the other thickens. This division of growth sites frames the topic.",
+    "explanation": "- Long bones grow both in length and in width.\n- Lengthwise growth occurs at the growth plate, or epiphyseal plate.\n- Width growth occurs at the periosteum on the outer surface.\n- Each direction of growth has its own dedicated site.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-03-02-c02",
+    "learning_objective": "Describe the bone components responsible for either lengthwise or circumferential (width) bone growth in long bones",
+    "question": "Explain: Lengthwise Growth at the Growth Plate",
+    "answer": "Begin with lengthwise growth, driven by the growth plate near each end. It works by adding cartilage that becomes bone.",
+    "explanation": "- The growth plate, or epiphyseal plate, is a layer of cartilage between the shaft and each end in a growing bone.\n- Cartilage cells multiply on the side toward the end, pushing the end away and lengthening the bone.\n- The older cartilage on the shaft side is replaced by bone, so the bone lengthens while the plate stays the same thickness.\n- When growth ends, the plate is fully replaced by bone, forming the epiphyseal line, and lengthwise growth stops.",
+    "is_private": false
+  }
+]

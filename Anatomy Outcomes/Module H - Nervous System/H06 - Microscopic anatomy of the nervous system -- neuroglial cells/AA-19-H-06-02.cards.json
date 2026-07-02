@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-06-02-c01",
+    "learning_objective": "Define myelination and describe its function, including comparing and contrasting how myelination occurs in the CNS and PNS",
+    "question": "Define myelination and describe its function, including comparing and contrasting how myelination occurs in the CNS and PNS",
+    "answer": "The organising idea is that myelination wraps an axon in a fatty insulating sheath with gaps, allowing the nerve signal to jump between the gaps and travel far faster than it could along a bare axon. Insulation with gaps for speed. This idea of insulation for speed frames the topic.",
+    "explanation": "- Myelination is the wrapping of an axon in a fatty insulating sheath called myelin.\n- The sheath is interrupted by regular gaps along the axon.\n- The signal jumps between the gaps, greatly speeding its conduction.\n- Different glial cells produce myelin in the central and peripheral nervous systems.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-06-02-c02",
+    "learning_objective": "Define myelination and describe its function, including comparing and contrasting how myelination occurs in the CNS and PNS",
+    "question": "Explain: Defining Myelination and Its Function",
+    "answer": "Begin with the definition and function, since these are shared everywhere. Myelin speeds conduction.",
+    "explanation": "- Myelination is the process by which glial cells wrap an axon in layers of their membrane, forming myelin.\n- The myelin sheath insulates the axon electrically.\n- Gaps in the sheath allow the signal to jump from gap to gap rather than crawling along the whole axon.\n- This jumping conduction makes myelinated axons conduct far faster than unmyelinated ones.",
+    "is_private": false
+  }
+]

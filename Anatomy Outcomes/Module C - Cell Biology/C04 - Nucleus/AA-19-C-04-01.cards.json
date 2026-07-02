@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-04-01-c01",
+    "learning_objective": "Describe the structure and function of the nucleus",
+    "question": "Describe the structure and function of the nucleus",
+    "answer": "The organising idea is that the nucleus governs the cell by holding the master set of instructions and issuing working copies, so it controls activity without carrying out that activity itself. It is a library and a command centre combined, keeping the genome safe while directing what the cell builds. This idea of remote control through instructions runs through everything the nucleus does.",
+    "explanation": "- The nucleus stores the cell's complete genetic instructions in its DNA.\n- It directs the cell's activities by controlling which proteins are made.\n- It exerts this control by sending working copies of instructions out to the cytoplasm.\n- It thereby governs the cell's structure, function, and division.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-C-04-01-c02",
+    "learning_objective": "Describe the structure and function of the nucleus",
+    "question": "Explain: The Structure of the Nucleus",
+    "answer": "Begin with how the nucleus is built, because its structure explains how it both protects and communicates. It is bounded by a distinctive double membrane.",
+    "explanation": "- The nucleus is enclosed by a double membrane called the nuclear envelope, separating its contents from the cytoplasm.\n- The envelope is perforated by nuclear pores that regulate the movement of materials in and out.\n- Inside is the nucleoplasm, a fluid containing the genetic material and a prominent nucleolus.\n- The genetic material is present as chromatin, a complex of DNA and protein that condenses into chromosomes at division.",
+    "is_private": false
+  }
+]

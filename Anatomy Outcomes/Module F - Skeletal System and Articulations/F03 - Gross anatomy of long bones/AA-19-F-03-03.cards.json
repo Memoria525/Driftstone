@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-03-03-c01",
+    "learning_objective": "Compare and contrast the composition and function of red bone marrow and yellow bone marrow",
+    "question": "Compare and contrast the composition and function of red bone marrow and yellow bone marrow",
+    "answer": "The organising idea is that red marrow is a blood factory that produces blood cells, while yellow marrow is a fat store held in reserve, so the two kinds of marrow differ in both composition and function. One manufactures; one stores. This factory-and-store contrast frames the topic.",
+    "explanation": "- Bone marrow comes in two kinds, red and yellow.\n- Red marrow is a blood-forming tissue.\n- Yellow marrow is a fat-storing tissue.\n- The two differ in both composition and function.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-03-03-c02",
+    "learning_objective": "Compare and contrast the composition and function of red bone marrow and yellow bone marrow",
+    "question": "Explain: The Composition and Function of Red Marrow",
+    "answer": "Begin with red marrow, the blood-forming tissue. Its composition suits production.",
+    "explanation": "- Red marrow is composed of blood-forming stem cells and developing blood cells in a supportive network.\n- Its red colour comes from the developing red blood cells within it.\n- Its function is haematopoiesis, the production of red blood cells, white blood cells, and platelets.\n- It is found in the spongy bone of certain bones where blood formation occurs.",
+    "is_private": true
+  }
+]

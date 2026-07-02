@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-02-01-c01",
+    "learning_objective": "Define the types of bones based on shape and provide examples of each",
+    "question": "Define the types of bones based on shape and provide examples of each",
+    "answer": "The organising idea is that bones are classified by shape because shape follows function, so long bones act as levers, flat bones as shields, and short bones as stable supports. Knowing the shape predicts the job. This principle that shape follows function frames the classification.",
+    "explanation": "- Bones are classified into categories by their overall shape.\n- Each shape suits a particular mechanical role.\n- Long bones act as levers, flat bones protect, and short bones provide stability.\n- Knowing a bone's shape predicts its function.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-02-01-c02",
+    "learning_objective": "Define the types of bones based on shape and provide examples of each",
+    "question": "Explain: Long and Short Bones",
+    "answer": "Begin with long and short bones, which contrast leverage against stability. Their proportions differ.",
+    "explanation": "- Long bones are longer than they are wide, acting as levers for movement, as in the femur, humerus, and phalanges.\n- They consist of a shaft with two ends and are found in the limbs.\n- Short bones are roughly cube-shaped, providing stability with limited movement, as in the carpals of the wrist and tarsals of the ankle.\n- Their shape suits them to bearing load while allowing small adjusting movements.",
+    "is_private": false
+  }
+]

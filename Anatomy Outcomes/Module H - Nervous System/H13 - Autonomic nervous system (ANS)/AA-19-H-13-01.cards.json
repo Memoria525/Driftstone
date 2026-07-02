@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-13-01-c01",
+    "learning_objective": "Compare and contrast the autonomic nervous system (ANS) to the somatic nervous system (SNS) with respect to site of origination, number of neurons involved in the pathway, effectors, and neurotransmitters",
+    "question": "Compare and contrast the autonomic nervous system (ANS) to the somatic nervous system (SNS) with respect to site of origination, number of neurons involved in the pathway, effectors, and neurotransmitters",
+    "answer": "The organising idea is that the somatic system controls skeletal muscle with a single excitatory neuron, while the autonomic system controls organs with a two-neuron chain that can excite or inhibit, so the two differ at every step. Simple voluntary versus two-step automatic. This idea of contrasting control systems frames the comparison.",
+    "explanation": "- The somatic system controls skeletal muscle voluntarily.\n- The autonomic system controls organs and glands automatically.\n- They differ in origin, neuron number, effectors, and neurotransmitters.\n- The differences all follow from their different jobs.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-13-01-c02",
+    "learning_objective": "Compare and contrast the autonomic nervous system (ANS) to the somatic nervous system (SNS) with respect to site of origination, number of neurons involved in the pathway, effectors, and neurotransmitters",
+    "question": "Explain: The Site of Origin and Number of Neurons",
+    "answer": "Begin with origin and neuron number, since these differ structurally. One uses a single neuron, the other two.",
+    "explanation": "- The somatic system's neurons originate in the brainstem and spinal cord and run directly to the muscle.\n- It uses a single neuron from the central nervous system to the effector.\n- The autonomic system's neurons also originate in the central nervous system but relay in a ganglion.\n- It uses a two-neuron chain, a preganglionic and a postganglionic neuron.",
+    "is_private": false
+  }
+]

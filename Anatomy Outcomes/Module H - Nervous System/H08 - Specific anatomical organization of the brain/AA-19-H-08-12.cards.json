@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-08-12-c01",
+    "learning_objective": "Compare and contrast the three cerebral white matter tracts (i.e., association, commissural, projection)",
+    "question": "Compare and contrast the three cerebral white matter tracts (i.e., association, commissural, projection)",
+    "answer": "The organising idea is that the three white matter tracts are defined by what they connect, so association tracts link regions within a hemisphere, commissural tracts link the two hemispheres, and projection tracts link the cortex with lower structures. Connection target names the tract. This idea of naming by connection frames the comparison.",
+    "explanation": "- The cerebral white matter has three kinds of tract.\n- Association tracts connect regions within the same hemisphere.\n- Commissural tracts connect the two hemispheres.\n- Projection tracts connect the cortex with lower structures such as the brainstem and cord.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-08-12-c02",
+    "learning_objective": "Compare and contrast the three cerebral white matter tracts (i.e., association, commissural, projection)",
+    "question": "Explain: Association Tracts",
+    "answer": "Begin with the tracts within a hemisphere, linking its own regions. These are the association tracts.",
+    "explanation": "- Association tracts connect different regions within the same cerebral hemisphere.\n- They link cortical areas so that they can work together.\n- They allow, for example, sensory and motor areas on one side to coordinate.\n- They keep communication within a single hemisphere.",
+    "is_private": false
+  }
+]

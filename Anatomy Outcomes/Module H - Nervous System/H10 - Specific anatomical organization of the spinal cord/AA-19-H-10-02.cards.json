@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-10-02-c01",
+    "learning_objective": "Compare and contrast the location, composition, and function of the anterior (ventral) roots, posterior (dorsal) roots, and posterior (dorsal) root ganglion with respect to the spinal cord",
+    "question": "Compare and contrast the location, composition, and function of the anterior (ventral) roots, posterior (dorsal) roots, and posterior (dorsal) root ganglion with respect to the spinal cord",
+    "answer": "The organising idea is that the spinal cord separates its traffic, sending motor fibres out through the anterior roots and receiving sensory fibres through the posterior roots, whose cell bodies sit in the posterior root ganglion. Motor out the front, sensory in the back. This idea of separated roots frames the comparison.",
+    "explanation": "- Each spinal nerve attaches to the cord by an anterior and a posterior root.\n- The anterior root carries motor fibres out of the cord.\n- The posterior root carries sensory fibres into the cord.\n- The posterior root ganglion houses the sensory neuron cell bodies.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-10-02-c02",
+    "learning_objective": "Compare and contrast the location, composition, and function of the anterior (ventral) roots, posterior (dorsal) roots, and posterior (dorsal) root ganglion with respect to the spinal cord",
+    "question": "Explain: The Anterior Root",
+    "answer": "Begin with the anterior root, which carries motor traffic out. It emerges from the front of the cord.",
+    "explanation": "- The anterior, or ventral, root attaches to the front of the spinal cord.\n- It is composed of motor axons whose cell bodies lie within the cord.\n- It carries motor commands out of the cord toward the muscles.\n- It is the efferent, or output, root of the spinal nerve.",
+    "is_private": false
+  }
+]

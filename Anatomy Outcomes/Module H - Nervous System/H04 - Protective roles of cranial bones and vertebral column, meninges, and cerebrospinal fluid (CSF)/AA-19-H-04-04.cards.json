@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-04-04-c01",
+    "learning_objective": "Describe the structure and location of the dural venous sinuses, and explain their role in drainage of blood from the brain",
+    "question": "Describe the structure and location of the dural venous sinuses, and explain their role in drainage of blood from the brain",
+    "answer": "The organising idea is that the dural venous sinuses are channels formed where the two layers of the cranial dura separate, collecting blood from the brain and channelling it toward the internal jugular vein. Gutters built into the dura that drain the brain. This idea of dural drainage channels frames the topic.",
+    "explanation": "- The dural venous sinuses are venous channels within the cranial dura.\n- They form where the two layers of the cranial dura separate.\n- They collect blood draining from the brain.\n- They channel this blood toward the internal jugular vein and out of the skull.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-04-04-c02",
+    "learning_objective": "Describe the structure and location of the dural venous sinuses, and explain their role in drainage of blood from the brain",
+    "question": "Explain: The Structure of the Sinuses",
+    "answer": "Begin with what the sinuses are, since their structure is unusual. They are dural channels, not ordinary veins.",
+    "explanation": "- The dural venous sinuses are spaces between the periosteal and meningeal layers of the cranial dura.\n- Unlike ordinary veins, their walls are formed by dura rather than by a vein's own layers.\n- They lack valves, so blood flows through them by pressure gradients.\n- They receive blood from the veins of the brain and from cerebrospinal fluid.",
+    "is_private": false
+  }
+]

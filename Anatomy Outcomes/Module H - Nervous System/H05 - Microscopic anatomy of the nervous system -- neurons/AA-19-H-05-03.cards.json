@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-05-03-c01",
+    "learning_objective": "Compare and contrast the three functional types of neurons (i.e., motor [efferent] neurons, sensory [afferent] neurons, and interneurons [association neurons], and motor [efferent] neurons) with respect to their structure, location, and function",
+    "question": "Compare and contrast the three functional types of neurons (i.e., motor [efferent] neurons, sensory [afferent] neurons, and interneurons [association neurons], and motor [efferent] neurons) with respect to their structure, location, and function",
+    "answer": "The organising idea is that the three functional types are defined by their place in the sense-decide-act loop, with sensory neurons bringing information in, interneurons processing it, and motor neurons sending commands out. Input, processing, output, as cell types. This idea of naming by role in the loop frames the comparison.",
+    "explanation": "- The functional types are defined by their role in the flow of information.\n- Sensory neurons carry information toward the central nervous system.\n- Interneurons process information within the central nervous system.\n- Motor neurons carry commands away to effectors.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-05-03-c02",
+    "learning_objective": "Compare and contrast the three functional types of neurons (i.e., motor [efferent] neurons, sensory [afferent] neurons, and interneurons [association neurons], and motor [efferent] neurons) with respect to their structure, location, and function",
+    "question": "Explain: The Sensory Neurons",
+    "answer": "Begin with the input type, which brings information in. These are the sensory, or afferent, neurons.",
+    "explanation": "- Sensory neurons carry information from receptors toward the central nervous system.\n- They are typically unipolar, with cell bodies in the dorsal root ganglia.\n- They detect stimuli such as touch, pain, temperature, and position.\n- They form the afferent, or input, side of the nervous system.",
+    "is_private": false
+  }
+]

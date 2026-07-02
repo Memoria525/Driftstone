@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-07-01-c01",
+    "learning_objective": "Compare and contrast the different phases of meiosis",
+    "question": "Compare and contrast the different phases of meiosis",
+    "answer": "The organising idea is that meiosis performs two divisions in succession, the first separating the chromosome pairs to halve the number and shuffle the genes, and the second separating the sister chromatids like an ordinary division. The result is four cells, each with half the chromosomes and a unique combination of genes. Keeping the two-division structure in mind organises all the phases.",
+    "explanation": "- Meiosis consists of two consecutive divisions, meiosis I and meiosis II.\n- Meiosis I separates the pairs of chromosomes, halving the chromosome number.\n- Meiosis II separates the sister chromatids, like a standard division.\n- The outcome is four genetically varied cells, each with half the original chromosome number.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-07-01-c02",
+    "learning_objective": "Compare and contrast the different phases of meiosis",
+    "question": "Explain: Meiosis I: Prophase and Metaphase",
+    "answer": "Begin with the first division, whose early phases set up the halving and the shuffling that make meiosis special. Homologous chromosomes pair up here.",
+    "explanation": "- In prophase I, the chromosomes condense and homologous pairs come together and physically exchange segments in crossing over.\n- Crossing over recombines genetic material between the maternal and paternal chromosomes, creating new combinations.\n- In metaphase I, the paired homologous chromosomes line up together at the centre of the cell.\n- The random orientation of each pair, called independent assortment, further shuffles which chromosomes go to each side.",
+    "is_private": false
+  }
+]

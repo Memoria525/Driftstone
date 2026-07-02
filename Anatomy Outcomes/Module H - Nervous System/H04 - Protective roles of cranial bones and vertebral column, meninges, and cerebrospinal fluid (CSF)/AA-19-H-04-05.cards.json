@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-04-05-c01",
+    "learning_objective": "Identify and describe the structure and function of the cranial dural septa",
+    "question": "Identify and describe the structure and function of the cranial dural septa",
+    "answer": "The organising idea is that the dural septa are inward folds of the meningeal dura that partition the cranial cavity, separating major regions of the brain and limiting its movement within the skull. Internal walls that divide and steady. This idea of internal partitions frames the topic.",
+    "explanation": "- The dural septa are inward folds of the cranial meningeal dura.\n- They partition the cranial cavity into compartments.\n- They separate major regions of the brain from one another.\n- They limit excessive movement of the brain within the skull.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-04-05-c02",
+    "learning_objective": "Identify and describe the structure and function of the cranial dural septa",
+    "question": "Explain: The Falx Cerebri",
+    "answer": "Begin with the largest septum, which divides the two cerebral hemispheres. This is the falx cerebri.",
+    "explanation": "- The falx cerebri is a large sickle-shaped fold of dura in the midline.\n- It descends into the longitudinal fissure between the two cerebral hemispheres.\n- It partially separates the left and right hemispheres.\n- It contains the superior sagittal sinus along its upper edge.",
+    "is_private": true
+  }
+]

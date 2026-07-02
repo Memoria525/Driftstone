@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-03-04-c01",
+    "learning_objective": "Describe how the location and distribution of red and yellow bone marrow varies during a lifetime",
+    "question": "Describe how the location and distribution of red and yellow bone marrow varies during a lifetime",
+    "answer": "The organising idea is that at birth almost all marrow is red and blood-forming, but through life red marrow is progressively replaced by yellow marrow in the limbs, retreating to the central axial skeleton where blood formation continues. Blood-forming tissue concentrates centrally with age. This idea of a retreat to the centre frames the topic.",
+    "explanation": "- At birth, almost all bone marrow is red and blood-forming.\n- Through life, red marrow is progressively replaced by yellow marrow.\n- The replacement proceeds from the limbs inward toward the central skeleton.\n- In adults, red marrow persists mainly in the axial skeleton and the proximal limb bones.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-03-04-c02",
+    "learning_objective": "Describe how the location and distribution of red and yellow bone marrow varies during a lifetime",
+    "question": "Explain: Marrow Distribution in Infancy",
+    "answer": "Begin with infancy, when blood demand is high and marrow is almost entirely red. The whole skeleton contributes.",
+    "explanation": "- At birth and in early infancy, almost all the bones contain red marrow.\n- Blood cell production occurs throughout the skeleton to meet the high demands of rapid growth.\n- Both the axial skeleton and the limb bones are blood-forming.\n- This widespread red marrow reflects the infant's need to build a growing blood volume.",
+    "is_private": false
+  }
+]

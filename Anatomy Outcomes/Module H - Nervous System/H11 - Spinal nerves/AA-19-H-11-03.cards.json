@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-11-03-c01",
+    "learning_objective": "Describe the concept of a dermatome and its clinical significance",
+    "question": "Describe the concept of a dermatome and its clinical significance",
+    "answer": "The organising idea is that each spinal nerve carries sensation from a defined strip of skin, so that altered sensation in a particular strip points to a problem at that nerve's level. One nerve, one skin strip. This idea of nerve-mapped skin frames the topic.",
+    "explanation": "- A dermatome is the area of skin supplied by a single spinal nerve.\n- The dermatomes together map the whole body surface.\n- Altered sensation in a dermatome points to a problem at that nerve's level.\n- Dermatomes let you localise a nerve problem from the pattern of sensory change.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-11-03-c02",
+    "learning_objective": "Describe the concept of a dermatome and its clinical significance",
+    "question": "Explain: Defining a Dermatome",
+    "answer": "Begin with the definition itself, stated precisely. It is nerve-mapped skin.",
+    "explanation": "- A dermatome is the region of skin whose sensation is supplied by a single spinal nerve.\n- Each spinal nerve, except the first cervical, supplies a dermatome.\n- The dermatomes are arranged in a consistent pattern over the body.\n- Adjacent dermatomes overlap somewhat, so a single nerve loss may not abolish all sensation in its strip.",
+    "is_private": false
+  }
+]

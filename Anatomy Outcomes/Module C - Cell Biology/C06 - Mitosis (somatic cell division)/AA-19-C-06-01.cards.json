@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-06-01-c01",
+    "learning_objective": "Compare and contrast the different mitotic phases",
+    "question": "Compare and contrast the different mitotic phases",
+    "answer": "The organising idea is that mitosis exists to distribute one complete, identical set of chromosomes to each of two daughter cells, and every phase is a step in lining them up and pulling them apart accurately. The whole process is about equal, error-free sharing. Keeping that goal in mind makes each phase's purpose clear.",
+    "explanation": "- Mitosis divides a duplicated nucleus so that each daughter cell receives an identical full set of chromosomes.\n- Each phase is a necessary step in condensing, aligning, separating, and repackaging the chromosomes.\n- The process ensures the two daughter cells are genetically identical to each other and the parent.\n- Understanding the goal of equal sharing explains why the phases occur in their fixed order.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-06-01-c02",
+    "learning_objective": "Compare and contrast the different mitotic phases",
+    "question": "Explain: Prophase: Condensing and Preparing",
+    "answer": "Begin with the first phase, in which the chromosomes become visible and the machinery to move them assembles. The cell readies its cargo.",
+    "explanation": "- In prophase, the loosely coiled chromatin condenses into distinct, visible chromosomes.\n- Each chromosome is already duplicated, consisting of two sister chromatids joined at the centromere.\n- The spindle, made of microtubules, begins to form and extend across the cell.\n- The nuclear envelope breaks down, allowing the spindle to reach the chromosomes.",
+    "is_private": false
+  }
+]

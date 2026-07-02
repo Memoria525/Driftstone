@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-12-03-c01",
+    "learning_objective": "Describe the concept of decussation and its functional implications",
+    "question": "Describe the concept of decussation and its functional implications",
+    "answer": "The organising idea is that many sensory and motor pathways cross the midline, so that each cerebral hemisphere controls movement and receives sensation from the opposite side of the body. Crossing means opposite-side control. This idea of crossing pathways frames the topic.",
+    "explanation": "- Decussation is the crossing of a nervous pathway from one side of the body to the other.\n- Many major sensory and motor pathways decussate.\n- Because of this, each hemisphere serves the opposite side of the body.\n- Decussation explains the side on which deficits appear after brain injury.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-12-03-c02",
+    "learning_objective": "Describe the concept of decussation and its functional implications",
+    "question": "Explain: Defining Decussation",
+    "answer": "Begin with the definition itself, stated precisely. It is a crossing of the midline.",
+    "explanation": "- Decussation is the crossing of a bundle of nerve fibres from one side of the body to the other.\n- It occurs at specific points along a pathway.\n- After decussation, the pathway continues on the opposite side.\n- Both sensory and motor pathways commonly decussate.",
+    "is_private": false
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-13-04-c01",
+    "learning_objective": "Describe the different anatomic pathways through which sympathetic and parasympathetic neurons reach target effectors",
+    "question": "Describe the different anatomic pathways through which sympathetic and parasympathetic neurons reach target effectors",
+    "answer": "The organising idea is that the sympathetic pathway relays near the cord and then sends long neurons to widespread targets, while the parasympathetic pathway sends long neurons to relay near the organ before a short final step, so the sympathetic spreads and the parasympathetic focuses. Relay near the cord versus near the organ. This idea of contrasting relay sites frames the topic.",
+    "explanation": "- Both divisions use a two-neuron pathway relaying in a ganglion.\n- The sympathetic pathway relays near the cord, then travels far to widespread targets.\n- The parasympathetic pathway travels far first, then relays near the organ.\n- The location of the relay shapes how widespread or focused the response is.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-13-04-c02",
+    "learning_objective": "Describe the different anatomic pathways through which sympathetic and parasympathetic neurons reach target effectors",
+    "question": "Explain: The Sympathetic Pathway",
+    "answer": "Begin with the sympathetic pathway, which relays near the cord. Its route allows widespread effects.",
+    "explanation": "- The sympathetic preganglionic neuron leaves the thoracolumbar cord and enters the sympathetic trunk.\n- It may relay in a trunk ganglion, travel up or down the trunk before relaying, or pass through to a prevertebral ganglion.\n- The postganglionic neuron then travels a long way to the effector.\n- Because one preganglionic neuron can relay to many postganglionic neurons, the sympathetic response can be widespread.",
+    "is_private": false
+  }
+]

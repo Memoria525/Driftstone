@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-06-01-c01",
+    "learning_objective": "Define bone remodeling, and explain how bone remodeling occurs",
+    "question": "Define bone remodeling, and explain how bone remodeling occurs",
+    "answer": "The organising idea is that bone remodeling is the ongoing, balanced coupling of bone removal by osteoclasts and bone replacement by osteoblasts, so that bone is constantly renewed and adapted. When the two are balanced, bone mass is maintained; when they are not, bone is gained or lost. This balance of removal and replacement frames the topic.",
+    "explanation": "- Bone remodeling is the continual removal and replacement of bone tissue.\n- It couples resorption by osteoclasts with formation by osteoblasts.\n- When the two are balanced, bone mass stays stable.\n- When resorption exceeds formation, bone is lost, and the reverse builds bone.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-06-01-c02",
+    "learning_objective": "Define bone remodeling, and explain how bone remodeling occurs",
+    "question": "Explain: Defining Bone Remodeling",
+    "answer": "Begin with the definition, since the term must be precise. Remodeling is ongoing renewal.",
+    "explanation": "- Bone remodeling is the continuous process of replacing old bone tissue with new bone tissue.\n- It occurs throughout life, renewing the entire skeleton over a period of years.\n- It involves the coordinated action of bone-removing and bone-building cells.\n- It maintains bone strength, repairs damage, and helps regulate blood calcium.",
+    "is_private": false
+  }
+]

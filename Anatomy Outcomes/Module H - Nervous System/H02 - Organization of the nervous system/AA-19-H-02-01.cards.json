@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-02-01-c01",
+    "learning_objective": "Compare and contrast the central nervous system (CNS) and the peripheral nervous system (PNS) with respect to structure and function",
+    "question": "Compare and contrast the central nervous system (CNS) and the peripheral nervous system (PNS) with respect to structure and function",
+    "answer": "The organising idea is that the central nervous system is the processing core that integrates and decides, while the peripheral nervous system is the cabling that carries information to and from that core. One computes; the other connects. This processor-and-cabling division frames the comparison.",
+    "explanation": "- The nervous system divides into central and peripheral parts.\n- The central nervous system is the brain and spinal cord.\n- The peripheral nervous system is the nerves outside the brain and cord.\n- The central part processes information while the peripheral part carries it.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-02-01-c02",
+    "learning_objective": "Compare and contrast the central nervous system (CNS) and the peripheral nervous system (PNS) with respect to structure and function",
+    "question": "Explain: The Structures of Each Division",
+    "answer": "Begin with structure, since the two divisions are anatomically distinct. Location defines them.",
+    "explanation": "- The central nervous system consists of the brain and the spinal cord, protected by bone.\n- It is the site where information is integrated and responses are generated.\n- The peripheral nervous system consists of the nerves and ganglia outside the brain and cord.\n- It includes the cranial nerves, the spinal nerves, and their branches reaching the whole body.",
+    "is_private": false
+  }
+]

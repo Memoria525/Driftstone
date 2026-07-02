@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-01-01-c01",
+    "learning_objective": "Compare and contrast the functions of the kidney with the functions of the urinary tract (ureters, urinary bladder and urethra)",
+    "question": "Compare and contrast the functions of the kidney with the functions of the urinary tract (ureters, urinary bladder and urethra)",
+    "answer": "The organising idea is that the kidneys make urine by filtering the blood and adjusting its content, while the urinary tract carries, stores, and expels the finished urine. Make versus transport and store. This idea of making versus handling frames the comparison.",
+    "explanation": "- The kidneys make urine by filtering the blood.\n- The urinary tract carries, stores, and expels the finished urine.\n- The kidneys adjust the body's fluid, salt, and waste levels.\n- The tract does not change the urine, only handles it.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-P-01-01-c02",
+    "learning_objective": "Compare and contrast the functions of the kidney with the functions of the urinary tract (ureters, urinary bladder and urethra)",
+    "question": "Explain: The Functions of the Kidney",
+    "answer": "Begin with the kidney, which makes urine. It filters and adjusts the blood.",
+    "explanation": "- The kidneys filter the blood to remove waste and excess substances.\n- They adjust the amount of water and salts kept or removed.\n- They form urine from the removed substances.\n- They also help regulate blood pressure and other functions.",
+    "is_private": true
+  }
+]

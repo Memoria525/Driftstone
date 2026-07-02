@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-02-02-c01",
+    "learning_objective": "Compare and contrast the processes of endocytosis and exocytosis",
+    "question": "Compare and contrast the processes of endocytosis and exocytosis",
+    "answer": "The organising idea is that both processes move large quantities of material across the membrane by packaging it inside a membrane sac called a vesicle, differing only in the direction of travel. Because the membrane can pinch inward or fuse outward, the same basic trick serves both import and export. Seeing them as one mechanism running in two directions is the key to the comparison.",
+    "explanation": "- Both processes are forms of bulk transport that use membrane-bound vesicles.\n- Endocytosis brings material into the cell by folding the membrane inward.\n- Exocytosis releases material from the cell by fusing a vesicle with the membrane.\n- The two are mirror images, differing chiefly in direction, and both require energy.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-02-02-c02",
+    "learning_objective": "Compare and contrast the processes of endocytosis and exocytosis",
+    "question": "Explain: Endocytosis: Bringing Material In",
+    "answer": "Start with import, because it has several named varieties worth distinguishing. In every case the membrane folds inward to trap material in a vesicle.",
+    "explanation": "- Endocytosis is the process of taking material into the cell by folding the plasma membrane inward to form a vesicle.\n- Phagocytosis, or cell eating, engulfs large solid particles such as debris or bacteria.\n- Pinocytosis, or cell drinking, takes in droplets of extracellular fluid and its dissolved solutes.\n- Receptor-mediated endocytosis uses membrane receptors to bring in specific target molecules with high selectivity.",
+    "is_private": false
+  }
+]

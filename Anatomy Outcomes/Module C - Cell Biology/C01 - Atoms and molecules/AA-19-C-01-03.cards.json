@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-01-03-c01",
+    "learning_objective": "Describe the structure of the cytoskeleton",
+    "question": "Describe the structure of the cytoskeleton",
+    "answer": "The organising idea is that the cytoskeleton is a network of protein filaments that simultaneously supports the cell and continually rebuilds itself. It is not a rigid skeleton like our own bones but a living scaffold that assembles and disassembles as the cell's needs change. This combination of structural support and constant remodelling is the thread running through all three of its components.",
+    "explanation": "- The cytoskeleton is a network of protein filaments extending throughout the cytoplasm.\n- It provides mechanical support and maintains the cell's shape.\n- It is dynamic, assembling and disassembling as the cell moves, divides, or adapts.\n- It comes in three main filament types that differ in size and role.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-01-03-c02",
+    "learning_objective": "Describe the structure of the cytoskeleton",
+    "question": "Explain: Component One: Microfilaments",
+    "answer": "Begin with the thinnest and most dynamic component, because it shapes the cell surface and drives movement. Microfilaments are built from the protein actin.",
+    "explanation": "- Microfilaments are the thinnest cytoskeletal filaments, made of twisted strands of the protein actin.\n- They lie concentrated just beneath the plasma membrane, forming a supportive cortex.\n- They generate movement, including changes in cell shape, crawling, and the pinching of cell division.\n- In muscle cells, actin filaments interact with myosin to produce contraction.",
+    "is_private": false
+  }
+]

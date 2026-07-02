@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-07-02-c01",
+    "learning_objective": "Compare and contrast the different types of neural (neuronal) circuits (e.g., converging, diverging)",
+    "question": "Compare and contrast the different types of neural (neuronal) circuits (e.g., converging, diverging)",
+    "answer": "The organising idea is that the basic circuit types are defined by their pattern of connection, so that converging circuits focus many inputs onto one target, diverging circuits spread one input to many, and reverberating circuits feed a signal back to sustain it. Pattern determines effect. This idea of patterns that focus, spread, or sustain frames the comparison.",
+    "explanation": "- The types of neural circuit are defined by their pattern of connection.\n- Converging circuits focus many inputs onto fewer neurons.\n- Diverging circuits spread one input to many neurons.\n- Reverberating circuits feed a signal back to sustain it.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-07-02-c02",
+    "learning_objective": "Compare and contrast the different types of neural (neuronal) circuits (e.g., converging, diverging)",
+    "question": "Explain: Converging and Diverging Circuits",
+    "answer": "Begin with the two opposite patterns, focusing and spreading. These are the converging and diverging circuits.",
+    "explanation": "- In a converging circuit, many neurons synapse onto a smaller number of neurons.\n- Convergence focuses and combines information from many sources onto a single target.\n- In a diverging circuit, one neuron synapses onto many neurons.\n- Divergence spreads a single signal out to many targets, amplifying its reach.",
+    "is_private": false
+  }
+]

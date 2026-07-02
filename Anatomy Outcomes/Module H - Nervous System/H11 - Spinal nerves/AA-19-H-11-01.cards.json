@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-11-01-c01",
+    "learning_objective": "Identify and describe the formation, structure, and branches of a typical spinal nerve, including the roots and the rami (e.g., anterior, posterior)",
+    "question": "Identify and describe the formation, structure, and branches of a typical spinal nerve, including the roots and the rami (e.g., anterior, posterior)",
+    "answer": "The organising idea is that a spinal nerve forms when the motor anterior root and sensory posterior root join into a mixed nerve, which then splits into rami supplying the back and the front of the body. Roots join, then rami divide. This idea of joining then dividing frames the topic.",
+    "explanation": "- A spinal nerve forms from the union of an anterior and a posterior root.\n- The joined nerve is mixed, carrying both motor and sensory fibres.\n- Just beyond its formation, it divides into a posterior and an anterior ramus.\n- The rami distribute the nerve to the back and the front of the body.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-11-01-c02",
+    "learning_objective": "Identify and describe the formation, structure, and branches of a typical spinal nerve, including the roots and the rami (e.g., anterior, posterior)",
+    "question": "Explain: The Formation of a Spinal Nerve",
+    "answer": "Begin with how the nerve forms, from the union of its two roots. The roots join beyond the ganglion.",
+    "explanation": "- The anterior root carries motor fibres out of the cord, and the posterior root carries sensory fibres in.\n- The two roots join just beyond the posterior root ganglion.\n- Their union forms a single mixed spinal nerve.\n- The spinal nerve exits the vertebral column through an intervertebral foramen.",
+    "is_private": false
+  }
+]

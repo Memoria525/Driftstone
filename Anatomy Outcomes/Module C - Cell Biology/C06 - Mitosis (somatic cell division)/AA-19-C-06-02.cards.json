@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-06-02-c01",
+    "learning_objective": "Distinguish the process of mitosis from the process of cytokinesis",
+    "question": "Distinguish the process of mitosis from the process of cytokinesis",
+    "answer": "The organising idea is that producing two cells requires dividing two different things, the nucleus and the surrounding cell body, and these are accomplished by two distinct but coordinated processes. Mitosis handles the nucleus, cytokinesis handles the cell. Recognising that two separate things must be divided is the key distinction.",
+    "explanation": "- Reproducing a cell requires dividing both the nucleus and the cytoplasm.\n- Mitosis is the division of the nucleus and its duplicated chromosomes.\n- Cytokinesis is the division of the cytoplasm and the whole cell body.\n- The two processes are coordinated so that each new cell receives a nucleus and a share of cytoplasm.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-06-02-c02",
+    "learning_objective": "Distinguish the process of mitosis from the process of cytokinesis",
+    "question": "Explain: Defining Mitosis",
+    "answer": "Start with mitosis, the nuclear division, because it prepares the genetic material that cytokinesis then separates into two cells. It concerns the chromosomes only.",
+    "explanation": "- Mitosis is the division of the nucleus, distributing the duplicated chromosomes into two identical sets.\n- It proceeds through prophase, metaphase, anaphase, and telophase.\n- Its product is two nuclei, each with a complete and identical set of chromosomes.\n- At the end of mitosis alone, the cell has two nuclei but is still a single cell.",
+    "is_private": false
+  }
+]

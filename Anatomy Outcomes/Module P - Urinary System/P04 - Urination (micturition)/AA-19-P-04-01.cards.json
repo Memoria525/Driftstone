@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-04-01-c01",
+    "learning_objective": "Describe the process of urination (micturition) and the role of the autonomic nervous system in urination",
+    "question": "Describe the process of urination (micturition) and the role of the autonomic nervous system in urination",
+    "answer": "The organising idea is that urination is a reflex in which the bladder muscle contracts and the sphincters relax, triggered when the bladder fills, and controlled by the autonomic nervous system. Contract the bladder, relax the sphincters. This idea of a coordinated emptying reflex frames the topic.",
+    "explanation": "- Urination empties the bladder.\n- It involves the bladder muscle contracting and the sphincters relaxing.\n- It is triggered when the bladder fills.\n- The autonomic nervous system coordinates the reflex.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-P-04-01-c02",
+    "learning_objective": "Describe the process of urination (micturition) and the role of the autonomic nervous system in urination",
+    "question": "Explain: The Trigger for Urination",
+    "answer": "Begin with the trigger, since urination begins when the bladder fills. Stretch signals the reflex.",
+    "explanation": "- As the bladder fills, its wall stretches.\n- Stretch receptors in the wall detect the filling.\n- They send signals that trigger the urination reflex.\n- The reflex prepares the bladder to empty.",
+    "is_private": false
+  }
+]

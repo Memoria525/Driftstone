@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-04-02-c01",
+    "learning_objective": "Describe the microscopic anatomy of bone tissue, including osteon composition",
+    "question": "Describe the microscopic anatomy of bone tissue, including osteon composition",
+    "answer": "The organising idea is that compact bone is built from osteons, cylindrical units of bone laid down in concentric rings around a central blood vessel, so that living cells buried in the hard matrix can still be nourished. The blood supply sits at the centre of each unit. This idea of rings around a supply frames the microstructure.",
+    "explanation": "- Compact bone is organised into repeating units called osteons.\n- Each osteon is built around a central canal carrying blood vessels.\n- Bone is deposited in concentric rings around this canal.\n- This arrangement lets living cells in the hard matrix be nourished.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-04-02-c02",
+    "learning_objective": "Describe the microscopic anatomy of bone tissue, including osteon composition",
+    "question": "Explain: The Composition of Bone Matrix",
+    "answer": "Begin with what bone tissue is made of, since its matrix gives it its properties. The matrix combines two components.",
+    "explanation": "- Bone matrix consists of an organic component and a mineral component.\n- The organic component, mainly collagen, gives bone its flexibility and resistance to tension.\n- The mineral component, mainly calcium phosphate, gives bone its hardness and resistance to compression.\n- The combination makes bone both strong and slightly flexible, resisting fracture.",
+    "is_private": false
+  }
+]

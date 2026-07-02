@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-05-01-c01",
+    "learning_objective": "Identify and describe the major components of a typical neuron (e.g., cell body, nucleus, nucleolus, chromatophilic substance [Nissl bodies], axon hillock, dendrites, axon)), and indicate which parts of a neuron receive input signals and which parts of a neuron transmits output signals",
+    "question": "Identify and describe the major components of a typical neuron (e.g., cell body, nucleus, nucleolus, chromatophilic substance [Nissl bodies], axon hillock, dendrites, axon)), and indicate which parts of a neuron receive input signals and which parts of a neuron transmits output signals",
+    "answer": "The organising idea is that a neuron is built to carry a signal in one direction through three zones, a receiving zone of dendrites, a processing zone of the cell body, and a transmitting zone of the axon. Input, process, output, in that order. This idea of a three-zone one-way cell frames the components.",
+    "explanation": "- A neuron carries signals in one direction through three functional zones.\n- The dendrites and cell body receive incoming signals.\n- The cell body integrates the signals and generates an output.\n- The axon transmits the output signal to other cells.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-H-05-01-c02",
+    "learning_objective": "Identify and describe the major components of a typical neuron (e.g., cell body, nucleus, nucleolus, chromatophilic substance [Nissl bodies], axon hillock, dendrites, axon)), and indicate which parts of a neuron receive input signals and which parts of a neuron transmits output signals",
+    "question": "Explain: The Receiving Components",
+    "answer": "Begin with the parts that receive signals, the dendrites and cell body. These are the input zone.",
+    "explanation": "- The dendrites are branching extensions that receive incoming signals from other neurons.\n- Their branching shape gives a large surface for many connections.\n- The cell body, or soma, also receives signals and contains the nucleus and organelles.\n- Together the dendrites and cell body form the receiving, or input, region of the neuron.",
+    "is_private": false
+  }
+]

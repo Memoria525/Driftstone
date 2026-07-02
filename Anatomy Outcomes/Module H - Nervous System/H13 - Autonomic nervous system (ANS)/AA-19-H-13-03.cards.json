@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-13-03-c01",
+    "learning_objective": "Describe the major components of the sympathetic and parasympathetic divisions (e.g., sympathetic trunk [chain], white and gray rami communicantes, splanchnic nerves, pelvic splanchnic nerves, CN III, CN VII, CN IX, CN X) and the major ganglia of each division (e.g., terminal ganglia, intramural ganglia, sympathetic trunk [chain] ganglia, and prevertebral [collateral] ganglia)",
+    "question": "Describe the major components of the sympathetic and parasympathetic divisions (e.g., sympathetic trunk [chain], white and gray rami communicantes, splanchnic nerves, pelvic splanchnic nerves, CN III, CN VII, CN IX, CN X) and the major ganglia of each division (e.g., terminal ganglia, intramural ganglia, sympathetic trunk [chain] ganglia, and prevertebral [collateral] ganglia)",
+    "answer": "The organising idea is that the sympathetic division carries its fibres through a chain of ganglia beside the spine and their connecting nerves, while the parasympathetic division carries its fibres through specific cranial nerves and pelvic nerves to ganglia near the organs. Each division has its own wiring and relay sites. This idea of division-specific components frames the topic.",
+    "explanation": "- The sympathetic division uses a chain of ganglia beside the spine and their connecting nerves.\n- The parasympathetic division uses specific cranial nerves and pelvic nerves.\n- Each division relays in ganglia located characteristically for that division.\n- The components carry automatic commands from the cord to the organs.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-H-13-03-c02",
+    "learning_objective": "Describe the major components of the sympathetic and parasympathetic divisions (e.g., sympathetic trunk [chain], white and gray rami communicantes, splanchnic nerves, pelvic splanchnic nerves, CN III, CN VII, CN IX, CN X) and the major ganglia of each division (e.g., terminal ganglia, intramural ganglia, sympathetic trunk [chain] ganglia, and prevertebral [collateral] ganglia)",
+    "question": "Explain: The Components of the Sympathetic Division",
+    "answer": "Begin with the sympathetic components, centred on the chain beside the spine. These carry its fibres.",
+    "explanation": "- The sympathetic trunk, or chain, is a line of ganglia running beside the vertebral column.\n- The white rami communicantes carry preganglionic fibres from the cord into the trunk.\n- The gray rami communicantes carry postganglionic fibres from the trunk back to the spinal nerves.\n- The splanchnic nerves carry sympathetic fibres to ganglia in front of the spine that serve the abdominal organs.",
+    "is_private": false
+  }
+]

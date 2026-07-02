@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-12-02-c01",
+    "learning_objective": "Describe the locations and functions of the upper and lower motor neurons in a motor pathway",
+    "question": "Describe the locations and functions of the upper and lower motor neurons in a motor pathway",
+    "answer": "The organising idea is that voluntary movement travels through two motor neurons in series, an upper motor neuron from the cortex to the cord and a lower motor neuron from the cord to the muscle, and damage to each produces contrasting signs. Two neurons, two patterns of damage. This idea of a two-neuron motor chain frames the topic.",
+    "explanation": "- Voluntary movement uses two motor neurons in series.\n- The upper motor neuron runs from the cortex to the spinal cord.\n- The lower motor neuron runs from the spinal cord to the muscle.\n- Damage to each produces a distinct pattern of signs.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-12-02-c02",
+    "learning_objective": "Describe the locations and functions of the upper and lower motor neurons in a motor pathway",
+    "question": "Explain: The Upper Motor Neuron",
+    "answer": "Begin with the upper motor neuron, which runs from the brain to the cord. It commands the lower neuron.",
+    "explanation": "- The upper motor neuron has its cell body in the cerebral cortex.\n- Its axon descends through the brain and spinal cord, largely crossing to the opposite side.\n- It does not reach the muscle directly but connects to the lower motor neuron.\n- It carries the command for voluntary movement from the cortex toward the cord.",
+    "is_private": true
+  }
+]

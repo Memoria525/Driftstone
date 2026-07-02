@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-04-06-c01",
+    "learning_objective": "Identify and describe the epidural space, subdural space and subarachnoid space associated with the brain and the spinal cord, and identify which space contains cerebrospinal fluid",
+    "question": "Identify and describe the epidural space, subdural space and subarachnoid space associated with the brain and the spinal cord, and identify which space contains cerebrospinal fluid",
+    "answer": "The organising idea is that each space is named by its relationship to the meningeal layers, so the epidural space lies outside the dura, the subdural space lies beneath the dura, and the subarachnoid space lies beneath the arachnoid and holds the cerebrospinal fluid. Spaces named by which membrane bounds them. This idea of layer-defined spaces frames the topic.",
+    "explanation": "- The meningeal spaces are named by their relationship to the meningeal layers.\n- The epidural space lies outside the dura.\n- The subdural space lies between the dura and the arachnoid.\n- The subarachnoid space lies beneath the arachnoid and holds the cerebrospinal fluid.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-04-06-c02",
+    "learning_objective": "Identify and describe the epidural space, subdural space and subarachnoid space associated with the brain and the spinal cord, and identify which space contains cerebrospinal fluid",
+    "question": "Explain: The Epidural Space",
+    "answer": "Begin with the outermost space, outside the dura. It differs between brain and cord.",
+    "explanation": "- The epidural space lies between the dura and the surrounding bone.\n- Around the spinal cord it is a real space filled with fat and blood vessels.\n- Around the brain it is only a potential space, because the cranial dura is fused to the skull.\n- The spinal epidural space is where epidural injections are administered.",
+    "is_private": false
+  }
+]

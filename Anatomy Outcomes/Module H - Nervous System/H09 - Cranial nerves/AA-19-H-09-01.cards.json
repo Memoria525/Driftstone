@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-09-01-c01",
+    "learning_objective": "List and identify the cranial nerves by name and number",
+    "question": "List and identify the cranial nerves by name and number",
+    "answer": "The organising idea is that there are twelve pairs of cranial nerves, numbered in order from front to back as they emerge from the brain, each with a name reflecting its function or distribution. Twelve numbered pairs in sequence. This idea of an ordered numbered set frames the topic.",
+    "explanation": "- There are twelve pairs of cranial nerves.\n- They are numbered one to twelve from front to back.\n- Each has a name reflecting its function or distribution.\n- Most emerge from the brainstem, with the first two from the forebrain.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-09-01-c02",
+    "learning_objective": "List and identify the cranial nerves by name and number",
+    "question": "Explain: Cranial Nerves One to Four",
+    "answer": "Begin with the first four nerves, serving smell, vision, and eye movement. These emerge near the front.",
+    "explanation": "- Cranial nerve one is the olfactory nerve, for smell.\n- Cranial nerve two is the optic nerve, for vision.\n- Cranial nerve three is the oculomotor nerve, for most eye movements.\n- Cranial nerve four is the trochlear nerve, for one of the eye muscles.",
+    "is_private": false
+  }
+]

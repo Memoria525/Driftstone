@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-05-01-c01",
+    "learning_objective": "Compare and contrast intramembranous and endochondral bone formation",
+    "question": "Compare and contrast intramembranous and endochondral bone formation",
+    "answer": "The organising idea is that intramembranous ossification builds bone directly within a membrane of connective tissue, while endochondral ossification first makes a cartilage model and then replaces it with bone. One builds straight away; the other works from a template. This build-direct versus replace-a-model contrast frames the comparison.",
+    "explanation": "- Both processes are ways bone forms during development.\n- Intramembranous ossification builds bone directly within connective tissue.\n- Endochondral ossification replaces a cartilage model with bone.\n- The two differ chiefly in whether a cartilage template is used.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-F-05-01-c02",
+    "learning_objective": "Compare and contrast intramembranous and endochondral bone formation",
+    "question": "Explain: Intramembranous Ossification",
+    "answer": "Begin with intramembranous ossification, the direct process. It forms bone within a membrane.",
+    "explanation": "- Intramembranous ossification forms bone directly within a membrane of embryonic connective tissue.\n- Bone-forming cells develop within the membrane and deposit bone matrix directly.\n- No cartilage model is involved at any stage.\n- This process forms the flat bones of the skull and the clavicle.",
+    "is_private": false
+  }
+]

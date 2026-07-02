@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-02-01-c01",
+    "learning_objective": "Describe the structural composition of the plasma (cell) membrane, and how its composition relates to plasma membrane function",
+    "question": "Describe the structural composition of the plasma (cell) membrane, and how its composition relates to plasma membrane function",
+    "answer": "The organising idea is that the membrane's behaviour is a direct consequence of how it is built, so its selective barrier, its signalling, and its recognition all follow from its molecular composition. The membrane is not a simple wall but a structured mixture whose every component earns its place. Reading function from structure is the habit this objective is training.",
+    "explanation": "- The plasma membrane is a structured assembly of lipids, proteins, and carbohydrates.\n- Each component contributes a specific capability to the membrane.\n- The barrier, transport, signalling, and recognition functions all follow from the composition.\n- Understanding the structure lets you predict the function rather than memorise it.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-02-01-c02",
+    "learning_objective": "Describe the structural composition of the plasma (cell) membrane, and how its composition relates to plasma membrane function",
+    "question": "Explain: The Lipid Bilayer",
+    "answer": "Begin with the foundation, because the lipid bilayer is the sheet into which everything else is set and the source of the membrane's basic barrier property. Its phospholipids arrange themselves according to their attraction to water.",
+    "explanation": "- The membrane's foundation is a double layer of phospholipids, each with a water-attracting head and two water-repelling tails.\n- The heads face the watery fluids inside and outside the cell, while the tails point inward toward each other.\n- This arrangement makes the interior of the membrane oily, so water-soluble substances cannot cross freely.\n- Cholesterol molecules sit among the phospholipids, stabilising the membrane and regulating its fluidity.",
+    "is_private": true
+  }
+]

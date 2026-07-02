@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-04-02-c01",
+    "learning_objective": "Describe voluntary and involuntary neural control of urination",
+    "question": "Describe voluntary and involuntary neural control of urination",
+    "answer": "The organising idea is that urination is driven by an automatic reflex when the bladder fills, but voluntary control can override the reflex to delay urination until convenient. A reflex under voluntary override. This idea of a reflex with voluntary override frames the topic.",
+    "explanation": "- Urination is driven by an automatic reflex when the bladder fills.\n- Voluntary control can override the reflex.\n- The voluntary control holds the external sphincter closed to delay urination.\n- The two together let urination occur when convenient.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-P-04-02-c02",
+    "learning_objective": "Describe voluntary and involuntary neural control of urination",
+    "question": "Explain: The Involuntary Control",
+    "answer": "Begin with the involuntary control, the automatic reflex. It drives urination when the bladder fills.",
+    "explanation": "- The involuntary control is the urination reflex.\n- It is triggered when the filling bladder stretches its wall.\n- It causes the bladder muscle to contract and the internal sphincter to relax.\n- It is coordinated by the autonomic nervous system without conscious effort.",
+    "is_private": false
+  }
+]

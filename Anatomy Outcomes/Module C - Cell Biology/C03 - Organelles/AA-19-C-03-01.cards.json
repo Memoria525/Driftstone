@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-03-01-c01",
+    "learning_objective": "Define the term organelle",
+    "question": "Define the term organelle",
+    "answer": "The organising idea is that a cell, like any complex operation, works better when different jobs are handled by dedicated specialised structures rather than by one undifferentiated space. An organelle is one of these dedicated structures, each carrying out a particular function. The concept of division of labour is what makes the term meaningful.",
+    "explanation": "- An organelle is a specialised structure within a cell that performs a specific function.\n- The word means \"little organ,\" because organelles serve the cell as organs serve the body.\n- Dividing work among organelles lets the cell perform many incompatible tasks at once.\n- The concept is one of division of labour, with each organelle a dedicated specialist.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-03-01-c02",
+    "learning_objective": "Define the term organelle",
+    "question": "Explain: Stating the Definition Precisely",
+    "answer": "With the concept in place, we can state the definition carefully and unpack its parts. Precision here pays off across the whole of cell biology.",
+    "explanation": "- An organelle is a specialised subcellular structure that carries out a specific, dedicated function within the cell.\n- The term literally translates as \"little organ,\" reflecting the analogy with the body's organs.\n- Organelles are located within the cytoplasm, and one, the nucleus, is often treated as the cell's control centre.\n- The defining feature is functional specialisation, so each organelle has a recognisable job.",
+    "is_private": false
+  }
+]

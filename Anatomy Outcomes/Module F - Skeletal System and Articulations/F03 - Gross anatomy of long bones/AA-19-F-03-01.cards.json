@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-03-01-c01",
+    "learning_objective": "Describe the components of a typical long bone",
+    "question": "Describe the components of a typical long bone",
+    "answer": "The organising idea is that a long bone is a strong hollow shaft with expanded ends that spread load at the joints, wrapped in a living membrane and cushioned by cartilage where it articulates. The shaft bears bending; the ends bear and spread joint forces. This shaft-and-ends design frames the components.",
+    "explanation": "- A long bone has a shaft and two expanded ends.\n- The shaft is a strong tube of compact bone around a marrow cavity.\n- The ends are expanded and contain spongy bone, capped with cartilage at the joints.\n- Living membranes cover the outside and line the cavity.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-03-01-c02",
+    "learning_objective": "Describe the components of a typical long bone",
+    "question": "Explain: The Shaft and the Ends",
+    "answer": "Begin with the main regions, the shaft and the ends. These are the diaphysis and epiphyses.",
+    "explanation": "- The diaphysis is the long shaft of the bone, a thick tube of compact bone.\n- The epiphyses are the expanded ends of the bone, containing spongy bone.\n- Between them lies the metaphysis, the region where the shaft meets each end.\n- In a growing bone, the metaphysis contains the growth plate.",
+    "is_private": false
+  }
+]

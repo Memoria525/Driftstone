@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-10-04-c01",
+    "learning_objective": "Describe the structure, location, and function of ascending and descending spinal cord tracts",
+    "question": "Describe the structure, location, and function of ascending and descending spinal cord tracts",
+    "answer": "The organising idea is that the cord's tracts carry two-way traffic, with ascending tracts carrying sensory information up to the brain and descending tracts carrying motor commands down to the muscles. Up for sensation, down for movement. This idea of two-way tract traffic frames the topic.",
+    "explanation": "- The spinal cord's white matter is organised into tracts.\n- Ascending tracts carry sensory information up to the brain.\n- Descending tracts carry motor commands down from the brain.\n- Together they connect the body to the brain in both directions.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-10-04-c02",
+    "learning_objective": "Describe the structure, location, and function of ascending and descending spinal cord tracts",
+    "question": "Explain: The Ascending Tracts",
+    "answer": "Begin with the ascending tracts, which carry sensation up. These bring information to the brain.",
+    "explanation": "- Ascending tracts carry sensory information from the body up to the brain.\n- They convey sensations such as touch, pain, temperature, and position.\n- An example is the tract carrying fine touch and position sense up the posterior part of the cord.\n- Their fibres synapse and often cross on the way to the brain.",
+    "is_private": false
+  }
+]

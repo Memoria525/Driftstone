@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-04-02-c01",
+    "learning_objective": "Describe the structure and function of the components of the nucleus, including chromatin, nucleolus, nuclear envelope, and nuclear pore",
+    "question": "Describe the structure and function of the components of the nucleus, including chromatin, nucleolus, nuclear envelope, and nuclear pore",
+    "answer": "The organising idea is that the nucleus achieves its control through a small set of components that between them protect the genome, regulate access to it, store it, and manufacture the machinery to read it. Each part has one clear contribution, and their cooperation is what makes central control possible. Seeing the components as a team clarifies each one's role.",
+    "explanation": "- The nucleus is built from a boundary, gateways, stored instructions, and a manufacturing site.\n- The boundary and gateways protect the genome and regulate access to it.\n- The stored instructions hold the genetic information.\n- The manufacturing site builds the ribosome components needed to read that information.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-04-02-c02",
+    "learning_objective": "Describe the structure and function of the components of the nucleus, including chromatin, nucleolus, nuclear envelope, and nuclear pore",
+    "question": "Explain: The Nuclear Envelope",
+    "answer": "Begin at the boundary, because it defines the nucleus and separates the genome from the cytoplasm. It is unusual in being a double membrane.",
+    "explanation": "- The nuclear envelope is a double membrane, consisting of two lipid bilayers separated by a narrow space.\n- Its outer membrane is continuous with the rough endoplasmic reticulum of the cytoplasm.\n- Its function is to enclose and protect the genetic material and to separate nuclear from cytoplasmic events.\n- It gives the nucleus its boundary and maintains a distinct internal environment.",
+    "is_private": false
+  }
+]

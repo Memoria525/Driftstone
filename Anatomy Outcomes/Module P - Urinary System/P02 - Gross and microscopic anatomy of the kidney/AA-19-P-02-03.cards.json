@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-02-03-c01",
+    "learning_objective": "Distinguish histologically between the renal cortex and the renal medulla",
+    "question": "Distinguish histologically between the renal cortex and the renal medulla",
+    "answer": "The organising idea is that the cortex contains the filtering units and the coiled tubules, giving it a granular appearance, while the medulla contains the straight tubules and ducts, giving it a striped appearance. Granular cortex, striped medulla. This idea of different contents frames the distinction.",
+    "explanation": "- The renal cortex contains the filtering units and coiled tubules.\n- This gives the cortex a granular appearance.\n- The renal medulla contains straight tubules and collecting ducts.\n- This gives the medulla a striped appearance.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-P-02-03-c02",
+    "learning_objective": "Distinguish histologically between the renal cortex and the renal medulla",
+    "question": "Explain: The Histology of the Cortex",
+    "answer": "Begin with the cortex, which contains the filtering units. Its structures give it a granular look.",
+    "explanation": "- The cortex contains the renal corpuscles, the round filtering units.\n- It contains the coiled parts of the tubules that lead from them.\n- These round and coiled structures give the cortex a granular appearance.\n- This is where filtration and much of the processing of the fluid occur.",
+    "is_private": false
+  }
+]

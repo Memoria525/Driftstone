@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-03-02-c01",
+    "learning_objective": "Describe the structure of a typical nerve, including the motor and sensory neuronal elements, neuroglial elements, and connective tissue wrappings",
+    "question": "Describe the structure of a typical nerve, including the motor and sensory neuronal elements, neuroglial elements, and connective tissue wrappings",
+    "answer": "The organising idea is that a nerve is a bundled cable of many axons, both sensory and motor, insulated by glial cells and wrapped in connective tissue at every level, much like a muscle. Bundles of insulated fibres, wrapped and carrying two-way traffic. This idea of a wrapped mixed cable frames the structure.",
+    "explanation": "- A nerve is a bundle of many axons running together.\n- It carries both sensory and motor axons in most cases.\n- Its axons are insulated by glial cells and wrapped in connective tissue.\n- Its wrappings mirror the connective tissue layers of a muscle.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-03-02-c02",
+    "learning_objective": "Describe the structure of a typical nerve, including the motor and sensory neuronal elements, neuroglial elements, and connective tissue wrappings",
+    "question": "Explain: The Neuronal Elements",
+    "answer": "Begin with the axons themselves, the neuronal elements. A nerve carries both directions of traffic.",
+    "explanation": "- A nerve contains the axons of many neurons bundled together.\n- Most nerves are mixed, containing both sensory and motor axons.\n- Sensory axons carry information from receptors toward the central nervous system.\n- Motor axons carry commands from the central nervous system to muscles and glands.",
+    "is_private": true
+  }
+]

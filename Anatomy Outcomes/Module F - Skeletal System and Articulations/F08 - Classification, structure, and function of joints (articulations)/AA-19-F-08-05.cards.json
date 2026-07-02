@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-08-05-c01",
+    "learning_objective": "For each of the six structural types of synovial joints, describe its anatomic features, identify locations in the body, and predict the kinds of movement each joint allows",
+    "question": "For each of the six structural types of synovial joints, describe its anatomic features, identify locations in the body, and predict the kinds of movement each joint allows",
+    "answer": "The organising idea is that the shape of the articulating surfaces of a synovial joint determines the axes about which it can move, so that knowing the shape lets you predict the movements. Flat surfaces slide, hinges bend in one plane, and spheres move in all directions. This link from shape to movement frames the six types.",
+    "explanation": "- The six synovial joint types differ in the shape of their articulating surfaces.\n- The shape determines the axes and range of movement.\n- Simpler shapes allow movement in one plane, and rounder shapes allow more.\n- Knowing the shape predicts the movement.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-08-05-c02",
+    "learning_objective": "For each of the six structural types of synovial joints, describe its anatomic features, identify locations in the body, and predict the kinds of movement each joint allows",
+    "question": "Explain: Planar and Hinge Joints",
+    "answer": "Begin with the simplest joints, which allow sliding or bending in one plane. These are the planar and hinge joints.",
+    "explanation": "- A planar, or gliding, joint has flat or slightly curved surfaces that slide across one another, as between the carpal bones and the tarsal bones.\n- Planar joints allow short gliding movements in various directions but no rotation.\n- A hinge joint has a convex surface fitting a concave one, as at the elbow, knee, and finger joints.\n- Hinge joints allow bending and straightening, that is flexion and extension, in one plane.",
+    "is_private": false
+  }
+]

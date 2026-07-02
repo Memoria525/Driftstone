@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-10-03-c01",
+    "learning_objective": "Identify and describe the anatomical features seen in a cross-sectional view of the spinal cord (e.g., anterior horn, lateral horn, posterior horn, gray commissure, central canal, anterior funiculus [column 2 ], lateral funiculus [column], posterior funiculus [column])",
+    "question": "Identify and describe the anatomical features seen in a cross-sectional view of the spinal cord (e.g., anterior horn, lateral horn, posterior horn, gray commissure, central canal, anterior funiculus [column 2 ], lateral funiculus [column], posterior funiculus [column])",
+    "answer": "The organising idea is that the cord's central gray matter, shaped like a butterfly, processes sensory input at the back and issues motor output at the front, while the surrounding white matter carries the ascending and descending tracts. Central processing within surrounding tracts. This idea of a gray core within white columns frames the topic.",
+    "explanation": "- In cross-section the cord has central gray matter surrounded by white matter.\n- The gray matter is shaped like a butterfly or the letter H.\n- Its horns process sensory input and issue motor output.\n- The surrounding white matter carries the ascending and descending tracts.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-H-10-03-c02",
+    "learning_objective": "Identify and describe the anatomical features seen in a cross-sectional view of the spinal cord (e.g., anterior horn, lateral horn, posterior horn, gray commissure, central canal, anterior funiculus [column 2 ], lateral funiculus [column], posterior funiculus [column])",
+    "question": "Explain: The Gray Matter Horns",
+    "answer": "Begin with the gray matter horns, which process input and output. These are the anterior, lateral, and posterior horns.",
+    "explanation": "- The posterior horn contains sensory neurons receiving information from the posterior roots.\n- The anterior horn contains motor neurons whose axons leave through the anterior roots.\n- The lateral horn, present in some regions, contains autonomic neurons.\n- The horns are the processing regions of the cord.",
+    "is_private": false
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-07-01-c01",
+    "learning_objective": "Define a neural (neuronal) circuit",
+    "question": "Define a neural (neuronal) circuit",
+    "answer": "The organising idea is that a neural circuit is a group of neurons connected so that they process information together, and it is the pattern of connection, not any single neuron, that determines what the circuit does. Wiring, not the individual cell, produces function. This idea of function emerging from connection frames the definition.",
+    "explanation": "- A neural circuit is a group of interconnected neurons that process information together.\n- Neurons connect through synapses to form the circuit.\n- The pattern of connection determines what the circuit does.\n- Complex functions emerge from circuits rather than from single neurons.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-07-01-c02",
+    "learning_objective": "Define a neural (neuronal) circuit",
+    "question": "Explain: What a Neural Circuit Is",
+    "answer": "Begin with the definition itself, stated precisely. Connection is the key.",
+    "explanation": "- A neural circuit is a functional group of neurons connected by synapses.\n- The neurons pass signals from one to another through these connections.\n- The circuit processes incoming information and produces a patterned output.\n- Circuits range from simple reflex arcs to vast networks in the brain.",
+    "is_private": false
+  }
+]

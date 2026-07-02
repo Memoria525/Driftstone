@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-07-01-c01",
+    "learning_objective": "Identify all 206 individual bones and their locations within the body",
+    "question": "Identify all 206 individual bones and their locations within the body",
+    "answer": "The organising idea is that the 206 bones are best learned as a map organised into the axial and appendicular divisions and their regions, so that each bone has a place rather than being an isolated fact. Grouping by region tames the number. This idea of a regional map frames the whole objective.",
+    "explanation": "- The 206 bones divide into the axial and appendicular skeletons.\n- Each division breaks into regions that group the bones.\n- Learning the bones by region makes the number manageable.\n- Each bone has a location within this regional map.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-07-01-c02",
+    "learning_objective": "Identify all 206 individual bones and their locations within the body",
+    "question": "Explain: The Axial Skeleton: Skull and Associated Bones",
+    "answer": "Begin with the axial skeleton, starting at the head. The skull dominates this region.",
+    "explanation": "- The skull comprises eight cranial bones, including the frontal, two parietal, two temporal, occipital, sphenoid, and ethmoid bones.\n- The face comprises fourteen bones, including the maxillae, mandible, zygomatic, nasal, and other bones.\n- Six auditory ossicles, three in each middle ear, and the single hyoid bone in the neck complete this region.\n- Together the skull and associated bones protect the brain and form the face.",
+    "is_private": true
+  }
+]

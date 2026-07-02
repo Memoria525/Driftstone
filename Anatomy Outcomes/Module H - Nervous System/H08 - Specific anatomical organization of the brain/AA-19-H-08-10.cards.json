@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-08-10-c01",
+    "learning_objective": "Identify and describe the primary functional cortical areas of the cerebrum (e.g., primary motor cortex, primary somatosensory cortex, primary auditory cortex, primary visual cortex, primary olfactory cortex, primary gustatory cortex)",
+    "question": "Identify and describe the primary functional cortical areas of the cerebrum (e.g., primary motor cortex, primary somatosensory cortex, primary auditory cortex, primary visual cortex, primary olfactory cortex, primary gustatory cortex)",
+    "answer": "The organising idea is that the cortex has primary areas each dedicated to a specific function, located in the lobe suited to that function, so that damage to an area produces a predictable, specific deficit. One area, one function. This idea of dedicated functional areas frames the topic.",
+    "explanation": "- The cortex contains primary areas dedicated to specific functions.\n- Each primary area lies in the lobe suited to its function.\n- Motor and sensory areas cluster around the central sulcus, and the senses lie in their respective lobes.\n- Damage to a primary area produces a specific, predictable deficit.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-08-10-c02",
+    "learning_objective": "Identify and describe the primary functional cortical areas of the cerebrum (e.g., primary motor cortex, primary somatosensory cortex, primary auditory cortex, primary visual cortex, primary olfactory cortex, primary gustatory cortex)",
+    "question": "Explain: The Motor and Somatosensory Areas",
+    "answer": "Begin with the movement and touch areas, which flank the central sulcus. These are the primary motor and somatosensory cortices.",
+    "explanation": "- The primary motor cortex lies in the precentral gyrus of the frontal lobe.\n- It controls voluntary movement of the opposite side of the body.\n- The primary somatosensory cortex lies in the postcentral gyrus of the parietal lobe.\n- It receives touch, pressure, temperature, and position sense from the opposite side of the body.",
+    "is_private": false
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-02-03-c01",
+    "learning_objective": "Compare and contrast the somatic motor and autonomic motor divisions of the nervous system",
+    "question": "Compare and contrast the somatic motor and autonomic motor divisions of the nervous system",
+    "answer": "The organising idea is that the somatic motor division voluntarily controls skeletal muscle, while the autonomic motor division automatically controls smooth muscle, cardiac muscle, and glands. One is willed; the other runs itself. This voluntary-versus-automatic contrast frames the comparison.",
+    "explanation": "- The motor output divides into somatic and autonomic divisions.\n- The somatic division controls skeletal muscle voluntarily.\n- The autonomic division controls organs automatically.\n- The two differ in their targets, control, and structure.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-H-02-03-c02",
+    "learning_objective": "Compare and contrast the somatic motor and autonomic motor divisions of the nervous system",
+    "question": "Explain: The Somatic Motor Division",
+    "answer": "Begin with the somatic division, which produces voluntary movement. Its structure is simple and direct.",
+    "explanation": "- The somatic motor division controls skeletal muscle under voluntary control.\n- It uses a single motor neuron running from the central nervous system directly to the muscle.\n- Its effect on muscle is always to excite it, producing contraction.\n- It produces the voluntary movement you assess and train.",
+    "is_private": false
+  }
+]

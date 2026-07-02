@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-08-11-c01",
+    "learning_objective": "Compare and contrast the location and function of the motor speech area (Broca area) and Wernicke area of the cerebrum",
+    "question": "Compare and contrast the location and function of the motor speech area (Broca area) and Wernicke area of the cerebrum",
+    "answer": "The organising idea is that Broca area produces speech while Wernicke area comprehends language, so damage to Broca impairs the production of fluent speech while damage to Wernicke impairs the understanding of language. Production versus comprehension. This idea of two complementary language areas frames the comparison.",
+    "explanation": "- Language depends on two specialised cortical areas.\n- Broca area produces speech.\n- Wernicke area comprehends language.\n- Damage to each produces a distinct kind of language difficulty.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-08-11-c02",
+    "learning_objective": "Compare and contrast the location and function of the motor speech area (Broca area) and Wernicke area of the cerebrum",
+    "question": "Explain: Broca Area",
+    "answer": "Begin with the speech-production area, in the frontal lobe. This is Broca area.",
+    "explanation": "- Broca area lies in the frontal lobe, usually of the left hemisphere.\n- It is responsible for the production of speech.\n- It coordinates the movements needed to produce spoken language.\n- Damage to it causes difficulty producing fluent speech, though comprehension is relatively preserved.",
+    "is_private": true
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-08-01-c01",
+    "learning_objective": "Identify and describe the 3 primary brain vesicles formed from the neural tube",
+    "question": "Identify and describe the 3 primary brain vesicles formed from the neural tube",
+    "answer": "The organising idea is that the brain arises from three swellings at the front of the neural tube, arranged front to back, which set the basic plan of the adult brain. Three bulges that become the whole brain. This idea of three founding swellings frames the topic.",
+    "explanation": "- The brain develops from the neural tube, a hollow tube of nervous tissue.\n- At its head end, three swellings form, the primary brain vesicles.\n- They are arranged in sequence from front to back.\n- Each gives rise to major regions of the adult brain.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-H-08-01-c02",
+    "learning_objective": "Identify and describe the 3 primary brain vesicles formed from the neural tube",
+    "question": "Explain: The Forebrain Vesicle",
+    "answer": "Begin with the front vesicle, which becomes the largest part of the brain. This is the prosencephalon.",
+    "explanation": "- The forebrain vesicle, or prosencephalon, is the most anterior of the three.\n- It is the largest and will give rise to the cerebrum and related structures.\n- It sits at the very front of the developing neural tube.\n- It later divides into two secondary vesicles.",
+    "is_private": false
+  }
+]

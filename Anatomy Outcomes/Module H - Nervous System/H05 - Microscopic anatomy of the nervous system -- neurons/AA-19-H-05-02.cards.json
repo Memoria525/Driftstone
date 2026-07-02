@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-05-02-c01",
+    "learning_objective": "Compare and contrast the three structural types of neurons (i.e., unipolar [pseudounipolar], bipolar, and multipolar) with respect to their structure, location, and function",
+    "question": "Compare and contrast the three structural types of neurons (i.e., unipolar [pseudounipolar], bipolar, and multipolar) with respect to their structure, location, and function",
+    "answer": "The organising idea is that the three structural types of neuron are defined by the number of processes leaving the cell body, and this shape matches each type to its function and location. Count the processes to name the type. This idea of classification by process number frames the comparison.",
+    "explanation": "- The structural types of neuron are defined by the number of processes from the cell body.\n- A multipolar neuron has many processes, a bipolar neuron two, and a unipolar neuron one.\n- Each shape suits a particular function and location.\n- Shape, location, and function form a matched set for each type.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-05-02-c02",
+    "learning_objective": "Compare and contrast the three structural types of neurons (i.e., unipolar [pseudounipolar], bipolar, and multipolar) with respect to their structure, location, and function",
+    "question": "Explain: The Multipolar Neuron",
+    "answer": "Begin with the most common type, with many processes. This is the multipolar neuron.",
+    "explanation": "- A multipolar neuron has one axon and many dendrites extending from the cell body.\n- It is the most common structural type in the body.\n- It is found throughout the brain and spinal cord and as motor neurons.\n- Its many dendrites allow it to receive input from many sources, suiting it to integration and motor output.",
+    "is_private": false
+  }
+]

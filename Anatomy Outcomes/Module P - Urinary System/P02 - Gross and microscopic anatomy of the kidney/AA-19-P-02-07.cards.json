@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-02-07-c01",
+    "learning_objective": "Identify and describe the vascular elements associated the nephron (i.e., afferent and efferent arterioles, glomerulus, peritubular capillaries, vasa recta)",
+    "question": "Identify and describe the vascular elements associated the nephron (i.e., afferent and efferent arterioles, glomerulus, peritubular capillaries, vasa recta)",
+    "answer": "The organising idea is that the nephron has two capillary beds in series, the glomerulus for filtering and the peritubular capillaries for reabsorbing, connected by arterioles that control the pressure. A filtering bed and a reabsorbing bed. This idea of two capillary beds frames the topic.",
+    "explanation": "- The nephron is served by two capillary beds in series.\n- The glomerulus is the first bed, for filtering.\n- The peritubular capillaries and vasa recta are the second bed, for reabsorbing.\n- Arterioles connect the two beds and control the pressure.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-P-02-07-c02",
+    "learning_objective": "Identify and describe the vascular elements associated the nephron (i.e., afferent and efferent arterioles, glomerulus, peritubular capillaries, vasa recta)",
+    "question": "Explain: The Arterioles and Glomerulus",
+    "answer": "Begin with the arterioles and the filtering bed. These control pressure and filter the blood.",
+    "explanation": "- The afferent arteriole carries blood into the glomerulus.\n- The glomerulus is a tuft of capillaries where the blood is filtered.\n- The efferent arteriole carries blood out of the glomerulus.\n- Because the efferent arteriole is narrower, the pressure in the glomerulus is high, which drives filtration.",
+    "is_private": false
+  }
+]

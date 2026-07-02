@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-08-02-c01",
+    "learning_objective": "Describe the functional classification of joints (e.g., synarthrosis, diarthrosis) based on amount of movement permitted, and provide examples of each type",
+    "question": "Describe the functional classification of joints (e.g., synarthrosis, diarthrosis) based on amount of movement permitted, and provide examples of each type",
+    "answer": "The organising idea is that the functional classification sorts joints purely by the amount of movement they allow, from none, through slight, to free, so that the class name tells you immediately how mobile a joint is. Movement is the sole criterion. This focus on amount of movement frames the classification.",
+    "explanation": "- The functional classification sorts joints by how much movement they permit.\n- Synarthroses are immovable joints.\n- Amphiarthroses are slightly movable joints.\n- Diarthroses are freely movable joints.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-08-02-c02",
+    "learning_objective": "Describe the functional classification of joints (e.g., synarthrosis, diarthrosis) based on amount of movement permitted, and provide examples of each type",
+    "question": "Explain: Synarthroses",
+    "answer": "Begin with the immovable joints, which sacrifice movement for stability and protection. These are the synarthroses.",
+    "explanation": "- A synarthrosis is an immovable joint.\n- It provides strong, stable connection and often protection.\n- The sutures between the skull bones are synarthroses, protecting the brain.\n- A gomphosis, anchoring a tooth, is also functionally a synarthrosis.",
+    "is_private": false
+  }
+]

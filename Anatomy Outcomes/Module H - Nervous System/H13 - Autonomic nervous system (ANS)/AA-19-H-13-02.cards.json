@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-13-02-c01",
+    "learning_objective": "Compare and contrast the two main divisions of the ANS (i.e., sympathetic and parasympathetic) with respect to the major functions of each division, their neurotransmitters, the origination of the division in the CNS, the location of their preganglionic and postganglionic (ganglionic) cell bodies, and the length of the preganglionic versus postganglionic axons",
+    "question": "Compare and contrast the two main divisions of the ANS (i.e., sympathetic and parasympathetic) with respect to the major functions of each division, their neurotransmitters, the origination of the division in the CNS, the location of their preganglionic and postganglionic (ganglionic) cell bodies, and the length of the preganglionic versus postganglionic axons",
+    "answer": "The organising idea is that the sympathetic division prepares the body for exertion in fight-or-flight while the parasympathetic division conserves energy in rest-and-digest, and their anatomy and chemistry differ to suit these opposite roles. Two opposing automatic states. This idea of opposing divisions frames the comparison.",
+    "explanation": "- The sympathetic division prepares the body for exertion, the fight-or-flight response.\n- The parasympathetic division conserves energy, the rest-and-digest response.\n- The two divisions differ in origin, ganglion location, neuron length, and neurotransmitters.\n- The differences suit their opposite functions.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-13-02-c02",
+    "learning_objective": "Compare and contrast the two main divisions of the ANS (i.e., sympathetic and parasympathetic) with respect to the major functions of each division, their neurotransmitters, the origination of the division in the CNS, the location of their preganglionic and postganglionic (ganglionic) cell bodies, and the length of the preganglionic versus postganglionic axons",
+    "question": "Explain: The Functions and Origins",
+    "answer": "Begin with function and origin, since these define the divisions. They arise from different regions.",
+    "explanation": "- The sympathetic division prepares for exertion, raising heart rate and diverting blood to muscle.\n- It originates from the thoracic and lumbar regions of the spinal cord.\n- The parasympathetic division promotes rest and digestion, slowing the heart and stimulating the gut.\n- It originates from the brainstem and the sacral region of the spinal cord.",
+    "is_private": false
+  }
+]

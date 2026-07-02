@@ -1,13 +1,13 @@
-// Loads the "Cars Outcomes" folder tree at build time and exposes it as a
+// Loads the "Anatomy Outcomes" folder tree at build time and exposes it as a
 // nested Module > Topic > File structure for the Library viewer.
 //
 // The folder lives in the repo root, so we glob up out of src/. Vite inlines
 // each markdown file's raw text into the bundle, which keeps the viewer fully
 // client-side with no fetch/loading state.
 
-const ROOT = 'Cars Outcomes';
+const ROOT = 'Anatomy Outcomes';
 
-const RAW = import.meta.glob('../../Cars Outcomes/**/*.md', {
+const RAW = import.meta.glob('../../Anatomy Outcomes/**/*.md', {
   query: '?raw',
   import: 'default',
   eager: true,
@@ -15,7 +15,7 @@ const RAW = import.meta.glob('../../Cars Outcomes/**/*.md', {
 
 // Companion flashcard files: `<same-base>.cards.json` next to each markdown
 // file. Vite parses the JSON, so each value is the card array.
-const CARDS = import.meta.glob('../../Cars Outcomes/**/*.cards.json', {
+const CARDS = import.meta.glob('../../Anatomy Outcomes/**/*.cards.json', {
   import: 'default',
   eager: true,
 });

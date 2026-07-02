@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-04-08-c01",
+    "learning_objective": "Describe the production, flow, and reabsorption of cerebrospinal fluid (CSF), from its origin in the ventricles to its eventual reabsorption into the dural venous sinuses",
+    "question": "Describe the production, flow, and reabsorption of cerebrospinal fluid (CSF), from its origin in the ventricles to its eventual reabsorption into the dural venous sinuses",
+    "answer": "The organising idea is that cerebrospinal fluid follows a one-way circuit, produced in the ventricles, flowing out into the subarachnoid space around the brain and cord, and reabsorbed into the dural venous sinuses, so that production and reabsorption are balanced. Made, circulated, and returned. This idea of a balanced circuit frames the topic.",
+    "explanation": "- Cerebrospinal fluid follows a continuous one-way circuit.\n- It is produced within the ventricles of the brain.\n- It flows through the ventricles and out into the subarachnoid space.\n- It is reabsorbed into the dural venous sinuses, balancing its production.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-04-08-c02",
+    "learning_objective": "Describe the production, flow, and reabsorption of cerebrospinal fluid (CSF), from its origin in the ventricles to its eventual reabsorption into the dural venous sinuses",
+    "question": "Explain: The Production of Cerebrospinal Fluid",
+    "answer": "Begin with production, which occurs within the ventricles. A specialised tissue makes the fluid.",
+    "explanation": "- Cerebrospinal fluid is produced by the choroid plexus, a specialised tissue within the ventricles.\n- The choroid plexus filters and secretes the fluid from the blood.\n- It lies within each of the brain's ventricles.\n- Production is continuous, so the fluid is constantly renewed.",
+    "is_private": false
+  }
+]

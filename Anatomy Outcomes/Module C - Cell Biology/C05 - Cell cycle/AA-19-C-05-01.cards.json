@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-05-01-c01",
+    "learning_objective": "Describe the different parts of the cell cycle",
+    "question": "Describe the different parts of the cell cycle",
+    "answer": "The organising idea is that a cell does not divide on a whim but follows an ordered cycle in which it first grows and copies its contents, then divides them equally, with checkpoints ensuring each step is complete before the next begins. Most of the cycle is preparation, and division itself is brief. Seeing the cycle as mostly preparation reframes how you think about it.",
+    "explanation": "- The cell cycle is an ordered sequence of growth, copying, and division.\n- Most of the cycle is spent in preparation, collectively called interphase.\n- Actual division of the nucleus and cell occupies only a small part of the cycle.\n- Checkpoints ensure each stage is complete and correct before the cell proceeds.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-C-05-01-c02",
+    "learning_objective": "Describe the different parts of the cell cycle",
+    "question": "Explain: Interphase: The First Growth Phase",
+    "answer": "Begin with the longest part of the cycle, interphase, and its first stage, in which the cell grows and does its everyday work. This stage is called G1.",
+    "explanation": "- The first gap phase, G1, is a period of cell growth and normal metabolic activity.\n- The cell increases in size and produces the organelles and proteins it needs.\n- It is the phase in which the cell carries out its specialised function in the body.\n- A checkpoint at the end of G1 decides whether the cell is ready to copy its DNA.",
+    "is_private": true
+  }
+]

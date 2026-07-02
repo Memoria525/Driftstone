@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-C-07-02-c01",
+    "learning_objective": "Compare the outcomes of meiosis I and meiosis II",
+    "question": "Compare the outcomes of meiosis I and meiosis II",
+    "answer": "The organising idea is that the two divisions of meiosis have fundamentally different outcomes, because the first halves the chromosome number by separating pairs, while the second separates the sister chromatids without changing the chromosome number again. The overall result of the two together is four haploid cells. Distinguishing the outcome of each division is the key.",
+    "explanation": "- Meiosis I ends with two cells, each having half the original chromosome number.\n- Meiosis II ends with four cells, each still having that halved chromosome number.\n- The halving of the chromosome number happens only in meiosis I.\n- Meiosis II separates the chromatids and doubles the cell count without changing the chromosome number.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-C-07-02-c02",
+    "learning_objective": "Compare the outcomes of meiosis I and meiosis II",
+    "question": "Explain: The Outcome of Meiosis I",
+    "answer": "Begin with the first division's result, which is the defining event of meiosis because it halves the chromosome number. Two cells emerge, but with an important detail.",
+    "explanation": "- Meiosis I produces two daughter cells from one original cell.\n- Each daughter cell has half the number of chromosomes of the original, so it is haploid in chromosome number.\n- However, each chromosome still consists of two sister chromatids joined together.\n- Because it reduces the chromosome number, meiosis I is called the reductional division.",
+    "is_private": false
+  }
+]

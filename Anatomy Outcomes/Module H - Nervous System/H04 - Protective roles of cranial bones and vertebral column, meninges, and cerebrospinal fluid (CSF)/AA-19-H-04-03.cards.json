@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-H-04-03-c01",
+    "learning_objective": "Compare and contrast the structure of the dura mater surrounding the brain and the spinal cord",
+    "question": "Compare and contrast the structure of the dura mater surrounding the brain and the spinal cord",
+    "answer": "The organising idea is that the cranial dura is a double layer fused to the skull, while the spinal dura is a single layer separated from the bone by a fat-filled epidural space. The difference is whether the dura hugs the bone or floats within a space. This idea of fused versus free dura frames the comparison.",
+    "explanation": "- The dura mater differs in structure between the brain and the spinal cord.\n- The cranial dura has two layers and is fused to the skull.\n- The spinal dura is a single layer separated from the bone by a space.\n- This difference creates an epidural space around the cord but not the brain.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-H-04-03-c02",
+    "learning_objective": "Compare and contrast the structure of the dura mater surrounding the brain and the spinal cord",
+    "question": "Explain: The Cranial Dura Mater",
+    "answer": "Begin with the cranial dura, which is doubled and fused to the skull. Its two layers do different jobs.",
+    "explanation": "- The cranial dura mater has two layers, an outer periosteal layer and an inner meningeal layer.\n- The outer periosteal layer is fused to the inner surface of the skull, serving as its periosteum.\n- The two layers are mostly fused together but separate in places to form the dural venous sinuses.\n- The inner meningeal layer also folds inward to form partitions between brain regions.",
+    "is_private": false
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-01-02-c01",
+    "learning_objective": "List and describe the major structural components (e.g., bones, ligaments, tendons, articulations) of the skeletal system",
+    "question": "List and describe the major structural components (e.g., bones, ligaments, tendons, articulations) of the skeletal system",
+    "answer": "The organising idea is that the skeletal system combines rigid bones with the connective tissues that join them to each other and to muscle, so that the framework can both bear load and move. The components divide into the rigid struts and the flexible connectors. This division into struts and connectors frames the list.",
+    "explanation": "- The skeletal system consists of rigid bones joined by connective tissues.\n- Cartilage cushions and connects bones at certain sites.\n- Ligaments connect bone to bone, and tendons connect muscle to bone.\n- Articulations, or joints, are where bones meet and movement is permitted.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-01-02-c02",
+    "learning_objective": "List and describe the major structural components (e.g., bones, ligaments, tendons, articulations) of the skeletal system",
+    "question": "Explain: Bones and Cartilage",
+    "answer": "Begin with the rigid and semi-rigid components, the bones and cartilage. These form and cushion the framework.",
+    "explanation": "- Bones are the rigid organs that form the framework, providing support, leverage, and protection.\n- They are living organs containing bone tissue, blood vessels, nerves, and marrow.\n- Cartilage is a firm but flexible connective tissue that cushions and connects at certain sites.\n- Cartilage covers the ends of bones at joints and forms structures such as the costal cartilages.",
+    "is_private": true
+  }
+]

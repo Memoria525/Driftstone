@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-02-04-c01",
+    "learning_objective": "Trace the path of blood flow through the kidney, from the descending abdominal aorta and renal artery to the renal vein and inferior vena cava",
+    "question": "Trace the path of blood flow through the kidney, from the descending abdominal aorta and renal artery to the renal vein and inferior vena cava",
+    "answer": "The organising idea is that blood enters the kidney directly from the aorta through the renal artery, branches to the filtering units, and returns through the renal vein to the inferior vena cava. Direct in, branch to filter, return out. This idea of a direct filtering supply frames the topic.",
+    "explanation": "- Blood enters the kidney from the aorta through the renal artery.\n- It branches through the kidney to the filtering units.\n- It is filtered at the filtering units.\n- It returns through the renal vein to the inferior vena cava.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-P-02-04-c02",
+    "learning_objective": "Trace the path of blood flow through the kidney, from the descending abdominal aorta and renal artery to the renal vein and inferior vena cava",
+    "question": "Explain: The Path Into the Kidney",
+    "answer": "Begin with the path into the kidney, from the aorta. The renal artery enters at the hilum.",
+    "explanation": "- Blood leaves the descending abdominal aorta through the renal artery.\n- The renal artery enters the kidney at the hilum.\n- It branches into smaller and smaller arteries within the kidney.\n- These carry the blood toward the cortex.",
+    "is_private": false
+  }
+]

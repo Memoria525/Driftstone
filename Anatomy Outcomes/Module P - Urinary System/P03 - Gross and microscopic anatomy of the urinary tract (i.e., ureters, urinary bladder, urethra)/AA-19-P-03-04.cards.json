@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-03-04-c01",
+    "learning_objective": "Compare and contrast the locations, innervation and functions of the internal urethral sphincter and external urethral sphincter",
+    "question": "Compare and contrast the locations, innervation and functions of the internal urethral sphincter and external urethral sphincter",
+    "answer": "The organising idea is that the urethra has an inner sphincter of smooth muscle under automatic control and an outer sphincter of skeletal muscle under voluntary control, together controlling urination. Automatic inner, voluntary outer. This idea of two complementary sphincters frames the comparison.",
+    "explanation": "- The urethra is guarded by two sphincters.\n- The internal urethral sphincter is smooth muscle under automatic control.\n- The external urethral sphincter is skeletal muscle under voluntary control.\n- Together they control urination.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-P-03-04-c02",
+    "learning_objective": "Compare and contrast the locations, innervation and functions of the internal urethral sphincter and external urethral sphincter",
+    "question": "Explain: The Location and Innervation",
+    "answer": "Begin with location and innervation, since the two differ. One is inner and automatic, the other outer and voluntary.",
+    "explanation": "- The internal urethral sphincter is at the neck of the bladder, made of smooth muscle.\n- It is controlled by the autonomic nervous system and is not under voluntary control.\n- The external urethral sphincter is lower down, made of skeletal muscle.\n- It is controlled by the somatic nervous system and is under voluntary control.",
+    "is_private": true
+  }
+]

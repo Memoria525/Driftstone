@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-02-04-c01",
+    "learning_objective": "Define the common bone marking terms (e.g., condyle, tubercle, foramen, canal)",
+    "question": "Define the common bone marking terms (e.g., condyle, tubercle, foramen, canal)",
+    "answer": "The organising idea is that bone markings are not random but record a bone's relationships, with projections marking where muscles and ligaments attach, and openings marking where vessels and nerves pass. Reading the markings reads the bone's history of use and its connections. This idea that markings record relationships frames the terms.",
+    "explanation": "- Bone markings fall into projections, depressions, and openings.\n- Projections mark where muscles, tendons, and ligaments attach or where bones articulate.\n- Openings and depressions mark where vessels and nerves pass or where bones meet.\n- Reading the markings reveals the bone's attachments and connections.",
+    "is_private": true
+  },
+  {
+    "card_id": "AA-19-F-02-04-c02",
+    "learning_objective": "Define the common bone marking terms (e.g., condyle, tubercle, foramen, canal)",
+    "question": "Explain: Projections for Muscle Attachment",
+    "answer": "Begin with the projections where muscles and ligaments attach, since these record the pull of soft tissues. Several terms describe them.",
+    "explanation": "- A tuberosity is a large, rounded projection for muscle or ligament attachment.\n- A tubercle is a small, rounded projection for attachment.\n- A trochanter is a very large, blunt projection found on the femur.\n- A crest is a prominent ridge, and a spine is a sharp, slender projection, both for attachment.",
+    "is_private": false
+  }
+]

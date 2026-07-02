@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-F-08-06-c01",
+    "learning_objective": "Define the movements that typically occur at a joint (e.g., flexion, extension, abduction, adduction, rotation, circumduction, inversion, eversion, protraction, retraction)",
+    "question": "Define the movements that typically occur at a joint (e.g., flexion, extension, abduction, adduction, rotation, circumduction, inversion, eversion, protraction, retraction)",
+    "answer": "The organising idea is that joint movements are defined as changes from the anatomical position, described in pairs of opposites, so that each term names a precise direction of movement about a joint. The reference pose anchors every definition. This idea of named movements from a reference frames the terms.",
+    "explanation": "- Joint movements are defined as changes from the anatomical position.\n- Most movements come in pairs of opposites.\n- Each term names a precise direction of movement about a joint.\n- The anatomical position is the reference against which movements are defined.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-F-08-06-c02",
+    "learning_objective": "Define the movements that typically occur at a joint (e.g., flexion, extension, abduction, adduction, rotation, circumduction, inversion, eversion, protraction, retraction)",
+    "question": "Explain: The Movements in the Sagittal Plane",
+    "answer": "Begin with the front-to-back movements, which are among the most common. These are flexion and extension.",
+    "explanation": "- Flexion is a movement that decreases the angle at a joint, as in bending the elbow.\n- Extension is a movement that increases the angle at a joint, as in straightening the elbow.\n- Hyperextension is extension beyond the normal anatomical position.\n- These movements occur at many joints, including the elbow, knee, and spine.",
+    "is_private": true
+  }
+]

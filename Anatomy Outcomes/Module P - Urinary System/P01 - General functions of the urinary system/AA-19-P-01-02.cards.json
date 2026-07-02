@@ -1,0 +1,18 @@
+[
+  {
+    "card_id": "AA-19-P-01-02-c01",
+    "learning_objective": "Define the terms filtration, reabsorption, and secretion",
+    "question": "Define the terms filtration, reabsorption, and secretion",
+    "answer": "The organising idea is that the kidney forms urine by first filtering a large volume of fluid from the blood, then reabsorbing the useful substances back into the blood, and finally secreting extra waste into the fluid. Filter, take back, add. This idea of a three-step process frames the definitions.",
+    "explanation": "- Filtration removes a large volume of fluid from the blood.\n- Reabsorption takes the useful substances back into the blood.\n- Secretion adds extra waste into the fluid.\n- Together these form the urine.",
+    "is_private": false
+  },
+  {
+    "card_id": "AA-19-P-01-02-c02",
+    "learning_objective": "Define the terms filtration, reabsorption, and secretion",
+    "question": "Explain: Defining Filtration",
+    "answer": "Begin with filtration, the first process. It removes fluid from the blood.",
+    "explanation": "- Filtration is the removal of a large volume of fluid from the blood.\n- It occurs at the start of the nephron, where blood is filtered.\n- Water and small substances pass out of the blood into the tubule.\n- Large substances, such as blood cells and proteins, stay in the blood.",
+    "is_private": false
+  }
+]
