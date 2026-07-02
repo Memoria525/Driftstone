@@ -1,34 +1,22 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import useAuth from './hooks/useAuth.js';
-import useCardState from './hooks/useCardState.js';
 import useAdmin from './hooks/useAdmin.js';
 import SignInScreen from './components/auth/SignInScreen.jsx';
 import AppShell from './components/layout/AppShell.jsx';
-import StudyTab from './components/tabs/StudyTab.jsx';
-import ProgressTab from './components/tabs/ProgressTab.jsx';
+import OutcomesViewer from './components/outcomes/OutcomesViewer.jsx';
 import AdminTab from './components/tabs/AdminTab.jsx';
 
 export default function App() {
   const { user, loading } = useAuth();
-  const { stateMap, saveCardState } = useCardState(user);
   const isAdmin = useAdmin(user);
-  const [activeTab, setActiveTab] = useState('study');
+  const [activeTab, setActiveTab] = useState('library');
   const [hideNav, setHideNav] = useState(false);
   const [hideAdmin, setHideAdmin] = useState(false);
 
   function handleHideAdmin() {
     setHideAdmin(true);
-    setActiveTab('study');
+    setActiveTab('library');
   }
-
-  const dueCount = useMemo(() => {
-    const now = new Date();
-    let count = 0;
-    for (const [, s] of stateMap) {
-      if (s.state !== 'new' && s.due <= now) count++;
-    }
-    return count;
-  }, [stateMap]);
 
   if (loading) {
     return (
@@ -43,9 +31,8 @@ export default function App() {
   }
 
   return (
-    <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} hideNav={hideNav} dueCount={dueCount} isAdmin={isAdmin && !hideAdmin}>
-      {activeTab === 'study' && <StudyTab onStudying={setHideNav} stateMap={stateMap} saveCardState={saveCardState} dueCount={dueCount} isAdmin={isAdmin} hideAdmin={hideAdmin} />}
-      {activeTab === 'progress' && <ProgressTab />}
+    <AppShell activeTab={activeTab} onTabChange={setActiveTab} user={user} hideNav={hideNav} isAdmin={isAdmin && !hideAdmin}>
+      {activeTab === 'library' && <OutcomesViewer onReading={setHideNav} />}
       {activeTab === 'admin' && <AdminTab user={user} isAdmin={isAdmin} onHideAdmin={handleHideAdmin} onReviewing={setHideNav} />}
     </AppShell>
   );

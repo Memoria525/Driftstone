@@ -51,12 +51,31 @@ export default function renderMarkdown(md) {
       continue;
     }
 
-    // Heading: ## Text
-    if (trimmed.startsWith('## ')) {
+    // Horizontal rule: --- (or more dashes)
+    if (/^-{3,}$/.test(trimmed)) {
+      flushList();
+      elements.push(<hr key={key++} className="border-[--color-border]" />);
+      continue;
+    }
+
+    // Heading: # Text (top level)
+    if (trimmed.startsWith('# ')) {
       flushList();
       elements.push(
+        <p key={key++} className="text-base font-bold text-[--color-text]">
+          {inlineMarkdown(trimmed.slice(2))}
+        </p>
+      );
+      continue;
+    }
+
+    // Heading: ## Text (and deeper — rendered the same)
+    if (trimmed.startsWith('## ')) {
+      flushList();
+      const text = trimmed.replace(/^#{2,6}\s+/, '');
+      elements.push(
         <p key={key++} className="text-sm font-semibold text-[--color-text]">
-          {inlineMarkdown(trimmed.slice(3))}
+          {inlineMarkdown(text)}
         </p>
       );
       continue;
