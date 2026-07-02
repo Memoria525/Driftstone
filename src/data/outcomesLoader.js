@@ -1,11 +1,13 @@
-// Loads the "Anatomy Outcomes" folder tree at build time and exposes it as a
+// Loads the "Cars Outcomes" folder tree at build time and exposes it as a
 // nested Module > Topic > File structure for the Library viewer.
 //
 // The folder lives in the repo root, so we glob up out of src/. Vite inlines
-// each markdown file's raw text into the bundle (the whole folder is ~3 MB of
-// text), which keeps the viewer fully client-side with no fetch/loading state.
+// each markdown file's raw text into the bundle, which keeps the viewer fully
+// client-side with no fetch/loading state.
 
-const RAW = import.meta.glob('../../Anatomy Outcomes/**/*.md', {
+const ROOT = 'Cars Outcomes';
+
+const RAW = import.meta.glob('../../Cars Outcomes/**/*.md', {
   query: '?raw',
   import: 'default',
   eager: true,
@@ -28,7 +30,7 @@ function buildTree() {
   const modules = new Map();
 
   for (const [path, content] of Object.entries(RAW)) {
-    const rel = path.split('/Anatomy Outcomes/')[1];
+    const rel = path.split(`/${ROOT}/`)[1];
     if (!rel) continue;
 
     const parts = rel.split('/');

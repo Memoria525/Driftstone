@@ -99,7 +99,7 @@ export default function OutcomesViewer({ onReading }) {
     <div className="flex flex-col h-full">
       <div className="px-4 py-3 border-b border-[--color-border] bg-[--color-surface]">
         <h2 ref={headingRef} tabIndex={-1} className="text-sm font-semibold text-[--color-text] outline-none">
-          Anatomy Outcomes
+          Cars Outcomes
         </h2>
       </div>
 
