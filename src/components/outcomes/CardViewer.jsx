@@ -1,23 +1,44 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
+import { getRelatedCards } from '../../data/relatedCards.js';
 
-// Steps through the flashcards attached to one outcome file. Each card reveals
-// its answer and explanation on demand. Private cards are shown but badged.
+// Steps through the flashcards for one outcome. A slider below the card widens
+// the deck: fully left shows only this objective's cards; dragging right pulls
+// in cards from other objectives, most-related first (see relatedCards.js —
+// the relatedness is simulated placeholder data, not real embeddings).
 
 export default function CardViewer({ file, breadcrumb, onBack }) {
-  const cards = file.cards || [];
+  const baseCards = useMemo(() => file.cards || [], [file]);
+  const related = useMemo(() => getRelatedCards(file), [file]);
+
+  const [relatedCount, setRelatedCount] = useState(0);
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
 
   const questionRef = useRef(null);
   const answerRef = useRef(null);
 
-  const card = cards[index];
+  // The deck: this objective's cards, then the N most-related foreign cards.
+  const deck = useMemo(() => {
+    const base = baseCards.map((card) => ({ card, breadcrumb, foreign: false, score: null }));
+    const extra = related.slice(0, relatedCount).map((r) => ({
+      card: r.card,
+      breadcrumb: r.breadcrumb,
+      foreign: true,
+      score: r.score,
+    }));
+    return [...base, ...extra];
+  }, [baseCards, related, relatedCount, breadcrumb]);
 
-  // Move focus to the question whenever the card changes (VoiceOver).
+  // Clamp at render (never setState in an effect) so a shrinking deck can't
+  // strand the pointer past the end.
+  const safeIndex = Math.min(index, deck.length - 1);
+  const entry = deck[safeIndex];
+
+  // Move focus to the question whenever the visible card changes (VoiceOver).
   useEffect(() => {
     questionRef.current?.focus();
-  }, [index]);
+  }, [safeIndex]);
 
   // Move focus to the answer when it is revealed.
   useEffect(() => {
@@ -26,10 +47,15 @@ export default function CardViewer({ file, breadcrumb, onBack }) {
 
   function go(delta) {
     setRevealed(false);
-    setIndex((i) => Math.min(cards.length - 1, Math.max(0, i + delta)));
+    setIndex(() => Math.min(deck.length - 1, Math.max(0, safeIndex + delta)));
   }
 
-  if (!card) {
+  function onSlide(e) {
+    setRevealed(false);
+    setRelatedCount(Number(e.target.value));
+  }
+
+  if (!entry) {
     return (
       <div className="flex flex-col h-full">
         <div className="px-4 py-2 border-b border-[--color-border] bg-[--color-surface]">
@@ -47,8 +73,9 @@ export default function CardViewer({ file, breadcrumb, onBack }) {
     );
   }
 
-  const atFirst = index === 0;
-  const atLast = index === cards.length - 1;
+  const card = entry.card;
+  const atFirst = safeIndex === 0;
+  const atLast = safeIndex === deck.length - 1;
 
   return (
     <div className="flex flex-col h-full">
@@ -60,17 +87,24 @@ export default function CardViewer({ file, breadcrumb, onBack }) {
         >
           ← Back
         </button>
-        <p className="flex-1 text-xs text-[--color-text-muted] truncate">{breadcrumb}</p>
-        <span className="text-xs text-[--color-text-muted] shrink-0">{index + 1} / {cards.length}</span>
+        <p className="flex-1 text-xs text-[--color-text-muted] truncate">{entry.breadcrumb}</p>
+        <span className="text-xs text-[--color-text-muted] shrink-0">{safeIndex + 1} / {deck.length}</span>
       </div>
 
       {/* Card body */}
       <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
-        {card.is_private && (
-          <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-100 text-amber-700">
-            Private
-          </span>
-        )}
+        <div className="flex flex-wrap items-center gap-2">
+          {entry.foreign && (
+            <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-medium bg-indigo-100 text-indigo-700">
+              Related · ~{entry.score.toFixed(2)}
+            </span>
+          )}
+          {card.is_private && (
+            <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-100 text-amber-700">
+              Private
+            </span>
+          )}
+        </div>
 
         <div>
           <p className="text-xs font-medium text-[--color-text-muted] mb-1">Question</p>
@@ -78,7 +112,7 @@ export default function CardViewer({ file, breadcrumb, onBack }) {
             ref={questionRef}
             tabIndex={-1}
             className="text-base font-medium text-[--color-text] outline-none"
-            aria-label={`Card ${index + 1} of ${cards.length}. ${card.question}`}
+            aria-label={`Card ${safeIndex + 1} of ${deck.length}.${entry.foreign ? ' Related card.' : ''} ${card.question}`}
           >
             {card.question}
           </p>
@@ -120,6 +154,38 @@ export default function CardViewer({ file, breadcrumb, onBack }) {
           </div>
         )}
       </div>
+
+      {/* Relatedness slider */}
+      {related.length > 0 && (
+        <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface] space-y-1">
+          <div className="flex items-center justify-between text-[11px] text-[--color-text-muted]">
+            <span>Focus</span>
+            <span aria-live="polite">
+              {relatedCount === 0
+                ? 'This objective only'
+                : `+ ${relatedCount} related card${relatedCount === 1 ? '' : 's'}`}
+            </span>
+            <span>Explore</span>
+          </div>
+          <input
+            type="range"
+            min={0}
+            max={related.length}
+            value={relatedCount}
+            onChange={onSlide}
+            aria-label="Include related cards from other objectives"
+            aria-valuetext={
+              relatedCount === 0
+                ? 'This objective only'
+                : `${relatedCount} related card${relatedCount === 1 ? '' : 's'} included`
+            }
+            className="w-full accent-[--color-brand] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] rounded"
+          />
+          <p className="text-[10px] text-[--color-text-muted] text-center">
+            Relatedness is simulated placeholder data.
+          </p>
+        </div>
+      )}
 
       {/* Navigation */}
       <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface] flex gap-2">
