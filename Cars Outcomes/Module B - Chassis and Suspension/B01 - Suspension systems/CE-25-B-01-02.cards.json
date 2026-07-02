@@ -1,0 +1,26 @@
+[
+  {
+    "card_id": "CE-25-B-01-02-c01",
+    "learning_objective": "Compare independent and solid-axle suspension designs.",
+    "question": "In a solid-axle suspension, what happens to one wheel when the other hits a bump?",
+    "answer": "The bump tilts the opposite wheel, because a rigid beam connects them.",
+    "explanation": "The two wheels are physically linked, so a disturbance on one side is transmitted to the other.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-B-01-02-c02",
+    "learning_objective": "Compare independent and solid-axle suspension designs.",
+    "question": "What ride advantage does independent suspension offer?",
+    "answer": "Each wheel moves on its own, so a bump on one side barely disturbs the other.",
+    "explanation": "Decoupling the wheels gives a smoother ride and better grip, which is why most cars use it.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-B-01-02-c03",
+    "learning_objective": "Compare independent and solid-axle suspension designs.",
+    "question": "Why are solid axles favoured on trucks and off-roaders?",
+    "answer": "They are strong, simple, and handle heavy loads well.",
+    "explanation": "The rigid beam is durable and cheap, which matters more than ride refinement for load-carrying vehicles.",
+    "is_private": true
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "card_id": "CE-25-C-01-01-c01",
+    "learning_objective": "Describe the roles of the battery, starter, and alternator.",
+    "question": "What is the job of the starter motor?",
+    "answer": "It uses battery current to turn the engine fast enough to begin the combustion cycle.",
+    "explanation": "A petrol engine cannot start itself, so the starter cranks it until combustion becomes self-sustaining.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-C-01-01-c02",
+    "learning_objective": "Describe the roles of the battery, starter, and alternator.",
+    "question": "Once the engine is running, which component powers the car and recharges the battery?",
+    "answer": "The alternator.",
+    "explanation": "Driven by the engine, the alternator generates electricity to run the car and replenish the battery the starter drained.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-C-01-01-c03",
+    "learning_objective": "Describe the roles of the battery, starter, and alternator.",
+    "question": "Why does the battery need to deliver a large burst of current?",
+    "answer": "To crank the engine through the starter motor.",
+    "explanation": "Turning a cold engine over requires substantial torque, and the starter draws heavy current to provide it.",
+    "is_private": false
+  }
+]

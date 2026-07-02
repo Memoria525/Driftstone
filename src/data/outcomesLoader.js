@@ -13,6 +13,20 @@ const RAW = import.meta.glob('../../Cars Outcomes/**/*.md', {
   eager: true,
 });
 
+// Companion flashcard files: `<same-base>.cards.json` next to each markdown
+// file. Vite parses the JSON, so each value is the card array.
+const CARDS = import.meta.glob('../../Cars Outcomes/**/*.cards.json', {
+  import: 'default',
+  eager: true,
+});
+
+// Map a markdown file's path to its parsed cards array (empty if none).
+function cardsForMarkdown(mdPath) {
+  const base = mdPath.replace(/\.md$/, '');
+  const data = CARDS[`${base}.cards.json`];
+  return Array.isArray(data) ? data : [];
+}
+
 // Natural sort so "A2" < "A10" and "Module A" < "Module C".
 const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
 const byName = (a, b) => collator.compare(a.name, b.name);
@@ -55,6 +69,7 @@ function buildTree() {
       name: fileName,
       title: titleFromContent(content, fileName),
       content,
+      cards: cardsForMarkdown(path),
     });
   }
 

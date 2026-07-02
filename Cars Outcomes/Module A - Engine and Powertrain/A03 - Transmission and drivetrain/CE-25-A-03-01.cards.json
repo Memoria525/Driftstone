@@ -1,0 +1,26 @@
+[
+  {
+    "card_id": "CE-25-A-03-01-c01",
+    "learning_objective": "Compare how manual and automatic transmissions change gear ratios.",
+    "question": "Why does a car need a transmission with multiple gear ratios?",
+    "answer": "To keep the engine within its useful speed range as road speed changes.",
+    "explanation": "An engine makes useful power only over a limited speed band, so gears match engine speed to road speed.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-A-03-01-c02",
+    "learning_objective": "Compare how manual and automatic transmissions change gear ratios.",
+    "question": "How does a manual transmission differ from an automatic in how gears are selected?",
+    "answer": "A manual is shifted by the driver using a clutch and lever; an automatic selects ratios itself.",
+    "explanation": "Traditional automatics use a fluid torque converter and planetary gearsets to change ratio without driver input.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-A-03-01-c03",
+    "learning_objective": "Compare how manual and automatic transmissions change gear ratios.",
+    "question": "Give one advantage of a manual transmission.",
+    "answer": "Direct driver control (and mechanical simplicity).",
+    "explanation": "Manuals let the driver choose the exact ratio and are mechanically simpler, while automatics reduce workload in traffic.",
+    "is_private": false
+  }
+]

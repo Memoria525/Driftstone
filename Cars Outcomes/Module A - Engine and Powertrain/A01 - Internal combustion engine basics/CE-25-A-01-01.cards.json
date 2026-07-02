@@ -1,0 +1,26 @@
+[
+  {
+    "card_id": "CE-25-A-01-01-c01",
+    "learning_objective": "Describe the four-stroke combustion cycle and the role of each stroke.",
+    "question": "What are the four strokes of the combustion cycle, in order?",
+    "answer": "Intake, compression, power, exhaust.",
+    "explanation": "The sequence is often remembered as suck, squeeze, bang, blow. Two full crankshaft rotations complete one cycle.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-A-01-01-c02",
+    "learning_objective": "Describe the four-stroke combustion cycle and the role of each stroke.",
+    "question": "Which stroke is the only one that produces useful work?",
+    "answer": "The power stroke.",
+    "explanation": "The spark ignites the compressed mixture and the expanding gases drive the piston down. The other three strokes prepare for or clean up after it.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-A-01-01-c03",
+    "learning_objective": "Describe the four-stroke combustion cycle and the role of each stroke.",
+    "question": "What is the state of the valves during the compression stroke?",
+    "answer": "Both the intake and exhaust valves are closed.",
+    "explanation": "Sealing the cylinder lets the rising piston squeeze the mixture, raising its temperature and pressure before ignition.",
+    "is_private": true
+  }
+]

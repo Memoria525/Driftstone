@@ -1,0 +1,26 @@
+[
+  {
+    "card_id": "CE-25-D-01-02-c01",
+    "learning_objective": "Explain how ABS preserves steering control during hard braking.",
+    "question": "What problem does ABS prevent?",
+    "answer": "It stops the wheels from locking up under hard braking.",
+    "explanation": "A locked wheel slides and cannot steer, so preventing lock-up keeps the car controllable.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-D-01-02-c02",
+    "learning_objective": "Explain how ABS preserves steering control during hard braking.",
+    "question": "How does ABS keep a wheel from locking?",
+    "answer": "It rapidly releases and reapplies brake pressure to that wheel many times per second.",
+    "explanation": "Pulsing the pressure keeps the tyre rolling near the edge of grip instead of sliding.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-D-01-02-c03",
+    "learning_objective": "Explain how ABS preserves steering control during hard braking.",
+    "question": "What is the main driver benefit of ABS?",
+    "answer": "The driver can still steer while braking hard.",
+    "explanation": "Because the wheels keep rolling, the tyres retain the grip needed to change direction during an emergency stop.",
+    "is_private": false
+  }
+]

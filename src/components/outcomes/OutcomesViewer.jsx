@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { loadOutcomesTree } from '../../data/outcomesLoader.js';
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
+import CardViewer from './CardViewer.jsx';
 
 // ── Chevron ───────────────────────────────────────────────────────────────────
 
@@ -23,8 +24,9 @@ function ChevronIcon({ open }) {
 
 // ── Reading screen ────────────────────────────────────────────────────────────
 
-function ReadingScreen({ file, breadcrumb, onBack }) {
+function ReadingScreen({ file, breadcrumb, onBack, onStudy }) {
   const headingRef = useRef(null);
+  const cardCount = file.cards?.length || 0;
 
   useEffect(() => {
     headingRef.current?.focus();
@@ -55,6 +57,18 @@ function ReadingScreen({ file, breadcrumb, onBack }) {
         <p className="text-xs font-mono text-[--color-text-muted]">{file.name}</p>
         <div className="pt-2 space-y-2">{renderMarkdown(file.content)}</div>
       </div>
+
+      {/* Study cards */}
+      {cardCount > 0 && (
+        <div className="px-4 py-3 border-t border-[--color-border] bg-[--color-surface]">
+          <button
+            onClick={onStudy}
+            className="w-full min-h-touch rounded-[--radius-md] font-semibold text-sm bg-[--color-brand] hover:bg-[--color-brand-dark] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus]"
+          >
+            Study cards ({cardCount})
+          </button>
+        </div>
+      )}
     </div>
   );
 }
@@ -68,6 +82,7 @@ export default function OutcomesViewer({ onReading }) {
   const [openModules, setOpenModules] = useState(() => new Set());
   const [openTopics, setOpenTopics] = useState(() => new Set());
   const [selected, setSelected] = useState(null); // { file, breadcrumb } | null
+  const [studying, setStudying] = useState(false); // card viewer for `selected`
 
   useEffect(() => {
     onReading?.(selected !== null);
@@ -85,12 +100,23 @@ export default function OutcomesViewer({ onReading }) {
     });
   }
 
+  if (selected && studying) {
+    return (
+      <CardViewer
+        file={selected.file}
+        breadcrumb={selected.breadcrumb}
+        onBack={() => setStudying(false)}
+      />
+    );
+  }
+
   if (selected) {
     return (
       <ReadingScreen
         file={selected.file}
         breadcrumb={selected.breadcrumb}
         onBack={() => setSelected(null)}
+        onStudy={() => setStudying(true)}
       />
     );
   }
@@ -146,12 +172,13 @@ export default function OutcomesViewer({ onReading }) {
                             {topic.files.map((file) => (
                               <button
                                 key={file.id}
-                                onClick={() =>
+                                onClick={() => {
+                                  setStudying(false);
                                   setSelected({
                                     file,
                                     breadcrumb: `${mod.name} › ${topic.name}`,
-                                  })
-                                }
+                                  });
+                                }}
                                 className="w-full flex items-center gap-2 pl-12 pr-4 py-2 text-left hover:bg-[--color-surface-raised] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-focus] focus-visible:ring-inset"
                                 style={{ minHeight: 'var(--spacing-touch)' }}
                               >

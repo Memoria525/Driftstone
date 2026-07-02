@@ -1,0 +1,26 @@
+[
+  {
+    "card_id": "CE-25-C-02-01-c01",
+    "learning_objective": "Explain how the ECU uses sensor data to manage the engine.",
+    "question": "What two things does the ECU primarily control based on sensor data?",
+    "answer": "How much fuel to inject and when to fire the spark.",
+    "explanation": "Reading sensors many times per second, the ECU adjusts fuelling and ignition timing to keep the engine efficient.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-C-02-01-c02",
+    "learning_objective": "Explain how the ECU uses sensor data to manage the engine.",
+    "question": "How does the oxygen sensor help the ECU?",
+    "answer": "It reports how much oxygen is in the exhaust so the ECU can fine-tune the air-fuel mixture.",
+    "explanation": "This closed-loop feedback keeps combustion efficient and emissions low.",
+    "is_private": false
+  },
+  {
+    "card_id": "CE-25-C-02-01-c03",
+    "learning_objective": "Explain how the ECU uses sensor data to manage the engine.",
+    "question": "How do stored ECU fault codes help a technician?",
+    "answer": "They point to where a problem is, speeding up diagnosis.",
+    "explanation": "The ECU records faults it detects, giving technicians a starting point rather than searching blind.",
+    "is_private": true
+  }
+]
