@@ -1,24 +1,45 @@
-import { useState, useRef, useEffect, useMemo } from 'react';
+import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import renderMarkdown from '../../utils/renderMarkdown.jsx';
 import { getRelatedCards } from '../../data/relatedCards.js';
 
-// Steps through the flashcards for one outcome. A slider below the card widens
-// the deck: fully left shows only this objective's cards; dragging right pulls
-// in cards from other objectives, most-related first (see relatedCards.js —
-// the relatedness is simulated placeholder data, not real embeddings).
+// Steps through the flashcards for one outcome, presented in random order. A
+// slider widens the deck: fully left shows only this objective's cards;
+// dragging right adds cards from other objectives, most-related first (see
+// relatedCards.js — relatedness is simulated placeholder data). Relatedness
+// decides which cards are in the pool; the pool is then shuffled for study.
+
+const keyOf = (card) => card.card_id || card.question;
+
+// Deterministic string -> [0, 1) hash (FNV-1a), for a stable shuffle key.
+function hash01(str) {
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return ((h >>> 0) % 100000) / 100000;
+}
 
 export default function CardViewer({ file, breadcrumb, onBack }) {
   const baseCards = useMemo(() => file.cards || [], [file]);
   const related = useMemo(() => getRelatedCards(file), [file]);
 
   const [relatedCount, setRelatedCount] = useState(0);
-  const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
 
-  const questionRef = useRef(null);
-  const answerRef = useRef(null);
+  // Per-mount random seed → a stable, deterministic shuffle key per card. Keeps
+  // the order fixed across renders and slider changes (new cards slot into
+  // random positions; cards already in the deck don't move), and reshuffles
+  // when the outcome is reopened. State (not a ref) is safe to read in render.
+  const [seed] = useState(() => Math.random());
+  const rank = useCallback((card) => hash01(`${seed}|${keyOf(card)}`), [seed]);
 
-  // The deck: this objective's cards, then the N most-related foreign cards.
+  // Track the visible card by identity so a growing/shrinking deck keeps it put.
+  const [currentKey, setCurrentKey] = useState(() => {
+    const first = [...baseCards].sort((a, b) => rank(a) - rank(b))[0];
+    return first ? keyOf(first) : null;
+  });
+
   const deck = useMemo(() => {
     const base = baseCards.map((card) => ({ card, breadcrumb, foreign: false, score: null }));
     const extra = related.slice(0, relatedCount).map((r) => ({
@@ -27,18 +48,21 @@ export default function CardViewer({ file, breadcrumb, onBack }) {
       foreign: true,
       score: r.score,
     }));
-    return [...base, ...extra];
-  }, [baseCards, related, relatedCount, breadcrumb]);
+    return [...base, ...extra].sort((a, b) => rank(a.card) - rank(b.card));
+  }, [baseCards, related, relatedCount, breadcrumb, rank]);
 
-  // Clamp at render (never setState in an effect) so a shrinking deck can't
-  // strand the pointer past the end.
-  const safeIndex = Math.min(index, deck.length - 1);
-  const entry = deck[safeIndex];
+  let currentIndex = deck.findIndex((e) => keyOf(e.card) === currentKey);
+  if (currentIndex < 0) currentIndex = 0;
+  const entry = deck[currentIndex];
+  const currentCardKey = entry ? keyOf(entry.card) : null;
+
+  const questionRef = useRef(null);
+  const answerRef = useRef(null);
 
   // Move focus to the question whenever the visible card changes (VoiceOver).
   useEffect(() => {
     questionRef.current?.focus();
-  }, [safeIndex]);
+  }, [currentCardKey]);
 
   // Move focus to the answer when it is revealed.
   useEffect(() => {
@@ -47,7 +71,8 @@ export default function CardViewer({ file, breadcrumb, onBack }) {
 
   function go(delta) {
     setRevealed(false);
-    setIndex(() => Math.min(deck.length - 1, Math.max(0, safeIndex + delta)));
+    const next = Math.min(deck.length - 1, Math.max(0, currentIndex + delta));
+    setCurrentKey(keyOf(deck[next].card));
   }
 
   function onSlide(e) {
@@ -74,8 +99,8 @@ export default function CardViewer({ file, breadcrumb, onBack }) {
   }
 
   const card = entry.card;
-  const atFirst = safeIndex === 0;
-  const atLast = safeIndex === deck.length - 1;
+  const atFirst = currentIndex === 0;
+  const atLast = currentIndex === deck.length - 1;
 
   return (
     <div className="flex flex-col h-full">
@@ -88,7 +113,7 @@ export default function CardViewer({ file, breadcrumb, onBack }) {
           ← Back
         </button>
         <p className="flex-1 text-xs text-[--color-text-muted] truncate">{entry.breadcrumb}</p>
-        <span className="text-xs text-[--color-text-muted] shrink-0">{safeIndex + 1} / {deck.length}</span>
+        <span className="text-xs text-[--color-text-muted] shrink-0">{currentIndex + 1} / {deck.length}</span>
       </div>
 
       {/* Card body */}
@@ -112,7 +137,7 @@ export default function CardViewer({ file, breadcrumb, onBack }) {
             ref={questionRef}
             tabIndex={-1}
             className="text-base font-medium text-[--color-text] outline-none"
-            aria-label={`Card ${safeIndex + 1} of ${deck.length}.${entry.foreign ? ' Related card.' : ''} ${card.question}`}
+            aria-label={`Card ${currentIndex + 1} of ${deck.length}.${entry.foreign ? ' Related card.' : ''} ${card.question}`}
           >
             {card.question}
           </p>
